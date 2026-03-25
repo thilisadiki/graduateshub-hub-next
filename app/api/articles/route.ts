@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const WP_API = 'https://graduateshub.co.za/articles/wp-json';
+const WP_API = 'http://45.14.89.183/articles/wp-json';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -12,7 +12,9 @@ export async function GET(request: NextRequest) {
     url += `&search=${encodeURIComponent(search)}`;
   }
 
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    headers: { Host: 'graduateshub.co.za' },
+  });
 
   if (!response.ok) {
     return NextResponse.json(
