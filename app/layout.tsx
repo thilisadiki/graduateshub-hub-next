@@ -6,6 +6,7 @@ import CookieConsent from '@/components/CookieConsent';
 import ScrollToTop from '@/components/ScrollToTop';
 import OneSignalInit from '@/components/OneSignalInit';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://graduateshub.co.za'),
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollToTop />
         <OneSignalInit />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

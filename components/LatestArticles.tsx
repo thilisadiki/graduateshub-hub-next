@@ -28,11 +28,7 @@ export default function LatestArticles({
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const apiBase =
-          process.env.NODE_ENV === 'development'
-            ? '/articles/wp-json'
-            : 'https://graduateshub.co.za/articles/wp-json';
-        let url = `${apiBase}/wp/v2/posts?per_page=3&_embed`;
+        let url = `/api/articles?per_page=3`;
         if (searchQuery) {
           url += `&search=${encodeURIComponent(searchQuery)}`;
         }
