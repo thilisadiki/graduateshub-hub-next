@@ -1,0 +1,257 @@
+export const accountingCourses = [
+    {
+        id: "financial-accounting",
+        featured: true,
+        title: "Financial Accounting",
+        tag: "Certificate, Diploma",
+        category: "Accounting",
+        duration: "15-20 Hours",
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/courses?query=Financial%20Accounting%20Basics&utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Learn to read and create balance sheets, income statements, and cash flows.",
+        longDescription: "Financial Accounting is the universal language of business. Whether you are an aspiring entrepreneur, an investor, or aiming for a corporate financial role, understanding how money flows through an organization is non-negotiable. This comprehensive 'Financial Accounting' certificate provides a deep dive into the core mechanisms that track financial health. We move far beyond basic bookkeeping to teach you how to construct, read, and deeply analyze the three fundamental pillars of accounting: the Balance Sheet, the Income Statement (Profit and Loss), and the Cash Flow Statement. You will learn the principles of double-entry accounting, accrual versus cash basis accounting, and how to interpret complex financial data to make informed business decisions.",
+        outcomes: [
+            "Explain the fundamental accounting equation and the mechanics of double-entry bookkeeping.",
+            "Construct an accurate Balance Sheet, Income Statement, and Cash Flow Statement from raw data.",
+            "Differentiate clearly between cash-basis and accrual-basis accounting principles.",
+            "Analyze financial statements using common ratios (liquidity, profitability, solvency).",
+            "Understand the regulatory frameworks and ethical standards governing financial reporting."
+        ],
+        careerPath: "A solid grasp of financial accounting is the foundational requirement for practically any career in finance. This course directly prepares individuals for roles such as Junior Accountant, Financial Analyst, Bookkeeper, or Accounts Receivable/Payable Clerk.",
+        targetAudience: "Essential for business students, aspiring finance professionals, and small business owners who need to understand their own company's fiscal health. No prior accounting knowledge is required to begin.",
+        editorsTake: "Accounting can be intimidating, but this course demystifies the subject beautifully. By focusing heavily on the practical construction and analysis of the three main financial statements, it gives you a tangible, highly marketable skill set right out of the gate."
+    },
+    {
+        id: "assets-based-company-valuation",
+        title: "The Complete Assets-Based Company Valuation Guide",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/the-complete-assets-based-company-valuation-guide?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Master the methods for valuing a company based on its core assets and financial metrics.",
+        longDescription: "How much is a business actually worth? Answering this question accurately is the crux of investment banking, corporate mergers, and entrepreneurial exits. 'The Complete Assets-Based Company Valuation Guide' is an advanced, laser-focused module that teaches you how to calculate the true intrinsic value of an enterprise. While many valuation courses rely heavily on speculative future cash flows, this course focuses on the hard, tangible reality of the Asset-Based Approach. You will learn how to forensically examine a company's balance sheet, adjust the book value of assets to their Fair Market Value (FMV), and accurately assess liabilities. We also cover the nuances of valuing intangible assets like intellectual property and brand equity.",
+        outcomes: [
+            "Understand the theoretical foundation of the Asset-Based Approach to business valuation.",
+            "Calculate Net Asset Value (NAV) by accurately identifying and valuing all corporate assets.",
+            "Adjust historical book values to reflect current Fair Market Value (FMV).",
+            "Identify and quantify 'hidden' or off-balance-sheet liabilities that impact overall valuation.",
+            "Evaluate the challenges and methods of valuing intangible assets and goodwill."
+        ],
+        careerPath: "Expertise in company valuation is a highly lucrative niche. This certificate is specific preparation for elite roles in Investment Banking, Private Equity, Corporate Development (M&A), and senior Financial Advisory.",
+        targetAudience: "Designed for finance professionals, advanced accounting students, and investors. A strong foundational knowledge of financial statements and balance sheet mechanics is highly recommended before starting this course.",
+        editorsTake: "This is a serious, Wall Street-level finance course. We highly recommend it for its rigorous, math-driven approach to valuation. It strips away the hype and teaches you how to value a company based on the cold, hard numbers of its tangible assets."
+    },
+    {
+        id: "diploma-financial-accounting",
+        title: "Diploma in Financial Accounting",
+        tag: "Diploma",
+        category: "Accounting",
+        duration: "10-15 Hours",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/diploma-in-financial-accounting?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "A comprehensive diploma covering advanced financial accounting principles and bookkeeping.",
+        longDescription: "Building upon basic accounting concepts, this 'Diploma in Financial Accounting' is a rigorous program designed to turn novices into highly competent financial practitioners. This course bridges the gap between simple ledger entries and complex corporate financial reporting. You will dive deep into inventory valuation methods (FIFO, LIFO, and Weighted Average), the nuances of depreciation and amortization, and the complexities of accounting for receivables and uncollectible accounts. The diploma heavily emphasizes the end-of-period accounting cycle, teaching you how to prepare complex adjusting entries, closing entries, and comprehensive post-closing trial balances to ensure perfect accuracy in financial reporting.",
+        outcomes: [
+            "Master the complete accounting cycle, including complex adjusting and closing entries.",
+            "Calculate and record inventory valuation using FIFO, LIFO, and Weighted Average methods.",
+            "Apply various depreciation methods (Straight-line, Declining Balance) to long-term assets.",
+            "Manage accounts receivable and accurately account for bad debts and uncollectible accounts.",
+            "Prepare advanced, multi-step income statements and classified balance sheets."
+        ],
+        careerPath: "This diploma is a powerful credential that bridges the gap to mid-level finance roles. Graduates are well-prepared for positions such as Staff Accountant, Senior Bookkeeper, Audit Associate, or Financial Controller in small to medium enterprises.",
+        targetAudience: "Ideal for individuals who already understand the basics of debits and credits and are looking to upgrade their skills for formal accounting roles. It is also excellent preparation for professional accounting certification exams (like the CPA or ACCA foundation levels).",
+        editorsTake: "If you want to actually work in an accounting department, knowing basic bookkeeping isn't enough; you need to understand depreciation, inventory, and end-of-year adjustments. This diploma covers exactly those advanced, highly necessary topics in methodical detail."
+    },
+    {
+        id: "diploma-financial-management-managers",
+        title: "Diploma in Financial Management for Managers",
+        tag: "Diploma",
+        category: "Accounting",
+        duration: "20-30 Hours",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/diploma-in-financial-management-for-managers?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Equip yourself with high-level financial management skills designed specifically for corporate managers.",
+        longDescription: "You do not need to be an accountant to be an effective executive, but you absolutely must understand how financial decisions impact your organization. The 'Diploma in Financial Management for Managers' is uniquely designed for non-financial leaders who need to speak the language of money. This course moves away from the mechanics of *creating* financial statements and focuses entirely on how to *use* them strategically. You will learn the intricacies of corporate budgeting, variance analysis, and capital budgeting (deciding which major projects to invest in). We cover critical topics like working capital management, understanding the cost of capital, and using financial leverage to maximize shareholder value without over-leveraging the company.",
+        outcomes: [
+            "Analyze financial statements to assess corporate liquidity, profitability, and operational efficiency.",
+            "Design, implement, and monitor complex corporate budgets and forecast models.",
+            "Perform variance analysis to identify and correct deviations from financial plans.",
+            "Evaluate major investment projects using Net Present Value (NPV) and Internal Rate of Return (IRR).",
+            "Manage working capital effectively to ensure business liquidity and smooth operational cash flow."
+        ],
+        careerPath: "Financial literacy is the final hurdle for many managers aiming for the C-suite. This diploma is essential for Department Heads, General Managers, Directors, and future Chief Executive Officers (CEOs) who need to exert strategic control over their division's budget and profitability.",
+        targetAudience: "Aimed squarely at mid-to-senior level managers who have operational expertise but lack formal financial training. It is perfect for professionals who want to feel confident debating budgets and financial strategy in the boardroom.",
+        editorsTake: "This is our top recommendation for ambitious managers. It removes the tedious bookkeeping exercises and focuses purely on financial strategy. Learning how to defend a project proposal using Net Present Value (NPV) is a skill that will immediately accelerate a corporate career."
+    },
+    {
+        id: "aml-customer-verification",
+        title: "Anti-Money Laundering and Customer Verification Training",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "3-4 Hours",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/anti-money-laundering-and-customer-verification-training?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Understand critical compliance procedures to prevent money laundering and secure transactions.",
+        longDescription: "As the global financial system becomes increasingly complex, the threat of financial crime grows alongside it. Regulatory bodies worldwide are imposing massive fines on institutions that fail to prevent illicit activities. This 'Anti-Money Laundering (AML) and Customer Verification Training' certificate is a crucial compliance module for anyone working in the financial sector. The course demystifies the precise methods criminals use to wash dirty money—Placement, Layering, and Integration. You will learn exactly how to implement robust Know Your Customer (KYC) and Customer Due Diligence (CDD) procedures. We cover how to identify suspicious transaction patterns, verify client identities securely, and fulfill legal reporting obligations without compromising a legitimate customer's experience.",
+        outcomes: [
+            "Define the three stages of the money laundering process: Placement, Layering, and Integration.",
+            "Implement legally compliant Know Your Customer (KYC) and Customer Due Diligence (CDD) protocols.",
+            "Identify red flags and suspicious behavioral patterns in financial transactions.",
+            "Understand the global regulatory framework governing AML practices (e.g., FATF guidelines).",
+            "Execute the correct procedures for filing Suspicious Activity Reports (SARs)."
+        ],
+        careerPath: "Compliance is currently one of the fastest-growing niches in the finance industry. This certification is a mandatory stepping stone for roles such as AML Compliance Officer, KYC Analyst, Fraud Investigator, or Risk Management Associate at banks or FinTech companies.",
+        targetAudience: "Mandatory training for bank tellers, financial advisors, real estate agents, and anyone handling significant client funds. It is also an excellent entry point for individuals looking to start a career specifically in corporate risk and compliance.",
+        editorsTake: "A highly practical, sobering course. The sections outlining the exact techniques criminals use to bypass the banking system are fascinating. More importantly, the clear, actionable guidelines on KYC procedures make this an indispensable compliance tool for financial professionals."
+    },
+    {
+        id: "fundamentals-of-accounting",
+        title: "Fundamentals of Accounting",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/fundamentals-of-accounting?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "An essential introductory course covering the core mechanisms and foundational elements of accounting.",
+        longDescription: "Before tackling complex corporate finance, you must understand the basic grammar of business mathematics. The 'Fundamentals of Accounting' certificate is the perfect entry point for absolute beginners. We strip away the jargon to explain exactly what accounting is and why it matters. The course focuses heavily on the cornerstone of the profession: the Accounting Equation (Assets = Liabilities + Equity). You will learn the universal rules of debits and credits, how to record basic business transactions in a general journal, and how to post those entries to the general ledger. This is a highly practical, foundational course designed to give you total confidence in basic financial record-keeping.",
+        outcomes: [
+            "Understand the purpose of accounting and the role of the accountant in a business.",
+            "Master the fundamental Accounting Equation: Assets = Liabilities + Equity.",
+            "Apply the rules of debits and credits to accurately record standard business transactions.",
+            "Create and maintain a basic general journal and general ledger.",
+            "Prepare a simple trial balance to ensure mathematical accuracy in record-keeping."
+        ],
+        careerPath: "This is the first step toward any financial career. It immediately qualifies the learner for entry-level administrative roles such as Accounting Clerk, Billing Assistant, or Junior Bookkeeper.",
+        targetAudience: "Designed for absolute beginners with zero prior financial knowledge. It is ideal for high school students exploring career options, small business owners who want to do their own books, or administrators looking to upskill.",
+        editorsTake: "Everyone has to start somewhere, and this is the best place to do it. The course is brilliant because it refuses to rush; it spends an entire module just ensuring you deeply, intuitively understand the difference between a debit and a credit before moving on."
+    },
+    {
+        id: "payroll-essentials-small-businesses",
+        title: "Payroll Essentials for Small Businesses",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/payroll-essentials-for-small-businesses?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Learn how to accurately manage, process, and execute payroll functions for a small business setup."
+    },
+    {
+        id: "accounting-for-inventory",
+        title: "Accounting for Inventory",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/accounting-for-inventory?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Gain a deeper understanding of documenting, tracking, and valuing inventory in financial records."
+    },
+    {
+        id: "payroll-computation-bookkeeping",
+        title: "Payroll Computation and Bookkeeping",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/payroll-computation-and-bookkeeping?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Specialized training on processing payroll calculations and merging them with formal bookkeeping."
+    },
+    // New batch from second screenshot
+    {
+        id: "internal-auditing",
+        title: "Internal Auditing - Fundamental Principles & Concepts",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/internal-auditing-fundamental-principles-and-concepts?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Learn the core principles and concepts essential for effective internal business auditing."
+    },
+    {
+        id: "accounts-payable-management",
+        title: "Accounts Payable Management",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80", // Fixed Image URL
+        affiliateLink: "https://alison.com/course/accounts-payable-management?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Master the processes of managing outgoing liabilities and vendor relations effectively."
+    },
+    {
+        id: "diploma-effective-bookkeeping-payroll",
+        title: "Diploma in Effective Bookkeeping and Payroll",
+        tag: "Diploma",
+        category: "Accounting",
+        duration: "10-15 Hours",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/diploma-in-effective-bookkeeping-and-payroll?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "A comprehensive diploma covering advanced bookkeeping strategies and integrated payroll systems."
+    },
+    {
+        id: "purchase-ledger-management",
+        title: "Purchase Ledger Management",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/purchase-ledger-management?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Develop the skills to accurately maintain purchase ledgers and track business expenses."
+    },
+    {
+        id: "mastering-financial-statement-analysis",
+        title: "Mastering Financial Statement Analysis",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/mastering-financial-statement-analysis?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Advanced training on interpreting financial records to assess company performance."
+    },
+    {
+        id: "introduction-bookkeeping-accounting",
+        title: "Introduction to Bookkeeping and Accounting Methods",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/introduction-to-bookkeeping-and-accounting-methods?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "A beginner-friendly guide to standard accounting practices and primary bookkeeping methods."
+    },
+    {
+        id: "introduction-payroll-accounting",
+        title: "Introduction to Payroll Accounting",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "3-4 Hours",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80", // Fixed Image URL
+        affiliateLink: "https://alison.com/course/introduction-to-payroll-accounting?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Learn the fundamentals of payroll laws, salary calculations, and employee compensation tracking."
+    },
+    {
+        id: "accounts-management-xero",
+        title: "Accounts Management Using Xero",
+        tag: "Certificate",
+        category: "Accounting",
+        duration: "2-3 Hours",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/accounts-management-using-xero?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Practical training on utilizing the Xero accounting software for modern business finance management."
+    }
+];
