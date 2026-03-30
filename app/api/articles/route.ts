@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   }
 
   const response = await fetch(url, {
-    headers: { Host: 'graduateshub.co.za' },
+    headers: { Host: 'articles.graduateshub.co.za' },
   });
 
   if (!response.ok) {

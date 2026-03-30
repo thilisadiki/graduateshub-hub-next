@@ -147,7 +147,7 @@ export default function LatestArticles({
           </p>
         </div>
         <a
-          href="/articles/"
+          href="https://articles.graduateshub.co.za/"
           className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:flex items-center gap-1 group"
         >
           View All Articles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -192,7 +192,7 @@ export default function LatestArticles({
       </div>
 
       <div className="mt-6 text-center sm:hidden">
-        <a href="/articles/" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
+        <a href="https://articles.graduateshub.co.za/" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
           View All Articles <ArrowRight size={18} />
         </a>
       </div>

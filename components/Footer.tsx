@@ -16,7 +16,7 @@ export default function Footer() {
             <li><Link href="/category/it" className="hover:text-blue-400 transition-colors">IT Courses</Link></li>
             <li><Link href="/category/marketing" className="hover:text-blue-400 transition-colors">Marketing</Link></li>
             <li><Link href="/category/accounting" className="hover:text-blue-400 transition-colors">Accounting</Link></li>
-            <li><a href="/articles/" className="hover:text-blue-400 transition-colors">Articles</a></li>
+            <li><a href="https://articles.graduateshub.co.za/" className="hover:text-blue-400 transition-colors">Articles</a></li>
           </ul>
         </div>
         <div>

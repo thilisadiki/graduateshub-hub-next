@@ -69,7 +69,7 @@ export default function Navbar() {
         {/* Right Actions */}
         <div className="flex items-center gap-4 shrink-0">
           <div className="hidden md:flex items-center gap-4">
-            <a href="/articles/" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Articles</a>
+            <a href="https://articles.graduateshub.co.za/" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Articles</a>
             <Link href="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">About</Link>
             <button
               onClick={() => setIsAIModalOpen(true)}
@@ -111,7 +111,7 @@ export default function Navbar() {
           ))}
           <Link href="/categories" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Categories →</Link>
         </div>
-        <a href="/articles/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Articles</a>
+        <a href="https://articles.graduateshub.co.za/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Articles</a>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>
         <button
           onClick={() => { toggleMobileMenu(); setIsAIModalOpen(true); }}
