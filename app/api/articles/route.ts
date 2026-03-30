@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const WP_API = 'http://45.14.89.183/articles/wp-json';
+const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
