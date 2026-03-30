@@ -109,16 +109,16 @@ export default function Home() {
           <h3 className="text-lg md:text-xl font-bold text-slate-600 mb-10">Access Curriculum from Top Global Institutions</h3>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-8 md:h-10 object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" loading="lazy" className="h-8 md:h-10 object-contain" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/University_of_Cambridge_logo.svg" alt="University of Cambridge" className="h-10 md:h-12 object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/University_of_Cambridge_logo.svg" alt="University of Cambridge" loading="lazy" className="h-10 md:h-12 object-contain" />
             <span className="text-3xl md:text-4xl tracking-tighter" style={{ fontFamily: 'Georgia, serif', color: '#8C1515', fontWeight: 'bold' }}>Stanford</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" className="h-8 md:h-10 object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" loading="lazy" className="h-8 md:h-10 object-contain" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" className="h-8 md:h-9 object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" loading="lazy" className="h-8 md:h-9 object-contain" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/MIT_logo_2003-2023.svg" alt="MIT" className="h-8 md:h-10 object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/MIT_logo_2003-2023.svg" alt="MIT" loading="lazy" className="h-8 md:h-10 object-contain" />
           </div>
         </div>
 

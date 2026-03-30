@@ -48,7 +48,7 @@ export default function Hero() {
                 {[1, 2, 3, 4].map(i => (
                   <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Student" className="w-full h-full object-cover" />
+                    <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Student" loading="lazy" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
