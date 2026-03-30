@@ -148,6 +148,8 @@ export default function LatestArticles({
         </div>
         <a
           href="https://articles.graduateshub.co.za/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:flex items-center gap-1 group"
         >
           View All Articles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -192,7 +194,7 @@ export default function LatestArticles({
       </div>
 
       <div className="mt-6 text-center sm:hidden">
-        <a href="https://articles.graduateshub.co.za/" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
+        <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
           View All Articles <ArrowRight size={18} />
         </a>
       </div>
