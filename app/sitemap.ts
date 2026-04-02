@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/disclosure`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: 'https://articles.graduateshub.co.za', lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((category: { id: string }) => ({

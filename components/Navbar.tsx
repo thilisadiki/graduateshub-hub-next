@@ -1,15 +1,29 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronDown, Sparkles, Map, TrendingUp } from 'lucide-react';
 import SearchBar from './SearchBar';
 import AIRecommendationModal from './AIRecommendationModal';
+import LearningPathModal from './LearningPathModal';
+import SkillsGapModal from './SkillsGapModal';
 import { categories } from '@/data/categories';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false);
+  const [isAIDropdownOpen, setIsAIDropdownOpen] = useState(false);
   const [isAIModalOpen, setIsAIModalOpen] = useState(false);
+  const [isLearningPathOpen, setIsLearningPathOpen] = useState(false);
+  const [isSkillsGapOpen, setIsSkillsGapOpen] = useState(false);
+  const aiCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openAIDropdown = () => {
+    if (aiCloseTimer.current) clearTimeout(aiCloseTimer.current);
+    setIsAIDropdownOpen(true);
+  };
+  const closeAIDropdown = () => {
+    aiCloseTimer.current = setTimeout(() => setIsAIDropdownOpen(false), 150);
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(prev => !prev);
@@ -71,13 +85,47 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Articles</a>
             <Link href="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">About</Link>
-            <button
-              onClick={() => setIsAIModalOpen(true)}
-              className="flex items-center gap-1.5 text-sm font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 hover:text-indigo-700 px-3 py-1.5 rounded-full transition-colors border border-indigo-100 group"
+
+            {/* AI Tools Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={openAIDropdown}
+              onMouseLeave={closeAIDropdown}
             >
-              <Sparkles size={14} className="text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span>Recommend Me</span>
-            </button>
+              <button
+                onClick={() => setIsAIDropdownOpen(prev => !prev)}
+                className="flex items-center gap-1.5 text-sm font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 hover:text-indigo-700 px-3 py-1.5 rounded-full transition-colors border border-indigo-100 group"
+              >
+                <Sparkles size={14} className="text-yellow-500 group-hover:scale-110 transition-transform" />
+                <span>AI Tools</span>
+                <ChevronDown size={13} className={`transition-transform duration-200 ${isAIDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              <div className={`absolute top-full right-0 mt-1 w-64 bg-white border border-gray-100 shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-right ${isAIDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+                <div className="p-2 flex flex-col gap-1">
+                  <button onClick={() => { setIsAIModalOpen(true); setIsAIDropdownOpen(false); }} className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-50 transition-colors text-left w-full">
+                    <Sparkles size={18} className="text-indigo-500 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="text-sm font-bold text-gray-800">Course Recommender</p>
+                      <p className="text-xs text-gray-500">Get personalised course matches</p>
+                    </div>
+                  </button>
+                  <button onClick={() => { setIsLearningPathOpen(true); setIsAIDropdownOpen(false); }} className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-blue-50 transition-colors text-left w-full">
+                    <Map size={18} className="text-blue-600 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="text-sm font-bold text-gray-800">Learning Path</p>
+                      <p className="text-xs text-gray-500">Build a step-by-step roadmap</p>
+                    </div>
+                  </button>
+                  <button onClick={() => { setIsSkillsGapOpen(true); setIsAIDropdownOpen(false); }} className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-emerald-50 transition-colors text-left w-full">
+                    <TrendingUp size={18} className="text-emerald-600 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="text-sm font-bold text-gray-800">Skills Gap Analyzer</p>
+                      <p className="text-xs text-gray-500">Find what skills you're missing</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
             <Link
               href="/search"
               className="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
@@ -111,12 +159,18 @@ export default function Navbar() {
         </div>
         <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Articles</a>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>
-        <button
-          onClick={() => { toggleMobileMenu(); setIsAIModalOpen(true); }}
-          className="flex justify-center items-center gap-2 font-bold text-indigo-700 bg-indigo-50 py-3 mt-2 rounded-lg border border-indigo-100 transition-colors"
-        >
-          <Sparkles size={16} className="text-yellow-500" /> Recommend me a course
-        </button>
+        <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">AI Tools</div>
+        <div className="flex flex-col gap-2">
+          <button onClick={() => { toggleMobileMenu(); setIsAIModalOpen(true); }} className="flex items-center gap-2 font-bold text-indigo-700 bg-indigo-50 py-3 px-4 rounded-lg border border-indigo-100 transition-colors">
+            <Sparkles size={16} className="text-yellow-500" /> Course Recommender
+          </button>
+          <button onClick={() => { toggleMobileMenu(); setIsLearningPathOpen(true); }} className="flex items-center gap-2 font-bold text-blue-700 bg-blue-50 py-3 px-4 rounded-lg border border-blue-100 transition-colors">
+            <Map size={16} className="text-blue-500" /> Learning Path Generator
+          </button>
+          <button onClick={() => { toggleMobileMenu(); setIsSkillsGapOpen(true); }} className="flex items-center gap-2 font-bold text-emerald-700 bg-emerald-50 py-3 px-4 rounded-lg border border-emerald-100 transition-colors">
+            <TrendingUp size={16} className="text-emerald-500" /> Skills Gap Analyzer
+          </button>
+        </div>
         <div className="flex flex-col gap-3 pt-6 pb-2">
           <Link href="/search" onClick={toggleMobileMenu}
             className="block text-center bg-primary hover:bg-blue-800 text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
@@ -126,6 +180,8 @@ export default function Navbar() {
       </div>
 
       <AIRecommendationModal isOpen={isAIModalOpen} onClose={() => setIsAIModalOpen(false)} />
+      <LearningPathModal isOpen={isLearningPathOpen} onClose={() => setIsLearningPathOpen(false)} />
+      <SkillsGapModal isOpen={isSkillsGapOpen} onClose={() => setIsSkillsGapOpen(false)} />
     </nav>
   );
 }
