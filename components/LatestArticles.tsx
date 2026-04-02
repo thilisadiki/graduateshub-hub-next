@@ -38,7 +38,15 @@ export default function LatestArticles({
           throw new Error('Failed to fetch articles. Server responded with: ' + response.status);
         }
 
-        const data = await response.json();
+        let data = await response.json();
+
+        // Fallback to latest articles if category search returns nothing
+        if (data.length === 0 && searchQuery) {
+          const fallbackResponse = await fetch(`/api/articles?per_page=3`);
+          if (fallbackResponse.ok) {
+            data = await fallbackResponse.json();
+          }
+        }
 
         const formattedArticles: Article[] = data.map((post: any) => {
           let imageUrl =

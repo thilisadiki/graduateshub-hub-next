@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { UserPlus, BookOpen, Award } from 'lucide-react';
 
 const steps = [
@@ -35,10 +36,10 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-16 text-center">
-          <a href="https://alison.com/register?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205" target="_blank" rel="noopener noreferrer"
+          <Link href="/search"
             className="inline-flex items-center px-8 py-4 text-lg font-bold rounded-full text-white bg-primary hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-600/30 transition-all duration-300 transform hover:-translate-y-1">
             Start Your First Step Now
-          </a>
+          </Link>
         </div>
       </div>
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>

@@ -78,14 +78,12 @@ export default function Navbar() {
               <Sparkles size={14} className="text-yellow-500 group-hover:scale-110 transition-transform" />
               <span>Recommend Me</span>
             </button>
-            <a
-              href="https://alison.com/register?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/search"
               className="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
             >
-              Join for Free
-            </a>
+              Find a Course
+            </Link>
           </div>
 
           <button onClick={toggleMobileMenu} className="md:hidden p-2 text-gray-600 flex items-center justify-center focus:outline-none" aria-label="Toggle navigation menu">
@@ -120,10 +118,10 @@ export default function Navbar() {
           <Sparkles size={16} className="text-yellow-500" /> Recommend me a course
         </button>
         <div className="flex flex-col gap-3 pt-6 pb-2">
-          <a href="https://alison.com/register?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}
+          <Link href="/search" onClick={toggleMobileMenu}
             className="block text-center bg-primary hover:bg-blue-800 text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
-            Join for Free
-          </a>
+            Find a Course
+          </Link>
         </div>
       </div>
 

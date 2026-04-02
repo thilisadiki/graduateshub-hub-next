@@ -23,8 +23,6 @@ export default function SearchContent() {
     ? [...courses].sort(() => 0.5 - Math.random()).slice(0, 3)
     : [];
 
-  const externalSearchLink = `https://alison.com/courses?query=${encodeURIComponent(query)}&utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205`;
-
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <div className="bg-slate-900 text-white py-12 px-6">
@@ -56,11 +54,11 @@ export default function SearchContent() {
             <div className="mt-16 bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center max-w-4xl mx-auto w-full">
               <h2 className="text-2xl font-bold text-gray-900 mb-3">Didn't find what you were looking for?</h2>
               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg">
-                Explore thousands of other free courses matching <span className="font-bold text-gray-800">"{query}"</span> on the main Alison platform.
+                Browse our full catalog of free courses across all subject areas.
               </p>
-              <a href={externalSearchLink} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
-                Search "{query}" on Alison.com ↗
-              </a>
+              <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
+                Browse All Categories
+              </Link>
             </div>
           </>
         ) : (
@@ -69,14 +67,11 @@ export default function SearchContent() {
               <div className="text-6xl mb-6">🔍</div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">We didn't find "{query}" in our curated hub</h2>
               <p className="text-gray-600 mb-8 max-w-md mx-auto text-lg">
-                But don't worry! You can easily explore Alison's entire global catalog for free courses related to <span className="font-bold text-gray-800">"{query}"</span>.
+                Try a different search term or browse our subject areas to discover related courses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
-                <a href={externalSearchLink} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold transition-all w-full sm:w-auto shadow-md">
-                  Search "{query}" on Alison.com ↗
-                </a>
-                <Link href="/categories" className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-8 py-4 rounded-lg font-bold transition-colors w-full sm:w-auto">
-                  Browse Local Categories
+                <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-colors w-full sm:w-auto shadow-md">
+                  Browse All Categories
                 </Link>
               </div>
             </div>
