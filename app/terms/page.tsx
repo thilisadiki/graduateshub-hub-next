@@ -18,7 +18,7 @@ export default function TermsPage() {
         </div>
       </div>
 
-      <main className="flex-grow max-w-4xl mx-auto px-6 py-16 w-full prose prose-slate">
+      <main className="flex-grow max-w-4xl mx-auto px-6 py-16 w-full prose [&_p]:text-gray-700 [&_h2]:text-gray-900 [&_h3]:text-gray-900 [&_li]:text-gray-700 [&_strong]:text-gray-900">
         <h2>1. Acceptance of Terms</h2>
         <p>By accessing and using Graduates Hub ("we", "our", or "us"), you accept and agree to be bound by the terms and provision of this agreement.</p>
 

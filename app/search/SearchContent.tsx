@@ -1,14 +1,63 @@
 'use client';
 import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import CourseCard from '@/components/CourseCard';
 import { courses } from '@/data/courses';
 
+const POPULAR_TOPICS = [
+  'Python', 'Excel', 'Marketing', 'Leadership', 'English',
+  'Accounting', 'Web Development', 'Project Management', 'Health', 'Data Science',
+  'Artificial Intelligence',
+];
+
+const TIPS = [
+  {
+    icon: '🎯',
+    title: 'Define your goal first',
+    body: 'Knowing whether you want a career change, a promotion, or a new hobby helps you pick the right course format — a short certificate or a comprehensive diploma.',
+  },
+  {
+    icon: '⏱️',
+    title: 'Check the time commitment',
+    body: 'Most free courses are self-paced, so you can fit learning around your schedule. Look at the estimated hours before you enrol to set realistic expectations.',
+  },
+  {
+    icon: '📜',
+    title: 'Look for recognised certificates',
+    body: 'A recognised certificate adds credibility to your CV. Our courses come with verifiable certificates you can share on LinkedIn or attach to job applications.',
+  },
+];
+
+const FAQS = [
+  {
+    q: 'Are all the courses on Graduates Hub really free?',
+    a: 'Yes — every course listed on Graduates Hub is 100% free of charge. There are no hidden fees, subscription charges, or paywalls. Simply create an account and start learning immediately.',
+  },
+  {
+    q: 'Will I receive a certificate after completing a course?',
+    a: 'Most courses include a free certificate of completion that you can download, share on LinkedIn, or attach to your CV to showcase your new skills to employers.',
+  },
+  {
+    q: 'How long do the courses take to complete?',
+    a: 'Course duration varies. Short certificate courses can be completed in a few hours, while diploma programmes may take several weeks. All courses are self-paced, so you can learn at your own speed without any deadlines.',
+  },
+  {
+    q: 'What subjects are available on Graduates Hub?',
+    a: 'We cover a wide range of subjects including IT & Coding, Business & Management, Accounting & Finance, Digital Marketing & SEO, Health & Wellness, Languages, and Personal Development — with new courses added regularly.',
+  },
+  {
+    q: 'Do I need any prior experience to start a course?',
+    a: 'Most of our courses are beginner-friendly and require no prior knowledge. Each course page clearly describes any prerequisites so you can choose the right starting point for your level.',
+  },
+];
+
 export default function SearchContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const query = searchParams.get('q') || '';
   const [visibleCount, setVisibleCount] = useState(9);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const filteredCourses = courses.filter(course => {
     const q = query.toLowerCase();
@@ -25,14 +74,39 @@ export default function SearchContent() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Hero */}
       <div className="bg-slate-900 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-extrabold">
             Search <span className="text-primary">Results</span>
           </h1>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-            Showing results for: <span className="font-semibold text-white">"{query}"</span>
+            {query
+              ? <>Showing results for: <span className="font-semibold text-white">"{query}"</span></>
+              : 'Browse our full library of free online courses'}
           </p>
+        </div>
+      </div>
+
+      {/* Popular Topics */}
+      <div className="bg-white border-b border-gray-100 py-5 px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm text-gray-500 font-medium mb-3">Popular topics:</p>
+          <div className="flex flex-wrap gap-2">
+            {POPULAR_TOPICS.map(topic => (
+              <button
+                key={topic}
+                onClick={() => router.push(`/search?q=${encodeURIComponent(topic)}`)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                  query.toLowerCase() === topic.toLowerCase()
+                    ? 'bg-primary text-white border-primary'
+                    : 'bg-gray-50 text-gray-700 border-gray-200 hover:border-primary hover:text-primary'
+                }`}
+              >
+                {topic}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -91,6 +165,43 @@ export default function SearchContent() {
             )}
           </div>
         )}
+
+        {/* How to Choose a Course */}
+        <section className="mt-20">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">How to Choose the Right Course</h2>
+          <p className="text-gray-500 mb-8">Three simple things to check before you enrol in any free online course.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TIPS.map(tip => (
+              <div key={tip.title} className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+                <div className="text-3xl mb-3">{tip.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{tip.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{tip.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-20">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Frequently Asked Questions</h2>
+          <p className="text-gray-500 mb-8">Everything you need to know about learning for free on Graduates Hub.</p>
+          <div className="divide-y divide-gray-100 bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+            {FAQS.map((faq, i) => (
+              <div key={i}>
+                <button
+                  className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-gray-50 transition-colors"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                >
+                  <span className="font-semibold text-gray-900">{faq.q}</span>
+                  <span className="text-gray-400 text-xl flex-shrink-0">{openFaq === i ? '−' : '+'}</span>
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 pb-5 text-gray-600 leading-relaxed text-sm">{faq.a}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
