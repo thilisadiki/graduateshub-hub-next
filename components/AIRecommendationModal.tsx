@@ -30,7 +30,7 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to fetch recommendations.');
-      setRecommendations(data);
+      setRecommendations(data.courses);
     } catch (err: any) {
       setError(err.message || 'Failed to fetch recommendations.');
     } finally {
