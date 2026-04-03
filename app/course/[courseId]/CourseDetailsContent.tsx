@@ -259,7 +259,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
           </a>{' '}
           on Graduates Hub Articles.
         </p>
-        <LatestArticles searchQuery={course.category} customTitle={`Articles on ${course.category}`} customSubtitle={`Explore our latest guides, news, and tips related to ${course.category}.`} />
+        <LatestArticles searchQuery={course.subCategory || course.category} customTitle={`Articles on ${course.subCategory || course.category}`} customSubtitle={`Explore our latest guides, news, and tips related to ${course.subCategory || course.category}.`} />
       </div>
 
       <div className="mt-8 border-t border-gray-100"><NewsletterBanner /></div>

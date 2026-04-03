@@ -1335,5 +1335,30 @@ export const itCourses = [
         "careerPath": "Machine Learning is currently the fastest-growing discipline in computer science. Completing this certificate positions you for entry-level roles such as Junior Data Analyst or ML Ops Technician. It serves to transition existing software engineers into the lucrative field of Data Engineering and Machine Learning Architecture.",
         "targetAudience": "Ideal for data enthusiasts, aspiring data scientists, and software developers who want to add predictive modeling to their skillset. A basic understanding of statistics and programming concepts is helpful but not strictly required for this introductory theoretical module.",
         "editorsTake": "This is a brilliant bridge course. It takes the high-level concepts of AI and grounds them in the practical reality of Machine Learning algorithms. We highly recommend this module for anyone who wants to start working with data to predict future trends, whether in finance, marketing, or software."
+    },
+    {
+        "id": "diploma-html5-css3-javascript",
+        "featured": false,
+        "title": "Diploma in HTML5, CSS3 and JavaScript",
+        "tag": "Diploma",
+        "category": "IT Courses",
+        "subCategory": "Software Engineering",
+        "duration": "10-15 Hours",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?auto=format&fit=crop&w=600&q=80",
+        "affiliateLink": "https://alison.com/course/diploma-in-html5-css3-and-javascript-revised?utm_source=alison_user&utm_medium=affiliate&utm_campaign=43098205",
+        "description": "Master the three core technologies of the web — HTML5, CSS3, and JavaScript — and build functional, responsive websites from scratch.",
+        "longDescription": "The modern web is built on three foundational technologies, and this comprehensive diploma takes you through all three in a structured, practical way. You will start with HTML5, learning how to define the content and structure of any web page, including how to create forms, embed video, and use semantic elements correctly. Next, CSS3 takes center stage — you will learn how to style layouts, apply responsive design principles, and use selectors to craft visually polished interfaces. Finally, JavaScript brings everything to life: you will work with variables, loops, functions, and the Document Object Model (DOM) to add interactivity and dynamic behaviour to your pages. The course also introduces jQuery, a widely used JavaScript library that simplifies common tasks. By the end, you will have the hands-on skills to build and style complete, interactive web pages — a must-have foundation for any aspiring front-end developer.",
+        "outcomes": [
+            "Structure web page content using semantic HTML5 elements and forms.",
+            "Style and layout web pages using CSS3 selectors, properties, and responsive design techniques.",
+            "Embed and control multimedia content including video using HTML5.",
+            "Write JavaScript to manipulate variables, loops, functions, and the DOM.",
+            "Use the jQuery library to simplify DOM manipulation and event handling.",
+            "Build complete, interactive, and responsive web pages from scratch."
+        ],
+        "careerPath": "Completing this diploma gives you the core front-end skills required for entry-level web development roles. Typical career paths include Junior Front-End Developer, Web Designer, UI Developer, and Freelance Web Developer. Combined with a framework like React or Vue.js, the skills learned here can fast-track your progression into mid-level and senior front-end engineering positions.",
+        "targetAudience": "This diploma is ideal for complete beginners who want to break into web development, designers who want to code their own designs, or anyone looking to build a portfolio of real web projects. No prior programming experience is required.",
+        "editorsTake": "HTML, CSS, and JavaScript are the non-negotiables of web development — you simply cannot build for the web without them. This diploma covers all three in one structured program, saving you from piecing together scattered tutorials. We particularly recommend it to anyone who wants a clean, accredited credential to show employers alongside their first portfolio projects."
     }
 ];

@@ -36,7 +36,11 @@ export default function SearchBar({
     setSearchQuery(query);
     if (query.trim().length > 0) {
       const lowerQuery = query.toLowerCase();
-      const filtered = courses.filter(c => c.title.toLowerCase().includes(lowerQuery)).slice(0, 5);
+      const words = lowerQuery.trim().split(/\s+/).filter(Boolean);
+      const filtered = courses.filter(c => {
+        const searchableText = [c.title, c.subCategory, c.description, c.category].filter(Boolean).join(' ').toLowerCase();
+        return words.every(word => searchableText.includes(word));
+      }).slice(0, 5);
       setSuggestions(filtered);
       setShowSuggestions(true);
     } else {

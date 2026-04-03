@@ -9,6 +9,7 @@ import NewsletterBanner from '@/components/NewsletterBanner';
 import Testimonials from '@/components/Testimonials';
 import LatestArticles from '@/components/LatestArticles';
 import FAQ from '@/components/FAQ';
+import AIToolsBanner from '@/components/AIToolsBanner';
 import { courses } from '@/data/courses';
 
 const SITE_URL = 'https://graduateshub.co.za';
@@ -79,6 +80,7 @@ export default function Home() {
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
         <div className="mt-0"><LatestArticles perPage={6} /></div>
         <div className="mt-24"><HowItWorks /></div>
+        <div className="mt-16"><AIToolsBanner /></div>
 
         <div className="mt-24">
           <div className="flex justify-between items-end mb-8">

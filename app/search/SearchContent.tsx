@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import CourseCard from '@/components/CourseCard';
+import AIToolsBanner from '@/components/AIToolsBanner';
 import { courses } from '@/data/courses';
 
 const POPULAR_TOPICS = [
@@ -59,14 +60,44 @@ export default function SearchContent() {
   const [visibleCount, setVisibleCount] = useState(9);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const filteredCourses = courses.filter(course => {
-    const q = query.toLowerCase();
-    return (
-      course.title.toLowerCase().includes(q) ||
-      course.category.toLowerCase().includes(q) ||
-      course.description.toLowerCase().includes(q)
-    );
-  });
+  const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const phrase = query.toLowerCase().trim();
+
+  const scoreAndFilter = (course: typeof courses[number]) => {
+    const title = course.title.toLowerCase();
+    const subCat = (course.subCategory ?? '').toLowerCase();
+    const desc = course.description.toLowerCase();
+    const longDesc = (course.longDescription ?? '').toLowerCase();
+    const careerPath = (course.careerPath ?? '').toLowerCase();
+    const targetAudience = (course.targetAudience ?? '').toLowerCase();
+    const category = course.category.toLowerCase();
+
+    const searchableText = [title, subCat, desc, longDesc, careerPath, targetAudience, category].join(' ');
+
+    // Must match all words somewhere across all fields
+    if (!words.every(word => searchableText.includes(word))) return null;
+
+    let score = 0;
+    if (title.includes(phrase)) score += 100;
+    if (words.every(w => title.includes(w))) score += 60;
+    if (subCat.includes(phrase)) score += 40;
+    if (words.every(w => subCat.includes(w))) score += 25;
+    if (desc.includes(phrase)) score += 20;
+    if (words.every(w => desc.includes(w))) score += 12;
+    if (longDesc.includes(phrase)) score += 8;
+    if (careerPath.includes(phrase)) score += 6;
+    if (targetAudience.includes(phrase)) score += 4;
+    // Bonus: each individual word match in title
+    words.forEach(w => { if (title.includes(w)) score += 10; });
+
+    return score;
+  };
+
+  const filteredCourses = courses
+    .map(course => ({ course, score: scoreAndFilter(course) }))
+    .filter(({ score }) => score !== null)
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+    .map(({ course }) => course);
 
   const relatedCourses = filteredCourses.length === 0
     ? [...courses].sort(() => 0.5 - Math.random()).slice(0, 3)
@@ -111,63 +142,67 @@ export default function SearchContent() {
       </div>
 
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
-        {filteredCourses.length > 0 ? (
-          <>
-            <p className="text-gray-600 font-medium mb-8">Found {filteredCourses.length} course{filteredCourses.length !== 1 ? 's' : ''}</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {filteredCourses.slice(0, visibleCount).map(course => <CourseCard key={course.id} course={course} />)}
-            </div>
-            {visibleCount < filteredCourses.length && (
-              <div className="text-center">
-                <button onClick={() => setVisibleCount(v => v + 9)} className="bg-white border-2 border-gray-200 text-gray-700 font-bold py-3 px-8 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors shadow-sm">
-                  Load More Courses
-                </button>
-                <p className="text-gray-400 text-sm mt-3">Showing {visibleCount} of {filteredCourses.length} courses</p>
-              </div>
-            )}
-            <div className="mt-16 bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center max-w-4xl mx-auto w-full">
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">Didn't find what you were looking for?</h2>
-              <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg">
-                Browse our full catalog of free courses across all subject areas.
-              </p>
-              <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
-                Browse All Categories
-              </Link>
-            </div>
-          </>
-        ) : (
-          <div className="flex flex-col gap-16">
-            <div className="text-center py-20 bg-white rounded-xl shadow-sm border border-gray-100 p-8 max-w-3xl mx-auto w-full">
-              <div className="text-6xl mb-6">🔍</div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">We didn't find "{query}" in our curated hub</h2>
-              <p className="text-gray-600 mb-8 max-w-md mx-auto text-lg">
-                Try a different search term or browse our subject areas to discover related courses.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
-                <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-colors w-full sm:w-auto shadow-md">
-                  Browse All Categories
-                </Link>
-              </div>
-            </div>
-            {relatedCourses.length > 0 && (
-              <div className="mt-8">
-                <div className="flex justify-between items-end mb-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">You Might Also Like</h3>
-                    <p className="text-gray-500 mt-2">Popular top-rated courses from our Hub.</p>
+
+        {/* ── WITH QUERY: results first ── */}
+        {query && (
+          <div className="mb-20">
+            {filteredCourses.length > 0 ? (
+              <>
+                <p className="text-gray-600 font-medium mb-8">Found {filteredCourses.length} course{filteredCourses.length !== 1 ? 's' : ''} for <span className="font-bold text-gray-900">"{query}"</span></p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                  {filteredCourses.slice(0, visibleCount).map(course => <CourseCard key={course.id} course={course} />)}
+                </div>
+                {visibleCount < filteredCourses.length && (
+                  <div className="text-center">
+                    <button onClick={() => setVisibleCount(v => v + 9)} className="bg-white border-2 border-gray-200 text-gray-700 font-bold py-3 px-8 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors shadow-sm">
+                      Load More Courses
+                    </button>
+                    <p className="text-gray-400 text-sm mt-3">Showing {visibleCount} of {filteredCourses.length} courses</p>
                   </div>
-                  <Link href="/categories" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">View All →</Link>
+                )}
+                <div className="mt-16 bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center max-w-4xl mx-auto w-full">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-3">Didn't find what you were looking for?</h2>
+                  <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg">
+                    Browse our full catalog of free courses across all subject areas.
+                  </p>
+                  <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
+                    Browse All Categories
+                  </Link>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {relatedCourses.map(course => <CourseCard key={course.id} course={course} />)}
+              </>
+            ) : (
+              <div className="flex flex-col gap-16">
+                <div className="text-center py-16 bg-white rounded-xl shadow-sm border border-gray-100 p-8 max-w-3xl mx-auto w-full">
+                  <div className="text-6xl mb-6">🔍</div>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">We didn't find "{query}" in our curated hub</h2>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto text-lg">
+                    Let our AI tools help you find something great — or browse our subject areas below.
+                  </p>
+                  <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-md">
+                    Browse All Categories
+                  </Link>
                 </div>
+                {relatedCourses.length > 0 && (
+                  <div>
+                    <div className="flex justify-between items-end mb-8">
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900">You Might Also Like</h3>
+                        <p className="text-gray-500 mt-2">Popular top-rated courses from our Hub.</p>
+                      </div>
+                      <Link href="/categories" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">View All →</Link>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {relatedCourses.map(course => <CourseCard key={course.id} course={course} />)}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
         )}
 
         {/* How to Choose a Course */}
-        <section className="mt-20">
+        <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">How to Choose the Right Course</h2>
           <p className="text-gray-500 mb-8">Three simple things to check before you enrol in any free online course.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -208,6 +243,10 @@ export default function SearchContent() {
             ))}
           </div>
         </section>
+
+        {/* AI Tools Banner */}
+        <div className="mt-20"><AIToolsBanner /></div>
+
       </main>
     </div>
   );
