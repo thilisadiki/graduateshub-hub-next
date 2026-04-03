@@ -14,12 +14,12 @@ import { courses } from '@/data/courses';
 const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
-  title: 'Free Online Courses with Certificates & Diplomas | Graduates Hub',
-  description: 'Empowering learners worldwide to achieve their goals with completely free, high-quality online education across IT, Business, Languages, and more.',
+  title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
+  description: 'Graduates Hub is your free learning resource centre — browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
-    title: 'Free Online Courses with Certificates & Diplomas | Graduates Hub',
-    description: 'Empowering learners worldwide to achieve their goals with completely free, high-quality online education across IT, Business, Languages, and more.',
+    title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
+    description: 'Graduates Hub is your free learning resource centre — browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
     url: `${SITE_URL}/`,
   },
 };
@@ -30,7 +30,7 @@ const organizationSchema = {
   name: 'Graduates Hub',
   url: SITE_URL,
   logo: `${SITE_URL}/graduates-hub-logo.png`,
-  description: 'Empowering learners worldwide with 100% free, high-quality online education.',
+  description: 'Your free learning resource centre for career guides, study tips, and hundreds of free certified courses.',
 };
 
 const websiteSchema = {
@@ -59,7 +59,7 @@ export default function Home() {
         '@type': 'Course',
         name: course.title,
         description: course.description,
-        provider: { '@type': 'Organization', name: 'Alison', sameAs: 'https://alison.com' },
+        provider: { '@type': 'Organization', name: 'Graduates Hub', sameAs: SITE_URL },
         hasCourseInstance: {
           '@type': 'CourseInstance',
           courseMode: 'online',
@@ -77,30 +77,33 @@ export default function Home() {
 
       <Hero />
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
-        <div className="flex justify-between items-end mb-8">
-          <div>
-            <h2 className="text-3xl font-extrabold text-gray-900">Featured Courses</h2>
-            <p className="text-gray-500 mt-2">Start learning today with these top-rated selections.</p>
-          </div>
-          <Link href="/categories" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">
-            View All Categories →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredCourses.map(course => (
-            <CourseCard key={course.id} course={course} />
-          ))}
-        </div>
-
-        <div className="mt-8 text-center sm:hidden">
-          <Link href="/categories" className="inline-block bg-white border-2 border-primary text-primary font-bold px-8 py-3 rounded-lg w-full hover:bg-blue-50 transition-colors">
-            View All Categories
-          </Link>
-        </div>
-
-        <div className="mt-16"><LatestArticles /></div>
+        <div className="mt-0"><LatestArticles perPage={6} /></div>
         <div className="mt-24"><HowItWorks /></div>
+
+        <div className="mt-24">
+          <div className="flex justify-between items-end mb-8">
+            <div>
+              <h2 className="text-3xl font-extrabold text-gray-900">Featured Learning Resources</h2>
+              <p className="text-gray-500 mt-2">Hand-picked courses to help you grow your skills and advance your career.</p>
+            </div>
+            <Link href="/categories" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">
+              View All Categories →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredCourses.map(course => (
+              <CourseCard key={course.id} course={course} />
+            ))}
+          </div>
+
+          <div className="mt-8 text-center sm:hidden">
+            <Link href="/categories" className="inline-block bg-white border-2 border-primary text-primary font-bold px-8 py-3 rounded-lg w-full hover:bg-blue-50 transition-colors">
+              View All Categories
+            </Link>
+          </div>
+        </div>
+
         <div className="mt-16"><Testimonials /></div>
         <div className="mt-16"><CourseCarousel courses={carouselCourses} /></div>
         <div className="mt-12"><NewsletterBanner /></div>
@@ -124,7 +127,7 @@ export default function Home() {
 
         <div className="mt-24 bg-white rounded-2xl p-8 lg:p-12 shadow-sm border border-gray-100 flex flex-col lg:flex-row gap-12 items-start lg:items-center justify-between">
           <div className="lg:w-1/4 shrink-0">
-            <h2 className="text-2xl font-extrabold text-gray-900">Why Choose These Courses?</h2>
+            <h2 className="text-2xl font-extrabold text-gray-900">Why Learn with Graduates Hub?</h2>
           </div>
           <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             <div className="flex flex-col items-center text-center">

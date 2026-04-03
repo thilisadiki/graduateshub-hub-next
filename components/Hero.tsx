@@ -20,18 +20,18 @@ export default function Hero() {
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left pt-8 lg:pt-0">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider mb-6 shadow-sm">
               <Sparkles size={14} className="text-blue-500" />
-              <span>100% Free Global Education</span>
+              <span>Free Courses, Guides & Career Resources</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0f172a] leading-[1.15] tracking-tight mb-6">
-              Free online courses.<br className="hidden sm:block" />
+              Your free learning<br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                Zero cost attached.
+                resource hub.
               </span>
             </h1>
 
             <p className="text-lg text-slate-600 mb-8 max-w-xl font-medium leading-relaxed">
-              Master new skills and join millions of learners worldwide. Get unlimited access to high-quality Diplomas and Certificates designed to boost your career.
+              Explore career guides, study articles, and hundreds of free certified courses — all in one place, completely free.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

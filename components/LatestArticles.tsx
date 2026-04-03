@@ -16,10 +16,12 @@ export default function LatestArticles({
   searchQuery,
   customTitle,
   customSubtitle,
+  perPage = 3,
 }: {
   searchQuery?: string;
   customTitle?: string;
   customSubtitle?: string;
+  perPage?: number;
 } = {}) {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +30,7 @@ export default function LatestArticles({
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        let url = `/api/articles?per_page=3`;
+        let url = `/api/articles?per_page=${perPage}`;
         if (searchQuery) {
           url += `&search=${encodeURIComponent(searchQuery)}`;
         }
@@ -42,7 +44,7 @@ export default function LatestArticles({
 
         // Fallback to latest articles if category search returns nothing
         if (data.length === 0 && searchQuery) {
-          const fallbackResponse = await fetch(`/api/articles?per_page=3`);
+          const fallbackResponse = await fetch(`/api/articles?per_page=${perPage}`);
           if (fallbackResponse.ok) {
             data = await fallbackResponse.json();
           }
