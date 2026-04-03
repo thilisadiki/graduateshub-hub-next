@@ -252,6 +252,13 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-100 w-full overflow-hidden bg-[#FAFAFA]">
+        <p className="text-gray-500 text-sm mb-8">
+          Want deeper insight into this subject?{' '}
+          <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">
+            Browse all our career guides and study articles
+          </a>{' '}
+          on Graduates Hub Articles.
+        </p>
         <LatestArticles searchQuery={course.category} customTitle={`Articles on ${course.category}`} customSubtitle={`Explore our latest guides, news, and tips related to ${course.category}.`} />
       </div>
 

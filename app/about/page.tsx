@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpen, Users, Award, Heart, ArrowRight } from 'lucide-react';
+import { BookOpen, Users, Award, Heart, ArrowRight, Newspaper } from 'lucide-react';
 
 const SITE_URL = 'https://graduateshub.co.za';
 
@@ -47,6 +47,13 @@ export default function AboutPage() {
                 <div><h3 className="font-bold text-gray-800 text-lg">{title}</h3><p className="text-gray-600 text-sm mt-1">{desc}</p></div>
               </div>
             ))}
+            <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex gap-4 items-start hover:border-primary transition-colors group md:col-span-2">
+              <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center shrink-0"><Newspaper size={24} /></div>
+              <div>
+                <h3 className="font-bold text-gray-800 text-lg group-hover:text-primary transition-colors">Career Guides & Articles</h3>
+                <p className="text-gray-600 text-sm mt-1">Explore our free library of career guides, study tips, and industry insights to help you make the most of your learning journey.</p>
+              </div>
+            </a>
           </div>
         </section>
 
@@ -57,7 +64,12 @@ export default function AboutPage() {
               Graduates Hub partners with <strong>Alison</strong>, one of the world&apos;s largest free online learning platforms with over 40 million learners globally. We carefully curate the highest-quality courses from their catalogue and present them in an easy-to-navigate, beautifully designed experience.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              When you find a course you love, clicking <strong>&ldquo;Start Learning For Free&rdquo;</strong> takes you directly to Alison&apos;s platform where you can register (for free) and begin learning immediately. Upon completion, you&apos;ll receive a certificate or diploma directly from Alison.
+              When you find a course you love, clicking <strong>&ldquo;Start Learning For Free&rdquo;</strong> takes you directly to the course platform where you can register (for free) and begin learning immediately. Upon completion, you&apos;ll receive a certificate or diploma to share with employers.
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+              Beyond courses, we publish free{' '}
+              <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">career guides and study articles</a>
+              {' '}to help you navigate your learning journey — from choosing the right course to landing your next job.
             </p>
           </div>
         </section>
@@ -66,9 +78,14 @@ export default function AboutPage() {
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-10 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Ready to start learning?</h2>
             <p className="text-blue-100 max-w-lg mx-auto mb-8">Browse 140+ free courses across 9 categories and take the first step toward your next achievement.</p>
-            <Link href="/categories" className="inline-flex items-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold transition-all shadow-md text-lg">
-              Explore Courses <ArrowRight size={20} />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/categories" className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold transition-all shadow-md text-lg">
+                Explore Courses <ArrowRight size={20} />
+              </Link>
+              <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-blue-500/20 hover:bg-blue-500/30 text-white px-8 py-4 rounded-lg font-bold transition-all text-lg border border-white/20">
+                Read Our Articles <ArrowRight size={20} />
+              </a>
+            </div>
           </div>
         </section>
       </main>

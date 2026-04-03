@@ -3,14 +3,15 @@
 import { useState } from 'react';
 import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
 
-const faqs = [
+const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   {
     question: 'Are the courses on Graduates Hub really free?',
-    answer: "Yes! We partner with global platforms like Alison to provide 100% free access to all learning materials, courses, and assessments. You only pay if you choose to purchase an official physical or digital certificate after graduating.",
+    answer: "Yes! Every course listed on Graduates Hub is 100% free to access. There are no hidden fees, subscription charges, or paywalls. You only pay if you choose to purchase an official physical certificate after completing a course.",
   },
   {
     question: 'Are these certificates recognised by employers?',
-    answer: "Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally, demonstrating your commitment to continuous learning and professional development.",
+    answer: "",
+    node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub Articles.</>,
   },
   {
     question: 'Do I need any previous experience to enrol?',
@@ -18,7 +19,8 @@ const faqs = [
   },
   {
     question: 'How long does it take to complete a course?',
-    answer: "It depends entirely on the course format. Standard Certificate courses typically take 2-3 hours to complete, while comprehensive Diploma programs can take 10-15 hours. Because everything is completely self-paced, you learn entirely on your own schedule.",
+    answer: "",
+    node: <>It depends entirely on the course format. Standard Certificate courses typically take 2–3 hours to complete, while comprehensive Diploma programs can take 10–15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
   },
 ];
 
@@ -35,11 +37,13 @@ const faqSchema = {
 function FAQItem({
   question,
   answer,
+  node,
   isOpen,
   onClick,
 }: {
   question: string;
   answer: string;
+  node?: React.ReactNode;
   isOpen: boolean;
   onClick: () => void;
 }) {
@@ -56,7 +60,7 @@ function FAQItem({
         />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="px-6 pb-5 pt-1 text-gray-600 leading-relaxed">{answer}</div>
+        <div className="px-6 pb-5 pt-1 text-gray-600 leading-relaxed">{node ?? answer}</div>
       </div>
     </div>
   );
@@ -93,6 +97,7 @@ export default function FAQ() {
             key={index}
             question={faq.question}
             answer={faq.answer}
+            node={faq.node}
             isOpen={openIndex === index}
             onClick={() => toggleFAQ(index)}
           />

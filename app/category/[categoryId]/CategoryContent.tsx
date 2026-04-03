@@ -7,6 +7,18 @@ import NewsletterBanner from '@/components/NewsletterBanner';
 import { categoryContent } from '@/data/categoryContent';
 import type { Course } from '@/types';
 
+const articleLinks: Record<string, { text: string; href: string }> = {
+  it: { text: 'our free IT career guides', href: 'https://articles.graduateshub.co.za/' },
+  'software-engineering': { text: 'our software engineering study guides', href: 'https://articles.graduateshub.co.za/' },
+  language: { text: 'our language learning resources', href: 'https://articles.graduateshub.co.za/' },
+  business: { text: 'our business and management articles', href: 'https://articles.graduateshub.co.za/' },
+  accounting: { text: 'our accounting and finance guides', href: 'https://articles.graduateshub.co.za/' },
+  marketing: { text: 'our digital marketing resources', href: 'https://articles.graduateshub.co.za/' },
+  management: { text: 'our leadership and management guides', href: 'https://articles.graduateshub.co.za/' },
+  health: { text: 'our health and wellness articles', href: 'https://articles.graduateshub.co.za/' },
+  'personal-development': { text: 'our personal development articles', href: 'https://articles.graduateshub.co.za/' },
+};
+
 export default function CategoryContent({
   categoryId,
   categoryName,
@@ -131,6 +143,15 @@ export default function CategoryContent({
                   <div className="mb-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Study {categoryName}?</h2>
                     <p className="text-gray-600 leading-relaxed text-lg">{(categoryContent as any)[categoryId].aboutSection}</p>
+                    {articleLinks[categoryId] && (
+                      <p className="text-gray-600 mt-4">
+                        For career tips and study advice, explore{' '}
+                        <a href={articleLinks[categoryId].href} className="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+                          {articleLinks[categoryId].text}
+                        </a>{' '}
+                        on Graduates Hub Articles.
+                      </p>
+                    )}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
