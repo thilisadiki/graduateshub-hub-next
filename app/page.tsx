@@ -12,7 +12,7 @@ import FAQ from '@/components/FAQ';
 import AIToolsBanner from '@/components/AIToolsBanner';
 import { courses } from '@/data/courses';
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 const SITE_URL = 'https://graduateshub.co.za';
 
@@ -52,7 +52,7 @@ async function fetchHomeArticles(perPage: number) {
   try {
     const response = await fetch(
       `https://articles.graduateshub.co.za/wp-json/wp/v2/posts?per_page=${perPage}&_embed`,
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 300 } }
     );
     if (!response.ok) return undefined;
 
