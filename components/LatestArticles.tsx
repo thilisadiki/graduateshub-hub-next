@@ -17,17 +17,21 @@ export default function LatestArticles({
   customTitle,
   customSubtitle,
   perPage = 3,
+  initialArticles,
 }: {
   searchQuery?: string;
   customTitle?: string;
   customSubtitle?: string;
   perPage?: number;
+  initialArticles?: Article[];
 } = {}) {
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [articles, setArticles] = useState<Article[]>(initialArticles ?? []);
+  const [loading, setLoading] = useState(!initialArticles);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (initialArticles) return;
+
     const fetchArticles = async () => {
       try {
         let url = `/api/articles?per_page=${perPage}`;
@@ -92,7 +96,7 @@ export default function LatestArticles({
     };
 
     fetchArticles();
-  }, [searchQuery]);
+  }, [searchQuery, initialArticles]);
 
   if (loading) {
     return (

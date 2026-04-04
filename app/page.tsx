@@ -12,6 +12,8 @@ import FAQ from '@/components/FAQ';
 import AIToolsBanner from '@/components/AIToolsBanner';
 import { courses } from '@/data/courses';
 
+export const revalidate = 3600;
+
 const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
@@ -46,9 +48,47 @@ const websiteSchema = {
   },
 };
 
-export default function Home() {
+async function fetchHomeArticles(perPage: number) {
+  try {
+    const response = await fetch(
+      `https://articles.graduateshub.co.za/wp-json/wp/v2/posts?per_page=${perPage}&_embed`,
+      { next: { revalidate: 3600 } }
+    );
+    if (!response.ok) return undefined;
+
+    const data = await response.json();
+    return data.map((post: any) => {
+      let imageUrl =
+        'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80';
+      if (post._embedded?.['wp:featuredmedia']?.[0]?.source_url) {
+        imageUrl = post._embedded['wp:featuredmedia'][0].source_url;
+      }
+
+      const cleanExcerpt = post.excerpt.rendered.replace(/<[^>]+>/g, '');
+      const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+
+      return {
+        id: post.id,
+        title: post.title.rendered,
+        excerpt: cleanExcerpt.substring(0, 120) + '...',
+        link: post.link,
+        date: formattedDate,
+        imageUrl,
+      };
+    });
+  } catch {
+    return undefined;
+  }
+}
+
+export default async function Home() {
   const featuredCourses = courses.filter(c => c.featured).slice(0, 6);
   const carouselCourses = courses.filter(c => !c.featured).slice(0, 10);
+  const homeArticles = await fetchHomeArticles(6);
 
   const itemListSchema = {
     '@context': 'https://schema.org',
@@ -78,7 +118,7 @@ export default function Home() {
 
       <Hero />
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
-        <div className="mt-0"><LatestArticles perPage={6} /></div>
+        <div className="mt-0"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
         <div className="mt-24"><HowItWorks /></div>
         <div className="mt-16"><AIToolsBanner /></div>
 
