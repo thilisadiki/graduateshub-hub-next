@@ -70,6 +70,14 @@ export default function Navbar() {
                     View All Subjects →
                   </Link>
                 </div>
+                <div className="border-t border-gray-100 mt-2 pt-2">
+                  <p className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
+                  <Link href="/free-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Beginners</Link>
+                  <Link href="/free-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses with Certificates</Link>
+                  <Link href="/best-alison-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Best Alison Courses</Link>
+                  <Link href="/free-courses-for-data-analysts" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Data Analysts</Link>
+                  <Link href="/free-ai-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free AI Courses for Beginners</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -156,6 +164,14 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/categories" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Categories →</Link>
+        </div>
+        <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
+        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
+          <Link href="/free-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Beginners</Link>
+          <Link href="/free-courses-with-certificates" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses with Certificates</Link>
+          <Link href="/best-alison-courses-with-certificates" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Best Alison Courses</Link>
+          <Link href="/free-courses-for-data-analysts" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Data Analysts</Link>
+          <Link href="/free-ai-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free AI Courses for Beginners</Link>
         </div>
         <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Articles</a>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Unlock, Clock, Globe } from 'lucide-react';
+import { Unlock, Clock, Globe, ChevronRight } from 'lucide-react';
 import Hero from '@/components/Hero';
 import CourseCard from '@/components/CourseCard';
 import HowItWorks from '@/components/HowItWorks';
@@ -121,6 +121,38 @@ export default async function Home() {
         <div className="mt-0"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
         <div className="mt-24"><HowItWorks /></div>
         <div className="mt-16"><AIToolsBanner /></div>
+
+        {/* Popular Guides */}
+        <div className="mt-16">
+          <div className="flex justify-between items-end mb-8">
+            <div>
+              <h2 className="text-3xl font-extrabold text-gray-900">Popular Guides</h2>
+              <p className="text-gray-500 mt-2">Curated learning paths for every goal — all free to start.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Free Courses for Beginners', desc: 'Zero experience needed. Start building real skills from scratch.', href: '/free-courses-for-beginners', badge: 'Beginner' },
+              { title: 'Free Courses with Certificates', desc: 'Top-rated courses across IT, Business, Marketing, and Finance.', href: '/free-courses-with-certificates', badge: 'Popular' },
+              { title: 'Best Alison Courses (2026)', desc: 'CPD-accredited diplomas and certificates — free to study.', href: '/best-alison-courses-with-certificates', badge: 'Alison' },
+              { title: 'Free Courses for Data Analysts', desc: 'Excel, SQL, Python, and Power BI — the full analyst learning path.', href: '/free-courses-for-data-analysts', badge: 'Data' },
+              { title: 'Free AI Courses for Beginners', desc: 'Learn AI and Generative AI without any coding background.', href: '/free-ai-courses-for-beginners', badge: 'AI' },
+            ].map(({ title, desc, href, badge }) => (
+              <Link
+                key={href}
+                href={href}
+                className="group bg-white rounded-xl border border-gray-100 shadow-sm p-6 hover:border-primary hover:shadow-md transition-all flex flex-col gap-3"
+              >
+                <span className="self-start text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">{badge}</span>
+                <div>
+                  <p className="font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">{title}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+                </div>
+                <ChevronRight size={16} className="text-gray-300 group-hover:text-primary transition-colors mt-auto self-end" />
+              </Link>
+            ))}
+          </div>
+        </div>
 
         <div className="mt-24">
           <div className="flex justify-between items-end mb-8">
