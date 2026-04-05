@@ -77,6 +77,7 @@ export default function Navbar() {
                   <Link href="/best-alison-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Best Alison Courses</Link>
                   <Link href="/free-courses-for-data-analysts" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Data Analysts</Link>
                   <Link href="/free-ai-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free AI Courses for Beginners</Link>
+                  <Link href="/free-digital-marketing-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Digital Marketing Courses</Link>
                 </div>
               </div>
             </div>
@@ -172,6 +173,7 @@ export default function Navbar() {
           <Link href="/best-alison-courses-with-certificates" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Best Alison Courses</Link>
           <Link href="/free-courses-for-data-analysts" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Data Analysts</Link>
           <Link href="/free-ai-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free AI Courses for Beginners</Link>
+          <Link href="/free-digital-marketing-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Digital Marketing Courses</Link>
         </div>
         <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Articles</a>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>

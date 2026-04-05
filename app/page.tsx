@@ -137,6 +137,7 @@ export default async function Home() {
               { title: 'Best Alison Courses (2026)', desc: 'CPD-accredited diplomas and certificates — free to study.', href: '/best-alison-courses-with-certificates', badge: 'Alison' },
               { title: 'Free Courses for Data Analysts', desc: 'Excel, SQL, Python, and Power BI — the full analyst learning path.', href: '/free-courses-for-data-analysts', badge: 'Data' },
               { title: 'Free AI Courses for Beginners', desc: 'Learn AI and Generative AI without any coding background.', href: '/free-ai-courses-for-beginners', badge: 'AI' },
+              { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion — build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
             ].map(({ title, desc, href, badge }) => (
               <Link
                 key={href}
