@@ -13,6 +13,10 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
+            <li><Link href="/free-courses-with-certificates" className="hover:text-blue-400 transition-colors">Free Courses with Certificates</Link></li>
+            <li><Link href="/free-ai-courses-for-beginners" className="hover:text-blue-400 transition-colors">Free AI Courses for Beginners</Link></li>
+            <li><Link href="/free-courses-for-data-analysts" className="hover:text-blue-400 transition-colors">Free Courses for Data Analysts</Link></li>
+            <li><Link href="/best-alison-courses-with-certificates" className="hover:text-blue-400 transition-colors">Best Alison Courses</Link></li>
             <li><Link href="/category/it" className="hover:text-blue-400 transition-colors">IT Courses</Link></li>
             <li><Link href="/category/marketing" className="hover:text-blue-400 transition-colors">Marketing</Link></li>
             <li><Link href="/category/accounting" className="hover:text-blue-400 transition-colors">Accounting</Link></li>

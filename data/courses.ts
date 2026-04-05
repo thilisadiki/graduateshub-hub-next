@@ -1,6 +1,7 @@
 import { Course } from '../types';
 import { accountingCourses } from './categories/accountingCourses.js';
 import { businessCourses } from './categories/businessCourses.js';
+import { dataAnalyticsCourses } from './categories/dataAnalyticsCourses.js';
 import { healthCourses } from './categories/healthCourses.js';
 import { itCourses } from './categories/itCourses.js';
 import { languageCourses } from './categories/languageCourses.js';
@@ -11,6 +12,7 @@ import { personalDevelopmentCourses } from './categories/personalDevelopmentCour
 const allCoursesRaw: Course[] = [
     ...accountingCourses,
     ...businessCourses,
+    ...dataAnalyticsCourses,
     ...healthCourses,
     ...itCourses,
     ...languageCourses,
