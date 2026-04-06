@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/best-alison-courses-with-certificates`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-courses-for-beginners`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-digital-marketing-courses`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/free-courses-for-software-developers`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/search`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },

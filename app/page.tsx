@@ -138,6 +138,7 @@ export default async function Home() {
               { title: 'Free Courses for Data Analysts', desc: 'Excel, SQL, Python, and Power BI — the full analyst learning path.', href: '/free-courses-for-data-analysts', badge: 'Data' },
               { title: 'Free AI Courses for Beginners', desc: 'Learn AI and Generative AI without any coding background.', href: '/free-ai-courses-for-beginners', badge: 'AI' },
               { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion — build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
+              { title: 'Free Courses for Software Developers', desc: 'Web development, programming languages, DevOps, and software architecture — all free.', href: '/free-courses-for-software-developers', badge: 'Dev' },
             ].map(({ title, desc, href, badge }) => (
               <Link
                 key={href}
