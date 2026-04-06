@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="sm:col-span-2 md:col-span-4 lg:col-span-2">
           <h2 className="text-2xl font-bold text-white mb-4">Graduates <span className="text-blue-400">Hub</span></h2>
           <p className="text-sm leading-relaxed max-w-sm">
-            Empowering learners worldwide with 100% free, high-quality online courses. Build your skills, earn certificates, and advance your career today.
+            Your free learning resource centre — career guides, study articles, and hundreds of free certified courses to help you grow your skills and advance your career.
           </p>
         </div>
 

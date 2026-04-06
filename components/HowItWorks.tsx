@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { UserPlus, BookOpen, Award } from 'lucide-react';
 
 const steps = [
-  { id: 1, title: 'Sign Up for Free', description: 'Create your free account in seconds and unlock access to thousands of courses.', icon: <UserPlus className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} /> },
+  { id: 1, title: 'Sign Up for Free', description: 'Create your free account in seconds and unlock access to hundreds of free learning resources.', icon: <UserPlus className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} /> },
   { id: 2, title: 'Choose & Learn', description: 'Browse categories, select a course, and start learning at your own pace.', icon: <BookOpen className="text-primary scale-150 -rotate-3" size={40} strokeWidth={1.5} /> },
   { id: 3, title: 'Earn Your Certificate', description: 'Complete the assessments and instantly download your globally recognized certificate.', icon: <Award className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} /> },
 ];
