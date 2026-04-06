@@ -1,14 +1,20 @@
 {
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/wp-admin",
-      "destination": "/blog/wp-admin",
-      "permanent": false
+      "source": "/blog/wp-admin",
+      "destination": "https://blog.graduateshub.co.za/wp-admin"
     },
     {
-      "source": "/wp-admin/:path*",
-      "destination": "/blog/wp-admin/:path*",
-      "permanent": false
+      "source": "/blog/wp-admin/:path*",
+      "destination": "https://blog.graduateshub.co.za/wp-admin/:path*"
+    },
+    {
+      "source": "/blog/wp-login.php",
+      "destination": "https://blog.graduateshub.co.za/wp-login.php"
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://blog.graduateshub.co.za/:path*"
     }
   ]
 }
