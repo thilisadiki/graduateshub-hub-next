@@ -1,13 +1,20 @@
+import { cache } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import NewsletterBanner from '@/components/NewsletterBanner';
 
+export const revalidate = 3600;   // regenerate cached posts every hour
+export const dynamicParams = true; // posts published after build still work
+
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const SITE_URL = 'https://graduateshub.co.za';
 
-async function fetchPostBySlug(slug: string) {
+// React.cache deduplicates: generateMetadata and the page component
+// both call this — it only hits the WP API once per request.
+const fetchPostBySlug = cache(async (slug: string) => {
   try {
     const res = await fetch(`${WP_API}/wp/v2/posts?slug=${slug}&_embed`, {
       next: { revalidate: 3600 },
@@ -18,6 +25,33 @@ async function fetchPostBySlug(slug: string) {
   } catch {
     return null;
   }
+});
+
+// Pre-render all existing post slugs at build time.
+// Fetches up to 100 posts per page; loops until all slugs are collected.
+export async function generateStaticParams() {
+  const slugs: { slug: string }[] = [];
+  let page = 1;
+
+  while (true) {
+    try {
+      const res = await fetch(
+        `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=slug`,
+        { next: { revalidate: 3600 } }
+      );
+      if (!res.ok) break;
+      const posts: { slug: string }[] = await res.json();
+      if (posts.length === 0) break;
+      slugs.push(...posts.map((p) => ({ slug: p.slug })));
+      const totalPages = parseInt(res.headers.get('X-WP-TotalPages') ?? '1');
+      if (page >= totalPages) break;
+      page++;
+    } catch {
+      break;
+    }
+  }
+
+  return slugs;
 }
 
 export async function generateMetadata({
@@ -51,6 +85,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  // Deduped — no second network request, uses the cached result from generateMetadata
   const post = await fetchPostBySlug(slug);
   if (!post) notFound();
 
@@ -101,15 +136,17 @@ export default async function BlogPostPage({
         </div>
       </div>
 
-      {/* Hero image */}
+      {/* Hero image — next/image handles WebP conversion, sizing, and lazy load */}
       {imageUrl && (
         <div className="max-w-4xl mx-auto w-full px-6 pt-8">
-          <div className="rounded-2xl overflow-hidden h-56 md:h-80">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div className="rounded-2xl overflow-hidden relative h-56 md:h-80">
+            <Image
               src={imageUrl}
               alt={post.title.rendered}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 896px"
+              priority
             />
           </div>
         </div>
@@ -152,7 +189,6 @@ export default async function BlogPostPage({
           <div className="wp-content max-w-[72ch]" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
-        {/* Footer nav */}
         {/* Footer nav */}
         <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <Link

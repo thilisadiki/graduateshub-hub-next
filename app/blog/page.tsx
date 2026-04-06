@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
 import NewsletterBanner from '@/components/NewsletterBanner';
+
+export const revalidate = 300; // regenerate every 5 minutes in the background
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const SITE_URL = 'https://graduateshub.co.za';
@@ -20,10 +23,13 @@ export const metadata: Metadata = {
   },
 };
 
+// Only fetch the fields we actually render — cuts response size ~80% vs full _embed
+const LISTING_FIELDS = '_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia';
+
 async function fetchPosts(page: number) {
   try {
     const res = await fetch(
-      `${WP_API}/wp/v2/posts?per_page=${PER_PAGE}&page=${page}&_embed`,
+      `${WP_API}/wp/v2/posts?per_page=${PER_PAGE}&page=${page}&${LISTING_FIELDS}`,
       { next: { revalidate: 300 } }
     );
     if (!res.ok) return { posts: [], total: 0, totalPages: 1 };
@@ -107,12 +113,12 @@ export default async function BlogPage({
                 className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
               >
                 <div className="h-48 overflow-hidden relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={post.imageUrl}
                     alt={post.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-700 flex items-center gap-1 shadow-sm">
                     <Calendar size={12} />
