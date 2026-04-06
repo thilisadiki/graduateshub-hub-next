@@ -27,6 +27,27 @@ const fetchPostBySlug = cache(async (slug: string) => {
   }
 });
 
+function cleanContent(html: string): string {
+  return html
+    // 1. Rewrite subdomain links to internal /blog/ paths
+    .replace(/https:\/\/articles\.graduateshub\.co\.za\//g, '/blog/')
+    // 2. Strip Gutenberg HTML comments (<!-- wp:paragraph --> etc.)
+    .replace(/<!--\s*\/?wp:[^>]*-->/g, '')
+    // 3. Strip inline style attributes
+    .replace(/\s+style="[^"]*"/g, '')
+    // 4. Strip data-* attributes (editor metadata)
+    .replace(/\s+data-[\w-]+="[^"]*"/g, '')
+    // 5. Strip wp-block-* classes but keep other classes (e.g. has-fixed-layout on tables)
+    .replace(/\s+class="wp-block-[^"]*"/g, '')
+    // 6. Unwrap bare <span> tags that have no remaining attributes (pure noise wrappers)
+    .replace(/<span>([^<]*)<\/span>/g, '$1')
+    // 7. Remove empty paragraphs: <p></p>, <p> </p>, <p>&nbsp;</p>, <p><br/></p>
+    .replace(/<p>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, '')
+    // 8. Collapse 3+ consecutive blank lines left over after cleanup
+    .replace(/(\s*\n){3,}/g, '\n\n')
+    .trim();
+}
+
 // Pre-render all existing post slugs at build time.
 // Fetches up to 100 posts per page; loops until all slugs are collected.
 export async function generateStaticParams() {
@@ -97,11 +118,7 @@ export default async function BlogPostPage({
   });
   const categories: any[] = post._embedded?.['wp:term']?.[0] ?? [];
 
-  // Rewrite WP subdomain links to internal /blog/ paths
-  const content = (post.content.rendered as string).replace(
-    /https:\/\/articles\.graduateshub\.co\.za\//g,
-    '/blog/'
-  );
+  const content = cleanContent(post.content.rendered);
 
   const articleSchema = {
     '@context': 'https://schema.org',
