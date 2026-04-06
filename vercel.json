@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "https://blog.graduateshub.co.za"
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://blog.graduateshub.co.za/:path*"
+    }
+  ]
+}
