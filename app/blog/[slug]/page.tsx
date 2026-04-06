@@ -48,6 +48,20 @@ function cleanContent(html: string): string {
     .trim();
 }
 
+async function fetchRelatedPosts(categoryIds: number[], excludeId: number) {
+  if (categoryIds.length === 0) return [];
+  try {
+    const res = await fetch(
+      `${WP_API}/wp/v2/posts?per_page=3&categories=${categoryIds.join(',')}&exclude=${excludeId}&_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia`,
+      { next: { revalidate: 3600 } }
+    );
+    if (!res.ok) return [];
+    return await res.json();
+  } catch {
+    return [];
+  }
+}
+
 // Pre-render all existing post slugs at build time.
 // Fetches up to 100 posts per page; loops until all slugs are collected.
 export async function generateStaticParams() {
@@ -117,8 +131,20 @@ export default async function BlogPostPage({
     day: 'numeric',
   });
   const categories: any[] = post._embedded?.['wp:term']?.[0] ?? [];
+  const categoryIds: number[] = categories.map((c: any) => c.id);
+  const [content, relatedRaw] = await Promise.all([
+    Promise.resolve(cleanContent(post.content.rendered)),
+    fetchRelatedPosts(categoryIds, post.id),
+  ]);
 
-  const content = cleanContent(post.content.rendered);
+  const related = relatedRaw.map((p: any) => ({
+    slug: p.slug,
+    title: p.title.rendered,
+    excerpt: (p.excerpt.rendered as string).replace(/<[^>]+>/g, '').substring(0, 120) + '...',
+    date: new Date(p.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }),
+    imageUrl: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ??
+      'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80',
+  }));
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -205,6 +231,38 @@ export default async function BlogPostPage({
           {/* Content */}
           <div className="wp-content max-w-[72ch]" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
+
+        {/* Related articles */}
+        {related.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-xl font-extrabold text-gray-900 mb-6">Related Articles</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {related.map((r: { slug: string; title: string; excerpt: string; date: string; imageUrl: string }) => (
+                <Link
+                  key={r.slug}
+                  href={`/blog/${r.slug}`}
+                  className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:border-primary transition-all group flex flex-col"
+                >
+                  <div className="relative h-40 overflow-hidden">
+                    <Image
+                      src={r.imageUrl}
+                      alt={r.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-grow">
+                    <p className="text-xs text-gray-400 mb-2">{r.date}</p>
+                    <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm leading-snug mb-2">{r.title}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed flex-grow">{r.excerpt}</p>
+                    <span className="mt-4 text-xs font-bold text-primary">Read Article →</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Footer nav */}
         <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
