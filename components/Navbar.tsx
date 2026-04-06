@@ -93,7 +93,7 @@ export default function Navbar() {
         {/* Right Actions */}
         <div className="flex items-center gap-4 shrink-0">
           <div className="hidden md:flex items-center gap-4">
-            <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Articles</a>
+            <Link href="/blog" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Blog</Link>
             <Link href="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">About</Link>
 
             {/* AI Tools Dropdown */}
@@ -177,7 +177,7 @@ export default function Navbar() {
           <Link href="/free-digital-marketing-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Digital Marketing Courses</Link>
           <Link href="/free-courses-for-software-developers" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Software Developers</Link>
         </div>
-        <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Articles</a>
+        <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Blog</Link>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">AI Tools</div>
         <div className="flex flex-col gap-2">

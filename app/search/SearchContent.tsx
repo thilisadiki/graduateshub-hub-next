@@ -216,9 +216,9 @@ export default function SearchContent() {
           </div>
           <div className="mt-8 bg-blue-50 border border-blue-100 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-gray-700 font-medium">Looking for more guidance? Visit our free learning resource blog for career tips and study advice.</p>
-            <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-primary font-bold hover:text-blue-800 transition-colors whitespace-nowrap">
+            <Link href="/blog" className="shrink-0 text-primary font-bold hover:text-blue-800 transition-colors whitespace-nowrap">
               Read our articles →
-            </a>
+            </Link>
           </div>
         </section>
 

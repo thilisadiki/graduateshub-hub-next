@@ -1,10 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ExternalLink, Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import Link from 'next/link';
+import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
 
 interface Article {
   id: number;
+  slug: string;
   title: string;
   excerpt: string;
   link: string;
@@ -78,6 +80,7 @@ export default function LatestArticles({
 
           return {
             id: post.id,
+            slug: post.slug,
             title: post.title.rendered,
             excerpt: cleanExcerpt.substring(0, 120) + '...',
             link: post.link,
@@ -160,22 +163,19 @@ export default function LatestArticles({
             {customSubtitle || 'Expert advice, industry news, and guides to help you navigate your career.'}
           </p>
         </div>
-        <a
-          href="https://articles.graduateshub.co.za/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/blog"
           className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:flex items-center gap-1 group"
         >
           View All Articles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
-          <a
+          <Link
             key={article.id}
-            href={article.link}
-            target="_self"
+            href={`/blog/${article.slug}`}
             className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
           >
             <div className="h-48 overflow-hidden relative">
@@ -203,14 +203,14 @@ export default function LatestArticles({
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
       <div className="mt-6 text-center sm:hidden">
-        <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
           View All Articles <ArrowRight size={18} />
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -73,6 +73,7 @@ async function fetchHomeArticles(perPage: number) {
 
       return {
         id: post.id,
+        slug: post.slug,
         title: post.title.rendered,
         excerpt: cleanExcerpt.substring(0, 120) + '...',
         link: post.link,

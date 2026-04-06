@@ -11,7 +11,7 @@ const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   {
     question: 'Are these certificates recognised by employers?',
     answer: "",
-    node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub Articles.</>,
+    node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our <a href="/blog" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub.</>,
   },
   {
     question: 'Do I need any previous experience to enrol?',
@@ -20,7 +20,7 @@ const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   {
     question: 'How long does it take to complete a course?',
     answer: "",
-    node: <>It depends entirely on the course format. Standard Certificate courses typically take 2–3 hours to complete, while comprehensive Diploma programs can take 10–15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our <a href="https://articles.graduateshub.co.za/how-to-successfully-balance-full-time-work-with-online-study/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
+    node: <>It depends entirely on the course format. Standard Certificate courses typically take 2–3 hours to complete, while comprehensive Diploma programs can take 10–15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our <a href="/blog/how-to-successfully-balance-full-time-work-with-online-study" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
   },
 ];
 

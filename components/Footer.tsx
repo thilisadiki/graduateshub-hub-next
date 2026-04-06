@@ -24,7 +24,7 @@ export default function Footer() {
             <li><Link href="/free-ai-courses-for-beginners" className="hover:text-blue-400 transition-colors">Free AI Courses for Beginners</Link></li>
             <li><Link href="/free-digital-marketing-courses" className="hover:text-blue-400 transition-colors">Free Digital Marketing Courses</Link></li>
             <li><Link href="/free-courses-for-software-developers" className="hover:text-blue-400 transition-colors">Free Courses for Software Developers</Link></li>
-            <li><a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Career Guides</a></li>
+            <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Career Guides & Blog</Link></li>
           </ul>
         </div>
 

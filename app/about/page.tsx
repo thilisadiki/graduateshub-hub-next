@@ -47,13 +47,13 @@ export default function AboutPage() {
                 <div><h3 className="font-bold text-gray-800 text-lg">{title}</h3><p className="text-gray-600 text-sm mt-1">{desc}</p></div>
               </div>
             ))}
-            <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex gap-4 items-start hover:border-primary transition-colors group md:col-span-2">
+            <Link href="/blog" className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex gap-4 items-start hover:border-primary transition-colors group md:col-span-2">
               <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center shrink-0"><Newspaper size={24} /></div>
               <div>
                 <h3 className="font-bold text-gray-800 text-lg group-hover:text-primary transition-colors">Career Guides & Articles</h3>
                 <p className="text-gray-600 text-sm mt-1">Explore our free library of career guides, study tips, and industry insights to help you make the most of your learning journey.</p>
               </div>
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               Beyond courses, we publish free{' '}
-              <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">career guides and study articles</a>
+              <Link href="/blog" className="text-primary font-semibold hover:underline">career guides and study articles</Link>
               {' '}to help you navigate your learning journey — from choosing the right course to landing your next job.
             </p>
           </div>
@@ -82,9 +82,9 @@ export default function AboutPage() {
               <Link href="/categories" className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold transition-all shadow-md text-lg">
                 Explore Courses <ArrowRight size={20} />
               </Link>
-              <a href="https://articles.graduateshub.co.za/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-blue-500/20 hover:bg-blue-500/30 text-white px-8 py-4 rounded-lg font-bold transition-all text-lg border border-white/20">
+              <Link href="/blog" className="inline-flex items-center justify-center gap-2 bg-blue-500/20 hover:bg-blue-500/30 text-white px-8 py-4 rounded-lg font-bold transition-all text-lg border border-white/20">
                 Read Our Articles <ArrowRight size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </section>

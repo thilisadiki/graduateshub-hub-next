@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/articles',
-        destination: 'https://articles.graduateshub.co.za',
+        destination: '/blog',
         permanent: true,
       },
     ];

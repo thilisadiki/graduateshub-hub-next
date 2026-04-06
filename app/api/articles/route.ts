@@ -25,5 +25,6 @@ export async function GET(request: NextRequest) {
   }
 
   const data = await response.json();
+  // Pass through raw WP data (includes slug, _embedded, etc.)
   return NextResponse.json(data);
 }
