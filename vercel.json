@@ -1,12 +1,14 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/blog",
-      "destination": "https://blog.graduateshub.co.za"
+      "source": "/wp-admin",
+      "destination": "/blog/wp-admin",
+      "permanent": false
     },
     {
-      "source": "/blog/:path*",
-      "destination": "https://blog.graduateshub.co.za/:path*"
+      "source": "/wp-admin/:path*",
+      "destination": "/blog/wp-admin/:path*",
+      "permanent": false
     }
   ]
 }
