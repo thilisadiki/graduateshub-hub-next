@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "articles.graduateshub.co.za"
+        }
+      ],
+      "destination": "https://graduateshub.co.za/blog/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/blog",
