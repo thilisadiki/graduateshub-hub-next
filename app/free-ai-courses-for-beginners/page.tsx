@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Best Free AI Courses for Beginners (2026)',
+  url: `${SITE_URL}/free-ai-courses-for-beginners`,
+  datePublished: '2025-01-01',
+  dateModified: '2026-01-01',
+  description: 'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI — all free with certificates.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+};
+
 const courseCategories = [
   {
     label: 'AI Fundamentals',
@@ -153,6 +164,7 @@ export default function FreeAICoursesForBeginnersPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

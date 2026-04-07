@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Best Free Courses for Digital Marketing Careers (2026)',
+  url: `${SITE_URL}/free-digital-marketing-courses`,
+  datePublished: '2025-01-01',
+  dateModified: '2026-01-01',
+  description: 'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking — all free, all beginner-friendly.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+};
+
 const courseCategories = [
   {
     label: 'Marketing Fundamentals',
@@ -173,6 +184,7 @@ export default function FreeDigitalMarketingCoursesPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

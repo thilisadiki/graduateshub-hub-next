@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Best Alison Courses with Certificates (2026)',
+  url: `${SITE_URL}/best-alison-courses-with-certificates`,
+  datePublished: '2025-01-01',
+  dateModified: '2026-01-01',
+  description: 'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more — self-paced with no deadlines.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+};
+
 const courseCategories = [
   {
     label: 'Business & Project Management',
@@ -170,6 +181,7 @@ export default function BestAlisonCoursesPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

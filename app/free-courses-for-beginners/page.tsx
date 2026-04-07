@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Best Free Courses for Beginners — No Experience Needed (2026)',
+  url: `${SITE_URL}/free-courses-for-beginners`,
+  datePublished: '2025-01-01',
+  dateModified: '2026-01-01',
+  description: 'Discover the best free online courses for complete beginners in 2026. No experience needed — start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+};
+
 const courseCategories = [
   {
     label: 'Technology for Beginners',
@@ -202,6 +213,7 @@ export default function FreeCoursesForBeginnersPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

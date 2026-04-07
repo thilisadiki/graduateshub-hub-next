@@ -164,7 +164,7 @@ export default async function BlogPostPage({
       name: 'Graduates Hub',
       url: SITE_URL,
     },
-    ...(imageUrl && { image: imageUrl }),
+    image: imageUrl ?? `${SITE_URL}/graduates-hub-logo.png`,
   };
 
   return (

@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Best Free Courses for Software Developers (2026)',
+  url: `${SITE_URL}/free-courses-for-software-developers`,
+  datePublished: '2025-01-01',
+  dateModified: '2026-01-01',
+  description: 'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices — all free with certificates.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+};
+
 const courseCategories = [
   {
     label: 'Web Development',
@@ -180,6 +191,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

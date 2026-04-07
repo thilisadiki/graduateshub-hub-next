@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Best Free Courses for Data Analysts (2026)',
+  url: `${SITE_URL}/free-courses-for-data-analysts`,
+  datePublished: '2025-01-01',
+  dateModified: '2026-01-01',
+  description: 'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis — all free with certificates. No degree required.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+};
+
 const courseCategories = [
   {
     label: 'Spreadsheets & Visualisation',
@@ -175,6 +186,7 @@ export default function FreeCoursesForDataAnalystsPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

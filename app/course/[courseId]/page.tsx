@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ courseId:
       title: `${course.title} - Free Online Course | Graduates Hub`,
       description: course.description,
       url: `${SITE_URL}/course/${course.id}`,
-      images: [{ url: course.image, width: 800, height: 600 }],
+      images: [{ url: course.image }],
     },
   };
 }
