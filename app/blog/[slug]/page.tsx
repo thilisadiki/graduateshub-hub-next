@@ -154,6 +154,11 @@ export default async function BlogPostPage({
     datePublished: post.date,
     dateModified: post.modified,
     url: `${SITE_URL}/blog/${slug}`,
+    author: {
+      '@type': 'Organization',
+      name: 'Graduates Hub',
+      url: SITE_URL,
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Graduates Hub',
