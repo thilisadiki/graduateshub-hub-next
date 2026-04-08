@@ -25,12 +25,13 @@ export default function CourseCard({ course }: { course: Course }) {
             href={course.affiliateLink}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${course.title} on Alison`}
             className="mt-6 block w-full text-center border-2 border-primary text-primary py-2.5 rounded-lg font-bold hover:bg-blue-50 transition-colors"
           >
             View on Alison →
           </a>
         ) : (
-          <Link href={`/course/${course.id}`} className="mt-6 block w-full text-center border-2 border-primary text-primary py-2.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
+          <Link href={`/course/${course.id}`} aria-label={`View course details for ${course.title}`} className="mt-6 block w-full text-center border-2 border-primary text-primary py-2.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
             View Course Details →
           </Link>
         )}

@@ -1,6 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=86400; includeSubDomains',
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
