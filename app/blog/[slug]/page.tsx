@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Calendar, ArrowLeft } from 'lucide-react';
+import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
 import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const revalidate = 3600;   // regenerate cached posts every hour
@@ -132,6 +132,7 @@ export default async function BlogPostPage({
   });
   const categories: any[] = post._embedded?.['wp:term']?.[0] ?? [];
   const categoryIds: number[] = categories.map((c: any) => c.id);
+  const author = post._embedded?.author?.[0] ?? null;
   const [content, relatedRaw] = await Promise.all([
     Promise.resolve(cleanContent(post.content.rendered)),
     fetchRelatedPosts(categoryIds, post.id),
@@ -154,11 +155,14 @@ export default async function BlogPostPage({
     datePublished: post.date,
     dateModified: post.modified,
     url: `${SITE_URL}/blog/${slug}`,
-    author: {
-      '@type': 'Organization',
-      name: 'Graduates Hub',
-      url: SITE_URL,
-    },
+    author: author
+      ? {
+          '@type': 'Person',
+          name: author.name,
+          ...(author.description && { description: author.description }),
+          url: SITE_URL,
+        }
+      : { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
     publisher: {
       '@type': 'Organization',
       name: 'Graduates Hub',
@@ -217,6 +221,12 @@ export default async function BlogPostPage({
               <Calendar size={14} />
               {date}
             </span>
+            {author && (
+              <span className="flex items-center gap-1.5 text-sm text-gray-500">
+                <UserRound size={14} />
+                {author.name}
+              </span>
+            )}
             {categories.map((cat: any) => (
               <span
                 key={cat.id}
@@ -236,6 +246,32 @@ export default async function BlogPostPage({
           {/* Content */}
           <div className="wp-content max-w-[72ch]" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
+
+        {/* Author bio card */}
+        {author && (
+          <div className="mt-10 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-5 items-start">
+            {author.avatar_urls?.['96'] ? (
+              <Image
+                src={author.avatar_urls['96']}
+                alt={author.name}
+                width={64}
+                height={64}
+                className="rounded-full shrink-0"
+              />
+            ) : (
+              <div className="w-16 h-16 rounded-full bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                <UserRound size={28} />
+              </div>
+            )}
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Written by</p>
+              <p className="font-bold text-gray-900 text-lg">{author.name}</p>
+              {author.description && (
+                <p className="text-sm text-gray-600 mt-1 leading-relaxed">{author.description}</p>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Related articles */}
         {related.length > 0 && (

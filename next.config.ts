@@ -32,6 +32,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'articles.graduateshub.co.za' },
+      { protocol: 'https', hostname: 'secure.gravatar.com' },
+      { protocol: 'https', hostname: '*.gravatar.com' },
     ],
   },
 };
