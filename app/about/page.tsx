@@ -5,12 +5,12 @@ import { BookOpen, Users, Award, Heart, ArrowRight, Newspaper, ExternalLink } fr
 const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
-  title: 'About Jason Sadiki – Founder of Graduates Hub',
-  description: 'Graduates Hub was built by Jason Sadiki, a Technical SEO Specialist and web developer from South Africa, to make quality free learning resources discoverable for everyone.',
+  title: 'About Graduates Hub – Meet the Team',
+  description: 'Graduates Hub is built by Jason Sadiki (Technical SEO Specialist & Web Developer) and curated with Ndulamiso Mamburu (Accounting Science Graduate, SARS). Real credentials behind every resource.',
   alternates: { canonical: `${SITE_URL}/about` },
 };
 
-const personSchema = {
+const jasonSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Jason Sadiki',
@@ -28,6 +28,20 @@ const personSchema = {
   },
 };
 
+const ndulamisoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ndulamiso Mamburu',
+  jobTitle: 'Tax Professional & Accounting Science Graduate',
+  description: 'Accounting Science Graduate pursuing a degree in Taxation. Works at the South African Revenue Service (SARS). Accounting and business content curator at Graduates Hub.',
+  sameAs: ['https://www.linkedin.com/in/ndulamiso-mamburu/'],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'South African Revenue Service',
+    alternateName: 'SARS',
+  },
+};
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -38,98 +52,122 @@ const organizationSchema = {
     name: 'Jason Sadiki',
     sameAs: 'https://www.linkedin.com/in/jasonsadiki/',
   },
+  employee: [
+    {
+      '@type': 'Person',
+      name: 'Ndulamiso Mamburu',
+      sameAs: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
+    },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jasonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ndulamisoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
 
       {/* Hero */}
       <div className="bg-slate-900 text-white py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">The person behind the platform</p>
+          <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">The people behind the platform</p>
           <h1 className="text-3xl md:text-5xl font-extrabold">
-            Built by <span className="text-primary">Jason Sadiki</span>
+            Built and curated by <span className="text-primary">real specialists</span>
           </h1>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
-            Technical SEO Specialist and web developer from South Africa, on a mission to make quality free learning resources actually findable.
+            Every resource on Graduates Hub is backed by someone with direct, professional experience in that field. No generalists, no guesswork.
           </p>
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <a
-              href="https://www.linkedin.com/in/jasonsadiki/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-lg transition-colors text-sm"
-            >
-              <ExternalLink size={15} /> LinkedIn Profile
-            </a>
-            <a
-              href="https://thilisadiki.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-5 py-2.5 rounded-lg transition-colors text-sm"
-            >
-              <ExternalLink size={15} /> Personal Site
-            </a>
-          </div>
         </div>
       </div>
 
       <main className="flex-grow max-w-4xl mx-auto px-6 py-16 w-full space-y-16">
 
-        {/* Founder Story */}
+        {/* The Team */}
         <section>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="flex flex-col md:flex-row gap-0">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Meet the Team</h2>
+          <div className="flex flex-col gap-6">
 
-              {/* Photo */}
-              <div className="md:w-56 lg:w-64 shrink-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8 md:p-0">
-                <div className="w-32 h-32 md:w-full md:h-full md:min-h-[280px] rounded-full md:rounded-none overflow-hidden bg-slate-200">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/jason-sadiki.jpg"
-                    alt="Jason Sadiki, Founder of Graduates Hub"
-                    className="w-full h-full object-cover"
-                  />
+            {/* Jason */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="flex flex-col md:flex-row gap-0">
+                <div className="md:w-56 lg:w-64 shrink-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8 md:p-0">
+                  <div className="w-32 h-32 md:w-full md:h-full md:min-h-[280px] rounded-full md:rounded-none overflow-hidden bg-slate-200">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/jason-sadiki.jpg" alt="Jason Sadiki, Founder of Graduates Hub" className="w-full h-full object-cover" />
+                  </div>
                 </div>
-              </div>
-
-              {/* Story */}
-              <div className="p-8 md:p-10 flex flex-col justify-center">
-                <h2 className="text-2xl font-extrabold text-gray-900 mb-1">Jason Sadiki</h2>
-                <p className="text-primary font-semibold text-sm mb-5">Technical SEO Specialist &amp; Web Developer</p>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  With over 7 years of experience in Technical SEO and web development, I built Graduates Hub because I kept running into the same problem: great free courses existed, but they were nearly impossible to find. Quality content from providers like Alison, Google, and Coursera was buried under paywalled results and poorly curated aggregators.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  I understood exactly why. The discoverability problem was not about the content — it was about the infrastructure around it. So I built the platform that should have already existed: a fast, well-structured, free resource hub optimised for the learners actually searching for this content.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  Graduates Hub is independently built and run. Every course is hand-picked. There are no paywalls, no upsells, and no investor mandates pushing paid content ahead of free alternatives.
-                </p>
-                <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-                  <a
-                    href="https://www.linkedin.com/in/jasonsadiki/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    <ExternalLink size={14} /> Connect on LinkedIn
-                  </a>
-                  <span className="text-gray-200">|</span>
-                  <a
-                    href="https://thilisadiki.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-gray-800 transition-colors"
-                  >
-                    <ExternalLink size={14} /> thilisadiki.dev
-                  </a>
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="text-2xl font-extrabold text-gray-900">Jason Sadiki</h3>
+                    <span className="text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100 px-2.5 py-1 rounded-full">Founder</span>
+                  </div>
+                  <p className="text-primary font-semibold text-sm mb-2">Technical SEO Specialist &amp; Web Developer</p>
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {['IT & Technology', 'Software Engineering', 'Digital Marketing', 'SEO'].map(tag => (
+                      <span key={tag} className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium">{tag}</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    With over 7 years of experience in Technical SEO and web development, Jason built Graduates Hub after noticing how hard it was to find quality free learning resources online. His background means every course is surfaced based on real personal experience and not paid placement.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Graduates Hub is independently built and run. No paywalls, no upsells, no investor mandates pushing paid content ahead of free alternatives.
+                  </p>
+                  <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                    <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                      <ExternalLink size={14} /> LinkedIn
+                    </a>
+                    <span className="text-gray-200">|</span>
+                    <a href="https://thilisadiki.dev" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-gray-800 transition-colors">
+                      <ExternalLink size={14} /> thilisadiki.dev
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Ndulamiso */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="flex flex-col md:flex-row gap-0">
+                <div className="md:w-56 lg:w-64 shrink-0 bg-gradient-to-br from-teal-50 to-emerald-100 flex items-center justify-center p-8 md:p-0">
+                  <div className="w-32 h-32 md:w-full md:h-full md:min-h-[260px] rounded-full md:rounded-none overflow-hidden bg-teal-100 flex items-center justify-center">
+                    {/* Add /ndulamiso-mamburu.jpg to /public when available */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu, Accounting Curator at Graduates Hub"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="text-2xl font-extrabold text-gray-900">Ndulamiso Mamburu</h3>
+                    <span className="text-xs font-bold bg-teal-50 text-teal-700 border border-teal-100 px-2.5 py-1 rounded-full">Curator</span>
+                  </div>
+                  <p className="text-teal-600 font-semibold text-sm mb-2">Tax Professional &amp; Accounting Science Graduate</p>
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {['Accounting & Finance', 'Business', 'Taxation'].map(tag => (
+                      <span key={tag} className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium">{tag}</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    Ndulamiso holds a degree in Accounting Science and is currently pursuing a further degree in Taxation. She works at the South African Revenue Service (SARS), giving her direct, practitioner-level insight into accounting, financial compliance, and business finance.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    She curates the accounting and business content on Graduates Hub, ensuring every recommended course reflects what is actually useful in practice, not just what looks good on paper.
+                  </p>
+                  <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                    <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                      <ExternalLink size={14} /> LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -151,7 +189,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-6">What You Get</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { icon: BookOpen, color: 'bg-blue-100 text-primary', title: '140+ Free Learning Resources', desc: 'From IT and Software Engineering to Business, Languages, and Health — every resource is hand-picked for relevance, quality, and real-world applicability.' },
+              { icon: BookOpen, color: 'bg-blue-100 text-primary', title: 'Free Learning Resources', desc: 'From IT and Software Engineering to Business, Accounting, and Marketing. Every resource is hand-picked for relevance, quality, and real-world applicability.' },
               { icon: Award, color: 'bg-green-100 text-green-600', title: 'Certificates & Diplomas', desc: 'Earn verifiable certificates and diplomas from internationally recognised providers to strengthen your CV and professional profile.' },
               { icon: Users, color: 'bg-purple-100 text-purple-600', title: 'AI-Powered Course Matching', desc: 'Our AI recommendation engine finds the right learning path based on your goals and experience level.' },
               { icon: Heart, color: 'bg-red-100 text-red-500', title: '100% Free, Always', desc: 'No hidden fees, no paywalls, no credit card required. Every resource on Graduates Hub is and will always be completely free.' },
@@ -193,7 +231,7 @@ export default function AboutPage() {
         <section className="text-center">
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-10 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Ready to start learning?</h2>
-            <p className="text-blue-100 max-w-lg mx-auto mb-8">Browse 140+ free learning resources across 9 categories and take the first step toward your next achievement.</p>
+            <p className="text-blue-100 max-w-lg mx-auto mb-8">Browse free learning resources across IT, Business, Accounting, Marketing, and more.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/categories" className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold transition-all shadow-md text-lg">
                 Explore Resources <ArrowRight size={20} />
