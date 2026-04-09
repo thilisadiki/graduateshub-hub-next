@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle2, Clock, TrendingUp, Award, Database, BarChart2, ChevronRight } from 'lucide-react';
+import AuthorByline from '@/components/AuthorByline';
 import CourseCard from '@/components/CourseCard';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
@@ -224,6 +225,7 @@ export default function FreeCoursesForDataAnalystsPage() {
               SQL, Python & More
             </div>
           </div>
+          <AuthorByline authors={['jason']} lastUpdated="January 2026" />
         </div>
       </div>
 

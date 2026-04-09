@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle2, Clock, TrendingUp, Award, BookOpen, Lightbulb, ChevronRight, ArrowRight } from 'lucide-react';
+import AuthorByline from '@/components/AuthorByline';
 import CourseCard from '@/components/CourseCard';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
@@ -250,6 +251,7 @@ export default function FreeCoursesForBeginnersPage() {
               Self-Paced
             </div>
           </div>
+          <AuthorByline authors={['jason', 'ndulamiso']} lastUpdated="January 2026" />
         </div>
       </div>
 
