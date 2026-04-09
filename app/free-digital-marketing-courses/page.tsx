@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free Courses for Digital Marketing Careers (2026)',
   description:
-    'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking — all free, all beginner-friendly.',
+    'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking, all free, all beginner-friendly.',
   alternates: { canonical: `${SITE_URL}/free-digital-marketing-courses` },
   openGraph: {
     title: 'Best Free Courses for Digital Marketing Careers (2026) | Graduates Hub',
     description:
-      'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking — all free, all beginner-friendly.',
+      'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking, all free, all beginner-friendly.',
     url: `${SITE_URL}/free-digital-marketing-courses`,
   },
 };
@@ -29,7 +29,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-digital-marketing-courses`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking — all free, all beginner-friendly.',
+  description: 'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking, all free, all beginner-friendly.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -49,13 +49,13 @@ const courseCategories = [
   {
     label: 'Content Marketing & SEO',
     slug: 'marketing',
-    description: 'Create content that actually gets found — covering YouTube SEO, content strategy, and Instagram growth.',
+    description: 'Create content that actually gets found, covering YouTube SEO, content strategy, and Instagram growth.',
     ids: ['youtube-marketing-seo', 'content-creation-strategy', 'instagram-marketing-hashtags'],
   },
   {
     label: 'Growth & Conversion',
     slug: 'marketing',
-    description: 'Take your skills further — learn how to grow audiences fast and turn traffic into paying customers.',
+    description: 'Take your skills further, learn how to grow audiences fast and turn traffic into paying customers.',
     ids: ['growth-hacking-techniques-for-digital-marketing', 'using-digital-marketing-to-convert-customers'],
   },
 ];
@@ -64,7 +64,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'High Demand Across Every Industry',
-    body: 'Every business — from startups to corporations — needs digital marketers. Demand is growing faster than supply.',
+    body: 'Every business, from startups to corporations, needs digital marketers. Demand is growing faster than supply.',
   },
   {
     icon: CheckCircle2,
@@ -79,12 +79,12 @@ const benefits = [
   {
     icon: Award,
     title: 'Earn a Certificate',
-    body: 'Every course includes a downloadable certificate — proof of your skills you can add to your CV and LinkedIn.',
+    body: 'Every course includes a downloadable certificate, proof of your skills you can add to your CV and LinkedIn.',
   },
   {
     icon: BarChart2,
     title: 'Multiple Career Paths',
-    body: 'Digital marketing branches into SEO, content, paid ads, social media, and analytics — you choose where to specialise.',
+    body: 'Digital marketing branches into SEO, content, paid ads, social media, and analytics, you choose where to specialise.',
   },
   {
     icon: ChevronRight,
@@ -106,9 +106,9 @@ const skills = [
 
 const careerPaths = [
   { role: 'Digital Marketing Assistant', category: 'Entry Level', href: '/category/marketing' },
-  { role: 'SEO Specialist', category: 'Entry–Mid Level', href: '/category/marketing' },
-  { role: 'Social Media Manager', category: 'Entry–Mid Level', href: '/category/marketing' },
-  { role: 'Content Marketer', category: 'Entry–Mid Level', href: '/category/marketing' },
+  { role: 'SEO Specialist', category: 'Entry to Mid Level', href: '/category/marketing' },
+  { role: 'Social Media Manager', category: 'Entry to Mid Level', href: '/category/marketing' },
+  { role: 'Content Marketer', category: 'Entry to Mid Level', href: '/category/marketing' },
   { role: 'PPC Specialist', category: 'Mid Level', href: '/category/marketing' },
   { role: 'Digital Marketing Manager', category: 'Senior Level', href: '/category/marketing' },
 ];
@@ -116,23 +116,23 @@ const careerPaths = [
 const faqs = [
   {
     q: 'Do I need any experience to start a digital marketing course?',
-    a: 'No — every course on this page is designed for beginners. The fundamentals courses assume no prior knowledge of marketing or business. You simply need an internet connection and a willingness to learn.',
+    a: 'No, every course on this page is designed for beginners. The fundamentals courses assume no prior knowledge of marketing or business. You simply need an internet connection and a willingness to learn.',
   },
   {
     q: 'Can I get a job in digital marketing with a free certificate?',
-    a: 'Yes, especially at the entry level. Digital marketing is one of the most portfolio-driven careers — what you have done matters more than where you studied. A free certificate combined with a small personal project (a blog, a managed social account, a mock ad campaign) is a credible foundation for an entry-level application.',
+    a: 'Yes, especially at the entry level. Digital marketing is one of the most portfolio-driven careers, what you have done matters more than where you studied. A free certificate combined with a small personal project (a blog, a managed social account, a mock ad campaign) is a credible foundation for an entry-level application.',
   },
   {
     q: 'What is the difference between digital marketing and growth hacking?',
-    a: 'Digital marketing is the broader discipline — it covers SEO, content, email, social, and paid channels. Growth hacking is a specific methodology within digital marketing, focused on rapid, data-driven experimentation to achieve explosive audience or revenue growth. It\'s typically used in tech startups. Start with digital marketing fundamentals before attempting growth hacking courses.',
+    a: 'Digital marketing is the broader discipline, it covers SEO, content, email, social, and paid channels. Growth hacking is a specific methodology within digital marketing, focused on rapid, data-driven experimentation to achieve explosive audience or revenue growth. It\'s typically used in tech startups. Start with digital marketing fundamentals before attempting growth hacking courses.',
   },
   {
     q: 'Which digital marketing skill should I learn first?',
-    a: 'Start with a broad overview course to understand how the different channels (SEO, content, paid ads, social, email) relate to each other. Once you have that strategic picture, choose the one specialisation that interests you most and go deep. Most entry-level roles focus on one or two channels — not all of them.',
+    a: 'Start with a broad overview course to understand how the different channels (SEO, content, paid ads, social, email) relate to each other. Once you have that strategic picture, choose the one specialisation that interests you most and go deep. Most entry-level roles focus on one or two channels, not all of them.',
   },
   {
     q: 'How long does it take to become job-ready in digital marketing?',
-    a: 'With focused part-time study, most people can complete the foundational courses in two to four weeks. Becoming genuinely job-ready — including building a small portfolio of real work — typically takes two to three months. Digital marketing rewards people who practice while they learn, so starting a blog or managing a social account alongside your courses dramatically accelerates the process.',
+    a: 'With focused part-time study, most people can complete the foundational courses in two to four weeks. Becoming genuinely job-ready, including building a small portfolio of real work, typically takes two to three months. Digital marketing rewards people who practice while they learn, so starting a blog or managing a social account alongside your courses dramatically accelerates the process.',
   },
 ];
 
@@ -205,7 +205,7 @@ export default function FreeDigitalMarketingCoursesPage() {
             Best Free Courses for Digital Marketing Careers (2026)
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
-            Digital marketing is one of the most accessible and in-demand career paths available today — and you
+            Digital marketing is one of the most accessible and in-demand career paths available today, and you
             do not need a degree to break in. These free courses cover everything from strategy and SEO to
             conversion optimisation and growth hacking, all designed for beginners.
           </p>
@@ -284,7 +284,7 @@ export default function FreeDigitalMarketingCoursesPage() {
             <CourseCarousel
               courses={topRatedCarousel}
               title="More Top-Rated Free Courses"
-              subtitle="Expand your skill set beyond marketing — all free to start"
+              subtitle="Expand your skill set beyond marketing, all free to start"
             />
           </div>
         )}
@@ -295,7 +295,7 @@ export default function FreeDigitalMarketingCoursesPage() {
             Key Skills You Need for a Digital Marketing Career
           </h2>
           <p className="text-gray-500 mb-8 text-lg">
-            Digital marketing is a broad field. These are the core skills employers expect — organised by the
+            Digital marketing is a broad field. These are the core skills employers expect, organised by the
             level at which you need them.
           </p>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
@@ -325,15 +325,15 @@ export default function FreeDigitalMarketingCoursesPage() {
           <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Digital Marketing Career Progression</h2>
             <p className="text-blue-100 mb-10 text-lg max-w-2xl">
-              Digital marketing has a clear, achievable progression — from entry-level assistant to senior
+              Digital marketing has a clear, achievable progression, from entry-level assistant to senior
               strategist. Here is what the path typically looks like.
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 md:items-stretch">
               {[
-                { stage: 'Start', role: 'Digital Marketing Assistant', detail: 'Apply fundamentals across multiple channels under supervision', time: '0–1 year' },
-                { stage: 'Specialise', role: 'SEO / Social / PPC Specialist', detail: 'Go deep on one or two channels and own campaigns independently', time: '1–3 years' },
-                { stage: 'Lead', role: 'Digital Marketing Manager', detail: 'Manage a team, set strategy, and report on revenue impact', time: '3–5 years' },
-                { stage: 'Strategise', role: 'Growth Marketer / Director', detail: 'Own the full growth function — audience, acquisition, and retention', time: '5+ years' },
+                { stage: 'Start', role: 'Digital Marketing Assistant', detail: 'Apply fundamentals across multiple channels under supervision', time: '0 to 1 year' },
+                { stage: 'Specialise', role: 'SEO / Social / PPC Specialist', detail: 'Go deep on one or two channels and own campaigns independently', time: '1 to 3 years' },
+                { stage: 'Lead', role: 'Digital Marketing Manager', detail: 'Manage a team, set strategy, and report on revenue impact', time: '3 to 5 years' },
+                { stage: 'Strategise', role: 'Growth Marketer / Director', detail: 'Own the full growth function, audience, acquisition, and retention', time: '5+ years' },
               ].map(({ stage, role, detail, time }, i, arr) => (
                 <div key={stage} className="flex md:flex-col items-start md:items-stretch gap-4 md:gap-0 flex-1">
                   <div className="bg-white/10 rounded-xl p-5 flex-1 backdrop-blur-sm">
@@ -386,7 +386,7 @@ export default function FreeDigitalMarketingCoursesPage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Digital marketing is a hands-on discipline. Employers respond to what you have done, not just
                 what you have studied. Start a blog, manage a social account, or run a small ad campaign with
-                a minimal budget — even unpaid projects build a portfolio.
+                a minimal budget, even unpaid projects build a portfolio.
               </p>
             </div>
           </div>
@@ -431,7 +431,7 @@ export default function FreeDigitalMarketingCoursesPage() {
               },
               {
                 title: 'Best Free Courses for Data Analysts (2026)',
-                desc: 'Excel, SQL, Python, and Power BI — the full data analyst learning path.',
+                desc: 'Excel, SQL, Python, and Power BI, the full data analyst learning path.',
                 href: '/free-courses-for-data-analysts',
               },
               {
@@ -510,7 +510,7 @@ export default function FreeDigitalMarketingCoursesPage() {
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
             Start with the fundamentals, pick a specialisation, and build something real while you study.
-            Consistent practice — even on small personal projects — is what separates candidates who get hired
+            Consistent practice, even on small personal projects, is what separates candidates who get hired
             from those who don't.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

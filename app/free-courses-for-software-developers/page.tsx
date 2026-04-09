@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free Courses for Software Developers (2026)',
   description:
-    'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices — all free with certificates.',
+    'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices, all free with certificates.',
   alternates: { canonical: `${SITE_URL}/free-courses-for-software-developers` },
   openGraph: {
     title: 'Best Free Courses for Software Developers (2026) | Graduates Hub',
     description:
-      'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices — all free with certificates.',
+      'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices, all free with certificates.',
     url: `${SITE_URL}/free-courses-for-software-developers`,
   },
 };
@@ -29,7 +29,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-courses-for-software-developers`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices — all free with certificates.',
+  description: 'Discover the best free online courses for software developers in 2026. Learn web development, programming languages, DevOps, and software engineering practices, all free with certificates.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -41,12 +41,12 @@ const courseCategories = [
   },
   {
     label: 'Programming Languages',
-    description: 'Build fluency in the languages that power modern software — Python, Java, and C#.',
+    description: 'Build fluency in the languages that power modern software, Python, Java, and C#.',
     ids: ['java-programming-basics', 'python-flask-docker', 'diploma-csharp-fundamentals'],
   },
   {
     label: 'Engineering Practices',
-    description: 'Learn Agile, project management, and DevOps — the workflows used in every professional team.',
+    description: 'Learn Agile, project management, and DevOps, the workflows used in every professional team.',
     ids: ['agile-essentials', 'understanding-software-project-management', 'intro-devops'],
   },
   {
@@ -60,7 +60,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'High Global Demand',
-    body: 'Software developers are among the most in-demand professionals worldwide — and that demand keeps growing.',
+    body: 'Software developers are among the most in-demand professionals worldwide, and that demand keeps growing.',
   },
   {
     icon: Code2,
@@ -80,7 +80,7 @@ const benefits = [
   {
     icon: Layers,
     title: 'Clear Career Progression',
-    body: 'From junior developer to senior engineer to architect — software has one of the clearest skill-based career ladders.',
+    body: 'From junior developer to senior engineer to architect, software has one of the clearest skill-based career ladders.',
   },
   {
     icon: CheckCircle2,
@@ -107,14 +107,14 @@ const careerPaths = [
   { role: 'Front-End Developer', detail: 'Specialise in building user interfaces with HTML, CSS, and JavaScript frameworks.' },
   { role: 'Back-End Developer', detail: 'Build the logic, APIs, and databases that power applications behind the scenes.' },
   { role: 'Full-Stack Developer', detail: 'Handle both front-end and back-end. One of the most versatile and in-demand roles.' },
-  { role: 'DevOps Engineer', detail: 'Bridge development and operations — automate deployments, manage infrastructure.' },
+  { role: 'DevOps Engineer', detail: 'Bridge development and operations. Automate deployments and manage infrastructure.' },
   { role: 'Software Architect', detail: 'Design the high-level structure of systems. A senior leadership role in engineering.' },
 ];
 
 const faqs = [
   {
     q: 'Do I need a degree to become a software developer?',
-    a: 'No — many professional developers are entirely self-taught or completed bootcamps rather than traditional university degrees. What matters to employers is your ability to write code, solve problems, and demonstrate real projects. A strong portfolio and relevant certificates often carry more weight than a degree in an unrelated field.',
+    a: 'No, many professional developers are entirely self-taught or completed bootcamps rather than traditional university degrees. What matters to employers is your ability to write code, solve problems, and demonstrate real projects. A strong portfolio and relevant certificates often carry more weight than a degree in an unrelated field.',
   },
   {
     q: 'What programming language should I learn first?',
@@ -122,19 +122,19 @@ const faqs = [
   },
   {
     q: 'How long does it take to become a software developer?',
-    a: 'With consistent daily study, most beginners reach a junior developer level within 6 to 18 months. The timeline varies depending on your starting point, the hours you invest, and how actively you build projects alongside your learning. Free online courses provide the theory — building and shipping your own projects is what accelerates your progress.',
+    a: 'With consistent daily study, most beginners reach a junior developer level within 6 to 18 months. The timeline varies depending on your starting point, the hours you invest, and how actively you build projects alongside your learning. Free online courses provide the theory, building and shipping your own projects is what accelerates your progress.',
   },
   {
     q: 'Are free software development courses good enough to get a job?',
-    a: 'Yes — especially when combined with a strong project portfolio. Many of the best-known developers started with free courses and self-directed learning. Employers in tech typically review your GitHub, past projects, and problem-solving ability during interviews. Free certificates from reputable platforms demonstrate initiative and structured learning.',
+    a: 'Yes, especially when combined with a strong project portfolio. Many of the best-known developers started with free courses and self-directed learning. Employers in tech typically review your GitHub, past projects, and problem-solving ability during interviews. Free certificates from reputable platforms demonstrate initiative and structured learning.',
   },
   {
     q: 'What is the difference between front-end, back-end, and full-stack development?',
-    a: 'Front-end development focuses on what users see and interact with — websites, interfaces, buttons, and layouts. Back-end development covers what happens on the server — databases, logic, APIs, and authentication. Full-stack development means you can work across both. Most developers start by specialising in one and gradually build knowledge of the other.',
+    a: 'Front-end development focuses on what users see and interact with, websites, interfaces, buttons, and layouts. Back-end development covers what happens on the server, databases, logic, APIs, and authentication. Full-stack development means you can work across both. Most developers start by specialising in one and gradually build knowledge of the other.',
   },
   {
     q: 'Do I need to learn DevOps as a software developer?',
-    a: 'Not immediately, but understanding the basics — version control, CI/CD pipelines, containerisation — makes you a significantly stronger developer. Modern teams expect developers to have some DevOps awareness, even if a dedicated DevOps engineer handles the infrastructure. Starting with Git, Docker basics, and Agile workflows is a practical first step.',
+    a: 'Not immediately, but understanding the basics, version control, CI/CD pipelines, containerisation, makes you a significantly stronger developer. Modern teams expect developers to have some DevOps awareness, even if a dedicated DevOps engineer handles the infrastructure. Starting with Git, Docker basics, and Agile workflows is a practical first step.',
   },
 ];
 
@@ -210,7 +210,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
             Best Free Courses for Software Developers (2026)
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
-            Software development is one of the most in-demand and high-paying career paths globally — and the
+            Software development is one of the most in-demand and high-paying career paths globally, and the
             barrier to entry has never been lower. This guide covers the best free courses for software
             developers in 2026, from web development foundations to advanced engineering practices, all with
             free certificates.
@@ -238,7 +238,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
         <section className="mb-20">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Why Learn Software Development?</h2>
           <p className="text-gray-500 mb-10 text-lg">
-            Software development powers everything — from websites and apps to AI systems and automation tools.
+            Software development powers everything, from websites and apps to AI systems and automation tools.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(({ icon: Icon, title, body }) => (
@@ -261,7 +261,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
             Core Skills Every Software Developer Needs
           </h2>
           <p className="text-gray-500 mb-8">
-            Before choosing courses, understand which skills to build — and in which order.
+            Before choosing courses, understand which skills to build, and in which order.
           </p>
           <div className="flex flex-wrap gap-3 mb-6">
             <span className="flex items-center gap-1.5 text-xs font-bold text-green-700 bg-green-100 border border-green-200 px-3 py-1 rounded-full">Foundation</span>
@@ -353,7 +353,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
             <div>
               <p className="text-gray-600 leading-relaxed mb-4">
                 No. Many developers today are entirely self-taught using free online courses, coding platforms,
-                and real-world projects. The tech industry is one of the most meritocratic fields — what you
+                and real-world projects. The tech industry is one of the most meritocratic fields, what you
                 have built matters far more than where you studied.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -370,7 +370,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
                   'Problem-solving ability demonstrated through coding challenges',
                   'Understanding of software development best practices and workflows',
                   'Ability to work within a team using Agile and Git',
-                  'Continuous learning — new tools, frameworks, and languages',
+                  'Continuous learning, new tools, frameworks, and languages',
                 ].map((point) => (
                   <li key={point} className="flex items-start gap-2 text-gray-600 text-sm">
                     <CheckCircle2 size={16} className="text-green-500 mt-0.5 shrink-0" />
@@ -388,7 +388,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
             Career Paths in Software Development
           </h2>
           <p className="text-gray-500 mb-10 text-lg">
-            After completing these courses, you can pursue a range of roles — from entry-level to specialist
+            After completing these courses, you can pursue a range of roles, from entry-level to specialist
             positions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -416,16 +416,16 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
             {[
               {
                 title: 'Best Free AI Courses for Beginners (2026)',
-                desc: 'Learn how AI and machine learning work — no coding background required.',
+                desc: 'Learn how AI and machine learning work, no coding background required.',
                 href: '/free-ai-courses-for-beginners',
               },
               {
                 title: 'Best Free Courses for Data Analysts (2026)',
-                desc: 'Excel, SQL, Python, and Power BI — the full analyst learning path.',
+                desc: 'Excel, SQL, Python, and Power BI, the full analyst learning path.',
                 href: '/free-courses-for-data-analysts',
               },
               {
-                title: 'Free Courses for Beginners — No Experience Needed',
+                title: 'Free Courses for Beginners, No Experience Needed',
                 desc: 'Starting from scratch? These beginner courses require zero prior knowledge.',
                 href: '/free-courses-for-beginners',
               },
@@ -473,7 +473,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
             Ready to Start Your Development Journey?
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            The key is not to jump between courses — pick one path, build consistently, and apply what you
+            The key is not to jump between courses. Pick one path, build consistently, and apply what you
             learn through real projects. That is how beginners become developers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

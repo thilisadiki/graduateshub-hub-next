@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free Courses for Data Analysts (2026)',
   description:
-    'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis — all free with certificates. No degree required.',
+    'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis, all free with certificates. No degree required.',
   alternates: { canonical: `${SITE_URL}/free-courses-for-data-analysts` },
   openGraph: {
     title: 'Best Free Courses for Data Analysts (2026) | Graduates Hub',
     description:
-      'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis — all free with certificates. No degree required.',
+      'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis, all free with certificates. No degree required.',
     url: `${SITE_URL}/free-courses-for-data-analysts`,
   },
 };
@@ -29,7 +29,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-courses-for-data-analysts`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis — all free with certificates. No degree required.',
+  description: 'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis, all free with certificates. No degree required.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -61,7 +61,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'High Demand Across Industries',
-    body: 'Finance, healthcare, tech, retail — every sector needs people who can interpret data.',
+    body: 'Finance, healthcare, tech, retail, every sector needs people who can interpret data.',
   },
   {
     icon: Database,
@@ -92,7 +92,7 @@ const benefits = [
 
 const toolPath = [
   { tool: 'Excel / Google Sheets', use: 'Cleaning, sorting, and summarising small datasets', level: 'Beginner' },
-  { tool: 'SQL', use: 'Querying databases to extract and filter data at scale', level: 'Beginner–Intermediate' },
+  { tool: 'SQL', use: 'Querying databases to extract and filter data at scale', level: 'Beginner to Intermediate' },
   { tool: 'Python (Pandas / NumPy)', use: 'Automating analysis and working with large, complex datasets', level: 'Intermediate' },
   { tool: 'Power BI / Tableau', use: 'Building dashboards and visual reports for stakeholders', level: 'Intermediate' },
   { tool: 'Machine Learning basics', use: 'Predictive modelling and pattern recognition in data', level: 'Advanced' },
@@ -104,7 +104,7 @@ const careerPaths = [
   { role: 'Business Intelligence Analyst', detail: 'Combines data analysis with business strategy and tooling.' },
   { role: 'Data Assistant', detail: 'Supports senior analysts with data collection, formatting, and quality checks.' },
   { role: 'Data Scientist', detail: 'Requires further learning in statistics and machine learning.' },
-  { role: 'Machine Learning Engineer', detail: 'Builds and trains predictive models — advanced technical role.' },
+  { role: 'Machine Learning Engineer', detail: 'Builds and trains predictive models, advanced technical role.' },
 ];
 
 const faqs = [
@@ -114,19 +114,19 @@ const faqs = [
   },
   {
     q: 'How long does it take to learn data analytics from scratch?',
-    a: 'With consistent study (1–2 hours per day), you can cover the fundamentals — SQL, basic Python, and data interpretation — within 3 to 6 months. Completing several certificates along the way gives you tangible proof of progress for your CV.',
+    a: 'With consistent study (1 to 2 hours per day), you can cover the fundamentals, SQL, basic Python, and data interpretation, within 3 to 6 months. Completing several certificates along the way gives you tangible proof of progress for your CV.',
   },
   {
     q: 'Is SQL really necessary for data analysts?',
-    a: 'Yes — it is arguably the most important tool. Most real-world data lives in relational databases. SQL lets you extract, filter, group, and join that data directly. It is typically the first technical skill employers test for in data analyst interviews.',
+    a: 'Yes, it is arguably the most important tool. Most real-world data lives in relational databases. SQL lets you extract, filter, group, and join that data directly. It is typically the first technical skill employers test for in data analyst interviews.',
   },
   {
     q: 'Are free data analytics certificates worth adding to a CV?',
-    a: 'Absolutely — especially early in your career. They show initiative, demonstrate that you have covered specific topics, and give interviewers a clear talking point. Pairing a certificate with a personal project (even a simple dataset analysis on GitHub) is even more compelling.',
+    a: 'Absolutely, especially early in your career. They show initiative, demonstrate that you have covered specific topics, and give interviewers a clear talking point. Pairing a certificate with a personal project (even a simple dataset analysis on GitHub) is even more compelling.',
   },
   {
     q: 'What is the difference between a data analyst and a data scientist?',
-    a: 'A data analyst focuses on interpreting existing data to answer business questions using tools like SQL, Excel, and visualisation software. A data scientist goes further — building predictive models, working with unstructured data, and applying machine learning techniques. Most data scientists start as analysts.',
+    a: 'A data analyst focuses on interpreting existing data to answer business questions using tools like SQL, Excel, and visualisation software. A data scientist goes further, building predictive models, working with unstructured data, and applying machine learning techniques. Most data scientists start as analysts.',
   },
 ];
 
@@ -205,7 +205,7 @@ export default function FreeCoursesForDataAnalystsPage() {
             Best Free Courses for Data Analysts (2026)
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
-            Data is one of the most valuable assets in today&apos;s economy — and companies are actively hiring
+            Data is one of the most valuable assets in today's economy, and companies are actively hiring
             people who know how to work with it. If you are starting out or switching careers, this guide covers
             the best free data analytics courses in 2026, designed to build real, job-ready skills with no prior
             experience required.
@@ -233,7 +233,7 @@ export default function FreeCoursesForDataAnalystsPage() {
         <section className="mb-20">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Why Become a Data Analyst?</h2>
           <p className="text-gray-500 mb-10 text-lg">
-            Data analytics is one of the most in-demand career paths globally — and it is one of the few
+            Data analytics is one of the most in-demand career paths globally, and it is one of the few
             where free, self-directed learning genuinely works.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -319,7 +319,7 @@ export default function FreeCoursesForDataAnalystsPage() {
                           ? 'bg-green-50 text-green-700'
                           : level === 'Intermediate'
                           ? 'bg-blue-50 text-blue-700'
-                          : level === 'Beginner–Intermediate'
+                          : level === 'Beginner to Intermediate'
                           ? 'bg-yellow-50 text-yellow-700'
                           : 'bg-purple-50 text-purple-700'
                       }`}>
@@ -336,7 +336,7 @@ export default function FreeCoursesForDataAnalystsPage() {
         {/* Do You Need Coding */}
         <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Do You Need Coding to Become a Data Analyst?</h2>
-          <p className="text-blue-100 mb-10">Not always — but learning Python and SQL will make you significantly more competitive.</p>
+          <p className="text-blue-100 mb-10">Not always, but learning Python and SQL will make you significantly more competitive.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
               <h3 className="font-bold text-white text-lg mb-4">You can start without coding:</h3>
@@ -402,7 +402,7 @@ export default function FreeCoursesForDataAnalystsPage() {
             Career Paths in Data Analytics
           </h2>
           <p className="text-gray-500 mb-10 text-lg">
-            These free courses lead directly to entry-level roles — and lay the foundation for more advanced
+            These free courses lead directly to entry-level roles, and lay the foundation for more advanced
             positions with further learning.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
@@ -438,7 +438,7 @@ export default function FreeCoursesForDataAnalystsPage() {
               },
               {
                 title: 'Browse All IT & AI Courses',
-                desc: 'SQL, databases, software engineering, and AI — all in one place.',
+                desc: 'SQL, databases, software engineering, and AI, all in one place.',
                 href: '/category/it',
               },
               {
@@ -485,7 +485,7 @@ export default function FreeCoursesForDataAnalystsPage() {
             Ready to Start Your Data Analytics Journey?
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            Becoming a data analyst does not require a traditional degree — it requires the right skills.
+            Becoming a data analyst does not require a traditional degree; it requires the right skills.
             Start with one course, build your foundation, and expand from there. Consistency and practice are
             what set successful learners apart.
           </p>

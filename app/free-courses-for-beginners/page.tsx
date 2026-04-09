@@ -10,14 +10,14 @@ import type { Course } from '@/types';
 const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
-  title: 'Best Free Courses for Beginners — No Experience Needed (2026)',
+  title: 'Best Free Courses for Beginners: No Experience Needed (2026)',
   description:
-    'Discover the best free online courses for complete beginners in 2026. No experience needed — start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+    'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning AI, Excel, Python, Business, or Accounting from scratch today.',
   alternates: { canonical: `${SITE_URL}/free-courses-for-beginners` },
   openGraph: {
-    title: 'Best Free Courses for Beginners — No Experience Needed (2026) | Graduates Hub',
+    title: 'Best Free Courses for Beginners: No Experience Needed (2026) | Graduates Hub',
     description:
-      'Discover the best free online courses for complete beginners in 2026. No experience needed — start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+      'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning AI, Excel, Python, Business, or Accounting from scratch today.',
     url: `${SITE_URL}/free-courses-for-beginners`,
   },
 };
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Best Free Courses for Beginners — No Experience Needed (2026)',
+  name: 'Best Free Courses for Beginners: No Experience Needed (2026)',
   url: `${SITE_URL}/free-courses-for-beginners`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free online courses for complete beginners in 2026. No experience needed — start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+  description: 'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning AI, Excel, Python, Business, or Accounting from scratch today.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -37,25 +37,25 @@ const courseCategories = [
   {
     label: 'Technology for Beginners',
     slug: 'it',
-    description: 'Understand computers, the internet, and the basics of AI — no technical knowledge required.',
+    description: 'Understand computers, the internet, and the basics of AI, no technical knowledge required.',
     ids: ['diploma-fundamentals-ai', 'intro-computer-hardware-software', 'html-css-web-dev'],
   },
   {
     label: 'Data & Productivity Tools',
     slug: 'data-analytics',
-    description: 'Excel, Python, and digital marketing — the tools that appear in almost every job description.',
+    description: 'Excel, Python, and digital marketing, the tools that appear in almost every job description.',
     ids: ['microsoft-excel-data-analysis', 'python-for-beginners-data', 'basic-concepts-of-digital-marketing'],
   },
   {
     label: 'Business Fundamentals',
     slug: 'business',
-    description: 'Learn how organisations work — planning, processes, and productivity from the ground up.',
+    description: 'Learn how organisations work, planning, processes, and productivity from the ground up.',
     ids: ['diploma-project-management', 'lean-six-sigma-white-belt', 'time-management-for-professionals'],
   },
   {
     label: 'Accounting & Finance',
     slug: 'accounting',
-    description: 'Understand how money moves in a business — no maths degree required.',
+    description: 'Understand how money moves in a business, no maths degree required.',
     ids: ['fundamentals-of-accounting', 'introduction-bookkeeping-accounting', 'introduction-payroll-accounting'],
   },
 ];
@@ -64,12 +64,12 @@ const benefits = [
   {
     icon: CheckCircle2,
     title: 'Zero Prior Knowledge Needed',
-    body: 'Every course here is designed for complete beginners. You start from scratch — no degree, no experience, no technical background required.',
+    body: 'Every course here is designed for complete beginners. You start from scratch: no degree, no experience, no technical background required.',
   },
   {
     icon: Clock,
     title: 'Self-Paced, No Deadlines',
-    body: 'Study whenever it fits your life. Pause, restart, or slow down — there are no fixed schedules or pressure.',
+    body: 'Study whenever it fits your life. Pause, restart, or slow down, there are no fixed schedules or pressure.',
   },
   {
     icon: Award,
@@ -84,12 +84,12 @@ const benefits = [
   {
     icon: Lightbulb,
     title: 'Build Real, Usable Skills',
-    body: 'Courses focus on practical, hands-on skills — not academic theory. You finish with something you can actually apply.',
+    body: 'Courses focus on practical, hands-on skills, not academic theory. You finish with something you can actually apply.',
   },
   {
     icon: TrendingUp,
     title: 'Progress at Your Own Pace',
-    body: 'Start with a 2-hour certificate and build up to a full diploma. There is no rush — consistent progress beats a sprint.',
+    body: 'Start with a 2-hour certificate and build up to a full diploma. There is no rush, consistent progress beats a sprint.',
   },
 ];
 
@@ -141,7 +141,7 @@ const careerPaths = [
 const faqs = [
   {
     q: 'Do I need any experience to start these courses?',
-    a: 'No. Every course listed here is designed for complete beginners with zero prior knowledge. Course pages include a Target Audience section so you can confirm the right fit before you begin — but none of them assume any background in the subject.',
+    a: 'No. Every course listed here is designed for complete beginners with zero prior knowledge. Course pages include a Target Audience section so you can confirm the right fit before you begin, but none of them assume any background in the subject.',
   },
   {
     q: 'What is the easiest course for an absolute beginner?',
@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: 'How long does it take to complete a beginner course?',
-    a: 'Short certificate courses typically take 2–6 hours — most people finish in a few evenings. Diploma-level courses range from 8 to 15 hours. There are no deadlines, so you go at whatever pace suits your schedule.',
+    a: 'Short certificate courses typically take 2 to 6 hours, most people finish in a few evenings. Diploma-level courses range from 8 to 15 hours. There are no deadlines, so you go at whatever pace suits your schedule.',
   },
   {
     q: 'Can I switch between different beginner courses?',
@@ -157,11 +157,11 @@ const faqs = [
   },
   {
     q: 'Will these certificates help me find a job?',
-    a: 'Free certificates are most effective when combined with practical application. Completing a course and then practicing the skill — building an Excel spreadsheet, running a small social media campaign, or writing a Python script — gives you something concrete to talk about in an interview. The certificates show initiative; your portfolio or practice projects demonstrate ability.',
+    a: 'Free certificates are most effective when combined with practical application. Completing a course and then practicing the skill, building an Excel spreadsheet, running a small social media campaign, or writing a Python script, gives you something concrete to talk about in an interview. The certificates show initiative; your portfolio or practice projects demonstrate ability.',
   },
   {
     q: 'What should I do after completing a beginner course?',
-    a: 'Progress to the next level in the same field. After a beginner certificate, look for an intermediate or diploma-level course on the same topic to build depth. You can also start combining skills — for example, pairing Excel with accounting, or Python with data analysis — to make yourself more competitive in the job market.',
+    a: 'Progress to the next level in the same field. After a beginner certificate, look for an intermediate or diploma-level course on the same topic to build depth. You can also start combining skills, for example, pairing Excel with accounting, or Python with data analysis, to make yourself more competitive in the job market.',
   },
 ];
 
@@ -229,11 +229,11 @@ export default function FreeCoursesForBeginnersPage() {
         <div className="max-w-6xl mx-auto">
           <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Updated for 2026</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight max-w-3xl leading-tight">
-            Best Free Courses for Beginners — No Experience Needed (2026)
+            Best Free Courses for Beginners: No Experience Needed (2026)
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
             Starting something new can feel overwhelming. These beginner-friendly courses are designed to meet you
-            exactly where you are — no degree, no technical background, no prior experience required. Just pick a
+            exactly where you are, no degree, no technical background, no prior experience required. Just pick a
             topic, start learning, and earn a certificate at your own pace.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -259,7 +259,7 @@ export default function FreeCoursesForBeginnersPage() {
         <section className="mb-20">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Why Start with Beginner-Friendly Courses?</h2>
           <p className="text-gray-500 mb-10 text-lg">
-            Beginner courses exist for a reason. They remove the assumption that you already know something —
+            Beginner courses exist for a reason. They remove the assumption that you already know something , 
             and give you a clear, step-by-step path into a new skill.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -311,7 +311,7 @@ export default function FreeCoursesForBeginnersPage() {
             <CourseCarousel
               courses={topRatedCarousel}
               title="More Beginner-Friendly Courses"
-              subtitle="Highly rated free courses across all fields — all designed to be accessible from day one"
+              subtitle="Highly rated free courses across all fields, all designed to be accessible from day one"
             />
           </div>
         )}
@@ -322,7 +322,7 @@ export default function FreeCoursesForBeginnersPage() {
             Beginner Learning Paths
           </h2>
           <p className="text-gray-500 mb-10 text-lg">
-            Not sure where to start? Follow one of these simple paths — each takes you from beginner to job-ready
+            Not sure where to start? Follow one of these simple paths, each takes you from beginner to job-ready
             in a clear sequence.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -376,11 +376,11 @@ export default function FreeCoursesForBeginnersPage() {
                 },
                 {
                   stat: 'No technical background',
-                  body: 'Even coding and AI courses on this list start from the very basics — assuming you have never written a line of code.',
+                  body: 'Even coding and AI courses on this list start from the very basics, assuming you have never written a line of code.',
                 },
                 {
                   stat: 'No prior experience',
-                  body: 'Whether you are 18 or 50, switching careers or starting fresh — these courses meet you exactly where you are.',
+                  body: 'Whether you are 18 or 50, switching careers or starting fresh, these courses meet you exactly where you are.',
                 },
               ].map(({ stat, body }) => (
                 <div key={stat} className="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
@@ -408,7 +408,7 @@ export default function FreeCoursesForBeginnersPage() {
               <h3 className="font-bold text-gray-900 text-lg mb-2">Start with Your Interests</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 You are far more likely to finish a course in a topic you are curious about. Do not choose based
-                solely on what seems "useful" — choose something you actually want to understand. Interest drives
+                solely on what seems "useful", choose something you actually want to understand. Interest drives
                 completion.
               </p>
             </div>
@@ -418,8 +418,8 @@ export default function FreeCoursesForBeginnersPage() {
               </div>
               <h3 className="font-bold text-gray-900 text-lg mb-2">Keep It Simple at First</h3>
               <ul className="text-gray-600 text-sm space-y-2">
-                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Start with a certificate (2–6 hours), not a diploma.</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Focus on one topic at a time — resist the urge to do five courses at once.</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Start with a certificate (2 to 6 hours), not a diploma.</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Focus on one topic at a time, resist the urge to do five courses at once.</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Build confidence with a quick win before tackling longer courses.</li>
               </ul>
             </div>
@@ -430,7 +430,7 @@ export default function FreeCoursesForBeginnersPage() {
               <h3 className="font-bold text-gray-900 text-lg mb-2">Set a Small, Achievable Goal</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Commit to completing one course before starting another. A single completed certificate is worth
-                more than five half-finished ones — both for your confidence and for how it looks to an employer.
+                more than five half-finished ones, both for your confidence and for how it looks to an employer.
                 Progress beats perfection every time.
               </p>
             </div>
@@ -481,12 +481,12 @@ export default function FreeCoursesForBeginnersPage() {
               },
               {
                 title: 'Best Free Courses for Data Analysts (2026)',
-                desc: 'SQL, Python, Excel, and Power BI — the full data analyst learning path, all free.',
+                desc: 'SQL, Python, Excel, and Power BI, the full data analyst learning path, all free.',
                 href: '/free-courses-for-data-analysts',
               },
               {
                 title: 'Best Alison Courses with Certificates (2026)',
-                desc: 'The top-rated Alison courses across every category — CPD-accredited and free to start.',
+                desc: 'The top-rated Alison courses across every category, CPD-accredited and free to start.',
                 href: '/best-alison-courses-with-certificates',
               },
             ].map(({ title, desc, href }) => (
@@ -555,7 +555,7 @@ export default function FreeCoursesForBeginnersPage() {
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
             Everyone starts somewhere. Pick one course above, complete it, and apply what you learn. Consistent
-            small steps — taken regularly — lead to real results.
+            small steps, taken regularly, lead to real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

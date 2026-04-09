@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free Online Courses with Certificates (2026)',
   description:
-    'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development — all free to start.',
+    'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development, all free to start.',
   alternates: { canonical: `${SITE_URL}/free-courses-with-certificates` },
   openGraph: {
     title: 'Best Free Online Courses with Certificates (2026) | Graduates Hub',
     description:
-      'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development — all free to start.',
+      'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development, all free to start.',
     url: `${SITE_URL}/free-courses-with-certificates`,
   },
 };
@@ -29,7 +29,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-courses-with-certificates`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development — all free to start.',
+  description: 'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development, all free to start.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -103,7 +103,7 @@ const benefits = [
   {
     icon: Star,
     title: 'Top-Rated Content',
-    body: 'Only highly rated courses make our list — quality you can trust.',
+    body: 'Only highly rated courses make our list, quality you can trust.',
   },
 ];
 
@@ -119,11 +119,11 @@ const careerPaths = [
 const faqs = [
   {
     q: 'Are free online courses with certificates worth it?',
-    a: 'Yes — especially for entry-level roles and career changers. Free certificates demonstrate initiative and practical skills to employers. While they do not replace a formal degree, they are a credible way to show you have learned and applied a specific skill set.',
+    a: 'Yes, especially for entry-level roles and career changers. Free certificates demonstrate initiative and practical skills to employers. While they do not replace a formal degree, they are a credible way to show you have learned and applied a specific skill set.',
   },
   {
     q: 'How long do free online courses take to complete?',
-    a: 'It depends on the course. Short certificates typically take 2–6 hours, while comprehensive diplomas can range from 10 to 20+ hours. Most learners complete a certificate in one to two weeks studying part-time.',
+    a: 'It depends on the course. Short certificates typically take 2 to 6 hours, while comprehensive diplomas can range from 10 to 20+ hours. Most learners complete a certificate in one to two weeks studying part-time.',
   },
   {
     q: 'Are the certificates on Graduates Hub recognised by employers?',
@@ -207,7 +207,7 @@ export default function FreeCoursesWithCertificatesPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
             Looking to upgrade your skills without spending money? We have curated the best free online courses
-            with certificates across IT, Business, Marketing, Finance, and Software Development — all free to
+            with certificates across IT, Business, Marketing, Finance, and Software Development, all free to
             start, all career-focused.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -285,7 +285,7 @@ export default function FreeCoursesWithCertificatesPage() {
             <CourseCarousel
               courses={topRatedCarousel}
               title="More Top-Rated Free Courses"
-              subtitle="Highly rated courses across all categories — free to start"
+              subtitle="Highly rated courses across all categories, free to start"
             />
           </div>
         )}
@@ -314,8 +314,8 @@ export default function FreeCoursesWithCertificatesPage() {
               </div>
               <h3 className="font-bold text-gray-900 text-lg mb-2">Check Course Duration</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Short courses (2–6 hours) are great for quick wins and adding specific tools to your CV. Diplomas
-                (10–20 hours) provide deeper, more comprehensive knowledge that stands out to employers.
+                Short courses (2 to 6 hours) are great for quick wins and adding specific tools to your CV. Diplomas
+                (10 to 20 hours) provide deeper, more comprehensive knowledge that stands out to employers.
               </p>
             </div>
             <div className="flex flex-col">
@@ -337,7 +337,7 @@ export default function FreeCoursesWithCertificatesPage() {
           <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Are Free Certificates Worth It?</h2>
             <p className="text-blue-100 text-lg mb-6 max-w-2xl leading-relaxed">
-              Yes — especially if you are starting out. While they may not replace a university degree, free
+              Yes, especially if you are starting out. While they may not replace a university degree, free
               certificates show employers that you are proactive, self-directed, and genuinely interested in
               developing your skills.
             </p>
@@ -395,7 +395,7 @@ export default function FreeCoursesWithCertificatesPage() {
               },
               {
                 title: 'Best Free Courses for Data Analysts (2026)',
-                desc: 'SQL, Python, databases, and financial analysis — the full data analyst learning path.',
+                desc: 'SQL, Python, databases, and financial analysis, the full data analyst learning path.',
                 href: '/free-courses-for-data-analysts',
               },
               {
@@ -468,8 +468,7 @@ export default function FreeCoursesWithCertificatesPage() {
             Ready to Begin?
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            Pick one course, complete it, and apply what you learn. The key is consistency — small steps, taken
-            regularly, lead to real results.
+            Pick one course, complete it, and apply what you learn. The key is consistency: small steps taken regularly lead to real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

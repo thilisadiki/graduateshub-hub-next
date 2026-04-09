@@ -13,7 +13,7 @@ const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const SITE_URL = 'https://graduateshub.co.za';
 
 // React.cache deduplicates: generateMetadata and the page component
-// both call this — it only hits the WP API once per request.
+// both call this, it only hits the WP API once per request.
 const fetchPostBySlug = cache(async (slug: string) => {
   try {
     const res = await fetch(`${WP_API}/wp/v2/posts?slug=${slug}&_embed`, {
@@ -120,7 +120,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  // Deduped — no second network request, uses the cached result from generateMetadata
+  // Deduped, no second network request, uses the cached result from generateMetadata
   const post = await fetchPostBySlug(slug);
   if (!post) notFound();
 
@@ -188,7 +188,7 @@ export default async function BlogPostPage({
         </div>
       </div>
 
-      {/* Hero image — next/image handles WebP conversion, sizing, and lazy load */}
+      {/* Hero image, next/image handles WebP conversion, sizing, and lazy load */}
       {imageUrl && (
         <div className="max-w-4xl mx-auto w-full px-6 pt-8">
           <div className="rounded-2xl overflow-hidden relative h-56 md:h-80">

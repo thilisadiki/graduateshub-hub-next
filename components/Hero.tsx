@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Star } from 'lucide-react';
+import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Star, Megaphone } from 'lucide-react';
 
 function StarIcon() {
   return <Star size={12} className="fill-current text-yellow-400" />;
@@ -31,7 +31,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-slate-600 mb-8 max-w-xl font-medium leading-relaxed">
-              Explore career guides, study articles, and hundreds of free certified courses — all in one place, completely free.
+              Explore career guides, study articles, and hundreds of free certified courses, all in one place, completely free.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -109,12 +109,12 @@ export default function Hero() {
 
         {/* Bottom 3 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 relative z-20 xl:-mt-10">
-          <Link href="/categories" className="group relative bg-white border border-slate-200/60 p-6 lg:p-7 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:scale-150 transition-transform duration-700"><Map size={100} /></div>
+          <Link href="/category/marketing" className="group relative bg-white border border-slate-200/60 p-6 lg:p-7 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:scale-150 transition-transform duration-700"><Megaphone size={100} /></div>
             <div className="relative flex items-center justify-between z-10">
-              <h3 className="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">View All Subjects</h3>
-              <div className="bg-blue-50 p-3 rounded-xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm border border-blue-100 group-hover:border-blue-600">
-                <ArrowRight size={20} className="transform -rotate-45 group-hover:rotate-0 transition-transform" />
+              <h3 className="text-lg font-bold text-slate-800 group-hover:text-orange-600 transition-colors">Marketing</h3>
+              <div className="bg-orange-50 p-3 rounded-xl text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shadow-sm border border-orange-100 group-hover:border-orange-600">
+                <Megaphone size={20} />
               </div>
             </div>
           </Link>

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Only fetch the fields we actually render — cuts response size ~80% vs full _embed
+// Only fetch the fields we actually render, cuts response size ~80% vs full _embed
 const LISTING_FIELDS = '_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia';
 
 async function fetchPosts(page: number) {

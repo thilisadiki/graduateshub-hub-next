@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Alison Courses with Certificates (2026)',
   description:
-    'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more — self-paced with no deadlines.',
+    'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more, self-paced with no deadlines.',
   alternates: { canonical: `${SITE_URL}/best-alison-courses-with-certificates` },
   openGraph: {
     title: 'Best Alison Courses with Certificates (2026) | Graduates Hub',
     description:
-      'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more — self-paced with no deadlines.',
+      'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more, self-paced with no deadlines.',
     url: `${SITE_URL}/best-alison-courses-with-certificates`,
   },
 };
@@ -29,7 +29,7 @@ const webPageSchema = {
   url: `${SITE_URL}/best-alison-courses-with-certificates`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more — self-paced with no deadlines.',
+  description: 'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more, self-paced with no deadlines.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -68,7 +68,7 @@ const benefits = [
   {
     icon: Award,
     title: 'CPD-Accredited Certificates',
-    body: 'Alison certificates are CPD-accredited — a globally recognised standard that many employers accept.',
+    body: 'Alison certificates are CPD-accredited, a globally recognised standard that many employers accept.',
   },
   {
     icon: BookOpen,
@@ -83,17 +83,17 @@ const benefits = [
   {
     icon: Globe,
     title: '6,000+ Courses Available',
-    body: 'One of the largest free course libraries on the internet — covering every major career field.',
+    body: 'One of the largest free course libraries on the internet, covering every major career field.',
   },
   {
     icon: Users,
     title: '50 Million Learners',
-    body: 'Alison is one of the world\'s most widely used free learning platforms — trusted by learners in 195 countries.',
+    body: 'Alison is one of the world\'s most widely used free learning platforms, trusted by learners in 195 countries.',
   },
   {
     icon: TrendingUp,
     title: 'Career-Focused Content',
-    body: 'Courses are built around real job skills — not academic theory — so you can apply what you learn immediately.',
+    body: 'Courses are built around real job skills, not academic theory, so you can apply what you learn immediately.',
   },
 ];
 
@@ -109,11 +109,11 @@ const careerPaths = [
 const faqs = [
   {
     q: 'Are Alison courses completely free?',
-    a: 'Yes — all Alison courses are 100% free to study. The learning content, assessments, and course completion are all free. Alison does offer optional paid certificates (physical or digital) if you want an official printed credential, but the learning itself costs nothing.',
+    a: 'Yes, all Alison courses are 100% free to study. The learning content, assessments, and course completion are all free. Alison does offer optional paid certificates (physical or digital) if you want an official printed credential, but the learning itself costs nothing.',
   },
   {
     q: 'What is the difference between an Alison certificate and an Alison diploma?',
-    a: 'Certificate courses typically take 2–5 hours and focus on a specific skill or topic. Diploma courses are longer — usually 6–15 hours — and provide a more comprehensive, in-depth qualification. Diplomas carry more weight on a CV because they demonstrate deeper commitment and broader knowledge.',
+    a: 'Certificate courses typically take 2 to 5 hours and focus on a specific skill or topic. Diploma courses are longer, usually 6 to 15 hours, and provide a more comprehensive, in-depth qualification. Diplomas carry more weight on a CV because they demonstrate deeper commitment and broader knowledge.',
   },
   {
     q: 'Are Alison certificates recognised by employers?',
@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: 'How long does it take to complete an Alison course?',
-    a: 'Short certificate courses typically take 2–6 hours, which most people complete in a few evenings. Diploma courses range from 8 to 15+ hours — usually two to four weeks of part-time study. There are no deadlines, so you progress at whatever pace suits your schedule.',
+    a: 'Short certificate courses typically take 2 to 6 hours, which most people complete in a few evenings. Diploma courses range from 8 to 15+ hours, usually two to four weeks of part-time study. There are no deadlines, so you progress at whatever pace suits your schedule.',
   },
   {
     q: 'Can I do multiple Alison courses at the same time?',
@@ -200,7 +200,7 @@ export default function BestAlisonCoursesPage() {
             Best Alison Courses with Certificates (2026)
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
-            Alison is one of the world's leading free learning platforms — with over 6,000 courses, 50 million
+            Alison is one of the world's leading free learning platforms, with over 6,000 courses, 50 million
             learners, and CPD-accredited certificates across Business, IT, Marketing, Finance, and more. We have
             curated the best Alison courses to help you build real skills and earn a recognised certificate at no
             cost.
@@ -253,7 +253,7 @@ export default function BestAlisonCoursesPage() {
         {/* Course type explainer */}
         <section className="mb-20 bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
-            Certificate or Diploma — Which Should You Choose?
+            Certificate or Diploma, Which Should You Choose?
           </h2>
           <p className="text-gray-500 mb-8 text-lg">
             Alison offers two types of qualifications. Picking the right one depends on how much time you have and
@@ -268,7 +268,7 @@ export default function BestAlisonCoursesPage() {
                 <h3 className="font-bold text-gray-900 text-xl">Certificate Courses</h3>
               </div>
               <ul className="text-gray-700 text-sm space-y-3">
-                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Duration: typically 2–6 hours</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Duration: typically 2 to 6 hours</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Best for: quick skill building and adding specific tools to your CV</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Ideal for: career changers exploring a new field before committing deeper</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Great alongside an existing job or study schedule</li>
@@ -282,9 +282,9 @@ export default function BestAlisonCoursesPage() {
                 <h3 className="font-bold text-gray-900 text-xl">Diploma Courses</h3>
               </div>
               <ul className="text-gray-700 text-sm space-y-3">
-                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Duration: typically 8–15+ hours</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Duration: typically 8 to 15+ hours</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Best for: comprehensive, in-depth qualifications that employers notice</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Carries more weight on a CV — demonstrates sustained commitment</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Carries more weight on a CV, demonstrates sustained commitment</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Ideal for career switchers making a serious move into a new field</li>
               </ul>
             </div>
@@ -325,7 +325,7 @@ export default function BestAlisonCoursesPage() {
             <CourseCarousel
               courses={topRatedCarousel}
               title="More Top-Rated Alison Courses"
-              subtitle="Highly rated courses across all categories — free to start today"
+              subtitle="Highly rated courses across all categories, free to start today"
             />
           </div>
         )}
@@ -336,7 +336,7 @@ export default function BestAlisonCoursesPage() {
             <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Are Alison Certificates Free?</h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl leading-relaxed">
               The short answer: the learning is completely free. All courses, assessments, and completion
-              recognition are free to access. Alison does offer optional paid certificates — but the skills and
+              recognition are free to access. Alison does offer optional paid certificates, but the skills and
               the qualification are yours regardless.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -403,7 +403,7 @@ export default function BestAlisonCoursesPage() {
               </div>
               <h3 className="font-bold text-gray-900 text-lg mb-2">Balance Time and Depth</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Short certificate courses (2–6 hours) are great for quick wins. Diploma courses (8–15 hours) give
+                Short certificate courses (2 to 6 hours) are great for quick wins. Diploma courses (8 to 15 hours) give
                 you the depth that helps you stand out in a competitive job market. If you have two to four weeks
                 of part-time study available, a diploma is almost always the better career investment.
               </p>
@@ -445,7 +445,7 @@ export default function BestAlisonCoursesPage() {
             {[
               {
                 title: 'Best Free Online Courses with Certificates (2026)',
-                desc: 'A broader look at free certified courses across all topics and platforms — not just Alison.',
+                desc: 'A broader look at free certified courses across all topics and platforms, not just Alison.',
                 href: '/free-courses-with-certificates',
               },
               {
@@ -455,12 +455,12 @@ export default function BestAlisonCoursesPage() {
               },
               {
                 title: 'Best Free Courses for Data Analysts (2026)',
-                desc: 'Excel, SQL, Python, and Power BI — the complete data analyst learning path, all free.',
+                desc: 'Excel, SQL, Python, and Power BI, the complete data analyst learning path, all free.',
                 href: '/free-courses-for-data-analysts',
               },
               {
                 title: 'Browse All Free Courses by Category',
-                desc: 'Every course we list, organised by field — IT, Business, Marketing, Health, and more.',
+                desc: 'Every course we list, organised by field, IT, Business, Marketing, Health, and more.',
                 href: '/categories',
               },
             ].map(({ title, desc, href }) => (
@@ -528,7 +528,7 @@ export default function BestAlisonCoursesPage() {
             Ready to Earn Your Alison Certificate?
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            Choose a course, start today, and complete it. Consistent, small steps lead to real career progress —
+            Choose a course, start today, and complete it. Consistent, small steps lead to real career progress , 
             and with Alison, the only thing standing between you and a certificate is the time you put in.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

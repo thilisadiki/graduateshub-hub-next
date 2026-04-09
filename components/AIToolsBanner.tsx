@@ -64,7 +64,7 @@ export default function AIToolsBanner() {
               Let AI guide your learning
             </h2>
             <p className="text-slate-400 mt-3 max-w-xl mx-auto text-lg">
-              Not sure where to start? Our free AI tools help you find the right course, build a career roadmap, and identify your skills gaps — in seconds.
+              Not sure where to start? Our free AI tools help you find the right course, build a career roadmap, and identify your skills gaps, in seconds.
             </p>
           </div>
 

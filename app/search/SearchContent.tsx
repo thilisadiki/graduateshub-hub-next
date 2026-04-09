@@ -16,7 +16,7 @@ const TIPS = [
   {
     icon: '🎯',
     title: 'Define your goal first',
-    body: 'Knowing whether you want a career change, a promotion, or a new hobby helps you pick the right course format — a short certificate or a comprehensive diploma.',
+    body: 'Knowing whether you want a career change, a promotion, or a new hobby helps you pick the right course format: a short certificate or a comprehensive diploma.',
   },
   {
     icon: '⏱️',
@@ -33,7 +33,7 @@ const TIPS = [
 const FAQS = [
   {
     q: 'Are all the courses on Graduates Hub really free?',
-    a: 'Yes — every course listed on Graduates Hub is 100% free of charge. There are no hidden fees, subscription charges, or paywalls. Simply create an account and start learning immediately.',
+    a: 'Yes. Every course listed on Graduates Hub is 100% free of charge. There are no hidden fees, subscription charges, or paywalls. Simply create an account and start learning immediately.',
   },
   {
     q: 'Will I receive a certificate after completing a course?',
@@ -45,7 +45,7 @@ const FAQS = [
   },
   {
     q: 'What subjects are available on Graduates Hub?',
-    a: 'We cover a wide range of subjects including IT & Coding, Business & Management, Accounting & Finance, Digital Marketing & SEO, Health & Wellness, Languages, and Personal Development — with new courses added regularly.',
+    a: 'We cover a wide range of subjects including IT & Coding, Business & Management, Accounting & Finance, Digital Marketing & SEO, Health & Wellness, Languages, and Personal Development, with new courses added regularly.',
   },
   {
     q: 'Do I need any prior experience to start a course?',
@@ -176,7 +176,7 @@ export default function SearchContent() {
                   <div className="text-6xl mb-6">🔍</div>
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">We didn't find "{query}" in our curated hub</h2>
                   <p className="text-gray-600 mb-8 max-w-md mx-auto text-lg">
-                    Let our AI tools help you find something great — or browse our subject areas below.
+                    Let our AI tools help you find something great, or browse our subject areas below.
                   </p>
                   <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-md">
                     Browse All Categories

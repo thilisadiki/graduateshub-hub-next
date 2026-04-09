@@ -64,7 +64,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
             <h2 className="text-2xl font-black mb-2 flex items-center gap-2">
               <TrendingUp size={24} className="text-yellow-300" /> Skills Gap Analyzer
             </h2>
-            <p className="text-emerald-100 font-medium">Enter your target role and current skills — we'll show you exactly what's missing and how to fill the gap.</p>
+            <p className="text-emerald-100 font-medium">Enter your target role and current skills, we'll show you exactly what's missing and how to fill the gap.</p>
             <button onClick={onClose} className="absolute top-0 right-0 mt-1 mr-1 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors">
               <X size={20} />
             </button>

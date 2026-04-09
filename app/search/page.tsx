@@ -6,7 +6,7 @@ const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Search Free Online Courses | Graduates Hub',
-  description: 'Search thousands of free online courses in IT, Business, Marketing, Health, Languages, and more. Find the perfect course to advance your career — no fees, no paywalls.',
+  description: 'Search thousands of free online courses in IT, Business, Marketing, Health, Languages, and more. Find the perfect course to advance your career, with no fees and no paywalls.',
   alternates: { canonical: `${SITE_URL}/search` },
   robots: {
     index: false,

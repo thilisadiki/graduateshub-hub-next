@@ -18,11 +18,11 @@ const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
-  description: 'Graduates Hub is your free learning resource centre — browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
+  description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
-    description: 'Graduates Hub is your free learning resource centre — browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
+    description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
     url: `${SITE_URL}/`,
   },
 };
@@ -128,18 +128,18 @@ export default async function Home() {
           <div className="flex justify-between items-end mb-8">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900">Popular Guides</h2>
-              <p className="text-gray-500 mt-2">Curated learning paths for every goal — all free to start.</p>
+              <p className="text-gray-500 mt-2">Curated learning paths for every goal. All free to start.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { title: 'Free Courses for Beginners', desc: 'Zero experience needed. Start building real skills from scratch.', href: '/free-courses-for-beginners', badge: 'Beginner' },
               { title: 'Free Courses with Certificates', desc: 'Top-rated courses across IT, Business, Marketing, and Finance.', href: '/free-courses-with-certificates', badge: 'Popular' },
-              { title: 'Best Alison Courses (2026)', desc: 'CPD-accredited diplomas and certificates — free to study.', href: '/best-alison-courses-with-certificates', badge: 'Alison' },
-              { title: 'Free Courses for Data Analysts', desc: 'Excel, SQL, Python, and Power BI — the full analyst learning path.', href: '/free-courses-for-data-analysts', badge: 'Data' },
+              { title: 'Best Alison Courses (2026)', desc: 'CPD-accredited diplomas and certificates. Free to study.', href: '/best-alison-courses-with-certificates', badge: 'Alison' },
+              { title: 'Free Courses for Data Analysts', desc: 'Excel, SQL, Python, and Power BI: the full analyst learning path.', href: '/free-courses-for-data-analysts', badge: 'Data' },
               { title: 'Free AI Courses for Beginners', desc: 'Learn AI and Generative AI without any coding background.', href: '/free-ai-courses-for-beginners', badge: 'AI' },
-              { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion — build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
-              { title: 'Free Courses for Software Developers', desc: 'Web development, programming languages, DevOps, and software architecture — all free.', href: '/free-courses-for-software-developers', badge: 'Dev' },
+              { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion. Build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
+              { title: 'Free Courses for Software Developers', desc: 'Web development, programming languages, DevOps, and software architecture. All free.', href: '/free-courses-for-software-developers', badge: 'Dev' },
             ].map(({ title, desc, href, badge }) => (
               <Link
                 key={href}

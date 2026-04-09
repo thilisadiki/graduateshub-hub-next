@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free AI Courses for Beginners (2026)',
   description:
-    'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI — all free with certificates.',
+    'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI, all free with certificates.',
   alternates: { canonical: `${SITE_URL}/free-ai-courses-for-beginners` },
   openGraph: {
     title: 'Best Free AI Courses for Beginners (2026) | Graduates Hub',
     description:
-      'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI — all free with certificates.',
+      'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI, all free with certificates.',
     url: `${SITE_URL}/free-ai-courses-for-beginners`,
   },
 };
@@ -29,14 +29,14 @@ const webPageSchema = {
   url: `${SITE_URL}/free-ai-courses-for-beginners`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI — all free with certificates.',
+  description: 'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI, all free with certificates.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
 const courseCategories = [
   {
     label: 'AI Fundamentals',
-    description: 'Start with the core concepts — what AI is, how it works, and where it is headed.',
+    description: 'Start with the core concepts, what AI is, how it works, and where it is headed.',
     ids: ['diploma-fundamentals-ai', 'diploma-applied-generative-ai', 'machine-learning-with-ai'],
   },
   {
@@ -60,7 +60,7 @@ const benefits = [
   {
     icon: Zap,
     title: 'Opportunities Across Industries',
-    body: 'From healthcare to finance to marketing — AI skills are in demand everywhere.',
+    body: 'From healthcare to finance to marketing, AI skills are in demand everywhere.',
   },
   {
     icon: Award,
@@ -84,18 +84,18 @@ const careerPaths = [
   { role: 'AI Specialist', detail: 'Deploy and manage AI systems within an organisation.' },
   { role: 'Business Intelligence Analyst', detail: 'Use AI to surface insights from business data.' },
   { role: 'Automation Specialist', detail: 'Design workflows that use AI to reduce manual effort.' },
-  { role: 'Machine Learning Engineer', detail: 'Build and train models — requires further technical study.' },
+  { role: 'Machine Learning Engineer', detail: 'Build and train models, requires further technical study.' },
   { role: 'Prompt Engineer', detail: 'Design effective prompts for generative AI tools and platforms.' },
 ];
 
 const faqs = [
   {
     q: 'Do I need coding experience to learn AI?',
-    a: 'No — not at the beginning. Many beginner AI courses focus on concepts, real-world applications, and tools rather than programming. However, learning Python later will significantly expand your options and help you build real AI projects.',
+    a: 'Not at the beginning. Many beginner AI courses focus on concepts, real-world applications, and tools rather than programming. However, learning Python later will significantly expand your options and help you build real AI projects.',
   },
   {
     q: 'How long does it take to learn AI basics?',
-    a: 'A foundational AI certificate typically takes 3–10 hours to complete. If you study for an hour a day, you can finish a beginner course within one to two weeks. Diplomas covering broader AI topics take longer — usually 10–15 hours.',
+    a: 'A foundational AI certificate typically takes 3 to 10 hours to complete. If you study for an hour a day, you can finish a beginner course within one to two weeks. Diplomas covering broader AI topics take longer, usually 10 to 15 hours.',
   },
   {
     q: 'Are free AI certificates recognised by employers?',
@@ -103,11 +103,11 @@ const faqs = [
   },
   {
     q: 'What is the difference between AI, Machine Learning, and Generative AI?',
-    a: 'Artificial Intelligence is the broad field of building systems that simulate human intelligence. Machine Learning is a subset of AI where systems learn from data without being explicitly programmed. Generative AI (like ChatGPT or image generators) is a subset of Machine Learning that creates new content — text, images, code — based on patterns in training data.',
+    a: 'Artificial Intelligence is the broad field of building systems that simulate human intelligence. Machine Learning is a subset of AI where systems learn from data without being explicitly programmed. Generative AI (like ChatGPT or image generators) is a subset of Machine Learning that creates new content (text, images, code) based on patterns in training data.',
   },
   {
     q: 'Which AI course should I start with?',
-    a: 'If you have no technical background, start with the Diploma in Fundamentals of Artificial Intelligence — it covers concepts before tools. If you already have some tech experience, the Diploma in Applied Generative AI is a strong next step. Python and data skills can run alongside your AI learning at any stage.',
+    a: 'If you have no technical background, start with the Diploma in Fundamentals of Artificial Intelligence, it covers concepts before tools. If you already have some tech experience, the Diploma in Applied Generative AI is a strong next step. Python and data skills can run alongside your AI learning at any stage.',
   },
 ];
 
@@ -183,9 +183,9 @@ export default function FreeAICoursesForBeginnersPage() {
             Best Free AI Courses for Beginners (2026)
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
-            Artificial Intelligence is no longer a future skill — it is a present-day advantage. If you are
+            Artificial Intelligence is no longer a future skill. It is a present-day advantage. If you are
             starting from scratch, this guide covers the best free AI courses for beginners in 2026, with no
-            prior experience required. Understand AI concepts, tools, and real-world applications — and earn a
+            prior experience required. Understand AI concepts, tools, and real-world applications, and earn a
             certificate along the way.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -211,7 +211,7 @@ export default function FreeAICoursesForBeginnersPage() {
         <section className="mb-20">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Why Learn AI as a Beginner?</h2>
           <p className="text-gray-500 mb-10 text-lg">
-            AI is one of the fastest-growing fields globally — and you do not need a technical background to get
+            AI is one of the fastest-growing fields globally, and you do not need a technical background to get
             started.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -276,7 +276,7 @@ export default function FreeAICoursesForBeginnersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
               <p className="text-gray-600 leading-relaxed mb-4">
-                No — not at the beginning. Many beginner AI courses require no coding knowledge at all. They
+                Not at the beginning. Many beginner AI courses require no coding knowledge at all. They
                 focus on concepts, applications, and understanding how AI systems work at a high level.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -342,7 +342,7 @@ export default function FreeAICoursesForBeginnersPage() {
             Career Paths You Can Explore with AI
           </h2>
           <p className="text-gray-500 mb-10 text-lg">
-            Starting with free AI courses can open doors to a wide range of roles — from entry-level to
+            Starting with free AI courses can open doors to a wide range of roles, from entry-level to
             specialist positions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -427,7 +427,7 @@ export default function FreeAICoursesForBeginnersPage() {
             Ready to Start Learning AI?
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            AI can feel overwhelming at first — but the key is to start simple. Choose one beginner-friendly
+            AI can feel overwhelming at first, but the key is to start simple. Choose one beginner-friendly
             course, complete it, and build from there. Consistency matters more than complexity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

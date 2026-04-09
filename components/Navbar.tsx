@@ -60,25 +60,24 @@ export default function Navbar() {
 
             <div className={`absolute top-full left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-lg overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
               <div className="p-2 grid gap-1">
-                {categories.map(cat => (
-                  <Link key={cat.id} href={`/category/${cat.id}`} className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">
-                    {cat.name}
-                  </Link>
-                ))}
+                <p className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
+                <Link href="/free-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Beginners</Link>
+                <Link href="/free-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses with Certificates</Link>
+                <Link href="/best-alison-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Best Alison Courses</Link>
+                <Link href="/free-courses-for-data-analysts" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Data Analysts</Link>
+                <Link href="/free-ai-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free AI Courses for Beginners</Link>
+                <Link href="/free-digital-marketing-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Digital Marketing Courses</Link>
+                <Link href="/free-courses-for-software-developers" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Software Developers</Link>
                 <div className="border-t border-gray-100 mt-2 pt-2">
+                  <p className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Categories</p>
+                  {categories.map(cat => (
+                    <Link key={cat.id} href={`/category/${cat.id}`} className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">
+                      {cat.name}
+                    </Link>
+                  ))}
                   <Link href="/categories" className="px-4 py-2 text-primary font-semibold hover:bg-blue-50 rounded-md transition-colors block text-center text-sm">
                     View All Subjects →
                   </Link>
-                </div>
-                <div className="border-t border-gray-100 mt-2 pt-2">
-                  <p className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
-                  <Link href="/free-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Beginners</Link>
-                  <Link href="/free-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses with Certificates</Link>
-                  <Link href="/best-alison-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Best Alison Courses</Link>
-                  <Link href="/free-courses-for-data-analysts" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Data Analysts</Link>
-                  <Link href="/free-ai-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free AI Courses for Beginners</Link>
-                  <Link href="/free-digital-marketing-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Digital Marketing Courses</Link>
-                  <Link href="/free-courses-for-software-developers" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Software Developers</Link>
                 </div>
               </div>
             </div>
@@ -158,15 +157,6 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
         <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-b border-gray-100">Home</Link>
-        <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
-        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
-          {categories.map(cat => (
-            <Link key={cat.id} href={`/category/${cat.id}`} onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">
-              {cat.name}
-            </Link>
-          ))}
-          <Link href="/categories" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Categories →</Link>
-        </div>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
           <Link href="/free-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Beginners</Link>
@@ -176,6 +166,15 @@ export default function Navbar() {
           <Link href="/free-ai-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free AI Courses for Beginners</Link>
           <Link href="/free-digital-marketing-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Digital Marketing Courses</Link>
           <Link href="/free-courses-for-software-developers" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Software Developers</Link>
+        </div>
+        <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
+        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
+          {categories.map(cat => (
+            <Link key={cat.id} href={`/category/${cat.id}`} onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">
+              {cat.name}
+            </Link>
+          ))}
+          <Link href="/categories" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Categories →</Link>
         </div>
         <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Blog</Link>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>

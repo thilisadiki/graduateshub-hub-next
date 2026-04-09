@@ -6,7 +6,7 @@ export const categoryContent = {
     it: {
         heroIntro: "Master the technology of tomorrow with our comprehensive range of free online IT courses. From cloud computing to network security, gain the high-demand skills employers are actively seeking in the digital economy.",
         aboutSection: "The Information Technology sector remains one of the fastest-growing industries globally. Whether you're looking to start a new career as a systems administrator, transition into cybersecurity, or upgrade your understanding of cloud infrastructure, our free IT courses provide the foundational and advanced knowledge you need. These carefully curated programs cover industry-standard tools and practices, ensuring you're job-ready upon completion.",
-        careerOpportunities: "Earning a certificate or diploma in IT opens doors in almost every sector—finance, healthcare, retail, and tech. Common career paths include IT Support Specialist, Network Engineer, Cloud Architect, and Systems Administrator. With the rapid digitization of businesses, IT professionals consistently report high job satisfaction and competitive salaries.",
+        careerOpportunities: "Earning a certificate or diploma in IT opens doors in almost every sector, finance, healthcare, retail, and tech. Common career paths include IT Support Specialist, Network Engineer, Cloud Architect, and Systems Administrator. With the rapid digitization of businesses, IT professionals consistently report high job satisfaction and competitive salaries.",
         skillsFocus: [
             "Network Administration & Troubleshooting",
             "Cloud Computing (AWS, Azure, Google Cloud)",
@@ -61,7 +61,7 @@ export const categoryContent = {
     // 5. Accounting
     accounting: {
         heroIntro: "Master the language of business. Learn how to manage finances, prepare statements, and analyze economic data with our free online accounting and bookkeeping courses.",
-        aboutSection: "Accounting is the process of recording, summarizing, and analyzing financial transactions—a critical function for the survival of any business. Our free accounting courses range from the basics of double-entry bookkeeping to advanced corporate finance and tax principles. You'll learn to read balance sheets, manage payroll, understand inventory valuation, and use modern accounting software principles. These courses are perfect for aspiring bookkeepers, business owners, and finance professionals.",
+        aboutSection: "Accounting is the process of recording, summarizing, and analyzing financial transactions, a critical function for the survival of any business. Our free accounting courses range from the basics of double-entry bookkeeping to advanced corporate finance and tax principles. You'll learn to read balance sheets, manage payroll, understand inventory valuation, and use modern accounting software principles. These courses are perfect for aspiring bookkeepers, business owners, and finance professionals.",
         careerOpportunities: "Every organization, from small local shops to massive multinational corporations, requires skilled finance professionals to ensure compliance and profitability. Career options include Bookkeeper, Financial Analyst, Payroll Clerk, Tax Consultant, and Junior Accountant. These roles offer high job security and clear progression paths to senior financial management.",
         skillsFocus: [
             "Double-Entry Bookkeeping & Ledgers",
@@ -117,7 +117,7 @@ export const categoryContent = {
     // 9. Personal Development
     'personal-development': {
         heroIntro: "Invest in yourself. Build the soft skills, emotional intelligence, and productivity habits that lead to a happier, highly successful personal and professional life.",
-        aboutSection: "Technical skills may get you the interview, but personal development skills get you the job—and the promotion. Our free online personal development courses focus on the crucial 'soft skills' that determine long-term success. You will learn the principles of emotional intelligence, effective time management, public speaking, stress management, and goal setting. These programs are designed to build your confidence and help you navigate both workplace politics and personal challenges.",
+        aboutSection: "Technical skills may get you the interview, but personal development skills get you the job, and the promotion. Our free online personal development courses focus on the crucial 'soft skills' that determine long-term success. You will learn the principles of emotional intelligence, effective time management, public speaking, stress management, and goal setting. These programs are designed to build your confidence and help you navigate both workplace politics and personal challenges.",
         careerOpportunities: "While personal development courses don't necessarily lead to a specific 'soft skills' job, they dramatically increase your value in *every* job. Professionals with high emotional intelligence and excellent communication skills are consistently promoted faster. Furthermore, these skills are essential for roles heavily reliant on human interaction, such as Sales, Customer Success, Management, and Public Relations.",
         skillsFocus: [
             "Time Management & Productivity Systems",
