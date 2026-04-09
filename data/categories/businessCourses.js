@@ -44,28 +44,6 @@ export const businessCourses = [
         editorsTake: "Agile is often misunderstood simply as 'doing things fast with no plan.' This excellent course corrects that misconception, teaching Agile as a highly disciplined, structured framework for managing complex, unpredictable projects. It's an absolute must for anyone working in tech."
     },
     {
-        id: "food-safety-training-safe-practices",
-        title: "Food Safety Training - Safe Practices and Procedures",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/food-safety-training-safe-practices-and-procedures?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn essential food safety practices and procedures for a safe working environment.",
-        longDescription: "In the hospitality and catering industries, food safety is not just a priority, it is a strict legal requirement. This 'Food Safety Training' certificate provides the essential knowledge required by law for anyone handling, preparing, or storing food in a commercial environment. We cover the vital principles of cross-contamination prevention, explaining how to properly separate raw and cooked foods. The course provides clear, actionable instructions on temperature control, focusing on the critical \"Danger Zone\" where bacteria multiply most rapidly. You will learn rigorous personal hygiene standards, proper handwashing techniques, and effective cleaning and sanitizing schedules to ensure a kitchen meets all local health and safety regulations.",
-        outcomes: [
-            "Understand the legal responsibilities of food handlers and commercial kitchens.",
-            "Identify the four main types of food contamination (microbiological, chemical, physical, allergenic).",
-            "Implement strict temperature controls to prevent bacterial growth.",
-            "Apply correct personal hygiene practices, including effective handwashing techniques.",
-            "Design and follow a basic cleaning and sanitizing schedule for a commercial kitchen."
-        ],
-        careerPath: "This certification is legally required or highly preferred for almost all entry-level positions in the food and beverage industry. It immediately qualifies the holder for roles such as Kitchen Assistant, Line Cook, Waitstaff, or Junior Catering Coordinator.",
-        targetAudience: "Mandatory for anyone currently working in, or planning to enter, the restaurant, catering, or hospitality industry. It is also highly useful for caregivers, school cafeteria staff, and food retail workers.",
-        editorsTake: "When it comes to food safety, you cannot afford to guess. This course is brilliant because it is concise, incredibly practical, and entirely focused on compliance. It provides exactly the straightforward rules a food handler needs to know to keep customers safe and pass health inspections."
-    },
-    {
         id: "lean-six-sigma-yellow-belt",
         title: "Lean Six Sigma: Yellow Belt",
         tag: "Certificate",
@@ -86,28 +64,6 @@ export const businessCourses = [
         careerPath: "A Lean Six Sigma Yellow Belt is a strong differentiator on a resume, signaling to employers that you are analytical and care about efficiency. It is a fantastic stepping stone to roles like Operations Analyst, Quality Assurance Specialist, or Process Coordinator.",
         targetAudience: "Ideal for entry to mid-level employees in manufacturing, healthcare, or corporate operations. It is perfect for professionals who want to actively participate in making their workplace run more efficiently but are not yet ready to lead massive, statistics-driven projects.",
         editorsTake: "Many Six Sigma courses immediately bombard the student with complex statistical math. This Yellow Belt course is different; it focuses on the mindset of continuous improvement and the practical tools (like the 8 wastes) that any employee can start using on Monday morning to make their job easier."
-    },
-    {
-        id: "haccp-food-safety-system",
-        title: "HACCP Food Safety System for Restaurants and Other Catering Services",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "3-4 Hours",
-        rating: 4.9,
-        image: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/haccp-food-safety-system-for-restaurants-and-other-catering-services?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Understand the HACCP principles required for maintaining food safety in catering services.",
-        longDescription: "Hazard Analysis and Critical Control Point (HACCP) is an internationally recognized, science-based, systematic approach to identifying and controlling food safety hazards. While basic food hygiene teaches you *what* to do, HACCP teaches you *how to prove* you are doing it safely. This advanced certificate is tailored specifically for managers in restaurants and catering. You will learn how to design a complete HACCP plan from scratch. The course guides you through conducting a hazard analysis to identify biological, chemical, and physical risks. You will then learn how to determine Critical Control Points (CCPs), establish critical limits (like specific cooking temperatures), and implement the rigorous record-keeping and monitoring procedures required by food safety auditors and health inspectors.",
-        outcomes: [
-            "Understand the history and legal necessity of the HACCP food safety system.",
-            "Conduct a comprehensive hazard analysis (biological, chemical, physical) for a food process.",
-            "Identify Critical Control Points (CCPs) in a food preparation workflow.",
-            "Establish critical limits and standard operating procedures for monitoring CCPs.",
-            "Implement the verification and record-keeping protocols required for health inspections."
-        ],
-        careerPath: "HACCP certification is a mandatory requirement for management roles in the food industry. This course prepares you for roles such as Kitchen Manager, Head Chef, Food Safety Officer, or Quality Assurance Manager in food manufacturing.",
-        targetAudience: "Aimed at supervisory or management staff in the restaurant, catering, or food production industries. Students should ideally have already completed a basic food safety and hygiene course before tackling this advanced management framework.",
-        editorsTake: "This is a serious, management-level compliance course. HACCP can be incredibly daunting, but this course breaks the 7 principles down into logical, easy-to-follow steps. It’s an indispensable resource for any restaurant owner or Head Chef facing a health inspection."
     },
     {
         id: "iso-13485-quality-management",
@@ -154,72 +110,6 @@ export const businessCourses = [
         editorsTake: "GDPR sounds terrifying, especially given the multi-million dollar fines. This course is excellent because it takes the panic out of compliance. It clearly defines what you can and cannot do with customer data, providing a practical roadmap for auditing your own company's privacy policies."
     },
     {
-        id: "food-safety-knowledge-basic",
-        title: "Food Safety Knowledge - Basic Level Requirements",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/food-safety-knowledge-basic-level-requirements?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Master basic level requirements for maintaining food safety and hygiene.",
-        longDescription: "Every great culinary experience starts with an uncompromising commitment to hygiene. The 'Food Safety Knowledge - Basic Level Requirements' course is designed to instill a culture of immaculate cleanliness from day one. This foundational certificate covers the non-negotiable standards required to prevent foodborne illnesses in a commercial setting. You will learn the biology of common food pathogens (like Salmonella and E. coli) to understand *why* certain practices are necessary, not just *what* the rules are. The curriculum rigorously covers personal hygiene standards for food handlers, effective pest control management, and the proper use of commercial cleaning chemicals to ensure all preparation surfaces are fully sanitized between tasks.",
-        outcomes: [
-            "Identify the most common biological, chemical, and physical hazards in a kitchen.",
-            "Explain the specific conditions (Time and Temperature) required for bacteria to multiply rapidly.",
-            "Demonstrate proper handwashing techniques and personal hygiene routines for shift work.",
-            "Implement basic pest control monitoring and reporting procedures.",
-            "Understand the correct, safe usage of commercial cleaning and sanitizing agents."
-        ],
-        careerPath: "An essential entry-level qualification for anyone looking to build a reliable career in hospitality. It qualifies individuals for immediate hiring as Kitchen Porters, Prep Cooks, Baristas, or Fast Food Attendants.",
-        targetAudience: "Perfect for high school students looking for their first job in a restaurant, or anyone transitioning into the hospitality sector who needs to learn the basic legal requirements of food handling.",
-        editorsTake: "This is a quick, highly effective primer. It doesn't overwhelm the student with complex management systems like HACCP; instead, it focuses purely on the practical day-to-day habits that keep a kitchen safe, clean, and legally compliant."
-    },
-    {
-        id: "food-safety-gmp",
-        title: "Food Safety: Good Manufacturing Practices (GMP) in the Food Industry",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/food-safety-good-manufacturing-practices-gmp-in-the-food-industry?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn the core principles of Good Manufacturing Practices in food production.",
-        longDescription: "While basic food safety relates to restaurants, Good Manufacturing Practices (GMP) govern massive, industrial-scale food production. This 'Food Safety: GMP in the Food Industry' certificate teaches you the rigorous quality assurance protocols used in modern food processing plants. A single error in a factory can result in thousands of contaminated products reaching consumers, leading to massive financial losses and reputational ruin. You will learn how to design factory layouts that prevent cross-contamination, how to implement strict preventive maintenance programs for industrial equipment, and how to manage the complex logistics of raw material traceability. The course also heavily emphasizes the role of the employee in maintaining a sterile manufacturing environment, covering specialized gowning procedures and controlled access zones.",
-        outcomes: [
-            "Differentiate between basic food hygiene in a kitchen and GMPs in an industrial facility.",
-            "Understand the engineering controls (like positive air pressure) used to maintain clean zones.",
-            "Implement robust traceability systems to track raw materials from farm to factory to shelf.",
-            "Execute proper equipment sanitation protocols to prevent allergen cross-contamination.",
-            "Develop basic Standard Operating Procedures (SOPs) for routine factory tasks."
-        ],
-        careerPath: "Knowledge of GMP is a golden ticket in the food manufacturing sector. It paves the way for secure, well-paying roles such as Production Supervisor, Quality Assurance (QA) Technician, Food Technologist, or Factory Operations Manager.",
-        targetAudience: "Aimed specifically at individuals working in, or seeking employment in, large-scale food processing plants, beverage manufacturing, or agricultural packaging facilities.",
-        editorsTake: "We highly recommend this course for anyone interested in operations or supply chain management. The scale of industrial food production is fascinating, and understanding the extreme lengths factories go to in order to ensure product safety provides an incredible operational perspective."
-    },
-    {
-        id: "hospitality-management-hotel-operations",
-        title: "Hospitality Management Studies - Hotel Operations",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/hospitality-management-studies-hotel-operations?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Understand the modes of hotel management and operational structures in hospitality.",
-        longDescription: "Running a successful hotel requires the flawless coordination of multiple diverse departments working around the clock. The 'Hospitality Management Studies - Hotel Operations' certificate provides a comprehensive look 'behind the curtain' of the lodging industry. You will explore the specific functions and daily challenges of the Front Office, Housekeeping, Food and Beverage (F&B), and Facilities Management departments. The course places a heavy emphasis on revenue management: teaching you how to optimize room rates based on demand forecasting, analyze occupancy percentages, and calculate the crucial metric of RevPAR (Revenue Per Available Room). You will also learn the core principles of exceptional guest service, conflict resolution, and how to handle VIP clients and complex event bookings.",
-        outcomes: [
-            "Map the organizational structure of a modern full-service hotel.",
-            "Calculate key hospitality metrics including Occupancy Rate, ADR (Average Daily Rate), and RevPAR.",
-            "Understand the vital interaction between the Front Office and Housekeeping departments to ensure smooth room turnovers.",
-            "Implement standard procedures for handling guest complaints and service recovery.",
-            "Identify the key revenue streams and cost centers within a hotel property."
-        ],
-        careerPath: "This broad operational knowledge base is essential for promotion within the hotel sector. It prepares graduates for roles such as Front Office Manager, Duty Manager, Revenue Coordinator, or eventually, General Manager of a boutique hotel.",
-        targetAudience: "Ideal for current hospitality employees working in a single department (like the front desk) who want to understand the entire business operation to cross-train or advance into management.",
-        editorsTake: "A fantastic, holistic overview of the hospitality business. The sections on yield management and calculating RevPAR are particularly strong, turning what seems like an industry of 'just being polite' into an intricate, fast-paced mathematical strategy."
-    },
-    {
         id: "lean-six-sigma-white-belt",
         title: "Lean Six Sigma: White Belt",
         tag: "Certificate",
@@ -240,28 +130,6 @@ export const businessCourses = [
         careerPath: "While it is a foundational certification, a Lean Six Sigma White Belt demonstrates to employers that you are proactive and interested in operational efficiency. It serves as an excellent differentiator for entry-level administrative or operational roles.",
         targetAudience: "Perfect for the entire workforce of an organization that is about to undergo a Lean Six Sigma transformation, ensuring everyone speaks the same basic language of continuous improvement.",
         editorsTake: "This is a perfect 'lunch-hour' course. It is incredibly concise but delivers exactly what it promises: a clear, jargon-free explanation of what Lean Six Sigma actually is, giving you the confidence to participate intelligently in company-wide efficiency meetings."
-    },
-    {
-        id: "food-safety-hygiene",
-        title: "Food Safety and Hygiene",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/food-safety-and-hygiene?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Comprehensive guide to maintaining high standards of food safety and hygiene.",
-        longDescription: "The 'Food Safety and Hygiene' certificate is a thorough, middle-management level compliance course designed for those who actively supervise food preparation areas. Moving beyond the basics of personal cleanliness, this course focuses on the systemic management of hygiene. You will explore the specific environmental conditions that different types of pathogenic bacteria require to multiply, and exactly how to disrupt those conditions. The curriculum covers the safe management of food deliveries, intelligent storage protocols to prevent physical contamination, and the calibration of essential equipment like deep fryers and cold storage units. We also provide clear guidelines on how to handle the immediate aftermath of a suspected food poisoning complaint from a customer to mitigate legal liability.",
-        outcomes: [
-            "Supervise staff compliance with personal hygiene and basic handwashing requirements.",
-            "Implement 'First In, First Out' (FIFO) stock rotation systems to minimize food spoilage.",
-            "Calibrate and accurately record temperatures for commercial refrigeration and cooking equipment.",
-            "Identify signs of pest infestations and coordinate appropriately with professional exterminators.",
-            "Execute standard emergency protocols for managing a suspected foodborne illness incident."
-        ],
-        careerPath: "This level of certification bridges the gap from line worker to management. It is highly advantageous for roles such as Shift Supervisor, Sous Chef, Cafeteria Manager, or Health and Safety Coordinator in a retail environment.",
-        targetAudience: "Designed for experienced food handlers looking to step up into supervisory roles, where they will be responsible for enforcing hygiene rules rather than just following them.",
-        editorsTake: "What elevates this course is its focus on the 'why' behind the rules. Instead of just telling you to throw food away after three days, it explains the exponential growth curves of bacteria, making the abstract concept of 'food safety' incredibly real and urgent."
     },
     {
         id: "iso-45001-occupational-health",
@@ -330,28 +198,6 @@ export const businessCourses = [
         editorsTake: "Auditing is often viewed as a purely antagonistic process. This excellent course reframes the auditor not as a corporate policeman, but as a diagnostic tool that helps an organization identify and fix its critical vulnerabilities before they cause systemic failure."
     },
     {
-        id: "food-hygiene",
-        title: "Food Hygiene",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "5-6 Hours",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/food-hygiene?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn core procedures and standards to guarantee food hygiene in any environment.",
-        longDescription: "While other courses focus on management systems, 'Food Hygiene' is a deep, scientific dive into the biological realities of food safety. This comprehensive certificate is built for supervisors who need to understand exactly *how* pathogens operate. You will receive detailed instruction on the 'temperature danger zone' (where bacteria double every 20 minutes) and the strict chilling protocols required to arrest bacterial growth. The curriculum explores the devastating consequences of allergen cross-contamination, teaching clear separation protocols for high-risk ingredients like nuts and shellfish. We also cover the structural requirements of a hygienic kitchen layout, focusing on smooth, non-porous surfaces that prevent biofilm buildup, and the precise chemical dwell times required for commercial sanitizers to actually kill viral loads.",
-        outcomes: [
-            "Explain the rapid logarithmic growth cycle of foodborne bacteria under dangerous conditions.",
-            "Enforce strict temperature controls for receiving, storing, cooking, and hot-holding food.",
-            "Implement foolproof protocols to prevent severe allergic reactions (anaphylaxis) in customers.",
-            "Understand the chemical mechanics and required 'dwell times' of commercial sanitizing agents.",
-            "Design kitchen workflows that physically separate raw protein handling from ready-to-eat food preparation."
-        ],
-        careerPath: "A critical certification for stepping up into food-handling leadership. It prepares individuals for roles such as Kitchen Manager, Head Chef, Catering Director, or School Nutrition Supervisor.",
-        targetAudience: "Ideal for experienced line cooks, sous chefs, and restaurant shift managers who carry the daily operational responsibility of ensuring food safety during busy service periods.",
-        editorsTake: "The focus on allergens makes this course a standout. Food poisoning is terrible, but cross-contaminating an allergen can be instantly fatal. The modules teaching strict color-coded cutting board adherence and dedicated allergy-prep stations provide literal life-saving protocols."
-    },
-    {
         id: "effective-iso-9001",
         title: "Effective ISO 9001 Internal Auditing Practices",
         tag: "Certificate",
@@ -372,28 +218,6 @@ export const businessCourses = [
         careerPath: "Internal auditing is a fantastic springboard for corporate advancement. By auditing different departments, you gain unparalleled insight into the entire company's operations. It qualifies you for roles like Quality Engineer, Internal Auditor, or Compliance Coordinator.",
         targetAudience: "Geared towards ambitious employees in manufacturing, tech, or corporate services who have been selected to join their company's internal audit team, as well as line managers who want to understand how they will be evaluated.",
         editorsTake: "A highly practical, step-by-step guide. We appreciate how the course emphasizes that internal auditing shouldn't be a 'gotcha' exercise, but rather a collaborative effort to find broken processes before external inspectors arrive."
-    },
-    {
-        id: "hospitality-management-health-safety",
-        title: "Hospitality Management - Health and Safety in Food Service",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/hospitality-management-health-and-safety-in-food-service?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Ensure safe and compliant food service operations within hospitality management.",
-        longDescription: "Combining the fast-paced stress of hospitality with the rigorous compliance of food safety creates a unique set of challenges. 'Hospitality Management - Health and Safety in Food Service' bridges the gap between customer satisfaction and legal liability. This specialized certificate teaches hospitality managers how to implement safety structures without destroying the guest experience. You will cover the specific safety hazards of front-of-house operations, such as preventing slip-and-fall accidents, managing intoxicated guests safely, and ensuring fire exits are never compromised during crowded events. On the back-of-house side, the curriculum reinforces strict hygiene standards, pest control, and proper waste management. Ultimately, you will learn how to draft comprehensive risk assessments that satisfy local health authorities while maintaining seamless service.",
-        outcomes: [
-            "Conduct thorough risk assessments for both front-of-house and back-of-house hospitality environments.",
-            "Implement protocols to prevent common hospitality accidents (e.g., burns, slips, lacerations).",
-            "Manage the swift, legal, and safe cut-off of alcohol service to intoxicated patrons.",
-            "Ensure strict compliance with health department regulations regarding food storage and hygiene.",
-            "Maintain comprehensive safety logs and incident reports to protect the business from liability claims."
-        ],
-        careerPath: "Essential training for anyone managing a venue. It is directly applicable for roles such as Restaurant General Manager, Banquet Director, Food & Beverage (F&B) Manager, or Nightclub Operations Director.",
-        targetAudience: "Designed for hospitality professionals who are stepping into management and taking on legal liability for the safety of both their staff and their patrons.",
-        editorsTake: "This course perfectly understands the reality of hospitality management. It acknowledges that when a restaurant is short-staffed and slammed with orders on a Friday night, safety protocols are the first thing to slip. It provides realistic systems to ensure safety remains prioritized even under intense pressure."
     },
     {
         id: "diploma-economic-growth-development",
