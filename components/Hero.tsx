@@ -1,9 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Star, Megaphone, Calculator } from 'lucide-react';
-
-function StarIcon() {
-  return <Star size={12} className="fill-current text-yellow-400" />;
-}
+import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Megaphone, Calculator } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -43,22 +39,18 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-4 mt-8 opacity-75">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Student" loading="lazy" className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-col">
-                <div className="flex text-yellow-500">
-                  {[1, 2, 3, 4, 5].map(s => <StarIcon key={s} />)}
-                </div>
-                <span className="text-xs font-bold text-slate-500">Trusted by 20M+ learners</span>
-              </div>
-            </div>
+            <a
+              href="https://web.facebook.com/Graduateshub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 mt-6 text-sm text-slate-500 hover:text-blue-600 transition-colors group"
+            >
+              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-600 text-white shrink-0">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+              </span>
+              <span><strong className="text-slate-700 group-hover:text-blue-600 transition-colors">189K+ followers</strong> on Facebook</span>
+            </a>
+
           </div>
 
           {/* Right: IT Card */}

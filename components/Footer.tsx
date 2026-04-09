@@ -11,6 +11,17 @@ export default function Footer() {
           <p className="text-sm leading-relaxed max-w-sm">
             Your free learning resource centre: career guides, study articles, and hundreds of free certified courses to help you grow your skills and advance your career.
           </p>
+          <a
+            href="https://web.facebook.com/Graduateshub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-5 text-sm text-slate-400 hover:text-blue-400 transition-colors group"
+          >
+            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-600 text-white shrink-0">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+            </span>
+            <span><strong className="text-slate-300 group-hover:text-blue-400 transition-colors">189K+ followers</strong> on Facebook</span>
+          </a>
         </div>
 
         {/* Popular Guides */}

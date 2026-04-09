@@ -6,7 +6,6 @@ import CourseCard from '@/components/CourseCard';
 import HowItWorks from '@/components/HowItWorks';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
-import Testimonials from '@/components/Testimonials';
 import LatestArticles from '@/components/LatestArticles';
 import FAQ from '@/components/FAQ';
 import AIToolsBanner from '@/components/AIToolsBanner';
@@ -190,8 +189,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mt-16"><Testimonials /></div>
-        <div className="mt-16"><CourseCarousel courses={carouselCourses} /></div>
+<div className="mt-16"><CourseCarousel courses={carouselCourses} /></div>
         <div className="mt-12"><NewsletterBanner /></div>
 
         <div className="mt-20 border-t border-gray-100 pt-12 pb-4 text-center">

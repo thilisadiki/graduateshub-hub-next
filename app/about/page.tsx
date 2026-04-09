@@ -181,6 +181,17 @@ export default function AboutPage() {
             <p className="text-gray-600 leading-relaxed mt-4 text-lg">
               Whether you are a recent graduate entering the job market, a professional looking to upskill, or a lifelong learner exploring something new, Graduates Hub gives you the tools, guides, and courses to get there without financial barriers.
             </p>
+            <div className="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
+              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-blue-600 text-white shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+              </span>
+              <p className="text-gray-600 text-sm">
+                Join our community of{' '}
+                <a href="https://web.facebook.com/Graduateshub" target="_blank" rel="noopener noreferrer"
+                  className="font-bold text-blue-600 hover:underline">189,000+ followers on Facebook</a>
+                {' '}— learners sharing opportunities, resources, and wins every day.
+              </p>
+            </div>
           </div>
         </section>
 
