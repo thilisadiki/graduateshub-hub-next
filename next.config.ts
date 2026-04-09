@@ -25,6 +25,11 @@ const nextConfig: NextConfig = {
         destination: '/blog',
         permanent: true,
       },
+      {
+        source: '/affiliate-disclosure',
+        destination: '/disclosure',
+        permanent: true,
+      },
     ];
   },
   devIndicators: false,
