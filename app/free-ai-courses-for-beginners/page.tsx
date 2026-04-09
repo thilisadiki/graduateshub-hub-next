@@ -13,12 +13,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free AI Courses for Beginners (2026)',
   description:
-    'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI, all free with certificates.',
+    'The best free AI courses for people with no AI or coding background in 2026. Start learning Artificial Intelligence, Machine Learning, and Generative AI from scratch. All free with certificates.',
   alternates: { canonical: `${SITE_URL}/free-ai-courses-for-beginners` },
   openGraph: {
     title: 'Best Free AI Courses for Beginners (2026) | Graduates Hub',
     description:
-      'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI, all free with certificates.',
+      'The best free AI courses for people with no AI or coding background in 2026. Start learning Artificial Intelligence, Machine Learning, and Generative AI from scratch. All free with certificates.',
     url: `${SITE_URL}/free-ai-courses-for-beginners`,
   },
 };
@@ -30,7 +30,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-ai-courses-for-beginners`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free AI courses for beginners in 2026. No prior experience required. Start learning Artificial Intelligence, Machine Learning, and Generative AI, all free with certificates.',
+  description: 'The best free AI courses for people with no AI or coding background in 2026. Start learning Artificial Intelligence, Machine Learning, and Generative AI from scratch. All free with certificates.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 

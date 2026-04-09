@@ -17,11 +17,11 @@ const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
-  description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
+  description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
-    description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Business, Marketing, Health, and more.',
+    description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
     url: `${SITE_URL}/`,
   },
 };

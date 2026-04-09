@@ -13,12 +13,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free Courses for Beginners: No Experience Needed (2026)',
   description:
-    'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+    'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning Excel, Python, Business, Accounting, or Software Development from scratch today.',
   alternates: { canonical: `${SITE_URL}/free-courses-for-beginners` },
   openGraph: {
     title: 'Best Free Courses for Beginners: No Experience Needed (2026) | Graduates Hub',
     description:
-      'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+      'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning Excel, Python, Business, Accounting, or Software Development from scratch today.',
     url: `${SITE_URL}/free-courses-for-beginners`,
   },
 };
@@ -30,7 +30,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-courses-for-beginners`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning AI, Excel, Python, Business, or Accounting from scratch today.',
+  description: 'Discover the best free online courses for complete beginners in 2026. No experience needed. Start learning Excel, Python, Business, Accounting, or Software Development from scratch today.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -38,7 +38,7 @@ const courseCategories = [
   {
     label: 'Technology for Beginners',
     slug: 'it',
-    description: 'Understand computers, the internet, and the basics of AI, no technical knowledge required.',
+    description: 'Understand computers, the internet, and foundational tech concepts. No technical knowledge required.',
     ids: ['diploma-fundamentals-ai', 'intro-computer-hardware-software', 'html-css-web-dev'],
   },
   {
@@ -306,6 +306,17 @@ export default function FreeCoursesForBeginnersPage() {
             </section>
           );
         })}
+
+        {/* AI callout */}
+        <div className="mb-20 bg-indigo-50 border border-indigo-100 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <p className="font-bold text-gray-900 mb-1">Interested in AI specifically?</p>
+            <p className="text-sm text-gray-500">We have a dedicated guide covering the best free AI courses for people with no prior AI or coding experience.</p>
+          </div>
+          <Link href="/free-ai-courses-for-beginners" className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap">
+            View AI Courses Guide →
+          </Link>
+        </div>
 
         {/* Top-rated carousel */}
         {topRatedCarousel.length > 0 && (

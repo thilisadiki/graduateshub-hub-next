@@ -13,12 +13,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Free Online Courses with Certificates (2026)',
   description:
-    'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development, all free to start.',
+    'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',
   alternates: { canonical: `${SITE_URL}/free-courses-with-certificates` },
   openGraph: {
     title: 'Best Free Online Courses with Certificates (2026) | Graduates Hub',
     description:
-      'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development, all free to start.',
+      'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',
     url: `${SITE_URL}/free-courses-with-certificates`,
   },
 };
@@ -30,7 +30,7 @@ const webPageSchema = {
   url: `${SITE_URL}/free-courses-with-certificates`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Discover the best free online courses with certificates in 2026. Browse top-rated courses in IT, Business, Marketing, Finance, and Software Development, all free to start.',
+  description: 'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
@@ -128,7 +128,7 @@ const faqs = [
   },
   {
     q: 'Are the certificates on Graduates Hub recognised by employers?',
-    a: 'Graduates Hub partners with Alison, a globally recognised e-learning platform that has issued over 30 million certificates worldwide. While recognition varies by industry and employer, Alison certificates are widely accepted as proof of practical skills.',
+    a: 'Certificate recognition depends on the provider and the role you are targeting. Courses from established platforms carry more weight when combined with practical experience or a portfolio of work. Most hiring managers treat a free certificate as a positive signal of initiative and self-direction rather than a formal qualification. For roles that specify CPD-accredited credentials, look for diplomas from accredited providers.',
   },
   {
     q: 'Do I need any prior experience to start?',
@@ -291,6 +291,17 @@ export default function FreeCoursesWithCertificatesPage() {
             />
           </div>
         )}
+
+        {/* Alison callout */}
+        <div className="mb-20 bg-blue-50 border border-blue-100 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <p className="font-bold text-gray-900 mb-1">Looking specifically for Alison courses?</p>
+            <p className="text-sm text-gray-500">We have a dedicated guide covering the top CPD-accredited diplomas and certificates on the Alison platform.</p>
+          </div>
+          <Link href="/best-alison-courses-with-certificates" className="shrink-0 bg-primary hover:bg-blue-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap">
+            View Alison Guide →
+          </Link>
+        </div>
 
         {/* How to Choose */}
         <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">

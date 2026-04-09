@@ -5,12 +5,12 @@ import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } fr
 const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
-  title: 'Free Online Course Guides for 2026 | Graduates Hub',
-  description: 'Specialist-curated guides to free online courses in tech, business, finance, and marketing. Every guide is written by a named expert and updated regularly.',
+  title: 'Online Course Guides for 2026 | Graduates Hub',
+  description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
   alternates: { canonical: `${SITE_URL}/guides` },
   openGraph: {
-    title: 'Free Online Course Guides for 2026 | Graduates Hub',
-    description: 'Specialist-curated guides to free online courses in tech, business, finance, and marketing. Every guide is written by a named expert and updated regularly.',
+    title: 'Online Course Guides for 2026 | Graduates Hub',
+    description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
     url: `${SITE_URL}/guides`,
   },
 };
@@ -135,8 +135,8 @@ const ALL_GUIDES = GUIDE_GROUPS.flatMap(g => g.guides);
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Free Online Course Guides',
-  description: 'Specialist-curated guides to free online courses in tech, business, finance, and marketing.',
+  name: 'Online Course Guides for 2026',
+  description: 'Specialist-curated learning guides across tech, business, finance, and marketing.',
   numberOfItems: ALL_GUIDES.length,
   itemListElement: ALL_GUIDES.map((guide, index) => ({
     '@type': 'ListItem',
@@ -159,9 +159,9 @@ const breadcrumbSchema = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Free Online Course Guides for 2026',
+  name: 'Online Course Guides for 2026',
   url: `${SITE_URL}/guides`,
-  description: 'Specialist-curated guides to free online courses in tech, business, finance, and marketing. Every guide is written by a named expert and updated regularly.',
+  description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
   breadcrumb: breadcrumbSchema,
 };
@@ -231,7 +231,7 @@ export default function GuidesPage() {
             {ALL_GUIDES.length} Guides · Updated 2026
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-            Free Online Course Guides for 2026
+            Online Course Guides for 2026
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
             Every guide on this page was built by a subject-matter specialist, not an algorithm.

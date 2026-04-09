@@ -12,12 +12,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Best Alison Courses with Certificates (2026)',
   description:
-    'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more, self-paced with no deadlines.',
+    'The top CPD-accredited diplomas and certificates available on the Alison platform, hand-picked by subject specialists. Free to study with no deadlines, no enrolment fees, and no prior experience required.',
   alternates: { canonical: `${SITE_URL}/best-alison-courses-with-certificates` },
   openGraph: {
     title: 'Best Alison Courses with Certificates (2026) | Graduates Hub',
     description:
-      'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more, self-paced with no deadlines.',
+      'The top CPD-accredited diplomas and certificates available on the Alison platform, hand-picked by subject specialists. Free to study with no deadlines, no enrolment fees, and no prior experience required.',
     url: `${SITE_URL}/best-alison-courses-with-certificates`,
   },
 };
@@ -29,7 +29,7 @@ const webPageSchema = {
   url: `${SITE_URL}/best-alison-courses-with-certificates`,
   datePublished: '2025-01-01',
   dateModified: '2026-01-01',
-  description: 'Explore the best Alison courses with certificates in 2026. Free CPD-accredited courses in Business, IT, Marketing, Accounting, and more, self-paced with no deadlines.',
+  description: 'The top CPD-accredited diplomas and certificates available on the Alison platform, hand-picked by subject specialists. Free to study with no deadlines, no enrolment fees, and no prior experience required.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
