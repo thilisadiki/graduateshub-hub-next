@@ -12,7 +12,7 @@ export default function Footer() {
             Your free learning resource centre: career guides, study articles, and hundreds of free certified courses to help you grow your skills and advance your career.
           </p>
           <a
-            href="https://web.facebook.com/Graduateshub"
+            href="https://facebook.com/Graduateshub"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-5 text-sm text-slate-400 hover:text-blue-400 transition-colors group"

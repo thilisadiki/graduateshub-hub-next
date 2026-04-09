@@ -40,7 +40,7 @@ export default function Hero() {
             </div>
 
             <a
-              href="https://web.facebook.com/Graduateshub"
+              href="https://facebook.com/Graduateshub"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 mt-6 text-sm text-slate-500 hover:text-blue-600 transition-colors group"
