@@ -165,7 +165,7 @@ export default function CategoriesPage() {
         <div className="max-w-6xl mx-auto">
           <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Updated for 2026</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight max-w-3xl leading-tight">
-            Free Online Courses by Subject Area
+            Courses by Subject Area
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-3">
             Every subject area on Graduates Hub is curated by a named specialist with direct professional experience in that field.

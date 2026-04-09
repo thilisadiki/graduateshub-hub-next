@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import { Calendar, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
 import NewsletterBanner from '@/components/NewsletterBanner';
 
-export const revalidate = 300; // regenerate every 5 minutes in the background
+export const revalidate = 300;
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const SITE_URL = 'https://graduateshub.co.za';
@@ -23,7 +23,15 @@ export const metadata: Metadata = {
   },
 };
 
-// Only fetch the fields we actually render, cuts response size ~80% vs full _embed
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+  ],
+};
+
 const LISTING_FIELDS = '_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia';
 
 async function fetchPosts(page: number) {
@@ -63,6 +71,67 @@ function formatPost(post: any) {
   };
 }
 
+const RELATED_GUIDES = [
+  {
+    title: 'Free Courses for Data Analysts',
+    desc: 'Excel, SQL, Python, and Power BI in one structured path.',
+    href: '/free-courses-for-data-analysts',
+    badge: 'Data',
+  },
+  {
+    title: 'Free Courses for Accounting & Finance',
+    desc: 'Bookkeeping, payroll, and financial management from scratch.',
+    href: '/free-courses-for-accounting-and-finance',
+    badge: 'Finance',
+  },
+  {
+    title: 'Free Digital Marketing Courses',
+    desc: 'SEO, content strategy, and growth from the ground up.',
+    href: '/free-digital-marketing-courses',
+    badge: 'Marketing',
+  },
+];
+
+type FormattedPost = ReturnType<typeof formatPost>;
+
+function FeaturedCard({ post }: { post: FormattedPost }) {
+  return (
+    <Link
+      href={`/blog/${post.slug}`}
+      className="group block bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-all mb-12"
+    >
+      <div className="flex flex-col md:flex-row">
+        <div className="relative h-56 md:h-auto md:w-2/5 shrink-0 overflow-hidden">
+          <Image
+            src={post.imageUrl}
+            alt={post.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, 40vw"
+            priority
+          />
+          <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+            Latest
+          </div>
+        </div>
+        <div className="p-8 md:p-10 flex flex-col justify-center md:w-3/5">
+          <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-3">
+            <Calendar size={12} />
+            {post.date}
+          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight mb-4 group-hover:text-primary transition-colors">
+            {post.title}
+          </h2>
+          <p className="text-gray-500 leading-relaxed mb-6 text-sm md:text-base">{post.excerpt}</p>
+          <span className="inline-flex items-center gap-2 text-sm font-bold text-primary">
+            Read Article <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
 export default async function BlogPage({
   searchParams,
 }: {
@@ -73,8 +142,32 @@ export default async function BlogPage({
   const { posts, total, totalPages } = await fetchPosts(page);
   const formattedPosts = posts.map(formatPost);
 
+  const featuredPost = page === 1 ? formattedPosts[0] : null;
+  const gridPosts = page === 1 ? formattedPosts.slice(1) : formattedPosts;
+
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Graduates Hub Blog',
+    url: `${SITE_URL}/blog`,
+    description: 'Career guides, study tips, and expert advice to help you navigate your education and career journey.',
+    publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+    ...(formattedPosts.length > 0 && {
+      blogPost: formattedPosts.slice(0, 6).map((post) => ({
+        '@type': 'BlogPosting',
+        headline: post.title,
+        url: `${SITE_URL}/blog/${post.slug}`,
+        datePublished: post.date,
+        image: post.imageUrl,
+      })),
+    }),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Hero */}
       <div className="bg-blue-50 border-b border-blue-100 py-14 px-6">
         <div className="max-w-6xl mx-auto">
@@ -105,39 +198,82 @@ export default async function BlogPage({
             <p className="font-semibold">No articles found.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {formattedPosts.map((post: ReturnType<typeof formatPost>) => (
+          <>
+            {/* Featured post — first article on page 1 only */}
+            {featuredPost && <FeaturedCard post={featuredPost} />}
+
+            {/* Article grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {gridPosts.map((post: FormattedPost) => (
+                <Link
+                  key={post.id}
+                  href={`/blog/${post.slug}`}
+                  className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
+                >
+                  <div className="h-48 overflow-hidden relative">
+                    <Image
+                      src={post.imageUrl}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-700 flex items-center gap-1 shadow-sm">
+                      <Calendar size={12} />
+                      {post.date}
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h2 className="text-lg font-bold text-gray-900 leading-tight mb-3 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-500 text-sm mb-6 flex-grow leading-relaxed">{post.excerpt}</p>
+                    <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-bold text-primary">
+                      <span>Read Article</span>
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Find a course strip */}
+            <div className="mb-12 bg-blue-50 border border-blue-100 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-gray-900 mb-1">Reading about careers? Find a free course to go with it.</p>
+                <p className="text-sm text-gray-500">Browse 100+ free certified courses across IT, Business, Marketing, Accounting, and more.</p>
+              </div>
               <Link
-                key={post.id}
-                href={`/blog/${post.slug}`}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
+                href="/search"
+                className="shrink-0 bg-primary hover:bg-blue-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
               >
-                <div className="h-48 overflow-hidden relative">
-                  <Image
-                    src={post.imageUrl}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-700 flex items-center gap-1 shadow-sm">
-                    <Calendar size={12} />
-                    {post.date}
-                  </div>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="text-lg font-bold text-gray-900 leading-tight mb-3 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-500 text-sm mb-6 flex-grow leading-relaxed">{post.excerpt}</p>
-                  <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-bold text-primary">
-                    <span>Read Article</span>
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
+                Browse Free Courses →
               </Link>
-            ))}
-          </div>
+            </div>
+
+            {/* Related guides */}
+            <section className="mb-12">
+              <h2 className="text-lg font-extrabold text-gray-900 mb-4">Popular Learning Guides</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {RELATED_GUIDES.map(({ title, desc, href, badge }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all flex flex-col gap-2"
+                  >
+                    <span className="self-start text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">
+                      {badge}
+                    </span>
+                    <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm leading-snug">{title}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed flex-grow">{desc}</p>
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-primary mt-1">
+                      View Guide <ChevronRight size={12} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </>
         )}
 
         {/* Pagination */}
@@ -148,7 +284,7 @@ export default async function BlogPage({
                 href={`/blog?page=${page - 1}`}
                 className="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 font-bold rounded-lg hover:border-primary hover:text-primary transition-colors text-sm"
               >
-                ← Previous
+                Previous
               </Link>
             )}
             <span className="text-sm text-gray-500 font-medium">
@@ -159,7 +295,7 @@ export default async function BlogPage({
                 href={`/blog?page=${page + 1}`}
                 className="px-5 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-blue-800 transition-colors text-sm"
               >
-                Next →
+                Next
               </Link>
             )}
           </div>
