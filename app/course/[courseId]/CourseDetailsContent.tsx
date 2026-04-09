@@ -66,7 +66,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
           <span className="text-gray-300">›</span>
           <Link href="/categories" className="hover:text-primary transition-colors">Categories</Link>
           <span className="text-gray-300">›</span>
-          <Link href={`/category/${course.category.toLowerCase().replace(/ /g, '-')}`} className="hover:text-primary transition-colors">{formatCategoryName(course.category)}</Link>
+          <Link href={`/category/${course.category.toLowerCase().split(',')[0].trim().replace(/ /g, '-')}`} className="hover:text-primary transition-colors">{formatCategoryName(course.category)}</Link>
           <span className="text-gray-300">›</span>
           <span className="text-gray-900 font-medium truncate max-w-[200px] sm:max-w-xs md:max-w-md">{course.title}</span>
         </div>

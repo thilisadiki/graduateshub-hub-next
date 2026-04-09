@@ -66,28 +66,6 @@ export const businessCourses = [
         editorsTake: "Many Six Sigma courses immediately bombard the student with complex statistical math. This Yellow Belt course is different; it focuses on the mindset of continuous improvement and the practical tools (like the 8 wastes) that any employee can start using on Monday morning to make their job easier."
     },
     {
-        id: "iso-13485-quality-management",
-        title: "ISO 13485:2016 - Quality Management Systems for Medical Devices",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/iso-13485-2016-quality-management-systems-for-medical-devices?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn about quality management standards required for the medical devices industry.",
-        longDescription: "The medical device industry is one of the most highly regulated sectors in the world, where a manufacturing error can have life-or-death consequences. ISO 13485:2016 is the internationally agreed standard that sets out the requirements for a quality management system specific to the medical devices industry. This specialized certificate provides a comprehensive breakdown of the standard's clauses. You will learn about the strict requirements for risk management, design control, and traceability (tracking a device from the factory to the patient). The course covers the rigorous documentation required for regulatory compliance, how to maintain a sterile manufacturing environment, and the specific procedures for handling customer complaints and product recalls in the medical sector.",
-        outcomes: [
-            "Understand the structure, scope, and purpose of the ISO 13485:2016 standard.",
-            "Explain the critical role of risk management in the design and production of medical devices.",
-            "Implement the strict documentation and traceability requirements of the standard.",
-            "Understand the controls required for the work environment and contamination control.",
-            "Establish procedures for feedback, complaint handling, and regulatory reporting."
-        ],
-        careerPath: "Expertise in ISO 13485 is highly lucrative and severely lacking in the job market. This certificate is the perfect gateway into high-paying roles such as Quality Assurance (QA) Engineer, Regulatory Affairs Specialist, or Medical Device Compliance Auditor.",
-        targetAudience: "Designed for professionals working in, or wanting to enter, the medical device manufacturing industry. It is highly relevant for engineers, quality managers, and compliance officers who need to understand international regulatory requirements.",
-        editorsTake: "This is a highly specialized, technical course that provides immense value. ISO standards are notoriously dry and difficult to read, but this course translates the dense regulatory jargon of 13485 into clear, actionable business processes. A must-have for anyone in the med-tech space."
-    },
-    {
         id: "gdpr-general-data-protection",
         title: "General Data Protection Regulation (GDPR)",
         tag: "Certificate",
@@ -130,28 +108,6 @@ export const businessCourses = [
         careerPath: "While it is a foundational certification, a Lean Six Sigma White Belt demonstrates to employers that you are proactive and interested in operational efficiency. It serves as an excellent differentiator for entry-level administrative or operational roles.",
         targetAudience: "Perfect for the entire workforce of an organization that is about to undergo a Lean Six Sigma transformation, ensuring everyone speaks the same basic language of continuous improvement.",
         editorsTake: "This is a perfect 'lunch-hour' course. It is incredibly concise but delivers exactly what it promises: a clear, jargon-free explanation of what Lean Six Sigma actually is, giving you the confidence to participate intelligently in company-wide efficiency meetings."
-    },
-    {
-        id: "iso-45001-occupational-health",
-        title: "ISO 45001:2018 - Principles of Occupational Health and Safety Management Systems",
-        tag: "Certificate",
-        category: "Business, Management",
-        duration: "2-3 Hours",
-        rating: 4.9,
-        image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=600&q=80",
-        affiliateLink: "https://alison.com/course/iso-450012018-principles-of-occupational-health-and-safety-management-systems?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn how to establish and maintain an effective occupational health and safety system.",
-        longDescription: "Workplace accidents are not just tragedies; they are profound legal and financial liabilities for any corporation. ISO 45001:2018 is the world's first International Standard for occupational health and safety (OH&S). This critical, management-level certificate breaks down the legal obligations of employers to provide safe and healthy workplaces. You will learn the 'Plan-Do-Check-Act' (PDCA) model that forms the backbone of all ISO standards. The curriculum dives deep into the 'Hierarchy of Controls,' teaching managers how to systematically eliminate hazards (the most effective control) rather than just relying on Personal Protective Equipment (the least effective control). We cover how to conduct rigorous incident investigations, establish clear safety protocols, and build a proactive safety culture where employees feel empowered to report near-misses before they become catastrophes.",
-        outcomes: [
-            "Understand the legal structure and mandatory requirements of the ISO 45001:2018 standard.",
-            "Apply the 'Hierarchy of Controls' to systematically eliminate or mitigate workplace hazards.",
-            "Conduct structured, unbiased incident investigations to determine root causes of accidents.",
-            "Develop proactive safety policies that comply with stringent international labor regulations.",
-            "Implement the 'Plan-Do-Check-Act' cycle for continuous safety improvement."
-        ],
-        careerPath: "A fundamental requirement for anyone seeking a career in corporate risk management. It qualifies professionals for vital roles such as Health and Safety (HSE) Officer, Safety Coordinator, Site Inspector, or Corporate Compliance Manager.",
-        targetAudience: "Mandatory for HR professionals, warehouse managers, manufacturing supervisors, and any business owner who carries the legal liability for the physical safety of their employees.",
-        editorsTake: "This course manages to make compliance genuinely interesting. The specific module on the 'Hierarchy of Controls' is excellent; it shifts the blame for accidents away from 'careless workers' and places the responsibility squarely on management to design safer systems."
     },
     {
         id: "anti-money-laundering",
