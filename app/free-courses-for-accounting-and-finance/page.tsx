@@ -96,21 +96,29 @@ const learningPath = [
     step: '1',
     title: 'Learn Accounting Basics',
     detail: 'Start with fundamentals of accounting and bookkeeping to understand how financial records work.',
+    href: '/course/fundamentals-of-accounting',
+    courseName: 'Fundamentals of Accounting',
   },
   {
     step: '2',
     title: 'Understand Financial Concepts',
     detail: 'Move into financial management, statement analysis, and how businesses evaluate performance.',
+    href: '/course/mastering-financial-statement-analysis',
+    courseName: 'Mastering Financial Statement Analysis',
   },
   {
     step: '3',
     title: 'Learn Payroll & Compliance',
     detail: 'Payroll and accounts management skills are among the most hired-for in entry-level finance roles.',
+    href: '/course/diploma-effective-bookkeeping-payroll',
+    courseName: 'Diploma in Effective Bookkeeping and Payroll',
   },
   {
     step: '4',
     title: 'Apply with Real Scenarios',
-    detail: 'Practice building financial reports, reconciling accounts, and interpreting balance sheets.',
+    detail: 'Practice building financial reports, reconciling accounts, and interpreting balance sheets using industry-standard software.',
+    href: '/course/accounts-management-xero',
+    courseName: 'Accounts Management Using Xero',
   },
 ];
 
@@ -315,14 +323,20 @@ export default function FreeCoursesAccountingFinancePage() {
             practical knowledge step by step.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {learningPath.map(({ step, title, detail }) => (
+            {learningPath.map(({ step, title, detail, href, courseName }) => (
               <div key={step} className="flex gap-4">
                 <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-extrabold text-lg shrink-0">
                   {step}
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-1">{title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{detail}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-2">{detail}</p>
+                  <Link
+                    href={href}
+                    className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-blue-800 transition-colors"
+                  >
+                    <ChevronRight size={12} /> {courseName}
+                  </Link>
                 </div>
               </div>
             ))}
