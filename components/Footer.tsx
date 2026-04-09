@@ -33,9 +33,8 @@ export default function Footer() {
             <li><Link href="/best-alison-courses-with-certificates" className="hover:text-blue-400 transition-colors">Best Alison Courses</Link></li>
             <li><Link href="/free-courses-for-data-analysts" className="hover:text-blue-400 transition-colors">Free Courses for Data Analysts</Link></li>
             <li><Link href="/free-ai-courses-for-beginners" className="hover:text-blue-400 transition-colors">Free AI Courses for Beginners</Link></li>
-            <li><Link href="/free-digital-marketing-courses" className="hover:text-blue-400 transition-colors">Free Digital Marketing Courses</Link></li>
-            <li><Link href="/free-courses-for-software-developers" className="hover:text-blue-400 transition-colors">Free Courses for Software Developers</Link></li>
-            <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Career Guides & Blog</Link></li>
+            <li><Link href="/free-courses-for-accounting-and-finance" className="hover:text-blue-400 transition-colors">Free Courses for Accounting & Finance</Link></li>
+            <li><Link href="/guides" className="hover:text-blue-400 transition-colors font-medium">View All Guides →</Link></li>
           </ul>
         </div>
 

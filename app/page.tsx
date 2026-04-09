@@ -138,6 +138,9 @@ export default async function Home() {
               <h2 className="text-3xl font-extrabold text-gray-900">Popular Guides</h2>
               <p className="text-gray-500 mt-2">Curated learning paths for every goal. All free to start.</p>
             </div>
+            <Link href="/guides" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">
+              View All Guides →
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -148,6 +151,7 @@ export default async function Home() {
               { title: 'Free AI Courses for Beginners', desc: 'Learn AI and Generative AI without any coding background.', href: '/free-ai-courses-for-beginners', badge: 'AI' },
               { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion. Build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
               { title: 'Free Courses for Software Developers', desc: 'Web development, programming languages, DevOps, and software architecture. All free.', href: '/free-courses-for-software-developers', badge: 'Dev' },
+              { title: 'Free Courses for Accounting & Finance', desc: 'Bookkeeping, financial management, payroll, and auditing. Curated by an accounting specialist.', href: '/free-courses-for-accounting-and-finance', badge: 'Finance' },
             ].map(({ title, desc, href, badge }) => (
               <Link
                 key={href}
@@ -272,6 +276,11 @@ export default async function Home() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="mt-4 pt-4 border-t border-gray-100 text-right">
+            <Link href="/curation-policy" className="text-xs text-gray-400 hover:text-primary transition-colors font-medium">
+              How we select courses →
+            </Link>
           </div>
         </div>
 
