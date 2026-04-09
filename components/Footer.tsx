@@ -55,8 +55,20 @@ export default function Footer() {
         </div>
 
       </div>
-      <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-slate-800 text-sm text-center">
+      <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-slate-800 text-sm text-center space-y-2">
         <p>&copy; {new Date().getFullYear()} Graduates Hub. All rights reserved.</p>
+        <p className="text-slate-500">
+          Founded and built by{' '}
+          <a
+            href="https://www.linkedin.com/in/jasonsadiki/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-blue-400 transition-colors font-medium"
+          >
+            Jason Sadiki
+          </a>
+          {' '}&mdash; Technical SEO Specialist &amp; Web Developer.
+        </p>
       </div>
     </footer>
   );

@@ -34,6 +34,15 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/graduates-hub-logo.png`,
   description: 'Your free learning resource centre for career guides, study tips, and hundreds of free certified courses.',
+  founder: {
+    '@type': 'Person',
+    name: 'Jason Sadiki',
+    jobTitle: 'Technical SEO Specialist & Web Developer',
+    sameAs: [
+      'https://www.linkedin.com/in/jasonsadiki/',
+      'https://thilisadiki.dev',
+    ],
+  },
 };
 
 const websiteSchema = {
