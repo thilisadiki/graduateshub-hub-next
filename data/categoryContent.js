@@ -4,16 +4,112 @@
 export const categoryContent = {
     // 1. IT Courses
     it: {
-        heroIntro: "Master the technology of tomorrow with our comprehensive range of free online IT courses. From cloud computing to network security, gain the high-demand skills employers are actively seeking in the digital economy.",
-        aboutSection: "The Information Technology sector remains one of the fastest-growing industries globally. Whether you're looking to start a new career as a systems administrator, transition into cybersecurity, or upgrade your understanding of cloud infrastructure, our free IT courses provide the foundational and advanced knowledge you need. These carefully curated programs cover industry-standard tools and practices, ensuring you're job-ready upon completion.",
-        careerOpportunities: "Earning a certificate or diploma in IT opens doors in almost every sector, finance, healthcare, retail, and tech. Common career paths include IT Support Specialist, Network Engineer, Cloud Architect, and Systems Administrator. With the rapid digitization of businesses, IT professionals consistently report high job satisfaction and competitive salaries.",
+        showStats: true,
+        heroIntro: "Fifty-nine free IT courses across seven specialist tracks. Every course is reviewed for 2026 relevance, leads to a CPD-accredited certificate or diploma, and can be completed at your own pace with no prior experience required.",
+        aboutSection: "These courses span seven distinct tracks: Software Engineering, Networking and Infrastructure, Artificial Intelligence, Cybersecurity and Compliance, Database and Software Development, Engineering and Hardware, and IT Management. Each track is self-contained. You can begin in Networking without touching Software Engineering, or combine tracks as your career demands. All courses are delivered by Alison, a CPD-accredited provider with over 6 million graduates worldwide.",
+        careerOpportunities: "IT qualifications open doors across finance, healthcare, retail, government, and tech. The seven tracks on this page map directly to seven distinct job families, each with consistent hiring demand in South Africa and internationally.",
         skillsFocus: [
-            "Network Administration & Troubleshooting",
-            "Cloud Computing (AWS, Azure, Google Cloud)",
-            "Cybersecurity & Threat Mitigation",
-            "Database Management & SQL",
-            "Hardware & Software Support"
-        ]
+            "Network administration, LAN architecture, and ITIL service management",
+            "Secure software design, testing methodologies, and DevOps practices",
+            "SQL Server administration and database management principles",
+            "AI fundamentals and machine learning concepts for practical application",
+            "Cybersecurity compliance, CISSP preparation, and digital risk management"
+        ],
+        tracks: [
+            {
+                label: "Software Engineering",
+                subCategory: "Software Engineering",
+                count: 44,
+                goal: "Build, test, and ship software",
+                detail: "44 courses covering software testing, secure development, DevOps, project management, and the full software development life cycle.",
+            },
+            {
+                label: "Networking & Infrastructure",
+                subCategory: "Networking & Infrastructure",
+                count: 4,
+                goal: "Manage networks and support IT systems",
+                detail: "Computer networking, LAN architecture, the OSI model, and IT service management using ITIL 4.",
+            },
+            {
+                label: "Artificial Intelligence",
+                subCategory: "Artificial Intelligence",
+                count: 4,
+                goal: "Work with AI tools and data-driven systems",
+                detail: "AI fundamentals, machine learning concepts, and practical applications for both technical and non-technical learners.",
+            },
+            {
+                label: "Cybersecurity & Compliance",
+                subCategory: "Cybersecurity & Compliance",
+                count: 2,
+                goal: "Protect systems and meet regulatory standards",
+                detail: "CISSP certification preparation and digital operational resilience, including DORA compliance fundamentals.",
+            },
+            {
+                label: "Database & Dev",
+                subCategory: "Database & Software Development",
+                count: 2,
+                goal: "Work with data and understand software systems",
+                detail: "SQL Server administration, DML statements, and the intersection of information systems with business operations.",
+            },
+            {
+                label: "Engineering & Hardware",
+                subCategory: "Engineering & Hardware",
+                count: 2,
+                goal: "Understand hardware and physical infrastructure",
+                detail: "Practical courses covering physical computing systems and the engineering principles that underpin digital infrastructure.",
+            },
+            {
+                label: "IT Management",
+                subCategory: "IT Management",
+                count: 1,
+                goal: "Lead technology teams and align IT with business goals",
+                detail: "The Diploma in IT Management covers governance, strategy, and the operational responsibilities of technology leadership.",
+            },
+        ],
+        roles: [
+            { title: "Software Developer", track: "Software Engineering", signal: "The most in-demand IT role globally. Every organisation building a product needs one." },
+            { title: "Network Engineer", track: "Networking & Infrastructure", signal: "Core infrastructure role. Banks, telecoms, and government departments hire continuously." },
+            { title: "Cybersecurity Analyst", track: "Cybersecurity & Compliance", signal: "Critical shortage worldwide. CISSP-trained professionals command senior salaries." },
+            { title: "AI / Data Analyst", track: "Artificial Intelligence", signal: "The fastest growing IT specialisation. Applies across finance, healthcare, and logistics." },
+            { title: "Database Administrator", track: "Database & Dev", signal: "Every company with customer records needs a DBA. Stable, well-paid, and evergreen." },
+            { title: "IT Manager", track: "IT Management", signal: "Senior role overseeing infrastructure, vendors, and IT strategy. Requires broad technical knowledge." },
+        ],
+        faq: [
+            {
+                q: "Do I need prior IT experience to start?",
+                a: "No. Most courses on this page are designed for beginners. The Software Engineering and Networking tracks both start from foundational concepts. If you are completely new, start with Computer Networking or Introduction to Software Testing before moving to more advanced certificates."
+            },
+            {
+                q: "Are these certificates recognised by employers?",
+                a: "All courses are delivered by Alison, a CPD-accredited provider with over 6 million graduates worldwide. CPD certification is accepted by professional bodies in South Africa, the UK, Ireland, and beyond. While these are not equivalent to a university degree, they are widely accepted as proof of skill for entry-level and mid-level IT roles."
+            },
+            {
+                q: "Which course should I start with if I am completely new to IT?",
+                a: "Start with Computer Networking or Foundations of ITIL 4 for Service Management if infrastructure interests you. Start with Introduction to Software Testing or Understanding Software Project Management if software is your goal. Both are beginner-friendly and provide a strong foundation before progressing to diplomas."
+            },
+            {
+                q: "What is the difference between a Certificate and a Diploma?",
+                a: "Certificates are focused, practical programs typically completed in 2 to 6 hours. They cover a single skill or topic in depth. Diplomas are comprehensive programs covering a full subject area, typically 10 to 30 hours. Start with a certificate to test your interest. Move to a diploma when you want to qualify for a specific role."
+            },
+            {
+                q: "Can I complete these courses on a phone or tablet?",
+                a: "Yes. All Alison courses are fully mobile-compatible. You can study at your own pace, save your progress, and complete assessments on any device. There is no deadline or fixed schedule."
+            }
+        ],
+        guideLinks: [
+            {
+                title: "Free AI Courses for Beginners",
+                desc: "No coding background required. The best starting points for machine learning and AI fundamentals.",
+                href: "/free-ai-courses-for-beginners",
+                badge: "AI",
+            },
+            {
+                title: "Free Courses for Data Analysts",
+                desc: "Excel, SQL, Python, and Power BI in one structured learning path.",
+                href: "/free-courses-for-data-analysts",
+                badge: "Data",
+            },
+        ],
     },
 
     // 2. Software Engineering

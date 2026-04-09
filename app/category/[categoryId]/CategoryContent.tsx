@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import { ChevronRight, CheckCircle2 } from 'lucide-react';
 import CourseCard from '@/components/CourseCard';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
@@ -28,10 +29,17 @@ export default function CategoryContent({
   const [visibleCount, setVisibleCount] = useState(9);
   const [selectedGroup, setSelectedGroup] = useState('All');
 
+  const content = (categoryContent as any)[categoryId];
+
   const hasSubCategories = categoryCourses.some(c => c.subCategory);
   const groups = hasSubCategories
     ? ['All', ...Array.from(new Set(categoryCourses.map(c => c.subCategory || 'General'))).sort()]
     : [];
+
+  const topRating = categoryCourses.length > 0
+    ? Math.max(...categoryCourses.map(c => c.rating))
+    : null;
+  const trackCount = groups.length > 1 ? groups.length - 1 : null;
 
   const displayCourses = selectedGroup === 'All'
     ? categoryCourses
@@ -64,28 +72,62 @@ export default function CategoryContent({
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold capitalize text-gray-900 mb-4 tracking-tight">{categoryName} Courses</h1>
           <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
-            {(categoryContent as any)[categoryId]?.heroIntro || `Browse our selection of free courses in ${categoryName}. Start learning today and boost your career.`}
+            {content?.heroIntro || `Browse our selection of free courses in ${categoryName}. Start learning today and boost your career.`}
           </p>
+          {content?.showStats && (
+            <div className="flex flex-wrap gap-4 mt-6">
+              {[
+                { value: `${categoryCourses.length}`, label: 'Free Courses' },
+                ...(trackCount ? [{ value: `${trackCount}`, label: 'Specialist Tracks' }] : []),
+                ...(topRating ? [{ value: `${topRating}`, label: 'Top Rating' }] : []),
+                { value: 'CPD', label: 'Accredited' },
+              ].map(({ value, label }) => (
+                <div key={label} className="bg-white/80 border border-blue-200 rounded-xl px-5 py-3 text-center min-w-[90px]">
+                  <p className="text-2xl font-extrabold text-primary">{value}</p>
+                  <p className="text-xs text-gray-500 font-medium">{label}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
         {categoryCourses.length > 0 ? (
           <>
-            {hasSubCategories && (
-              <div className="flex flex-wrap gap-3 mb-12 justify-center border-b border-gray-200 pb-8">
-                {groups.map(group => (
-                  <button
-                    key={group}
-                    onClick={() => setSelectedGroup(group)}
-                    className={`px-6 py-2.5 rounded-full font-bold transition-all text-sm md:text-base ${selectedGroup === group
-                      ? 'bg-primary text-white shadow-md'
-                      : 'bg-white text-gray-600 border border-gray-200 hover:border-primary hover:text-primary'}`}
-                  >
-                    {group}
-                  </button>
-                ))}
-              </div>
+            {/* Tracks decision block */}
+            {content?.tracks && (
+              <section className="mb-14">
+                <h2 className="text-xl font-extrabold text-gray-900 mb-1">Choose Your Track</h2>
+                <p className="text-sm text-gray-500 mb-6">Select a track to filter the courses below, or browse everything with the filter bar.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {content.tracks.map((track: any) => (
+                    <button
+                      key={track.subCategory}
+                      onClick={() => setSelectedGroup(track.subCategory)}
+                      className={`text-left rounded-xl p-5 border transition-all group ${selectedGroup === track.subCategory ? 'bg-primary border-primary text-white shadow-md' : 'bg-white border-gray-100 hover:border-primary hover:shadow-md'}`}
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${selectedGroup === track.subCategory ? 'bg-white/20 border-white/30 text-white' : 'bg-blue-50 border-blue-100 text-primary'}`}>
+                          {track.count} courses
+                        </span>
+                        <ChevronRight size={14} className={`transition-colors ${selectedGroup === track.subCategory ? 'text-white' : 'text-gray-300 group-hover:text-primary'}`} />
+                      </div>
+                      <p className={`font-bold mb-1 text-sm ${selectedGroup === track.subCategory ? 'text-white' : 'text-gray-900 group-hover:text-primary'}`}>{track.label}</p>
+                      <p className={`text-xs leading-relaxed ${selectedGroup === track.subCategory ? 'text-blue-100' : 'text-gray-500'}`}>{track.goal}</p>
+                    </button>
+                  ))}
+                  {/* Reset to All */}
+                  {selectedGroup !== 'All' && (
+                    <button
+                      onClick={() => setSelectedGroup('All')}
+                      className="text-left bg-gray-50 border border-dashed border-gray-200 rounded-xl p-5 hover:border-gray-400 transition-all text-sm text-gray-400 font-medium flex items-center gap-2"
+                    >
+                      View all tracks
+                    </button>
+                  )}
+                </div>
+              </section>
             )}
 
             {selectedGroup !== 'All' ? (
@@ -134,12 +176,37 @@ export default function CategoryContent({
               </div>
             )}
 
-            {(categoryContent as any)[categoryId] && (
-              <div className="mt-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 overflow-hidden">
+            {/* Related guides strip */}
+            {content?.guideLinks && (
+              <section className="mt-16">
+                <h2 className="text-lg font-extrabold text-gray-900 mb-4">Related Learning Guides</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {content.guideLinks.map((guide: any) => (
+                    <Link
+                      key={guide.href}
+                      href={guide.href}
+                      className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all flex flex-col gap-2"
+                    >
+                      <span className="self-start text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">
+                        {guide.badge}
+                      </span>
+                      <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm">{guide.title}</p>
+                      <p className="text-xs text-gray-500 leading-relaxed flex-grow">{guide.desc}</p>
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-primary mt-1">
+                        View Guide <ChevronRight size={12} />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {content && (
+              <div className="mt-16 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 overflow-hidden">
                 <div className="max-w-4xl mx-auto">
-                  <div className="mb-12">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Study {categoryName}?</h2>
-                    <p className="text-gray-600 leading-relaxed text-lg">{(categoryContent as any)[categoryId].aboutSection}</p>
+                  <div className="mb-10">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">What These Courses Cover</h2>
+                    <p className="text-gray-600 leading-relaxed text-lg">{content.aboutSection}</p>
                     {articleLinks[categoryId] && (
                       <p className="text-gray-600 mt-4">
                         For career tips and study advice, explore{' '}
@@ -150,22 +217,57 @@ export default function CategoryContent({
                       </p>
                     )}
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><span className="text-primary">💼</span> Career Opportunities</h3>
-                      <p className="text-gray-600 leading-relaxed">{(categoryContent as any)[categoryId].careerOpportunities}</p>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><span className="text-green-600">🎯</span> Skills You Will Learn</h3>
-                      <ul className="space-y-3">
-                        {(categoryContent as any)[categoryId].skillsFocus.map((skill: string, i: number) => (
-                          <li key={i} className="flex items-start text-gray-600"><span className="text-green-500 mr-3 mt-1">✓</span><span>{skill}</span></li>
+
+                  {/* Roles grid (when available) or career text */}
+                  {content.roles ? (
+                    <div className="mb-10">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Where These Courses Lead</h3>
+                      <p className="text-sm text-gray-500 mb-5">{content.careerOpportunities}</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {content.roles.map((role: any) => (
+                          <div key={role.title} className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                            <p className="font-bold text-gray-900 mb-0.5">{role.title}</p>
+                            <p className="text-xs font-semibold text-primary mb-2">{role.track}</p>
+                            <p className="text-xs text-gray-500 leading-relaxed">{role.signal}</p>
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
+                  ) : (
+                    <div className="mb-10">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">Career Opportunities</h3>
+                      <p className="text-gray-600 leading-relaxed">{content.careerOpportunities}</p>
+                    </div>
+                  )}
+
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Skills You Will Learn</h3>
+                    <ul className="space-y-3">
+                      {content.skillsFocus.map((skill: string, i: number) => (
+                        <li key={i} className="flex items-start gap-2 text-gray-600">
+                          <CheckCircle2 size={16} className="text-green-500 mt-0.5 shrink-0" />
+                          <span>{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
+            )}
+
+            {/* FAQ section */}
+            {content?.faq && (
+              <section className="mt-10 bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12">
+                <h2 className="text-xl font-extrabold text-gray-900 mb-6">Common Questions</h2>
+                <div className="divide-y divide-gray-100">
+                  {content.faq.map((item: any) => (
+                    <div key={item.q} className="py-5 first:pt-0 last:pb-0">
+                      <p className="font-bold text-gray-900 mb-2">{item.q}</p>
+                      <p className="text-sm text-gray-500 leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
             )}
           </>
         ) : (

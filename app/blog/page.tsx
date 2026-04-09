@@ -153,7 +153,7 @@ export default async function BlogPage({
     description: 'Career guides, study tips, and expert advice to help you navigate your education and career journey.',
     publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
     ...(formattedPosts.length > 0 && {
-      blogPost: formattedPosts.slice(0, 6).map((post) => ({
+      blogPost: formattedPosts.slice(0, 6).map((post: FormattedPost) => ({
         '@type': 'BlogPosting',
         headline: post.title,
         url: `${SITE_URL}/blog/${post.slug}`,
