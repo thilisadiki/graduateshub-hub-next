@@ -10,13 +10,10 @@ import type { Course } from '@/types';
 const articleLinks: Record<string, { text: string; href: string }> = {
   it: { text: 'our free IT career guides', href: '/blog/10-in-demand-it-skills-you-can-learn-online-for-free' },
   'software-engineering': { text: 'our software engineering study guides', href: '/blog/how-to-become-a-self-taught-web-developer-for-free-in-2026' },
-  language: { text: 'our language learning resources', href: '/blog/best-free-language-learning-platforms' },
   business: { text: 'our business and management articles', href: '/blog' },
   accounting: { text: 'our accounting and finance guides', href: '/blog' },
   marketing: { text: 'our digital marketing resources', href: '/blog' },
   management: { text: 'our leadership and management guides', href: '/blog' },
-  health: { text: 'our health and wellness articles', href: '/blog/health-care-assistant-training-courses' },
-  'personal-development': { text: 'our personal development articles', href: '/blog/how-to-successfully-balance-full-time-work-with-online-study' },
 };
 
 export default function CategoryContent({

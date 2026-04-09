@@ -10,7 +10,7 @@ const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   },
   {
     question: 'Are these certificates recognised by employers?',
-    answer: "",
+    answer: "Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our career guides and industry insights on Graduates Hub.",
     node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our <a href="/blog" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub.</>,
   },
   {
@@ -19,7 +19,7 @@ const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   },
   {
     question: 'How long does it take to complete a course?',
-    answer: "",
+    answer: "It depends entirely on the course format. Standard Certificate courses typically take 2 to 3 hours to complete, while comprehensive Diploma programs can take 10 to 15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our study tips and time management guides to help you stay on track.",
     node: <>It depends entirely on the course format. Standard Certificate courses typically take 2 to 3 hours to complete, while comprehensive Diploma programs can take 10 to 15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our <a href="/blog/how-to-successfully-balance-full-time-work-with-online-study" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
   },
 ];

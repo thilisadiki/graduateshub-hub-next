@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Star, Megaphone } from 'lucide-react';
+import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Star, Megaphone, Calculator } from 'lucide-react';
 
 function StarIcon() {
   return <Star size={12} className="fill-current text-yellow-400" />;
@@ -129,12 +129,12 @@ export default function Hero() {
             </div>
           </Link>
 
-          <Link href="/category/health" className="group relative bg-white border border-slate-200/60 p-6 lg:p-7 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:scale-150 transition-transform duration-700"><Award size={100} /></div>
+          <Link href="/category/accounting" className="group relative bg-white border border-slate-200/60 p-6 lg:p-7 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:scale-150 transition-transform duration-700"><Calculator size={100} /></div>
             <div className="relative flex items-center justify-between z-10">
-              <h3 className="text-lg font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Health & Wellness</h3>
-              <div className="bg-purple-50 p-3 rounded-xl text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300 shadow-sm border border-purple-100 group-hover:border-purple-600">
-                <Award size={20} />
+              <h3 className="text-lg font-bold text-slate-800 group-hover:text-teal-600 transition-colors">Accounting & Finance</h3>
+              <div className="bg-teal-50 p-3 rounded-xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300 shadow-sm border border-teal-100 group-hover:border-teal-600">
+                <Calculator size={20} />
               </div>
             </div>
           </Link>

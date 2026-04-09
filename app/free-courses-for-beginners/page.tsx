@@ -518,9 +518,7 @@ export default function FreeCoursesForBeginnersPage() {
               { label: 'Business & Management', href: '/category/business' },
               { label: 'Accounting & Finance', href: '/category/accounting' },
               { label: 'Digital Marketing', href: '/category/marketing' },
-              { label: 'Health & Wellness', href: '/category/health' },
-              { label: 'Personal Development', href: '/category/personal-development' },
-              { label: 'Language Learning', href: '/category/language' },
+              { label: 'Management', href: '/category/management' },
             ].map(({ label, href }) => (
               <Link
                 key={href}

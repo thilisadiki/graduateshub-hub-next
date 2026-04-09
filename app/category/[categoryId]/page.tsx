@@ -6,8 +6,7 @@ import CategoryContent from './CategoryContent';
 const SITE_URL = 'https://graduateshub.co.za';
 
 const availableCategories = [
-  'it', 'software-engineering', 'language', 'business',
-  'accounting', 'marketing', 'management', 'health', 'personal-development',
+  'it', 'software-engineering', 'business', 'accounting', 'marketing', 'management',
 ];
 
 export async function generateStaticParams() {

@@ -30,21 +30,7 @@ export const categoryContent = {
         ]
     },
 
-    // 3. Language Courses
-    language: {
-        heroIntro: "Break down communication barriers and expand your global opportunities. Learn a new language or improve your English fluency for free with our interactive, self-paced online language courses.",
-        aboutSection: "In an increasingly interconnected world, bilingualism is a superpower. Our free online language courses offer structural, conversational, and business-focused learning for several major global languages. Whether you are learning English to improve your career prospects, or picking up Spanish, French, or Mandarin for personal growth or international travel, these courses focus on practical vocabulary, correct grammar, and conversational fluency.",
-        careerOpportunities: "Being fluent in multiple languages is a massive asset in industries like tourism, international business, diplomacy, and customer service. Career opportunities include Translator, Interpreter, International Sales Representative, Tour Guide, and ESL Teacher. Furthermore, adding a second language to your CV often translates directly to a higher salary in multinational corporations.",
-        skillsFocus: [
-            "Conversational Fluency & Pronunciation",
-            "Business English & Professional Communication",
-            "Grammar & Syntax Rules",
-            "Reading Comprehension & Writing Skills",
-            "Cultural Nuances in Communication"
-        ]
-    },
-
-    // 4. Business Courses
+    // 3. Business Courses
     business: {
         heroIntro: "Equip yourself with the essential skills to thrive in the corporate world or launch your own venture. Explore our free business courses covering strategy, operations, finance, and entrepreneurship.",
         aboutSection: "A strong foundation in business principles is essential for success in any industry. Our free online business courses are designed to demystify corporate strategy, financial planning, project management, and business communication. Whether you are an aspiring entrepreneur drafting your first business plan, or a mid-level manager looking to optimize your team's operational efficiency, these diplomas and certificates provide actionable insights that you can apply immediately to the workplace.",
@@ -100,31 +86,4 @@ export const categoryContent = {
         ]
     },
 
-    // 8. Health
-    health: {
-        heroIntro: "Make a positive impact on the well-being of others. Enhance your knowledge of healthcare, nutrition, safety, and psychology with our free online health and wellness courses.",
-        aboutSection: "The health sector is vast, encompassing physical medicine, mental health, occupational safety, and holistic wellness. Our free health courses cover essential topics including human anatomy, clinical nutrition, workplace health and safety (OHS), and basic psychology. Whether you are a healthcare professional needing CPD credits, a fitness enthusiast, or someone interested in mental health advocacy, these courses offer scientifically backed, practical knowledge.",
-        careerOpportunities: "The healthcare industry is experiencing unprecedented global growth, guaranteeing long-term job security. While some clinical roles require extensive university degrees, these certificates provide entry points and supplementary knowledge for roles like Health and Safety Officer (HSE), Nutrition Advisor, Care Worker, Medical Administrator, and Mental Health Advocate.",
-        skillsFocus: [
-            "Occupational Health & Safety (OHS/HSE)",
-            "Human Anatomy & Physiology",
-            "Clinical Nutrition & Dietetics",
-            "Mental Health Awareness & Psychology basics",
-            "First Aid & Patient Care Principles"
-        ]
-    },
-
-    // 9. Personal Development
-    'personal-development': {
-        heroIntro: "Invest in yourself. Build the soft skills, emotional intelligence, and productivity habits that lead to a happier, highly successful personal and professional life.",
-        aboutSection: "Technical skills may get you the interview, but personal development skills get you the job, and the promotion. Our free online personal development courses focus on the crucial 'soft skills' that determine long-term success. You will learn the principles of emotional intelligence, effective time management, public speaking, stress management, and goal setting. These programs are designed to build your confidence and help you navigate both workplace politics and personal challenges.",
-        careerOpportunities: "While personal development courses don't necessarily lead to a specific 'soft skills' job, they dramatically increase your value in *every* job. Professionals with high emotional intelligence and excellent communication skills are consistently promoted faster. Furthermore, these skills are essential for roles heavily reliant on human interaction, such as Sales, Customer Success, Management, and Public Relations.",
-        skillsFocus: [
-            "Time Management & Productivity Systems",
-            "Emotional Intelligence & Self-Awareness",
-            "Public Speaking & Presentation Skills",
-            "Stress Management & Work-Life Balance",
-            "Goal Setting & Habit Formation"
-        ]
-    }
 };
