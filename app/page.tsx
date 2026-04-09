@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Unlock, Clock, Globe, ChevronRight } from 'lucide-react';
+import { Unlock, Clock, Globe, ChevronRight, ExternalLink } from 'lucide-react';
 import Hero from '@/components/Hero';
 import CourseCard from '@/components/CourseCard';
 import HowItWorks from '@/components/HowItWorks';
@@ -234,7 +234,28 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mt-24"><FAQ /></div>
+        {/* Founder attribution */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-white rounded-2xl border border-gray-100 shadow-sm px-6 py-5">
+          <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-blue-100">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/jason-sadiki.jpg" alt="Jason Sadiki" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex-1 text-center sm:text-left">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">About the curator</p>
+            <p className="font-extrabold text-gray-900 text-sm">Jason Sadiki</p>
+            <p className="text-gray-500 text-sm">Technical SEO Specialist &amp; Web Developer with 7+ years of experience. Every resource on this site is hand-picked based on real search intent and learner demand.</p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/jasonsadiki/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 border border-blue-100 px-3 py-2 rounded-lg transition-colors whitespace-nowrap"
+          >
+            <ExternalLink size={12} /> LinkedIn
+          </a>
+        </div>
+
+        <div className="mt-16"><FAQ /></div>
       </main>
     </div>
   );
