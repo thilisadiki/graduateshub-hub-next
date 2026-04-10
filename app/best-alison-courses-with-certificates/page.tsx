@@ -492,7 +492,7 @@ export default function BestAlisonCoursesPage() {
               { label: 'Business & Management', href: '/category/business' },
               { label: 'Accounting & Finance', href: '/category/accounting' },
               { label: 'Digital Marketing', href: '/category/marketing' },
-              { label: 'Management', href: '/category/management' },
+              
             ].map(({ label, href }) => (
               <Link
                 key={href}

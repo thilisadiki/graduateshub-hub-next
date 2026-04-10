@@ -11,12 +11,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',
   description:
-    'Browse free online courses across IT, Business, Accounting, Marketing, and Management. Every subject area is curated by a named specialist and updated for 2026.',
+    'Browse free online courses across IT, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
   alternates: { canonical: `${SITE_URL}/categories` },
   openGraph: {
     title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',
     description:
-      'Browse free online courses across IT, Business, Accounting, Marketing, and Management. Every subject area is curated by a named specialist and updated for 2026.',
+      'Browse free online courses across IT, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
     url: `${SITE_URL}/categories`,
   },
 };
@@ -73,11 +73,11 @@ const CATEGORY_META: Record<string, {
     accentClass: 'bg-blue-50 border-blue-200',
   },
   business: {
-    topSkill: 'Plan, manage, and grow organisations effectively',
+    topSkill: 'Plan projects, improve processes, and navigate compliance',
     bullets: [
-      'Business strategy, planning, and operations',
-      'Leadership, communication, and organisational behaviour',
-      'Entrepreneurship, finance, and project execution',
+      'Project management using Agile, Scrum, and Lean Six Sigma',
+      'Regulatory compliance: GDPR, AML, and ISO auditing standards',
+      'Economic strategy, sustainable development, and AI in business',
     ],
     accentClass: 'bg-amber-50 border-amber-200',
   },
@@ -103,15 +103,6 @@ const CATEGORY_META: Record<string, {
     guideLabel: 'Digital Marketing Guide',
     accentClass: 'bg-orange-50 border-orange-200',
   },
-  management: {
-    topSkill: 'Lead teams, run projects, and improve operational efficiency',
-    bullets: [
-      'Agile, Scrum, and project management frameworks',
-      'Team leadership and performance management',
-      'Process improvement and operational efficiency',
-    ],
-    accentClass: 'bg-purple-50 border-purple-200',
-  },
 };
 
 const DECISION_PATHS = [
@@ -134,8 +125,8 @@ const DECISION_PATHS = [
     label: 'Browse Marketing Courses',
   },
   {
-    goal: 'I want to lead teams or run a business',
-    detail: 'Project management, agile, leadership, and business strategy. Skills that apply whether you are managing two people or two hundred.',
+    goal: 'I want to manage projects or lead a business',
+    detail: 'Project management, Agile, Lean Six Sigma, compliance, and economic strategy. Business and management merged into one comprehensive category.',
     href: '/category/business',
     label: 'Browse Business Courses',
   },
@@ -172,7 +163,7 @@ export default function CategoriesPage() {
             You will not find a generic list of courses here. Each category is deliberately scoped, regularly reviewed, and linked to real career outcomes.
           </p>
           <p className="text-gray-500 max-w-2xl leading-relaxed">
-            We cover five fields: IT, Business, Accounting, Marketing, and Management.
+            We cover four fields: IT, Business, Accounting, and Marketing.
             These are the areas where we have practitioners who can verify course quality.{' '}
             <Link href="/curation-policy" className="text-primary font-medium hover:text-blue-800 transition-colors">
               Read how we select courses
@@ -291,11 +282,11 @@ export default function CategoriesPage() {
 
         {/* Why we cover these subjects */}
         <section className="mb-14 bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Why We Cover These Five Subjects</h2>
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Why We Cover These Four Subjects</h2>
           <div className="max-w-3xl space-y-4 text-gray-600 leading-relaxed">
             <p>
               Graduates Hub only publishes content in fields where we have a named specialist who can verify course quality.
-              That is why you will find IT, Business, Accounting, Marketing, and Management on this page, and nothing else.
+              That is why you will find IT, Business, Accounting, and Marketing on this page, and nothing else.
             </p>
             <p>
               We made a deliberate decision to remove Health, Languages, and Personal Development from our platform.

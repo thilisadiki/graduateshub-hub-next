@@ -7,7 +7,7 @@ import CategoryContent from './CategoryContent';
 const SITE_URL = 'https://graduateshub.co.za';
 
 const availableCategories = [
-  'it', 'software-engineering', 'business', 'accounting', 'marketing', 'management',
+  'it', 'software-engineering', 'business', 'accounting', 'marketing',
 ];
 
 export async function generateStaticParams() {
@@ -26,6 +26,10 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   accounting: {
     title: 'Free Accounting Courses Online (2026): Bookkeeping, Payroll & Finance | Graduates Hub',
     description: 'Browse 17 free accounting courses across Bookkeeping, Financial Accounting, Financial Management, and Compliance. CPD-accredited certificates and diplomas. Curated by a SARS tax professional.',
+  },
+  business: {
+    title: 'Free Business Courses Online (2026): Project Management, Lean Six Sigma & More | Graduates Hub',
+    description: 'Browse 12 free business courses covering Project Management, Lean Six Sigma, GDPR, and Economic Strategy. CPD-accredited certificates and diplomas. No experience required.',
   },
 };
 

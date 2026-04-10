@@ -14,7 +14,6 @@ const articleLinks: Record<string, { text: string; href: string }> = {
   business: { text: 'our business and management articles', href: '/blog' },
   accounting: { text: 'our accounting and finance guides', href: '/blog' },
   marketing: { text: 'our digital marketing resources', href: '/blog' },
-  management: { text: 'our leadership and management guides', href: '/blog' },
 };
 
 export default function CategoryContent({

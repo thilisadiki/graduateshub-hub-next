@@ -47,7 +47,6 @@ export default function Footer() {
             <li><Link href="/category/business" className="hover:text-blue-400 transition-colors">Business & Management</Link></li>
             <li><Link href="/category/marketing" className="hover:text-blue-400 transition-colors">Digital Marketing</Link></li>
             <li><Link href="/category/accounting" className="hover:text-blue-400 transition-colors">Accounting & Finance</Link></li>
-            <li><Link href="/category/management" className="hover:text-blue-400 transition-colors">Management</Link></li>
             <li><Link href="/categories" className="hover:text-blue-400 transition-colors">All Categories →</Link></li>
           </ul>
         </div>

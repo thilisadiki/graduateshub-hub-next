@@ -128,16 +128,85 @@ export const categoryContent = {
 
     // 3. Business Courses
     business: {
-        heroIntro: "Equip yourself with the essential skills to thrive in the corporate world or launch your own venture. Explore our free business courses covering strategy, operations, finance, and entrepreneurship.",
-        aboutSection: "A strong foundation in business principles is essential for success in any industry. Our free online business courses are designed to demystify corporate strategy, financial planning, project management, and business communication. Whether you are an aspiring entrepreneur drafting your first business plan, or a mid-level manager looking to optimize your team's operational efficiency, these diplomas and certificates provide actionable insights that you can apply immediately to the workplace.",
-        careerOpportunities: "Business skills are universally applicable. Completing these courses prepares you for roles such as Operations Manager, Business Analyst, Project Coordinator, Corporate Strategist, or HR Specialist. They also provide the crucial operational knowledge needed to successfully launch and run your own independent startup or freelance business.",
+        showStats: true,
+        heroIntro: "Twelve free business courses across project management, process improvement, regulatory compliance, and economic strategy. Each course leads to a CPD-accredited certificate or diploma and covers frameworks that appear directly in corporate job requirements.",
+        aboutSection: "The four tracks here represent the core operational disciplines of modern organisations. Project Management covers the complete project life cycle through a comprehensive diploma and Agile methodology for iterative delivery environments. Process and Quality covers Lean Six Sigma at White Belt and Yellow Belt levels, plus ISO lead auditing and ISO 9001 internal auditing practices used in manufacturing, pharma, and corporate services. Compliance and Regulation covers GDPR data protection obligations and anti-money laundering frameworks, both mandatory knowledge in any regulated industry. Economics and Innovation covers macroeconomic growth theory, sustainable development strategy, and the practical application of AI in business operations.",
+        careerOpportunities: "Business qualifications transfer across every industry and organisation size. These courses build the cross-functional knowledge that separates specialists from managers, and managers from leaders.",
         skillsFocus: [
-            "Strategic Planning & Execution",
-            "Project Management (PMP, Agile)",
-            "Business Communication & Negotiation",
-            "Supply Chain & Operations Management",
-            "Entrepreneurship & Startup Fundamentals"
-        ]
+            "Project life cycle management using Gantt charts, CPM, and Scrum",
+            "Process improvement through Lean Six Sigma DMAIC methodology",
+            "ISO auditing: ISO 9001 quality management and ISO 19011 lead auditing",
+            "Regulatory compliance: GDPR data protection and AML frameworks",
+            "Macroeconomic analysis, ESG reporting, and AI strategy in business"
+        ],
+        tracks: [
+            {
+                label: "Project Management",
+                subCategory: "Project Management",
+                count: 2,
+                goal: "Plan, execute, and close projects effectively",
+                detail: "The Diploma in Project Management covers the full project life cycle. Agile PM covers Scrum, sprints, and iterative delivery for tech and product teams.",
+            },
+            {
+                label: "Process & Quality",
+                subCategory: "Process & Quality",
+                count: 4,
+                goal: "Improve processes and lead organisational audits",
+                detail: "Lean Six Sigma at White and Yellow Belt levels, ISO 19011 Lead Auditor, and ISO 9001 internal auditing. Directly applicable to manufacturing, logistics, and corporate operations.",
+            },
+            {
+                label: "Compliance & Regulation",
+                subCategory: "Compliance & Regulation",
+                count: 2,
+                goal: "Meet legal obligations in data and financial regulation",
+                detail: "GDPR compliance for organisations handling personal data and AML frameworks for those working in or alongside financial services.",
+            },
+            {
+                label: "Economics & Innovation",
+                subCategory: "Economics & Innovation",
+                count: 4,
+                goal: "Understand macro strategy, sustainability, and AI",
+                detail: "Economic growth theory at certificate and diploma level, sustainable development and ESG strategy, and a non-technical introduction to AI in business.",
+            },
+        ],
+        roles: [
+            { title: "Project Manager", track: "Project Management", signal: "One of the most in-demand corporate roles globally. Relevant across construction, tech, consulting, and government." },
+            { title: "Scrum Master", track: "Project Management", signal: "Specialist Agile role in high demand at software companies and digital product teams. Often commands above-average salaries." },
+            { title: "Quality Assurance Specialist", track: "Process & Quality", signal: "Present wherever ISO certification is required: manufacturing, pharma, food production, and corporate services." },
+            { title: "Compliance Officer", track: "Compliance & Regulation", signal: "Growing across banking, insurance, fintech, and any business subject to data protection or financial crime regulation." },
+            { title: "Operations Manager", track: "Process & Quality", signal: "Senior role overseeing processes, efficiency, and output quality. Lean Six Sigma is frequently listed as a preferred qualification." },
+            { title: "Business Analyst", track: "Economics & Innovation", signal: "Cross-functional role bridging operations, data, and strategy. Strong demand at corporates, consultancies, and public sector organisations." },
+        ],
+        faq: [
+            {
+                q: "Do I need business experience to start these courses?",
+                a: "No. The Lean Six Sigma White Belt and Introduction to Economic Growth and Development are both designed for complete beginners. The Project Management diploma and Agile certificate assume no prior project management knowledge. Start with whichever track matches your immediate career goal."
+            },
+            {
+                q: "What is the difference between the Lean Six Sigma White Belt and Yellow Belt?",
+                a: "The White Belt is a short introduction to Lean Six Sigma vocabulary and philosophy, designed so that any employee can participate intelligently in company-wide improvement initiatives. The Yellow Belt goes deeper: it covers the DMAIC framework in detail, process mapping, and data collection methods. If you want to actively lead or contribute to improvement projects, the Yellow Belt is the one employers look for."
+            },
+            {
+                q: "Is GDPR relevant if I am based in South Africa?",
+                a: "Yes. Any organisation that processes data belonging to EU citizens must comply with GDPR regardless of where it is based. Beyond the EU, GDPR has directly influenced South Africa's own POPIA legislation. Understanding GDPR gives you a working knowledge of both frameworks and makes you more valuable in any compliance or data-handling role."
+            },
+            {
+                q: "Which business course gives the best return for career progression?",
+                a: "The Diploma in Project Management has the broadest applicability. Project management is a recognised profession across almost every industry, and a formal diploma signals that you can take ownership of deliverables and manage stakeholders. If you are already in a tech environment, the Agile Project Management certificate is the faster, more targeted option."
+            },
+            {
+                q: "Are these courses useful for running my own business?",
+                a: "Yes, particularly the Project Management, Economics, and Compliance tracks. Understanding how to plan and execute projects, read macroeconomic signals, and stay compliant with data and financial regulations are practical skills for any business owner. The Diploma in Sustainable Development is also increasingly relevant as clients and investors ask for ESG evidence."
+            },
+        ],
+        guideLinks: [
+            {
+                title: "Free AI Courses for Beginners",
+                desc: "No coding background required. Start with the AI fundamentals that apply directly to business strategy and operations.",
+                href: "/free-ai-courses-for-beginners",
+                badge: "AI",
+            },
+        ],
     },
 
     // 5. Accounting
@@ -297,20 +366,6 @@ export const categoryContent = {
                 badge: "Marketing",
             },
         ],
-    },
-
-    // 7. Management
-    management: {
-        heroIntro: "Develop the leadership skills required to inspire teams, manage resources, and drive organizational success. Start learning today with our free online management and leadership courses.",
-        aboutSection: "Effective management is the difference between an organization that struggles and one that excels. Our free management courses are built for current and future leaders. You will explore different leadership styles, conflict resolution techniques, human resource management, and organizational behavior. These courses provide a toolkit for handling difficult conversations, motivating diverse teams, and making strategic decisions under pressure.",
-        careerOpportunities: "Strong leadership skills accelerate career progression in any field. These courses prepare you for supervisory and leadership roles including Team Leader, Department Manager, Human Resources Manager, Operations Director, and General Manager. Demonstrating formal management training on your CV shows employers you are ready for increased responsibility.",
-        skillsFocus: [
-            "Leadership Styles & Team Motivation",
-            "Conflict Resolution & Negotiation",
-            "Human Resources Management (Hiring, Training)",
-            "Strategic Decision Making",
-            "Organizational Behavior & Change Management"
-        ]
     },
 
 };
