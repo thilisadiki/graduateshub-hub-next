@@ -274,8 +274,8 @@ export default async function Home() {
           <div className="flex flex-col sm:flex-row gap-6">
             {/* Jason */}
             <div className="flex items-start gap-3 flex-1">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-blue-100">
-                <Image src="/jason-sadiki.jpg" alt="Jason Sadiki" fill sizes="48px" className="object-cover" />
+              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-blue-100">
+                <Image src="/jason-sadiki.jpg" alt="Jason Sadiki" width={48} height={48} className="object-cover w-full h-full" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-extrabold text-gray-900 text-sm">Jason Sadiki</p>
@@ -292,8 +292,8 @@ export default async function Home() {
 
             {/* Ndulamiso */}
             <div className="flex items-start gap-3 flex-1">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-teal-100">
-                <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" fill sizes="48px" className="object-cover" />
+              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-teal-100">
+                <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" width={48} height={48} className="object-cover w-full h-full" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-extrabold text-gray-900 text-sm">Ndulamiso Mamburu</p>
