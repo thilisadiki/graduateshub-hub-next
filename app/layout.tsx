@@ -24,6 +24,14 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
   },
+  appleWebApp: {
+    capable: true,
+    title: 'Graduates Hub',
+    statusBarStyle: 'default',
+  },
+  icons: {
+    apple: '/logo-192x192.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
