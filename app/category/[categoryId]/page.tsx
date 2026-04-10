@@ -16,8 +16,12 @@ export async function generateStaticParams() {
 
 const CATEGORY_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'Free IT Courses Online (2026): Software, Networking & Cybersecurity | Graduates Hub',
-    description: 'Browse 59 free IT courses across Software Engineering, Networking, Cybersecurity, AI, and Database tracks. Earn CPD-accredited certificates and diplomas with no prior experience required.',
+    title: 'Free IT Courses Online (2026): Networking, Cybersecurity & AI | Graduates Hub',
+    description: 'Browse 15 free IT courses across Networking, Cybersecurity, Database, AI, and Engineering tracks. CPD-accredited certificates and diplomas. No prior experience required.',
+  },
+  'software-engineering': {
+    title: 'Free Software Engineering Courses Online (2026): Web Dev, AI & More | Graduates Hub',
+    description: 'Browse 48 free software engineering courses across web development, AI and machine learning, agile and DevOps, testing and QA, programming languages, and systems architecture. CPD-accredited. Beginner-friendly.',
   },
   marketing: {
     title: 'Free Marketing Courses Online (2026): Digital, Social Media & SEO | Graduates Hub',

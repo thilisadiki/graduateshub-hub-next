@@ -11,12 +11,12 @@ const SITE_URL = 'https://graduateshub.co.za';
 export const metadata: Metadata = {
   title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',
   description:
-    'Browse free online courses across IT, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
+    'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
   alternates: { canonical: `${SITE_URL}/categories` },
   openGraph: {
     title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',
     description:
-      'Browse free online courses across IT, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
+      'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
     url: `${SITE_URL}/categories`,
   },
 };
@@ -49,7 +49,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Free Online Courses by Subject Area (2026)',
   url: `${SITE_URL}/categories`,
-  description: 'Browse free online courses across IT, Business, Accounting, Marketing, and Management. Every subject area is curated by a named specialist and updated for 2026.',
+  description: 'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
   breadcrumb: breadcrumbSchema,
 };
@@ -62,15 +62,26 @@ const CATEGORY_META: Record<string, {
   accentClass: string;
 }> = {
   it: {
-    topSkill: 'Build networks, write code, and work with cloud platforms',
+    topSkill: 'Manage networks, secure systems, and work with enterprise IT infrastructure',
     bullets: [
-      'Network administration and cybersecurity fundamentals',
-      'Web development with HTML, CSS, and JavaScript',
-      'Data analysis, Python, and cloud computing basics',
+      'Network administration, LAN architecture, and ITIL 4 service management',
+      'Cybersecurity compliance, CISSP preparation, and DORA digital resilience',
+      'Applied AI, machine learning, and database administration fundamentals',
     ],
     guideHref: '/free-ai-courses-for-beginners',
     guideLabel: 'Free AI Courses Guide',
     accentClass: 'bg-blue-50 border-blue-200',
+  },
+  'software-engineering': {
+    topSkill: 'Build web apps, write code, and ship software using modern engineering practices',
+    bullets: [
+      'Web and app development with HTML, CSS, JavaScript, Python, PHP, and Swift',
+      'Agile, Scrum, and DevOps for delivering software reliably',
+      'Software testing, quality assurance, and systems architecture',
+    ],
+    guideHref: '/blog/how-to-become-a-self-taught-web-developer-for-free-in-2026',
+    guideLabel: 'Self-Taught Developer Guide',
+    accentClass: 'bg-violet-50 border-violet-200',
   },
   business: {
     topSkill: 'Plan projects, improve processes, and navigate compliance',
@@ -107,8 +118,14 @@ const CATEGORY_META: Record<string, {
 
 const DECISION_PATHS = [
   {
-    goal: 'I want to work in tech or software',
-    detail: 'Start with IT fundamentals, then move into web development, data analysis, or AI depending on your target role.',
+    goal: 'I want to build websites or software applications',
+    detail: 'Web development, programming languages, agile and DevOps, testing, and systems architecture. Forty-four courses from beginner to advanced.',
+    href: '/category/software-engineering',
+    label: 'Browse Software Engineering',
+  },
+  {
+    goal: 'I want to work in IT infrastructure or cybersecurity',
+    detail: 'Networking, cybersecurity, database administration, applied AI, and IT service management. The skills behind the systems that developers build on top of.',
     href: '/category/it',
     label: 'Browse IT Courses',
   },
@@ -126,7 +143,7 @@ const DECISION_PATHS = [
   },
   {
     goal: 'I want to manage projects or lead a business',
-    detail: 'Project management, Agile, Lean Six Sigma, compliance, and economic strategy. Business and management merged into one comprehensive category.',
+    detail: 'Project management, Agile, Lean Six Sigma, compliance, and economic strategy. Covers both operational and strategic business skills.',
     href: '/category/business',
     label: 'Browse Business Courses',
   },
@@ -163,7 +180,7 @@ export default function CategoriesPage() {
             You will not find a generic list of courses here. Each category is deliberately scoped, regularly reviewed, and linked to real career outcomes.
           </p>
           <p className="text-gray-500 max-w-2xl leading-relaxed">
-            We cover four fields: IT, Business, Accounting, and Marketing.
+            We cover five fields: IT, Software Engineering, Business, Accounting, and Marketing.
             These are the areas where we have practitioners who can verify course quality.{' '}
             <Link href="/curation-policy" className="text-primary font-medium hover:text-blue-800 transition-colors">
               Read how we select courses
@@ -282,11 +299,11 @@ export default function CategoriesPage() {
 
         {/* Why we cover these subjects */}
         <section className="mb-14 bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Why We Cover These Four Subjects</h2>
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Why We Cover These Five Subjects</h2>
           <div className="max-w-3xl space-y-4 text-gray-600 leading-relaxed">
             <p>
               Graduates Hub only publishes content in fields where we have a named specialist who can verify course quality.
-              That is why you will find IT, Business, Accounting, and Marketing on this page, and nothing else.
+              That is why you will find IT, Software Engineering, Business, Accounting, and Marketing on this page, and nothing else.
             </p>
             <p>
               We made a deliberate decision to remove Health, Languages, and Personal Development from our platform.

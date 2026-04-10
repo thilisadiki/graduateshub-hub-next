@@ -5,24 +5,17 @@ export const categoryContent = {
     // 1. IT Courses
     it: {
         showStats: true,
-        heroIntro: "Fifty-nine free IT courses across seven specialist tracks. Every course is reviewed for 2026 relevance, leads to a CPD-accredited certificate or diploma, and can be completed at your own pace with no prior experience required.",
-        aboutSection: "These courses span seven distinct tracks: Software Engineering, Networking and Infrastructure, Artificial Intelligence, Cybersecurity and Compliance, Database and Software Development, Engineering and Hardware, and IT Management. Each track is self-contained. You can begin in Networking without touching Software Engineering, or combine tracks as your career demands. All courses are delivered by Alison, a CPD-accredited provider with over 6 million graduates worldwide.",
-        careerOpportunities: "IT qualifications open doors across finance, healthcare, retail, government, and tech. The seven tracks on this page map directly to seven distinct job families, each with consistent hiring demand in South Africa and internationally.",
+        heroIntro: "Fifteen free IT infrastructure courses across networking, cybersecurity, databases, AI, and hardware. Software Engineering courses now have their own dedicated category. Everything here is focused on the systems, networks, and platforms that keep organisations running.",
+        aboutSection: "These courses cover five tracks: Networking and Infrastructure covers computer networking, LAN architecture, the OSI model, and ITIL 4 service management. Cybersecurity and Compliance covers CISSP certification preparation and DORA digital resilience. Database and Software Development covers SQL Server administration and the relationship between information systems and business operations. Artificial Intelligence covers applied generative AI, machine learning fundamentals, and cognitive robotics. Engineering and Hardware covers physical computing systems and CNC machining processes. For software development, web dev, and programming courses, see the Software Engineering category.",
+        careerOpportunities: "IT infrastructure skills are in demand across every sector that runs digital systems. From network engineers at telecoms to AI analysts at financial firms, these courses map to stable, well-paid roles that exist in virtually every large organisation.",
         skillsFocus: [
-            "Network administration, LAN architecture, and ITIL service management",
-            "Secure software design, testing methodologies, and DevOps practices",
-            "SQL Server administration and database management principles",
-            "AI fundamentals and machine learning concepts for practical application",
-            "Cybersecurity compliance, CISSP preparation, and digital risk management"
+            "Network administration, LAN architecture, and ITIL 4 service management",
+            "Cybersecurity compliance, CISSP preparation, and DORA digital resilience",
+            "SQL Server administration and information systems fundamentals",
+            "Applied AI, machine learning, and cognitive robotics foundations",
+            "Hardware systems, CNC processes, and IT management governance"
         ],
         tracks: [
-            {
-                label: "Software Engineering",
-                subCategory: "Software Engineering",
-                count: 44,
-                goal: "Build, test, and ship software",
-                detail: "44 courses covering software testing, secure development, DevOps, project management, and the full software development life cycle.",
-            },
             {
                 label: "Networking & Infrastructure",
                 subCategory: "Networking & Infrastructure",
@@ -31,18 +24,18 @@ export const categoryContent = {
                 detail: "Computer networking, LAN architecture, the OSI model, and IT service management using ITIL 4.",
             },
             {
-                label: "Artificial Intelligence",
-                subCategory: "Artificial Intelligence",
-                count: 4,
-                goal: "Work with AI tools and data-driven systems",
-                detail: "AI fundamentals, machine learning concepts, and practical applications for both technical and non-technical learners.",
-            },
-            {
                 label: "Cybersecurity & Compliance",
                 subCategory: "Cybersecurity & Compliance",
                 count: 2,
                 goal: "Protect systems and meet regulatory standards",
                 detail: "CISSP certification preparation and digital operational resilience, including DORA compliance fundamentals.",
+            },
+            {
+                label: "Artificial Intelligence",
+                subCategory: "Artificial Intelligence",
+                count: 4,
+                goal: "Work with AI tools and data-driven systems",
+                detail: "Applied generative AI, machine learning fundamentals, and cognitive robotics. Suitable for both technical and non-technical learners.",
             },
             {
                 label: "Database & Dev",
@@ -56,7 +49,7 @@ export const categoryContent = {
                 subCategory: "Engineering & Hardware",
                 count: 2,
                 goal: "Understand hardware and physical infrastructure",
-                detail: "Practical courses covering physical computing systems and the engineering principles that underpin digital infrastructure.",
+                detail: "Physical computing systems and CNC machining processes. Practical courses for technical roles in manufacturing and engineering.",
             },
             {
                 label: "IT Management",
@@ -67,33 +60,33 @@ export const categoryContent = {
             },
         ],
         roles: [
-            { title: "Software Developer", track: "Software Engineering", signal: "The most in-demand IT role globally. Every organisation building a product needs one." },
             { title: "Network Engineer", track: "Networking & Infrastructure", signal: "Core infrastructure role. Banks, telecoms, and government departments hire continuously." },
+            { title: "IT Support Specialist", track: "Networking & Infrastructure", signal: "The most common entry point into IT. Relevant in every organisation with a network." },
             { title: "Cybersecurity Analyst", track: "Cybersecurity & Compliance", signal: "Critical shortage worldwide. CISSP-trained professionals command senior salaries." },
-            { title: "AI / Data Analyst", track: "Artificial Intelligence", signal: "The fastest growing IT specialisation. Applies across finance, healthcare, and logistics." },
+            { title: "AI / Data Analyst", track: "Artificial Intelligence", signal: "The fastest growing IT specialisation. High demand across finance, healthcare, and logistics." },
             { title: "Database Administrator", track: "Database & Dev", signal: "Every company with customer records needs a DBA. Stable, well-paid, and evergreen." },
-            { title: "IT Manager", track: "IT Management", signal: "Senior role overseeing infrastructure, vendors, and IT strategy. Requires broad technical knowledge." },
+            { title: "IT Manager", track: "IT Management", signal: "Senior role overseeing infrastructure, vendors, and IT strategy across the organisation." },
         ],
         faq: [
             {
+                q: "What is the difference between this IT category and Software Engineering?",
+                a: "This category covers IT infrastructure: networks, cybersecurity, databases, AI systems, and hardware. The Software Engineering category covers programming, web development, DevOps, and software testing. If you want to build software or learn to code, go to Software Engineering. If you want to manage systems, networks, or security, you are in the right place."
+            },
+            {
                 q: "Do I need prior IT experience to start?",
-                a: "No. Most courses on this page are designed for beginners. The Software Engineering and Networking tracks both start from foundational concepts. If you are completely new, start with Computer Networking or Introduction to Software Testing before moving to more advanced certificates."
+                a: "No. Computer Networking and Foundations of ITIL 4 are both designed for beginners. The AI track also has introductory diplomas that require no prior technical knowledge. Start with the track that matches your career goal."
             },
             {
                 q: "Are these certificates recognised by employers?",
-                a: "All courses are delivered by Alison, a CPD-accredited provider with over 6 million graduates worldwide. CPD certification is accepted by professional bodies in South Africa, the UK, Ireland, and beyond. While these are not equivalent to a university degree, they are widely accepted as proof of skill for entry-level and mid-level IT roles."
+                a: "All courses are delivered by Alison, a CPD-accredited provider with over 6 million graduates worldwide. CPD certification is accepted by professional bodies in South Africa, the UK, Ireland, and beyond. These are widely accepted for entry-level and mid-level IT roles."
             },
             {
-                q: "Which course should I start with if I am completely new to IT?",
-                a: "Start with Computer Networking or Foundations of ITIL 4 for Service Management if infrastructure interests you. Start with Introduction to Software Testing or Understanding Software Project Management if software is your goal. Both are beginner-friendly and provide a strong foundation before progressing to diplomas."
-            },
-            {
-                q: "What is the difference between a Certificate and a Diploma?",
-                a: "Certificates are focused, practical programs typically completed in 2 to 6 hours. They cover a single skill or topic in depth. Diplomas are comprehensive programs covering a full subject area, typically 10 to 30 hours. Start with a certificate to test your interest. Move to a diploma when you want to qualify for a specific role."
+                q: "Which course should I start with if I am new to IT?",
+                a: "Start with Computer Networking for a broad infrastructure foundation, or Foundations of ITIL 4 if you are interested in IT service management. Both are beginner-friendly and directly relevant to entry-level IT support and network roles."
             },
             {
                 q: "Can I complete these courses on a phone or tablet?",
-                a: "Yes. All Alison courses are fully mobile-compatible. You can study at your own pace, save your progress, and complete assessments on any device. There is no deadline or fixed schedule."
+                a: "Yes. All Alison courses are fully mobile-compatible. You can study at your own pace, save progress, and complete assessments on any device with no deadline or fixed schedule."
             }
         ],
         guideLinks: [
@@ -114,16 +107,100 @@ export const categoryContent = {
 
     // 2. Software Engineering
     'software-engineering': {
-        heroIntro: "Learn to build robust applications and dynamic websites with our free online software engineering courses. Dive into popular programming languages, frameworks, and software development methodologies.",
-        aboutSection: "Software engineering is the creative backbone of the modern world. Our free courses are designed to take you from understanding basic programming logic to building complex, scalable software solutions. You'll learn essential coding languages, software testing, version control, and the software development life cycle (SDLC). Whether you want to build mobile apps, enterprise software, or stunning front-end interfaces, these courses provide the practical coding experience required by tech recruiters.",
-        careerOpportunities: "The demand for skilled software engineers continues to outpace supply globally. Graduates can pursue roles such as Front-End Developer, Back-End Developer, Full-Stack Engineer, QA Tester, or Mobile App Developer. The ability to write clean, efficient code is a highly transferable skill that offers excellent remote work opportunities and high earning potential.",
+        showStats: true,
+        heroIntro: "Forty-eight free software engineering courses across web and app development, agile and DevOps, AI and machine learning, testing and quality assurance, programming languages, and systems architecture. Every course is CPD-accredited and beginner-accessible, covering the skills listed in real software engineering job requirements.",
+        aboutSection: "The five tracks here cover the full spectrum of modern software engineering practice. Web and App Development covers front-end, back-end, mobile, and full-stack development using HTML, CSS, JavaScript, Python, PHP, Kotlin, Swift, and cloud-based frameworks. Agile and DevOps covers the processes and culture behind delivering software reliably: Scrum, sprint cycles, CI/CD pipelines, JIRA, and project management. Testing and Quality Assurance covers the methodologies used to ship software that actually works: unit testing, integration testing, black-box techniques, and secure software lifecycle practices. Programming Languages covers Java, C#, C++, Visual Basic, and engineering graphics, providing the foundational coding literacy that every developer needs. Architecture and Systems covers the strategic layer: how large software systems are designed, how microservices communicate, how organisations manage databases and software procurement, and what it means to build for scale. These tracks are self-contained. A junior developer can start in Web Development without touching Architecture. A career changer can start in Agile and DevOps without writing a single line of code.",
+        careerOpportunities: "Software engineering is one of the highest-demand skill sets globally. Entry-level roles are accessible to self-taught candidates who can demonstrate practical competency, and these courses map directly to the tasks listed in junior developer, QA, and DevOps job listings.",
         skillsFocus: [
-            "Programming Languages (Python, JavaScript, Java, C++)",
-            "Web Development (HTML, CSS, React, Node.js)",
-            "Software Development Life Cycle (Agile, Scrum)",
-            "Version Control (Git & GitHub)",
-            "Algorithms & Data Structures"
-        ]
+            "Web and app development using HTML, CSS, JavaScript, Python, PHP, Swift, and Kotlin",
+            "Agile methodologies, Scrum ceremonies, sprint planning, and CI/CD pipeline management",
+            "Software testing techniques: unit testing, integration testing, and black-box analysis",
+            "Programming fundamentals in Java, C#, C++, and Visual Basic",
+            "Software architecture patterns: microservices, APIs, system design, and DevOps culture"
+        ],
+        tracks: [
+            {
+                label: "Web & App Development",
+                subCategory: "Web & App Development",
+                count: 15,
+                goal: "Build websites, web apps, and mobile applications",
+                detail: "HTML, CSS, JavaScript, Python/Flask, PHP/MySQL, Kotlin for Android, Swift for iOS, MEAN stack, and e-commerce development. Fifteen courses from beginner certificates through to advanced diplomas.",
+            },
+            {
+                label: "Agile & DevOps",
+                subCategory: "Agile & DevOps",
+                count: 9,
+                goal: "Deliver software faster and more reliably",
+                detail: "Agile Manifesto, Scrum framework, sprint mechanics, CI/CD pipelines, JIRA project tracking, and software project management. Nine courses covering both process and tooling.",
+            },
+            {
+                label: "Programming Languages",
+                subCategory: "Programming Languages",
+                count: 7,
+                goal: "Build coding fluency in core programming languages",
+                detail: "Java fundamentals, C# diplomas at beginner and advanced level, C++ game development, Visual Basic, and engineering graphics. Seven courses providing the syntax foundation that underpins all software development.",
+            },
+            {
+                label: "Architecture & Systems",
+                subCategory: "Architecture & Systems",
+                count: 7,
+                goal: "Design software systems that scale and last",
+                detail: "Microservices architecture, software architect role, IoT system design, IT management of databases and software procurement, and the societal impact of information systems.",
+            },
+            {
+                label: "Testing & QA",
+                subCategory: "Testing & QA",
+                count: 6,
+                goal: "Ship code that actually works",
+                detail: "Software testing diploma, black-box techniques, theory of testing, secure software testing, quality management, and software requirements. Six courses covering manual QA, test design, and the QA lifecycle.",
+            },
+            {
+                label: "AI & Machine Learning",
+                subCategory: "Artificial Intelligence",
+                count: 4,
+                goal: "Understand and apply artificial intelligence in software",
+                detail: "Applied generative AI, AI fundamentals, machine learning algorithms, and cognitive robotics. Four diplomas and certificates covering how AI works and how to integrate it into software projects.",
+            },
+        ],
+        roles: [
+            { title: "Junior Web Developer", track: "Web & App Development", signal: "The most common entry-level software role. Front-end skills (HTML, CSS, JavaScript) are the fastest path to an interview at agencies, startups, and corporate digital teams." },
+            { title: "Mobile App Developer", track: "Web & App Development", signal: "Strong demand as businesses invest in Android and iOS. Kotlin and Swift diplomas provide a credible foundation for entry-level mobile roles." },
+            { title: "DevOps Engineer", track: "Agile & DevOps", signal: "One of the highest-paid specialisations in tech. Combines development knowledge with operations tooling. Entry accessible with CI/CD and Linux fundamentals." },
+            { title: "Scrum Master", track: "Agile & DevOps", signal: "Non-coding leadership role in high demand at software companies. An Agile certificate and Scrum training are frequently the only formal requirements listed." },
+            { title: "QA Engineer", track: "Testing & QA", signal: "One of the most accessible entry points into the tech industry. Testing roles do not always require coding skills and are consistently in demand at software companies of all sizes." },
+            { title: "Software Architect", track: "Architecture & Systems", signal: "Senior role commanding above-average salaries. Understanding system design and architecture principles is the distinguishing factor between mid-level and senior engineering candidates." },
+            { title: "AI/ML Engineer", track: "AI & Machine Learning", signal: "The fastest-growing specialisation in tech. Entry-level roles are accessible with foundational ML knowledge and a programming background." },
+        ],
+        faq: [
+            {
+                q: "What is the difference between the IT category and Software Engineering?",
+                a: "The IT category covers infrastructure: networking, cybersecurity, database administration, and the systems that keep organisations running. Software Engineering covers development: writing code, building applications, testing software, and shipping products. If you want to build things, Software Engineering is your starting point. If you want to manage the systems those things run on, start with IT."
+            },
+            {
+                q: "Do I need coding experience before starting these courses?",
+                a: "Not for every track. Agile and DevOps, Testing and QA, and Architecture and Systems are accessible without prior coding knowledge. Web and App Development and Programming Languages start from beginner level, but you will be writing code from the first module. If you have never coded before, start with Web Development with HTML and CSS for Beginners or Agile Essentials to build familiarity with the environment before committing to a full diploma."
+            },
+            {
+                q: "Which track is best for getting a first software job?",
+                a: "Web and App Development is the fastest track to employment for most people. HTML, CSS, and JavaScript are the skills listed in the highest volume of entry-level job postings. Build three portfolio projects using those skills, add a CPD certificate, and you have a credible application. Testing and QA is the second fastest entry point, especially for those who prefer analytical work over coding."
+            },
+            {
+                q: "How do Agile and DevOps courses fit into a software engineering career?",
+                a: "Every professional software team runs on Agile or a variant of it. Understanding Scrum ceremonies, sprint planning, and the definition of done is not optional in a corporate tech role. DevOps goes one step further: it covers how code gets from a developer's machine to a live server reliably and repeatedly. These skills make you valuable beyond just writing code, and are directly required for senior engineering roles."
+            },
+            {
+                q: "Are CPD certificates from Alison accepted by South African employers?",
+                a: "Yes. Alison is a CPD-accredited provider and its certificates are accepted as proof of continuous professional development by employers in South Africa and internationally. These certificates do not replace a formal computer science degree, but they are taken seriously for entry-level and self-taught developer roles, particularly when combined with a portfolio of work."
+            },
+        ],
+        guideLinks: [
+            {
+                title: "How to Become a Self-Taught Web Developer in 2026",
+                desc: "A structured roadmap from HTML basics to your first developer job. Written for beginners with no prior coding experience.",
+                href: "/blog/how-to-become-a-self-taught-web-developer-for-free-in-2026",
+                badge: "Web Dev",
+            },
+        ],
     },
 
     // 3. Business Courses
