@@ -34,6 +34,16 @@ const webPageSchema = {
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE_URL}/guides` },
+    { '@type': 'ListItem', position: 3, name: 'Free Courses with Certificates', item: `${SITE_URL}/free-courses-with-certificates` },
+  ],
+};
+
 const courseCategories = [
   {
     label: 'IT & Technology',
@@ -189,6 +199,7 @@ export default function FreeCoursesWithCertificatesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">

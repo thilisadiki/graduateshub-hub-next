@@ -34,6 +34,16 @@ const webPageSchema = {
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE_URL}/guides` },
+    { '@type': 'ListItem', position: 3, name: 'Free AI Courses for Beginners', item: `${SITE_URL}/free-ai-courses-for-beginners` },
+  ],
+};
+
 const courseCategories = [
   {
     label: 'AI Fundamentals',
@@ -166,6 +176,7 @@ export default function FreeAICoursesForBeginnersPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
@@ -243,10 +254,10 @@ export default function FreeAICoursesForBeginnersPage() {
                   <p className="text-gray-500 mt-1">{cat.description}</p>
                 </div>
                 <Link
-                  href="/category/it"
+                  href="/category/software-engineering"
                   className="text-primary font-bold hover:text-blue-800 transition-colors flex items-center gap-1 whitespace-nowrap text-sm"
                 >
-                  See all IT &amp; AI courses <ChevronRight size={16} />
+                  See all AI &amp; ML courses <ChevronRight size={16} />
                 </Link>
               </div>
               <div className="w-12 h-1 bg-primary rounded-full mb-8" />
@@ -357,10 +368,10 @@ export default function FreeAICoursesForBeginnersPage() {
           </div>
           <div className="mt-8">
             <Link
-              href="/category/it"
+              href="/category/software-engineering"
               className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors"
             >
-              Browse all IT &amp; AI courses <ChevronRight size={16} />
+              Browse all AI &amp; ML courses <ChevronRight size={16} />
             </Link>
           </div>
         </section>
@@ -376,8 +387,8 @@ export default function FreeAICoursesForBeginnersPage() {
                 href: '/free-courses-with-certificates',
               },
               {
-                title: 'Browse All IT & AI Courses',
-                desc: 'Every free IT and AI course we offer, organised by sub-category.',
+                title: 'Browse IT Courses',
+                desc: 'Networking, cybersecurity, database administration, and IT infrastructure.',
                 href: '/category/it',
               },
               {
@@ -434,10 +445,10 @@ export default function FreeAICoursesForBeginnersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/category/it"
+              href="/category/software-engineering"
               className="bg-primary hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-bold transition-colors"
             >
-              Browse AI & IT Courses
+              Browse AI & ML Courses
             </Link>
             <Link
               href="/free-courses-with-certificates"
