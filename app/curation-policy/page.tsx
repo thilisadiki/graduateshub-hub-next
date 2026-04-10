@@ -135,9 +135,9 @@ export default function CurationPolicyPage() {
                   <p className="font-extrabold text-gray-900">Ndulamiso Mamburu</p>
                   <span className="text-xs bg-teal-50 text-teal-700 border border-teal-100 px-2 py-0.5 rounded-full font-bold">Co-Founder</span>
                 </div>
-                <p className="text-teal-600 text-sm font-semibold mb-2">Accounting Science Graduate · Pursuing Taxation Degree · Works at SARS</p>
+                <p className="text-teal-600 text-sm font-semibold mb-2">Co-Founder · Accounting Science Graduate · Pursuing Taxation Degree · Works at SARS</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Curates all accounting, finance, and business courses. Her practitioner-level experience at the South African Revenue Service (SARS) ensures that recommended courses reflect real compliance, tax, and financial management requirements — not just textbook theory.
+                  Co-founder of Graduates Hub. Ndulamiso curates all accounting, finance, and business courses. Her practitioner-level experience at the South African Revenue Service (SARS) ensures that recommended courses reflect real compliance, tax, and financial management requirements — not just textbook theory.
                 </p>
                 <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-2 transition-colors">
