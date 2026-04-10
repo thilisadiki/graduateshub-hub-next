@@ -35,6 +35,7 @@ export default function Footer() {
             <li><Link href="/free-ai-courses-for-beginners" className="hover:text-blue-400 transition-colors">Free AI Courses for Beginners</Link></li>
             <li><Link href="/free-courses-for-accounting-and-finance" className="hover:text-blue-400 transition-colors">Free Courses for Accounting & Finance</Link></li>
             <li><Link href="/free-courses-for-software-developers" className="hover:text-blue-400 transition-colors">Free Courses for Software Developers</Link></li>
+            <li><Link href="/free-business-courses" className="hover:text-blue-400 transition-colors">Free Business Courses</Link></li>
             <li><Link href="/guides" className="hover:text-blue-400 transition-colors font-medium">View All Guides →</Link></li>
           </ul>
         </div>

@@ -90,6 +90,8 @@ const CATEGORY_META: Record<string, {
       'Regulatory compliance: GDPR, AML, and ISO auditing standards',
       'Economic strategy, sustainable development, and AI in business',
     ],
+    guideHref: '/free-business-courses',
+    guideLabel: 'Free Business Courses Guide',
     accentClass: 'bg-amber-50 border-amber-200',
   },
   accounting: {

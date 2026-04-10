@@ -278,6 +278,12 @@ export const categoryContent = {
         ],
         guideLinks: [
             {
+                title: "Free Business Courses",
+                desc: "Project management, Lean Six Sigma, compliance, and economic strategy. All CPD-accredited and free to study.",
+                href: "/free-business-courses",
+                badge: "Business",
+            },
+            {
                 title: "Free AI Courses for Beginners",
                 desc: "No coding background required. Start with the AI fundamentals that apply directly to business strategy and operations.",
                 href: "/free-ai-courses-for-beginners",

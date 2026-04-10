@@ -81,6 +81,14 @@ const GUIDE_GROUPS: GuideGroup[] = [
     blurb: 'Curated by practitioners with direct professional experience, not content marketers picking courses from a spreadsheet.',
     guides: [
       {
+        title: 'Free Business Courses',
+        badge: 'Business',
+        href: '/free-business-courses',
+        desc: 'Project management, Lean Six Sigma, GDPR compliance, and economic strategy. Curated by a practising tax professional with real-world corporate experience.',
+        curators: ['ndulamiso'],
+        lastUpdated: 'Jan 2026',
+      },
+      {
         title: 'Free Courses for Accounting & Finance',
         badge: 'Finance',
         href: '/free-courses-for-accounting-and-finance',
