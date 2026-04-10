@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, MapPin, Clock, BookOpen, GraduationCap, Building, Star } from 'lucide-react';
+import { ChevronDown, MapPin, Clock, BookOpen, GraduationCap, Building, Star, ExternalLink } from 'lucide-react';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
 import LatestArticles from '@/components/LatestArticles';
@@ -30,6 +30,29 @@ function AccordionItem({ title, isActive, onClick, children }: {
     </div>
   );
 }
+
+const CURATORS = {
+  jason: {
+    name: 'Jason Sadiki',
+    title: 'Technical SEO Specialist & Web Developer',
+    photo: '/jason-sadiki.jpg',
+    linkedin: 'https://www.linkedin.com/in/jasonsadiki/',
+  },
+  ndulamiso: {
+    name: 'Ndulamiso Mamburu',
+    title: 'Accounting Science Graduate · SARS',
+    photo: '/ndulamiso-mamburu.jpg',
+    linkedin: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
+  },
+} as const;
+
+const CATEGORY_CURATOR: Record<string, keyof typeof CURATORS> = {
+  'IT Courses': 'jason',
+  'Software Engineering': 'jason',
+  Marketing: 'jason',
+  Business: 'ndulamiso',
+  Accounting: 'ndulamiso',
+};
 
 export default function CourseDetailsContent({ course, relatedCourses }: { course: Course; relatedCourses: Course[] }) {
   const [openSection, setOpenSection] = useState('Introduction');
@@ -106,6 +129,25 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   </span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111827] leading-[1.2]">{course.title}</h1>
+                {(() => {
+                  const primaryCategory = course.category.split(',')[0].trim();
+                  const curatorKey = CATEGORY_CURATOR[primaryCategory];
+                  const curator = curatorKey ? CURATORS[curatorKey] : null;
+                  if (!curator) return null;
+                  return (
+                    <div className="flex items-center gap-2.5 mt-4">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={curator.photo} alt={curator.name} className="w-7 h-7 rounded-full object-cover ring-2 ring-white shrink-0" />
+                      <span className="text-sm text-gray-500">
+                        Curated by{' '}
+                        <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 hover:text-primary transition-colors inline-flex items-center gap-1">
+                          {curator.name} <ExternalLink size={11} className="text-gray-400" />
+                        </a>
+                        <span className="text-gray-400"> · {curator.title}</span>
+                      </span>
+                    </div>
+                  );
+                })()}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8 py-6 border-y border-gray-100">
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2 mb-1.5 text-gray-500"><Building size={16} /><span className="text-xs font-semibold uppercase tracking-wider">Provider</span></div>
