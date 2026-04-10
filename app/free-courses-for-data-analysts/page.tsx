@@ -455,9 +455,9 @@ export default function FreeCoursesForDataAnalystsPage() {
                 href: '/category/it',
               },
               {
-                title: 'Accounting & Finance Courses',
-                desc: 'Financial data analysis skills that complement a data analyst career.',
-                href: '/category/accounting',
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management and business strategy skills that complement a data analyst career.',
+                href: '/free-business-courses',
               },
             ].map(({ title, desc, href }) => (
               <Link

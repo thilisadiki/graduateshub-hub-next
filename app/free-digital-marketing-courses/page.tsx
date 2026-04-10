@@ -453,6 +453,11 @@ export default function FreeDigitalMarketingCoursesPage() {
                 href: '/free-ai-courses-for-beginners',
               },
               {
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management, Lean Six Sigma, and business strategy skills that complement a marketing career.',
+                href: '/free-business-courses',
+              },
+              {
                 title: 'Best Free Courses with Certificates (2026)',
                 desc: 'Top-rated certified courses across IT, Business, Marketing, and Finance.',
                 href: '/free-courses-with-certificates',

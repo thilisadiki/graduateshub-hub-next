@@ -470,9 +470,9 @@ export default function BestAlisonCoursesPage() {
                 href: '/free-courses-for-data-analysts',
               },
               {
-                title: 'Browse All Free Courses by Category',
-                desc: 'Every course we list, organised by field, IT, Business, Marketing, Health, and more.',
-                href: '/categories',
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. All CPD-accredited and free.',
+                href: '/free-business-courses',
               },
             ].map(({ title, desc, href }) => (
               <Link

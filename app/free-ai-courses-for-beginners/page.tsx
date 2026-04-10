@@ -397,9 +397,9 @@ export default function FreeAICoursesForBeginnersPage() {
                 href: '/category/software-engineering',
               },
               {
-                title: 'All Course Categories',
-                desc: 'Explore every subject area available on Graduates Hub.',
-                href: '/categories',
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management, Lean Six Sigma, and business strategy skills that complement AI knowledge.',
+                href: '/free-business-courses',
               },
             ].map(({ title, desc, href }) => (
               <Link

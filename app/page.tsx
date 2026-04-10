@@ -152,6 +152,7 @@ export default async function Home() {
               { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion. Build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
               { title: 'Free Courses for Software Developers', desc: 'Web development, programming languages, DevOps, and software architecture. All free.', href: '/free-courses-for-software-developers', badge: 'Dev' },
               { title: 'Free Courses for Accounting & Finance', desc: 'Bookkeeping, financial management, payroll, and auditing. Curated by an accounting specialist.', href: '/free-courses-for-accounting-and-finance', badge: 'Finance' },
+              { title: 'Free Business Courses Online', desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. CPD-accredited and free.', href: '/free-business-courses', badge: 'Business' },
             ].map(({ title, desc, href, badge }) => (
               <Link
                 key={href}

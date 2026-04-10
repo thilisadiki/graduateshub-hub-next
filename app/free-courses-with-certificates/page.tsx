@@ -423,6 +423,11 @@ export default function FreeCoursesWithCertificatesPage() {
                 href: '/free-courses-for-data-analysts',
               },
               {
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. All free with certificates.',
+                href: '/free-business-courses',
+              },
+              {
                 title: 'Browse All IT & AI Courses',
                 desc: 'Every free IT and AI course we offer, organised by sub-category.',
                 href: '/category/it',

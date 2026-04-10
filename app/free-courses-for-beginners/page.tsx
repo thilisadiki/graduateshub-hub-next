@@ -513,6 +513,11 @@ export default function FreeCoursesForBeginnersPage() {
                 desc: 'The top-rated Alison courses across every category, CPD-accredited and free to start.',
                 href: '/best-alison-courses-with-certificates',
               },
+              {
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. All free with certificates.',
+                href: '/free-business-courses',
+              },
             ].map(({ title, desc, href }) => (
               <Link
                 key={href}

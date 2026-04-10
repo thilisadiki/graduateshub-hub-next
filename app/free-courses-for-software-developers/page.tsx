@@ -443,9 +443,9 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
                 href: '/free-courses-for-beginners',
               },
               {
-                title: 'Browse All Software Development Courses',
-                desc: 'Every free software engineering course we offer, organised by topic.',
-                href: '/category/software-engineering',
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management and Agile skills that complement a software development career.',
+                href: '/free-business-courses',
               },
             ].map(({ title, desc, href }) => (
               <Link

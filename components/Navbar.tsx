@@ -69,6 +69,7 @@ export default function Navbar() {
                 <Link href="/free-digital-marketing-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Digital Marketing Courses</Link>
                 <Link href="/free-courses-for-software-developers" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Software Developers</Link>
                 <Link href="/free-courses-for-accounting-and-finance" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Accounting & Finance</Link>
+                <Link href="/free-business-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Business Courses</Link>
                 <div className="border-t border-gray-100 mt-2 pt-2">
                   <p className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Categories</p>
                   {categories.map(cat => (
@@ -168,6 +169,7 @@ export default function Navbar() {
           <Link href="/free-digital-marketing-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Digital Marketing Courses</Link>
           <Link href="/free-courses-for-software-developers" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Software Developers</Link>
           <Link href="/free-courses-for-accounting-and-finance" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Accounting & Finance</Link>
+          <Link href="/free-business-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Business Courses</Link>
         </div>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">

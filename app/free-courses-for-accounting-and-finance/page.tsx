@@ -438,9 +438,9 @@ export default function FreeCoursesAccountingFinancePage() {
                 href: '/free-courses-with-certificates',
               },
               {
-                title: 'Browse All Accounting & Finance Courses',
-                desc: 'Bookkeeping, payroll, financial management, and more in one place.',
-                href: '/category/accounting',
+                title: 'Best Free Business Courses Online (2026)',
+                desc: 'Project management, Lean Six Sigma, and business strategy skills that complement accounting.',
+                href: '/free-business-courses',
               },
             ].map(({ title, desc, href }) => (
               <Link
