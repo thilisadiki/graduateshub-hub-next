@@ -142,16 +142,85 @@ export const categoryContent = {
 
     // 5. Accounting
     accounting: {
-        heroIntro: "Master the language of business. Learn how to manage finances, prepare statements, and analyze economic data with our free online accounting and bookkeeping courses.",
-        aboutSection: "Accounting is the process of recording, summarizing, and analyzing financial transactions, a critical function for the survival of any business. Our free accounting courses range from the basics of double-entry bookkeeping to advanced corporate finance and tax principles. You'll learn to read balance sheets, manage payroll, understand inventory valuation, and use modern accounting software principles. These courses are perfect for aspiring bookkeepers, business owners, and finance professionals.",
-        careerOpportunities: "Every organization, from small local shops to massive multinational corporations, requires skilled finance professionals to ensure compliance and profitability. Career options include Bookkeeper, Financial Analyst, Payroll Clerk, Tax Consultant, and Junior Accountant. These roles offer high job security and clear progression paths to senior financial management.",
+        showStats: true,
+        heroIntro: "Seventeen free accounting and finance courses across bookkeeping, financial reporting, financial management, and compliance. Curated by Ndulamiso Mamburu, a practising tax professional at SARS, every course reflects what is actually used in South African and international finance roles.",
+        aboutSection: "The four tracks here cover distinct areas of the accounting profession. Bookkeeping and Payroll covers the day-to-day recording of transactions, payroll processing, and accounting software including Xero. Financial Accounting covers the construction and analysis of financial statements, inventory valuation, and the full accounting cycle. Financial Management moves beyond recording into strategy: budgeting, capital allocation, variance analysis, and company valuation. Compliance and Auditing covers anti-money laundering procedures, KYC frameworks, and internal audit principles. Each track is self-contained. You can start in Bookkeeping without touching Financial Management, or use multiple tracks to build a complete finance skill set.",
+        careerOpportunities: "Accounting skills are required in every sector and at every company size. From SARS to startup finance teams, the demand for people who can record, report, and analyse financial data is consistent and largely recession-resistant.",
         skillsFocus: [
-            "Double-Entry Bookkeeping & Ledgers",
-            "Financial Statement Preparation (Income, Balance, Cash Flow)",
-            "Payroll Management & Tax Compliance",
-            "Inventory Valuation (FIFO, LIFO)",
-            "Cost Accounting & Budgeting"
-        ]
+            "Double-entry bookkeeping, ledger management, and payroll processing",
+            "Financial statement construction and ratio-based performance analysis",
+            "Budgeting, variance analysis, and capital investment evaluation (NPV, IRR)",
+            "Inventory valuation methods: FIFO, LIFO, and weighted average",
+            "AML compliance, KYC procedures, and internal audit frameworks"
+        ],
+        tracks: [
+            {
+                label: "Bookkeeping & Payroll",
+                subCategory: "Bookkeeping & Payroll",
+                count: 6,
+                goal: "Record transactions, process payroll, and use accounting software",
+                detail: "Six courses from introductory bookkeeping through to the Diploma in Effective Bookkeeping and Payroll, including a practical Xero certificate.",
+            },
+            {
+                label: "Financial Accounting",
+                subCategory: "Financial Accounting",
+                count: 5,
+                goal: "Prepare and analyse financial statements",
+                detail: "Fundamentals through to advanced financial statement analysis and inventory accounting. Includes the Diploma in Financial Accounting.",
+            },
+            {
+                label: "Financial Management",
+                subCategory: "Financial Management",
+                count: 4,
+                goal: "Make strategic financial decisions and value businesses",
+                detail: "Corporate budgeting, company valuation, accounts payable, and purchase ledger management. Includes the Diploma in Financial Management for Managers.",
+            },
+            {
+                label: "Compliance & Auditing",
+                subCategory: "Compliance & Auditing",
+                count: 2,
+                goal: "Meet regulatory obligations and conduct internal audits",
+                detail: "Anti-money laundering (AML), KYC procedures, and internal auditing principles. Critical for finance roles in banking, insurance, and regulated industries.",
+            },
+        ],
+        roles: [
+            { title: "Bookkeeper", track: "Bookkeeping & Payroll", signal: "High demand across SMEs and accounting firms. The Diploma in Bookkeeping and Payroll is directly cited in South African job listings." },
+            { title: "Payroll Administrator", track: "Bookkeeping & Payroll", signal: "Every employer with staff needs one. Stable, entry-accessible, and consistently advertised across all industries." },
+            { title: "Junior Accountant", track: "Financial Accounting", signal: "The most common entry point into the accounting profession. Strong demand at audit firms, corporates, and government entities." },
+            { title: "Financial Analyst", track: "Financial Management", signal: "Analytical role using financial statements and models to support business decisions. Growing demand in banking, consulting, and corporate finance." },
+            { title: "AML Compliance Officer", track: "Compliance & Auditing", signal: "One of the fastest-growing specialisations in finance. Banks, FinTechs, and insurers are under increasing regulatory pressure to staff this role." },
+            { title: "Internal Auditor", track: "Compliance & Auditing", signal: "Present in every large organisation. Provides a clear progression path to senior audit and risk management positions." },
+        ],
+        faq: [
+            {
+                q: "Do I need prior accounting knowledge to start?",
+                a: "No. Start with Fundamentals of Accounting or Introduction to Bookkeeping and Accounting Methods. Both are designed for absolute beginners and require no prior financial knowledge. Once you are comfortable with debits and credits, you can move into any of the other tracks."
+            },
+            {
+                q: "Are these certificates recognised by South African employers?",
+                a: "Yes. All courses are delivered by Alison, a CPD-accredited provider. CPD certification is accepted by professional bodies in South Africa and internationally. These certificates will not replace a formal SAIPA or CIMA qualification, but they are widely accepted as proof of skill for entry-level and bookkeeping roles, and are regularly listed on CVs in the accounting sector."
+            },
+            {
+                q: "Which course should I start with if I want to become a bookkeeper?",
+                a: "Start with Introduction to Bookkeeping and Accounting Methods for the foundational concepts, then move to Payroll Computation and Bookkeeping. After those, the Diploma in Effective Bookkeeping and Payroll brings everything together into a comprehensive qualification. Add Accounts Management Using Xero at the end to get practical software experience."
+            },
+            {
+                q: "What is the difference between bookkeeping and accounting?",
+                a: "Bookkeeping is the systematic recording of financial transactions: sales, purchases, payroll, and expenses. Accounting builds on those records to produce financial statements, perform analysis, and inform business decisions. Bookkeepers typically work within defined processes. Accountants interpret the data and provide strategic input. Both are in demand, and the Bookkeeping track here leads directly into the Financial Accounting track."
+            },
+            {
+                q: "Who curates the accounting courses on Graduates Hub?",
+                a: "The accounting content is curated by Ndulamiso Mamburu, an Accounting Science graduate currently pursuing a degree in Taxation at SARS. Every course recommendation reflects what is practically relevant to the South African finance sector, not just what looks good in a course catalogue."
+            },
+        ],
+        guideLinks: [
+            {
+                title: "Free Courses for Accounting & Finance",
+                desc: "A structured learning path from bookkeeping basics to financial statement analysis, curated by a SARS tax professional.",
+                href: "/free-courses-for-accounting-and-finance",
+                badge: "Finance",
+            },
+        ],
     },
 
     // 6. Marketing

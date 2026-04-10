@@ -23,6 +23,10 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
     title: 'Free Marketing Courses Online (2026): Digital, Social Media & SEO | Graduates Hub',
     description: 'Browse 11 free marketing courses covering Digital Marketing, Social Media Strategy, and Content & SEO. Earn CPD-accredited certificates and diplomas. No experience required.',
   },
+  accounting: {
+    title: 'Free Accounting Courses Online (2026): Bookkeeping, Payroll & Finance | Graduates Hub',
+    description: 'Browse 17 free accounting courses across Bookkeeping, Financial Accounting, Financial Management, and Compliance. CPD-accredited certificates and diplomas. Curated by a SARS tax professional.',
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ categoryId: string }> }): Promise<Metadata> {
