@@ -39,14 +39,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7185526762692935"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
@@ -59,6 +51,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <OneSignalInit />
         <SpeedInsights />
         <Analytics />
+        {/* Google AdSense */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7185526762692935"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         {/* Google Analytics */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-JF4KBF34HB" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">{`
