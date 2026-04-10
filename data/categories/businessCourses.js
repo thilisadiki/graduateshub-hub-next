@@ -1,6 +1,7 @@
 export const businessCourses = [
     {
         id: "diploma-project-management",
+        featured: true,
         title: "Diploma in Project Management",
         tag: "Diploma",
         category: "Business",
