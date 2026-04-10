@@ -17,7 +17,7 @@ const AUTHORS = {
   },
   ndulamiso: {
     name: 'Ndulamiso Mamburu',
-    title: 'Accounting Science Graduate · SARS',
+    title: 'Co-Founder · Accounting Science Graduate · SARS',
     photo: '/ndulamiso-mamburu.jpg',
     linkedin: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
   },

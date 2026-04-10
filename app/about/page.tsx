@@ -6,7 +6,7 @@ const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'About Graduates Hub – Meet the Team',
-  description: 'Graduates Hub is built by Jason Sadiki (Technical SEO Specialist & Web Developer) and curated with Ndulamiso Mamburu (Accounting Science Graduate, SARS). Real credentials behind every resource.',
+  description: 'Graduates Hub is co-founded by Jason Sadiki (Technical SEO Specialist & Web Developer) and Ndulamiso Mamburu (Accounting Science Graduate, SARS). Real credentials behind every resource.',
   alternates: { canonical: `${SITE_URL}/about` },
 };
 
@@ -47,12 +47,12 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Graduates Hub',
   url: SITE_URL,
-  founder: {
-    '@type': 'Person',
-    name: 'Jason Sadiki',
-    sameAs: 'https://www.linkedin.com/in/jasonsadiki/',
-  },
-  employee: [
+  founder: [
+    {
+      '@type': 'Person',
+      name: 'Jason Sadiki',
+      sameAs: 'https://www.linkedin.com/in/jasonsadiki/',
+    },
     {
       '@type': 'Person',
       name: 'Ndulamiso Mamburu',
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="text-2xl font-extrabold text-gray-900">Ndulamiso Mamburu</h3>
-                    <span className="text-xs font-bold bg-teal-50 text-teal-700 border border-teal-100 px-2.5 py-1 rounded-full">Curator</span>
+                    <span className="text-xs font-bold bg-teal-50 text-teal-700 border border-teal-100 px-2.5 py-1 rounded-full">Co-Founder</span>
                   </div>
                   <p className="text-teal-600 font-semibold text-sm mb-2">Tax Professional &amp; Accounting Science Graduate</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
@@ -153,10 +153,10 @@ export default function AboutPage() {
                     ))}
                   </div>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    Ndulamiso holds a degree in Accounting Science and is currently pursuing a further degree in Taxation. She works at the South African Revenue Service (SARS), giving her direct, practitioner-level insight into accounting, financial compliance, and business finance.
+                    Ndulamiso is a co-founder of Graduates Hub. She holds a degree in Accounting Science and is currently pursuing a further degree in Taxation. She works at the South African Revenue Service (SARS), giving her direct, practitioner-level insight into accounting, financial compliance, and business finance.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    She curates the accounting and business content on Graduates Hub, ensuring every recommended course reflects what is actually useful in practice, not just what looks good on paper.
+                    She leads the accounting and business content on Graduates Hub, ensuring every recommended course and career guide reflects what is actually useful in practice, not just what looks good on paper.
                   </p>
                   <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
                     <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"

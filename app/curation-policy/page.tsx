@@ -133,7 +133,7 @@ export default function CurationPolicyPage() {
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <p className="font-extrabold text-gray-900">Ndulamiso Mamburu</p>
-                  <span className="text-xs bg-teal-50 text-teal-700 border border-teal-100 px-2 py-0.5 rounded-full font-bold">Curator</span>
+                  <span className="text-xs bg-teal-50 text-teal-700 border border-teal-100 px-2 py-0.5 rounded-full font-bold">Co-Founder</span>
                 </div>
                 <p className="text-teal-600 text-sm font-semibold mb-2">Accounting Science Graduate · Pursuing Taxation Degree · Works at SARS</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
