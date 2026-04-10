@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronDown, MapPin, Clock, BookOpen, GraduationCap, Building, Star, ExternalLink } from 'lucide-react';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
@@ -119,8 +120,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
           <div className="flex-grow w-full lg:w-[55%] xl:w-[60%] flex flex-col gap-6">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="h-56 sm:h-72 w-full relative">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                <Image src={course.image} alt={course.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 65vw, 55vw" className="object-cover" priority />
               </div>
               <div className="p-6 sm:p-8 lg:p-10">
                 <div className="flex items-center gap-3 mb-4">
@@ -136,8 +136,9 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   if (!curator) return null;
                   return (
                     <div className="flex items-center gap-2.5 mt-4">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={curator.photo} alt={curator.name} className="w-7 h-7 rounded-full object-cover ring-2 ring-white shrink-0" />
+                      <div className="relative w-7 h-7 shrink-0">
+                        <Image src={curator.photo} alt={curator.name} fill sizes="28px" className="rounded-full object-cover ring-2 ring-white" />
+                      </div>
                       <span className="text-sm text-gray-500">
                         Curated by{' '}
                         <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 hover:text-primary transition-colors inline-flex items-center gap-1">

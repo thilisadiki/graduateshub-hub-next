@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Unlock, Clock, Globe, ChevronRight, ExternalLink } from 'lucide-react';
 import Hero from '@/components/Hero';
 import CourseCard from '@/components/CourseCard';
@@ -273,9 +274,8 @@ export default async function Home() {
           <div className="flex flex-col sm:flex-row gap-6">
             {/* Jason */}
             <div className="flex items-start gap-3 flex-1">
-              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-blue-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/jason-sadiki.jpg" alt="Jason Sadiki" className="w-full h-full object-cover" />
+              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-blue-100">
+                <Image src="/jason-sadiki.jpg" alt="Jason Sadiki" fill sizes="48px" className="object-cover" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-extrabold text-gray-900 text-sm">Jason Sadiki</p>
@@ -292,10 +292,8 @@ export default async function Home() {
 
             {/* Ndulamiso */}
             <div className="flex items-start gap-3 flex-1">
-              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-teal-100 bg-teal-50 flex items-center justify-center">
-                {/* Add /ndulamiso-mamburu.jpg to /public when available */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" className="w-full h-full object-cover" />
+              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 ring-2 ring-teal-100">
+                <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" fill sizes="48px" className="object-cover" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-extrabold text-gray-900 text-sm">Ndulamiso Mamburu</p>

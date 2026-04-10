@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Star, Clock } from 'lucide-react';
 import { formatCategoryName } from '@/utils/formatters';
 import type { Course } from '@/types';
@@ -7,8 +8,7 @@ export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all border border-gray-100 group">
       <div className="relative h-48 overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={course.image} alt={course.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        <Image src={course.image} alt={course.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-300" />
         <div className="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">
           {course.tag ? course.tag.toUpperCase() : 'CERTIFICATE'}
         </div>

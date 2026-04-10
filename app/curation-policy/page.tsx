@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink, CheckCircle2, XCircle, RefreshCw, Users } from 'lucide-react';
 
 const SITE_URL = 'https://graduateshub.co.za';
@@ -109,8 +110,9 @@ export default function CurationPolicyPage() {
           <div className="flex flex-col gap-4">
 
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/jason-sadiki.jpg" alt="Jason Sadiki" className="w-12 h-12 rounded-full object-cover ring-2 ring-blue-100 shrink-0" />
+              <div className="relative w-12 h-12 shrink-0">
+                <Image src="/jason-sadiki.jpg" alt="Jason Sadiki" fill sizes="48px" className="rounded-full object-cover ring-2 ring-blue-100" />
+              </div>
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <p className="font-extrabold text-gray-900">Jason Sadiki</p>
@@ -128,8 +130,9 @@ export default function CurationPolicyPage() {
             </div>
 
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" className="w-12 h-12 rounded-full object-cover ring-2 ring-teal-100 shrink-0" />
+              <div className="relative w-12 h-12 shrink-0">
+                <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" fill sizes="48px" className="rounded-full object-cover ring-2 ring-teal-100" />
+              </div>
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <p className="font-extrabold text-gray-900">Ndulamiso Mamburu</p>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } from 'lucide-react';
 
 const SITE_URL = 'https://graduateshub.co.za';
@@ -200,13 +201,9 @@ function CuratorPips({ curators }: { curators: CuratorKey[] }) {
     <div className="flex items-center gap-1.5">
       <div className="flex -space-x-1.5">
         {curators.map((key) => (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
-            key={key}
-            src={CURATORS[key].photo}
-            alt={CURATORS[key].name}
-            className="w-6 h-6 rounded-full object-cover ring-2 ring-white"
-          />
+          <div key={key} className="relative w-6 h-6 shrink-0">
+            <Image src={CURATORS[key].photo} alt={CURATORS[key].name} fill sizes="24px" className="rounded-full object-cover ring-2 ring-white" />
+          </div>
         ))}
       </div>
       <span className="text-xs text-gray-400">
@@ -383,8 +380,9 @@ export default function GuidesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4 flex-1">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/jason-sadiki.jpg" alt="Jason Sadiki" className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-100 shrink-0" />
+              <div className="relative w-14 h-14 shrink-0">
+                <Image src="/jason-sadiki.jpg" alt="Jason Sadiki" fill sizes="56px" className="rounded-full object-cover ring-2 ring-blue-100" />
+              </div>
               <div>
                 <p className="font-extrabold text-gray-900">Jason Sadiki</p>
                 <p className="text-xs text-gray-500 mb-2">Technical SEO Specialist & Web Developer · 7+ years</p>
@@ -400,8 +398,9 @@ export default function GuidesPage() {
             </div>
             <div className="hidden sm:block w-px bg-gray-100 self-stretch" />
             <div className="flex items-start gap-4 flex-1">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" className="w-14 h-14 rounded-full object-cover ring-2 ring-teal-100 shrink-0" />
+              <div className="relative w-14 h-14 shrink-0">
+                <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" fill sizes="56px" className="rounded-full object-cover ring-2 ring-teal-100" />
+              </div>
               <div>
                 <p className="font-extrabold text-gray-900">Ndulamiso Mamburu</p>
                 <p className="text-xs text-gray-500 mb-2">Accounting Science Graduate · SARS</p>
