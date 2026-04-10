@@ -58,33 +58,52 @@ export default function Navbar() {
               Explore <ChevronDown size={14} className={`transition-transform duration-200 ${isCategoriesDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
-            <div className={`absolute top-full left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-lg overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-              <div className="p-2 grid gap-1">
-                <Link href="/career-roadmaps" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors flex items-center gap-2 text-sm font-bold text-primary">
-                  Career Roadmaps <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold">New</span>
-                </Link>
-                <div className="border-t border-gray-100 my-1" />
-                <Link href="/guides" className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider hover:text-primary transition-colors block">Popular Guides</Link>
-                <Link href="/free-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Beginners</Link>
-                <Link href="/free-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses with Certificates</Link>
-                <Link href="/best-alison-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Best Alison Courses</Link>
-                <Link href="/free-courses-for-data-analysts" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Data Analysts</Link>
-                <Link href="/free-ai-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free AI Courses for Beginners</Link>
-                <Link href="/free-digital-marketing-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Digital Marketing Courses</Link>
-                <Link href="/free-courses-for-software-developers" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Software Developers</Link>
-                <Link href="/free-courses-for-accounting-and-finance" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Accounting & Finance</Link>
-                <Link href="/free-business-courses" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Business Courses</Link>
-                <div className="border-t border-gray-100 mt-2 pt-2">
-                  <p className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Categories</p>
+            <div className={`absolute top-full left-0 mt-0 w-[580px] bg-white border border-gray-100 shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+              <div className="grid grid-cols-2 divide-x divide-gray-100">
+
+                {/* Left — Guides & Roadmaps */}
+                <div className="p-4 flex flex-col gap-1">
+                  <Link href="/career-roadmaps" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors mb-1">
+                    <span className="text-sm font-bold text-primary">Career Roadmaps</span>
+                    <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
+                  </Link>
+                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
+                  <Link href="/free-courses-for-beginners" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Beginners</Link>
+                  <Link href="/free-courses-with-certificates" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses with Certificates</Link>
+                  <Link href="/best-alison-courses-with-certificates" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Best Alison Courses</Link>
+                  <Link href="/free-courses-for-data-analysts" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Data Analysts</Link>
+                  <Link href="/free-ai-courses-for-beginners" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free AI Courses for Beginners</Link>
+                  <Link href="/free-digital-marketing-courses" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Digital Marketing Courses</Link>
+                  <Link href="/free-courses-for-software-developers" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Software Developers</Link>
+                  <Link href="/free-courses-for-accounting-and-finance" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Accounting & Finance</Link>
+                  <Link href="/free-business-courses" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Business Courses</Link>
+                  <div className="mt-auto pt-2 border-t border-gray-100">
+                    <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-blue-50 rounded-md transition-colors block text-sm">
+                      View All Guides →
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Right — Browse by Subject */}
+                <div className="p-4 flex flex-col gap-1 bg-gray-50/50">
+                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Browse by Subject</p>
                   {categories.map(cat => (
-                    <Link key={cat.id} href={`/category/${cat.id}`} className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">
-                      {cat.name}
+                    <Link
+                      key={cat.id}
+                      href={`/category/${cat.id}`}
+                      className="flex items-center gap-3 px-3 py-2 hover:bg-white hover:text-primary rounded-lg transition-colors group"
+                    >
+                      <cat.icon size={16} className="text-gray-400 group-hover:text-primary transition-colors shrink-0" strokeWidth={1.75} />
+                      <span className="text-sm text-gray-700 group-hover:text-primary transition-colors">{cat.name}</span>
                     </Link>
                   ))}
-                  <Link href="/categories" className="px-4 py-2 text-primary font-semibold hover:bg-blue-50 rounded-md transition-colors block text-center text-sm">
-                    View All Subjects →
-                  </Link>
+                  <div className="mt-auto pt-2 border-t border-gray-200">
+                    <Link href="/categories" className="px-3 py-1.5 text-primary font-semibold hover:bg-white rounded-md transition-colors block text-sm">
+                      View All Subjects →
+                    </Link>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
