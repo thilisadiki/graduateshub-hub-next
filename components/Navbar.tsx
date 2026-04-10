@@ -60,6 +60,10 @@ export default function Navbar() {
 
             <div className={`absolute top-full left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-lg overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
               <div className="p-2 grid gap-1">
+                <Link href="/career-roadmaps" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors flex items-center gap-2 text-sm font-bold text-primary">
+                  Career Roadmaps <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold">New</span>
+                </Link>
+                <div className="border-t border-gray-100 my-1" />
                 <Link href="/guides" className="px-4 py-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider hover:text-primary transition-colors block">Popular Guides</Link>
                 <Link href="/free-courses-for-beginners" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses for Beginners</Link>
                 <Link href="/free-courses-with-certificates" className="px-4 py-2 hover:bg-blue-50 hover:text-primary rounded-md transition-colors block text-sm font-medium text-gray-700">Free Courses with Certificates</Link>
@@ -159,6 +163,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
         <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-b border-gray-100">Home</Link>
+        <Link href="/career-roadmaps" onClick={toggleMobileMenu} className="font-bold text-primary hover:text-blue-800 py-3 border-b border-gray-100 flex items-center gap-2">
+          Career Roadmaps <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full">New</span>
+        </Link>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
           <Link href="/free-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Beginners</Link>

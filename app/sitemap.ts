@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
+import { roadmaps } from '@/data/roadmaps';
 
 const SITE_URL = 'https://graduateshub.co.za';
 
@@ -33,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/free-courses-for-software-developers`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-courses-for-accounting-and-finance`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-business-courses`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/career-roadmaps`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/curation-policy`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.4 },
@@ -56,5 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryPages, ...coursePages];
+  const roadmapPages: MetadataRoute.Sitemap = roadmaps.map((r) => ({
+    url: `${SITE_URL}/career-roadmaps/${r.id}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...categoryPages, ...coursePages, ...roadmapPages];
 }

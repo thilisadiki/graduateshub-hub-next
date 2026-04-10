@@ -313,6 +313,25 @@ export default function GuidesPage() {
           </section>
         ))}
 
+        {/* Career Roadmaps CTA */}
+        <section className="mb-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 justify-between">
+            <div>
+              <span className="text-xs font-bold bg-white/20 text-white px-2.5 py-1 rounded-full mb-3 inline-block">New</span>
+              <h2 className="text-2xl font-extrabold mb-2">Not sure which courses to take?</h2>
+              <p className="text-blue-100 text-sm max-w-xl leading-relaxed">
+                Our Career Roadmaps go further than guides. Each one maps the full path from zero experience to job-ready — with specific stages, free courses at every step, certifications worth getting, and portfolio project ideas.
+              </p>
+            </div>
+            <Link
+              href="/career-roadmaps"
+              className="shrink-0 bg-white text-primary hover:bg-blue-50 font-bold px-7 py-3.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+            >
+              Explore Career Roadmaps →
+            </Link>
+          </div>
+        </section>
+
         {/* How Our Guides Are Different */}
         <section className="bg-white border border-gray-100 rounded-2xl shadow-sm p-8 lg:p-12 mb-14">
           <div className="max-w-2xl mb-8">

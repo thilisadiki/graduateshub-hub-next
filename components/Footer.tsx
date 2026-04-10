@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-gray-300 py-12 px-6 border-t border-slate-800">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
 
         {/* Brand */}
         <div className="sm:col-span-2 md:col-span-4 lg:col-span-2">
@@ -37,6 +37,20 @@ export default function Footer() {
             <li><Link href="/free-courses-for-software-developers" className="hover:text-blue-400 transition-colors">Free Courses for Software Developers</Link></li>
             <li><Link href="/free-business-courses" className="hover:text-blue-400 transition-colors">Free Business Courses</Link></li>
             <li><Link href="/guides" className="hover:text-blue-400 transition-colors font-medium">View All Guides →</Link></li>
+          </ul>
+        </div>
+
+        {/* Career Roadmaps */}
+        <div>
+          <h3 className="text-lg font-bold text-white mb-4">Career Roadmaps</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst</Link></li>
+            <li><Link href="/career-roadmaps/it-support-specialist" className="hover:text-blue-400 transition-colors">IT Support Specialist</Link></li>
+            <li><Link href="/career-roadmaps/web-developer" className="hover:text-blue-400 transition-colors">Web Developer</Link></li>
+            <li><Link href="/career-roadmaps/digital-marketing-specialist" className="hover:text-blue-400 transition-colors">Digital Marketing Specialist</Link></li>
+            <li><Link href="/career-roadmaps/junior-accountant" className="hover:text-blue-400 transition-colors">Junior Accountant</Link></li>
+            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-blue-400 transition-colors">Business Analyst</Link></li>
+            <li><Link href="/career-roadmaps" className="hover:text-blue-400 transition-colors font-medium">All Roadmaps →</Link></li>
           </ul>
         </div>
 
