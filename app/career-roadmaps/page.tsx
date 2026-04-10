@@ -7,12 +7,12 @@ import type { CareerRoadmap } from '@/types';
 const SITE_URL = 'https://graduateshub.co.za';
 
 export const metadata: Metadata = {
-  title: 'Career Roadmaps — How to Break Into Any Field | Graduates Hub',
+  title: 'Career Roadmaps: How to Break Into Any Field | Graduates Hub',
   description:
     'Step-by-step career roadmaps for data analysis, IT support, web development, digital marketing, accounting, and business analysis. Curated by working professionals. Free to follow.',
   alternates: { canonical: `${SITE_URL}/career-roadmaps` },
   openGraph: {
-    title: 'Career Roadmaps — How to Break Into Any Field | Graduates Hub',
+    title: 'Career Roadmaps: How to Break Into Any Field | Graduates Hub',
     description:
       'Step-by-step career roadmaps for data analysis, IT support, web development, digital marketing, accounting, and business analysis. Curated by working professionals. Free to follow.',
     url: `${SITE_URL}/career-roadmaps`,
@@ -91,7 +91,7 @@ export default function CareerRoadmapsPage() {
 
         {/* Trust note */}
         <div className="mt-6 mb-12 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 text-sm text-blue-700 max-w-2xl">
-          Every roadmap is curated by a named specialist with real-world experience in that field — not generated from a generic list.
+          Every roadmap is curated by a named specialist with real-world experience in that field, not generated from a generic list.
           <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-blue-900 transition-colors">
             How we curate →
           </Link>

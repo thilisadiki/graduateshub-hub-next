@@ -11,7 +11,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
   demandLevel: 'High',
   entryLevel: true,
   description:
-    'A practical roadmap for entering business analysis. Covers project management, Agile, process improvement, information systems, and AI in business — curated by Ndulamiso Mamburu, an Accounting Science graduate with corporate experience at SARS.',
+    'A practical roadmap for entering business analysis. Covers project management, Agile, process improvement, information systems, and AI in business. Curated by Ndulamiso Mamburu, an Accounting Science graduate with corporate experience at SARS.',
   overview:
     'Business analysts are the translators of the corporate world. They sit between the people who have a business problem and the people who build the technical solution. A BA\'s job is to understand what a business needs, document it precisely, model the current and future state of processes, and communicate requirements in a way that development teams can act on.\n\nThe role is highly accessible to people with a mix of business and technical interest. You do not need to write code, but you do need to understand how systems work and how businesses operate. Graduates with backgrounds in accounting, finance, management, or IT are all natural candidates for business analysis. This roadmap was curated by Ndulamiso Mamburu, who brings direct corporate experience in navigating the intersection of business operations and technology.',
   jobTitles: [
@@ -42,7 +42,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
       title: 'Understand How Organisations Use Information',
       duration: '3–4 weeks',
       description:
-        'Business analysts work within organisations, and those organisations are powered by information systems. Before you can analyse business requirements, you need to understand how information flows through a company — how systems capture data, how decisions are made, and how technology either enables or constrains business strategy. This foundational stage gives you the conceptual framework that underpins every BA deliverable.',
+        'Business analysts work within organisations, and those organisations are powered by information systems. Before you can analyse business requirements, you need to understand how information flows through a company: how systems capture data, how decisions are made, and how technology either enables or constrains business strategy. This foundational stage gives you the conceptual framework that underpins every BA deliverable.',
       courseIds: ['management-information-systems', 'information-systems-technology-business-models'],
       milestone:
         'You can describe how management information systems support organisational strategy, and map how data flows through a typical business process.',
@@ -52,7 +52,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
       title: 'Master Project and Process Management',
       duration: '8–10 weeks',
       description:
-        'Business analysts almost always work within project teams. Understanding how projects are initiated, planned, and delivered is not optional — it is the context in which all your BA work happens. This stage covers the full project lifecycle using both traditional and Agile frameworks, giving you the vocabulary and tools to function effectively on any type of project team.',
+        'Business analysts almost always work within project teams. Understanding how projects are initiated, planned, and delivered is not optional; it is the context in which all your BA work happens. This stage covers the full project lifecycle using both traditional and Agile frameworks, giving you the vocabulary and tools to function effectively on any type of project team.',
       courseIds: ['diploma-project-management', 'agile-project-management'],
       milestone:
         'You can create a project scope document, write User Stories, manage a Product Backlog, and describe the difference between Waterfall and Agile delivery approaches.',
@@ -62,7 +62,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
       title: 'Learn Process Improvement Methodologies',
       duration: '5–6 weeks',
       description:
-        'A major part of a BA\'s work is identifying inefficiencies in current business processes and designing improvements. Lean Six Sigma provides the structured methodology for doing this — how to define a problem, measure its impact, analyse root causes, design a solution, and control the improvement. These frameworks are used in manufacturing, financial services, healthcare, and government across South Africa.',
+        'A major part of a BA\'s work is identifying inefficiencies in current business processes and designing improvements. Lean Six Sigma provides the structured methodology for doing this: how to define a problem, measure its impact, analyse root causes, design a solution, and control the improvement. These frameworks are used in manufacturing, financial services, healthcare, and government across South Africa.',
       courseIds: ['lean-six-sigma-yellow-belt', 'lean-six-sigma-white-belt'],
       milestone:
         'You can apply the DMAIC framework to a real or fictional business process, identify waste and variation, and propose a measurable improvement.',

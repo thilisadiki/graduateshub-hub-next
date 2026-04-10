@@ -320,7 +320,7 @@ export default function GuidesPage() {
               <span className="text-xs font-bold bg-white/20 text-white px-2.5 py-1 rounded-full mb-3 inline-block">New</span>
               <h2 className="text-2xl font-extrabold mb-2">Not sure which courses to take?</h2>
               <p className="text-blue-100 text-sm max-w-xl leading-relaxed">
-                Our Career Roadmaps go further than guides. Each one maps the full path from zero experience to job-ready — with specific stages, free courses at every step, certifications worth getting, and portfolio project ideas.
+                Our Career Roadmaps go further than guides. Each one maps the full path from zero experience to job-ready, with specific stages, free courses at every step, certifications worth getting, and portfolio project ideas.
               </p>
             </div>
             <Link

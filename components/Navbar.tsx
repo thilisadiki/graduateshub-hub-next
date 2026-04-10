@@ -61,7 +61,7 @@ export default function Navbar() {
             <div className={`absolute top-full left-0 mt-0 w-[580px] bg-white border border-gray-100 shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
               <div className="grid grid-cols-2 divide-x divide-gray-100">
 
-                {/* Left — Guides & Roadmaps */}
+                {/* Left: Guides and Roadmaps */}
                 <div className="p-4 flex flex-col gap-1">
                   <Link href="/career-roadmaps" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors mb-1">
                     <span className="text-sm font-bold text-primary">Career Roadmaps</span>
@@ -84,7 +84,7 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                {/* Right — Browse by Subject */}
+                {/* Right: Browse by Subject */}
                 <div className="p-4 flex flex-col gap-1 bg-gray-50/50">
                   <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Browse by Subject</p>
                   {categories.map(cat => (

@@ -93,7 +93,7 @@ export default function Footer() {
           >
             Jason Sadiki
           </a>
-          {' '}&mdash; Technical SEO Specialist &amp; Web Developer.
+          . Technical SEO Specialist &amp; Web Developer.
         </p>
       </div>
     </footer>

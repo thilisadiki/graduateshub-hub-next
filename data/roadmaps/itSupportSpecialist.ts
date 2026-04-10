@@ -13,7 +13,7 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
   description:
     'A practical roadmap for breaking into IT support. Covers hardware fundamentals, networking, service management (ITIL 4), and the compliance frameworks every corporate IT team uses.',
   overview:
-    'IT support is the most accessible entry point into a technology career. Companies of every size — banks, hospitals, retailers, government departments — employ IT support staff to keep systems running, troubleshoot user problems, and manage hardware and software infrastructure. The role does not require a degree, and the skills are entirely learnable through structured self-study.\n\nMore importantly, IT support is a launchpad. Most network engineers, systems administrators, and IT managers started in a support or helpdesk role. The knowledge you build here — how hardware works, how networks route traffic, how ITIL frameworks govern service delivery — applies directly to more advanced roles you will grow into.',
+    'IT support is the most accessible entry point into a technology career. Companies of every size (banks, hospitals, retailers, government departments) employ IT support staff to keep systems running, troubleshoot user problems, and manage hardware and software infrastructure. The role does not require a degree, and the skills are entirely learnable through structured self-study.\n\nMore importantly, IT support is a launchpad. Most network engineers, systems administrators, and IT managers started in a support or helpdesk role. The knowledge you build here (how hardware works, how networks route traffic, how ITIL frameworks govern service delivery) applies directly to more advanced roles you will grow into.',
   jobTitles: [
     'IT Support Specialist',
     'Helpdesk Technician',
@@ -42,17 +42,17 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
       title: 'Understand How Computers Actually Work',
       duration: '2–3 weeks',
       description:
-        'Before you can support users, you need a solid mental model of what you are supporting. This stage covers the physical and logical components of a computer — CPU, RAM, storage, operating systems, and how software interacts with hardware. This is the knowledge that lets you diagnose whether a problem is hardware, OS, network, or application-level.',
+        'Before you can support users, you need a solid mental model of what you are supporting. This stage covers the physical and logical components of a computer: CPU, RAM, storage, operating systems, and how software interacts with hardware. This is the knowledge that lets you diagnose whether a problem is hardware, OS, network, or application-level.',
       courseIds: ['intro-computer-hardware-software'],
       milestone:
         'You can explain the function of core hardware components and describe how an operating system manages resources.',
     },
     {
       number: 2,
-      title: 'Learn Networking — How Computers Talk to Each Other',
+      title: 'Learn Networking: How Computers Talk to Each Other',
       duration: '6–8 weeks',
       description:
-        'Networking is the backbone of IT support. The majority of support tickets in a corporate environment are network-related — a device that cannot connect, a VPN that will not authenticate, a printer that is offline. This stage covers the OSI model, TCP/IP, IP addressing, routers, switches, and LAN configuration. You will study two complementary courses: one covering core networking theory and one diving into LAN and OSI specifics.',
+        'Networking is the backbone of IT support. The majority of support tickets in a corporate environment are network-related: a device that cannot connect, a VPN that will not authenticate, a printer that is offline. This stage covers the OSI model, TCP/IP, IP addressing, routers, switches, and LAN configuration. You will study two complementary courses: one covering core networking theory and one diving into LAN and OSI specifics.',
       courseIds: ['computer-networking', 'computer-networking-lan-osi'],
       milestone:
         'You can configure a basic LAN, explain how IP addressing works, and diagnose common connectivity failures.',
@@ -62,7 +62,7 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
       title: 'Learn the ITIL 4 Service Management Framework',
       duration: '3–4 weeks',
       description:
-        'ITIL 4 is the global standard for how IT departments operate. In any medium-to-large organisation, your work as an IT support specialist will be governed by ITIL principles — how incidents are logged, how changes are approved, how service requests are fulfilled. Without this knowledge, you will be operating blind in a corporate IT environment. With it, you speak the language your managers and clients use every day.',
+        'ITIL 4 is the global standard for how IT departments operate. In any medium-to-large organisation, your work as an IT support specialist will be governed by ITIL principles: how incidents are logged, how changes are approved, how service requests are fulfilled. Without this knowledge, you will be operating blind in a corporate IT environment. With it, you speak the language your managers and clients use every day.',
       courseIds: ['foundations-of-itil-4'],
       milestone:
         'You can explain the ITIL 4 Service Value System, the guiding principles, and the key management practices including incident and change management.',
@@ -99,7 +99,7 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
     },
   ],
   portfolioProjects: [
-    'Home lab setup: configure a small LAN with a router, switch, and two devices — document the IP scheme and troubleshoot a simulated failure',
+    'Home lab setup: configure a small LAN with a router, switch, and two devices. Document the IP scheme and troubleshoot a simulated failure',
     'Network diagram: produce a documented topology diagram for a fictional 20-person office',
     'Incident log: create a sample ITIL-compliant incident management log with 10 realistic support tickets',
     'Troubleshooting guide: write a step-by-step guide for resolving the 5 most common user issues (no internet, printer offline, password reset, slow PC, email not syncing)',
