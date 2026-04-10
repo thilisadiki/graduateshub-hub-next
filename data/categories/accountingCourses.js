@@ -148,7 +148,18 @@ export const accountingCourses = [
         rating: 4.7,
         image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/payroll-essentials-for-small-businesses?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn how to accurately manage, process, and execute payroll functions for a small business setup."
+        description: "Learn how to accurately manage, process, and execute payroll functions for a small business setup.",
+        longDescription: "Running payroll incorrectly is one of the most costly mistakes a small business owner can make. Late submissions to SARS, incorrect PAYE calculations, or underpaid UIF contributions can result in penalties, interest charges, and damaged relationships with employees. 'Payroll Essentials for Small Businesses' is a focused, practical course designed to give business owners and office administrators the knowledge to run payroll accurately from the start. The course covers the full payroll cycle: calculating gross remuneration, applying statutory deductions such as PAYE, UIF, and SDL, processing net pay, and submitting the required returns to SARS. You will learn how payroll integrates with your bookkeeping records and how to reconcile payroll journals against your bank statements at month end.",
+        outcomes: [
+            "Calculate gross-to-net pay for employees across different pay structures (hourly, salary, commission).",
+            "Apply current PAYE tax tables to determine the correct monthly withholding for each employee.",
+            "Calculate and process UIF and SDL contributions in line with South African statutory requirements.",
+            "Prepare and submit the EMP201 monthly employer return to SARS on time.",
+            "Reconcile payroll records against bank statements and general ledger entries accurately."
+        ],
+        careerPath: "This course is the ideal starting point for small business owners, office managers, or bookkeepers who handle payroll as part of a broader role. It also provides a solid foundation for anyone pursuing a formal payroll administration qualification through the ICB or similar body.",
+        targetAudience: "Small business owners processing their own payroll, bookkeepers expanding into payroll functions, and office administrators in growing SMEs who have recently taken on payroll responsibilities.",
+        editorsTake: "In South Africa, SARS actively audits employer payroll submissions. Getting the PAYE and UIF calculations wrong is not just an accounting error; it is a compliance risk. This course is one of the most immediately practical courses we list. After completing it, a business owner can run their own payroll confidently and accurately, which for many small SA businesses saves thousands of rands in outsourced payroll fees every month."
     },
     {
         id: "accounting-for-inventory",
@@ -160,7 +171,18 @@ export const accountingCourses = [
         rating: 4.6,
         image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/accounting-for-inventory?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Gain a deeper understanding of documenting, tracking, and valuing inventory in financial records."
+        description: "Gain a deeper understanding of documenting, tracking, and valuing inventory in financial records.",
+        longDescription: "For any business that buys and sells physical goods, inventory is often the largest single item on the balance sheet. Getting the accounting for it wrong distorts the cost of sales figure, which in turn distorts gross profit and tax liability. 'Accounting for Inventory' is a targeted course that teaches you how to record, track, and value stock accurately. The course covers the three primary inventory valuation methods: First-In First-Out (FIFO), Last-In First-Out (LIFO), and the Weighted Average Cost method. You will learn how each method produces a different closing stock value and cost of sales figure, and why the choice of method matters significantly for financial reporting and taxation. The course also covers inventory adjustments, stock write-offs, and how to reconcile physical stock counts against your accounting records.",
+        outcomes: [
+            "Record inventory purchases, sales, and returns using both periodic and perpetual inventory systems.",
+            "Calculate closing stock values using FIFO, LIFO, and Weighted Average Cost methods.",
+            "Understand how the choice of inventory valuation method affects gross profit and taxable income.",
+            "Process stock adjustments and write-offs correctly in the general ledger.",
+            "Reconcile physical stock count results against accounting records and investigate variances."
+        ],
+        careerPath: "Inventory accounting is a core skill for bookkeepers and accountants working in retail, manufacturing, or wholesale businesses. Competency in this area is a prerequisite for roles such as Stock Controller, Retail Accountant, or Management Accountant.",
+        targetAudience: "Bookkeepers and junior accountants working in product-based businesses, students studying towards ICB or SAICA qualifications, and small business owners in retail or manufacturing who manage their own accounts.",
+        editorsTake: "Inventory errors are notoriously difficult to detect and expensive to fix, especially at year-end audit time. This course is valuable precisely because it explains not just the mechanics of each valuation method, but the tax and reporting implications of choosing one over another. That context is what separates a technically competent bookkeeper from one who genuinely understands the numbers."
     },
     {
         id: "payroll-computation-bookkeeping",
@@ -172,7 +194,18 @@ export const accountingCourses = [
         rating: 4.8,
         image: "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/payroll-computation-and-bookkeeping?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Specialized training on processing payroll calculations and merging them with formal bookkeeping."
+        description: "Specialized training on processing payroll calculations and merging them with formal bookkeeping.",
+        longDescription: "Payroll and bookkeeping are two disciplines that most small businesses keep separate, but in practice they are deeply intertwined. Every payroll run produces a set of journal entries that must flow correctly through the general ledger: the wages expense, the PAYE payable, the UIF payable, and the net bank payment. When these entries are incorrect, the trial balance does not reflect the true cost of employment, and tax reconciliations fail. 'Payroll Computation and Bookkeeping' bridges this gap by teaching you both the mechanical calculation of payroll and the corresponding bookkeeping entries that follow. The course covers gross pay computation for different employee types, statutory deduction calculations, and how to record all of this accurately in the accounting system so that month-end reconciliations are clean and the EMP201 submission to SARS matches the ledger.",
+        outcomes: [
+            "Compute gross pay for hourly, salaried, and commission-based employees accurately.",
+            "Calculate all statutory deductions including PAYE, UIF, SDL, and pension fund contributions.",
+            "Record payroll journal entries in the general ledger, including employer contributions.",
+            "Reconcile the payroll control account against the bank and liability accounts at month end.",
+            "Prepare supporting schedules that tie the payroll run to the SARS EMP201 submission."
+        ],
+        careerPath: "A highly practical qualification for bookkeepers and payroll administrators working in small to medium-sized businesses across South Africa. This certificate is also a strong complement to ICB Bookkeeping and Payroll qualifications.",
+        targetAudience: "Bookkeepers who need to integrate payroll into their general ledger work, payroll administrators who want to understand the accounting side of their function, and students completing ICB or similar payroll courses.",
+        editorsTake: "Many bookkeepers can process the payroll run but struggle to record it correctly in the accounting system. This course fixes that gap directly. The section on payroll journal entries is particularly useful because it shows you exactly which accounts to debit and credit for each component of the pay run, making month-end reconciliations far less stressful."
     },
     {
         id: "internal-auditing",
@@ -184,7 +217,18 @@ export const accountingCourses = [
         rating: 4.8,
         image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/internal-auditing-fundamental-principles-and-concepts?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn the core principles and concepts essential for effective internal business auditing."
+        description: "Learn the core principles and concepts essential for effective internal business auditing.",
+        longDescription: "Internal audit is the independent function within an organisation that evaluates whether financial controls, risk management processes, and governance frameworks are working as they should. In South Africa, the King IV Report on Corporate Governance places significant emphasis on the role of internal audit in ensuring organisational accountability. This course introduces the fundamental principles that underpin effective internal audit practice. You will learn how the internal audit function fits within the broader governance structure of an organisation, how to plan and execute a basic audit assignment, and how to document findings and communicate them to management. The course also covers the key frameworks that guide internal audit work, including the IIA (Institute of Internal Auditors) International Standards.",
+        outcomes: [
+            "Explain the purpose and scope of the internal audit function within an organisation.",
+            "Identify the key components of an effective internal control framework.",
+            "Plan a basic internal audit assignment using a risk-based approach.",
+            "Document audit evidence and prepare a clear, factual audit finding.",
+            "Understand the reporting relationship between internal audit and the audit committee."
+        ],
+        careerPath: "This certificate is an entry point into one of the most stable and in-demand areas of South African corporate finance. Internal audit roles exist in banks, government entities, retail groups, and all JSE-listed companies. Junior Internal Auditor and Compliance Trainee are typical starting positions.",
+        targetAudience: "Accounting graduates and finance students exploring a career in audit or compliance, bookkeepers and accountants looking to transition into a risk and controls function, and finance professionals in public sector entities where internal audit is mandatory.",
+        editorsTake: "In the South African context, internal audit is not optional for many organisations. Government departments, municipalities, and listed companies are all required to maintain internal audit functions under the Public Finance Management Act (PFMA) or the Companies Act. This course gives you a clear, accessible introduction to the discipline without requiring a full accounting qualification first, making it a smart early investment for anyone considering this career path."
     },
     {
         id: "accounts-payable-management",
@@ -196,7 +240,18 @@ export const accountingCourses = [
         rating: 4.7,
         image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/accounts-payable-management?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Master the processes of managing outgoing liabilities and vendor relations effectively."
+        description: "Master the processes of managing outgoing liabilities and vendor relations effectively.",
+        longDescription: "Accounts payable is one of the most operationally critical functions in any finance department. Paying suppliers late damages business relationships and can result in supply chain disruptions. Paying them incorrectly or without proper authorisation exposes the business to fraud and financial loss. 'Accounts Payable Management' covers the full creditors cycle from invoice receipt to payment processing. You will learn how to verify invoices against purchase orders and delivery notes using the three-way matching process, how to manage supplier statements and reconcile creditor accounts, and how to process payment runs efficiently. The course also covers the internal controls that protect the accounts payable function, including segregation of duties and authorisation hierarchies that are required in any well-run finance department.",
+        outcomes: [
+            "Process supplier invoices using the three-way matching process to prevent unauthorised payments.",
+            "Reconcile supplier statements against the creditors ledger and resolve discrepancies.",
+            "Manage payment terms and prepare payment runs that optimise cash flow without damaging supplier relations.",
+            "Implement internal controls to prevent duplicate payments, fraud, and authorisation bypass.",
+            "Maintain an accurate creditors age analysis and escalate overdue items appropriately."
+        ],
+        careerPath: "Accounts payable is a well-defined entry-level function in South African corporate finance. It is a common starting role at banks, retail groups, and manufacturing companies. Creditors Clerk and Accounts Payable Administrator are typical positions, with a clear pathway to Senior Creditors Controller or Finance Manager over time.",
+        targetAudience: "Junior finance staff taking on creditors responsibilities, bookkeepers who manage the full creditors function in small businesses, and accounting students who want practical knowledge of how accounts payable works in a corporate environment.",
+        editorsTake: "Creditors is one of the few accounting functions where a single process error can have immediate, visible consequences: a supplier puts your account on hold and delivery stops. This course is practical and specific enough to give someone the confidence to manage a creditors function from day one. The section on three-way matching and internal controls is especially relevant in the South African corporate environment where procurement fraud is a significant risk."
     },
     {
         id: "diploma-effective-bookkeeping-payroll",
@@ -208,7 +263,18 @@ export const accountingCourses = [
         rating: 4.9,
         image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/diploma-in-effective-bookkeeping-and-payroll?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "A comprehensive diploma covering advanced bookkeeping strategies and integrated payroll systems."
+        description: "A comprehensive diploma covering advanced bookkeeping strategies and integrated payroll systems.",
+        longDescription: "Bookkeeping and payroll are the two most in-demand practical finance skills for entry-level roles across South Africa. Most small and medium businesses do not employ a full-time accountant; instead, they need a bookkeeper who can also run the payroll and ensure the business is compliant with SARS obligations. This diploma covers both disciplines comprehensively. On the bookkeeping side, you will progress from basic journal entries through to the complete accounting cycle including trial balance, adjusting entries, and financial statement preparation. On the payroll side, the diploma covers the calculation of all statutory deductions, the preparation of payslips, and the submission process for SARS employer returns. By combining both disciplines in a single qualification, this diploma prepares you for the multi-functional finance roles that South African SMEs typically advertise.",
+        outcomes: [
+            "Complete the full bookkeeping cycle from source documents through to prepared financial statements.",
+            "Manage debtors and creditors ledgers, bank reconciliations, and petty cash.",
+            "Calculate and process a complete payroll run including all statutory deductions.",
+            "Prepare and submit the EMP201 monthly return and reconcile to the EMP501 annual return.",
+            "Understand the interaction between payroll journals and the general ledger."
+        ],
+        careerPath: "This diploma is directly aligned with the roles most commonly advertised by South African SMEs: Bookkeeper, Payroll Administrator, and Finance Administrator. Holding this qualification alongside a practical tool like Pastel or Xero makes a candidate very employable at entry level.",
+        targetAudience: "Individuals entering the finance field for the first time, existing administrative staff looking to formalise their bookkeeping and payroll skills, and entrepreneurs who want to manage their own business finances and payroll without outsourcing.",
+        editorsTake: "This is the single most practical accounting qualification on this platform for the South African job market. The combination of bookkeeping and payroll in one diploma reflects exactly what most local employers actually need from a junior finance hire. If you only have time for one accounting course, this is the one to choose."
     },
     {
         id: "purchase-ledger-management",
@@ -220,7 +286,18 @@ export const accountingCourses = [
         rating: 4.6,
         image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/purchase-ledger-management?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Develop the skills to accurately maintain purchase ledgers and track business expenses."
+        description: "Develop the skills to accurately maintain purchase ledgers and track business expenses.",
+        longDescription: "The purchase ledger is the formal record of everything a business owes its suppliers at any given point in time. It is the foundation of accounts payable and directly informs the current liabilities section of the balance sheet. A poorly managed purchase ledger leads to duplicate payments, missed invoices, inaccurate financial statements, and supplier disputes. 'Purchase Ledger Management' is a focused, practical course that teaches you how to maintain an accurate and complete creditors ledger. You will learn how to capture supplier invoices and credit notes, apply payments and discounts correctly, and produce an aged creditors report that shows exactly what is owed and to which supplier. The course also covers VAT treatment on purchases and the documentation required to support input VAT claims.",
+        outcomes: [
+            "Capture supplier invoices and credit notes accurately in the purchase ledger.",
+            "Process supplier payments and apply settlement discounts where applicable.",
+            "Produce and interpret a creditors age analysis to manage outstanding liabilities.",
+            "Reconcile supplier statements against the purchase ledger and investigate differences.",
+            "Understand the correct VAT treatment of purchases and supporting documentation for input VAT."
+        ],
+        careerPath: "Purchase ledger management is a clearly defined entry-level function in South African finance departments, particularly in medium to large businesses with multiple suppliers. Creditors Clerk and Purchase Ledger Administrator are common starting roles, with progression to Creditors Supervisor or Finance Officer.",
+        targetAudience: "Junior finance clerks taking on creditors responsibilities, bookkeepers managing the purchase ledger in small businesses, and accounting students who want practical knowledge of how the creditors function operates day-to-day.",
+        editorsTake: "A clean purchase ledger is one of the clearest indicators of a well-run finance department. This course teaches the discipline and accuracy required to maintain one. We particularly value the coverage of VAT documentation requirements, since input VAT claims are a routine part of SA bookkeeping and SARS audits of VAT vendors routinely examine purchase ledger records."
     },
     {
         id: "mastering-financial-statement-analysis",
@@ -232,7 +309,18 @@ export const accountingCourses = [
         rating: 4.8,
         image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/mastering-financial-statement-analysis?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Advanced training on interpreting financial records to assess company performance."
+        description: "Advanced training on interpreting financial records to assess company performance.",
+        longDescription: "Preparing financial statements is one skill. Understanding what they are telling you is another, and arguably more valuable one. 'Mastering Financial Statement Analysis' teaches you how to read the numbers behind a set of accounts and draw meaningful conclusions about the health, profitability, and sustainability of a business. The course goes beyond the basics of identifying which figure is revenue and which is profit. You will learn how to apply financial ratios across the three core categories: liquidity ratios to assess whether a business can meet its short-term obligations, profitability ratios to measure how efficiently it generates earnings, and solvency ratios to evaluate long-term financial stability. The course also covers horizontal analysis (comparing performance across periods) and vertical analysis (expressing each line as a percentage of a base figure), which are standard tools in management accounting.",
+        outcomes: [
+            "Apply liquidity ratios (current ratio, quick ratio) to assess short-term financial health.",
+            "Use profitability ratios (gross margin, return on equity) to evaluate business performance.",
+            "Interpret solvency ratios (debt-to-equity, interest coverage) to assess long-term financial risk.",
+            "Perform horizontal and vertical analysis on income statements and balance sheets.",
+            "Identify red flags in a set of financial statements that may indicate financial distress or manipulation."
+        ],
+        careerPath: "Financial statement analysis is a skill that opens doors across multiple career paths. It is directly relevant for roles in credit analysis, investment banking, management accounting, financial consulting, and financial journalism. It is also a core competency tested in CFA, ACCA, and CIMA examinations.",
+        targetAudience: "Accounting students and graduates who can prepare financial statements but want to develop the analytical skill of interpreting them, finance professionals moving into commercial or credit roles, and business owners who want to understand their own numbers more deeply.",
+        editorsTake: "Being able to read a set of accounts is a skill that is genuinely rare outside of finance circles. This course teaches you to look at a balance sheet and spot whether a company is over-leveraged, or to look at a cash flow statement and identify why a profitable business might be running out of cash. These are insights that are valuable regardless of what role you are in, which is why we consider this one of the most broadly useful accounting courses on the platform."
     },
     {
         id: "introduction-bookkeeping-accounting",
@@ -244,7 +332,18 @@ export const accountingCourses = [
         rating: 4.7,
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/introduction-to-bookkeeping-and-accounting-methods?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "A beginner-friendly guide to standard accounting practices and primary bookkeeping methods."
+        description: "A beginner-friendly guide to standard accounting practices and primary bookkeeping methods.",
+        longDescription: "Bookkeeping is the day-to-day recording of financial transactions. It is the foundation on which all accounting and financial reporting is built. Without accurate bookkeeping records, a business cannot produce reliable financial statements, cannot file accurate tax returns, and cannot make informed financial decisions. 'Introduction to Bookkeeping and Accounting Methods' is designed for complete beginners who want to build a solid practical foundation. The course introduces the accounting equation, the double-entry bookkeeping system, and the different types of accounts in a chart of accounts. You will learn how to record typical business transactions: sales, purchases, payments, and receipts, and how these flow through the journals into the ledgers. By the end of the course you will understand how the bookkeeping process feeds into the trial balance and ultimately the financial statements.",
+        outcomes: [
+            "Understand the double-entry bookkeeping principle and the accounting equation.",
+            "Identify the different account types in a chart of accounts and classify transactions correctly.",
+            "Record common business transactions in the appropriate journals.",
+            "Post journal entries to the general ledger and produce a trial balance.",
+            "Differentiate between cash basis and accrual basis accounting and understand when each applies."
+        ],
+        careerPath: "This is the natural starting point for anyone who wants to work in finance or run their own business. It provides the foundational knowledge required before progressing to more advanced qualifications like the ICB Level 2 Bookkeeping certificate or the Diploma in Financial Accounting.",
+        targetAudience: "Complete beginners with no prior accounting knowledge, small business owners who want to understand their own bookkeeping records, and students preparing for formal accounting studies who want a practical introduction before starting a formal qualification.",
+        editorsTake: "Every accountant started here. This course is valuable precisely because it does not skip steps. It takes the time to explain why we record things in a particular way, not just how, which means you build genuine understanding rather than rote memorisation. That foundation makes every subsequent accounting topic significantly easier to grasp."
     },
     {
         id: "introduction-payroll-accounting",
@@ -256,7 +355,18 @@ export const accountingCourses = [
         rating: 4.6,
         image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/introduction-to-payroll-accounting?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Learn the fundamentals of payroll laws, salary calculations, and employee compensation tracking."
+        description: "Learn the fundamentals of payroll laws, salary calculations, and employee compensation tracking.",
+        longDescription: "Payroll is one of the most legally regulated areas of business finance. In South Africa, employers are required to calculate and withhold PAYE (Pay As You Earn tax) on behalf of their employees, contribute to UIF (Unemployment Insurance Fund), and pay SDL (Skills Development Levy) if their annual payroll exceeds the threshold. Getting any of these wrong creates a SARS liability. 'Introduction to Payroll Accounting' establishes the conceptual and practical foundation for understanding how payroll works. The course covers the legal framework governing employee compensation, the different types of remuneration and how they are taxed, and the step-by-step process for calculating net pay. You will also learn how payroll records are maintained, what a payslip must legally contain, and how annual IRP5 reconciliations and EMP501 submissions work.",
+        outcomes: [
+            "Identify the different components of an employee's remuneration package and their tax treatment.",
+            "Apply the PAYE calculation methodology using SARS tax tables for the relevant tax year.",
+            "Calculate UIF and SDL contributions for both the employee and employer.",
+            "Understand the legal requirements for payslip content and payroll record retention.",
+            "Prepare a basic IRP5 reconciliation and understand how it feeds into the EMP501 submission."
+        ],
+        careerPath: "Payroll administration is one of the most consistently in-demand finance functions in South Africa. This course is a solid starting point for anyone looking to work as a Payroll Administrator, Payroll Clerk, or HR Finance Assistant. It also provides the conceptual grounding needed before studying towards an ICB Payroll and Monthly SARS Returns certificate.",
+        targetAudience: "Individuals entering the payroll profession for the first time, bookkeepers expanding their scope to include payroll processing, HR professionals who need to understand the financial mechanics behind the remuneration packages they structure, and small business owners managing their own payroll.",
+        editorsTake: "Payroll is one of those areas where theoretical knowledge and practical compliance intersect. This course builds the right mental model from the start: that payroll is not just about calculating a salary, but about getting the statutory obligations to SARS right every single month. That framing, taught early, prevents the costly compliance errors that we see many small SA businesses make."
     },
     {
         id: "accounts-management-xero",
@@ -268,6 +378,17 @@ export const accountingCourses = [
         rating: 4.9,
         image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=600&q=80",
         affiliateLink: "https://alison.com/course/accounts-management-using-xero?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        description: "Practical training on utilizing the Xero accounting software for modern business finance management."
+        description: "Practical training on utilizing the Xero accounting software for modern business finance management.",
+        longDescription: "Xero is one of the most widely adopted cloud accounting platforms in South Africa, used by thousands of small and medium businesses, as well as many accounting firms that service SME clients. Knowing how to use Xero is no longer just a bonus on a bookkeeper's CV; for many accounting practices and growing SMEs, it is a baseline requirement. 'Accounts Management Using Xero' is a hands-on course that teaches you how to navigate the platform and use it to manage the core bookkeeping functions of a business. You will learn how to set up a chart of accounts, process bank feeds and reconcile transactions, manage debtors and creditors, and run standard financial reports. The course also covers how to use Xero's invoicing and billing features, which are central to the day-to-day finance operations of any service-based business.",
+        outcomes: [
+            "Set up a Xero account and configure a chart of accounts for a small business.",
+            "Connect bank feeds and use Xero's bank reconciliation tools to match transactions efficiently.",
+            "Create and send invoices, record payments, and manage customer accounts in Xero.",
+            "Process supplier bills, record payments, and manage the accounts payable function.",
+            "Generate and interpret standard Xero financial reports including the profit and loss and balance sheet."
+        ],
+        careerPath: "Xero proficiency is a highly marketable skill for bookkeepers and finance administrators targeting roles at accounting firms, professional services businesses, or fast-growing SMEs. Many SA accounting practices specifically advertise for candidates with Xero experience alongside their formal accounting qualifications.",
+        targetAudience: "Bookkeepers and accountants who want to add cloud accounting software skills to their qualifications, small business owners who want to manage their own books in Xero, and accounting students who want practical software experience to complement their theoretical studies.",
+        editorsTake: "South African accounting firms are actively moving their SME client bases onto cloud platforms, with Xero and Sage Business Cloud being the most common choices. A bookkeeper who already knows Xero when they join a firm hits the ground running from day one. This course is a practical, straightforward introduction that covers the features you will actually use daily, without getting lost in advanced functionality that most SME bookkeepers never touch."
     }
 ];

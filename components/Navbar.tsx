@@ -67,6 +67,10 @@ export default function Navbar() {
                     <span className="text-sm font-bold text-primary">Career Roadmaps</span>
                     <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
                   </Link>
+                  <Link href="/interview-prep" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 transition-colors mb-1">
+                    <span className="text-sm font-bold text-emerald-700">CV & Interview Prep</span>
+                    <span className="text-xs bg-emerald-600 text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
+                  </Link>
                   <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
                   <Link href="/free-courses-for-beginners" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Beginners</Link>
                   <Link href="/free-courses-with-certificates" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses with Certificates</Link>
@@ -184,6 +188,9 @@ export default function Navbar() {
         <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-b border-gray-100">Home</Link>
         <Link href="/career-roadmaps" onClick={toggleMobileMenu} className="font-bold text-primary hover:text-blue-800 py-3 border-b border-gray-100 flex items-center gap-2">
           Career Roadmaps <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full">New</span>
+        </Link>
+        <Link href="/interview-prep" onClick={toggleMobileMenu} className="font-bold text-emerald-700 hover:text-emerald-900 py-3 border-b border-gray-100 flex items-center gap-2">
+          CV & Interview Prep <span className="text-xs bg-emerald-600 text-white px-1.5 py-0.5 rounded-full">New</span>
         </Link>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">

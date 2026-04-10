@@ -35,6 +35,30 @@ export interface CareerRoadmap {
   relatedRoadmapIds: string[];
 }
 
+export interface InterviewQuestion {
+  question: string;
+  why: string;
+  sampleAnswer: string;
+  redFlag?: string;
+}
+
+export interface InterviewPrep {
+  id: string;
+  role: string;
+  category: string;
+  curator: AuthorKey | AuthorKey[];
+  lastUpdated: string;
+  description: string;
+  salaryRange: string;
+  cvMustInclude: string[];
+  cvAvoid: string[];
+  cvTips: { heading: string; body: string }[];
+  keySkills: string[];
+  questions: InterviewQuestion[];
+  relatedRoadmapId: string;
+  relatedPrepIds: string[];
+}
+
 export interface Course {
   id: string;
   title: string;

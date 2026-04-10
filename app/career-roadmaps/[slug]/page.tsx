@@ -9,6 +9,7 @@ import AuthorByline from '@/components/AuthorByline';
 import CourseCard from '@/components/CourseCard';
 import NewsletterBanner from '@/components/NewsletterBanner';
 import { roadmaps } from '@/data/roadmaps';
+import { interviewPreps } from '@/data/interviewPrep';
 import { courses } from '@/data/courses';
 import type { AuthorKey, CareerRoadmap } from '@/types';
 
@@ -56,6 +57,7 @@ export default async function CareerRoadmapPage({
   const curators = (Array.isArray(roadmap.curator) ? roadmap.curator : [roadmap.curator]) as AuthorKey[];
 
   const relatedRoadmaps = roadmaps.filter((r) => roadmap.relatedRoadmapIds.includes(r.id));
+  const linkedPrep = interviewPreps.find((p) => p.relatedRoadmapId === roadmap.id);
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -304,6 +306,24 @@ export default async function CareerRoadmapPage({
         <div className="mb-12">
           <NewsletterBanner />
         </div>
+
+        {/* Interview Prep cross-link */}
+        {linkedPrep && (
+          <div className="mb-12 bg-emerald-50 border border-emerald-100 rounded-xl px-5 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="flex-1">
+              <p className="text-sm font-bold text-emerald-800">Ready to start applying?</p>
+              <p className="text-sm text-emerald-700 mt-1">
+                The <strong>{linkedPrep.role}</strong> interview prep guide covers the exact CV tips and interview questions SA employers use to screen candidates for this role.
+              </p>
+            </div>
+            <Link
+              href={`/interview-prep/${linkedPrep.id}`}
+              className="shrink-0 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-lg transition-colors text-sm whitespace-nowrap"
+            >
+              CV & Interview Prep →
+            </Link>
+          </div>
+        )}
 
         {/* Related Roadmaps */}
         {relatedRoadmaps.length > 0 && (

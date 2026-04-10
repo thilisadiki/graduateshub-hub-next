@@ -40,17 +40,18 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Career Roadmaps */}
+        {/* Career Resources */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">Career Roadmaps</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Career Resources</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst</Link></li>
-            <li><Link href="/career-roadmaps/it-support-specialist" className="hover:text-blue-400 transition-colors">IT Support Specialist</Link></li>
-            <li><Link href="/career-roadmaps/web-developer" className="hover:text-blue-400 transition-colors">Web Developer</Link></li>
-            <li><Link href="/career-roadmaps/digital-marketing-specialist" className="hover:text-blue-400 transition-colors">Digital Marketing Specialist</Link></li>
-            <li><Link href="/career-roadmaps/junior-accountant" className="hover:text-blue-400 transition-colors">Junior Accountant</Link></li>
-            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-blue-400 transition-colors">Business Analyst</Link></li>
-            <li><Link href="/career-roadmaps" className="hover:text-blue-400 transition-colors font-medium">All Roadmaps →</Link></li>
+            <li><Link href="/career-roadmaps" className="hover:text-blue-400 transition-colors font-medium">Career Roadmaps →</Link></li>
+            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst Roadmap</Link></li>
+            <li><Link href="/career-roadmaps/web-developer" className="hover:text-blue-400 transition-colors">Web Developer Roadmap</Link></li>
+            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-blue-400 transition-colors">Business Analyst Roadmap</Link></li>
+            <li className="pt-1"><Link href="/interview-prep" className="hover:text-blue-400 transition-colors font-medium">CV & Interview Prep →</Link></li>
+            <li><Link href="/interview-prep/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst Prep</Link></li>
+            <li><Link href="/interview-prep/web-developer" className="hover:text-blue-400 transition-colors">Web Developer Prep</Link></li>
+            <li><Link href="/interview-prep/junior-accountant" className="hover:text-blue-400 transition-colors">Junior Accountant Prep</Link></li>
           </ul>
         </div>
 
