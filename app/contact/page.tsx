@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, Clock, ExternalLink } from 'lucide-react';
 import ContactForm from './ContactForm';
+import WhatsAppCard from './WhatsAppCard';
 
 const SITE_URL = 'https://graduateshub.co.za';
 
@@ -76,6 +77,8 @@ export default function ContactPage() {
                 (Monday to Friday, excluding public holidays).
               </p>
             </div>
+
+            <WhatsAppCard />
 
             {/* Facebook community */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
