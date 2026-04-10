@@ -1,11 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+const MIN_SUBMIT_MS = 3000; // reject submissions faster than 3 seconds
+
+async function verifyTurnstile(token: string): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) return true; // not configured — skip verification
+
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret, response: token }),
+    });
+    const data = await res.json();
+    return data.success === true;
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, subject, message } = body;
+    const { name, email, subject, message, _hp, _t, _ts } = body;
 
+    // Honeypot check — bots fill hidden fields, humans don't
+    if (_hp) {
+      // Return 200 so bots think they succeeded
+      return NextResponse.json({ success: true });
+    }
+
+    // Timing check — reject submissions under 3 seconds (bot speed)
+    if (_t && Date.now() - Number(_t) < MIN_SUBMIT_MS) {
+      return NextResponse.json({ success: true });
+    }
+
+    // Field validation
     if (!name || !email || !subject || !message) {
       return NextResponse.json({ error: 'All fields are required.' }, { status: 400 });
     }
@@ -19,6 +50,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Message must be under 2000 characters.' }, { status: 400 });
     }
 
+    // Turnstile verification
+    const turnstileValid = await verifyTurnstile(_ts ?? '');
+    if (!turnstileValid) {
+      return NextResponse.json({ error: 'Security check failed. Please try again.' }, { status: 400 });
+    }
+
+    // Send email via Resend
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       console.log('[Contact Form] RESEND_API_KEY not set. Submission received:', { name, email, subject });
