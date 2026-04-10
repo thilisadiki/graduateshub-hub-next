@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
+import InstallPrompt from '@/components/InstallPrompt';
 import ScrollToTop from '@/components/ScrollToTop';
 import OneSignalInit from '@/components/OneSignalInit';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         <Footer />
         <CookieConsent />
+        <InstallPrompt />
         <ScrollToTop />
         <OneSignalInit />
         <SpeedInsights />
