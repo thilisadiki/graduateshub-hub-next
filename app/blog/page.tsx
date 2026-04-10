@@ -168,6 +168,15 @@ export default async function BlogPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
+      {/* Breadcrumb */}
+      <div className="bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 py-3 text-sm text-gray-500 flex items-center gap-2">
+          <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+          <span className="text-gray-300">›</span>
+          <span className="text-gray-900 font-medium">Blog</span>
+        </div>
+      </div>
+
       {/* Hero */}
       <div className="bg-blue-50 border-b border-blue-100 py-14 px-6">
         <div className="max-w-6xl mx-auto">
