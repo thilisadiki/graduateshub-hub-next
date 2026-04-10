@@ -19,6 +19,10 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
     title: 'Free IT Courses Online (2026): Software, Networking & Cybersecurity | Graduates Hub',
     description: 'Browse 59 free IT courses across Software Engineering, Networking, Cybersecurity, AI, and Database tracks. Earn CPD-accredited certificates and diplomas with no prior experience required.',
   },
+  marketing: {
+    title: 'Free Marketing Courses Online (2026): Digital, Social Media & SEO | Graduates Hub',
+    description: 'Browse 11 free marketing courses covering Digital Marketing, Social Media Strategy, and Content & SEO. Earn CPD-accredited certificates and diplomas. No experience required.',
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ categoryId: string }> }): Promise<Metadata> {

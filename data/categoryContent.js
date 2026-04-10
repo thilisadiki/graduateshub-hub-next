@@ -156,16 +156,78 @@ export const categoryContent = {
 
     // 6. Marketing
     marketing: {
-        heroIntro: "Learn how to build brands, attract customers, and drive sales in the digital age. Explore our free online marketing courses covering SEO, social media, content strategy, and public relations.",
-        aboutSection: "Marketing is the engine that drives business growth. In today's highly competitive digital landscape, understanding how to capture attention and convert audiences is a highly lucrative skill. Our free marketing courses teach the psychology of consumer behavior, the mechanics of digital advertising, SEO (Search Engine Optimization), content marketing, and brand management. You will learn how to craft compelling campaigns that resonate with target audiences and deliver measurable ROI.",
-        careerOpportunities: "The marketing industry is dynamic and fast-paced, offering creative and analytical individuals fantastic career trajectories. Graduates can pursue exciting roles as Digital Marketing Specialists, Social Media Managers, SEO Analysts, Content Creators, and Brand Managers. Because marketing directly drives revenue, skilled marketers are in high demand across all sectors.",
+        showStats: true,
+        heroIntro: "Eleven free marketing courses across digital fundamentals, social media strategy, and content creation. Every course is CPD-accredited, beginner-friendly, and built around the tools and tactics that employers actually ask for.",
+        aboutSection: "The three tracks here cover the most in-demand marketing disciplines. Digital Marketing covers campaign structure, ad targeting, conversion tactics, and growth hacking. Social Media covers platform-specific strategy for Facebook and Instagram, culminating in a full Diploma in Social Media Strategy. Content and SEO covers YouTube marketing and value-based content creation. These are not theory-heavy programs. Each course is built around practical frameworks you can apply to a real brand, campaign, or client immediately after completing it.",
+        careerOpportunities: "Marketing sits at the intersection of creativity and data. Every business with an online presence needs someone who understands digital channels, and most entry-level roles do not require a formal degree. These courses map directly to the skills listed in entry-level and mid-level marketing job postings.",
         skillsFocus: [
-            "Digital Marketing & Social Media Strategy",
-            "Search Engine Optimization (SEO & SEM)",
-            "Content Marketing & Copywriting",
-            "Consumer Behavior & Market Research",
-            "Public Relations & Brand Management"
-        ]
+            "Digital campaign planning, ad targeting, and conversion tracking",
+            "Social media strategy across Facebook, Instagram, and YouTube",
+            "Content creation frameworks and value-based copywriting",
+            "SEO fundamentals, keyword targeting, and YouTube search optimisation",
+            "Growth hacking and customer acquisition techniques"
+        ],
+        tracks: [
+            {
+                label: "Digital Marketing",
+                subCategory: "General",
+                count: 5,
+                goal: "Understand how digital marketing works end to end",
+                detail: "Five courses covering campaign structure, conversion tactics, customer journey mapping, and growth hacking for online brands.",
+            },
+            {
+                label: "Social Media",
+                subCategory: "Social Media",
+                count: 4,
+                goal: "Build and manage audiences on social platforms",
+                detail: "Facebook, Instagram, and social commerce strategy. Includes a full Diploma in Social Media Strategy for those targeting a dedicated social media role.",
+            },
+            {
+                label: "Content & SEO",
+                subCategory: "Content & SEO",
+                count: 2,
+                goal: "Create content that ranks and converts",
+                detail: "YouTube SEO, value-based content creation, and the principles behind organic traffic growth across video and written formats.",
+            },
+        ],
+        roles: [
+            { title: "Digital Marketing Specialist", track: "Digital Marketing", signal: "The most requested marketing hire across e-commerce, agencies, and in-house brands. Entry points are accessible with a certificate." },
+            { title: "Social Media Manager", track: "Social Media", signal: "Every brand with an online presence needs one. Strong demand at agencies, retailers, and startups." },
+            { title: "Content Strategist", track: "Content & SEO", signal: "Combines writing, SEO, and analytics. High demand in agencies, publishers, and SaaS businesses." },
+            { title: "SEO Analyst", track: "Content & SEO", signal: "Analytical marketing role. Organic search is the highest-ROI channel for most online businesses." },
+            { title: "Growth Marketer", track: "Digital Marketing", signal: "Data-driven role combining paid media, conversion testing, and acquisition strategy. Growing fast in tech and fintech." },
+            { title: "Brand Manager", track: "Digital Marketing", signal: "Senior marketing role requiring strong campaign knowledge, audience insight, and cross-channel coordination." },
+        ],
+        faq: [
+            {
+                q: "Do I need a marketing background to start these courses?",
+                a: "No. Every course on this page is designed for beginners. The Digital Marketing track starts from foundational concepts like what a campaign is and how online advertising works. No prior experience in marketing, business, or technology is required."
+            },
+            {
+                q: "Are free marketing certificates taken seriously by employers?",
+                a: "Yes, particularly for entry-level roles. Alison is a CPD-accredited provider and its certificates are recognised by professional bodies in South Africa, the UK, and internationally. A certificate alone will not land a senior role, but combined with a portfolio or practical project, it is a credible first qualification."
+            },
+            {
+                q: "Which course should I start with if I am completely new to digital marketing?",
+                a: "Start with Digital Marketing or Basic Concepts of Digital Marketing. Both are short, beginner-level certificates that give you a solid overview of how online marketing works before you move into specialised tracks like Social Media or Content and SEO."
+            },
+            {
+                q: "What is the difference between digital marketing and social media marketing?",
+                a: "Digital marketing is the broader discipline. It covers paid advertising, email, SEO, content, and social media as a whole. Social media marketing is one channel within it, focused specifically on building audiences and running campaigns on platforms like Facebook, Instagram, and YouTube. Most roles require both, but social media specialists go deeper on platform mechanics and community management."
+            },
+            {
+                q: "Can these courses help me get freelance clients?",
+                a: "Yes. The Digital Marketing and Content tracks are particularly useful for freelancers. Understanding campaign structure, conversion tactics, and content strategy lets you offer measurable services to small businesses. Many successful freelance marketers started with exactly these foundations."
+            },
+        ],
+        guideLinks: [
+            {
+                title: "Free Digital Marketing Courses",
+                desc: "SEO, content strategy, and growth marketing structured into a clear learning path.",
+                href: "/free-digital-marketing-courses",
+                badge: "Marketing",
+            },
+        ],
     },
 
     // 7. Management
