@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   title: 'How We Curate Courses | Curation Policy – Graduates Hub',
   description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
   alternates: { canonical: `${SITE_URL}/curation-policy` },
+  openGraph: {
+    title: 'How We Curate Courses | Curation Policy – Graduates Hub',
+    description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
+    url: `${SITE_URL}/curation-policy`,
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Curation Policy', item: `${SITE_URL}/curation-policy` },
+  ],
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'How We Curate Courses | Curation Policy',
+  url: `${SITE_URL}/curation-policy`,
+  description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
+  publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+  breadcrumb: breadcrumbSchema,
 };
 
 const criteria = [
@@ -56,6 +80,16 @@ const criteria = [
 export default function CurationPolicyPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+
+      <div className="bg-white border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-6 py-3 text-sm text-gray-500 flex items-center gap-2">
+          <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+          <span className="text-gray-300">›</span>
+          <span className="text-gray-900 font-medium">Curation Policy</span>
+        </div>
+      </div>
 
       <div className="bg-slate-900 text-white py-16 px-6">
         <div className="max-w-3xl mx-auto">
