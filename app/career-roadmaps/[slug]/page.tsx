@@ -350,6 +350,22 @@ export default async function CareerRoadmapPage({
           </section>
         )}
 
+        {/* CV Builder CTA */}
+        <div className="mb-10 bg-violet-50 border border-violet-100 rounded-xl px-5 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex-1">
+            <p className="text-sm font-bold text-violet-800">Build your CV while you learn</p>
+            <p className="text-sm text-violet-700 mt-1">
+              Our free CV builder lets you document your progress as you complete each stage of this roadmap. 3 templates, instant PDF download.
+            </p>
+          </div>
+          <Link
+            href="/cv-builder"
+            className="shrink-0 bg-violet-600 hover:bg-violet-700 text-white font-bold px-5 py-2.5 rounded-lg transition-colors text-sm whitespace-nowrap"
+          >
+            Free CV Builder →
+          </Link>
+        </div>
+
         {/* Bottom nav */}
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

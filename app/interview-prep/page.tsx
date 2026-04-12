@@ -91,10 +91,21 @@ export default function InterviewPrepPage() {
         </div>
 
         {/* Trust note */}
-        <div className="mt-6 mb-12 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 text-sm text-blue-700 max-w-2xl">
+        <div className="mt-6 mb-6 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 text-sm text-blue-700 max-w-2xl">
           Every guide covers the South African job market specifically: local tools, local salary ranges, and the questions SA hiring managers actually use.
           <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-blue-900 transition-colors">
             How we curate →
+          </Link>
+        </div>
+
+        {/* CV Builder nudge */}
+        <div className="mb-12 max-w-2xl flex items-center justify-between gap-4 bg-violet-50 border border-violet-100 rounded-xl px-5 py-4">
+          <p className="text-sm text-violet-700">
+            <span className="font-bold">Once you have the tips, build the CV.</span>{' '}
+            Our free builder has 3 professional templates and instant PDF download.
+          </p>
+          <Link href="/cv-builder" className="shrink-0 text-sm font-bold text-violet-700 hover:text-violet-900 transition-colors whitespace-nowrap">
+            Free CV Builder →
           </Link>
         </div>
 

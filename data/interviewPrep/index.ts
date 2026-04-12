@@ -5,6 +5,12 @@ import { digitalMarketingCoordinatorPrep } from './digitalMarketingCoordinator';
 import { dataAnalystPrep } from './dataAnalyst';
 import { webDeveloperPrep } from './webDeveloper';
 import { businessAnalystPrep } from './businessAnalyst';
+import { hrCoordinatorPrep } from './hrCoordinator';
+import { juniorGraphicDesignerPrep } from './juniorGraphicDesigner';
+import { projectCoordinatorPrep } from './projectCoordinator';
+import { customerServiceAgentPrep } from './customerServiceAgent';
+import { juniorFinancialAdvisorPrep } from './juniorFinancialAdvisor';
+import { juniorQATesterPrep } from './juniorQATester';
 
 export const interviewPreps: InterviewPrep[] = [
   itSupportSpecialistPrep,
@@ -13,6 +19,12 @@ export const interviewPreps: InterviewPrep[] = [
   juniorAccountantPrep,
   digitalMarketingCoordinatorPrep,
   businessAnalystPrep,
+  hrCoordinatorPrep,
+  juniorGraphicDesignerPrep,
+  projectCoordinatorPrep,
+  customerServiceAgentPrep,
+  juniorFinancialAdvisorPrep,
+  juniorQATesterPrep,
 ];
 
 export {
@@ -22,4 +34,10 @@ export {
   dataAnalystPrep,
   webDeveloperPrep,
   businessAnalystPrep,
+  hrCoordinatorPrep,
+  juniorGraphicDesignerPrep,
+  projectCoordinatorPrep,
+  customerServiceAgentPrep,
+  juniorFinancialAdvisorPrep,
+  juniorQATesterPrep,
 };
