@@ -11,7 +11,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://graduateshub.co.za'),
+  metadataBase: new URL('https://www.graduateshub.co.za'),
   title: {
     default: 'Graduates Hub - Free Online Courses with Certificates',
     template: '%s | Graduates Hub',

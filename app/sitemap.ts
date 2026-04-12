@@ -4,7 +4,7 @@ import { categories } from '@/data/categories';
 import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

@@ -4,7 +4,7 @@ import { Mail, Clock, ExternalLink } from 'lucide-react';
 import ContactForm from './ContactForm';
 import WhatsAppCard from './WhatsAppCard';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Graduates Hub',

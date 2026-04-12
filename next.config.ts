@@ -20,6 +20,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // non-www → www (301). Fixes "canonical points to redirect" in Ahrefs.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'graduateshub.co.za' }],
+        destination: 'https://www.graduateshub.co.za/:path*',
+        permanent: true,
+      },
       {
         source: '/articles',
         destination: '/blog',

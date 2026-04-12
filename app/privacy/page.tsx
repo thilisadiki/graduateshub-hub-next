@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Graduates Hub',
@@ -304,7 +304,7 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li><strong>Email:</strong> <a href="mailto:info@graduateshub.co.za" className="text-primary font-bold hover:underline">info@graduateshub.co.za</a></li>
-          <li><strong>Website:</strong> <a href="https://graduateshub.co.za/contact" className="text-primary hover:underline">graduateshub.co.za/contact</a></li>
+          <li><strong>Website:</strong> <a href="https://www.graduateshub.co.za/contact" className="text-primary hover:underline">graduateshub.co.za/contact</a></li>
         </ul>
       </main>
     </div>

@@ -4,7 +4,7 @@ import { formatCategoryName } from '@/utils/formatters';
 import { categoryContent } from '@/data/categoryContent';
 import CategoryContent from './CategoryContent';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 const availableCategories = [
   'it', 'software-engineering', 'business', 'accounting', 'marketing',

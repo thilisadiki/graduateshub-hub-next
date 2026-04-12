@@ -4,7 +4,7 @@ import { courses } from '@/data/courses';
 import { formatCategoryName } from '@/utils/formatters';
 import CourseDetailsContent from './CourseDetailsContent';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export async function generateStaticParams() {
   return courses.map(course => ({ courseId: course.id }));

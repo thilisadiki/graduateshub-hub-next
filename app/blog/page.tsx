@@ -7,7 +7,7 @@ import NewsletterBanner from '@/components/NewsletterBanner';
 export const revalidate = 300;
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 const PER_PAGE = 12;
 
 export const metadata: Metadata = {

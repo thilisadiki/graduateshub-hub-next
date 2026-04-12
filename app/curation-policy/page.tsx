@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, CheckCircle2, XCircle, RefreshCw, Users } from 'lucide-react';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'How We Curate Courses | Curation Policy – Graduates Hub',

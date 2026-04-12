@@ -15,7 +15,7 @@ import { categories } from '@/data/categories';
 
 export const revalidate = 300;
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Free Learning Resources, Guides & Courses | Graduates Hub',

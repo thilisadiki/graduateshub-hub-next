@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FileText, ChevronRight, DollarSign } from 'lucide-react';
 import { interviewPreps } from '@/data/interviewPrep';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'CV & Interview Prep: South African Job Market | Graduates Hub',

@@ -13,7 +13,7 @@ import { interviewPreps } from '@/data/interviewPrep';
 import { courses } from '@/data/courses';
 import type { AuthorKey, CareerRoadmap } from '@/types';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export async function generateStaticParams() {
   return roadmaps.map((r) => ({ slug: r.id }));

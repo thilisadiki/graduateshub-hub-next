@@ -10,7 +10,7 @@ export const revalidate = 3600;   // regenerate cached posts every hour
 export const dynamicParams = true; // posts published after build still work
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 // React.cache deduplicates: generateMetadata and the page component
 // both call this, it only hits the WP API once per request.

@@ -7,7 +7,7 @@ import NewsletterBanner from '@/components/NewsletterBanner';
 import { courses } from '@/data/courses';
 import type { Course } from '@/types';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Best Alison Courses with Certificates (2026)',

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } from 'lucide-react';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Online Course Guides for 2026 | Graduates Hub',

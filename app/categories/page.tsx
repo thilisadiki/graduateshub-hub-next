@@ -6,7 +6,7 @@ import { categories } from '@/data/categories';
 import CourseCarousel from '@/components/CourseCarousel';
 import NewsletterBanner from '@/components/NewsletterBanner';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',

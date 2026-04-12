@@ -4,7 +4,7 @@ import { Clock, TrendingUp, ChevronRight, Map } from 'lucide-react';
 import { roadmaps } from '@/data/roadmaps';
 import type { CareerRoadmap } from '@/types';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Career Roadmaps: How to Break Into Any Field | Graduates Hub',

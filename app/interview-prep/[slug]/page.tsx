@@ -11,7 +11,7 @@ import { interviewPreps } from '@/data/interviewPrep';
 import { roadmaps } from '@/data/roadmaps';
 import type { AuthorKey } from '@/types';
 
-const SITE_URL = 'https://graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.co.za';
 
 export async function generateStaticParams() {
   return interviewPreps.map((p) => ({ slug: p.id }));
