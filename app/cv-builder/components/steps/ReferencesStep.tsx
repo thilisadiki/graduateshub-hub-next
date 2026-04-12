@@ -6,7 +6,7 @@ interface Props {
   onChange: (items: Reference[]) => void;
 }
 
-const inputCls = 'w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition';
+const inputCls = 'w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-900 bg-gray-50 border-gray-300 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition';
 const labelCls = 'block text-xs font-medium text-gray-600 mb-1';
 
 function newRef(): Reference {
