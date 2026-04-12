@@ -4,9 +4,9 @@ import { ArrowRight, Sparkles, Award, Map, Building, Code, PlayCircle, Megaphone
 export default function Hero() {
   return (
     <section className="relative bg-white pt-10 pb-24 overflow-hidden">
-      <div className="absolute inset-0 bg-[#F8FAFC]">
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/20 to-indigo-500/10 rounded-full blur-3xl opacity-70"></div>
-        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-gradient-to-tr from-[#0ea5e9]/10 to-transparent rounded-full blur-3xl opacity-60"></div>
+      <div className="absolute inset-0 bg-[#F8FAFC] pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/20 to-indigo-500/10 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-gradient-to-tr from-[#0ea5e9]/10 to-transparent rounded-full blur-3xl opacity-60 pointer-events-none"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -56,7 +56,7 @@ export default function Hero() {
           {/* Right: IT Card */}
           <div className="w-full lg:w-1/2 relative lg:h-[500px] flex items-center justify-center">
             <div className="relative w-full max-w-md">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-3xl blur-2xl opacity-40 transform translate-y-4 max-md:hidden"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-3xl blur-2xl opacity-40 transform translate-y-4 max-md:hidden pointer-events-none"></div>
               <div className="relative bg-white/80 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-8 overflow-hidden transform transition-all hover:scale-[1.02] duration-500">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10"></div>
                 <div className="flex justify-between items-start mb-6">
