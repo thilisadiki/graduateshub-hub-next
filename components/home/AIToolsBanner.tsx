@@ -1,9 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { Sparkles, Map, TrendingUp, ArrowRight } from 'lucide-react';
+import { Sparkles, Map, TrendingUp, FileText, ArrowRight } from 'lucide-react';
 import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
 import LearningPathModal from '@/components/modals/LearningPathModal';
 import SkillsGapModal from '@/components/modals/SkillsGapModal';
+import CVReviewModal from '@/components/modals/CVReviewModal';
 
 const tools = [
   {
@@ -36,17 +37,29 @@ const tools = [
     description: 'Enter your dream job title and discover exactly which skills you need to get there.',
     cta: 'Analyse My Skills',
   },
+  {
+    key: 'cv',
+    icon: FileText,
+    iconColor: 'text-violet-300',
+    bgColor: 'bg-violet-500/20 hover:bg-violet-500/30',
+    borderColor: 'border-violet-400/30',
+    label: 'CV Reviewer',
+    description: 'Paste your CV and get instant AI feedback on strengths, gaps, and how to fix them.',
+    cta: 'Review My CV',
+  },
 ];
 
 export default function AIToolsBanner() {
   const [isRecommendOpen, setIsRecommendOpen] = useState(false);
   const [isPathOpen, setIsPathOpen] = useState(false);
   const [isSkillsOpen, setIsSkillsOpen] = useState(false);
+  const [isCVOpen, setIsCVOpen] = useState(false);
 
   const handlers: Record<string, () => void> = {
     recommend: () => setIsRecommendOpen(true),
     path: () => setIsPathOpen(true),
     skills: () => setIsSkillsOpen(true),
+    cv: () => setIsCVOpen(true),
   };
 
   return (
@@ -68,7 +81,7 @@ export default function AIToolsBanner() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {tools.map(({ key, icon: Icon, iconColor, bgColor, borderColor, label, description, cta }) => (
               <button
                 key={key}
@@ -95,6 +108,7 @@ export default function AIToolsBanner() {
       <AIRecommendationModal isOpen={isRecommendOpen} onClose={() => setIsRecommendOpen(false)} />
       <LearningPathModal isOpen={isPathOpen} onClose={() => setIsPathOpen(false)} />
       <SkillsGapModal isOpen={isSkillsOpen} onClose={() => setIsSkillsOpen(false)} />
+      <CVReviewModal isOpen={isCVOpen} onClose={() => setIsCVOpen(false)} />
     </>
   );
 }
