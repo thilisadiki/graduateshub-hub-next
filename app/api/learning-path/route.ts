@@ -61,15 +61,14 @@ INSTRUCTIONS:
     const response = await ai.models.generateContent({
       model: 'gemini-3.1-flash-lite-preview',
       contents: goal,
-      config: { systemInstruction: systemPrompt, temperature: 0.2 },
+      config: { systemInstruction: systemPrompt, temperature: 0.2, responseMimeType: 'application/json' },
     });
 
     const responseText = response.text ?? '';
-    const cleanJson = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
 
     let phases: any[];
     try {
-      phases = JSON.parse(cleanJson);
+      phases = JSON.parse(responseText);
     } catch {
       console.error('Failed to parse Gemini response:', responseText);
       return NextResponse.json({ error: 'The AI returned an invalid format. Please try again.' }, { status: 500 });

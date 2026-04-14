@@ -68,15 +68,15 @@ INSTRUCTIONS:
       config: {
         systemInstruction: systemPrompt,
         temperature: 0.2,
+        responseMimeType: 'application/json',
       },
     });
 
     const responseText = response.text ?? '';
-    const cleanJsonString = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
 
     let parsedResponse: any[];
     try {
-      parsedResponse = JSON.parse(cleanJsonString);
+      parsedResponse = JSON.parse(responseText);
     } catch {
       console.error('Failed to parse Gemini response as JSON:', responseText);
       return NextResponse.json(
