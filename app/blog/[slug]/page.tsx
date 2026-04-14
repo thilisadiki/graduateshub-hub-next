@@ -160,8 +160,8 @@ export default async function BlogPostPage({
     '@type': 'Article',
     headline: post.title.rendered,
     description: post.excerpt.rendered.replace(/<[^>]+>/g, '').substring(0, 160),
-    datePublished: post.date,
-    dateModified: post.modified,
+    datePublished: post.date_gmt ? `${post.date_gmt}Z` : post.date,
+    dateModified: post.modified_gmt ? `${post.modified_gmt}Z` : post.modified,
     url: `${SITE_URL}/blog/${slug}`,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${slug}` },
     author: author
