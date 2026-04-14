@@ -131,7 +131,14 @@ export default async function Home() {
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
         <div className="mt-0"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
         <div className="mt-24"><HowItWorks /></div>
-        <div className="mt-16"><AIToolsBanner /></div>
+        <div className="mt-16">
+          <AIToolsBanner />
+          <div className="mt-4 text-center">
+            <Link href="/tools" className="text-sm font-semibold text-gray-500 hover:text-primary transition-colors">
+              View all 7 free AI career tools →
+            </Link>
+          </div>
+        </div>
 
         {/* Popular Guides */}
         <div className="mt-16">

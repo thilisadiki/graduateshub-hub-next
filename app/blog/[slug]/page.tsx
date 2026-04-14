@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
+import ToolsPromo from '@/components/shared/ToolsPromo';
 
 export const revalidate = 3600;   // regenerate cached posts every hour
 export const dynamicParams = true; // posts published after build still work
@@ -292,6 +293,8 @@ export default async function BlogPostPage({
             </div>
           </div>
         )}
+
+        <ToolsPromo />
 
         {/* Related articles */}
         {related.length > 0 && (

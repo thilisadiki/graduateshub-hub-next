@@ -44,6 +44,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-white mb-4">Career Resources</h3>
           <ul className="space-y-2 text-sm">
+            <li><Link href="/tools" className="hover:text-blue-400 transition-colors font-medium text-blue-300">AI Career Tools →</Link></li>
             <li><Link href="/cv-builder" className="hover:text-blue-400 transition-colors font-medium">Free CV Builder →</Link></li>
             <li><Link href="/career-roadmaps" className="hover:text-blue-400 transition-colors font-medium">Career Roadmaps →</Link></li>
             <li><Link href="/career-roadmaps/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst Roadmap</Link></li>

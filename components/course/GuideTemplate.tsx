@@ -7,6 +7,7 @@ import type { AuthorKey } from '@/components/shared/AuthorByline';
 import CourseCard from '@/components/course/CourseCard';
 import CourseCarousel from '@/components/course/CourseCarousel';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
+import ToolsPromo from '@/components/shared/ToolsPromo';
 import { courses as allCourses } from '@/data/courses';
 import type { Course } from '@/types';
 
@@ -435,6 +436,9 @@ export default function GuideTemplate({
         </section>
       </main>
 
+      <div className="max-w-5xl mx-auto px-6 pb-12">
+        <ToolsPromo />
+      </div>
       <NewsletterBanner />
     </div>
   );

@@ -5,6 +5,7 @@ import { ChevronRight, CheckCircle2 } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import CourseCarousel from '@/components/course/CourseCarousel';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
+import ToolsPromo from '@/components/shared/ToolsPromo';
 import { categoryContent } from '@/data/categoryContent';
 import type { Course } from '@/types';
 
@@ -277,6 +278,9 @@ export default function CategoryContent({
           </div>
         )}
       </main>
+      <div className="max-w-5xl mx-auto px-6 pb-12">
+        <ToolsPromo />
+      </div>
       <NewsletterBanner />
     </div>
   );
