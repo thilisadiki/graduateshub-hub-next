@@ -1,75 +1,12 @@
 'use client';
 import { useState } from 'react';
-import { Sparkles, Map, TrendingUp, FileText, MessageSquare, ScanText, Brain, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { Sparkles, TrendingUp, Brain, ArrowRight } from 'lucide-react';
 import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
-import LearningPathModal from '@/components/modals/LearningPathModal';
 import SkillsGapModal from '@/components/modals/SkillsGapModal';
-import CVReviewModal from '@/components/modals/CVReviewModal';
-import InterviewPrepModal from '@/components/modals/InterviewPrepModal';
-import JDDecoderModal from '@/components/modals/JDDecoderModal';
 import CareerQuizModal from '@/components/modals/CareerQuizModal';
 
 const tools = [
-  {
-    key: 'recommend',
-    icon: Sparkles,
-    iconColor: 'text-yellow-400',
-    bgColor: 'bg-indigo-500/20 hover:bg-indigo-500/30',
-    borderColor: 'border-indigo-400/30',
-    label: 'Course Recommender',
-    description: 'Tell us your goals and we\'ll match you to the perfect free course in seconds.',
-    cta: 'Get Recommendations',
-  },
-  {
-    key: 'path',
-    icon: Map,
-    iconColor: 'text-blue-300',
-    bgColor: 'bg-blue-500/20 hover:bg-blue-500/30',
-    borderColor: 'border-blue-400/30',
-    label: 'Learning Path Generator',
-    description: 'Get a personalised step-by-step roadmap of courses tailored to your career goal.',
-    cta: 'Build My Roadmap',
-  },
-  {
-    key: 'skills',
-    icon: TrendingUp,
-    iconColor: 'text-emerald-300',
-    bgColor: 'bg-emerald-500/20 hover:bg-emerald-500/30',
-    borderColor: 'border-emerald-400/30',
-    label: 'Skills Gap Analyzer',
-    description: 'Enter your dream job title and discover exactly which skills you need to get there.',
-    cta: 'Analyse My Skills',
-  },
-  {
-    key: 'cv',
-    icon: FileText,
-    iconColor: 'text-violet-300',
-    bgColor: 'bg-violet-500/20 hover:bg-violet-500/30',
-    borderColor: 'border-violet-400/30',
-    label: 'CV Reviewer',
-    description: 'Paste your CV and get instant AI feedback on strengths, gaps, and how to fix them.',
-    cta: 'Review My CV',
-  },
-  {
-    key: 'interview',
-    icon: MessageSquare,
-    iconColor: 'text-orange-300',
-    bgColor: 'bg-orange-500/20 hover:bg-orange-500/30',
-    borderColor: 'border-orange-400/30',
-    label: 'Interview Prep',
-    description: 'Get real interview questions with model answers for any job title — walk in confident.',
-    cta: 'Prepare Now',
-  },
-  {
-    key: 'jd',
-    icon: ScanText,
-    iconColor: 'text-cyan-300',
-    bgColor: 'bg-cyan-500/20 hover:bg-cyan-500/30',
-    borderColor: 'border-cyan-400/30',
-    label: 'JD Decoder',
-    description: 'Paste any job posting and instantly extract required skills, red flags, and matching courses.',
-    cta: 'Decode a Job Post',
-  },
   {
     key: 'quiz',
     icon: Brain,
@@ -77,27 +14,39 @@ const tools = [
     bgColor: 'bg-rose-500/20 hover:bg-rose-500/30',
     borderColor: 'border-rose-400/30',
     label: 'Career Quiz',
-    description: 'Not sure where to start? 6 quick questions about your strengths will point you in the right direction.',
+    description: 'Not sure where to start? Answer 6 quick questions and we will match you to the right career path and courses.',
     cta: 'Find My Path',
+  },
+  {
+    key: 'skills',
+    icon: TrendingUp,
+    iconColor: 'text-emerald-300',
+    bgColor: 'bg-emerald-500/20 hover:bg-emerald-500/30',
+    borderColor: 'border-emerald-400/30',
+    label: 'Skills Gap Analyser',
+    description: 'Enter your target job title and discover exactly which skills you need to get there.',
+    cta: 'Analyse My Skills',
+  },
+  {
+    key: 'recommend',
+    icon: Sparkles,
+    iconColor: 'text-yellow-400',
+    bgColor: 'bg-indigo-500/20 hover:bg-indigo-500/30',
+    borderColor: 'border-indigo-400/30',
+    label: 'Course Recommender',
+    description: 'Tell us your goals and we will match you to the perfect free course in seconds.',
+    cta: 'Get Recommendations',
   },
 ];
 
 export default function AIToolsBanner() {
   const [isRecommendOpen, setIsRecommendOpen] = useState(false);
-  const [isPathOpen, setIsPathOpen] = useState(false);
   const [isSkillsOpen, setIsSkillsOpen] = useState(false);
-  const [isCVOpen, setIsCVOpen] = useState(false);
-  const [isInterviewOpen, setIsInterviewOpen] = useState(false);
-  const [isJDOpen, setIsJDOpen] = useState(false);
   const [isQuizOpen, setIsQuizOpen] = useState(false);
 
   const handlers: Record<string, () => void> = {
     recommend: () => setIsRecommendOpen(true),
-    path: () => setIsPathOpen(true),
     skills: () => setIsSkillsOpen(true),
-    cv: () => setIsCVOpen(true),
-    interview: () => setIsInterviewOpen(true),
-    jd: () => setIsJDOpen(true),
     quiz: () => setIsQuizOpen(true),
   };
 
@@ -116,11 +65,11 @@ export default function AIToolsBanner() {
               Let AI guide your learning
             </h2>
             <p className="text-slate-400 mt-3 max-w-xl mx-auto text-lg">
-              Not sure where to start? Our free AI tools help you find the right course, build a career roadmap, and identify your skills gaps, in seconds.
+              Not sure where to start? Our free AI tools help you find the right course, build a career roadmap, and identify your skill gaps in seconds.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {tools.map(({ key, icon: Icon, iconColor, bgColor, borderColor, label, description, cta }) => (
               <button
                 key={key}
@@ -141,16 +90,21 @@ export default function AIToolsBanner() {
               </button>
             ))}
           </div>
+
+          <div className="text-center mt-6">
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors font-medium"
+            >
+              View all 7 free AI career tools <ArrowRight size={13} />
+            </Link>
+          </div>
         </div>
       </section>
 
       <AIRecommendationModal isOpen={isRecommendOpen} onClose={() => setIsRecommendOpen(false)} />
-      <LearningPathModal isOpen={isPathOpen} onClose={() => setIsPathOpen(false)} />
-      <SkillsGapModal isOpen={isSkillsOpen} onClose={() => setIsSkillsOpen(false)} />
-      <CVReviewModal isOpen={isCVOpen} onClose={() => setIsCVOpen(false)} />
-      <InterviewPrepModal isOpen={isInterviewOpen} onClose={() => setIsInterviewOpen(false)} />
-      <JDDecoderModal isOpen={isJDOpen} onClose={() => setIsJDOpen(false)} />
-      <CareerQuizModal isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />
+      <SkillsGapModal        isOpen={isSkillsOpen}    onClose={() => setIsSkillsOpen(false)} />
+      <CareerQuizModal       isOpen={isQuizOpen}      onClose={() => setIsQuizOpen(false)} />
     </>
   );
 }
