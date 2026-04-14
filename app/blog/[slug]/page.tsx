@@ -105,11 +105,19 @@ export async function generateMetadata({
     title: `${post.title.rendered} | Graduates Hub`,
     description,
     alternates: { canonical: `${SITE_URL}/blog/${slug}` },
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
     openGraph: {
       title: post.title.rendered,
       description,
       url: `${SITE_URL}/blog/${slug}`,
-      ...(imageUrl && { images: [{ url: imageUrl }] }),
+      type: 'article',
+      ...(imageUrl && {
+        images: [{ url: imageUrl, width: 1200, height: 630, alt: post.title.rendered }],
+      }),
     },
   };
 }
@@ -155,6 +163,7 @@ export default async function BlogPostPage({
     datePublished: post.date,
     dateModified: post.modified,
     url: `${SITE_URL}/blog/${slug}`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${slug}` },
     author: author
       ? {
           '@type': 'Person',
@@ -167,8 +176,19 @@ export default async function BlogPostPage({
       '@type': 'Organization',
       name: 'Graduates Hub',
       url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo-512x512.png`,
+        width: 512,
+        height: 512,
+      },
     },
-    image: imageUrl ?? `${SITE_URL}/graduates-hub-logo.png`,
+    image: {
+      '@type': 'ImageObject',
+      url: imageUrl ?? `${SITE_URL}/graduates-hub-logo.png`,
+      width: 1200,
+      height: 630,
+    },
   };
 
   return (

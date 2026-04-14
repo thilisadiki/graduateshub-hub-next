@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/graduates-hub-logo.png', width: 1200, height: 630 }],
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+  },
   twitter: {
     card: 'summary_large_image',
   },
