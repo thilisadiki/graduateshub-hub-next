@@ -5,8 +5,8 @@ import {
   ChevronRight, CheckCircle2, AlertCircle, MessageSquare,
   FileText, DollarSign, BookOpen, ArrowRight, Lightbulb,
 } from 'lucide-react';
-import AuthorByline from '@/components/AuthorByline';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import AuthorByline from '@/components/shared/AuthorByline';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { interviewPreps } from '@/data/interviewPrep';
 import { roadmaps } from '@/data/roadmaps';
 import type { AuthorKey } from '@/types';

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { CheckCircle2, Clock, Award, BookOpen, Users, TrendingUp, Star, Globe } from 'lucide-react';
-import GuideTemplate from '@/components/GuideTemplate';
-import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/GuideTemplate';
+import GuideTemplate from '@/components/course/GuideTemplate';
+import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
 

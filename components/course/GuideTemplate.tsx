@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import AuthorByline from '@/components/AuthorByline';
-import type { AuthorKey } from '@/components/AuthorByline';
-import CourseCard from '@/components/CourseCard';
-import CourseCarousel from '@/components/CourseCarousel';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import AuthorByline from '@/components/shared/AuthorByline';
+import type { AuthorKey } from '@/components/shared/AuthorByline';
+import CourseCard from '@/components/course/CourseCard';
+import CourseCarousel from '@/components/course/CourseCarousel';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { courses as allCourses } from '@/data/courses';
 import type { Course } from '@/types';
 

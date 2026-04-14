@@ -1,4 +1,6 @@
-export const personalDevelopmentCourses = [
+import type { Course } from '@/types';
+
+export const personalDevelopmentCourses: Course[] = [
     {
         id: "time-management-for-professionals",
         title: "Time Management for Professionals",

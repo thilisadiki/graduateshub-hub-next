@@ -1,4 +1,6 @@
-export const itCourses = [
+import type { Course } from '@/types';
+
+export const itCourses: Course[] = [
     {
         "id": "computer-networking",
         "featured": true,

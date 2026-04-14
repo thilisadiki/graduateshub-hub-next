@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { X, TrendingUp, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
-import CourseCard from './CourseCard';
+import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
 
 interface CourseWithSkill extends Course {

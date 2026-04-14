@@ -1,7 +1,45 @@
 // This file contains SEO-optimized content for each course category.
 // It is used to render rich text on the CategoryPage to improve organic search rankings.
 
-export const categoryContent = {
+export interface CategoryTrack {
+  label: string;
+  subCategory: string;
+  count: number;
+  goal: string;
+  detail: string;
+}
+
+export interface CategoryRole {
+  title: string;
+  track: string;
+  signal: string;
+}
+
+export interface CategoryFaq {
+  q: string;
+  a: string;
+}
+
+export interface CategoryGuideLink {
+  title: string;
+  desc: string;
+  href: string;
+  badge: string;
+}
+
+export interface CategoryContentEntry {
+  showStats: boolean;
+  heroIntro: string;
+  aboutSection: string;
+  careerOpportunities: string;
+  skillsFocus: string[];
+  tracks: CategoryTrack[];
+  roles: CategoryRole[];
+  faq: CategoryFaq[];
+  guideLinks: CategoryGuideLink[];
+}
+
+export const categoryContent: Record<string, CategoryContentEntry> = {
     // 1. IT Courses
     it: {
         showStats: true,

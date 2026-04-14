@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import CookieConsent from '@/components/CookieConsent';
-import InstallPrompt from '@/components/InstallPrompt';
-import ScrollToTop from '@/components/ScrollToTop';
-import OneSignalInit from '@/components/OneSignalInit';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import CookieConsent from '@/components/layout/CookieConsent';
+import InstallPrompt from '@/components/layout/InstallPrompt';
+import ScrollToTop from '@/components/layout/ScrollToTop';
+import OneSignalInit from '@/components/layout/OneSignalInit';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 

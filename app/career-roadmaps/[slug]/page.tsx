@@ -5,9 +5,9 @@ import {
   Clock, TrendingUp, CheckCircle2, ChevronRight, Briefcase,
   Award, Lightbulb, Users, BookOpen, ArrowRight,
 } from 'lucide-react';
-import AuthorByline from '@/components/AuthorByline';
-import CourseCard from '@/components/CourseCard';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import AuthorByline from '@/components/shared/AuthorByline';
+import CourseCard from '@/components/course/CourseCard';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 import { courses } from '@/data/courses';

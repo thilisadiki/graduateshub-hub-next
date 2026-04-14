@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { CheckCircle2, ChevronRight, BookOpen } from 'lucide-react';
 import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
-import CourseCarousel from '@/components/CourseCarousel';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import CourseCarousel from '@/components/course/CourseCarousel';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 
 export const revalidate = 3600;   // regenerate cached posts every hour
 export const dynamicParams = true; // posts published after build still work

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 
 export const revalidate = 300;
 

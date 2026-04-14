@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle2, Clock, TrendingUp, Award, Calculator, BarChart2, ChevronRight } from 'lucide-react';
-import GuideTemplate from '@/components/GuideTemplate';
-import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/GuideTemplate';
+import GuideTemplate from '@/components/course/GuideTemplate';
+import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
 

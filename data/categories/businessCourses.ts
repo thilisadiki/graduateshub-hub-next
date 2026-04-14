@@ -1,4 +1,6 @@
-export const businessCourses = [
+import type { Course } from '@/types';
+
+export const businessCourses: Course[] = [
     {
         id: "diploma-project-management",
         featured: true,

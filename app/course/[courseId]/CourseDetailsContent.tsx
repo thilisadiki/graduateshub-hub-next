@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, MapPin, Clock, BookOpen, GraduationCap, Building, Star, ExternalLink } from 'lucide-react';
-import CourseCarousel from '@/components/CourseCarousel';
-import NewsletterBanner from '@/components/NewsletterBanner';
-import LatestArticles from '@/components/LatestArticles';
+import CourseCarousel from '@/components/course/CourseCarousel';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
+import LatestArticles from '@/components/home/LatestArticles';
 import { formatCategoryName } from '@/utils/formatters';
 import type { Course } from '@/types';
 

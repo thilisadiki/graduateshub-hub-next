@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ChevronRight, CheckCircle2 } from 'lucide-react';
-import CourseCard from '@/components/CourseCard';
-import CourseCarousel from '@/components/CourseCarousel';
-import NewsletterBanner from '@/components/NewsletterBanner';
+import CourseCard from '@/components/course/CourseCard';
+import CourseCarousel from '@/components/course/CourseCarousel';
+import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { categoryContent } from '@/data/categoryContent';
 import type { Course } from '@/types';
 
@@ -28,7 +28,7 @@ export default function CategoryContent({
   const [visibleCount, setVisibleCount] = useState(9);
   const [selectedGroup, setSelectedGroup] = useState('All');
 
-  const content = (categoryContent as any)[categoryId];
+  const content = categoryContent[categoryId];
 
   const hasSubCategories = categoryCourses.some(c => c.subCategory);
   const groups = hasSubCategories

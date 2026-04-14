@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { X, Sparkles, Loader2 } from 'lucide-react';
-import CourseCard from './CourseCard';
+import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
 
 export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {

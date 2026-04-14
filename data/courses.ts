@@ -1,9 +1,9 @@
 import { Course } from '../types';
-import { accountingCourses } from './categories/accountingCourses.js';
-import { businessCourses } from './categories/businessCourses.js';
-import { dataAnalyticsCourses } from './categories/dataAnalyticsCourses.js';
-import { itCourses } from './categories/itCourses.js';
-import { marketingCourses } from './categories/marketingCourses.js';
+import { accountingCourses } from './categories/accountingCourses';
+import { businessCourses } from './categories/businessCourses';
+import { dataAnalyticsCourses } from './categories/dataAnalyticsCourses';
+import { itCourses } from './categories/itCourses';
+import { marketingCourses } from './categories/marketingCourses';
 
 // Combine all category arrays into a single raw array
 const allCoursesRaw: Course[] = [

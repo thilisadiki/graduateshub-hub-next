@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { X, Map, Loader2, CheckCircle } from 'lucide-react';
-import CourseCard from './CourseCard';
+import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
 
 interface Phase {

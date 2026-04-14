@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
 import { Sparkles, Map, TrendingUp, ArrowRight } from 'lucide-react';
-import AIRecommendationModal from './AIRecommendationModal';
-import LearningPathModal from './LearningPathModal';
-import SkillsGapModal from './SkillsGapModal';
+import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
+import LearningPathModal from '@/components/modals/LearningPathModal';
+import SkillsGapModal from '@/components/modals/SkillsGapModal';
 
 const tools = [
   {

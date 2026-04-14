@@ -1,4 +1,6 @@
-export const languageCourses = [
+import type { Course } from '@/types';
+
+export const languageCourses: Course[] = [
     {
         id: "spanish-language-fundamentals",
         featured: true,

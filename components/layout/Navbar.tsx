@@ -2,10 +2,10 @@
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Sparkles, Map, TrendingUp } from 'lucide-react';
-import SearchBar from './SearchBar';
-import AIRecommendationModal from './AIRecommendationModal';
-import LearningPathModal from './LearningPathModal';
-import SkillsGapModal from './SkillsGapModal';
+import SearchBar from '@/components/shared/SearchBar';
+import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
+import LearningPathModal from '@/components/modals/LearningPathModal';
+import SkillsGapModal from '@/components/modals/SkillsGapModal';
 import { categories } from '@/data/categories';
 
 export default function Navbar() {

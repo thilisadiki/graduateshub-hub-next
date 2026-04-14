@@ -1,4 +1,6 @@
-export const dataAnalyticsCourses = [
+import type { Course } from '@/types';
+
+export const dataAnalyticsCourses: Course[] = [
     {
         id: "microsoft-excel-data-analysis",
         title: "Microsoft Excel for Data Analysis",

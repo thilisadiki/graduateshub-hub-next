@@ -1,4 +1,6 @@
-export const accountingCourses = [
+import type { Course } from '@/types';
+
+export const accountingCourses: Course[] = [
     {
         id: "financial-accounting",
         featured: true,

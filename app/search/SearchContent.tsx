@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import CourseCard from '@/components/CourseCard';
-import AIToolsBanner from '@/components/AIToolsBanner';
+import CourseCard from '@/components/course/CourseCard';
+import AIToolsBanner from '@/components/home/AIToolsBanner';
 import { courses } from '@/data/courses';
 
 const POPULAR_TOPICS = [

@@ -1,4 +1,6 @@
-export const marketingCourses = [
+import type { Course } from '@/types';
+
+export const marketingCourses: Course[] = [
     {
         id: "digital-marketing",
         featured: true,
