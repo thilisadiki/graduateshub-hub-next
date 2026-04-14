@@ -1,12 +1,13 @@
 'use client';
 import { useState } from 'react';
-import { Sparkles, Map, TrendingUp, FileText, MessageSquare, ScanText, ArrowRight } from 'lucide-react';
+import { Sparkles, Map, TrendingUp, FileText, MessageSquare, ScanText, Brain, ArrowRight } from 'lucide-react';
 import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
 import LearningPathModal from '@/components/modals/LearningPathModal';
 import SkillsGapModal from '@/components/modals/SkillsGapModal';
 import CVReviewModal from '@/components/modals/CVReviewModal';
 import InterviewPrepModal from '@/components/modals/InterviewPrepModal';
 import JDDecoderModal from '@/components/modals/JDDecoderModal';
+import CareerQuizModal from '@/components/modals/CareerQuizModal';
 
 const tools = [
   {
@@ -69,6 +70,16 @@ const tools = [
     description: 'Paste any job posting and instantly extract required skills, red flags, and matching courses.',
     cta: 'Decode a Job Post',
   },
+  {
+    key: 'quiz',
+    icon: Brain,
+    iconColor: 'text-rose-300',
+    bgColor: 'bg-rose-500/20 hover:bg-rose-500/30',
+    borderColor: 'border-rose-400/30',
+    label: 'Career Quiz',
+    description: 'Not sure where to start? 6 quick questions about your strengths will point you in the right direction.',
+    cta: 'Find My Path',
+  },
 ];
 
 export default function AIToolsBanner() {
@@ -78,6 +89,7 @@ export default function AIToolsBanner() {
   const [isCVOpen, setIsCVOpen] = useState(false);
   const [isInterviewOpen, setIsInterviewOpen] = useState(false);
   const [isJDOpen, setIsJDOpen] = useState(false);
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
 
   const handlers: Record<string, () => void> = {
     recommend: () => setIsRecommendOpen(true),
@@ -86,6 +98,7 @@ export default function AIToolsBanner() {
     cv: () => setIsCVOpen(true),
     interview: () => setIsInterviewOpen(true),
     jd: () => setIsJDOpen(true),
+    quiz: () => setIsQuizOpen(true),
   };
 
   return (
@@ -137,6 +150,7 @@ export default function AIToolsBanner() {
       <CVReviewModal isOpen={isCVOpen} onClose={() => setIsCVOpen(false)} />
       <InterviewPrepModal isOpen={isInterviewOpen} onClose={() => setIsInterviewOpen(false)} />
       <JDDecoderModal isOpen={isJDOpen} onClose={() => setIsJDOpen(false)} />
+      <CareerQuizModal isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />
     </>
   );
 }
