@@ -1,10 +1,11 @@
 'use client';
 import { useState } from 'react';
-import { Sparkles, Map, TrendingUp, FileText, ArrowRight } from 'lucide-react';
+import { Sparkles, Map, TrendingUp, FileText, MessageSquare, ArrowRight } from 'lucide-react';
 import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
 import LearningPathModal from '@/components/modals/LearningPathModal';
 import SkillsGapModal from '@/components/modals/SkillsGapModal';
 import CVReviewModal from '@/components/modals/CVReviewModal';
+import InterviewPrepModal from '@/components/modals/InterviewPrepModal';
 
 const tools = [
   {
@@ -47,6 +48,16 @@ const tools = [
     description: 'Paste your CV and get instant AI feedback on strengths, gaps, and how to fix them.',
     cta: 'Review My CV',
   },
+  {
+    key: 'interview',
+    icon: MessageSquare,
+    iconColor: 'text-orange-300',
+    bgColor: 'bg-orange-500/20 hover:bg-orange-500/30',
+    borderColor: 'border-orange-400/30',
+    label: 'Interview Prep',
+    description: 'Get real interview questions with model answers for any job title — walk in confident.',
+    cta: 'Prepare Now',
+  },
 ];
 
 export default function AIToolsBanner() {
@@ -54,12 +65,14 @@ export default function AIToolsBanner() {
   const [isPathOpen, setIsPathOpen] = useState(false);
   const [isSkillsOpen, setIsSkillsOpen] = useState(false);
   const [isCVOpen, setIsCVOpen] = useState(false);
+  const [isInterviewOpen, setIsInterviewOpen] = useState(false);
 
   const handlers: Record<string, () => void> = {
     recommend: () => setIsRecommendOpen(true),
     path: () => setIsPathOpen(true),
     skills: () => setIsSkillsOpen(true),
     cv: () => setIsCVOpen(true),
+    interview: () => setIsInterviewOpen(true),
   };
 
   return (
@@ -81,7 +94,7 @@ export default function AIToolsBanner() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {tools.map(({ key, icon: Icon, iconColor, bgColor, borderColor, label, description, cta }) => (
               <button
                 key={key}
@@ -109,6 +122,7 @@ export default function AIToolsBanner() {
       <LearningPathModal isOpen={isPathOpen} onClose={() => setIsPathOpen(false)} />
       <SkillsGapModal isOpen={isSkillsOpen} onClose={() => setIsSkillsOpen(false)} />
       <CVReviewModal isOpen={isCVOpen} onClose={() => setIsCVOpen(false)} />
+      <InterviewPrepModal isOpen={isInterviewOpen} onClose={() => setIsInterviewOpen(false)} />
     </>
   );
 }
