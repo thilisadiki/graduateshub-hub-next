@@ -137,6 +137,20 @@ const GUIDE_GROUPS: GuideGroup[] = [
       },
     ],
   },
+  {
+    label: 'Career & Jobs',
+    blurb: 'Practical guides for SA graduates navigating the job market — from landing your first role to building a focused career path.',
+    guides: [
+      {
+        title: 'How to Get Your First Graduate Job in SA',
+        badge: 'Careers',
+        href: '/first-graduate-job-south-africa',
+        desc: 'A step-by-step framework for SA graduates: fix your CV, close your skills gaps, prepare for interviews, and navigate the hidden job market.',
+        curators: ['jason'],
+        lastUpdated: 'Jan 2026',
+      },
+    ],
+  },
 ];
 
 const ALL_GUIDES = GUIDE_GROUPS.flatMap(g => g.guides);

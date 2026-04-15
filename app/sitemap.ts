@@ -58,6 +58,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/free-courses-for-software-developers`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-courses-for-accounting-and-finance`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-business-courses`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/first-graduate-job-south-africa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/tools`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/cv-builder`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/career-roadmaps`, lastModified, changeFrequency: 'monthly', priority: 0.9 },

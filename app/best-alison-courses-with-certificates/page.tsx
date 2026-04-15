@@ -47,9 +47,9 @@ const careerPaths: CareerPathItem[] = [
 ];
 
 const relatedGuides: RelatedGuide[] = [
+  { title: 'How to Get Your First Graduate Job in SA (2026)', desc: 'A step-by-step guide to landing your first job — CV writing, skills gaps, interview prep, and the hidden job market.', href: '/first-graduate-job-south-africa' },
   { title: 'Best Free Online Courses with Certificates (2026)', desc: 'A broader look at free certified courses across all topics and platforms, not just Alison.', href: '/free-courses-with-certificates' },
   { title: 'Best Free AI Courses for Beginners (2026)', desc: 'No coding required. Start learning Artificial Intelligence and Generative AI for free today.', href: '/free-ai-courses-for-beginners' },
-  { title: 'Best Free Courses for Data Analysts (2026)', desc: 'Excel, SQL, Python, and Power BI, the complete data analyst learning path, all free.', href: '/free-courses-for-data-analysts' },
   { title: 'Best Free Business Courses Online (2026)', desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. All CPD-accredited and free.', href: '/free-business-courses' },
 ];
 
