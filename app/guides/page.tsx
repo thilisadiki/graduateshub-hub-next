@@ -257,7 +257,7 @@ export default function GuidesPage() {
             Each one covers a specific field, explains which courses are worth your time, and tells you exactly who curated it and why.
           </p>
           <p className="text-gray-500 text-base leading-relaxed">
-            We do not publish guides outside our areas of expertise. That is why you will not find health, language, or personal development guides here. Only fields where we have practitioners we trust.{' '}
+            We do not publish guides outside our areas of expertise. That is why you will not find health, Food or language guides here. Only fields where we have practitioners we trust.{' '}
             <Link href="/curation-policy" className="text-primary font-medium hover:text-blue-800 transition-colors">
               Read our curation policy →
             </Link>

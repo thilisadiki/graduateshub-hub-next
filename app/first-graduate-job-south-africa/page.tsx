@@ -47,7 +47,7 @@ const jobSearchSteps = [
   {
     step: '2',
     title: 'Identify the Right Roles',
-    body: 'Apply to roles that match your qualification and skills — not every job posting you find.',
+    body: 'Apply to roles that match your qualification and skills, not every job posting you find.',
     href: '/career-roadmaps',
     cta: 'Browse Career Roadmaps →',
     color: 'bg-indigo-50 border-indigo-100',
@@ -105,7 +105,7 @@ const employerExpectations = [
   },
   {
     want: 'Digital literacy',
-    reality: 'Basic data skills — Excel, digital marketing, AI awareness — now appear in almost every job spec.',
+    reality: 'Basic data skills like Excel, digital marketing, and AI awareness now appear in almost every job spec.',
   },
 ];
 
@@ -119,7 +119,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Skills SA Employers Test For',
-    description: 'These are the three skills that come up repeatedly in entry-level SA job specs — and in the technical parts of interviews.',
+    description: 'These are the three skills that come up repeatedly in entry-level SA job specs, including in the technical parts of interviews.',
     ids: ['microsoft-excel-data-analysis', 'diploma-project-management', 'intro-ai-business'],
     categoryHref: '/category/business',
     categoryLabel: 'Business Courses',
@@ -157,7 +157,7 @@ const benefits: BenefitItem[] = [
   {
     icon: Briefcase,
     title: 'Interview Preparation Is an Afterthought',
-    body: 'Competency-based interviews require structured, practised answers. Showing up unprepared — especially for your first interview — is the most avoidable reason graduates fail.',
+    body: 'Competency-based interviews require structured, practised answers. Showing up unprepared, especially for your first interview, is the most avoidable reason graduates fail.',
   },
   {
     icon: Lightbulb,
@@ -189,15 +189,15 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Is a free online certificate worth adding to my CV?',
-    a: 'Yes — especially at graduate level. A free certificate does two things: it proves you have covered a specific topic, and it signals to employers that you take your own development seriously without being told to. Pair a certificate with a small practical project (a spreadsheet, a marketing plan, a written analysis) and you have a talking point in any interview. The certificate alone is not enough, but combined with application it is genuinely valuable.',
+    a: 'Yes, especially at graduate level. A free certificate does two things: it proves you have covered a specific topic, and it signals to employers that you take your own development seriously without being told to. Pair a certificate with a small practical project (a spreadsheet, a marketing plan, a written analysis) and you have a talking point in any interview. The certificate alone is not enough, but combined with application it is genuinely valuable.',
   },
   {
     q: 'Should I apply for graduate programmes or open roles?',
-    a: 'Both, but with different strategies. Graduate programmes (ABSA, Deloitte, Shoprite, etc.) are competitive and have fixed intake windows — apply early, prepare thoroughly. Open roles are available year-round and often have less competition if you target smaller to mid-size companies rather than only large corporates. Many graduates make the mistake of only chasing the big graduate programmes and ignoring the hundreds of entry-level roles at companies that do not run formal programmes.',
+    a: 'Both, but with different strategies. Graduate programmes (ABSA, Deloitte, Shoprite, etc.) are competitive and have fixed intake windows: apply early and prepare thoroughly. Open roles are available year-round and often have less competition if you target smaller to mid-size companies rather than only large corporates. Many graduates make the mistake of only chasing the big graduate programmes and ignoring the hundreds of entry-level roles at companies that do not run formal programmes.',
   },
   {
     q: 'How long does it realistically take to find a first job in South Africa?',
-    a: 'For a well-prepared graduate with a targeted strategy, three to six months is a realistic expectation in the current market. For graduates applying broadly without tailoring their CVs or preparing for interviews, it can take much longer — sometimes over a year. The biggest variable is not the job market, it is the quality of your applications and your interview preparation. Improve those and you shorten the timeline significantly.',
+    a: 'For a well-prepared graduate with a targeted strategy, three to six months is a realistic expectation in the current market. For graduates applying broadly without tailoring their CVs or preparing for interviews, it can take much longer, sometimes over a year. The biggest variable is not the job market, it is the quality of your applications and your interview preparation. Improve those and you shorten the timeline significantly.',
   },
   {
     q: 'What should I do if I have been applying for months with no response?',
@@ -205,7 +205,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'How important is my degree compared to my skills in the SA job market?',
-    a: 'Your degree opens doors to certain roles — particularly in regulated fields like law, medicine, and engineering. But for most graduate roles in business, IT, marketing, and administration, skills matter as much as or more than the specific degree. Employers care whether you can do the job. A BCom graduate who cannot use Excel will lose an interview to a BA graduate who can. Focus on building demonstrable, testable skills alongside your qualification.',
+    a: 'Your degree opens doors to certain roles, particularly in regulated fields like law, medicine, and engineering. But for most graduate roles in business, IT, marketing, and administration, skills matter as much as or more than the specific degree. Employers care whether you can do the job. A BCom graduate who cannot use Excel will lose an interview to a BA graduate who can. Focus on building demonstrable, testable skills alongside your qualification.',
   },
 ];
 
@@ -231,7 +231,7 @@ export default function FirstGraduateJobSAPage() {
       canonicalUrl={CANONICAL}
       breadcrumb={[{ label: 'How to Get Your First Graduate Job in SA' }]}
       heading="How to Get Your First Graduate Job in South Africa (2026)"
-      heroDescription="South Africa has one of the highest graduate unemployment rates in the world. But the graduates who land jobs quickly are not necessarily the most qualified — they are the most prepared. This guide gives you a practical, step-by-step framework for getting your first job: fixing your CV, identifying the right roles, closing your skills gaps, and walking into interviews with confidence."
+      heroDescription="South Africa has one of the highest graduate unemployment rates in the world. But the graduates who land jobs quickly are not necessarily the most qualified: they are the most prepared. This guide gives you a practical, step-by-step framework for getting your first job: fixing your CV, identifying the right roles, closing your skills gaps, and walking into interviews with confidence."
       heroBadges={[
         { icon: CheckCircle2, label: 'SA-Focused Advice', iconClassName: 'text-green-500' },
         { icon: Award, label: 'Free Courses Included', iconClassName: 'text-primary' },
@@ -294,7 +294,7 @@ export default function FirstGraduateJobSAPage() {
           <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Use Our Free Job Search Tools</h2>
             <p className="text-blue-100 text-lg mb-10 max-w-2xl leading-relaxed">
-              Everything you need to prepare your application and walk into interviews confidently — all free, no account required.
+              Everything you need to prepare your application and walk into interviews confidently. All free, no account required.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
               {[
@@ -356,7 +356,7 @@ export default function FirstGraduateJobSAPage() {
                 {
                   n: '1',
                   title: 'Quality Over Volume',
-                  body: 'Ten tailored applications will always outperform a hundred generic ones. For each role, customise your CV summary and cover letter to match the specific job description. It takes more time — and it works.',
+                  body: 'Ten tailored applications will always outperform a hundred generic ones. For each role, customise your CV summary and cover letter to match the specific job description. It takes more time, and it works.',
                 },
                 {
                   n: '2',
@@ -366,7 +366,7 @@ export default function FirstGraduateJobSAPage() {
                 {
                   n: '3',
                   title: 'Tell People You Are Looking',
-                  body: 'Let every contact — family, lecturers, former classmates, LinkedIn connections — know you are actively job-seeking. Referrals fill most roles before they are advertised. Being visible costs you nothing.',
+                  body: 'Let every contact (family, lecturers, former classmates, LinkedIn connections) know you are actively job-seeking. Referrals fill most roles before they are advertised. Being visible costs you nothing.',
                 },
               ].map(({ n, title, body }) => (
                 <div key={n} className="flex flex-col">
@@ -396,7 +396,7 @@ export default function FirstGraduateJobSAPage() {
       ]}
       faqs={faqs}
       ctaHeading="Your First Job Starts With One Step"
-      ctaBody="You do not need to have everything figured out. Pick one thing from this guide — fix your CV, complete one course, or spend 30 minutes on interview prep. Small, consistent actions compound into results."
+      ctaBody="You do not need to have everything figured out. Pick one thing from this guide: fix your CV, complete one course, or spend 30 minutes on interview prep. Small, consistent actions compound into results."
       ctaPrimaryLabel="Build My CV for Free"
       ctaPrimaryHref="/cv-builder"
       ctaSecondaryLabel="Browse Career Roadmaps"
