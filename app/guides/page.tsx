@@ -139,7 +139,7 @@ const GUIDE_GROUPS: GuideGroup[] = [
   },
   {
     label: 'Career & Jobs',
-    blurb: 'Practical guides for SA graduates navigating the job market — from landing your first role to building a focused career path.',
+    blurb: 'Practical guides for SA graduates navigating the job market, from landing your first role to building a focused career path.',
     guides: [
       {
         title: 'How to Get Your First Graduate Job in SA',
