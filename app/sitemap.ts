@@ -5,8 +5,31 @@ import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
+const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+async function fetchAllBlogPosts(): Promise<{ slug: string; modified: string }[]> {
+  const posts: { slug: string; modified: string }[] = [];
+  let page = 1;
+  while (true) {
+    try {
+      const res = await fetch(
+        `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`,
+        { next: { revalidate: 3600 } }
+      );
+      if (!res.ok) break;
+      const batch = await res.json();
+      if (!Array.isArray(batch) || batch.length === 0) break;
+      posts.push(...batch);
+      if (batch.length < 100) break;
+      page++;
+    } catch {
+      break;
+    }
+  }
+  return posts;
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -77,5 +100,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...categoryPages, ...coursePages, ...roadmapPages, ...interviewPrepPages];
+  const wpPosts = await fetchAllBlogPosts();
+  const blogPostPages: MetadataRoute.Sitemap = wpPosts.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.modified),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...categoryPages, ...coursePages, ...roadmapPages, ...interviewPrepPages, ...blogPostPages];
 }
