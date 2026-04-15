@@ -277,5 +277,100 @@ export const businessCourses: Course[] = [
         careerPath: "A critical qualification for modern leadership. It is directly applicable to roles such as Business Strategist, Operations Director, Digital Transformation Consultant, or any C-suite executive tasked with modernizing their company.",
         targetAudience: "Designed explicitly for non-technical business leaders, entrepreneurs, and department managers who need to confidently evaluate vendor AI solutions and lead automation initiatives within their teams.",
         editorsTake: "This is exactly the AI course the corporate world needs right now. It completely skips the complex Python coding and focuses entirely on the ROI (Return on Investment) of AI. It answers the critical manager question: 'How can this technology make my department faster and cheaper today?'"
+    },
+
+    // ── Professional Development ──────────────────────────────────────────────
+
+    {
+        id: "job-search-resume-cover-letter",
+        title: "Job Search Skills: Resume and Cover Letter Writing",
+        tag: "Certificate",
+        category: "Business",
+        subCategory: "Professional Development",
+        duration: "1-3 Hours",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/job-search-skills-preparing-your-resume-and-cover-letter-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Learn to write a standout resume and cover letter that gets you to the interview stage.",
+        longDescription: "Your CV and cover letter are your first impression — and in a competitive graduate job market, they are often the only chance you get. 'Job Search Skills: Resume and Cover Letter Writing' is a focused, practical course that walks you through every element of a compelling job application from scratch. You will learn how to structure a clean, professional resume layout, write a concise background summary that immediately signals your value, and tailor your language to match specific job descriptions. The course gives particular attention to the cover letter — a document many graduates write poorly — teaching you how to frame your limited experience as a genuine asset, quantify your achievements, and write with enough confidence to make a hiring manager want to meet you. By the end, you will have a step-by-step system for adapting both documents to different roles without starting from scratch every time.",
+        outcomes: [
+            "Design a professional, well-structured resume layout that stands out visually.",
+            "Write a compelling background summary that positions you effectively for entry-level roles.",
+            "Tailor your resume and cover letter to match specific job descriptions.",
+            "Quantify your achievements and experience using clear, employer-focused language.",
+            "Plan and draft a cover letter that complements your resume and drives interview invitations."
+        ],
+        careerPath: "A well-crafted CV is the single most important document in any job search. This course is directly applicable to every graduate entering the workforce, regardless of field — from finance and IT to marketing and administration.",
+        targetAudience: "Ideal for graduates applying for their first job, career changers updating an outdated CV, or anyone who has been sending applications without getting responses and wants to understand why.",
+        editorsTake: "Most CV-writing advice online is generic and vague. What makes this course stand out is its focus on the mechanics: exactly what goes where, what language to use, and how to frame no experience as relevant experience. Every SA graduate applying for their first job should complete this before sending a single application."
+    },
+    {
+        id: "workplace-communication",
+        title: "Workplace Communication",
+        tag: "Certificate",
+        category: "Business",
+        subCategory: "Professional Development",
+        duration: "3-5 Hours",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/workplace-communication?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Master the communication skills that employers consistently rank as their top hiring priority.",
+        longDescription: "Technical skills get you an interview — communication skills get you the job and keep you employed. 'Workplace Communication' is an intermediate-level certificate that covers the full spectrum of professional communication: from speaking confidently in meetings and delivering presentations, to handling difficult conversations and navigating the politics of a new workplace. The course opens with interview preparation, teaching you how to answer common questions strategically and present yourself with poise under pressure. It then moves into the realities of day-to-day workplace communication: how to give and receive criticism constructively, how to assert yourself without being aggressive, and how to adapt your communication style to different audiences — from a junior colleague to a senior executive. The module on presentation skills is particularly valuable, covering team briefings, sales presentations, and formal financial reports.",
+        outcomes: [
+            "Prepare for job interviews with structured, confident responses to common and difficult questions.",
+            "Speak clearly and assertively in team meetings without coming across as aggressive or passive.",
+            "Deliver and receive constructive criticism in ways that improve relationships rather than damage them.",
+            "Adapt your communication style appropriately across different workplace contexts and seniority levels.",
+            "Plan and deliver presentations confidently across formats including team briefings and client presentations."
+        ],
+        careerPath: "Strong workplace communication is the difference between employees who get promoted and those who stagnate. This certificate directly supports entry-level professionals in any field — administration, finance, IT, marketing — who want to make a strong first impression and build credibility quickly.",
+        targetAudience: "Graduates entering the workforce for the first time, professionals who have received feedback that their communication needs improvement, and anyone preparing for a job interview who wants to present themselves with more confidence and clarity.",
+        editorsTake: "Communication is consistently cited as the number-one skill SA employers say graduates lack. This course addresses exactly that gap. The interview preparation section alone is worth the time — it does not just tell you what to say, but why certain answers work and others immediately eliminate candidates."
+    },
+    {
+        id: "microsoft-word-2021",
+        title: "Microsoft Word 2021",
+        tag: "Certificate",
+        category: "Business",
+        subCategory: "Professional Development",
+        duration: "2-4 Hours",
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/microsoft-word-2021?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Learn Microsoft Word from scratch and produce polished, professional documents with confidence.",
+        longDescription: "'Microsoft Word 2021' is a beginner-level course that takes you from the basics of opening and saving a document, through to the advanced formatting and collaboration features that modern employers expect employees to use fluently. The course covers the Word 2021 interface in detail, teaching you how to efficiently navigate the ribbon, apply consistent text and paragraph formatting, and use styles to produce documents that look professional rather than typed on a phone. You will learn how to use built-in templates to produce business letters, reports, and meeting minutes at speed, and how to use review and comment features for collaborative editing in a team environment. The course also covers the keyboard shortcuts and productivity tools — find and replace, document navigation, dark mode — that separate a slow typist from an efficient document processor.",
+        outcomes: [
+            "Navigate the Microsoft Word 2021 interface and ribbon with confidence and efficiency.",
+            "Create, format, and save professional documents including letters, reports, and CVs.",
+            "Apply consistent text formatting using styles to produce polished, presentation-ready documents.",
+            "Use templates to produce standard business documents such as letters and meeting minutes rapidly.",
+            "Collaborate on shared documents using comments, tracked changes, and review features."
+        ],
+        careerPath: "Microsoft Word proficiency is a baseline requirement across virtually every office-based role in South Africa. This certificate is especially relevant for administrative, HR, legal, finance, and operations roles where producing accurate, professional documents is a daily task.",
+        targetAudience: "Graduates and job seekers with limited computer skills, career changers entering office-based roles for the first time, and anyone who has used Word informally but never learned it properly and wants to close that gap before their first job.",
+        editorsTake: "Employers assume you know Word. Most graduates actually don't — not properly. They can type and save a file, but they cannot produce a consistently formatted 20-page report without it looking like a mess. This short course fixes that and gives you a certificate to prove it."
+    },
+    {
+        id: "effective-job-search-strategies",
+        title: "Effective Job Search Strategies",
+        tag: "Certificate",
+        category: "Business",
+        subCategory: "Professional Development",
+        duration: "2-4 Hours",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80",
+        affiliateLink: "https://alison.com/course/effective-job-search-strategies?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        description: "Build a focused, strategic job search plan that gets results — not just applications sent.",
+        longDescription: "Sending 50 applications and hearing nothing back is not a job search — it is a lottery. 'Effective Job Search Strategies' teaches you how to approach your job hunt as a structured, strategic campaign. The course covers the full job search lifecycle: creating a professional CV and cover letter, identifying and targeting the right roles for your skills and background, building and leveraging a professional network, and preparing for interviews with confidence. Crucially, it also addresses the hidden job market — the roles that are filled through referrals and networks before they are ever posted publicly — and teaches you how to access it. The course includes practical guidance on how recruitment agencies work and how to use them effectively, as well as the essential online skills (LinkedIn optimisation, professional email etiquette) that determine whether a recruiter takes you seriously.",
+        outcomes: [
+            "Create a targeted job search strategy focused on quality applications rather than volume.",
+            "Build a professional online presence on LinkedIn that attracts recruiter attention.",
+            "Develop hard and soft skills specifically relevant to your target job category.",
+            "Use networking techniques to access the hidden job market and generate referrals.",
+            "Understand how recruitment agencies work and how to use them strategically in your search."
+        ],
+        careerPath: "Applicable to every graduate entering the job market regardless of field. The strategic and networking skills taught here remain valuable throughout your career — for promotions, career changes, and building professional relationships over time.",
+        targetAudience: "Recent graduates who are frustrated with low application response rates, job seekers who have been searching for more than two months without results, and anyone who has been applying randomly without a clear, focused strategy.",
+        editorsTake: "This course reframes job searching as a skill, not a numbers game. The section on the hidden job market is genuinely eye-opening — estimates suggest up to 70% of positions are never publicly advertised. Understanding this changes how you spend your time and energy during a job search entirely."
     }
 ];
