@@ -30,37 +30,20 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const { id } = await params;
   const proof = await fetchProof(id);
 
-  if (!proof) {
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: '#0f172a',
-            color: '#ffffff',
-            fontSize: 42,
-            fontFamily: 'sans-serif',
-          }}
-        >
-          Badge not found
-        </div>
-      ),
-      size,
-    );
-  }
-
-  const score = proof.evaluation.overallScore;
-  const verdict = proof.evaluation.verdict;
+  const score = proof?.evaluation.overallScore ?? 0;
+  const verdict = proof?.evaluation.verdict ?? 'Badge not found';
   const verdictBg =
     verdict === 'Pass with Distinction'
       ? '#10b981'
       : verdict === 'Pass'
         ? '#3b82f6'
-        : '#f59e0b';
+        : verdict === 'Needs Revision'
+          ? '#f59e0b'
+          : '#64748b';
+
+  const field = proof?.task_field ?? 'Portfolio';
+  const title = proof?.task_title ?? 'Badge not available';
+  const name = proof?.graduate_name ?? '';
 
   return new ImageResponse(
     (
@@ -70,39 +53,15 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          padding: '56px 64px',
+          padding: '64px 72px',
           background:
             'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)',
           color: '#ffffff',
           fontFamily: 'sans-serif',
-          position: 'relative',
-          overflow: 'hidden',
         }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            top: -120,
-            right: -80,
-            width: 420,
-            height: 420,
-            borderRadius: '9999px',
-            background: 'rgba(99, 102, 241, 0.2)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: -160,
-            left: -120,
-            width: 440,
-            height: 440,
-            borderRadius: '9999px',
-            background: 'rgba(59, 130, 246, 0.14)',
-          }}
-        />
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14, zIndex: 1 }}>
+        {/* Top row: brand */}
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <div
             style={{
               display: 'flex',
@@ -114,23 +73,34 @@ export default async function Image({ params }: { params: Promise<{ id: string }
               background: '#6366f1',
               fontSize: 28,
               fontWeight: 800,
+              marginRight: 16,
             }}
           >
             G
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: 22, fontWeight: 700, color: '#c7d2fe' }}>Graduates Hub</div>
-            <div style={{ fontSize: 16, color: '#94a3b8' }}>Badge of Competence</div>
+            <div style={{ display: 'flex', fontSize: 22, fontWeight: 700, color: '#c7d2fe' }}>
+              Graduates Hub
+            </div>
+            <div style={{ display: 'flex', fontSize: 16, color: '#94a3b8' }}>
+              Badge of Competence
+            </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 18, zIndex: 1, marginTop: 40 }}>
+        {/* Middle: field pill, title, name */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            marginTop: 48,
+          }}
+        >
           <div
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
+              display: 'flex',
               alignSelf: 'flex-start',
-              padding: '6px 14px',
+              padding: '6px 16px',
               borderRadius: 9999,
               background: 'rgba(99, 102, 241, 0.25)',
               border: '1px solid rgba(165, 180, 252, 0.4)',
@@ -139,53 +109,87 @@ export default async function Image({ params }: { params: Promise<{ id: string }
               color: '#c7d2fe',
               textTransform: 'uppercase',
               letterSpacing: 1.2,
+              marginBottom: 24,
             }}
           >
-            {proof.task_field}
+            {field}
           </div>
-          <div style={{ fontSize: 56, fontWeight: 900, lineHeight: 1.05, maxWidth: 1000 }}>
-            {proof.task_title}
+          <div
+            style={{
+              display: 'flex',
+              fontSize: 56,
+              fontWeight: 900,
+              lineHeight: 1.05,
+              maxWidth: 1000,
+              marginBottom: 20,
+            }}
+          >
+            {title}
           </div>
-          <div style={{ fontSize: 28, color: '#cbd5e1', fontWeight: 500 }}>
-            Awarded to <span style={{ color: '#ffffff', fontWeight: 800 }}>{proof.graduate_name}</span>
-          </div>
+          {name && (
+            <div style={{ display: 'flex', fontSize: 28, color: '#cbd5e1' }}>
+              Awarded to {name}
+            </div>
+          )}
         </div>
 
+        {/* Spacer */}
+        <div style={{ display: 'flex', flex: 1 }} />
+
+        {/* Bottom row: verdict and score */}
         <div
           style={{
-            marginTop: 'auto',
             display: 'flex',
             alignItems: 'flex-end',
             justifyContent: 'space-between',
-            gap: 24,
-            zIndex: 1,
           }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div
               style={{
-                display: 'inline-flex',
+                display: 'flex',
                 alignSelf: 'flex-start',
-                padding: '10px 18px',
+                padding: '10px 20px',
                 borderRadius: 9999,
                 background: verdictBg,
                 fontSize: 22,
                 fontWeight: 800,
                 color: '#ffffff',
+                marginBottom: 12,
               }}
             >
               {verdict}
             </div>
-            <div style={{ fontSize: 20, color: '#94a3b8' }}>
+            <div style={{ display: 'flex', fontSize: 20, color: '#94a3b8' }}>
               Verifiable at graduateshub.co.za
             </div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-            <div style={{ fontSize: 140, fontWeight: 900, lineHeight: 1, color: '#ffffff' }}>
-              {score}
+          {proof && (
+            <div style={{ display: 'flex', alignItems: 'baseline' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  fontSize: 140,
+                  fontWeight: 900,
+                  lineHeight: 1,
+                  color: '#ffffff',
+                }}
+              >
+                {score}
+              </div>
+              <div
+                style={{
+                  display: 'flex',
+                  fontSize: 44,
+                  fontWeight: 700,
+                  color: '#94a3b8',
+                  marginLeft: 6,
+                }}
+              >
+                /100
+              </div>
             </div>
-            <div style={{ fontSize: 44, fontWeight: 700, color: '#94a3b8' }}>/100</div>
-          </div>
+          )}
         </div>
       </div>
     ),

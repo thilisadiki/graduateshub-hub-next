@@ -40,6 +40,7 @@ export async function generateMetadata({
 
   const title = `${proof.graduate_name}: ${proof.task_title}`;
   const description = `Badge of Competence. Scored ${proof.evaluation.overallScore}/100 (${proof.evaluation.verdict}) on "${proof.task_title}". Verified by Graduates Hub.`;
+  const ogImageUrl = `${SITE_URL}/proof/${proof.id}/opengraph-image`;
 
   return {
     title,
@@ -50,8 +51,14 @@ export async function generateMetadata({
       description,
       url: `${SITE_URL}/proof/${proof.id}`,
       type: 'profile',
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageUrl],
+    },
   };
 }
 
