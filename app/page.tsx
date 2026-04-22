@@ -5,11 +5,11 @@ import { Unlock, Clock, Globe, ChevronRight, ExternalLink } from 'lucide-react';
 import Hero from '@/components/home/Hero';
 import CourseCard from '@/components/course/CourseCard';
 import HowItWorks from '@/components/home/HowItWorks';
-import CourseCarousel from '@/components/course/CourseCarousel';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import LatestArticles from '@/components/home/LatestArticles';
 import FAQ from '@/components/home/FAQ';
 import AIToolsBanner from '@/components/home/AIToolsBanner';
+import PortfolioBanner from '@/components/home/PortfolioBanner';
 import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
 
@@ -98,7 +98,6 @@ async function fetchHomeArticles(perPage: number) {
 
 export default async function Home() {
   const featuredCourses = courses.filter(c => c.featured).slice(0, 6);
-  const carouselCourses = courses.filter(c => !c.featured).slice(0, 10);
   const homeArticles = await fetchHomeArticles(6);
 
   const itemListSchema = {
@@ -132,6 +131,7 @@ export default async function Home() {
         <div className="mt-0"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
         <div className="mt-24"><HowItWorks /></div>
         <div className="mt-16"><AIToolsBanner /></div>
+        <div className="mt-16"><PortfolioBanner /></div>
 
         {/* Popular Guides */}
         <div className="mt-16">
@@ -225,7 +225,6 @@ export default async function Home() {
           </div>
         </div>
 
-<div className="mt-16"><CourseCarousel courses={carouselCourses} /></div>
         <div className="mt-12"><NewsletterBanner /></div>
 
         <div className="mt-20 border-t border-gray-100 pt-12 pb-4 text-center">

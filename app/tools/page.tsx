@@ -307,10 +307,10 @@ export default function ToolsPage() {
           <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Related Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
+              { href: '/portfolio', label: 'Proof of Work Portfolio', desc: 'Complete practical tasks and earn a shareable Badge of Competence for LinkedIn' },
               { href: '/career-roadmaps', label: 'Career Roadmaps', desc: 'Step-by-step guides to getting job-ready in a specific field' },
               { href: '/interview-prep', label: 'CV and Interview Prep', desc: 'Expert-written guides for writing a strong CV and preparing for interviews' },
               { href: '/search', label: 'Free Course Search', desc: 'Browse and filter 128+ free certified courses by topic and level' },
-              { href: '/blog', label: 'Career Advice Blog', desc: 'Articles on job searching, skill building, and career development in South Africa' },
             ].map(({ href, label, desc }) => (
               <Link
                 key={href}
