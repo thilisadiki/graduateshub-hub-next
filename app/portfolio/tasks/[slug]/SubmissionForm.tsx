@@ -109,7 +109,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
             onChange={(e) => setSubmission(e.target.value)}
             rows={14}
             placeholder="Paste your finished response here. Markdown is supported."
-            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-[15px] font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full bg-white text-gray-900 placeholder:text-gray-400 border border-gray-200 rounded-lg px-3 py-2.5 text-[15px] font-mono leading-relaxed focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             disabled={submitting}
             required
           />
@@ -134,7 +134,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
             onChange={(e) => setLinksRaw(e.target.value)}
             rows={2}
             placeholder="https://github.com/you/repo, https://figma.com/..."
-            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full bg-white text-gray-900 placeholder:text-gray-400 border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             disabled={submitting}
           />
           <p className="text-xs text-gray-500 mt-1">One per line or comma separated. Up to 5 links.</p>
