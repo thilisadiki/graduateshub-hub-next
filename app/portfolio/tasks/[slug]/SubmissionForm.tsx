@@ -92,7 +92,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
             onChange={(e) => setGraduateName(e.target.value)}
             maxLength={80}
             placeholder="e.g. Thando Nkosi"
-            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-[15px] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full bg-white text-gray-900 placeholder:text-gray-400 border border-gray-200 rounded-lg px-3 py-2.5 text-[15px] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             disabled={submitting}
             required
           />
