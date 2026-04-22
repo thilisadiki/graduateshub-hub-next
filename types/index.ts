@@ -78,3 +78,66 @@ export interface Course {
   featured?: boolean;
   isExternal?: boolean;
 }
+
+export type PortfolioField =
+  | 'Marketing'
+  | 'Tech'
+  | 'Data'
+  | 'Finance'
+  | 'Design'
+  | 'Business';
+
+export type PortfolioDifficulty = 'Beginner' | 'Intermediate' | 'Advanced';
+
+export interface PortfolioRubricCriterion {
+  key: string;
+  label: string;
+  description: string;
+  weight: number;
+}
+
+export interface PortfolioTask {
+  id: string;
+  title: string;
+  field: PortfolioField;
+  difficulty: PortfolioDifficulty;
+  estimatedHours: string;
+  tagline: string;
+  scenario: string;
+  brief: string;
+  deliverables: string[];
+  deliverableFormat: 'text' | 'markdown';
+  submissionGuidance: string;
+  rubric: PortfolioRubricCriterion[];
+  skillsProven: string[];
+  relatedRoadmapIds: string[];
+}
+
+export interface RubricScore {
+  key: string;
+  label: string;
+  score: number;
+  maxScore: number;
+  feedback: string;
+}
+
+export interface PortfolioEvaluation {
+  overallScore: number;
+  verdict: 'Pass with Distinction' | 'Pass' | 'Needs Revision';
+  summary: string;
+  strengths: string[];
+  improvements: string[];
+  rubricScores: RubricScore[];
+}
+
+export interface PortfolioProof {
+  id: string;
+  task_id: string;
+  task_title: string;
+  task_field: PortfolioField;
+  graduate_name: string;
+  submission: string;
+  submission_links: string[];
+  evaluation: PortfolioEvaluation;
+  created_at: string;
+}

@@ -59,6 +59,10 @@ export default function Navbar() {
                     <span className="text-sm font-bold text-violet-700">Free CV Builder</span>
                     <span className="text-xs bg-violet-600 text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
                   </Link>
+                  <Link href="/portfolio" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-amber-50 hover:bg-amber-100 transition-colors mb-1">
+                    <span className="text-sm font-bold text-amber-700">Proof of Work Portfolio</span>
+                    <span className="text-xs bg-amber-600 text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
+                  </Link>
                   <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
                   <Link href="/free-courses-for-beginners" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Beginners</Link>
                   <Link href="/free-courses-with-certificates" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses with Certificates</Link>
@@ -148,6 +152,9 @@ export default function Navbar() {
         </Link>
         <Link href="/cv-builder" onClick={toggleMobileMenu} className="font-bold text-violet-700 hover:text-violet-900 py-3 border-b border-gray-100 flex items-center gap-2">
           Free CV Builder <span className="text-xs bg-violet-600 text-white px-1.5 py-0.5 rounded-full">New</span>
+        </Link>
+        <Link href="/portfolio" onClick={toggleMobileMenu} className="font-bold text-amber-700 hover:text-amber-900 py-3 border-b border-gray-100 flex items-center gap-2">
+          Proof of Work Portfolio <span className="text-xs bg-amber-600 text-white px-1.5 py-0.5 rounded-full">New</span>
         </Link>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
