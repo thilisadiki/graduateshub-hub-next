@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 import { getTaskById } from '@/data/portfolioTasks';
+import { getCategoryById } from '@/data/portfolioCategories';
 import { getSupabase } from '@/utils/supabase';
 import type { PortfolioEvaluation, RubricScore } from '@/types';
 
@@ -77,6 +78,8 @@ export async function POST(request: NextRequest) {
   if (!task) {
     return NextResponse.json({ error: 'Unknown task.' }, { status: 404 });
   }
+  const category = getCategoryById(task.categoryId);
+  const categoryName = category?.name || task.categoryId;
 
   const rubricSpec = task.rubric.map((c) => ({
     key: c.key,
@@ -96,7 +99,7 @@ Be fair but rigorous. Graduates are applying for entry-level or first-profession
 
 TASK CONTEXT:
 Title: ${task.title}
-Field: ${task.field}
+Category: ${categoryName}
 Difficulty: ${task.difficulty}
 Scenario: ${task.scenario}
 Brief: ${task.brief}
@@ -194,7 +197,7 @@ ${submission}`;
       id: proofId,
       task_id: task.id,
       task_title: task.title,
-      task_field: task.field,
+      task_field: categoryName,
       graduate_name: graduateName,
       submission,
       submission_links: submissionLinks,

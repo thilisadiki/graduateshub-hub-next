@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Sparkles, Award, CheckCircle, Briefcase, ArrowRight, ShieldCheck, Share2, FileText } from 'lucide-react';
 import { portfolioTasks } from '@/data/portfolioTasks';
+import { portfolioCategories } from '@/data/portfolioCategories';
+import { portfolioTopics } from '@/data/portfolioTopics';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
@@ -20,47 +22,14 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  {
-    step: '1',
-    icon: Briefcase,
-    title: 'Pick a task',
-    body: 'Choose a realistic brief from your field: Marketing, Tech, Data, Finance, or Design. Each one takes 1 to 3 hours.',
-  },
-  {
-    step: '2',
-    icon: FileText,
-    title: 'Do the work',
-    body: 'Submit directly on the task page. Every task has a clear scenario, specific deliverables, and a published rubric.',
-  },
-  {
-    step: '3',
-    icon: Award,
-    title: 'Earn a Badge of Competence',
-    body: 'Your submission is graded against the rubric. If you pass, you get a public, shareable proof page to link from LinkedIn.',
-  },
-];
-
-const whyItMatters = [
-  {
-    title: 'Proof beats claims',
-    body: 'Saying "I know digital marketing" on a CV is forgettable. Linking a graded social media audit is not.',
-  },
-  {
-    title: 'Employers can verify it',
-    body: 'Your Badge lives at a public URL. Any hiring manager can click it to see the actual work, the rubric, and the evaluation.',
-  },
-  {
-    title: 'Built for entry-level',
-    body: 'Tasks are scoped for graduates and career changers. No prior work history required.',
-  },
-  {
-    title: 'Fair, transparent grading',
-    body: 'Every task publishes its rubric before you submit. Your score breaks down criterion-by-criterion so you know exactly where you stood out.',
-  },
+  { step: '1', icon: Briefcase, title: 'Pick a category and topic', body: 'Browse categories like Web Development, Data, or Digital Marketing. Each topic has up to three difficulty levels.' },
+  { step: '2', icon: FileText, title: 'Choose your level', body: 'Beginner, Intermediate, or Advanced. Start where you are, revisit to level up.' },
+  { step: '3', icon: Award, title: 'Earn a Badge of Competence', body: 'Your submission is graded against a public rubric. Pass and you get a shareable Badge URL for LinkedIn.' },
 ];
 
 export default function PortfolioLandingPage() {
-  const fieldCount = new Set(portfolioTasks.map((t) => t.field)).size;
+  const totalTasks = portfolioTasks.length;
+  const totalCategories = portfolioCategories.length;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -73,10 +42,7 @@ export default function PortfolioLandingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
@@ -90,12 +56,12 @@ export default function PortfolioLandingPage() {
             <br className="hidden sm:block" /> Very few have a portfolio.
           </h1>
           <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Complete short, practical tasks from real-world scenarios. Get them graded against a public rubric. Earn a Badge of Competence you can link straight from your LinkedIn.
+            Pick a category. Pick a difficulty. Submit a practical task graded against a public rubric. Earn a Badge of Competence you can link straight from your LinkedIn.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm text-slate-400">
             {[
-              `${portfolioTasks.length} tasks across ${fieldCount} fields`,
-              'Graded in under a minute',
+              `${totalTasks} tasks across ${totalCategories} categories`,
+              '3 difficulty levels per topic',
               'Free. No account required.',
             ].map((item) => (
               <span key={item} className="flex items-center gap-1.5">
@@ -106,10 +72,10 @@ export default function PortfolioLandingPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
             <Link
-              href="/portfolio/tasks"
+              href="#categories"
               className="bg-indigo-500 hover:bg-indigo-400 text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/40"
             >
-              Browse Tasks <ArrowRight size={16} />
+              Browse Categories <ArrowRight size={16} />
             </Link>
             <Link
               href="#how-it-works"
@@ -122,11 +88,48 @@ export default function PortfolioLandingPage() {
       </div>
 
       <main className="max-w-6xl mx-auto px-6 py-14 flex flex-col gap-20">
+        {/* Categories */}
+        <section id="categories">
+          <div className="mb-10">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Choose a Category</h2>
+            <p className="text-gray-500">Each category has topics, and each topic has up to three levels to choose from.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {portfolioCategories.map((cat) => {
+              const topicsInCat = portfolioTopics.filter((t) => t.categoryId === cat.id);
+              const tasksInCat = portfolioTasks.filter((t) => t.categoryId === cat.id);
+              const available = tasksInCat.length;
+              return (
+                <Link
+                  key={cat.id}
+                  href={`/portfolio/${cat.id}`}
+                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all flex flex-col overflow-hidden"
+                >
+                  <div className={`h-1.5 bg-gradient-to-r ${cat.accentFrom} ${cat.accentTo}`} />
+                  <div className="p-6 flex flex-col flex-1 gap-3">
+                    <h3 className="text-lg font-black text-gray-900 group-hover:text-indigo-600 transition-colors">
+                      {cat.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{cat.tagline}</p>
+                    <div className="flex items-center gap-4 text-xs text-gray-500 mt-auto pt-3 border-t border-gray-100">
+                      <span>{topicsInCat.length} {topicsInCat.length === 1 ? 'topic' : 'topics'}</span>
+                      <span>{available} {available === 1 ? 'task' : 'tasks'} available</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm font-bold text-indigo-600">
+                      Explore category <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
         {/* How it works */}
         <section id="how-it-works">
           <div className="mb-10">
             <h2 className="text-2xl font-extrabold text-gray-900 mb-2">How It Works</h2>
-            <p className="text-gray-500">Three steps from brief to Badge. No sign-up. No waiting.</p>
+            <p className="text-gray-500">Three steps from brief to Badge.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {steps.map(({ step, icon: Icon, title, body }) => (
@@ -139,24 +142,6 @@ export default function PortfolioLandingPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">{title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Why it matters */}
-        <section>
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-8">Why a Proof of Work Portfolio?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {whyItMatters.map(({ title, body }) => (
-              <div key={title} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0">
-                  <ShieldCheck size={20} className="text-emerald-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
                 </div>
               </div>
@@ -200,18 +185,27 @@ export default function PortfolioLandingPage() {
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-xl font-extrabold text-gray-900 mb-1">Ready to start building real proof?</h3>
-            <p className="text-gray-500 text-sm">Pick a task that matches your field. Submit your work. Earn your first Badge today.</p>
+        {/* Why it matters */}
+        <section>
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-8">Why a Proof of Work Portfolio?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { title: 'Proof beats claims', body: 'Saying "I know digital marketing" on a CV is forgettable. Linking a graded social media audit is not.' },
+              { title: 'Employers can verify it', body: 'Your Badge lives at a public URL. Any hiring manager can click it to see the actual work, the rubric, and the evaluation.' },
+              { title: 'Built for entry-level', body: 'Tasks are scoped for graduates and career changers. No prior work history required.' },
+              { title: 'Fair, transparent grading', body: 'Every task publishes its rubric before you submit. Your score breaks down criterion-by-criterion so you know exactly where you stood out.' },
+            ].map(({ title, body }) => (
+              <div key={title} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0">
+                  <ShieldCheck size={20} className="text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <Link
-            href="/portfolio/tasks"
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
-          >
-            Browse All Tasks <ArrowRight size={16} />
-          </Link>
         </section>
       </main>
     </div>

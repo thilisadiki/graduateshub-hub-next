@@ -61,13 +61,13 @@ export default function PortfolioBanner() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
-            href="/portfolio/tasks"
+            href="/portfolio"
             className="bg-amber-400 hover:bg-amber-300 text-slate-900 px-6 py-3 rounded-xl font-bold transition-colors inline-flex items-center gap-2 shadow-lg shadow-amber-900/40"
           >
-            Browse Tasks <ArrowRight size={16} />
+            Browse Categories <ArrowRight size={16} />
           </Link>
           <Link
-            href="/portfolio"
+            href="/portfolio#how-it-works"
             className="text-slate-300 hover:text-white transition-colors inline-flex items-center gap-1.5 text-sm font-medium px-4 py-3"
           >
             How it works <ArrowRight size={13} />

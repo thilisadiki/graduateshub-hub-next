@@ -267,7 +267,7 @@ export default async function ProofPage({
               </p>
               {task && (
                 <Link
-                  href={`/portfolio/tasks/${task.id}`}
+                  href={`/portfolio/${task.categoryId}/${task.topicId}/${task.level}`}
                   className="text-sm font-bold text-indigo-600 hover:text-indigo-700 mt-3 inline-flex items-center gap-1"
                 >
                   See the task rubric <ExternalLink size={13} />
@@ -281,13 +281,13 @@ export default async function ProofPage({
         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 text-center">
           <h3 className="text-lg font-extrabold text-gray-900 mb-2">Want your own Badge?</h3>
           <p className="text-sm text-gray-500 mb-4">
-            Browse tasks across Marketing, Tech, Data, Finance, and Design.
+            Browse tasks across Web Development, Software Development, Data, Marketing, Finance, and Design.
           </p>
           <Link
-            href="/portfolio/tasks"
+            href="/portfolio"
             className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-colors"
           >
-            Browse Tasks
+            Browse Categories
           </Link>
         </section>
       </main>

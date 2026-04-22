@@ -1,10 +1,12 @@
-import type { PortfolioTask } from '@/types';
+import type { PortfolioTask, PortfolioLevel } from '@/types';
 
 export const portfolioTasks: PortfolioTask[] = [
   {
     id: 'social-media-audit-coffee-shop',
+    categoryId: 'digital-marketing',
+    topicId: 'social-media-audit',
+    level: 'beginner',
     title: 'Social Media Audit for a Local Coffee Shop',
-    field: 'Marketing',
     difficulty: 'Beginner',
     estimatedHours: '2 to 3 hours',
     tagline: 'Audit a small business Instagram and recommend a 30-day fix.',
@@ -21,38 +23,20 @@ export const portfolioTasks: PortfolioTask[] = [
     submissionGuidance:
       'Use Markdown headings. Be specific: do not say "post more engaging content". Say "Tuesday 8am, barista Q&A reel about their favourite drink to make, goal 40+ saves".',
     rubric: [
-      {
-        key: 'diagnosis',
-        label: 'Diagnosis Quality',
-        description: 'Did the audit identify specific, credible issues rather than generic advice?',
-        weight: 25,
-      },
-      {
-        key: 'calendar',
-        label: 'Content Calendar',
-        description: 'Are the 12 posts varied, realistic for a small business, and tied to business goals?',
-        weight: 30,
-      },
-      {
-        key: 'metrics',
-        label: 'Metrics & Targets',
-        description: 'Are the chosen metrics the right ones, and are the targets realistic?',
-        weight: 20,
-      },
-      {
-        key: 'clarity',
-        label: 'Clarity & Presentation',
-        description: 'Is the submission well structured, free of fluff, and actionable by a non-marketer?',
-        weight: 25,
-      },
+      { key: 'diagnosis', label: 'Diagnosis Quality', description: 'Did the audit identify specific, credible issues rather than generic advice?', weight: 25 },
+      { key: 'calendar', label: 'Content Calendar', description: 'Are the 12 posts varied, realistic for a small business, and tied to business goals?', weight: 30 },
+      { key: 'metrics', label: 'Metrics & Targets', description: 'Are the chosen metrics the right ones, and are the targets realistic?', weight: 20 },
+      { key: 'clarity', label: 'Clarity & Presentation', description: 'Is the submission well structured, free of fluff, and actionable by a non-marketer?', weight: 25 },
     ],
     skillsProven: ['Social media strategy', 'Content planning', 'Marketing analytics', 'Small business marketing'],
     relatedRoadmapIds: ['digital-marketing-specialist'],
   },
   {
     id: 'email-subject-line-ab-test',
+    categoryId: 'digital-marketing',
+    topicId: 'email-experimentation',
+    level: 'beginner',
     title: 'Email Subject Line A/B Test Plan',
-    field: 'Marketing',
     difficulty: 'Beginner',
     estimatedHours: '1 to 2 hours',
     tagline: 'Design a rigorous A/B test for a cart abandonment email.',
@@ -80,8 +64,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'bug-fix-todo-app',
+    categoryId: 'software-development',
+    topicId: 'debug-fix',
+    level: 'beginner',
     title: 'Fix a Bug in a Sample To-Do App',
-    field: 'Tech',
     difficulty: 'Beginner',
     estimatedHours: '1 to 2 hours',
     tagline: 'Diagnose and fix a state management bug in a React to-do app.',
@@ -108,8 +94,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'rest-api-spec-library',
+    categoryId: 'software-development',
+    topicId: 'api-design',
+    level: 'intermediate',
     title: 'Design a REST API for a Local Library',
-    field: 'Tech',
     difficulty: 'Intermediate',
     estimatedHours: '2 to 3 hours',
     tagline: 'Write a concise API spec for a library borrowing system.',
@@ -137,8 +125,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'data-cleaning-messy-csv',
+    categoryId: 'data',
+    topicId: 'data-cleaning',
+    level: 'beginner',
     title: 'Clean a Messy CSV and Write an Insights Memo',
-    field: 'Data',
     difficulty: 'Beginner',
     estimatedHours: '2 hours',
     tagline: 'Turn a realistic messy dataset into three insights a manager can act on.',
@@ -165,8 +155,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'one-chart-dashboard',
+    categoryId: 'data',
+    topicId: 'data-visualisation',
+    level: 'intermediate',
     title: 'The One-Chart Dashboard',
-    field: 'Data',
     difficulty: 'Intermediate',
     estimatedHours: '1 to 2 hours',
     tagline: 'Design the single chart you would put on a CEO\'s weekly email.',
@@ -194,8 +186,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'cash-flow-sme',
+    categoryId: 'finance-accounting',
+    topicId: 'cash-flow-forecasting',
+    level: 'intermediate',
     title: '12-Month Cash Flow for a Fictional SME',
-    field: 'Finance',
     difficulty: 'Intermediate',
     estimatedHours: '2 to 3 hours',
     tagline: 'Build a defensible 12-month cash flow forecast for a small business.',
@@ -223,8 +217,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'ratio-analysis-memo',
+    categoryId: 'finance-accounting',
+    topicId: 'ratio-analysis',
+    level: 'beginner',
     title: 'Ratio Analysis from Sample Statements',
-    field: 'Finance',
     difficulty: 'Beginner',
     estimatedHours: '1 to 2 hours',
     tagline: 'Turn two years of financials into a one-page investment memo.',
@@ -252,8 +248,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'ux-teardown-sa-site',
+    categoryId: 'design-ux',
+    topicId: 'ux-teardown',
+    level: 'beginner',
     title: 'UX Teardown of a South African Website',
-    field: 'Design',
     difficulty: 'Beginner',
     estimatedHours: '2 hours',
     tagline: 'Critique a real SA site\'s booking flow and propose three fixes.',
@@ -281,8 +279,10 @@ export const portfolioTasks: PortfolioTask[] = [
   },
   {
     id: 'landing-page-from-screenshot',
+    categoryId: 'web-development',
+    topicId: 'landing-page-rebuild',
+    level: 'intermediate',
     title: 'Rebuild a Landing Page Section from a Screenshot',
-    field: 'Design',
     difficulty: 'Intermediate',
     estimatedHours: '2 to 3 hours',
     tagline: 'Write HTML and CSS that matches a screenshot pixel-close.',
@@ -310,19 +310,28 @@ export const portfolioTasks: PortfolioTask[] = [
   },
 ];
 
-export const portfolioFields = [
-  'Marketing',
-  'Tech',
-  'Data',
-  'Finance',
-  'Design',
-  'Business',
-] as const;
-
 export function getTaskById(id: string): PortfolioTask | undefined {
   return portfolioTasks.find((t) => t.id === id);
 }
 
-export function getTasksByField(field: string): PortfolioTask[] {
-  return portfolioTasks.filter((t) => t.field === field);
+export function getTaskByLocation(
+  categoryId: string,
+  topicId: string,
+  level: PortfolioLevel,
+): PortfolioTask | undefined {
+  return portfolioTasks.find(
+    (t) => t.categoryId === categoryId && t.topicId === topicId && t.level === level,
+  );
+}
+
+export function getTasksByCategory(categoryId: string): PortfolioTask[] {
+  return portfolioTasks.filter((t) => t.categoryId === categoryId);
+}
+
+export function getTasksByTopic(categoryId: string, topicId: string): PortfolioTask[] {
+  return portfolioTasks.filter((t) => t.categoryId === categoryId && t.topicId === topicId);
+}
+
+export function getTaskUrl(task: PortfolioTask): string {
+  return `/portfolio/${task.categoryId}/${task.topicId}/${task.level}`;
 }

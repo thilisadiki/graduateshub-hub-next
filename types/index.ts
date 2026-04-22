@@ -79,15 +79,26 @@ export interface Course {
   isExternal?: boolean;
 }
 
-export type PortfolioField =
-  | 'Marketing'
-  | 'Tech'
-  | 'Data'
-  | 'Finance'
-  | 'Design'
-  | 'Business';
+export type PortfolioLevel = 'beginner' | 'intermediate' | 'advanced';
 
 export type PortfolioDifficulty = 'Beginner' | 'Intermediate' | 'Advanced';
+
+export interface PortfolioCategory {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  accentFrom: string;
+  accentTo: string;
+}
+
+export interface PortfolioTopic {
+  id: string;
+  categoryId: string;
+  title: string;
+  description: string;
+  skillsProven: string[];
+}
 
 export interface PortfolioRubricCriterion {
   key: string;
@@ -98,8 +109,10 @@ export interface PortfolioRubricCriterion {
 
 export interface PortfolioTask {
   id: string;
+  categoryId: string;
+  topicId: string;
+  level: PortfolioLevel;
   title: string;
-  field: PortfolioField;
   difficulty: PortfolioDifficulty;
   estimatedHours: string;
   tagline: string;
@@ -134,7 +147,7 @@ export interface PortfolioProof {
   id: string;
   task_id: string;
   task_title: string;
-  task_field: PortfolioField;
+  task_field: string;
   graduate_name: string;
   submission: string;
   submission_links: string[];
