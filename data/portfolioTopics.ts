@@ -26,6 +26,24 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Build secure login, signup, and session management. Tests form validation, global state handling, secure cookie management, and protected routes.',
     skillsProven: ['Form validation', 'Global state', 'Secure cookies', 'Route guards'],
   },
+  {
+    id: 'ecommerce-shopping-cart',
+    categoryId: 'web-development',
+    title: 'E-commerce Shopping Cart',
+    description:
+      'Build a functional shopping cart experience. Tests state management, data persistence, edge case handling, and complex UI interactions.',
+    skillsProven: ['State management', 'Data persistence', 'UI interactions', 'Edge cases'],
+  },
+  {
+    id: 'accessible-modal-dialog',
+    categoryId: 'web-development',
+    title: 'Accessible Modal Dialog',
+    description:
+      'Build a modal dialog system from scratch. Tests DOM manipulation, React Portals, WAI-ARIA accessibility standards, and reusable component design.',
+    skillsProven: ['DOM manipulation', 'React Portals', 'Accessibility (WAI-ARIA)', 'Component design'],
+  },
+
+
 
 
 

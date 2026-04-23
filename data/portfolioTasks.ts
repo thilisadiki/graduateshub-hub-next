@@ -554,6 +554,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['OAuth Flows', 'Axios Interceptors', 'Route Protection', 'Race Condition Management', 'Advanced Authentication'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'cart-basic-state',
+    categoryId: 'web-development',
+    topicId: 'ecommerce-shopping-cart',
+    level: 'beginner',
+    title: 'Build a Basic Shopping Cart UI',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Create a static shopping cart that calculates totals using React state.',
+    scenario:
+      'A small boutique clothing brand is launching their first online store. The designer has created the cart slide-out UI, but it currently has hardcoded values. You need to bring it to life so users can see their items, update quantities, and see the correct total price.',
+    brief:
+      'Build a React cart component. It should accept an array of product objects (id, name, price, quantity, image). Render the list of items, allow the user to increase or decrease the quantity of each item, and automatically calculate the subtotal, a flat shipping fee, and the grand total.',
+    deliverables: [
+      'The React component code for the Cart and CartItem',
+      'The state management logic for updating item quantities and removing items',
+      'The math logic for calculating the grand total securely',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on clean, predictable state updates. Never mutate the state array directly - always return a new array when updating quantities.',
+    rubric: [
+      { key: 'state', label: 'State Updates', description: 'Are the quantity updates immutable and bug-free?', weight: 35 },
+      { key: 'math', label: 'Calculations', description: 'Is the total calculated correctly based on the current state?', weight: 30 },
+      { key: 'edge', label: 'Edge Cases', description: 'Does the quantity prevent going below 1 (or does it remove the item at 0)?', weight: 20 },
+      { key: 'ui', label: 'Component Structure', description: 'Is the UI broken down into sensible sub-components?', weight: 15 },
+    ],
+    skillsProven: ['React State', 'Array Methods', 'Basic Math Logic', 'Component Design'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'cart-localstorage-persistence',
+    categoryId: 'web-development',
+    topicId: 'ecommerce-shopping-cart',
+    level: 'intermediate',
+    title: 'Persist Cart to LocalStorage',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Ensure users do not lose their cart when they refresh the page.',
+    scenario:
+      'The boutique store is live, but analytics show a huge drop-off. Users are adding items to their cart on their phone, getting distracted, and when they come back later or refresh the page, their cart is empty. You need to persist the cart data locally.',
+    brief:
+      'Extend a basic React shopping cart to sync with the browser localStorage. When the app loads, it should check for an existing cart and initialize the state. Whenever the cart changes (item added, removed, quantity updated), it must save the new state back to localStorage.',
+    deliverables: [
+      'The custom hook (e.g., `useCartStorage`) or Context provider managing the persistence logic',
+      'The useEffect logic handling the synchronization',
+      'A brief explanation of how you handle the Next.js/SSR hydration mismatch error (if applicable)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'If using Next.js or SSR, remember that localStorage is not available on the server. Show how you prevent hydration errors when the server renders an empty cart but the client has items saved.',
+    rubric: [
+      { key: 'persistence', label: 'Data Persistence', description: 'Does the cart accurately save and restore from LocalStorage?', weight: 35 },
+      { key: 'hydration', label: 'SSR Hydration', description: 'Is the candidate aware of and handling SSR hydration mismatches?', weight: 25 },
+      { key: 'performance', label: 'Performance', description: 'Is the stringification to LocalStorage optimized (not causing unnecessary lag)?', weight: 20 },
+      { key: 'craft', label: 'Hook Design', description: 'Is the logic extracted cleanly into a reusable hook or context?', weight: 20 },
+    ],
+    skillsProven: ['LocalStorage', 'Custom Hooks', 'SSR Hydration Mismatch', 'State Synchronization'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'cart-backend-sync-stock',
+    categoryId: 'web-development',
+    topicId: 'ecommerce-shopping-cart',
+    level: 'advanced',
+    title: 'Backend Sync & Stock Validation',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Build a production-grade cart that handles server validation and race conditions.',
+    scenario:
+      'The store is booming, but a new problem has emerged. Users are adding limited-edition items to their cart, keeping them there for days, and trying to check out after the items are actually sold out. You need to sync the local cart with the backend to validate stock in real-time.',
+    brief:
+      'Design the logic for a cart that syncs with a backend API. When a user opens the cart, it must ping the server to verify that the items are still in stock and the prices have not changed. If an item is out of stock, the UI must alert the user and adjust the total. Write the logic for the validation check and the mock checkout submission.',
+    deliverables: [
+      'The API fetching logic that validates the cart against the server database',
+      'The state reconciliation logic (updating the local cart if the server says an item is out of stock)',
+      'The error handling UI states (e.g., "Only 2 left in stock" or "Price updated")',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You are not building the backend, just the frontend consumer of it. Focus on how you handle the asynchronous mismatch between what the user thinks they have and what the server knows is available.',
+    rubric: [
+      { key: 'validation', label: 'Server Validation', description: 'Does the code successfully ping the server to validate stock and prices?', weight: 30 },
+      { key: 'reconciliation', label: 'State Reconciliation', description: 'Does the local state update gracefully when the server returns bad news?', weight: 30 },
+      { key: 'ux', label: 'Error UX', description: 'Are the stock errors communicated clearly to the user without breaking the app?', weight: 25 },
+      { key: 'race', label: 'Race Conditions', description: 'Is the checkout button disabled while stock validation is happening?', weight: 15 },
+    ],
+    skillsProven: ['Data Synchronization', 'Asynchronous Validation', 'Race Condition Handling', 'Advanced UX Error States'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
