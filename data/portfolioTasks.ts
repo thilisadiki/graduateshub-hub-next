@@ -644,6 +644,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['Data Synchronization', 'Asynchronous Validation', 'Race Condition Handling', 'Advanced UX Error States'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'modal-basic-overlay',
+    categoryId: 'web-development',
+    topicId: 'accessible-modal-dialog',
+    level: 'beginner',
+    title: 'Build a Basic CSS/JS Modal Overlay',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Create a simple, cleanly styled modal without relying on external UI libraries.',
+    scenario:
+      'A marketing team wants to add a "Subscribe to Newsletter" pop-up to their blog. The current implementation is just a harsh browser alert(). You need to replace it with a cleanly styled HTML/CSS modal that can be toggled open and closed.',
+    brief:
+      'Build a basic modal component. It should have a darkened backdrop overlay, a white content box centered on the screen, an "X" button to close it, and a trigger button to open it. Clicking the darkened backdrop should also close the modal.',
+    deliverables: [
+      'The HTML/JSX structure for the modal and its trigger',
+      'The CSS (or Tailwind classes) to handle the fixed positioning, z-index, and centering',
+      'The basic state logic (vanilla JS or React useState) to toggle visibility',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on getting the CSS right. The backdrop must cover the entire viewport even if the user scrolls, and the modal box must stay centered.',
+    rubric: [
+      { key: 'css', label: 'CSS Positioning', description: 'Is the backdrop fixed, covering the viewport, with the correct z-index?', weight: 40 },
+      { key: 'state', label: 'State Toggling', description: 'Does the modal open and close reliably?', weight: 30 },
+      { key: 'ux', label: 'UX Details', description: 'Does clicking the backdrop (outside the modal box) close it?', weight: 30 },
+    ],
+    skillsProven: ['CSS Positioning', 'Z-Index Management', 'Basic State Toggling', 'Event Bubbling'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'modal-wai-aria-focus',
+    categoryId: 'web-development',
+    topicId: 'accessible-modal-dialog',
+    level: 'intermediate',
+    title: 'WAI-ARIA & Keyboard Accessibility',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Make the modal fully usable for screen readers and keyboard-only users.',
+    scenario:
+      'The company has just failed an accessibility audit. The modal you built looks great to sighted mouse-users, but screen readers do not know it is open, and keyboard users can accidentally tab to hidden elements behind the modal.',
+    brief:
+      'Upgrade the modal to meet WAI-ARIA standards. You must: 1) Add the correct `role` and `aria-*` attributes. 2) Implement "Focus Trapping" so that pressing the Tab key cycles only through the modals interactive elements. 3) Ensure the Escape key closes the modal. 4) Return focus to the original trigger button when the modal closes.',
+    deliverables: [
+      'The updated modal code including all ARIA attributes',
+      'The JavaScript logic for the focus trap',
+      'The keyboard event listeners (Escape key handling)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus trapping is difficult. Do not use an external library like focus-trap for this exercise - write the logic yourself to prove you understand how the DOM handles focus.',
+    rubric: [
+      { key: 'aria', label: 'ARIA Attributes', description: 'Are role="dialog", aria-modal="true", and aria-labelledby used correctly?', weight: 25 },
+      { key: 'trap', label: 'Focus Trapping', description: 'Does the Tab key correctly loop inside the modal without escaping to the background?', weight: 35 },
+      { key: 'keyboard', label: 'Keyboard Navigation', description: 'Does the Escape key work? Is focus restored to the trigger on close?', weight: 25 },
+      { key: 'craft', label: 'Code Craft', description: 'Are the event listeners cleaned up properly (e.g., removing the keydown listener when unmounted)?', weight: 15 },
+    ],
+    skillsProven: ['WAI-ARIA Standards', 'Keyboard Navigation', 'Focus Trapping', 'DOM Event Listeners'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'modal-headless-react-portals',
+    categoryId: 'web-development',
+    topicId: 'accessible-modal-dialog',
+    level: 'advanced',
+    title: 'Headless UI & React Portals',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Build a reusable, headless modal system for a large-scale React application.',
+    scenario:
+      'The application now has 40 different modals. Developers are copying and pasting the accessibility logic everywhere, leading to bugs. The lead engineer wants you to build a single, highly reusable "Headless" Modal component system that handles the accessibility and positioning, while letting developers inject any design they want.',
+    brief:
+      'Design a Compound Component API for the modal (e.g., `<Modal>`, `<Modal.Trigger>`, `<Modal.Content>`). Use React Portals to render the modal at the root of the DOM to avoid CSS overflow clipping issues. Manage the shared state between these sub-components using React Context.',
+    deliverables: [
+      'The complete React code for the Compound Component system (Modal, Trigger, Content, CloseButton)',
+      'The React Context implementation linking them together',
+      'The React Portal implementation',
+      'A short example of how a developer would consume/use this API in a view',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Your goal is developer experience (DX). The API should be intuitive. Make sure to explain why React Portals are necessary for modals in complex DOM trees.',
+    rubric: [
+      { key: 'api', label: 'Compound Component API', description: 'Is the API intuitive and highly flexible for consuming developers?', weight: 30 },
+      { key: 'context', label: 'React Context', description: 'Is the shared open/close state managed elegantly across the sub-components?', weight: 25 },
+      { key: 'portals', label: 'React Portals', description: 'Is the modal successfully ported to the document body to escape stacking contexts?', weight: 25 },
+      { key: 'dx', label: 'Developer Experience', description: 'Is the implementation abstracted cleanly, hiding the complex accessibility logic from the consumer?', weight: 20 },
+    ],
+    skillsProven: ['Compound Components', 'React Portals', 'React Context', 'Headless UI Design', 'Developer Experience (DX)'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
