@@ -10,6 +10,24 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Rebuild a marketing page section from a screenshot or spec. Tests HTML, CSS, responsive behaviour, and design collaboration.',
     skillsProven: ['HTML', 'CSS', 'Responsive design', 'Accessibility', 'Design collaboration'],
   },
+  {
+    id: 'api-data-fetching',
+    categoryId: 'web-development',
+    title: 'API Data Fetching',
+    description:
+      'Build a frontend that interacts with a REST API. Tests asynchronous JavaScript, React state management, error handling, and performance optimization.',
+    skillsProven: ['API integration', 'React state', 'Error handling', 'Performance optimization'],
+  },
+  {
+    id: 'auth-flow-implementation',
+    categoryId: 'web-development',
+    title: 'Authentication Flow',
+    description:
+      'Build secure login, signup, and session management. Tests form validation, global state handling, secure cookie management, and protected routes.',
+    skillsProven: ['Form validation', 'Global state', 'Secure cookies', 'Route guards'],
+  },
+
+
 
   // Software Development
   {

@@ -374,6 +374,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['HTML', 'CSS / Tailwind', 'Web performance', 'Core Web Vitals', 'Accessibility', 'Technical SEO', 'Engineering judgment'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'api-fetch-movie-list',
+    categoryId: 'web-development',
+    topicId: 'api-data-fetching',
+    level: 'beginner',
+    title: 'Fetch and Display a Movie List',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Fetch data from a public API and render it as a responsive grid.',
+    scenario:
+      'A streaming startup wants to build a simple web client to display their top movies. Before building the full app, they want a prototype that fetches the top 20 movies from a public API and renders them nicely on the page.',
+    brief:
+      'Using React (or vanilla JS), make a GET request to a public movie API (e.g., TMDB or a mock JSON endpoint). Display the title, release year, and poster image for each movie in a responsive grid. Handle the loading state and display a simple error message if the fetch fails.',
+    deliverables: [
+      'A code snippet of the data fetching logic (e.g., a custom hook or useEffect block)',
+      'The component code that renders the grid and handles loading/error states',
+      'A brief explanation of how you handle the loading state while waiting for the API',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on clean async/await syntax and proper React state management. Do not over-engineer the CSS, but ensure it does not break on mobile.',
+    rubric: [
+      { key: 'fetching', label: 'Data Fetching', description: 'Is the API call correctly implemented using fetch or axios?', weight: 30 },
+      { key: 'state', label: 'State Management', description: 'Are loading, error, and data states handled correctly?', weight: 30 },
+      { key: 'ui', label: 'UI Rendering', description: 'Is the data mapped correctly into a responsive grid?', weight: 20 },
+      { key: 'cleanliness', label: 'Code Cleanliness', description: 'Is the code readable and free of obvious memory leaks (e.g., missing dependency arrays)?', weight: 20 },
+    ],
+    skillsProven: ['REST APIs', 'Async/Await', 'React State', 'Basic CSS Grid'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'api-search-filter-pagination',
+    categoryId: 'web-development',
+    topicId: 'api-data-fetching',
+    level: 'intermediate',
+    title: 'Search, Filter, and Paginate API Data',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Add complex user interactions to a data-heavy dashboard.',
+    scenario:
+      'An internal tool for an e-commerce company displays thousands of customer orders. The basic list works, but customer support agents are complaining that they cannot find specific orders easily. You need to implement search, status filtering, and pagination without crashing the browser.',
+    brief:
+      'Extend a basic data fetching component. Add a text input for searching by ID, a dropdown to filter by status (Pending, Shipped, Delivered), and basic next/previous pagination buttons. You must debounce the search input to prevent spamming the API.',
+    deliverables: [
+      'The React component code managing the search, filter, and pagination state',
+      'The debounced search implementation',
+      'An explanation of how URL search parameters could be used to make the filters shareable',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Assume the API supports query parameters like `?search=xyz&status=shipped&page=2`. Show how you construct this URL dynamically based on state.',
+    rubric: [
+      { key: 'state', label: 'Complex State Management', description: 'Are the multiple filter states managed cleanly without conflicting?', weight: 30 },
+      { key: 'debounce', label: 'Debouncing', description: 'Is the search input debounced correctly to limit API calls?', weight: 25 },
+      { key: 'url', label: 'URL Sync Concept', description: 'Does the candidate understand how to sync state to the URL?', weight: 20 },
+      { key: 'edge-cases', label: 'Edge Cases', description: 'Does the code handle empty states (e.g., "No results found") gracefully?', weight: 25 },
+    ],
+    skillsProven: ['Advanced React State', 'Debouncing', 'API Query Parameters', 'UX Edge Cases'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'api-optimistic-updates-caching',
+    categoryId: 'web-development',
+    topicId: 'api-data-fetching',
+    level: 'advanced',
+    title: 'Optimistic Updates & Local Caching',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Make an app feel instantly responsive by mastering client-side caching.',
+    scenario:
+      'You are building a real-time task management app (like Trello). Users are complaining that clicking "Complete Task" feels sluggish because it waits for the server response before updating the UI. The engineering lead wants you to implement optimistic UI updates and local caching to make the app feel instant.',
+    brief:
+      'Design the data fetching layer for a "Task Dashboard". You do not need to build the full UI. Write the logic (using React Query, SWR, or custom hooks) to: 1) Cache the initial fetch. 2) Optimistically update the cache when a user toggles a task. 3) Roll back the UI if the API request fails.',
+    deliverables: [
+      'The data fetching and mutation code (e.g., React Query hooks)',
+      'The optimistic update and rollback logic',
+      'A short architecture note explaining the trade-offs of optimistic updates (e.g., when NOT to use them)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You may use tools like TanStack Query (React Query) or SWR in your code snippet, as they are industry standard for this problem. Focus on the mutation logic.',
+    rubric: [
+      { key: 'caching', label: 'Caching Strategy', description: 'Is the data cached effectively to prevent redundant background fetches?', weight: 25 },
+      { key: 'optimistic', label: 'Optimistic Update Logic', description: 'Does the UI update immediately before the network request finishes?', weight: 30 },
+      { key: 'rollback', label: 'Error Handling & Rollback', description: 'Is the previous state correctly restored if the mutation fails?', weight: 25 },
+      { key: 'trade-offs', label: 'Architectural Judgment', description: 'Does the candidate understand the risks of optimistic updates (e.g., payment processing)?', weight: 20 },
+    ],
+    skillsProven: ['Optimistic UI', 'Client-side Caching', 'Data Mutation', 'React Query / SWR', 'Error Recovery'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
