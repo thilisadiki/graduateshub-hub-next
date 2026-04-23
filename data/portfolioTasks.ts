@@ -412,6 +412,92 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'cicd-basic-github-actions',
+    categoryId: 'software-development',
+    topicId: 'cicd-pipeline-setup',
+    level: 'beginner',
+    title: 'Create a Basic CI Workflow',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Write a GitHub Actions YAML file to automate testing and linting.',
+    scenario:
+      'A startup team is pushing broken code to the `main` branch because developers forget to run tests locally. They need a Continuous Integration (CI) pipeline that automatically checks every Pull Request.',
+    brief:
+      'Write a GitHub Actions workflow YAML file for a Node.js project. It should trigger on Pull Requests to `main`. It must install dependencies, run a linter, and run the test suite. If any step fails, the workflow must fail.',
+    deliverables: [
+      'The complete `.yml` workflow file',
+      'An explanation of the difference between `npm install` and `npm ci` in a pipeline',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Ensure you are caching Node modules to speed up the workflow execution time. Speed matters in CI.',
+    rubric: [
+      { key: 'yaml', label: 'YAML Syntax', description: 'Is the workflow file correctly structured with triggers and steps?', weight: 40 },
+      { key: 'npm-ci', label: 'Dependency Management', description: 'Does the candidate understand why `npm ci` is strictly better for CI environments?', weight: 30 },
+      { key: 'caching', label: 'Pipeline Optimization', description: 'Is a dependency caching strategy implemented?', weight: 30 },
+    ],
+    skillsProven: ['GitHub Actions', 'Continuous Integration', 'YAML', 'Build Optimization'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'cicd-multi-environment',
+    categoryId: 'software-development',
+    topicId: 'cicd-pipeline-setup',
+    level: 'intermediate',
+    title: 'Multi-Environment Deployment Pipeline',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Design a pipeline that deploys to Staging, then requires manual approval for Production.',
+    scenario:
+      'The company is maturing. They now have a `staging` environment and a `production` environment. Pushes to `main` should automatically deploy to staging, but deploying to production must require a manual click from the QA manager.',
+    brief:
+      'Design a multi-stage Continuous Deployment (CD) pipeline. Write the GitHub Actions (or GitLab CI) YAML that defines two deployment jobs. Explain how you manage environment-specific secrets (like database URLs).',
+    deliverables: [
+      'The multi-stage YAML file',
+      'An explanation of how manual approval gates are configured in your chosen CI provider',
+      'A description of how environment variables are securely injected into the build',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not hardcode secrets in your YAML. Show how you reference repository secrets based on the current environment.',
+    rubric: [
+      { key: 'stages', label: 'Multi-Stage YAML', description: 'Are the staging and production jobs correctly chained?', weight: 40 },
+      { key: 'gates', label: 'Approval Gates', description: 'Is the manual approval process correctly implemented?', weight: 30 },
+      { key: 'secrets', label: 'Secret Management', description: 'Are environment variables referenced securely?', weight: 30 },
+    ],
+    skillsProven: ['Continuous Deployment (CD)', 'Environment Management', 'Secret Handling', 'Release Gates'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'cicd-zero-downtime',
+    categoryId: 'software-development',
+    topicId: 'cicd-pipeline-setup',
+    level: 'advanced',
+    title: 'Zero-Downtime Deployment Strategy',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Architect a deployment process where users never see a 502 Bad Gateway.',
+    scenario:
+      'The application serves hospitals 24/7. Currently, deploying a new version requires restarting the Node.js server, causing 10 seconds of downtime. This is unacceptable. The VP of Engineering wants a Zero-Downtime deployment strategy.',
+    brief:
+      'Architect a Zero-Downtime deployment process. You must choose between Blue-Green Deployment, Canary Releases, or Rolling Updates. Explain your choice, detail the infrastructure required (e.g., Load Balancers, container orchestration), and outline the rollback plan if the new version crashes immediately.',
+    deliverables: [
+      'An architectural diagram of the deployment strategy (e.g., showing the Load Balancer routing traffic between Blue and Green clusters)',
+      'A defense of your chosen strategy over the alternatives',
+      'A step-by-step description of the automated rollback trigger',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This is an architecture task. You do not need to write the specific bash scripts, but you must explain the conceptual flow of traffic during the switch-over.',
+    rubric: [
+      { key: 'strategy', label: 'Deployment Strategy', description: 'Is the chosen strategy (Blue-Green/Canary) logically sound for a high-availability app?', weight: 35 },
+      { key: 'routing', label: 'Traffic Routing', description: 'Does the candidate understand how Load Balancers manage the switch-over?', weight: 35 },
+      { key: 'rollback', label: 'Automated Rollback', description: 'Is there a clear mechanism for detecting failure and reverting traffic?', weight: 30 },
+    ],
+    skillsProven: ['Zero-Downtime Deployment', 'Blue-Green / Canary', 'Load Balancing', 'Site Reliability Engineering (SRE)'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',

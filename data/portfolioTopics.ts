@@ -133,6 +133,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Design robust relational schemas. Tests normalization, understanding of indexes, and planning for complex data relationships.',
     skillsProven: ['Schema design', 'Normalization', 'Relational databases', 'Data integrity'],
   },
+  {
+    id: 'cicd-pipeline-setup',
+    categoryId: 'software-development',
+    title: 'CI/CD Pipeline Setup',
+    description:
+      'Design automated deployment workflows. Tests DevOps fundamentals, multi-environment setups, and zero-downtime deployment strategies.',
+    skillsProven: ['DevOps', 'GitHub Actions', 'Deployment pipelines', 'Automation'],
+  },
 
   // Data
   {
