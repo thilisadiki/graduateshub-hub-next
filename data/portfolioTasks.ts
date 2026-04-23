@@ -1092,6 +1092,179 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['Full-Stack Integration', 'React Query / SWR', 'Optimistic UI', 'Asynchronous Error Handling'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'api-embed-maps',
+    categoryId: 'web-development',
+    topicId: 'third-party-api-integration',
+    level: 'beginner',
+    title: 'Embed an Interactive Map',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Read external documentation to embed a third-party widget safely.',
+    scenario:
+      'A local coffee shop needs a "Find Us" page. They want an interactive map showing their three locations, rather than just a static image. You need to use the Google Maps (or Mapbox) API to render this.',
+    brief:
+      'Use a mapping API to render an interactive map centered on a specific city. Place three custom markers on the map representing the coffee shop locations. When a user clicks a marker, a small info window should pop up showing the address.',
+    deliverables: [
+      'The React component initializing the map and markers',
+      'A brief explanation of how you secured your API key (e.g., using environment variables and HTTP referrer restrictions)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The hardest part of this task for beginners is often just getting the API key and reading the docs. Prove you can follow external documentation.',
+    rubric: [
+      { key: 'integration', label: 'API Integration', description: 'Is the map rendered and are the markers correctly placed using the SDK?', weight: 40 },
+      { key: 'interaction', label: 'Interactivity', description: 'Do the info windows open when markers are clicked?', weight: 30 },
+      { key: 'security', label: 'API Key Security', description: 'Does the candidate understand how to prevent API key theft?', weight: 30 },
+    ],
+    skillsProven: ['External SDKs', 'Documentation Parsing', 'API Key Security'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'api-stripe-checkout',
+    categoryId: 'web-development',
+    topicId: 'third-party-api-integration',
+    level: 'intermediate',
+    title: 'Implement Stripe Checkout',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Build a secure payment flow using the industry standard Stripe API.',
+    scenario:
+      'The coffee shop wants to sell bags of beans online. You need to build the checkout button. When clicked, it should redirect the user to a secure Stripe Checkout session, and then return them to a "Success" or "Cancel" page on your site.',
+    brief:
+      'Build a Next.js (or Express) backend route that creates a Stripe Checkout Session using the Stripe Node.js SDK. Then, build the frontend React button that calls this route and redirects the user to the Stripe hosted payment page. Handle the redirect back to your app.',
+    deliverables: [
+      'The Backend route code that initializes the `stripe.checkout.sessions.create` call',
+      'The Frontend code handling the button click and the redirect',
+      'An explanation of why prices should be calculated on the backend, not the frontend',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Security is paramount. Never pass the final price from the client to the server; the server must look up the price based on the product ID to prevent tampering.',
+    rubric: [
+      { key: 'backend', label: 'Backend Session Creation', description: 'Is the Stripe session created correctly with success/cancel URLs?', weight: 40 },
+      { key: 'frontend', label: 'Frontend Redirect', description: 'Does the client successfully redirect to the Stripe URL?', weight: 30 },
+      { key: 'security', label: 'Price Tampering Security', description: 'Is the candidate aware of the risks of client-side pricing?', weight: 30 },
+    ],
+    skillsProven: ['Stripe API', 'Payment Gateways', 'Backend/Frontend Handoff', 'E-commerce Security'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'api-stripe-webhooks',
+    categoryId: 'web-development',
+    topicId: 'third-party-api-integration',
+    level: 'advanced',
+    title: 'Handle Stripe Webhooks securely',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Process asynchronous events securely to fulfill digital orders.',
+    scenario:
+      'The store is now selling a digital e-book. When a user pays via Stripe, you cannot just fulfill the order on the "Success" page, because users can bookmark that page and visit it without paying. You must listen for Stripe to securely ping your server (a webhook) to confirm the payment before emailing the e-book.',
+    brief:
+      'Write a Node.js/Next.js backend webhook handler. It must receive the POST request from Stripe, verify the cryptographic signature to ensure the request is actually from Stripe, parse the `checkout.session.completed` event, and run the mock fulfillment logic.',
+    deliverables: [
+      'The webhook route code, including the raw body parsing and `stripe.webhooks.constructEvent` verification logic',
+      'The switch statement handling the specific event type',
+      'A short explanation of why webhooks require raw bodies instead of JSON parsed bodies',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Webhook signature verification is notoriously tricky because it requires the raw, unparsed HTTP request body. Show that you know how to configure your server to extract this.',
+    rubric: [
+      { key: 'verification', label: 'Signature Verification', description: 'Is the `constructEvent` method used correctly to prevent spoofing?', weight: 40 },
+      { key: 'raw-body', label: 'Raw Body Parsing', description: 'Does the candidate understand how to capture the raw request body?', weight: 30 },
+      { key: 'fulfillment', label: 'Event Handling', description: 'Is the specific success event parsed and handled correctly?', weight: 30 },
+    ],
+    skillsProven: ['Webhooks', 'Cryptographic Signatures', 'Asynchronous Fulfillment', 'Server Configuration'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'state-custom-audio-player',
+    categoryId: 'web-development',
+    topicId: 'state-machine-logic',
+    level: 'beginner',
+    title: 'Build a Custom Audio Player',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Manage the intersecting states of HTML5 media elements.',
+    scenario:
+      'A podcaster wants a custom audio player on their blog that matches their brand. The native browser `<audio>` tag controls are ugly and inconsistent across browsers. You need to build custom UI controls that tie into the underlying audio element.',
+    brief:
+      'Create a React component that wraps an `<audio>` tag. Build custom buttons for Play/Pause, a progress bar that updates as the audio plays, and a volume slider. You must manage React state (isPlaying, currentTime, duration) and sync it with the native HTMLMediaElement events.',
+    deliverables: [
+      'The React component code with the `useRef` pointing to the audio element',
+      'The event listeners (`onTimeUpdate`, `onLoadedMetadata`) that sync the native API with React state',
+      'The UI elements that trigger changes (e.g., clicking Play calls `audioRef.current.play()`)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The challenge here is two-way binding: The UI must update when the audio plays natively, and the audio must change when the user interacts with the UI (like dragging the progress bar).',
+    rubric: [
+      { key: 'sync', label: 'State Synchronization', description: 'Is React state kept cleanly in sync with the native DOM element?', weight: 35 },
+      { key: 'controls', label: 'Playback Controls', description: 'Do the Play/Pause buttons work and toggle correctly?', weight: 30 },
+      { key: 'progress', label: 'Progress Tracking', description: 'Does the progress bar update accurately based on `currentTime`?', weight: 35 },
+    ],
+    skillsProven: ['HTML5 Media API', 'React `useRef`', 'Two-way State Binding', 'Event Listeners'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'state-usereducer-wizard',
+    categoryId: 'web-development',
+    topicId: 'state-machine-logic',
+    level: 'intermediate',
+    title: 'Complex State with useReducer',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Upgrade a messy cluster of `useState` hooks into a clean reducer.',
+    scenario:
+      'You inherited a data-table component that has 8 different `useState` hooks (`data`, `isLoading`, `error`, `sortBy`, `sortDirection`, `filterText`, `page`, `selectedRows`). Updating one often requires updating three others, causing rendering bugs and impossible states (like `isLoading: true` but `error: "Failed"`).',
+    brief:
+      'Refactor the provided component state logic. Replace the multiple `useState` calls with a single `useReducer` (or Redux slice). Define clear action types (e.g., `FETCH_START`, `FETCH_SUCCESS`, `SET_SORT`) that update the state in a predictable, transactional way.',
+    deliverables: [
+      'The initial state object and the reducer function handling the actions',
+      'A code snippet showing how the component dispatches these actions',
+      'An explanation of how this approach prevents "impossible states"',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus heavily on the reducer function. Make sure that when `FETCH_START` is dispatched, previous errors are cleared and data is handled appropriately.',
+    rubric: [
+      { key: 'reducer', label: 'Reducer Logic', description: 'Is the reducer function pure and does it handle state transitions correctly?', weight: 40 },
+      { key: 'actions', label: 'Action Design', description: 'Are the action types semantic and well-structured?', weight: 30 },
+      { key: 'impossible', label: 'Preventing Impossible States', description: 'Does the refactor successfully prevent conflicting states?', weight: 30 },
+    ],
+    skillsProven: ['React `useReducer`', 'State Architecture', 'Action Dispatching', 'Bug Prevention'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'state-xstate-checkout',
+    categoryId: 'web-development',
+    topicId: 'state-machine-logic',
+    level: 'advanced',
+    title: 'Finite State Machines (XState)',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Use mathematical state machines to build bulletproof logic flows.',
+    scenario:
+      'An enterprise e-commerce company is losing millions of dollars because their custom checkout flow has hidden bugs. Users are somehow clicking "Submit Payment" twice, or navigating to the "Success" page while the payment is still processing. You need to rewrite the checkout logic using a strict Finite State Machine.',
+    brief:
+      'Design a Finite State Machine for a checkout flow. It must have states like `idle`, `validating_cart`, `processing_payment`, `success`, and `error`. You must define the exact events (transitions) that allow movement between these states. You can use a library like XState, or write a strict custom implementation.',
+    deliverables: [
+      'The state machine configuration (the states, events, and transitions)',
+      'The logic that explicitly rejects invalid transitions (e.g., ignoring a "SUBMIT" event if currently in `processing_payment`)',
+      'A short architectural defense of why Finite State Machines are better than boolean flags for critical flows',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You do not need to build the UI, just the logic layer. Using XState syntax is highly recommended as it is the industry standard for this pattern.',
+    rubric: [
+      { key: 'machine', label: 'State Machine Design', description: 'Are the states and transitions logically sound and complete?', weight: 35 },
+      { key: 'guards', label: 'Transition Guards', description: 'Does the machine successfully prevent invalid actions based on current state?', weight: 35 },
+      { key: 'architecture', label: 'Architectural Judgment', description: 'Does the candidate articulate the value of FSMs over boolean flags?', weight: 30 },
+    ],
+    skillsProven: ['Finite State Machines (FSM)', 'XState', 'Enterprise Architecture', 'Deterministic Logic'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {

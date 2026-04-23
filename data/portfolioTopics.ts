@@ -74,6 +74,23 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Build a complete application from database to UI. Tests backend routing, database queries, API design, and frontend integration.',
     skillsProven: ['REST/GraphQL APIs', 'Database operations', 'Full-stack integration', 'Server-side logic'],
   },
+  {
+    id: 'third-party-api-integration',
+    categoryId: 'web-development',
+    title: 'Third-Party API Integration',
+    description:
+      'Integrate complex external services like Stripe or Google Maps. Tests SDK usage, webhook handling, and reading external documentation.',
+    skillsProven: ['API SDKs', 'Webhooks', 'Security (API Keys)', 'Documentation parsing'],
+  },
+  {
+    id: 'state-machine-logic',
+    categoryId: 'web-development',
+    title: 'Complex State Machines',
+    description:
+      'Build applications with many intersecting states, like a custom video player or a browser game. Tests reducer logic, XState, and avoiding impossible states.',
+    skillsProven: ['useReducer / XState', 'Complex state logic', 'Media APIs', 'Event handling'],
+  },
+
 
 
 
