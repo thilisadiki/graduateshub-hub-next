@@ -327,6 +327,91 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'db-model-blog',
+    categoryId: 'software-development',
+    topicId: 'database-modeling',
+    level: 'beginner',
+    title: 'Model a Simple Blog Schema',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Design a standard relational schema with basic foreign keys.',
+    scenario:
+      'A publisher needs a database to power their new multi-author blog. They need to track Users, Posts, and Tags. A post can have multiple tags, and a tag can belong to multiple posts.',
+    brief:
+      'Design the SQL schema (tables, columns, and foreign keys) for the blog. You must correctly implement the many-to-many relationship between Posts and Tags.',
+    deliverables: [
+      'An Entity-Relationship Diagram (ERD) or a set of `CREATE TABLE` SQL statements',
+      'The definition of the junction/join table connecting Posts and Tags',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not forget foreign key constraints. Ensure you define primary keys for all tables.',
+    rubric: [
+      { key: 'tables', label: 'Table Structure', description: 'Are the Users, Posts, and Tags tables defined with appropriate columns?', weight: 35 },
+      { key: 'relations', label: 'Foreign Keys', description: 'Is the User-to-Post 1-to-many relationship correct?', weight: 30 },
+      { key: 'manytomany', label: 'Many-to-Many', description: 'Is the junction table for Posts-Tags correctly defined with composite keys?', weight: 35 },
+    ],
+    skillsProven: ['SQL DDL', 'Foreign Keys', 'Many-to-Many Relationships', 'Entity-Relationship Modeling'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'db-model-ecommerce',
+    categoryId: 'software-development',
+    topicId: 'database-modeling',
+    level: 'intermediate',
+    title: 'Model an E-commerce Cart & Order System',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Design a schema that safely handles immutable financial records.',
+    scenario:
+      'You are building the database for an online store. The business needs to track Products, Shopping Carts (active sessions), and Final Orders. The critical business rule: if a Product price changes tomorrow, historical Final Orders from yesterday must not change.',
+    brief:
+      'Design the SQL schema for Products, Carts, CartItems, Orders, and OrderLineItems. Explain how you structure the tables to preserve historical pricing integrity.',
+    deliverables: [
+      'The schema definition (`CREATE TABLE` statements or an ERD) for the e-commerce entities',
+      'A short explanation of how the `OrderLineItem` table differs from the `CartItem` table regarding price tracking',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'A common mistake is relating an Order directly to a Product ID to look up the price. If the product price updates, the past order total will incorrectly change. How do you prevent this?',
+    rubric: [
+      { key: 'schema', label: 'Schema Design', description: 'Are the tables logically separated (Carts vs Orders)?', weight: 30 },
+      { key: 'integrity', label: 'Historical Integrity', description: 'Does the schema copy the price to the OrderLineItem at checkout?', weight: 40 },
+      { key: 'normalization', label: 'Normalization', description: 'Are the tables normalized without unnecessary data duplication?', weight: 30 },
+    ],
+    skillsProven: ['Data Integrity', 'Financial Modeling', 'Schema Normalization'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'db-model-social-feed',
+    categoryId: 'software-development',
+    topicId: 'database-modeling',
+    level: 'advanced',
+    title: 'Model a High-Traffic Social Media Feed',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 5 hours',
+    tagline: 'Design a database schema optimized for massive, read-heavy fan-out operations.',
+    scenario:
+      'You are the database architect for a new Twitter clone. When a celebrity with 5 million followers posts a new message, those 5 million users need to see it in their timeline immediately. A standard SQL `JOIN` on the followers table is taking 30 seconds to run.',
+    brief:
+      'Design the schema and architectural strategy for the social feed. You must decide whether to use a Push model (Fan-out on write), a Pull model (Fan-out on read), or a hybrid approach. Explain your database choice (e.g., PostgreSQL, Cassandra, or a Graph DB).',
+    deliverables: [
+      'The schema design for Users, Follows, and Posts',
+      'An architectural diagram or explanation of the "Feed Generation" process (Push vs. Pull)',
+      'A defense of the chosen indexing strategy to make reads as fast as possible',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'There is no single correct answer here. The test is on your ability to articulate the trade-offs of Fan-out on Read versus Fan-out on Write.',
+    rubric: [
+      { key: 'schema', label: 'Relational Graph', description: 'Is the Follows (adjacency list) schema correctly designed?', weight: 30 },
+      { key: 'fanout', label: 'Fan-out Strategy', description: 'Does the candidate understand the performance trade-offs of Push vs Pull feeds?', weight: 40 },
+      { key: 'indexing', label: 'Indexing & Performance', description: 'Are appropriate indexes suggested for the read-heavy timeline queries?', weight: 30 },
+    ],
+    skillsProven: ['High-Performance Databases', 'Fan-out Patterns', 'Graph Modeling', 'Query Optimization'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',

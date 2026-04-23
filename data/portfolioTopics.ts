@@ -125,6 +125,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Design robust backends from the ground up. Tests component diagramming, scalability thinking, and trade-off analysis.',
     skillsProven: ['System design', 'Scalability', 'Microservices', 'Trade-off analysis'],
   },
+  {
+    id: 'database-modeling',
+    categoryId: 'software-development',
+    title: 'Database Modeling',
+    description:
+      'Design robust relational schemas. Tests normalization, understanding of indexes, and planning for complex data relationships.',
+    skillsProven: ['Schema design', 'Normalization', 'Relational databases', 'Data integrity'],
+  },
 
   // Data
   {
