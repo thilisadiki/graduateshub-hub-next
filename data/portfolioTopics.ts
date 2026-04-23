@@ -50,6 +50,15 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Refactor an existing application to improve Core Web Vitals. Tests lazy loading, code-splitting, rendering strategies, and identifying performance bottlenecks.',
     skillsProven: ['Web performance', 'Core Web Vitals', 'Code splitting', 'Rendering strategies'],
   },
+  {
+    id: 'interactive-dashboard-layout',
+    categoryId: 'web-development',
+    title: 'Interactive Dashboard Layout',
+    description:
+      'Build a complex, data-rich interface. Tests modern CSS layouts, responsive design, charting libraries, and real-time data handling.',
+    skillsProven: ['CSS Grid/Flexbox', 'Responsive data tables', 'Data visualization', 'Real-time updates'],
+  },
+
 
 
 

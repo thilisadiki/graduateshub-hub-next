@@ -822,6 +822,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['Next.js Architecture', 'Server-Side Rendering (SSR)', 'Static Site Generation (SSG)', 'Largest Contentful Paint (LCP)', 'Technical Leadership'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'dashboard-static-layout',
+    categoryId: 'web-development',
+    topicId: 'interactive-dashboard-layout',
+    level: 'beginner',
+    title: 'Build a Responsive Dashboard Layout',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Use CSS Grid and Flexbox to build a clean, responsive admin layout.',
+    scenario:
+      'A local SaaS company is building a new admin portal for their merchants. The designer has provided a layout with a persistent sidebar on desktop, a top navigation bar, and a main content area containing a grid of summary cards and a recent orders table. You need to build the structure.',
+    brief:
+      'Write the HTML and CSS (or Tailwind) for the dashboard skeleton. On desktop, the sidebar should be fixed to the left. On mobile, the sidebar should disappear behind a hamburger menu toggle, and the summary cards should stack vertically instead of displaying side-by-side.',
+    deliverables: [
+      'The HTML/JSX structure for the layout (Sidebar, Header, Main Content)',
+      'The CSS or Tailwind classes used for the responsive grid and flexbox alignment',
+      'The mobile menu toggle logic',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not worry about making the data real or adding charts yet. Focus purely on the CSS layout. The table must scroll horizontally on mobile without breaking the page layout.',
+    rubric: [
+      { key: 'layout', label: 'CSS Grid/Flexbox', description: 'Are Grid and Flexbox used appropriately for the macro layout?', weight: 35 },
+      { key: 'responsive', label: 'Mobile Responsiveness', description: 'Does the sidebar collapse cleanly and the grid stack on mobile?', weight: 30 },
+      { key: 'table', label: 'Table Overflow', description: 'Is horizontal scrolling handled gracefully for the data table on small screens?', weight: 20 },
+      { key: 'craft', label: 'Clean Code', description: 'Is the HTML semantic (e.g., `<aside>`, `<main>`, `<nav>`)?', weight: 15 },
+    ],
+    skillsProven: ['CSS Grid', 'CSS Flexbox', 'Responsive Design', 'Semantic HTML'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'dashboard-charts-theme',
+    categoryId: 'web-development',
+    topicId: 'interactive-dashboard-layout',
+    level: 'intermediate',
+    title: 'Integrate Charts & Dark Mode',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Bring the dashboard to life with data visualization and theming.',
+    scenario:
+      'The dashboard layout is approved, but the merchants want to visualize their sales data. They also requested a dark mode because many of them check their stats late at night. You need to integrate a charting library and implement a global theme toggle.',
+    brief:
+      '1) Integrate a charting library (like Recharts or Chart.js) to display a "Revenue Over Time" line chart and a "Sales by Category" pie chart. 2) Implement a robust Dark Mode toggle that saves the user preference to LocalStorage and respects their system OS preference by default.',
+    deliverables: [
+      'The React component code integrating the two charts with mock data',
+      'The Dark Mode state logic and `useEffect` for system preference checking',
+      'The CSS variables or Tailwind configuration used to support the dual themes',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The dark mode implementation is the primary test here. Do not just toggle a class on the body; show how you structured your CSS variables or Tailwind config to make theming scalable across the app.',
+    rubric: [
+      { key: 'charts', label: 'Chart Integration', description: 'Are the charts rendered correctly and do they resize responsively?', weight: 25 },
+      { key: 'theme-logic', label: 'Dark Mode Logic', description: 'Does the theme toggle work, save to storage, and check system preferences?', weight: 35 },
+      { key: 'theme-css', label: 'Scalable Theming', description: 'Are CSS variables or Tailwind classes used cleanly for the theme swap?', weight: 30 },
+      { key: 'ux', label: 'Flash of Unstyled Content', description: 'Does the candidate mention or handle the "flash of light mode" on reload?', weight: 10 },
+    ],
+    skillsProven: ['Data Visualization (Charts)', 'Theme Toggling (Dark Mode)', 'CSS Variables', 'System Preferences API'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'dashboard-realtime-websockets',
+    categoryId: 'web-development',
+    topicId: 'interactive-dashboard-layout',
+    level: 'advanced',
+    title: 'Real-Time Updates via WebSockets',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Transform a static dashboard into a live, real-time monitoring tool.',
+    scenario:
+      'The SaaS product is pivoting to high-frequency trading analytics. The dashboard must now display a live feed of stock prices and recent transactions. Polling the API every 5 seconds is crashing the server. The backend team has exposed a WebSocket endpoint for a live data stream.',
+    brief:
+      'Write the frontend architecture to consume a WebSocket data stream. 1) Establish and manage the WebSocket connection securely. 2) Listen for incoming "transaction" events and update the chart data in real-time. 3) Implement a reconnection strategy (exponential backoff) if the socket drops. 4) Ensure you are not causing severe performance issues by re-rendering the entire dashboard 10 times a second.',
+    deliverables: [
+      'The custom hook (e.g., `useWebSocket`) managing the connection and exponential backoff retry logic',
+      'The state management code that appends new data points to the chart without freezing the UI',
+      'A short note on how you would throttle or batch incoming messages if they arrive too fast',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on connection stability and render performance. Appending to an array in React state 50 times a second will kill the browser - explain your mitigation strategy.',
+    rubric: [
+      { key: 'socket', label: 'WebSocket Management', description: 'Is the connection opened, closed, and cleaned up properly on unmount?', weight: 30 },
+      { key: 'retry', label: 'Reconnection Strategy', description: 'Is there a robust exponential backoff retry mechanism?', weight: 30 },
+      { key: 'perf', label: 'Render Performance', description: 'Is the state updated efficiently (e.g., using functional state updates or batching)?', weight: 25 },
+      { key: 'throttle', label: 'Data Throttling', description: 'Does the candidate understand how to handle high-frequency event bursts?', weight: 15 },
+    ],
+    skillsProven: ['WebSockets', 'Real-time Data', 'Exponential Backoff', 'React Render Performance', 'Data Throttling'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
