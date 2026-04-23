@@ -157,6 +157,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Modernize and clean up legacy codebases. Tests SOLID principles, identifying code smells, and safely migrating logic.',
     skillsProven: ['Refactoring', 'Clean code', 'SOLID principles', 'Legacy migrations'],
   },
+  {
+    id: 'security-vulnerability-patching',
+    categoryId: 'software-development',
+    title: 'Security Vulnerability Patching',
+    description:
+      'Identify and fix critical security flaws. Tests OWASP Top 10 knowledge, sanitization, and preventing malicious injections.',
+    skillsProven: ['Security', 'OWASP Top 10', 'Data Sanitization', 'Vulnerability Patching'],
+  },
 
   // Data
   {

@@ -668,6 +668,92 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'sec-patch-xss',
+    categoryId: 'software-development',
+    topicId: 'security-vulnerability-patching',
+    level: 'beginner',
+    title: 'Patch a Cross-Site Scripting (XSS) Vulnerability',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Fix a dangerous form that allows users to inject malicious scripts.',
+    scenario:
+      'A user profile page allows users to enter a "Bio". Currently, if a user enters `<script>alert("Hacked")</script>`, the browser executes it when anyone views their profile. This is a Stored XSS vulnerability.',
+    brief:
+      'You are provided with a vulnerable React component and an Express endpoint. Show how to patch this vulnerability on both the frontend (escaping HTML) and the backend (sanitizing input).',
+    deliverables: [
+      'The corrected React component code',
+      'The corrected Express route code utilizing a sanitization library (like `dompurify` or `xss`)',
+      'A brief explanation of why relying only on frontend validation is insecure',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Remember that React automatically escapes strings by default. To make this vulnerable, the original code used `dangerouslySetInnerHTML`. Explain why that was a bad idea and how to fix it.',
+    rubric: [
+      { key: 'frontend', label: 'Frontend Fix', description: 'Is `dangerouslySetInnerHTML` removed or safely handled?', weight: 35 },
+      { key: 'backend', label: 'Backend Sanitization', description: 'Is the data sanitized before it is saved to the database?', weight: 35 },
+      { key: 'theory', label: 'Security Theory', description: 'Does the candidate understand that the backend cannot trust the client?', weight: 30 },
+    ],
+    skillsProven: ['Cross-Site Scripting (XSS)', 'React Security', 'Backend Sanitization', 'OWASP'],
+    relatedRoadmapIds: ['software-engineer', 'web-developer'],
+  },
+  {
+    id: 'sec-patch-sql-injection',
+    categoryId: 'software-development',
+    topicId: 'security-vulnerability-patching',
+    level: 'intermediate',
+    title: 'Patch a SQL Injection Vulnerability',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Rewrite dangerous raw SQL queries using parameterized statements.',
+    scenario:
+      'A legacy Node.js application searches for users by username. The query is written as: `db.query("SELECT * FROM users WHERE username = \'" + req.body.username + "\'")`. A malicious user just dropped the users table using `\' OR 1=1; DROP TABLE users; --`.',
+    brief:
+      'Rewrite the vulnerable database interaction. You can either use parameterized queries with the raw driver (e.g., `pg` or `mysql2`), or implement an ORM (like Prisma or Sequelize) to handle escaping automatically.',
+    deliverables: [
+      'The patched code snippet showing the secure database query',
+      'An explanation of exactly how the malicious payload (`\' OR 1=1; DROP TABLE users; --`) manipulated the original query string',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The goal is to prove you understand parameterized queries. Simply writing a regex to block semicolons is not an acceptable solution.',
+    rubric: [
+      { key: 'parameterization', label: 'Parameterized Query', description: 'Is the query correctly parameterized to prevent injection?', weight: 40 },
+      { key: 'explanation', label: 'Attack Breakdown', description: 'Is the explanation of the attack payload accurate?', weight: 35 },
+      { key: 'best-practice', label: 'Best Practices', description: 'Does the candidate rely on standard drivers/ORMs rather than custom regex?', weight: 25 },
+    ],
+    skillsProven: ['SQL Injection Prevention', 'Database Security', 'Parameterized Queries'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'sec-patch-csrf-rate-limit',
+    categoryId: 'software-development',
+    topicId: 'security-vulnerability-patching',
+    level: 'advanced',
+    title: 'Secure an App against CSRF & Rate Limiting Attacks',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Defend a critical API from automated brute-force attacks and cross-site forgery.',
+    scenario:
+      'Your banking application has two major flaws. First, attackers are brute-forcing the `/login` endpoint with thousands of requests per second. Second, the `/transfer-funds` endpoint is vulnerable to Cross-Site Request Forgery (CSRF) because it relies solely on session cookies.',
+    brief:
+      'Design the security architecture to fix both issues. Implement a Rate Limiter for the login endpoint (e.g., using Redis) and explain how you would implement Anti-CSRF tokens (or SameSite cookie attributes) for the transfer endpoint.',
+    deliverables: [
+      'A code snippet or pseudo-code showing a Redis-backed rate limiter middleware for the login route',
+      'An explanation of how an Anti-CSRF token lifecycle works (generation, delivery, validation)',
+      'A defense of using `SameSite=Strict` cookies versus traditional CSRF tokens',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This is an advanced architectural security task. You need to understand how session cookies are sent by the browser implicitly, and how to stop attackers from abusing that.',
+    rubric: [
+      { key: 'rate-limiting', label: 'Rate Limiting', description: 'Is the rate limiting logic (e.g., IP tracking in Redis) sound?', weight: 35 },
+      { key: 'csrf-tokens', label: 'CSRF Protection', description: 'Is the Anti-CSRF token or SameSite cookie logic correctly explained?', weight: 35 },
+      { key: 'architecture', label: 'Security Trade-offs', description: 'Does the candidate understand the UX trade-offs of aggressive rate limiting?', weight: 30 },
+    ],
+    skillsProven: ['CSRF Protection', 'Rate Limiting', 'Redis', 'Session Security', 'OWASP'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',
