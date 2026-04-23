@@ -42,6 +42,15 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Build a modal dialog system from scratch. Tests DOM manipulation, React Portals, WAI-ARIA accessibility standards, and reusable component design.',
     skillsProven: ['DOM manipulation', 'React Portals', 'Accessibility (WAI-ARIA)', 'Component design'],
   },
+  {
+    id: 'performance-optimization',
+    categoryId: 'web-development',
+    title: 'Performance Optimization',
+    description:
+      'Refactor an existing application to improve Core Web Vitals. Tests lazy loading, code-splitting, rendering strategies, and identifying performance bottlenecks.',
+    skillsProven: ['Web performance', 'Core Web Vitals', 'Code splitting', 'Rendering strategies'],
+  },
+
 
 
 

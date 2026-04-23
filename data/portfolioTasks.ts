@@ -734,6 +734,94 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['Compound Components', 'React Portals', 'React Context', 'Headless UI Design', 'Developer Experience (DX)'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'perf-image-lazy-loading',
+    categoryId: 'web-development',
+    topicId: 'performance-optimization',
+    level: 'beginner',
+    title: 'Optimize Images & Fix Layout Shifts',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Improve page load time and stop the page from jumping around as it loads.',
+    scenario:
+      'A photography portfolio website looks beautiful, but it takes 8 seconds to load on a 3G connection and the text jumps around as the massive image files finally render. The client is losing visitors. You need to fix the images without degrading their visual quality.',
+    brief:
+      'You are provided with a basic HTML page containing 20 high-resolution `<img>` tags. Your task is to refactor the HTML and CSS to: 1) Lazy load the images so only the visible ones load initially. 2) Set explicit dimensions or aspect ratios so the browser can reserve space before the images download (fixing Cumulative Layout Shift). 3) Briefly explain how you would compress and serve modern image formats (like WebP or AVIF).',
+    deliverables: [
+      'The refactored HTML code with `loading="lazy"` and proper width/height attributes',
+      'The CSS (or Tailwind) used to maintain the aspect ratio',
+      'A short paragraph explaining your strategy for image formats and compression',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not use any heavy JavaScript libraries for lazy loading; modern browsers support this natively. Focus on preventing Cumulative Layout Shift (CLS).',
+    rubric: [
+      { key: 'lazy', label: 'Native Lazy Loading', description: 'Is the loading="lazy" attribute used correctly on below-the-fold images?', weight: 30 },
+      { key: 'cls', label: 'Preventing CLS', description: 'Are explicit dimensions or aspect-ratio CSS used to reserve space?', weight: 40 },
+      { key: 'formats', label: 'Image Formats', description: 'Does the candidate understand modern formats like WebP or AVIF?', weight: 30 },
+    ],
+    skillsProven: ['HTML Optimization', 'Cumulative Layout Shift (CLS)', 'Native Lazy Loading', 'Responsive Images'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'perf-react-code-splitting',
+    categoryId: 'web-development',
+    topicId: 'performance-optimization',
+    level: 'intermediate',
+    title: 'Code-Split a Bloated React App',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Reduce the initial JavaScript bundle size by lazily loading non-critical components.',
+    scenario:
+      'The companys React dashboard takes forever to become interactive (poor Time to Interactive). A bundle analysis reveals that a massive charting library (Chart.js) and a heavy PDF-generation library are being downloaded immediately when the user hits the login screen, even though they are only used deep inside the app.',
+    brief:
+      'Refactor the provided React routing setup. You need to implement route-level code splitting using `React.lazy` and `Suspense`. Ensure that the Dashboard and Settings routes (which contain the heavy libraries) are separated into their own chunks and only downloaded when the user navigates to them.',
+    deliverables: [
+      'The refactored `App.jsx` showing the `React.lazy` imports and `Suspense` boundary',
+      'A fallback UI component (e.g., a skeleton loader) to show while the chunk is downloading',
+      'An explanation of how this improves the First Input Delay (FID) and Time to Interactive (TTI)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Assume a standard React app using React Router. Show exactly where the Suspense boundary goes to ensure a smooth user experience without flashing loading screens excessively.',
+    rubric: [
+      { key: 'lazy', label: 'React.lazy Implementation', description: 'Are the heavy routes correctly imported using React.lazy?', weight: 35 },
+      { key: 'suspense', label: 'Suspense & Fallbacks', description: 'Is the Suspense boundary placed correctly with a sensible fallback UI?', weight: 35 },
+      { key: 'metrics', label: 'Performance Knowledge', description: 'Does the candidate correctly explain the impact on FID and TTI?', weight: 30 },
+    ],
+    skillsProven: ['React Code Splitting', 'React.lazy & Suspense', 'Bundle Optimization', 'Web Performance Metrics'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'perf-ssr-ssg-migration',
+    categoryId: 'web-development',
+    topicId: 'performance-optimization',
+    level: 'advanced',
+    title: 'Migrate to SSR / SSG for LCP',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Architect a transition from a slow Single Page App to Next.js for maximum performance.',
+    scenario:
+      'A high-traffic e-commerce storefront was built as a traditional React Single Page Application (SPA). The marketing team is furious because SEO rankings are dropping, and the Largest Contentful Paint (LCP) is over 5 seconds because the browser has to download a massive JS bundle before it can even request the product data from the API.',
+    brief:
+      'Write a technical migration plan to move the critical pages (Home, Product Listing, Product Details) to a framework like Next.js. You must decide and justify the rendering strategy (Static Site Generation, Server-Side Rendering, or Incremental Static Regeneration) for each specific page type based on data freshness requirements vs. performance.',
+    deliverables: [
+      'The chosen rendering strategy for the 1) Home Page, 2) Product Details Page, and 3) User Cart/Checkout, with strong technical justifications',
+      'A code snippet showing how the Product Details page would fetch its data (e.g., `getStaticProps` vs `getServerSideProps` or React Server Components)',
+      'A strategy for handling the transition without breaking existing URLs (redirects/routing)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This is an architectural task. There is no single "right" answer for the Product Details page - your justification of the trade-offs between SSG/ISR (speed but stale data) and SSR (fresh data but slower TTFB) is what earns points.',
+    rubric: [
+      { key: 'strategy', label: 'Rendering Strategies', description: 'Are the chosen rendering methods appropriate for the specific needs of each page type?', weight: 35 },
+      { key: 'tradeoffs', label: 'Architectural Trade-offs', description: 'Does the candidate deeply understand the trade-offs between TTFB, LCP, and data freshness?', weight: 35 },
+      { key: 'code', label: 'Data Fetching Code', description: 'Is the Next.js data fetching syntax correctly applied to support the chosen strategy?', weight: 20 },
+      { key: 'seo', label: 'SEO Awareness', description: 'Is the migration plan considerate of SEO impact and URL routing?', weight: 10 },
+    ],
+    skillsProven: ['Next.js Architecture', 'Server-Side Rendering (SSR)', 'Static Site Generation (SSG)', 'Largest Contentful Paint (LCP)', 'Technical Leadership'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
