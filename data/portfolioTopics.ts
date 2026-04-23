@@ -58,6 +58,15 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Build a complex, data-rich interface. Tests modern CSS layouts, responsive design, charting libraries, and real-time data handling.',
     skillsProven: ['CSS Grid/Flexbox', 'Responsive data tables', 'Data visualization', 'Real-time updates'],
   },
+  {
+    id: 'complex-multistep-form',
+    categoryId: 'web-development',
+    title: 'Complex Multi-step Form',
+    description:
+      'Build a robust data collection flow. Tests state management across steps, complex validation rules, form accessibility, and UX patterns.',
+    skillsProven: ['Form state management', 'Complex validation', 'UX patterns', 'Accessibility'],
+  },
+
 
 
 

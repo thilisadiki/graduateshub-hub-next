@@ -912,6 +912,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['WebSockets', 'Real-time Data', 'Exponential Backoff', 'React Render Performance', 'Data Throttling'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'form-basic-multistep',
+    categoryId: 'web-development',
+    topicId: 'complex-multistep-form',
+    level: 'beginner',
+    title: 'Build a Basic 3-Step Wizard',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Split a long form into digestible steps with simple validation.',
+    scenario:
+      'An insurance company has a massive 20-field quote request form on a single page, and nobody is filling it out. They want you to break it down into a friendly 3-step wizard: 1) Personal Info, 2) Vehicle Details, 3) Review & Submit.',
+    brief:
+      'Build a React (or vanilla JS) multi-step form. You must manage the state to track which step the user is currently on. Do not allow the user to click "Next" until all required fields on the current step are filled out. Provide a "Back" button to return to previous steps without losing data.',
+    deliverables: [
+      'The component structure managing the steps (e.g., a switch statement or an array of components)',
+      'The state management object holding the unified form data across all steps',
+      'The simple validation logic preventing the user from advancing prematurely',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on state preservation. If a user goes from Step 2 back to Step 1, their data in Step 1 must still be there.',
+    rubric: [
+      { key: 'state', label: 'State Preservation', description: 'Does data persist when navigating backwards and forwards?', weight: 35 },
+      { key: 'routing', label: 'Step Logic', description: 'Is the logic for moving between steps clean and bug-free?', weight: 30 },
+      { key: 'validation', label: 'Basic Validation', description: 'Are required fields enforced before allowing progression?', weight: 20 },
+      { key: 'ux', label: 'UX', description: 'Is there a clear indication of progress (e.g., "Step 1 of 3")?', weight: 15 },
+    ],
+    skillsProven: ['React State (Unified)', 'Conditional Rendering', 'Basic Form Validation', 'Wizard UX Patterns'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'form-dynamic-validation',
+    categoryId: 'web-development',
+    topicId: 'complex-multistep-form',
+    level: 'intermediate',
+    title: 'Dynamic Fields & Zod Validation',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Handle dynamic form fields and complex validation schemas.',
+    scenario:
+      'The basic wizard was a success, but the business logic has become much more complex. If the user selects "Married", a whole new section for "Spouse Details" must appear. Furthermore, the validation rules are getting out of hand (e.g., age must be > 18 but < 100, zip code must match the selected state).',
+    brief:
+      'Upgrade the form to use a dedicated validation library (like Zod or Yup) and a form state manager (like React Hook Form or Formik). Implement conditional rendering: fields should appear or disappear based on the answers to previous questions. Ensure the validation schema updates dynamically based on these conditions.',
+    deliverables: [
+      'The validation schema definition (e.g., the Zod object)',
+      'The React component showing the conditional rendering logic',
+      'A brief explanation of why integrating a library like React Hook Form improves performance over raw `useState`',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This task tests your ability to use industry-standard tools. Do not write custom validation logic for complex rules; rely on the schema library to do the heavy lifting safely.',
+    rubric: [
+      { key: 'schema', label: 'Schema Design', description: 'Is the Zod/Yup schema robust and correctly structured?', weight: 35 },
+      { key: 'dynamic', label: 'Conditional Logic', description: 'Do the dynamic fields render correctly without breaking the unified state?', weight: 30 },
+      { key: 'perf', label: 'Form Performance', description: 'Does the candidate understand how React Hook Form prevents excessive re-renders?', weight: 20 },
+      { key: 'errors', label: 'Error Handling', description: 'Are validation errors mapped cleanly to the UI?', weight: 15 },
+    ],
+    skillsProven: ['Zod / Yup', 'React Hook Form', 'Dynamic Validation Schemas', 'Conditional Rendering'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'form-auto-save-drafts',
+    categoryId: 'web-development',
+    topicId: 'complex-multistep-form',
+    level: 'advanced',
+    title: 'Auto-Save & Draft Recovery',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Build a bulletproof form that saves progress automatically.',
+    scenario:
+      'Users are complaining that their browser crashed on Step 3 and they lost all their work. The product manager wants the form to automatically save progress to the backend every time a field is blurred (loses focus), and to restore that draft if the user comes back later.',
+    brief:
+      'Implement an Auto-Save feature. 1) Write a `useDebounce` or `onBlur` logic to trigger an API save request without spamming the server. 2) Implement an initialization sequence that checks the server for a "draft" upon load and hydrates the form state. 3) Provide visual feedback to the user (e.g., "Saving..." -> "Saved at 10:42 AM").',
+    deliverables: [
+      'The React code managing the auto-save trigger (debounced or onBlur)',
+      'The initialization logic (fetching the draft and hydrating the form library)',
+      'The visual indicator logic (handling saving/error states gracefully without blocking the user)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The biggest risk here is a race condition: what if the user types fast and the save requests arrive out of order? Explain how you mitigate this.',
+    rubric: [
+      { key: 'trigger', label: 'Save Triggering', description: 'Is the save logic efficient (debounced or strictly on blur)?', weight: 30 },
+      { key: 'hydration', label: 'Draft Hydration', description: 'Does the form reliably initialize with the saved draft data?', weight: 25 },
+      { key: 'race', label: 'Race Conditions', description: 'Does the candidate address out-of-order save requests?', weight: 25 },
+      { key: 'feedback', label: 'UX Feedback', description: 'Is the auto-save process transparent but non-blocking to the user?', weight: 20 },
+    ],
+    skillsProven: ['Debouncing', 'Form Hydration', 'Asynchronous State Sync', 'Race Condition Mitigation'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
