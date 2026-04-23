@@ -124,6 +124,122 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['web-developer'],
   },
   {
+    id: 'debug-memory-leak',
+    categoryId: 'software-development',
+    topicId: 'debug-fix',
+    level: 'intermediate',
+    title: 'Memory Leak in an Event Listener',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Diagnose and fix a React memory leak caused by un-garbage-collected DOM nodes.',
+    scenario:
+      'A single-page application is slowing down heavily after users navigate back and forth between a specific dashboard view. The browser profiler shows a massive spike in detached DOM nodes and event listeners that are never garbage collected.',
+    brief:
+      'You are provided with a React component snippet containing a custom window event listener inside a `useEffect`. The cleanup function is missing. Write the corrected component, explain exactly why the memory leak occurred, and describe how to verify the fix using Chrome DevTools.',
+    deliverables: [
+      'The corrected React component snippet with proper cleanup',
+      'A technical explanation of why detached event listeners cause memory leaks in SPAs',
+      'A step-by-step guide on how to verify the leak is fixed using the Memory tab in Chrome DevTools',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on the `useEffect` lifecycle. A perfect fix ensures the listener is removed when the component unmounts.',
+    rubric: [
+      { key: 'correctness', label: 'Correct Fix', description: 'Is the `useEffect` cleanup function implemented correctly?', weight: 35 },
+      { key: 'explanation', label: 'Root Cause Explanation', description: 'Is the explanation of the memory leak technically accurate?', weight: 35 },
+      { key: 'devtools', label: 'DevTools Knowledge', description: 'Are the instructions for using the Chrome Profiler accurate and clear?', weight: 30 },
+    ],
+    skillsProven: ['React lifecycle', 'Memory management', 'Chrome DevTools', 'Performance debugging'],
+    relatedRoadmapIds: ['software-engineer', 'web-developer'],
+  },
+  {
+    id: 'debug-race-condition',
+    categoryId: 'software-development',
+    topicId: 'debug-fix',
+    level: 'advanced',
+    title: 'Race Condition in Async Data Fetching',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 4 hours',
+    tagline: 'Fix a tricky race condition where stale network responses overwrite fresh data.',
+    scenario:
+      'A search input fetches autocomplete results as the user types. However, sometimes the results of an older, slower query overwrite the results of a newer, faster query, resulting in the UI showing the wrong suggestions.',
+    brief:
+      'Diagnose the async race condition in the provided autocomplete component. Fix it by implementing request cancellation using the `AbortController` API. Explain why boolean flags (like `isMounted`) are inferior to true request cancellation.',
+    deliverables: [
+      'The corrected component utilizing `AbortController`',
+      'An explanation of the race condition mechanism (how slower requests overtake faster ones)',
+      'A brief defense of `AbortController` versus simple boolean flag checks',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This tests your understanding of asynchronous JavaScript behavior. Simply debouncing the input is not a complete fix; the race condition must be fundamentally solved.',
+    rubric: [
+      { key: 'correctness', label: 'Implementation', description: 'Is `AbortController` implemented and wired to the `fetch` call correctly?', weight: 40 },
+      { key: 'explanation', label: 'Root Cause', description: 'Is the sequence of async events causing the bug clearly explained?', weight: 30 },
+      { key: 'architecture', label: 'Cancellation vs Boolean', description: 'Does the candidate understand the network benefits of actual request abortion?', weight: 30 },
+    ],
+    skillsProven: ['Asynchronous JavaScript', 'AbortController API', 'Race condition debugging', 'Network performance'],
+    relatedRoadmapIds: ['software-engineer', 'web-developer'],
+  },
+  {
+    id: 'api-design-blog',
+    categoryId: 'software-development',
+    topicId: 'api-design',
+    level: 'beginner',
+    title: 'Design a Simple REST API for a Blog',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Define basic CRUD endpoints for a standard blog application.',
+    scenario:
+      'A client wants a basic headless CMS for their new tech blog. The system needs to support managing `Posts` and user `Comments` on those posts.',
+    brief:
+      'Write a minimal REST API specification for managing Posts and Comments. Focus heavily on using the correct HTTP verbs (GET, POST, PUT, DELETE) and standard URL routing conventions.',
+    deliverables: [
+      'A list of the necessary endpoints including the HTTP method and route path (e.g., `GET /posts`)',
+      'A brief description of what each endpoint does',
+      'A JSON payload example of what a successful `POST /posts` request body would look like',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'We are looking for standard REST conventions. Pay attention to how you nest routes (e.g., how do you fetch comments for a specific post?).',
+    rubric: [
+      { key: 'routing', label: 'REST Routing', description: 'Are the route paths semantic and correctly pluralized?', weight: 35 },
+      { key: 'verbs', label: 'HTTP Verbs', description: 'Are the correct HTTP verbs used for CRUD operations?', weight: 35 },
+      { key: 'payload', label: 'JSON Payload', description: 'Is the POST payload example realistic and properly formatted?', weight: 30 },
+    ],
+    skillsProven: ['REST conventions', 'HTTP verbs', 'API routing'],
+    relatedRoadmapIds: ['software-engineer', 'web-developer'],
+  },
+  {
+    id: 'api-design-pagination',
+    categoryId: 'software-development',
+    topicId: 'api-design',
+    level: 'advanced',
+    title: 'Design a Scalable Pagination API',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Solve a performance bottleneck by migrating from OFFSET to Cursor pagination.',
+    scenario:
+      'An internal API endpoint (`GET /transactions`) returns millions of financial records. The current implementation uses standard OFFSET/LIMIT pagination, but queries for page 50,000 are timing out because the database has to scan and discard hundreds of thousands of rows.',
+    brief:
+      'Design a cursor-based pagination strategy for the `/transactions` endpoint. Explain the API request/response schema changes required, how the client will interact with the cursor, and the database index implications.',
+    deliverables: [
+      'The updated API response schema showing the cursor meta-data (next_cursor, has_more, etc.)',
+      'The SQL query structure (or ORM equivalent) demonstrating how the cursor is used in the `WHERE` clause',
+      'An explanation of the performance benefits over OFFSET/LIMIT',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on the architectural shift. How do you handle sorting when using cursors? What happens if the cursor column (like timestamp) is not unique?',
+    rubric: [
+      { key: 'schema', label: 'API Schema', description: 'Is the cursor token clearly defined in the API response?', weight: 35 },
+      { key: 'database', label: 'Database Logic', description: 'Is the SQL logic utilizing the cursor correctly to avoid full table scans?', weight: 35 },
+      { key: 'tradeoffs', label: 'Trade-off Analysis', description: 'Does the candidate understand the complexities of cursor pagination (e.g., sorting non-unique fields)?', weight: 30 },
+    ],
+    skillsProven: ['API Performance', 'Cursor-based Pagination', 'Database Indexing', 'System Design'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',
