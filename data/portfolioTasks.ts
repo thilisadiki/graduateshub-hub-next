@@ -240,6 +240,93 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'arch-url-shortener',
+    categoryId: 'software-development',
+    topicId: 'system-architecture-design',
+    level: 'beginner',
+    title: 'Architect a Simple URL Shortener',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Design a system that converts long URLs into short, shareable links.',
+    scenario:
+      'A marketing team needs a branded URL shortener. They expect about 10,000 new links to be created per day, but those links might be clicked millions of times.',
+    brief:
+      'Design the architecture for a URL shortener (like bit.ly). Focus on the database schema, the hashing algorithm used to generate the short code, and the read vs. write scaling strategy.',
+    deliverables: [
+      'A system architecture diagram (e.g., using Mermaid.js or a simple drawn diagram)',
+      'The database schema definition for the `Link` table',
+      'A brief explanation of why this system is read-heavy and how you would cache the redirects',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You do not need to write the application code. Focus on the data flow: what happens when a user creates a link, and what happens when someone clicks it?',
+    rubric: [
+      { key: 'hashing', label: 'Hashing Logic', description: 'Is the short-code generation logic mathematically sound (e.g., base62)?', weight: 35 },
+      { key: 'schema', label: 'Database Schema', description: 'Are the database tables properly indexed for fast lookups?', weight: 35 },
+      { key: 'caching', label: 'Caching Strategy', description: 'Does the candidate correctly identify the need for a read cache (e.g., Redis)?', weight: 30 },
+    ],
+    skillsProven: ['System Design', 'Hashing Algorithms', 'Database Indexing', 'Caching Strategy'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'arch-chat-app',
+    categoryId: 'software-development',
+    topicId: 'system-architecture-design',
+    level: 'intermediate',
+    title: 'Architect a Scalable Chat Application',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Design a real-time messaging system using WebSockets and Pub/Sub.',
+    scenario:
+      'You are tasked with designing the backend for a new team collaboration tool (similar to Slack). Users need to send messages in real-time, see who is online, and view chat history.',
+    brief:
+      'Design the architecture for a real-time chat application. You must explain how WebSockets are managed across multiple load-balanced servers so that User A on Server 1 can message User B on Server 2.',
+    deliverables: [
+      'A system architecture diagram highlighting the API servers, WebSocket servers, and the Pub/Sub broker',
+      'An explanation of how messages are routed between different WebSocket server instances',
+      'The database schema for storing users, channels, and messages',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The core challenge here is horizontal scaling. A single WebSocket server cannot hold all connections. Show how you use a message broker (like Redis Pub/Sub or Kafka) to distribute messages.',
+    rubric: [
+      { key: 'websockets', label: 'Connection Management', description: 'Is the role of WebSocket servers clearly defined?', weight: 35 },
+      { key: 'pubsub', label: 'Pub/Sub Routing', description: 'Does the architecture correctly route messages across server boundaries?', weight: 35 },
+      { key: 'storage', label: 'Message Storage', description: 'Is the database schema optimized for retrieving chat history quickly?', weight: 30 },
+    ],
+    skillsProven: ['Real-time Architecture', 'WebSockets', 'Pub/Sub Messaging', 'Horizontal Scaling'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'arch-global-ecommerce',
+    categoryId: 'software-development',
+    topicId: 'system-architecture-design',
+    level: 'advanced',
+    title: 'Architect a Global E-commerce Platform',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Design a high-availability microservices architecture for Black Friday traffic.',
+    scenario:
+      'A global fashion retailer is preparing for Black Friday. Last year, their monolithic application crashed under the load. They have asked you to redesign the system using microservices to ensure the site stays up, even if the payment provider is temporarily slow.',
+    brief:
+      'Design a resilient microservices architecture. Focus on decoupling the Order Service from the Inventory Service and Payment Service. Explain how you will handle high-traffic spikes, eventual consistency, and graceful degradation.',
+    deliverables: [
+      'A comprehensive system diagram showing the API Gateway, microservices, databases, and message queues',
+      'An explanation of how an order is processed asynchronously (e.g., using the Saga pattern or an event bus)',
+      'A strategy for gracefully degrading the UI (e.g., disabling the recommendation engine) if under extreme load',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on fault tolerance. What happens if the Inventory service goes down right as a user clicks "Buy"? Your architecture must not drop the order.',
+    rubric: [
+      { key: 'decoupling', label: 'Service Decoupling', description: 'Are the microservices logically separated with their own databases?', weight: 30 },
+      { key: 'async', label: 'Asynchronous Processing', description: 'Is a message queue used correctly to handle order fulfillment?', weight: 35 },
+      { key: 'resilience', label: 'Fault Tolerance', description: 'Are strategies like retries, circuit breakers, or graceful degradation present?', weight: 35 },
+    ],
+    skillsProven: ['Microservices', 'Event-Driven Architecture', 'Fault Tolerance', 'System Resilience'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',

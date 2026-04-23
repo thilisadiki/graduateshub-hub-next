@@ -117,6 +117,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Design a small, minimal REST API for a real scenario. Tests resource modelling, scope judgment, and how you handle edge cases.',
     skillsProven: ['API design', 'System thinking', 'Technical writing', 'Product scoping'],
   },
+  {
+    id: 'system-architecture-design',
+    categoryId: 'software-development',
+    title: 'System Architecture Design',
+    description:
+      'Design robust backends from the ground up. Tests component diagramming, scalability thinking, and trade-off analysis.',
+    skillsProven: ['System design', 'Scalability', 'Microservices', 'Trade-off analysis'],
+  },
 
   // Data
   {
