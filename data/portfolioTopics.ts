@@ -165,6 +165,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Identify and fix critical security flaws. Tests OWASP Top 10 knowledge, sanitization, and preventing malicious injections.',
     skillsProven: ['Security', 'OWASP Top 10', 'Data Sanitization', 'Vulnerability Patching'],
   },
+  {
+    id: 'backend-performance',
+    categoryId: 'software-development',
+    title: 'Backend Performance Optimization',
+    description:
+      'Speed up slow applications. Tests profiling, caching strategies (Redis), and mitigating N+1 query problems.',
+    skillsProven: ['Performance Tuning', 'Caching', 'Database Profiling', 'Algorithmic Optimization'],
+  },
 
   // Data
   {

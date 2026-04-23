@@ -754,6 +754,91 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'perf-n-plus-one',
+    categoryId: 'software-development',
+    topicId: 'backend-performance',
+    level: 'beginner',
+    title: 'Fix an N+1 Query Problem',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Optimize a hidden loop that is crushing your database.',
+    scenario:
+      'An API endpoint `GET /articles` fetches the latest 50 articles. For each article, the ORM runs a separate query to fetch the author\'s name. This results in 51 database queries for a single API request.',
+    brief:
+      'Identify the N+1 query in the provided code snippet. Rewrite the database logic to use a SQL `JOIN` or your ORM\'s "eager loading" feature so that it only takes a maximum of 2 queries to fetch all the data.',
+    deliverables: [
+      'The optimized code snippet',
+      'An explanation of why the N+1 problem causes severe performance degradation as traffic scales',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'If using Prisma, look into `include`. If using TypeORM, look into `relations`. If using raw SQL, write a `LEFT JOIN`.',
+    rubric: [
+      { key: 'solution', label: 'Eager Loading', description: 'Is the N+1 query successfully reduced to 1 or 2 queries?', weight: 40 },
+      { key: 'theory', label: 'Performance Theory', description: 'Does the candidate understand the latency cost of network round-trips to the DB?', weight: 35 },
+      { key: 'readability', label: 'Code Cleanliness', description: 'Is the optimized code still easy to read?', weight: 25 },
+    ],
+    skillsProven: ['N+1 Query Resolution', 'Database Joins', 'ORM Eager Loading', 'Latency Optimization'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'perf-redis-cache',
+    categoryId: 'software-development',
+    topicId: 'backend-performance',
+    level: 'intermediate',
+    title: 'Implement Redis Caching',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Speed up a slow 3rd-party API response using an in-memory cache.',
+    scenario:
+      'Your app displays live stock prices fetched from an external API. The external API takes 2 seconds to respond and limits you to 100 requests per minute. Your app receives 500 requests per minute.',
+    brief:
+      'Implement a caching layer using Redis. If a stock price was fetched in the last 15 seconds, serve it from Redis. Otherwise, fetch it from the external API, save it to Redis with an expiration (TTL), and return it.',
+    deliverables: [
+      'The caching middleware/service code using a Redis client',
+      'An explanation of how TTL (Time To Live) prevents stale data',
+      'What happens if the Redis server crashes? Explain your fallback strategy.',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'A good cache implementation should be invisible to the end user (except that it is much faster). Make sure you handle cache misses correctly.',
+    rubric: [
+      { key: 'implementation', label: 'Cache Logic', description: 'Is the Check -> Miss -> Fetch -> Save flow implemented correctly?', weight: 40 },
+      { key: 'ttl', label: 'Cache Invalidation', description: 'Is a TTL correctly set to ensure data freshness?', weight: 30 },
+      { key: 'fallback', label: 'Resilience', description: 'Does the app gracefully fall back to the slow API if Redis is down?', weight: 30 },
+    ],
+    skillsProven: ['Redis', 'Caching Strategies', 'API Rate Limit Mitigation', 'Fault Tolerance'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'perf-memory-leak',
+    categoryId: 'software-development',
+    topicId: 'backend-performance',
+    level: 'advanced',
+    title: 'Profile and Fix a Memory Leak',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Stop a Node.js server from continuously crashing out of memory.',
+    scenario:
+      'A Node.js worker process processes CSV files. Every time a 100MB CSV file is processed, the server\'s RAM usage increases by 100MB and never goes down. Eventually, the container hits its 1GB limit and is killed by Kubernetes (OOMKilled).',
+    brief:
+      'Diagnose the conceptual memory leak. You are given a code snippet that reads the entire file into an array using `fs.readFileSync`. Rewrite the logic to use Node.js Streams so it can process a 10GB file using only 50MB of RAM.',
+    deliverables: [
+      'The refactored code using `fs.createReadStream` and a streaming CSV parser',
+      'An explanation of how Garbage Collection in V8 works, and why the original code prevented it',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Streams are one of the most powerful but misunderstood features of Node.js. Your goal is to process the file chunk by chunk, without holding the whole thing in memory.',
+    rubric: [
+      { key: 'streams', label: 'Stream Implementation', description: 'Is the code correctly piping the read stream to a parser?', weight: 40 },
+      { key: 'memory', label: 'Memory Complexity', description: 'Does the candidate prove the new solution has O(1) memory complexity?', weight: 35 },
+      { key: 'gc', label: 'Garbage Collection', description: 'Is the explanation of V8 memory management accurate?', weight: 25 },
+    ],
+    skillsProven: ['Node.js Streams', 'Memory Profiling', 'Garbage Collection', 'Large Data Processing'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',
