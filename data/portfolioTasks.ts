@@ -1010,6 +1010,90 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'docker-optimize-image',
+    categoryId: 'software-development',
+    topicId: 'container-orchestration',
+    level: 'beginner',
+    title: 'Optimize a Node.js Dockerfile',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Shrink a bloated 1GB Docker image down to under 150MB.',
+    scenario:
+      'A junior developer wrote a `Dockerfile` for a simple Node.js Express API. The resulting image is 1.2GB because they used the `node:latest` base image, copied the `node_modules` folder from their local machine, and ran as the `root` user.',
+    brief:
+      'Rewrite the Dockerfile. Use a smaller base image (e.g., Alpine), utilize multi-stage builds to exclude development dependencies (`devDependencies`), and ensure the container runs as a non-root user for security.',
+    deliverables: [
+      'The optimized `Dockerfile`',
+      'An explanation of why multi-stage builds are critical for compiled languages (or for trimming `devDependencies` in Node)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'A good Dockerfile should cache the `package.json` install step separately from the source code copy step to speed up rebuilds.',
+    rubric: [
+      { key: 'base-image', label: 'Base Image Selection', description: 'Is a lightweight base image (like Alpine or Slim) used?', weight: 35 },
+      { key: 'security', label: 'Least Privilege', description: 'Is the container running as a non-root `node` user?', weight: 35 },
+      { key: 'caching', label: 'Layer Caching', description: 'Are the `COPY package.json` and `RUN npm ci` steps placed before copying the rest of the source code?', weight: 30 },
+    ],
+    skillsProven: ['Docker', 'Container Optimization', 'Security (Non-Root)', 'Layer Caching'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'docker-compose-stack',
+    categoryId: 'software-development',
+    topicId: 'container-orchestration',
+    level: 'intermediate',
+    title: 'Define a Multi-Container Architecture',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Write a `docker-compose.yml` to spin up a Node API, Postgres database, and Redis cache.',
+    scenario:
+      'A new developer joins your team. Currently, they have to manually install Node, PostgreSQL, and Redis on their laptop just to run the app locally. It takes them 2 days to set up their environment.',
+    brief:
+      'Write a `docker-compose.yml` file that defines three services: `api`, `db` (PostgreSQL), and `cache` (Redis). Ensure the `api` service waits for the `db` to be ready before starting, and define persistent volumes for the database so data isn\'t lost on restart.',
+    deliverables: [
+      'The complete `docker-compose.yml` file',
+      'An explanation of how Docker Compose networks allow the `api` service to connect to the database using the hostname `db`',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Make sure to map the API port to the host machine so you can hit `localhost:3000` in your browser. Do not hardcode passwords in the compose file; use environment variables.',
+    rubric: [
+      { key: 'services', label: 'Service Definition', description: 'Are the API, DB, and Cache services defined correctly?', weight: 35 },
+      { key: 'volumes', label: 'Data Persistence', description: 'Is a named volume attached to the PostgreSQL data directory?', weight: 35 },
+      { key: 'depends', label: 'Startup Order', description: 'Does the API service use `depends_on` (or a wait script) for the DB?', weight: 30 },
+    ],
+    skillsProven: ['Docker Compose', 'Local Environment Setup', 'Container Networking', 'Persistent Volumes'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'k8s-deployment-strategy',
+    categoryId: 'software-development',
+    topicId: 'container-orchestration',
+    level: 'advanced',
+    title: 'Design a Kubernetes Deployment',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Write the manifests to deploy a highly available service to a Kubernetes cluster.',
+    scenario:
+      'The company is moving to Kubernetes (K8s). They need to deploy the main `billing-api` container. It needs to have 3 replicas running at all times across different nodes, scale up if CPU usage hits 80%, and safely recover if a pod crashes.',
+    brief:
+      'Write the Kubernetes YAML manifests for the `billing-api`. You will need a `Deployment`, a `Service` (ClusterIP), and an `HorizontalPodAutoscaler` (HPA). Define Liveness and Readiness probes to handle crashes.',
+    deliverables: [
+      'The K8s YAML manifests (`deployment.yaml`, `service.yaml`, `hpa.yaml`)',
+      'An explanation of the difference between a Liveness Probe and a Readiness Probe',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You don\'t need a running K8s cluster; focus on the declarative syntax. Ensure your deployment specifies CPU/Memory limits so the HPA can function.',
+    rubric: [
+      { key: 'manifests', label: 'K8s Syntax', description: 'Are the Deployment, Service, and HPA YAML files valid and correctly linked via labels/selectors?', weight: 35 },
+      { key: 'probes', label: 'Health Checks', description: 'Are Liveness (restart) and Readiness (traffic routing) probes correctly distinguished?', weight: 35 },
+      { key: 'limits', label: 'Resource Management', description: 'Are resource requests and limits defined for the container?', weight: 30 },
+    ],
+    skillsProven: ['Kubernetes (K8s)', 'Pod Scaling (HPA)', 'Health Probes', 'Infrastructure as Code (IaC)'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',

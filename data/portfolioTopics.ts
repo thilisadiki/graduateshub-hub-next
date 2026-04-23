@@ -189,6 +189,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Secure user identities and permissions. Tests JWT lifecycles, OAuth flows, and Role-Based Access Control (RBAC).',
     skillsProven: ['Identity Management', 'JWT', 'OAuth 2.0', 'Access Control'],
   },
+  {
+    id: 'container-orchestration',
+    categoryId: 'software-development',
+    title: 'Containerization & Orchestration',
+    description:
+      'Deploy applications reliably at scale. Tests Docker best practices, multi-container Compose setups, and Kubernetes fundamentals.',
+    skillsProven: ['Docker', 'Kubernetes', 'Infrastructure as Code', 'Microservices'],
+  },
 
   // Data
   {
