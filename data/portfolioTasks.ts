@@ -278,6 +278,37 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: [],
   },
   {
+    id: 'pricing-card-rebuild',
+    categoryId: 'web-development',
+    topicId: 'landing-page-rebuild',
+    level: 'beginner',
+    title: 'Build a Responsive Pricing Card',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Write the HTML and CSS for a single pricing card from a short spec.',
+    scenario:
+      'A SaaS startup is refreshing its pricing page. Before trusting a junior with the whole page, the lead developer asks applicants to build a single pricing card in isolation. It is a small, self-contained component, but the details matter.',
+    brief:
+      'Build one pricing card for the "Pro" plan. The card should contain: a plan name, a one-line description, a price with a "/ month" suffix, a list of four features each with a small check icon, and a primary call-to-action button that says "Start free trial". The card should look clean on both a 360px mobile screen and a 1280px desktop screen. Pick sensible padding, font sizes, and a single accent colour.',
+    deliverables: [
+      'A complete HTML snippet for one pricing card',
+      'A complete CSS (or Tailwind class) implementation',
+      'A one-line note on the font size and spacing scale you chose and why',
+      'One accessibility detail you deliberately got right (focus ring, contrast, semantic list, aria-label, etc.)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Paste the code in fenced code blocks. Plain HTML and CSS (or Tailwind classes) only, no frameworks. Do not overbuild: one card, not three.',
+    rubric: [
+      { key: 'structure', label: 'HTML Structure', description: 'Is the markup semantic (ul for features, button for CTA, heading hierarchy)?', weight: 30 },
+      { key: 'visual', label: 'Visual Polish', description: 'Are spacing, type scale, and the accent colour used with restraint and consistency?', weight: 25 },
+      { key: 'responsive', label: 'Responsive Behaviour', description: 'Does the card hold up at 360px and 1280px without awkward wrapping or overflow?', weight: 25 },
+      { key: 'a11y', label: 'Accessibility Detail', description: 'Is the accessibility choice real, specific, and correctly implemented?', weight: 20 },
+    ],
+    skillsProven: ['HTML', 'CSS / Tailwind', 'Responsive design', 'Accessibility'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
     id: 'landing-page-from-screenshot',
     categoryId: 'web-development',
     topicId: 'landing-page-rebuild',
@@ -306,6 +337,41 @@ export const portfolioTasks: PortfolioTask[] = [
       { key: 'pushback', label: 'Design Collaboration', description: 'Is the designer-pushback item substantive, not performative?', weight: 25 },
     ],
     skillsProven: ['HTML', 'CSS / Tailwind', 'Responsive design', 'Accessibility', 'Design collaboration'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'marketing-page-production-rebuild',
+    categoryId: 'web-development',
+    topicId: 'landing-page-rebuild',
+    level: 'advanced',
+    title: 'Production-Ready Marketing Page Rebuild',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 8 hours',
+    tagline: 'Rebuild a full marketing page and defend your performance, accessibility, and SEO trade-offs.',
+    scenario:
+      'A Series A fintech is replacing its marketing site. The existing page loads a 2.4MB hero video on mobile, ships 180KB of render-blocking CSS, and scores 42 on Lighthouse Performance. The engineering lead wants the rebuild to cross 90 on Performance, 100 on Accessibility, and 100 on SEO — without losing the current visual direction. You are the candidate for the frontend role.',
+    brief:
+      'Plan and implement a rebuild of a four-section marketing page: hero with a product demo, a three-column feature grid, a customer logo strip with testimonials, and a final CTA with a signup form. You do not need to ship a live URL; a single HTML file plus CSS (vanilla or Tailwind) is enough. What you must show is the thinking behind production decisions, not just the code.',
+    deliverables: [
+      'Full HTML and CSS for the four sections (may be split across files or inline)',
+      'A short architecture note: how you handle above-the-fold CSS, font loading, the hero media, and any JavaScript you add',
+      'Accessibility audit of your own page: at least 3 specific choices (heading order, landmark regions, form labels, focus management, reduced-motion, colour contrast) with why each matters',
+      'SEO plan: meta tags, structured data, semantic outline, and one on-page content decision you would push back on marketing about',
+      'Performance budget you set for the page (total KB, LCP target, CLS target) and one trade-off you had to make to stay inside it',
+      'What you would measure in production in the first 30 days to know the rebuild actually worked',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This task rewards judgement, not volume. A sharp 800-word submission with tight code beats a sprawling 3,000-word one. Show the trade-offs you rejected, not only the ones you took.',
+    rubric: [
+      { key: 'architecture', label: 'Architecture & Trade-offs', description: 'Are the decisions on CSS delivery, fonts, media, and JS defensible for a production marketing page?', weight: 25 },
+      { key: 'performance', label: 'Performance Thinking', description: 'Is the performance budget realistic, and is the LCP/CLS reasoning grounded rather than generic?', weight: 20 },
+      { key: 'a11y', label: 'Accessibility Depth', description: 'Do the accessibility choices go beyond checklist items and reflect how real users navigate the page?', weight: 20 },
+      { key: 'seo', label: 'SEO & Content Judgment', description: 'Is the SEO plan specific, and is the marketing pushback substantive?', weight: 15 },
+      { key: 'measurement', label: 'Measurement Plan', description: 'Would the 30-day metrics actually tell you whether the rebuild succeeded?', weight: 10 },
+      { key: 'craft', label: 'Code Craft', description: 'Is the code clean, semantic, and free of dead weight given the stated constraints?', weight: 10 },
+    ],
+    skillsProven: ['HTML', 'CSS / Tailwind', 'Web performance', 'Core Web Vitals', 'Accessibility', 'Technical SEO', 'Engineering judgment'],
     relatedRoadmapIds: ['web-developer'],
   },
 ];
