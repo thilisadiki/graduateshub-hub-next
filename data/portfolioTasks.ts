@@ -925,6 +925,91 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'auth-jwt-lifecycle',
+    categoryId: 'software-development',
+    topicId: 'auth-authorization',
+    level: 'beginner',
+    title: 'Implement a Secure JWT Lifecycle',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Design a stateless authentication flow using Access and Refresh tokens.',
+    scenario:
+      'You are building the auth system for a Single Page Application (SPA). You have decided to use JSON Web Tokens (JWT). A common mistake is storing a long-lived JWT in `localStorage`, which is vulnerable to XSS attacks.',
+    brief:
+      'Design a secure token lifecycle. Explain the difference between an Access Token and a Refresh Token. Describe exactly where the frontend should store each token, and how the backend should validate them.',
+    deliverables: [
+      'An architectural explanation of the Access/Refresh token flow',
+      'Code snippets for setting the Refresh Token as an `HttpOnly` cookie in Express/Node.js',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on the storage mechanisms. Why is `HttpOnly` critical for the Refresh Token, and why is it acceptable to keep a short-lived Access Token in JavaScript memory?',
+    rubric: [
+      { key: 'lifecycle', label: 'Token Lifecycle', description: 'Does the candidate correctly explain how Refresh Tokens generate new Access Tokens?', weight: 40 },
+      { key: 'storage', label: 'Secure Storage', description: 'Is the `HttpOnly` cookie strategy correctly implemented for the Refresh Token?', weight: 35 },
+      { key: 'xss', label: 'XSS Mitigation', description: 'Does the candidate understand why `localStorage` is dangerous for long-lived tokens?', weight: 25 },
+    ],
+    skillsProven: ['JWT (JSON Web Tokens)', 'Stateless Authentication', 'Cookie Security', 'XSS Mitigation'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer', 'web-developer'],
+  },
+  {
+    id: 'auth-rbac-middleware',
+    categoryId: 'software-development',
+    topicId: 'auth-authorization',
+    level: 'intermediate',
+    title: 'Build Role-Based Access Control (RBAC)',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Write Express middleware to protect routes based on user roles.',
+    scenario:
+      'Your platform has 3 user roles: `USER`, `EDITOR`, and `ADMIN`. You need to ensure that only `EDITOR`s and `ADMIN`s can access the `POST /articles` route, but only an `ADMIN` can access the `DELETE /users` route.',
+    brief:
+      'Write a reusable authorization middleware function in Node.js/Express. It should accept an array of allowed roles and check it against the `req.user.role` property (which is populated by your authentication middleware).',
+    deliverables: [
+      'The `requireRoles` middleware code',
+      'The Express router configuration showing how the middleware is applied to the protected routes',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The middleware must be generic. Do not hardcode the logic inside the route handler itself. Think about how you would scale this if a new `SUPER_ADMIN` role was added tomorrow.',
+    rubric: [
+      { key: 'middleware', label: 'Middleware Logic', description: 'Is the middleware correctly intercepting the request and returning a 403 Forbidden if unauthorized?', weight: 40 },
+      { key: 'reusability', label: 'Reusability', description: 'Is the function generic enough to accept dynamic role arrays?', weight: 35 },
+      { key: 'routing', label: 'Route Application', description: 'Is the middleware correctly chained in the Express route definition?', weight: 25 },
+    ],
+    skillsProven: ['Role-Based Access Control (RBAC)', 'Express Middleware', 'Authorization Logic'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'auth-oauth-flow',
+    categoryId: 'software-development',
+    topicId: 'auth-authorization',
+    level: 'advanced',
+    title: 'Architect an OAuth 2.0 Integration',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Implement "Login with Google" securely using the Authorization Code flow.',
+    scenario:
+      'Your users are tired of remembering passwords. Management wants to add a "Login with Google" button. You cannot use a pre-built library like Passport.js; you must orchestrate the raw OAuth 2.0 flow yourself to prove you understand it.',
+    brief:
+      'Architect the OAuth 2.0 Authorization Code flow. Document the exact HTTP requests that happen between the User, your Backend, and the Google Authorization Server. Pay special attention to the `state` parameter.',
+    deliverables: [
+      'A sequence diagram (or detailed step-by-step list) of the OAuth 2.0 flow',
+      'An explanation of the `state` parameter and how it prevents CSRF attacks during the OAuth redirect',
+      'A description of how you link the incoming Google Identity to an existing user in your database',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not confuse Authentication with Authorization. We are using OAuth 2.0 (specifically OpenID Connect) to authenticate the user. Explain how the short-lived Authorization Code is exchanged for tokens.',
+    rubric: [
+      { key: 'flow', label: 'OAuth Flow', description: 'Is the 3-legged Authorization Code flow (Redirect -> Code -> Token Exchange) correctly documented?', weight: 40 },
+      { key: 'state', label: 'CSRF Protection', description: 'Does the candidate correctly explain the purpose of the `state` parameter?', weight: 30 },
+      { key: 'linking', label: 'Account Linking', description: 'Is there a logical strategy for matching the Google email/ID to the internal database?', weight: 30 },
+    ],
+    skillsProven: ['OAuth 2.0', 'OpenID Connect', 'Third-Party Authentication', 'Security Architecture'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',

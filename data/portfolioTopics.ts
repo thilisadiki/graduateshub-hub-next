@@ -181,6 +181,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Manage long-running tasks and message queues. Tests event loops, worker threads, and distributed task queues (like RabbitMQ or BullMQ).',
     skillsProven: ['Message Queues', 'Event Loop', 'Background Jobs', 'Distributed Systems'],
   },
+  {
+    id: 'auth-authorization',
+    categoryId: 'software-development',
+    title: 'Authentication & Authorization',
+    description:
+      'Secure user identities and permissions. Tests JWT lifecycles, OAuth flows, and Role-Based Access Control (RBAC).',
+    skillsProven: ['Identity Management', 'JWT', 'OAuth 2.0', 'Access Control'],
+  },
 
   // Data
   {
