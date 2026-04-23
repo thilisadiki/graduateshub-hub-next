@@ -498,6 +498,91 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'test-unit-utility',
+    categoryId: 'software-development',
+    topicId: 'testing-strategies',
+    level: 'beginner',
+    title: 'Write Unit Tests for Utility Functions',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Write a comprehensive test suite for a complex date-formatting utility.',
+    scenario:
+      'A teammate wrote a `formatRelativeDate(dateString)` function that returns "just now", "5 minutes ago", "yesterday", etc. However, it sometimes breaks on leap years and cross-timezone inputs. You need to write the tests to prove it.',
+    brief:
+      'Write a comprehensive Jest or Mocha test suite for the `formatRelativeDate` function. Focus on testing the edge cases (leap years, different timezones, invalid inputs) rather than just the happy path.',
+    deliverables: [
+      'The complete test suite code (e.g., `dateFormatter.test.js`)',
+      'A short explanation of why it is important to mock the system clock (`Date.now()`) when testing time-relative functions',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Assume the function exists and you are just writing the tests. A good test suite should act as documentation for the function’s expected behavior.',
+    rubric: [
+      { key: 'coverage', label: 'Edge Case Coverage', description: 'Are edge cases like invalid strings and boundary dates tested?', weight: 40 },
+      { key: 'mocking', label: 'Clock Mocking', description: 'Does the candidate correctly identify the need to mock the system clock?', weight: 30 },
+      { key: 'readability', label: 'Test Readability', description: 'Are the `describe` and `it` blocks clearly written?', weight: 30 },
+    ],
+    skillsProven: ['Unit Testing', 'Jest / Mocha', 'Edge Case Analysis', 'Mocking'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer', 'web-developer'],
+  },
+  {
+    id: 'test-integration-api',
+    categoryId: 'software-development',
+    topicId: 'testing-strategies',
+    level: 'intermediate',
+    title: 'Integration Testing an API Endpoint',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Write tests that verify the database and API routing layers work together.',
+    scenario:
+      'You are testing a `POST /users` endpoint. This endpoint receives JSON, hashes the password, saves the user to the database, and returns a 201 Created status.',
+    brief:
+      'Write the integration test suite for the `POST /users` endpoint using Supertest and Jest. You must demonstrate how you mock or spin up a test database so you are not writing to the production database during tests.',
+    deliverables: [
+      'The integration test code snippet',
+      'An explanation of the setup and teardown process (`beforeAll`, `afterEach`, etc.) for managing the test database state',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Integration tests should test the whole request lifecycle. Make sure to test what happens when the database throws a duplicate email error (e.g., returning a 409 Conflict).',
+    rubric: [
+      { key: 'lifecycle', label: 'Request Lifecycle', description: 'Does the test verify the HTTP status code and response payload?', weight: 35 },
+      { key: 'database', label: 'Database State', description: 'Is the test database properly seeded and cleaned up between tests?', weight: 35 },
+      { key: 'errors', label: 'Error Handling', description: 'Are failure states (like 400 Bad Request or 409 Conflict) explicitly tested?', weight: 30 },
+    ],
+    skillsProven: ['Integration Testing', 'Supertest', 'Database Mocking', 'API Validation'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'test-e2e-playwright',
+    categoryId: 'software-development',
+    topicId: 'testing-strategies',
+    level: 'advanced',
+    title: 'End-to-End Testing with Playwright',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Automate a complex user journey using a headless browser.',
+    scenario:
+      'Your company’s checkout flow has broken twice this month because frontend changes unexpectedly broke backend API calls. You need to write an automated End-to-End (E2E) test to prevent this.',
+    brief:
+      'Write a Playwright (or Cypress) test script that navigates to an e-commerce site, adds a specific item to the cart, proceeds to checkout, fills out the shipping form, and verifies the final confirmation screen.',
+    deliverables: [
+      'The complete Playwright/Cypress test script',
+      'An explanation of how to handle asynchronous flakiness (e.g., waiting for network requests or animations to finish before clicking)',
+      'A brief strategy on how you would handle testing payment processing without charging real credit cards',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'E2E tests are notoriously flaky. Your test code should demonstrate best practices for waiting for elements to be actionable, rather than relying on arbitrary `sleep(5000)` commands.',
+    rubric: [
+      { key: 'script', label: 'Test Script Flow', description: 'Does the script logically progress through the checkout flow?', weight: 35 },
+      { key: 'flakiness', label: 'Handling Flakiness', description: 'Are network/UI waits used correctly instead of arbitrary timeouts?', weight: 35 },
+      { key: 'payments', label: 'Payment Strategy', description: 'Does the candidate understand how to use test/sandbox payment tokens?', weight: 30 },
+    ],
+    skillsProven: ['End-to-End (E2E) Testing', 'Playwright / Cypress', 'Automated QA', 'Flakiness Mitigation'],
+    relatedRoadmapIds: ['software-engineer', 'web-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',

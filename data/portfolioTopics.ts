@@ -141,6 +141,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Design automated deployment workflows. Tests DevOps fundamentals, multi-environment setups, and zero-downtime deployment strategies.',
     skillsProven: ['DevOps', 'GitHub Actions', 'Deployment pipelines', 'Automation'],
   },
+  {
+    id: 'testing-strategies',
+    categoryId: 'software-development',
+    title: 'Testing Strategies',
+    description:
+      'Write robust automated tests. Tests unit testing pure functions, mocking databases for integration tests, and orchestrating E2E test flows.',
+    skillsProven: ['Unit testing', 'Integration testing', 'E2E testing', 'Mocking'],
+  },
 
   // Data
   {
