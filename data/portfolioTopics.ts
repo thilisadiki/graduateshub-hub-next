@@ -66,6 +66,15 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Build a robust data collection flow. Tests state management across steps, complex validation rules, form accessibility, and UX patterns.',
     skillsProven: ['Form state management', 'Complex validation', 'UX patterns', 'Accessibility'],
   },
+  {
+    id: 'fullstack-crud-app',
+    categoryId: 'web-development',
+    title: 'Full-Stack CRUD Application',
+    description:
+      'Build a complete application from database to UI. Tests backend routing, database queries, API design, and frontend integration.',
+    skillsProven: ['REST/GraphQL APIs', 'Database operations', 'Full-stack integration', 'Server-side logic'],
+  },
+
 
 
 

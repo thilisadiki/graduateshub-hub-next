@@ -1002,6 +1002,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['Debouncing', 'Form Hydration', 'Asynchronous State Sync', 'Race Condition Mitigation'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'crud-basic-api-routes',
+    categoryId: 'web-development',
+    topicId: 'fullstack-crud-app',
+    level: 'beginner',
+    title: 'Build a Basic Express/Next.js API',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Create the backend routes to Create, Read, Update, and Delete data.',
+    scenario:
+      'A local library wants to digitize their book inventory. They need a simple backend API to manage the catalog. For now, they just want to store the data in memory (an array) while they figure out their database strategy.',
+    brief:
+      'Build a basic REST API using Express.js or Next.js API Routes. Implement four endpoints for a "Book" resource: GET (list all books), POST (add a new book), PUT (update an existing book by ID), and DELETE (remove a book by ID). Keep the data in a simple JavaScript array.',
+    deliverables: [
+      'The API route files handling the GET, POST, PUT, and DELETE requests',
+      'The basic validation logic (e.g., ensuring a POST request has a "title" and "author")',
+      'A README snippet explaining how to test the endpoints using a tool like Postman or curl',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on returning the correct HTTP status codes (e.g., 201 Created, 400 Bad Request, 404 Not Found, 500 Internal Server Error).',
+    rubric: [
+      { key: 'routes', label: 'HTTP Methods', description: 'Are the GET, POST, PUT, and DELETE methods implemented correctly?', weight: 35 },
+      { key: 'status', label: 'Status Codes', description: 'Does the API return semantically correct HTTP status codes?', weight: 30 },
+      { key: 'validation', label: 'Basic Validation', description: 'Does the API reject invalid or malformed requests?', weight: 20 },
+      { key: 'postman', label: 'Testing Guidance', description: 'Are the testing instructions clear and reproducible?', weight: 15 },
+    ],
+    skillsProven: ['RESTful API Design', 'HTTP Status Codes', 'Basic Routing', 'Server-side Validation'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'crud-database-integration',
+    categoryId: 'web-development',
+    topicId: 'fullstack-crud-app',
+    level: 'intermediate',
+    title: 'Integrate a Database & ORM',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Connect the backend to a real database and write relational queries.',
+    scenario:
+      'The library approved your API, but now they need real data persistence. They also want to track "Authors" separately from "Books". You need to connect a database, define the schema, and update the API to perform relational queries.',
+    brief:
+      'Integrate a PostgreSQL or SQLite database using an ORM like Prisma or Drizzle (or raw SQL). 1) Define the schema for `Author` (1-to-many) `Book`. 2) Write the logic to fetch a list of all books, including the author name in the response (a JOIN operation). 3) Write the logic to create a new book associated with an existing author.',
+    deliverables: [
+      'The schema definition file (e.g., `schema.prisma` or SQL migration file)',
+      'The updated GET route containing the relational query (JOIN)',
+      'The updated POST route demonstrating how to insert relational data safely',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You do not need to host the database. Submit the code for the schema and the specific ORM/SQL queries you use to satisfy the relational requirements.',
+    rubric: [
+      { key: 'schema', label: 'Database Schema', description: 'Is the 1-to-many relationship correctly defined with foreign keys?', weight: 30 },
+      { key: 'queries', label: 'Relational Queries', description: 'Is the JOIN operation (or ORM equivalent) implemented efficiently?', weight: 35 },
+      { key: 'safety', label: 'SQL Injection Prevention', description: 'If using raw SQL, are parameterized queries used? If ORM, is data validated?', weight: 20 },
+      { key: 'craft', label: 'Error Handling', description: 'Does the API handle database connection errors gracefully?', weight: 15 },
+    ],
+    skillsProven: ['Database Schema Design', 'Relational Databases (SQL)', 'ORMs (Prisma / Drizzle)', 'Data Integrity'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'crud-frontend-integration-mutations',
+    categoryId: 'web-development',
+    topicId: 'fullstack-crud-app',
+    level: 'advanced',
+    title: 'Frontend Integration & Mutations',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Connect the React frontend to the API and manage asynchronous server state.',
+    scenario:
+      'The database is live, and the API is solid. Now you need to build the librarian dashboard. The librarians are fast typists, and they expect the UI to update instantly when they add or delete a book, even if the database is on a slow connection.',
+    brief:
+      'Build the React frontend to consume the API. You must implement a data-fetching library (like React Query or SWR) or use Next.js Server Actions. Build the UI to List, Add, and Delete books. Crucially, you must implement Optimistic UI Updates so the interface feels instantaneous, and gracefully roll back the UI if the API request fails.',
+    deliverables: [
+      'The React component(s) rendering the list and the add/delete buttons',
+      'The data-fetching and mutation logic (e.g., the `useMutation` hook)',
+      'The specific code handling the Optimistic Update and the error rollback',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This task brings the whole stack together. The focus is on the "seam" between the frontend and the backend. How do you handle loading states, success toasts, and network failures?',
+    rubric: [
+      { key: 'integration', label: 'Full-Stack Integration', description: 'Does the frontend correctly communicate with the REST API / Server Actions?', weight: 30 },
+      { key: 'optimistic', label: 'Optimistic Updates', description: 'Does the UI update immediately before the network confirms the success?', weight: 35 },
+      { key: 'rollback', label: 'Error Rollbacks', description: 'Is the UI state correctly reverted if the network request fails?', weight: 20 },
+      { key: 'ux', label: 'Loading & Error States', description: 'Are loading spinners and error toast notifications implemented well?', weight: 15 },
+    ],
+    skillsProven: ['Full-Stack Integration', 'React Query / SWR', 'Optimistic UI', 'Asynchronous Error Handling'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
