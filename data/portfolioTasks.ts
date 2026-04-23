@@ -464,6 +464,96 @@ export const portfolioTasks: PortfolioTask[] = [
     skillsProven: ['Optimistic UI', 'Client-side Caching', 'Data Mutation', 'React Query / SWR', 'Error Recovery'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'auth-static-login-form',
+    categoryId: 'web-development',
+    topicId: 'auth-flow-implementation',
+    level: 'beginner',
+    title: 'Build a Secure Login & Signup UI',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Build a pixel-perfect, accessible login and signup form with robust validation.',
+    scenario:
+      'A new SaaS product needs its entry gates built. The backend is not ready yet, but the design team has handed off the Figma files for the Login and Create Account screens. Your job is to build the frontend forms and make sure users cannot submit invalid data.',
+    brief:
+      'Build a React (or vanilla HTML/JS) login and signup form. Implement client-side validation: the email must be valid, the password must be at least 8 characters with a number, and the "Confirm Password" field must match. Show clear, accessible error messages inline when validation fails.',
+    deliverables: [
+      'The component code for both the Login and Signup forms',
+      'The validation logic (custom or using a library like Zod / Yup)',
+      'A brief note on how you handled accessibility for screen readers (e.g., aria-invalid, aria-describedby)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not worry about submitting the data to a real API, just `console.log` the payload if validation passes. Focus heavily on UX: do errors show immediately or only on submit? Do they clear when the user starts typing?',
+    rubric: [
+      { key: 'validation', label: 'Validation Logic', description: 'Are the validation rules correct and secure?', weight: 30 },
+      { key: 'ux', label: 'User Experience', description: 'Do errors appear and disappear at the right time (not too aggressively)?', weight: 30 },
+      { key: 'a11y', label: 'Accessibility', description: 'Can a screen reader user easily understand what went wrong?', weight: 20 },
+      { key: 'craft', label: 'Code Craft', description: 'Is the state managed cleanly without excessive boilerplate?', weight: 20 },
+    ],
+    skillsProven: ['Form Validation', 'React State', 'Accessibility (a11y)', 'UX Design'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'auth-jwt-global-state',
+    categoryId: 'web-development',
+    topicId: 'auth-flow-implementation',
+    level: 'intermediate',
+    title: 'Connect a Mock JWT API & Manage State',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Wire up a login form to an API and manage the user session globally.',
+    scenario:
+      'The backend team has just deployed the `/api/login` endpoint. It accepts an email and password and returns a mock JWT (JSON Web Token) along with the user profile data. You need to connect the login form, store the token securely, and make the user data available to the entire React app.',
+    brief:
+      'Write the logic to submit credentials to a mock API endpoint. If successful, parse the response, store the JWT (explain where and why), and set the global user state using the React Context API (or a lightweight store like Zustand) so that a "Navbar" component can display "Welcome, [Name]".',
+    deliverables: [
+      'The API fetch call and error handling logic (e.g., handling 401 Unauthorized)',
+      'The React Context provider (or Zustand store) managing the global `user` state',
+      'A paragraph defending your choice of where to store the JWT (LocalStorage vs. HttpOnly Cookie) for this specific scenario',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You can mock the API call using a `setTimeout` that resolves with a fake token. Focus on how the global state is updated and consumed.',
+    rubric: [
+      { key: 'api', label: 'API Integration', description: 'Are loading and error states handled gracefully during the request?', weight: 25 },
+      { key: 'state', label: 'Global State', description: 'Is the Context/Store implemented cleanly without causing unnecessary re-renders?', weight: 35 },
+      { key: 'security', label: 'Security Awareness', description: 'Does the candidate understand the risks of LocalStorage vs Cookies?', weight: 25 },
+      { key: 'craft', label: 'Code Craft', description: 'Is the business logic separated from the UI components?', weight: 15 },
+    ],
+    skillsProven: ['React Context / Global State', 'API Integration', 'JWT Basics', 'Security Principles'],
+    relatedRoadmapIds: ['web-developer'],
+  },
+  {
+    id: 'auth-oauth-route-guards',
+    categoryId: 'web-development',
+    topicId: 'auth-flow-implementation',
+    level: 'advanced',
+    title: 'OAuth, Route Guards, & Token Refresh',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 6 hours',
+    tagline: 'Build a robust authentication architecture that survives edge cases.',
+    scenario:
+      'You are the lead frontend engineer for a financial dashboard. Security is paramount. Users log in via an external OAuth provider. The access token expires every 15 minutes, and a silent refresh token must be used to keep them logged in. Furthermore, unauthenticated users must be redirected away from `/dashboard`.',
+    brief:
+      'Design the authentication architecture. You do not need to build the UI. Write the logic for three critical pieces: 1) A Higher-Order Component (HOC) or wrapper that protects private routes. 2) An Axios interceptor (or fetch wrapper) that automatically catches 401 errors, uses a refresh token to get a new access token, and retries the failed request. 3) The initialization logic that checks if a user is already logged in when they refresh the page.',
+    deliverables: [
+      'The Route Guard implementation (e.g., `ProtectedRoute.tsx`)',
+      'The Axios interceptor or custom fetch wrapper handling the token refresh logic',
+      'A short architecture note explaining how you prevent multiple failed requests from triggering multiple refresh calls simultaneously',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This task tests your ability to handle complex asynchronous control flows. The interceptor logic is notoriously tricky - walk through your solution carefully.',
+    rubric: [
+      { key: 'guards', label: 'Route Guards', description: 'Is the routing logic secure and does it prevent flash-of-unauthenticated-content?', weight: 25 },
+      { key: 'interceptor', label: 'Token Refresh Logic', description: 'Does the interceptor correctly pause, refresh, and retry failed requests?', weight: 35 },
+      { key: 'race', label: 'Race Condition Handling', description: 'Does the architecture address the multiple-request refresh problem?', weight: 25 },
+      { key: 'init', label: 'App Initialization', description: 'Is the initial session check robust on hard reloads?', weight: 15 },
+    ],
+    skillsProven: ['OAuth Flows', 'Axios Interceptors', 'Route Protection', 'Race Condition Management', 'Advanced Authentication'],
+    relatedRoadmapIds: ['web-developer'],
+  },
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
