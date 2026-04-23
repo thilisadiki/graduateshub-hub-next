@@ -173,6 +173,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Speed up slow applications. Tests profiling, caching strategies (Redis), and mitigating N+1 query problems.',
     skillsProven: ['Performance Tuning', 'Caching', 'Database Profiling', 'Algorithmic Optimization'],
   },
+  {
+    id: 'async-processing',
+    categoryId: 'software-development',
+    title: 'Asynchronous Processing',
+    description:
+      'Manage long-running tasks and message queues. Tests event loops, worker threads, and distributed task queues (like RabbitMQ or BullMQ).',
+    skillsProven: ['Message Queues', 'Event Loop', 'Background Jobs', 'Distributed Systems'],
+  },
 
   // Data
   {

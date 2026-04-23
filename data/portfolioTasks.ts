@@ -839,6 +839,92 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'backend-developer'],
   },
   {
+    id: 'async-promise-all',
+    categoryId: 'software-development',
+    topicId: 'async-processing',
+    level: 'beginner',
+    title: 'Optimize Sequential API Calls',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Fix a dashboard that takes 10 seconds to load because it fetches data one by one.',
+    scenario:
+      'A dashboard needs data from 3 different microservices: User Profile, Recent Orders, and Support Tickets. Currently, the code uses `await fetchProfile()`, then `await fetchOrders()`, then `await fetchTickets()`. Each takes 1 second, so the page takes 3 seconds to load.',
+    brief:
+      'Rewrite the code to fetch all 3 endpoints concurrently. Ensure that if the Support Tickets API fails, the User Profile and Recent Orders data are still returned to the frontend (with an error state for tickets).',
+    deliverables: [
+      'The optimized data-fetching code snippet',
+      'An explanation of why `Promise.allSettled` is safer than `Promise.all` in this specific scenario',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The goal is to reduce the total network time from 3 seconds to roughly 1 second. Pay close attention to error handling.',
+    rubric: [
+      { key: 'concurrency', label: 'Concurrent Execution', description: 'Are the promises executed in parallel rather than sequentially?', weight: 40 },
+      { key: 'resilience', label: 'Fault Tolerance', description: 'Does the code use `Promise.allSettled` (or catch blocks) to prevent total failure?', weight: 35 },
+      { key: 'theory', label: 'Event Loop Knowledge', description: 'Can the candidate explain the difference between `all` and `allSettled`?', weight: 25 },
+    ],
+    skillsProven: ['Promises', 'Concurrency', 'Error Handling', 'API Orchestration'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer', 'web-developer'],
+  },
+  {
+    id: 'async-background-worker',
+    categoryId: 'software-development',
+    topicId: 'async-processing',
+    level: 'intermediate',
+    title: 'Offload a Heavy Task to a Background Worker',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Keep the main API thread unblocked when generating massive PDF reports.',
+    scenario:
+      'Users can click "Export Year-End Report". Generating the PDF takes 15 seconds of heavy CPU time. Currently, the API endpoint blocks the main thread, causing other users\' requests to time out.',
+    brief:
+      'Design a background job architecture to handle the PDF generation. Explain how the API will accept the request, delegate the work, and notify the user when the PDF is ready.',
+    deliverables: [
+      'An architectural diagram or explanation of the Job Queue (e.g., using Redis/BullMQ or AWS SQS)',
+      'The code snippet for the API endpoint that enqueues the job and returns a `202 Accepted` status',
+      'An explanation of how the frontend will know when the job is done (Polling vs. WebSockets)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not perform the PDF generation in the HTTP request handler. You must decouple the request from the processing.',
+    rubric: [
+      { key: 'decoupling', label: 'Task Decoupling', description: 'Is the heavy task successfully moved to a separate worker process?', weight: 35 },
+      { key: 'queue', label: 'Message Queue', description: 'Is a robust queue system (Redis/SQS) utilized?', weight: 35 },
+      { key: 'ux', label: 'Client Communication', description: 'Is a valid strategy proposed for notifying the client (polling, webhooks)?', weight: 30 },
+    ],
+    skillsProven: ['Background Jobs', 'Message Queues', 'Asynchronous APIs', 'Decoupling'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'async-event-driven',
+    categoryId: 'software-development',
+    topicId: 'async-processing',
+    level: 'advanced',
+    title: 'Design an Event-Driven Checkout Workflow',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Architect a distributed transaction using the Saga pattern.',
+    scenario:
+      'When a user clicks "Buy", 4 things must happen: 1. Deduct Inventory, 2. Charge Credit Card, 3. Generate Shipping Label, 4. Send Confirmation Email. If step 2 fails, step 1 must be reversed.',
+    brief:
+      'Design an Event-Driven Architecture (EDA) to handle this checkout flow across 4 independent microservices. Explain how you will handle failures and rollbacks using the Saga pattern (Choreography or Orchestration).',
+    deliverables: [
+      'An architectural diagram showing the event broker (e.g., Kafka or RabbitMQ) and the message topics',
+      'A detailed explanation of the "Compensating Transaction" if the credit card is declined after inventory was deducted',
+      'A defense of your choice between Event Choreography (decentralized) vs. Orchestration (central controller)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'This is an advanced distributed systems problem. You cannot use a standard SQL database transaction (`BEGIN...COMMIT`) because the data lives in different microservices.',
+    rubric: [
+      { key: 'eda', label: 'Event-Driven Design', description: 'Are the microservices communicating asynchronously via events?', weight: 35 },
+      { key: 'saga', label: 'Saga Pattern', description: 'Are compensating transactions clearly defined for failure states?', weight: 40 },
+      { key: 'tradeoffs', label: 'Architecture Trade-offs', description: 'Is the defense of Choreography vs Orchestration sound?', weight: 25 },
+    ],
+    skillsProven: ['Event-Driven Architecture', 'Saga Pattern', 'Distributed Transactions', 'Kafka / RabbitMQ'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',
