@@ -5,7 +5,7 @@ const MIN_SUBMIT_MS = 3000; // reject submissions faster than 3 seconds
 
 async function verifyTurnstile(token: string): Promise<boolean> {
   const secret = process.env.TURNSTILE_SECRET_KEY;
-  if (!secret) return true; // not configured — skip verification
+  if (!secret) return true; // not configured - skip verification
 
   try {
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -25,13 +25,13 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, subject, message, _hp, _t, _ts } = body;
 
-    // Honeypot check — bots fill hidden fields, humans don't
+    // Honeypot check - bots fill hidden fields, humans don't
     if (_hp) {
       // Return 200 so bots think they succeeded
       return NextResponse.json({ success: true });
     }
 
-    // Timing check — reject submissions under 3 seconds (bot speed)
+    // Timing check - reject submissions under 3 seconds (bot speed)
     if (_t && Date.now() - Number(_t) < MIN_SUBMIT_MS) {
       return NextResponse.json({ success: true });
     }

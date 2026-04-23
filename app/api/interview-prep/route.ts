@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 You are an expert interview coach and career advisor for Graduates Hub.
 Generate a realistic, practical interview preparation guide for the given job title and experience level.
 
-Here is our course catalog (JSON) — recommend courses from it where relevant:
+Here is our course catalog (JSON) - recommend courses from it where relevant:
 ${JSON.stringify(catalog)}
 
 INSTRUCTIONS:

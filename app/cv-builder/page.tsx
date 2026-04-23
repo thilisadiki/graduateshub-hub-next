@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import CVBuilderClient from './CVBuilderClient';
 
 export const metadata: Metadata = {
-  title: 'Free CV Builder — Create & Download a Professional CV',
+  title: 'Free CV Builder - Create & Download a Professional CV',
   description: 'Build a professional CV for free. Fill in your details, choose from 3 templates, and download as PDF in seconds. No sign-up required.',
   openGraph: {
     title: 'Free CV Builder | Graduates Hub',
-    description: 'Create a professional CV in minutes. Choose from Modern, Professional or Minimalist templates and download as PDF — completely free.',
+    description: 'Create a professional CV in minutes. Choose from Modern, Professional or Minimalist templates and download as PDF - completely free.',
     type: 'website',
   },
 };

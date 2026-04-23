@@ -136,7 +136,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
             <h2 className="text-2xl font-black mb-2 flex items-center gap-2">
               <MessageSquare size={24} className="text-white" /> Interview Prep
             </h2>
-            <p className="text-orange-100 font-medium">Enter a job title and we'll generate real interview questions with model answers — so you walk in confident.</p>
+            <p className="text-orange-100 font-medium">Enter a job title and we'll generate real interview questions with model answers - so you walk in confident.</p>
             <button onClick={onClose} className="absolute top-0 right-0 mt-1 mr-1 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors">
               <X size={20} />
             </button>
@@ -274,7 +274,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <MessageSquare size={16} className="text-orange-500" /> Interview Questions
-                        <span className="text-xs font-normal text-gray-400 ml-1">— tap each to reveal the answer</span>
+                        <span className="text-xs font-normal text-gray-400 ml-1"> - tap each to reveal the answer</span>
                       </h4>
                       <div className="flex flex-col gap-3">
                         {result.questions.map((q, i) => (

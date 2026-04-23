@@ -133,7 +133,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
             <h2 className="text-2xl font-black mb-2 flex items-center gap-2">
               <FileText size={24} className="text-yellow-300" /> CV Reviewer
             </h2>
-            <p className="text-violet-100 font-medium">Paste your CV below and get instant AI feedback — strengths, gaps, and how to fix them.</p>
+            <p className="text-violet-100 font-medium">Paste your CV below and get instant AI feedback - strengths, gaps, and how to fix them.</p>
             <button onClick={onClose} className="absolute top-0 right-0 mt-1 mr-1 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors">
               <X size={20} />
             </button>
@@ -148,7 +148,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div>
                 <label htmlFor="cv-target-role" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">
-                  Target Role <span className="text-gray-400 font-normal normal-case">(optional — improves accuracy)</span>
+                  Target Role <span className="text-gray-400 font-normal normal-case">(optional - improves accuracy)</span>
                 </label>
                 <input
                   id="cv-target-role"
@@ -185,7 +185,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
                   placeholder="Paste the full text of your CV here. Include your work experience, education, skills, and any other sections..."
                   className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-shadow resize-none h-44 text-gray-800 text-sm"
                 />
-                <p className="text-xs text-gray-400 mt-1">{cvText.length} characters — minimum 50 required</p>
+                <p className="text-xs text-gray-400 mt-1">{cvText.length} characters - minimum 50 required</p>
               </div>
 
               <button

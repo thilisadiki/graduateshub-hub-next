@@ -40,7 +40,7 @@ You are an expert CV/resume reviewer and career coach for Graduates Hub.
 Review the provided CV and give structured, actionable feedback.
 ${targetRole ? `The candidate is targeting the role: ${targetRole}. Tailor your review to that role.` : ''}
 
-Here is our course catalog (JSON) — recommend courses from it to fill skill gaps:
+Here is our course catalog (JSON) - recommend courses from it to fill skill gaps:
 ${JSON.stringify(catalog)}
 
 INSTRUCTIONS:
@@ -53,7 +53,7 @@ INSTRUCTIONS:
 7. Format:
 {
   "overallScore": 72,
-  "scoreLabel": "Good — some key gaps to address",
+  "scoreLabel": "Good - some key gaps to address",
   "summary": "1-2 sentence overall impression of the CV.",
   "strengths": ["strength one", "strength two"],
   "improvements": [

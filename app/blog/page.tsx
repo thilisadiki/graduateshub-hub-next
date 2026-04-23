@@ -208,7 +208,7 @@ export default async function BlogPage({
           </div>
         ) : (
           <>
-            {/* Featured post — first article on page 1 only */}
+            {/* Featured post - first article on page 1 only */}
             {featuredPost && <FeaturedCard post={featuredPost} />}
 
             {/* Article grid */}

@@ -257,7 +257,7 @@ export default function CareerQuizModal({ isOpen, onClose }: { isOpen: boolean; 
       if (questionIndex < quizQuestions.length - 1) {
         setQuestionIndex(i => i + 1);
       } else {
-        // Last question — calculate
+        // Last question - calculate
         setScreen('calculating');
         setTimeout(() => {
           const category = scoreAnswers(newAnswers);

@@ -6,11 +6,11 @@ const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
   title: 'Share Your Feedback | Graduates Hub',
-  description: 'Help us improve the free course directory for South African graduates. Tell us what you think — takes about 60 seconds.',
+  description: 'Help us improve the free course directory for South African graduates. Tell us what you think - takes about 60 seconds.',
   alternates: { canonical: `${SITE_URL}/feedback` },
   openGraph: {
-    title: 'Share Your Feedback — Graduates Hub',
-    description: 'Help us improve the free course directory for South African graduates. Tell us what you think — takes about 60 seconds.',
+    title: 'Share Your Feedback - Graduates Hub',
+    description: 'Help us improve the free course directory for South African graduates. Tell us what you think - takes about 60 seconds.',
     url: `${SITE_URL}/feedback`,
   },
 };
@@ -44,7 +44,7 @@ export default function FeedbackPage() {
           <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">We read every response</p>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Share Your Feedback</h1>
           <p className="text-gray-300 max-w-lg mx-auto">
-            What would make Graduates Hub better for you? Your input shapes what we build next — takes about 60 seconds.
+            What would make Graduates Hub better for you? Your input shapes what we build next - takes about 60 seconds.
           </p>
         </div>
       </div>

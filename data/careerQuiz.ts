@@ -29,7 +29,7 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
     question: 'Which of these tasks sounds most enjoyable to you?',
-    subtitle: 'Go with your gut — there\'s no wrong answer.',
+    subtitle: 'Go with your gut - there\'s no wrong answer.',
     options: [
       { label: 'Building apps, websites, or systems', emoji: '💻', weights: { it: 3 } },
       { label: 'Digging into data to find patterns', emoji: '📊', weights: { data: 3, accounting: 1 } },
@@ -55,7 +55,7 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 3,
     question: 'Which of these job titles excites you most?',
-    subtitle: 'Even if you\'re not sure what they do — go with instinct.',
+    subtitle: 'Even if you\'re not sure what they do - go with instinct.',
     options: [
       { label: 'Software Developer', emoji: '🧑‍💻', weights: { it: 3 } },
       { label: 'Data Analyst', emoji: '🧮', weights: { data: 3 } },
@@ -81,7 +81,7 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 5,
     question: "What's your strongest natural ability?",
-    subtitle: 'Be honest — what do people say you\'re good at?',
+    subtitle: 'Be honest - what do people say you\'re good at?',
     options: [
       { label: 'Technical and logical thinking', emoji: '⚙️', weights: { it: 3, data: 1 } },
       { label: 'Spotting trends and patterns', emoji: '🔎', weights: { data: 3, marketing: 1 } },
@@ -112,7 +112,7 @@ export const careerResults: Record<CareerCategory, CareerResult> = {
     title: 'Software & IT Development',
     tagline: 'You think in systems and build things that last.',
     description:
-      'You have a logical, structured mind and a natural drive to build and problem-solve. A career in IT puts you at the centre of the digital economy — from software development and cybersecurity to networking and cloud systems. The demand for IT professionals is consistently high, and the field rewards continuous learning.',
+      'You have a logical, structured mind and a natural drive to build and problem-solve. A career in IT puts you at the centre of the digital economy - from software development and cybersecurity to networking and cloud systems. The demand for IT professionals is consistently high, and the field rewards continuous learning.',
     jobTitles: ['Software Developer', 'Web Developer', 'IT Support Specialist', 'Network Engineer', 'Cybersecurity Analyst'],
     courseIds: ['computer-networking', 'vibe-coding-basics', 'foundations-of-itil-4', 'diploma-software-testing'],
     categoryHref: '/category/it-courses',
@@ -124,7 +124,7 @@ export const careerResults: Record<CareerCategory, CareerResult> = {
     title: 'Data Analytics & Business Intelligence',
     tagline: 'You turn raw numbers into decisions that matter.',
     description:
-      'You are naturally analytical and curious — you see patterns where others see noise. A data career puts you in one of the fastest-growing fields in the world. From business intelligence dashboards to predictive analytics, companies rely on data professionals to drive every major decision.',
+      'You are naturally analytical and curious - you see patterns where others see noise. A data career puts you in one of the fastest-growing fields in the world. From business intelligence dashboards to predictive analytics, companies rely on data professionals to drive every major decision.',
     jobTitles: ['Data Analyst', 'Business Intelligence Analyst', 'Reporting Analyst', 'Data Scientist', 'SQL Developer'],
     courseIds: ['microsoft-excel-data-analysis', 'intro-power-bi', 'python-for-beginners-data', 'intro-database-concepts'],
     categoryHref: '/category/data-analytics',
@@ -136,7 +136,7 @@ export const careerResults: Record<CareerCategory, CareerResult> = {
     title: 'Business Management & Strategy',
     tagline: 'You lead, organise, and make things happen.',
     description:
-      'You are a natural organiser and strategic thinker who enjoys working with people to achieve goals. Business management opens doors across every industry — from project management and operations to entrepreneurship and executive leadership. Your skills are transferable and always in demand.',
+      'You are a natural organiser and strategic thinker who enjoys working with people to achieve goals. Business management opens doors across every industry - from project management and operations to entrepreneurship and executive leadership. Your skills are transferable and always in demand.',
     jobTitles: ['Business Analyst', 'Project Manager', 'Operations Manager', 'Entrepreneur', 'Management Consultant'],
     courseIds: ['diploma-project-management', 'agile-project-management', 'intro-ai-business', 'lean-six-sigma-yellow-belt'],
     categoryHref: '/category/business',
@@ -148,7 +148,7 @@ export const careerResults: Record<CareerCategory, CareerResult> = {
     title: 'Digital Marketing & Communications',
     tagline: 'You tell stories that move people to act.',
     description:
-      'You are creative, strategic, and people-focused — a rare combination. Digital marketing is one of the most in-demand skill sets of the decade, covering everything from SEO and social media to content creation and paid advertising. If you can capture attention and convert it, you are invaluable.',
+      'You are creative, strategic, and people-focused - a rare combination. Digital marketing is one of the most in-demand skill sets of the decade, covering everything from SEO and social media to content creation and paid advertising. If you can capture attention and convert it, you are invaluable.',
     jobTitles: ['Digital Marketer', 'Content Creator', 'Social Media Manager', 'SEO Specialist', 'Brand Strategist'],
     courseIds: ['digital-marketing', 'diploma-social-media-strategy', 'content-creation-strategy', 'growth-hacking-techniques-for-digital-marketing'],
     categoryHref: '/category/marketing',
@@ -160,7 +160,7 @@ export const careerResults: Record<CareerCategory, CareerResult> = {
     title: 'Accounting & Finance',
     tagline: 'You bring order, accuracy, and clarity to numbers.',
     description:
-      'You have a sharp eye for detail and a methodical approach to work — exactly what the accounting and finance world demands. From managing company books and processing payroll to financial analysis and auditing, accountants are trusted with the financial health of every organisation.',
+      'You have a sharp eye for detail and a methodical approach to work - exactly what the accounting and finance world demands. From managing company books and processing payroll to financial analysis and auditing, accountants are trusted with the financial health of every organisation.',
     jobTitles: ['Accountant', 'Financial Analyst', 'Bookkeeper', 'Payroll Officer', 'Internal Auditor'],
     courseIds: ['financial-accounting', 'fundamentals-of-accounting', 'diploma-financial-management-managers', 'payroll-essentials-small-businesses'],
     categoryHref: '/category/accounting',

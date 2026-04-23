@@ -185,7 +185,7 @@ export default function AboutPage() {
                 Join our community of{' '}
                 <a href="https://facebook.com/Graduateshub" target="_blank" rel="noopener noreferrer"
                   className="font-bold text-blue-600 hover:underline">189,000+ followers on Facebook</a>
-                {' '}— learners sharing opportunities, resources, and wins every day.
+                {' '} - learners sharing opportunities, resources, and wins every day.
               </p>
             </div>
           </div>

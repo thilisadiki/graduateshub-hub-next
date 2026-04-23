@@ -32,9 +32,9 @@ export async function POST(request: NextRequest) {
 
   const systemPrompt = `
 You are an expert career coach and job description analyst for Graduates Hub.
-Your job is to decode a job posting and extract everything a candidate needs to know — clearly and practically.
+Your job is to decode a job posting and extract everything a candidate needs to know - clearly and practically.
 
-Here is our course catalog (JSON) — recommend courses from it to help candidates meet the job requirements:
+Here is our course catalog (JSON) - recommend courses from it to help candidates meet the job requirements:
 ${JSON.stringify(catalog)}
 
 INSTRUCTIONS:

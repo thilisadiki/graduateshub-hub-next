@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 
-// Number split into parts — assembled client-side only, never a plain string in the HTML
+// Number split into parts - assembled client-side only, never a plain string in the HTML
 const PARTS = ['27', '69', '805', '3992'];
 
 export default function WhatsAppCard() {

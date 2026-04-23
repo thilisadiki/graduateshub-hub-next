@@ -13,16 +13,16 @@ export const hrCoordinatorPrep: InterviewPrep = {
     'A clear summary stating your HR focus and any relevant qualification (e.g. "BCom Human Resource Management graduate with hands-on recruitment support and onboarding experience")',
     'Any HR-related coursework, project work, or internship experience, even if limited',
     'Specific HR systems or tools you have used: SAP HR, Sage Payroll, BambooHR, or even Excel for HR tracking',
-    'Your knowledge of the South African Labour Relations Act, BCEA, or Employment Equity Act — even at a theoretical level',
+    'Your knowledge of the South African Labour Relations Act, BCEA, or Employment Equity Act - even at a theoretical level',
     'Soft skills backed by evidence: conflict resolution, confidentiality, and cross-functional communication',
     'Any SABPP membership, HR certificate, or short course completion',
   ],
 
   cvAvoid: [
     'Generic statements like "people person" or "passionate about HR" without a supporting example',
-    'Claiming payroll experience if you have not processed payroll — a technical test will expose this',
+    'Claiming payroll experience if you have not processed payroll - a technical test will expose this',
     'Omitting your degree field. HR managers scan for HR, Psychology, or Commerce qualifications specifically',
-    'A CV longer than two pages for entry-level roles — SA HR departments receive high volumes and scan quickly',
+    'A CV longer than two pages for entry-level roles - SA HR departments receive high volumes and scan quickly',
     'References listed on the CV. "Available on request" is the SA standard',
   ],
 
@@ -37,11 +37,11 @@ export const hrCoordinatorPrep: InterviewPrep = {
     },
     {
       heading: 'Reference the Acts by name',
-      body: 'Mentioning the Labour Relations Act, the Basic Conditions of Employment Act, or the Employment Equity Act by name — even in your education section — signals readiness for the SA context. Phrases like "academic grounding in LRA and BCEA compliance" are stronger than "knowledge of labour law." SA HR teams operate within these frameworks daily and want candidates who speak their language.',
+      body: 'Mentioning the Labour Relations Act, the Basic Conditions of Employment Act, or the Employment Equity Act by name - even in your education section - signals readiness for the SA context. Phrases like "academic grounding in LRA and BCEA compliance" are stronger than "knowledge of labour law." SA HR teams operate within these frameworks daily and want candidates who speak their language.',
     },
     {
       heading: 'Include any recruitment or onboarding project work',
-      body: 'Even a class project where you designed a recruitment process, an onboarding checklist, or a job evaluation framework is worth including under a Projects section. SA entry-level HR roles spend most time on recruitment administration and onboarding coordination. Showing that you understand what these activities involve — even theoretically — gives you a concrete edge over candidates who only list soft skills.',
+      body: 'Even a class project where you designed a recruitment process, an onboarding checklist, or a job evaluation framework is worth including under a Projects section. SA entry-level HR roles spend most time on recruitment administration and onboarding coordination. Showing that you understand what these activities involve - even theoretically - gives you a concrete edge over candidates who only list soft skills.',
     },
   ],
 
@@ -59,12 +59,12 @@ export const hrCoordinatorPrep: InterviewPrep = {
     {
       question: 'Walk me through how you would support a recruitment process for a new hire from job posting to offer.',
       why: 'Recruitment administration is the core day-to-day activity for junior HR coordinators in SA. This question tests whether you understand the full end-to-end process.',
-      sampleAnswer: 'I would start by working with the hiring manager to confirm the job specification and approval to hire. I would draft or adapt the job posting, making sure it complies with employment equity targets if applicable, and post it on relevant channels — LinkedIn, PNet, CareerJunction, or the company careers page. I would then screen CVs against the minimum requirements and compile a shortlist for the hiring manager. After interviews, I would conduct reference checks and prepare the offer letter and employment contract. Once the candidate accepts, I would initiate the onboarding process: confirming a start date, preparing their workspace setup request, and scheduling induction activities.',
+      sampleAnswer: 'I would start by working with the hiring manager to confirm the job specification and approval to hire. I would draft or adapt the job posting, making sure it complies with employment equity targets if applicable, and post it on relevant channels - LinkedIn, PNet, CareerJunction, or the company careers page. I would then screen CVs against the minimum requirements and compile a shortlist for the hiring manager. After interviews, I would conduct reference checks and prepare the offer letter and employment contract. Once the candidate accepts, I would initiate the onboarding process: confirming a start date, preparing their workspace setup request, and scheduling induction activities.',
     },
     {
       question: 'What is the difference between the Labour Relations Act and the Basic Conditions of Employment Act?',
       why: 'SA HR departments operate under specific legislation. Confusing these two foundational Acts is a red flag for any HR candidate, even at entry level.',
-      sampleAnswer: 'The Labour Relations Act governs the relationship between employers, employees, and unions. It covers collective bargaining, strikes, dismissal procedures, dispute resolution through the CCMA, and the rights of organised labour. The Basic Conditions of Employment Act deals with the minimum conditions of employment — working hours, leave entitlements, overtime, notice periods, and minimum wage provisions. A simple way to think about it: the LRA governs relationships and processes, while the BCEA governs minimum employment standards. Both apply in almost every SA employment relationship and HR coordinators must understand both.',
+      sampleAnswer: 'The Labour Relations Act governs the relationship between employers, employees, and unions. It covers collective bargaining, strikes, dismissal procedures, dispute resolution through the CCMA, and the rights of organised labour. The Basic Conditions of Employment Act deals with the minimum conditions of employment - working hours, leave entitlements, overtime, notice periods, and minimum wage provisions. A simple way to think about it: the LRA governs relationships and processes, while the BCEA governs minimum employment standards. Both apply in almost every SA employment relationship and HR coordinators must understand both.',
       redFlag: 'Confusing the two Acts or being unable to give even a basic description. Entry-level HR candidates in SA are expected to know this from their studies.',
     },
     {
@@ -75,7 +75,7 @@ export const hrCoordinatorPrep: InterviewPrep = {
     {
       question: 'What is employment equity and what are an employer\'s obligations under the Employment Equity Act?',
       why: 'Employment equity is a legal requirement and a politically significant topic in South Africa. Every SA HR professional must understand it, even at entry level.',
-      sampleAnswer: 'The Employment Equity Act requires designated employers — generally those with 50 or more employees — to actively promote equal opportunity in the workplace and eliminate unfair discrimination. Employers must submit an Employment Equity Plan to the Department of Employment and Labour with targets for achieving a representative workforce across race, gender, and disability across occupational levels. They must appoint a designated manager responsible for EE, conduct annual workforce analysis, consult with a representative forum, and submit an EE report. For HR coordinators, this translates practically into ensuring job advertisements reach a diverse candidate pool, tracking EE-related data in the HRIS, and supporting the preparation of the annual report.',
+      sampleAnswer: 'The Employment Equity Act requires designated employers - generally those with 50 or more employees - to actively promote equal opportunity in the workplace and eliminate unfair discrimination. Employers must submit an Employment Equity Plan to the Department of Employment and Labour with targets for achieving a representative workforce across race, gender, and disability across occupational levels. They must appoint a designated manager responsible for EE, conduct annual workforce analysis, consult with a representative forum, and submit an EE report. For HR coordinators, this translates practically into ensuring job advertisements reach a diverse candidate pool, tracking EE-related data in the HRIS, and supporting the preparation of the annual report.',
     },
     {
       question: 'Describe a situation where you had to manage multiple priorities at the same time. How did you handle it?',
@@ -85,7 +85,7 @@ export const hrCoordinatorPrep: InterviewPrep = {
     {
       question: 'Why do you want to work in HR specifically?',
       why: 'SA HR managers are sceptical of candidates who see HR as an easy office job. They want people who understand the strategic and legally complex nature of the role.',
-      sampleAnswer: 'I am drawn to HR because it sits at the intersection of business operations, law, and people development. I find the South African labour context particularly interesting — the Employment Equity Act, the CCMA system, and the complexity of managing employment relationships in a diverse workforce make the role genuinely challenging. I want to build towards a career where I can contribute to a fair and high-performing workplace, not just process paperwork. My long-term goal is to move into an HR business partner role where I can work directly with business leaders on workforce planning and talent strategy.',
+      sampleAnswer: 'I am drawn to HR because it sits at the intersection of business operations, law, and people development. I find the South African labour context particularly interesting - the Employment Equity Act, the CCMA system, and the complexity of managing employment relationships in a diverse workforce make the role genuinely challenging. I want to build towards a career where I can contribute to a fair and high-performing workplace, not just process paperwork. My long-term goal is to move into an HR business partner role where I can work directly with business leaders on workforce planning and talent strategy.',
     },
   ],
 

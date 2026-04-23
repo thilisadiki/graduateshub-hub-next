@@ -207,7 +207,7 @@ export default async function InterviewPrepPage({
           <div className="flex-1">
             <p className="text-sm font-bold text-violet-800">Ready to put these tips into your CV?</p>
             <p className="text-sm text-violet-700 mt-1">
-              Use our free CV builder to apply every tip above — choose from 3 professional templates and download as PDF in minutes.
+              Use our free CV builder to apply every tip above - choose from 3 professional templates and download as PDF in minutes.
             </p>
           </div>
           <Link

@@ -84,7 +84,7 @@ const careerPaths: CareerPathItem[] = [
 ];
 
 const relatedGuides: RelatedGuide[] = [
-  { title: 'How to Get Your First Graduate Job in SA (2026)', desc: 'A step-by-step guide to landing your first job — CV, skills gaps, interview prep, and the hidden job market.', href: '/first-graduate-job-south-africa' },
+  { title: 'How to Get Your First Graduate Job in SA (2026)', desc: 'A step-by-step guide to landing your first job - CV, skills gaps, interview prep, and the hidden job market.', href: '/first-graduate-job-south-africa' },
   { title: 'Best Free Online Courses with Certificates (2026)', desc: 'A curated list of the best free certified courses across IT, Business, Marketing, and Finance.', href: '/free-courses-with-certificates' },
   { title: 'Best Free AI Courses for Beginners (2026)', desc: 'No coding required. Start learning AI, Machine Learning, and Generative AI for free.', href: '/free-ai-courses-for-beginners' },
   { title: 'Best Free Courses for Data Analysts (2026)', desc: 'SQL, Python, Excel, and Power BI, the full data analyst learning path, all free.', href: '/free-courses-for-data-analysts' },

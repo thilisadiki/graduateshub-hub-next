@@ -103,7 +103,7 @@ export default function PreviewPanel({ data, template, onTemplateChange }: Props
 
       {/* Scaled preview area */}
       <div className="flex-1 overflow-auto p-6">
-        {/* Measurement wrapper — fills the available width */}
+        {/* Measurement wrapper - fills the available width */}
         <div ref={wrapperRef} style={{ width: '100%' }}>
           {/* Outer box sized to the scaled height so scroll works correctly */}
           <div style={{ width: A4_WIDTH * scale, margin: '0 auto' }}>

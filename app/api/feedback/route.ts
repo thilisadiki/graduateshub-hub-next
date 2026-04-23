@@ -7,7 +7,7 @@ const ALLOWED_AREAS: Record<string, string> = {
   'course-content': 'Course quality and content',
   'missing-courses': "A topic or course that's missing",
   'site-usability': 'Site navigation or usability',
-  'search': "Search — couldn't find what they needed",
+  'search': "Search - couldn't find what they needed",
   'guides-articles': 'Career guides or articles',
   'ai-tools': 'AI tools',
   'other': 'Something else',
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
       from: 'Graduates Hub <noreply@graduateshub.co.za>',
       ...(email ? { replyTo: `${name} <${email}>` } : {}),
       to: ['info@graduateshub.co.za'],
-      subject: `[Feedback] ${stars} — ${areaLabel}`,
+      subject: `[Feedback] ${stars} - ${areaLabel}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #1d4ed8;">New feedback submission</h2>

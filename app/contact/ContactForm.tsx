@@ -137,7 +137,7 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
 
-        {/* Honeypot — visually hidden, never filled by real users */}
+        {/* Honeypot - visually hidden, never filled by real users */}
         <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
           <label htmlFor="_website">Leave this blank</label>
           <input

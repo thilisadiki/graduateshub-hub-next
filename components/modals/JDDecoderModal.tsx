@@ -42,7 +42,7 @@ function Section({ title, icon, children, defaultOpen = true }: {
   );
 }
 
-const SAMPLE_JD = `Paste a full job description here — copy it directly from LinkedIn, Indeed, or any job board.
+const SAMPLE_JD = `Paste a full job description here - copy it directly from LinkedIn, Indeed, or any job board.
 
 Example:
 We are looking for a Junior Data Analyst to join our team. You will work with large datasets, build dashboards, and support business decisions with data-driven insights.
@@ -98,7 +98,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
             <h2 className="text-2xl font-black mb-2 flex items-center gap-2">
               <ScanText size={24} className="text-white" /> Job Description Decoder
             </h2>
-            <p className="text-cyan-100 font-medium">Paste any job posting — we'll extract what actually matters: required skills, responsibilities, red flags, and courses to get you ready.</p>
+            <p className="text-cyan-100 font-medium">Paste any job posting - we'll extract what actually matters: required skills, responsibilities, red flags, and courses to get you ready.</p>
             <button onClick={onClose} className="absolute top-0 right-0 mt-1 mr-1 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors">
               <X size={20} />
             </button>
@@ -122,7 +122,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                   placeholder={SAMPLE_JD}
                   className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-shadow resize-none h-52 text-gray-800 text-sm"
                 />
-                <p className="text-xs text-gray-400 mt-1">{jobDescription.length} characters — minimum 100 required</p>
+                <p className="text-xs text-gray-400 mt-1">{jobDescription.length} characters - minimum 100 required</p>
               </div>
 
               <button

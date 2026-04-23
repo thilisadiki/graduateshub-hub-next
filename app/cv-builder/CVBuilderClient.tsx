@@ -12,7 +12,7 @@ export default function CVBuilderClient() {
 
   return (
     <>
-      {/* Mobile tab switcher — only visible on small screens */}
+      {/* Mobile tab switcher - only visible on small screens */}
       <div className="lg:hidden flex border-b border-gray-200 bg-white sticky top-0 z-10">
         <button
           type="button"

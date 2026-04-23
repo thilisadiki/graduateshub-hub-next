@@ -22,7 +22,7 @@ const AREAS = [
   { value: 'course-content', label: 'Course quality and content' },
   { value: 'missing-courses', label: 'A topic or course that\'s missing' },
   { value: 'site-usability', label: 'Site navigation or usability' },
-  { value: 'search', label: 'Search — I couldn\'t find what I needed' },
+  { value: 'search', label: 'Search - I couldn\'t find what I needed' },
   { value: 'guides-articles', label: 'Career guides or articles' },
   { value: 'ai-tools', label: 'AI tools (Course Recommender, Learning Path, Skills Gap)' },
   { value: 'other', label: 'Something else' },
@@ -277,7 +277,7 @@ export default function FeedbackForm() {
           <p className="text-xs text-gray-400 text-right">{form.message.length}/500</p>
         </div>
 
-        {/* Follow-up checkbox — only shown when email is filled */}
+        {/* Follow-up checkbox - only shown when email is filled */}
         {emailFilled && (
           <label className="flex items-start gap-3 cursor-pointer group">
             <input

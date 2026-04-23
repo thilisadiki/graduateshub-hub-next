@@ -184,7 +184,7 @@ export default function Navbar() {
           onClick={toggleMobileMenu}
           className="flex items-center gap-2 font-bold text-indigo-700 bg-indigo-50 py-3 px-4 rounded-lg border border-indigo-100 transition-colors"
         >
-          <Sparkles size={16} className="text-yellow-500" /> AI Career Tools — 7 Free Tools
+          <Sparkles size={16} className="text-yellow-500" /> AI Career Tools - 7 Free Tools
         </Link>
         <div className="flex flex-col gap-3 pt-6 pb-2">
           <Link href="/search" onClick={toggleMobileMenu}

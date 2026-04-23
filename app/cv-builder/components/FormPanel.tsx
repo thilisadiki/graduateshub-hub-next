@@ -92,7 +92,7 @@ export default function FormPanel({ data, onChange, currentStep, onStepChange }:
           </button>
         ) : (
           <span className="px-4 py-2 text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-lg">
-            ✓ All done — download your CV →
+            ✓ All done - download your CV →
           </span>
         )}
       </div>

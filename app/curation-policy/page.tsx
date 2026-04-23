@@ -54,7 +54,7 @@ const criteria = [
   {
     pass: true,
     label: 'Practical outcome',
-    detail: 'Courses must teach an applicable skill — not just theory. Learners should finish with something demonstrable.',
+    detail: 'Courses must teach an applicable skill - not just theory. Learners should finish with something demonstrable.',
   },
   {
     pass: true,
@@ -97,7 +97,7 @@ export default function CurationPolicyPage() {
           <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">Editorial Standards</p>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">How We Curate Courses</h1>
           <p className="text-gray-300 text-lg leading-relaxed">
-            Every course on Graduates Hub is selected by someone with direct, professional experience in that field. Here is exactly how we decide what makes the cut — and what doesn&apos;t.
+            Every course on Graduates Hub is selected by someone with direct, professional experience in that field. Here is exactly how we decide what makes the cut - and what doesn&apos;t.
           </p>
         </div>
       </div>
@@ -120,7 +120,7 @@ export default function CurationPolicyPage() {
                 </div>
                 <p className="text-primary text-sm font-semibold mb-2">Technical SEO Specialist &amp; Web Developer · 7+ years</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Curates all IT, software engineering, digital marketing, and AI courses. Jason&apos;s 7+ years in Technical SEO means every resource is also assessed for discoverability — whether the right learners can actually find it.
+                  Curates all IT, software engineering, digital marketing, and AI courses. Jason&apos;s 7+ years in Technical SEO means every resource is also assessed for discoverability - whether the right learners can actually find it.
                 </p>
                 <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-2 transition-colors">
@@ -140,7 +140,7 @@ export default function CurationPolicyPage() {
                 </div>
                 <p className="text-teal-600 text-sm font-semibold mb-2">Co-Founder · Accounting Science Graduate · Pursuing Taxation Degree · Works at SARS</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Co-founder of Graduates Hub. Ndulamiso curates all accounting, finance, and business courses. Her practitioner-level experience at the South African Revenue Service (SARS) ensures that recommended courses reflect real compliance, tax, and financial management requirements — not just textbook theory.
+                  Co-founder of Graduates Hub. Ndulamiso curates all accounting, finance, and business courses. Her practitioner-level experience at the South African Revenue Service (SARS) ensures that recommended courses reflect real compliance, tax, and financial management requirements - not just textbook theory.
                 </p>
                 <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-2 transition-colors">
@@ -182,7 +182,7 @@ export default function CurationPolicyPage() {
                 All guide pages display a <strong>Last updated</strong> date. When a course is removed from a provider, changes significantly, or becomes paywalled, we remove or replace it within 30 days of being notified.
               </p>
               <p>
-                New courses are added on a rolling basis as curators identify resources that meet all criteria. We do not add courses in bulk to inflate numbers — each addition is a deliberate decision.
+                New courses are added on a rolling basis as curators identify resources that meet all criteria. We do not add courses in bulk to inflate numbers - each addition is a deliberate decision.
               </p>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function CurationPolicyPage() {
                 Some links on Graduates Hub are affiliate links. If you purchase a paid upgrade (such as a physical certificate), we may earn a small commission at no cost to you.
               </p>
               <p>
-                Affiliate relationships <strong>never influence curation decisions</strong>. A course is not listed because it pays a commission — it is listed because it meets our criteria. We turn down affiliate relationships with providers whose free content we would not recommend independently.
+                Affiliate relationships <strong>never influence curation decisions</strong>. A course is not listed because it pays a commission - it is listed because it meets our criteria. We turn down affiliate relationships with providers whose free content we would not recommend independently.
               </p>
               <Link href="/disclosure" className="inline-block font-bold text-primary hover:underline text-sm mt-1">
                 Read our full Affiliate Disclosure →
