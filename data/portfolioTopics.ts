@@ -149,6 +149,14 @@ export const portfolioTopics: PortfolioTopic[] = [
       'Write robust automated tests. Tests unit testing pure functions, mocking databases for integration tests, and orchestrating E2E test flows.',
     skillsProven: ['Unit testing', 'Integration testing', 'E2E testing', 'Mocking'],
   },
+  {
+    id: 'code-refactoring',
+    categoryId: 'software-development',
+    title: 'Code Refactoring',
+    description:
+      'Modernize and clean up legacy codebases. Tests SOLID principles, identifying code smells, and safely migrating logic.',
+    skillsProven: ['Refactoring', 'Clean code', 'SOLID principles', 'Legacy migrations'],
+  },
 
   // Data
   {

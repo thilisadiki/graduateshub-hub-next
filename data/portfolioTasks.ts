@@ -583,6 +583,91 @@ export const portfolioTasks: PortfolioTask[] = [
     relatedRoadmapIds: ['software-engineer', 'web-developer'],
   },
   {
+    id: 'refactor-massive-function',
+    categoryId: 'software-development',
+    topicId: 'code-refactoring',
+    level: 'beginner',
+    title: 'Refactor a Massive Function',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Break down a 500-line monster function into clean, testable pieces.',
+    scenario:
+      'You have inherited an `exportUserData()` function. It fetches data, formats dates, applies business logic, generates a CSV, and emails it. It is impossible to test the date formatting without actually sending an email.',
+    brief:
+      'Refactor the provided conceptual function. Apply the Single Responsibility Principle (SRP) to break it out into several pure helper functions. Show how the main function orchestrates these helpers.',
+    deliverables: [
+      'The refactored code (main orchestrator function + helper functions)',
+      'A brief explanation of how this refactor makes unit testing easier',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'You do not need an actual running environment. Focus on the logical boundaries. A pure function (data in, data out) is much easier to test than a function with side effects.',
+    rubric: [
+      { key: 'srp', label: 'Single Responsibility', description: 'Are the helper functions strictly separated by concern?', weight: 40 },
+      { key: 'pure', label: 'Pure Functions', description: 'Are the data-transformation functions free of side effects (like emailing)?', weight: 35 },
+      { key: 'orchestration', label: 'Orchestration', description: 'Is the main function clean and easy to read?', weight: 25 },
+    ],
+    skillsProven: ['Single Responsibility Principle (SRP)', 'Pure Functions', 'Code Readability', 'Testing preparation'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer', 'web-developer'],
+  },
+  {
+    id: 'refactor-composition',
+    categoryId: 'software-development',
+    topicId: 'code-refactoring',
+    level: 'intermediate',
+    title: 'Replace Inheritance with Composition',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Fix a fragile class hierarchy that has grown out of control.',
+    scenario:
+      'A game backend uses deep Object-Oriented inheritance: `class FlyingSwimmingEnemy extends SwimmingEnemy extends Enemy`. Now, the designers want a `FlyingSwimmingShootingEnemy`. The inheritance tree is breaking down.',
+    brief:
+      'Refactor the class hierarchy to use Composition over Inheritance. Create separate behaviors (e.g., `canFly`, `canSwim`, `canShoot`) and compose them into the final entity.',
+    deliverables: [
+      'The refactored code showing the behaviors (traits/mixins/interfaces) and the composed entity',
+      'An explanation of why the "Gorilla Banana" problem (fragile base class) makes deep inheritance dangerous',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Use modern syntax (e.g., JavaScript factory functions, or TypeScript interfaces/mixins). The goal is flat architecture, not deep trees.',
+    rubric: [
+      { key: 'composition', label: 'Composition Implementation', description: 'Is the code correctly using composition instead of `extends`?', weight: 40 },
+      { key: 'flexibility', label: 'Code Flexibility', description: 'Is it easy to add a new behavior without rewriting base classes?', weight: 35 },
+      { key: 'theory', label: 'Theory Comprehension', description: 'Does the candidate clearly explain the pitfalls of deep inheritance?', weight: 25 },
+    ],
+    skillsProven: ['Composition over Inheritance', 'Design Patterns', 'Object-Oriented Programming (OOP)', 'Code Architecture'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
+    id: 'refactor-monolith-microservice',
+    categoryId: 'software-development',
+    topicId: 'code-refactoring',
+    level: 'advanced',
+    title: 'Refactor a Legacy Monolith (Strangler Fig)',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Design a plan to safely extract a microservice from a running monolith.',
+    scenario:
+      'Your company has a massive 10-year-old Ruby on Rails monolith. The `Billing` module is slowing down the entire app. Management wants to extract `Billing` into its own Go microservice without taking the site offline.',
+    brief:
+      'Design a migration plan using the Strangler Fig pattern. Explain how you will route traffic, migrate the database safely, and handle the transition period where both systems must remain in sync.',
+    deliverables: [
+      'An architectural diagram showing the routing layer (API Gateway) intercepting traffic',
+      'A step-by-step phased migration plan (Dark launch, Shadow traffic, Cut-over)',
+      'A strategy for untangling the shared database (dual writes vs. eventual consistency)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The hardest part of microservice extraction is the data layer. You cannot just cut a table out of a shared database overnight. Focus on the database synchronization strategy.',
+    rubric: [
+      { key: 'pattern', label: 'Strangler Fig Pattern', description: 'Is the routing layer correctly designed to slowly siphon traffic?', weight: 35 },
+      { key: 'database', label: 'Data Migration', description: 'Is the database untangling strategy safe and realistic?', weight: 40 },
+      { key: 'safety', label: 'Rollback & Safety', description: 'Are shadow reads/writes used to verify the new service before cut-over?', weight: 25 },
+    ],
+    skillsProven: ['Strangler Fig Pattern', 'Microservices Extraction', 'Database Migration', 'Legacy System Modernization'],
+    relatedRoadmapIds: ['software-engineer', 'backend-developer'],
+  },
+  {
     id: 'data-cleaning-messy-csv',
     categoryId: 'data',
     topicId: 'data-cleaning',
