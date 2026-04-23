@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Loader2, Send, AlertCircle } from 'lucide-react';
+import GradingOverlay from './GradingOverlay';
 
 const MIN_CHARS = 200;
 const MAX_CHARS = 20000;
@@ -74,7 +75,9 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
   }
 
   return (
-    <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8" id="submit">
+    <>
+      {submitting && <GradingOverlay />}
+      <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8" id="submit">
       <h2 className="text-xl font-extrabold text-gray-900 mb-2">Submit Your Work</h2>
       <p className="text-sm text-gray-500 mb-6 leading-relaxed">
         Your submission is graded against the rubric on the right. If you pass, you get a public Badge URL you can share on LinkedIn. There is no draft save, so work offline first and paste your finished response here.
@@ -169,5 +172,6 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
         </div>
       </form>
     </section>
+    </>
   );
 }
