@@ -4,14 +4,14 @@ import { Sparkles, Award, CheckCircle, Briefcase, ArrowRight, ShieldCheck, Share
 import { portfolioTasks } from '@/data/portfolioTasks';
 import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
-import { WebPage, WithContext } from 'schema-dts';
+import { BreadcrumbList, ItemList, WebPage, WithContext } from 'schema-dts';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
 export const metadata: Metadata = {
-  title: 'Proof of Work Portfolio: Turn Skills into a Public Badge',
+  title: 'Proof of Work Portfolio for SA Graduates — Graded Micro-Internship Tasks | Graduates Hub',
   description:
-    'Complete short, practical "micro-internship" tasks and earn a public Badge of Competence you can share on LinkedIn. No account required.',
+    'Complete short, practical micro-internship tasks graded against a public rubric and earn a shareable Badge of Competence for your LinkedIn. Built for South African graduates and career changers. No account required.',
   alternates: { canonical: `${SITE_URL}/portfolio` },
   openGraph: {
     title: 'Proof of Work Portfolio | Graduates Hub',
@@ -41,9 +41,34 @@ export default function PortfolioLandingPage() {
     url: `${SITE_URL}/portfolio`,
   };
 
+  const breadcrumbSchema: WithContext<BreadcrumbList> = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio` },
+    ],
+  };
+
+  const itemListSchema: WithContext<ItemList> = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Portfolio Categories',
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: portfolioCategories.length,
+    itemListElement: portfolioCategories.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE_URL}/portfolio/${c.id}`,
+      name: c.name,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">

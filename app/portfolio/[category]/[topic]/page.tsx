@@ -6,7 +6,7 @@ import { getCategoryById } from '@/data/portfolioCategories';
 import { portfolioTopics, getTopicById } from '@/data/portfolioTopics';
 import { getTaskByLocation } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
-import { BreadcrumbList, WithContext } from 'schema-dts';
+import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
@@ -23,13 +23,15 @@ export async function generateMetadata({
   const cat = getCategoryById(category);
   const top = getTopicById(category, topic);
   if (!cat || !top) return {};
+  const skills = top.skillsProven.slice(0, 4).join(', ');
+  const description = `${top.description}${skills ? ` Skills: ${skills}.` : ''} Beginner, Intermediate, and Advanced levels with graded rubrics.`;
   return {
-    title: `${top.title}: Portfolio Task in ${cat.name}`,
-    description: `${top.description} Choose Beginner, Intermediate, or Advanced.`,
+    title: `${top.title} — ${cat.name} Portfolio Tasks | Graduates Hub`,
+    description,
     alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
     openGraph: {
       title: `${top.title} | Graduates Hub Portfolio`,
-      description: top.description,
+      description,
       url: `${SITE_URL}/portfolio/${cat.id}/${top.id}`,
       type: 'article',
     },
@@ -80,9 +82,28 @@ export default async function TopicPage({
     ],
   };
 
+  const availableTasks = LEVELS
+    .map((lvl) => ({ lvl, task: getTaskByLocation(cat.id, top.id, lvl) }))
+    .filter((x): x is { lvl: PortfolioLevel; task: NonNullable<ReturnType<typeof getTaskByLocation>> } => Boolean(x.task));
+
+  const itemListSchema: WithContext<ItemList> = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${top.title} — Portfolio Tasks`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: availableTasks.length,
+    itemListElement: availableTasks.map(({ lvl, task }, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE_URL}/portfolio/${cat.id}/${top.id}/${lvl}`,
+      name: `${task.title} (${task.difficulty})`,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">

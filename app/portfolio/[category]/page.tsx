@@ -6,7 +6,7 @@ import { portfolioCategories, getCategoryById } from '@/data/portfolioCategories
 import { getTopicsByCategory } from '@/data/portfolioTopics';
 import { getTasksByTopic } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
-import { BreadcrumbList, WithContext } from 'schema-dts';
+import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
@@ -22,13 +22,16 @@ export async function generateMetadata({
   const { category } = await params;
   const cat = getCategoryById(category);
   if (!cat) return {};
+  const topics = getTopicsByCategory(cat.id);
+  const topicTitles = topics.slice(0, 5).map((t) => t.title).join(', ');
+  const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
   return {
-    title: `${cat.name} Portfolio Tasks: Prove Your Skills`,
-    description: `${cat.tagline} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`,
+    title: `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates | Graduates Hub`,
+    description,
     alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}` },
     openGraph: {
       title: `${cat.name} Portfolio Tasks | Graduates Hub`,
-      description: cat.tagline,
+      description,
       url: `${SITE_URL}/portfolio/${cat.id}`,
       type: 'website',
     },
@@ -76,9 +79,24 @@ export default async function CategoryPage({
     ],
   };
 
+  const itemListSchema: WithContext<ItemList> = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${cat.name} — Portfolio Topics`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: topics.length,
+    itemListElement: topics.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE_URL}/portfolio/${cat.id}/${t.id}`,
+      name: t.title,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">

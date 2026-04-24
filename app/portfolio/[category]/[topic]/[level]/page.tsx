@@ -7,11 +7,16 @@ import { getCategoryById } from '@/data/portfolioCategories';
 import { getTopicById } from '@/data/portfolioTopics';
 import type { PortfolioLevel } from '@/types';
 import SubmissionForm from './SubmissionForm';
-import { BreadcrumbList, WithContext } from 'schema-dts';
+import { BreadcrumbList, LearningResource, WithContext } from 'schema-dts';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
 const LEVELS: PortfolioLevel[] = ['beginner', 'intermediate', 'advanced'];
+
+function estimatedHoursToISO(value: string): string | undefined {
+  const match = value.match(/(\d+)/);
+  return match ? `PT${match[1]}H` : undefined;
+}
 
 export async function generateStaticParams() {
   return portfolioTasks.map((t) => ({
@@ -35,13 +40,17 @@ export async function generateMetadata({
   if (!parsed) return {};
   const task = getTaskByLocation(category, topic, parsed);
   if (!task) return {};
+  const top = getTopicById(category, topic);
+  const topicLabel = top ? top.title : topic;
+  const firstDeliverable = task.deliverables[0] ?? '';
+  const description = `${task.tagline} ${firstDeliverable ? `Deliverable: ${firstDeliverable}.` : ''} Earn a public Badge of Competence.`.trim();
   return {
-    title: `${task.title} (${task.difficulty} Portfolio Task)`,
-    description: `${task.tagline} Earn a public Badge of Competence.`,
+    title: `${task.title} — ${topicLabel} ${task.difficulty} Task | Graduates Hub`,
+    description,
     alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}/${level}` },
     openGraph: {
       title: `${task.title} | Graduates Hub Portfolio`,
-      description: task.tagline,
+      description,
       url: `${SITE_URL}/portfolio/${category}/${topic}/${level}`,
       type: 'article',
     },
@@ -62,6 +71,8 @@ export default async function TaskSubmissionPage({
   const top = getTopicById(category, topic);
   if (!cat || !top) notFound();
 
+  const taskUrl = `${SITE_URL}/portfolio/${cat.id}/${top.id}/${task.level}`;
+
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -70,13 +81,34 @@ export default async function TaskSubmissionPage({
       { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio` },
       { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio/${cat.id}` },
       { '@type': 'ListItem', position: 4, name: top.title, item: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
-      { '@type': 'ListItem', position: 5, name: task.difficulty, item: `${SITE_URL}/portfolio/${cat.id}/${top.id}/${task.level}` },
+      { '@type': 'ListItem', position: 5, name: task.difficulty, item: taskUrl },
     ],
+  };
+
+  const timeRequired = estimatedHoursToISO(task.estimatedHours);
+  const learningResourceSchema: WithContext<LearningResource> = {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name: task.title,
+    description: task.tagline,
+    url: taskUrl,
+    inLanguage: 'en-ZA',
+    learningResourceType: 'Assignment',
+    educationalLevel: task.difficulty,
+    about: top.title,
+    teaches: task.skillsProven,
+    ...(timeRequired ? { timeRequired } : {}),
+    provider: {
+      '@type': 'Organization',
+      name: 'Graduates Hub',
+      url: SITE_URL,
+    },
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />
 
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
