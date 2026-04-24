@@ -8,6 +8,7 @@ import { designUxTasks } from './designUx';
 import { webDevelopmentTasks } from './webDevelopment';
 import { businessAnalysisTasks } from './businessAnalysis';
 import { customerOpsTasks } from './customerOps';
+import { aiPromptingTasks } from './aiPrompting';
 
 export const portfolioTasks: PortfolioTask[] = [
   ...digitalMarketingTasks,
@@ -18,6 +19,7 @@ export const portfolioTasks: PortfolioTask[] = [
   ...webDevelopmentTasks,
   ...businessAnalysisTasks,
   ...customerOpsTasks,
+  ...aiPromptingTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
