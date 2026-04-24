@@ -3,6 +3,9 @@ import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
 import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
+import { portfolioCategories } from '@/data/portfolioCategories';
+import { portfolioTopics } from '@/data/portfolioTopics';
+import { portfolioTasks } from '@/data/portfolioTasks';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
@@ -63,6 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/cv-builder`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/career-roadmaps`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/interview-prep`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/curation-policy`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.4 },
@@ -101,6 +105,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  const portfolioCategoryPages: MetadataRoute.Sitemap = portfolioCategories.map((c) => ({
+    url: `${SITE_URL}/portfolio/${c.id}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  const portfolioTopicPages: MetadataRoute.Sitemap = portfolioTopics.map((t) => ({
+    url: `${SITE_URL}/portfolio/${t.categoryId}/${t.id}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
+  const portfolioTaskPages: MetadataRoute.Sitemap = portfolioTasks.map((t) => ({
+    url: `${SITE_URL}/portfolio/${t.categoryId}/${t.topicId}/${t.level}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
   const wpPosts = await fetchAllBlogPosts();
   const blogPostPages: MetadataRoute.Sitemap = wpPosts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
@@ -109,5 +134,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryPages, ...coursePages, ...roadmapPages, ...interviewPrepPages, ...blogPostPages];
+  return [
+    ...staticPages,
+    ...categoryPages,
+    ...coursePages,
+    ...roadmapPages,
+    ...interviewPrepPages,
+    ...portfolioCategoryPages,
+    ...portfolioTopicPages,
+    ...portfolioTaskPages,
+    ...blogPostPages,
+  ];
 }
