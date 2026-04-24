@@ -4,6 +4,7 @@ import { Sparkles, Award, CheckCircle, Briefcase, ArrowRight, ShieldCheck, Share
 import { portfolioTasks } from '@/data/portfolioTasks';
 import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
+import { WebPage, WithContext } from 'schema-dts';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
@@ -31,7 +32,7 @@ export default function PortfolioLandingPage() {
   const totalTasks = portfolioTasks.length;
   const totalCategories = portfolioCategories.length;
 
-  const schema = {
+  const schema: WithContext<WebPage> = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Proof of Work Portfolio',

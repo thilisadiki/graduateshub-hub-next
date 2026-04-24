@@ -6,6 +6,7 @@ import { getCategoryById } from '@/data/portfolioCategories';
 import { portfolioTopics, getTopicById } from '@/data/portfolioTopics';
 import { getTaskByLocation } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
+import { BreadcrumbList, WithContext } from 'schema-dts';
 
 const SITE_URL = 'https://www.graduateshub.co.za';
 
@@ -68,7 +69,7 @@ export default async function TopicPage({
   const top = getTopicById(category, topic);
   if (!cat || !top) notFound();
 
-  const breadcrumbSchema = {
+  const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
