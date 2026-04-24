@@ -7,6 +7,7 @@ import { digitalMarketingTopics } from './digitalMarketing';
 import { financeAccountingTopics } from './financeAccounting';
 import { designUxTopics } from './designUx';
 import { businessAnalysisTopics } from './businessAnalysis';
+import { customerOpsTopics } from './customerOps';
 
 export const portfolioTopics: PortfolioTopic[] = [
   ...webDevelopmentTopics,
@@ -16,6 +17,7 @@ export const portfolioTopics: PortfolioTopic[] = [
   ...financeAccountingTopics,
   ...designUxTopics,
   ...businessAnalysisTopics,
+  ...customerOpsTopics,
 ];
 
 export function getTopicById(categoryId: string, topicId: string): PortfolioTopic | undefined {

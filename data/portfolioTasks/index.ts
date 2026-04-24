@@ -7,6 +7,7 @@ import { financeAccountingTasks } from './financeAccounting';
 import { designUxTasks } from './designUx';
 import { webDevelopmentTasks } from './webDevelopment';
 import { businessAnalysisTasks } from './businessAnalysis';
+import { customerOpsTasks } from './customerOps';
 
 export const portfolioTasks: PortfolioTask[] = [
   ...digitalMarketingTasks,
@@ -16,6 +17,7 @@ export const portfolioTasks: PortfolioTask[] = [
   ...designUxTasks,
   ...webDevelopmentTasks,
   ...businessAnalysisTasks,
+  ...customerOpsTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
