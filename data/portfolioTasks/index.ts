@@ -12,6 +12,15 @@ import { aiPromptingTasks } from './aiPrompting';
 import { qaTestingTasks } from './qaTesting';
 import { projectCoordinationTasks } from './projectCoordination';
 import { itServiceManagementTasks } from './itServiceManagement';
+import { itNetworkingTasks } from './itNetworking';
+import { itIdentityManagementTasks } from './itIdentityManagement';
+import { itCloudFundamentalsTasks } from './itCloudFundamentals';
+import { itCybersecurityTasks } from './itCybersecurity';
+import { itEndpointManagementTasks } from './itEndpointManagement';
+import { itBackupRecoveryTasks } from './itBackupRecovery';
+import { itMicrosoft365Tasks } from './itMicrosoft365';
+import { itComplianceGovernanceTasks } from './itComplianceGovernance';
+import { itServerAdministrationTasks } from './itServerAdministration';
 
 export const portfolioTasks: PortfolioTask[] = [
   ...digitalMarketingTasks,
@@ -26,6 +35,15 @@ export const portfolioTasks: PortfolioTask[] = [
   ...qaTestingTasks,
   ...projectCoordinationTasks,
   ...itServiceManagementTasks,
+  ...itNetworkingTasks,
+  ...itIdentityManagementTasks,
+  ...itCloudFundamentalsTasks,
+  ...itCybersecurityTasks,
+  ...itEndpointManagementTasks,
+  ...itBackupRecoveryTasks,
+  ...itMicrosoft365Tasks,
+  ...itComplianceGovernanceTasks,
+  ...itServerAdministrationTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
