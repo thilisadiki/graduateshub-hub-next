@@ -59,16 +59,6 @@ body {
   margin-bottom: 1.4rem;
 }
 
-/* Standalone <strong> or <b> inside a <p> — treat as a visual sub-heading */
-.wp-content p > strong:only-child,
-.wp-content p > b:only-child {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #111827;
-  margin-top: 0.25rem;
-}
-
 /* Links */
 .wp-content a { color: var(--color-primary); text-decoration: underline; }
 .wp-content a:hover { color: #1e40af; }
