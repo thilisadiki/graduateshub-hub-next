@@ -3,7 +3,7 @@ import type { PortfolioTask } from '@/types';
 export const itServiceManagementTasks: PortfolioTask[] = [
   {
     id: 'itsm-home-lab-documentation',
-    categoryId: 'customer-ops',
+    categoryId: 'it',
     topicId: 'it-service-management',
     level: 'beginner',
     title: 'Home Lab Setup and Documentation',
@@ -34,7 +34,7 @@ export const itServiceManagementTasks: PortfolioTask[] = [
   },
   {
     id: 'itsm-itil-incident-log',
-    categoryId: 'customer-ops',
+    categoryId: 'it',
     topicId: 'it-service-management',
     level: 'intermediate',
     title: 'ITIL-Compliant Incident Log',
@@ -65,7 +65,7 @@ export const itServiceManagementTasks: PortfolioTask[] = [
   },
   {
     id: 'itsm-acceptable-use-policy',
-    categoryId: 'customer-ops',
+    categoryId: 'it',
     topicId: 'it-service-management',
     level: 'advanced',
     title: 'Acceptable Use Policy for an SME',

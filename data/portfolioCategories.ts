@@ -74,6 +74,15 @@ export const portfolioCategories: PortfolioCategory[] = [
     accentTo: 'to-teal-500',
   },
   {
+    id: 'it',
+    name: 'IT & Infrastructure',
+    tagline: 'Document the network, run the helpdesk, ship the policy.',
+    description:
+      'Practical IT support and service management tasks: home labs, ITIL-aligned ticket logs, troubleshooting flows, and the policy work that real corporate IT teams produce.',
+    accentFrom: 'from-blue-500',
+    accentTo: 'to-indigo-500',
+  },
+  {
     id: 'ai-prompting',
     name: 'AI & Prompting',
     tagline: 'Work with AI the way modern teams are starting to.',
