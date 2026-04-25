@@ -106,4 +106,62 @@ export const businessAnalystRoadmap: CareerRoadmap = {
     'Stakeholder map: for any fictional project, create a complete stakeholder register identifying all parties, their interests, influence level, and engagement strategy',
   ],
   relatedRoadmapIds: ['junior-accountant', 'data-analyst', 'it-support-specialist'],
+  salaryRange: 'R200,000 – R340,000 per year (entry level, SA)',
+  remoteFriendly: 'Hybrid',
+  difficulty: 'Intermediate',
+  faqs: [
+    {
+      q: 'What is the difference between a business analyst and a data analyst?',
+      a: 'Data analysts answer "what happened" using data. Business analysts answer "what should change" using requirements, process models, and stakeholder input. There is overlap, but a BA spends most of their time interviewing stakeholders and writing requirements, while a DA spends most of theirs in SQL and BI tools.',
+    },
+    {
+      q: 'Do I need to be technical to be a BA?',
+      a: 'You do not need to code, but you do need to understand how systems work: APIs, databases, integrations, deployment cycles. BAs who cannot have a technical conversation with developers struggle. Aim for technical literacy, not technical mastery.',
+    },
+    {
+      q: 'Is the IIBA ECBA worth getting?',
+      a: 'For SA corporates (banks, insurers, telecoms) yes. ECBA is the entry-level IIBA cert with no work experience required, costs roughly R3,500, and removes the "no formal BA training" objection in screening. CBAP comes later once you have experience.',
+    },
+    {
+      q: 'Agile BA or traditional BA?',
+      a: 'Most modern SA roles, especially in tech and banking, are Agile. You will write user stories, attend ceremonies, and refine backlogs rather than producing thick BRDs upfront. Traditional waterfall BA roles still exist in government and large infrastructure projects but are shrinking.',
+    },
+    {
+      q: 'Can I move from BA into product management?',
+      a: 'Yes, this is one of the most common SA career progressions. Product managers own outcomes; BAs own requirements. Building product judgment (understanding users, prioritising features, owning a metric) while in a BA role is the bridge.',
+    },
+    {
+      q: 'How important is SQL for a BA?',
+      a: 'Increasingly important. Many SA BA job specs now list "basic SQL" as a requirement because BAs are expected to validate data themselves rather than always asking a DA. Aim for comfort with SELECT, JOIN, GROUP BY, and WHERE at minimum.',
+    },
+  ],
+  firstNinetyDays: [
+    'Week one focuses on stakeholder mapping: meeting business sponsors, product owners, technical leads, and end users to understand who you serve and how decisions are made',
+    'By week three you should be sitting in on backlog refinement, sprint planning, and retrospectives, observing how requirements flow into delivery',
+    'Month two: take ownership of small user stories, write acceptance criteria independently, and lead at least one stakeholder workshop with a senior BA shadowing',
+    'By month three expect to own a feature or epic end-to-end: discovery, requirements documentation, story writing, supporting the development team during the sprint, and supporting UAT',
+    'Build a personal stakeholder log from day one. Track who said what, what decisions were made, and what is still open. BAs who keep meticulous traceability are the ones senior leaders trust with bigger work',
+  ],
+  commonMistakes: [
+    {
+      mistake: 'Producing thick BRDs no one reads',
+      fix: 'Modern BA work in SA is iterative. Lead with user stories, decision logs, and process diagrams. Reserve full BRDs for regulated or contractually required deliverables.',
+    },
+    {
+      mistake: 'Documenting requirements without involving developers early',
+      fix: 'Requirements written in isolation almost always miss technical constraints. Bring at least one developer into discovery sessions; the rework you save is worth the meeting time.',
+    },
+    {
+      mistake: 'Treating "agile" as ceremony attendance',
+      fix: 'Agile BA work is about continuous prioritisation, slicing stories small, and being responsive to change. If you are merely attending standups and writing the same scope documents you would write in waterfall, you are not yet doing agile BA.',
+    },
+    {
+      mistake: 'Avoiding data analysis because "that is the data analyst\'s job"',
+      fix: 'BAs who can validate their own assumptions in SQL or Excel are dramatically more credible. Spend a few weekends becoming comfortable with basic queries; it pays back permanently.',
+    },
+    {
+      mistake: 'Modelling the as-is process and stopping there',
+      fix: 'Documenting the current state is the easy half. The valuable half is modelling the to-be state with measurable improvements. Always pair as-is and to-be diagrams in your portfolio.',
+    },
+  ],
 };

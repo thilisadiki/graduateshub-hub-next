@@ -117,4 +117,62 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
     'Manual to automated migration plan: pick five of your manual test cases and write a plan for how each would be automated using Selenium or Cypress, including the assertions and test data required',
   ],
   relatedRoadmapIds: ['web-developer', 'data-analyst', 'it-support-specialist'],
+  salaryRange: 'R180,000 – R320,000 per year (entry level, SA)',
+  remoteFriendly: 'Hybrid',
+  difficulty: 'Beginner',
+  faqs: [
+    {
+      q: 'Do I need to know how to code to become a QA tester?',
+      a: 'Not at the start. Junior QA roles in SA are usually 80 percent manual testing where coding is not required. Once you progress toward automation engineering, basic Python, JavaScript, or Java becomes essential. Many testers grow into automation gradually over their first two years.',
+    },
+    {
+      q: 'Is ISTQB Foundation Level really necessary?',
+      a: 'For SA QA roles, effectively yes. Almost every job spec mentions it, recruiters filter on it, and interview questions are pulled directly from the syllabus. The exam costs roughly R3,000 to R5,000 and the study time is achievable in 4 to 6 weeks.',
+    },
+    {
+      q: 'How is QA different from being a developer?',
+      a: 'Developers build features; QA testers find risks before users do. QA mindset is exploratory, sceptical, and structured. The two roles complement each other in every Agile team but require different temperaments. If you enjoy spotting what could go wrong, QA suits you.',
+    },
+    {
+      q: 'Will AI tools replace QA testers?',
+      a: 'AI has automated some test data generation and basic regression scripts. It has not replaced exploratory testing, judgment about what to test, bug investigation, or user-centred quality thinking. Modern QA testers use AI as a tool rather than competing with it.',
+    },
+    {
+      q: 'Manual testing or automation: which should I learn first?',
+      a: 'Manual first, always. You cannot write good automated tests if you do not understand test design, equivalence partitioning, and risk-based testing manually. Most SA junior roles are explicitly manual or hybrid for the first 6 to 12 months.',
+    },
+    {
+      q: 'What do I include in my QA portfolio without work experience?',
+      a: 'Bug reports for public apps (Takealot, FNB app, government services) with full reproduction steps, a test case suite for any small app, and an exploratory test charter. Even a couple of well-documented bugs found in personal projects beats a CV claiming experience without artefacts.',
+    },
+  ],
+  firstNinetyDays: [
+    'Week one is product orientation: learning the application end to end as a user, reading the existing test cases and bug history, and getting access to JIRA, the test environment, and the test management tool',
+    'By week three you should be executing existing regression test suites independently and logging clear, well-structured defects when you find them',
+    'Month two: take ownership of testing for one feature area or one user story per sprint. Write your own test cases, execute them, and own the bug triage with the developer',
+    'By month three expect to be participating in story refinement, contributing acceptance criteria, and starting to think about test automation candidates within your area',
+    'Build a personal bug catalogue from your first day. Every defect you log is a learning artefact; the catalogue makes you faster at recognising patterns and writing better tests',
+  ],
+  commonMistakes: [
+    {
+      mistake: 'Treating QA as the easy entry path that does not need study',
+      fix: 'QA is genuinely teachable but requires structured study. ISTQB Foundation level material is non-negotiable. Skipping it gets you screened out at the first interview question.',
+    },
+    {
+      mistake: 'Logging bugs without proper reproduction steps',
+      fix: 'Title, environment, preconditions, exact steps, expected vs actual, severity, priority. Every defect needs all of these. Sloppy bug reports are the fastest way to lose developer trust.',
+    },
+    {
+      mistake: 'Jumping straight to Selenium before mastering manual testing',
+      fix: 'You cannot automate what you cannot test manually. Spend at least the first six months on test design, equivalence partitioning, and exploratory testing before writing your first automated script.',
+    },
+    {
+      mistake: 'Confusing severity and priority in interviews',
+      fix: 'Severity is technical impact, priority is business urgency. They are independent. A typo on a public homepage is low severity but can be high priority. Get this right or expect a quick rejection.',
+    },
+    {
+      mistake: 'Overpromising automation experience on the CV',
+      fix: 'If you have written 5 Selenium scripts in a personal project, say that. Claiming "Selenium experience" without specifics gets you a live coding test you cannot pass. Be honest about your level and progression plan.',
+    },
+  ],
 };

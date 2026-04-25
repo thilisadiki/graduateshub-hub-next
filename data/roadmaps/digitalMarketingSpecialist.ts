@@ -106,4 +106,62 @@ export const digitalMarketingSpecialistRoadmap: CareerRoadmap = {
     'Campaign report: run a small-budget Facebook or Google Ads campaign (even R500), document the results, and write a lessons-learned analysis',
   ],
   relatedRoadmapIds: ['data-analyst', 'business-analyst', 'it-support-specialist'],
+  salaryRange: 'R130,000 – R210,000 per year (entry level, SA)',
+  remoteFriendly: 'Fully',
+  difficulty: 'Beginner',
+  faqs: [
+    {
+      q: 'Can I really break into digital marketing without a degree?',
+      a: 'Yes. Of all the roles on this site, digital marketing is the one where a curated portfolio (a ranked article, a grown social account, a real campaign report) most clearly outweighs formal qualifications. Hiring managers want proof of results.',
+    },
+    {
+      q: 'Is digital marketing fully remote?',
+      a: 'Most agency and in-house specialist roles in SA are now fully remote or remote-first. Some larger corporates still require hybrid for collaboration, but the field has the strongest remote culture of any role on this roadmap site.',
+    },
+    {
+      q: 'Should I specialise or stay generalist at entry level?',
+      a: 'Stay broad enough to be hireable (SEO, social, content, paid, analytics), then specialise once employed and you see what energises you and what the market pays for. Premature specialisation in something narrow like email marketing limits your first-job options.',
+    },
+    {
+      q: 'How do AI tools change this career?',
+      a: 'AI has automated content drafting, ad copy variations, and image generation. The premium has shifted to strategists who direct AI well, marketers who validate AI output, and specialists who own the parts AI cannot do (real relationships, brand judgment, technical SEO, conversion testing).',
+    },
+    {
+      q: 'Do I need to pay for Google Ads or Meta Ads to learn paid media?',
+      a: 'A small personal budget (R500 to R1,000) for one campaign teaches you more than any course. Many courses also offer credits. The hands-on metrics (CPC, CTR, conversion rate) are exactly what employers test you on.',
+    },
+    {
+      q: 'Is freelancing while learning a good idea?',
+      a: 'Yes, with caveats. One or two small business or NGO clients (even pro bono) gives you real campaigns for your CV. Avoid spreading yourself across too many tiny clients before you have a defined service offering, otherwise the income becomes unstable and your portfolio becomes shallow.',
+    },
+  ],
+  firstNinetyDays: [
+    'Spend week one auditing existing channels: which platforms run, who runs them, what the current performance is, and what the brand voice sounds like. Most new marketers skip this and start posting content that does not fit',
+    'By week three you should be producing content for at least one channel (typically social media or blog) under supervision and learning the company\'s analytics setup (GA4, Search Console, channel-specific dashboards)',
+    'Month two expect to own a small campaign end-to-end: planning, copy, creative coordination, scheduling, and a basic post-campaign report',
+    'By month three you should have a defined area of ownership (one channel, one funnel stage, or one customer segment) and be presenting weekly performance numbers in a team meeting',
+    'Build a habit of testing one variable at a time and documenting results. Marketers who run controlled experiments outpace those who post and hope, even at junior level',
+  ],
+  commonMistakes: [
+    {
+      mistake: 'Posting on every platform instead of dominating one',
+      fix: 'Master one channel deeply (SEO, Instagram, paid search, email) before adding a second. Hiring managers want depth in something, not shallow exposure to everything.',
+    },
+    {
+      mistake: 'Confusing reach metrics with business outcomes',
+      fix: 'Impressions and followers are vanity metrics on their own. Always pair them with conversion or pipeline impact. A campaign that grew followers by 50 percent but produced zero leads is a failure to articulate.',
+    },
+    {
+      mistake: 'Studying SEO as a list of tactics rather than a system',
+      fix: 'SEO is keyword research, content fit, on-page structure, internal linking, technical health, and authority working together. Learning each in isolation produces inconsistent results. Read at least one full system-level guide (Google\'s SEO starter or Ahrefs\' beginner guide).',
+    },
+    {
+      mistake: 'Avoiding paid ads because the spend feels scary',
+      fix: 'A R500 personal ad campaign teaches you more about CPC, CTR, and audience targeting than ten free courses. Start tiny, lose a small budget on purpose, and learn from real data.',
+    },
+    {
+      mistake: 'Building a portfolio of mock work no real person ever saw',
+      fix: 'A real campaign with 200 real users beats a fictional brand brief with prettier visuals. Volunteer for a small business, NGO, or local event organiser if you have to. Real outcomes always outweigh polished hypotheticals.',
+    },
+  ],
 };

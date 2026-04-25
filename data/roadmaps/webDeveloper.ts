@@ -106,4 +106,62 @@ export const webDeveloperRoadmap: CareerRoadmap = {
     'REST API: build a simple JSON API in Flask or PHP that supports GET, POST, PUT, and DELETE for a resource of your choice',
   ],
   relatedRoadmapIds: ['it-support-specialist', 'data-analyst', 'business-analyst'],
+  salaryRange: 'R160,000 – R300,000 per year (entry level, SA)',
+  remoteFriendly: 'Fully',
+  difficulty: 'Advanced',
+  faqs: [
+    {
+      q: 'How long until I can really get a junior dev job?',
+      a: 'Honestly, 9 to 18 months of consistent learning is realistic for most career switchers. Anyone promising 3 months is either selling a bootcamp or lying. The bottleneck is portfolio depth, not lack of tutorials.',
+    },
+    {
+      q: 'Front-end, back-end, or full-stack at entry level?',
+      a: 'For SA junior roles, full-stack is often the strongest entry point because smaller companies want generalists. Specialise once employed. If you are aiming at large product companies, picking a side (usually front-end with React) gets you more interviews per skill.',
+    },
+    {
+      q: 'PHP, Python, or JavaScript on the back end?',
+      a: 'PHP/Laravel is still the most-deployed stack in SA SMEs and agencies, so PHP knowledge unlocks the largest number of jobs. Python (Django/Flask) is preferred at modern start-ups and data-heavy companies. Node.js is rare as a junior entry point in SA but common in remote international roles.',
+    },
+    {
+      q: 'Do I need a CS degree?',
+      a: 'No, but you do need a serious GitHub. SA hiring managers will trade a degree for a public portfolio with at least three substantial projects, clean commit history, and decent README documentation. Without that portfolio, lacking a degree becomes a real barrier.',
+    },
+    {
+      q: 'Will AI replace web developers?',
+      a: 'AI has compressed the time to ship features and made some tutorial-grade work commodity. The roles that survive and grow are those that build complex production systems, integrate AI well, and own architecture decisions. Junior developers should expect higher productivity expectations than their predecessors had.',
+    },
+    {
+      q: 'Should I freelance while learning?',
+      a: 'A small client project is gold for your portfolio, but do not let unpaid favours consume your study time. Aim for one realistic project (a local business website, a community organisation app) that you can ship and document, rather than a stream of half-finished side gigs.',
+    },
+  ],
+  firstNinetyDays: [
+    'Week one is environment setup and codebase orientation: getting your local development running, learning the Git workflow, and reading enough of the existing code to understand the architecture',
+    'By week three you should have shipped a small bug fix or copy change to production, gone through the full pull request review cycle, and understand how the deployment pipeline works',
+    'Month two: own a small feature end-to-end, from ticket grooming through review to deployment. Expect significant code review feedback; absorbing it well is more important than getting it right first time',
+    'By month three you should be picking up tickets independently, contributing to technical design discussions, and starting to understand the wider system (database design, third-party integrations, monitoring)',
+    'Build a habit of keeping a learning log. Write down what surprised you each week. Junior devs who reflect outpace those who just grind tickets',
+  ],
+  commonMistakes: [
+    {
+      mistake: 'Tutorial hopping without finishing real projects',
+      fix: 'Pick one tutorial, complete it, then build a personal project that goes beyond it. Three small completed projects with public repos beat ten half-done tutorials.',
+    },
+    {
+      mistake: 'Learning frameworks (React, Vue) before solid JavaScript fundamentals',
+      fix: 'You will hit a wall the first time a framework abstraction breaks. Spend at least 6 weeks on vanilla JavaScript (DOM, fetch, promises, ES6 modules) before touching a framework.',
+    },
+    {
+      mistake: 'Treating Git like a save button',
+      fix: 'Learn branches, rebase, merge, and resolving conflicts properly. Most junior dev rejection feedback in SA mentions "weak Git workflow" specifically. Practise on a public project where you make 50+ commits.',
+    },
+    {
+      mistake: 'Hiding incomplete work instead of pushing it publicly',
+      fix: 'A messy public GitHub with real progress beats a clean empty one. Hiring managers look at activity patterns and learning trajectory, not perfection.',
+    },
+    {
+      mistake: 'Only studying through video; never reading documentation',
+      fix: 'Real developers spend their day in MDN, framework docs, and Stack Overflow. Train this skill deliberately by solving at least one problem per week using only documentation, no tutorials.',
+    },
+  ],
 };

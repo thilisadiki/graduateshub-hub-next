@@ -33,6 +33,12 @@ export interface CareerRoadmap {
   }[];
   portfolioProjects: string[];
   relatedRoadmapIds: string[];
+  salaryRange: string;
+  remoteFriendly: 'Fully' | 'Hybrid' | 'On-site';
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  faqs: { q: string; a: string }[];
+  firstNinetyDays: string[];
+  commonMistakes: { mistake: string; fix: string }[];
 }
 
 export interface InterviewQuestion {

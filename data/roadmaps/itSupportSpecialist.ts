@@ -106,4 +106,62 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
     'IT policy document: draft a one-page acceptable use policy for a fictional SME',
   ],
   relatedRoadmapIds: ['data-analyst', 'web-developer', 'business-analyst'],
+  salaryRange: 'R120,000 – R220,000 per year (entry level, SA)',
+  remoteFriendly: 'On-site',
+  difficulty: 'Beginner',
+  faqs: [
+    {
+      q: 'Is IT support a real career or just a stepping stone?',
+      a: 'Both. It is a fully viable long-term career (senior support, infrastructure manager, IT director) and the most common launchpad into network engineering, systems administration, and cybersecurity. Most senior IT people in SA started in support.',
+    },
+    {
+      q: 'Why is this role mostly on-site?',
+      a: 'Helpdesk and desktop support involve physical hardware, badge access, and end-user interaction that does not translate well to remote work. As you grow into network or systems administration, hybrid and remote options open up significantly.',
+    },
+    {
+      q: 'Do I need CompTIA A+ to get hired?',
+      a: 'Not strictly, but it is the most recognised entry-level IT cert in SA and removes objections in screening. Expect to pay roughly R5,000 per exam (two exams required). Many employers will reimburse you once hired.',
+    },
+    {
+      q: 'How important is ITIL?',
+      a: 'In any corporate environment, very. Banks, retailers, and government departments run their IT services on ITIL processes. Knowing incident, problem, and change management vocabulary is often the difference between a callback and a rejection at a corporate.',
+    },
+    {
+      q: 'Is IT support being replaced by AI?',
+      a: 'Tier 1 password resets and FAQ lookups are increasingly automated, but the bulk of support work (hardware troubleshooting, network issues, software conflicts, user training) still requires a human on the ground. The role is shifting toward higher-skill problem solving, not disappearing.',
+    },
+    {
+      q: 'What is the fastest entry path with no experience?',
+      a: 'Build a home lab, document it publicly, and target large support contractors (Adapt IT, EOH, Datacentrix, Dimension Data) before chasing in-house roles at corporates. Contractors hire in volume, expect to train, and provide rapid exposure to varied environments.',
+    },
+  ],
+  firstNinetyDays: [
+    'Your first two weeks are dominated by ticket triage: password resets, printer issues, software install requests, and basic hardware swaps. Get fast at these and you free up senior staff for harder problems',
+    'Learn the asset register and the ticketing system (typically ServiceNow, Freshservice, or Jira Service Management) thoroughly. Knowing where everything is documented makes you immediately more useful',
+    'By month two you should be handling intermediate tickets independently: network connectivity issues, group policy questions, mailbox restores, and basic Active Directory tasks',
+    'By month three expect to be the go-to for at least one specific area (a particular application, a site, or a team) and to have shadowed at least one change implementation',
+    'Build a personal knowledge base from day one: every problem you solve gets a one-paragraph note. After three months you have a reference library that makes you noticeably faster than peers',
+  ],
+  commonMistakes: [
+    {
+      mistake: 'Memorising hardware components instead of practising troubleshooting flows',
+      fix: 'A hiring manager does not test which pin is which on a SATA cable. They test whether you can methodically diagnose "user cannot print." Practise the troubleshooting flowchart on real or simulated faults.',
+    },
+    {
+      mistake: 'Skipping ITIL because it sounds bureaucratic',
+      fix: 'Every corporate IT department in SA runs on ITIL processes. Knowing the difference between an incident, a problem, and a change request is the price of admission. Take the free Foundations course early.',
+    },
+    {
+      mistake: 'Overinvesting in CompTIA before any practical experience',
+      fix: 'A+ is valuable but not a substitute for a documented home lab and a few volunteer support engagements. Build the lab in parallel with study, not after.',
+    },
+    {
+      mistake: 'Communicating in jargon to non-technical users in interviews',
+      fix: 'A core skill of IT support is translating technical concepts plainly. In interviews, deliberately explain things in non-technical language, even if asked technical questions. Many entry-level candidates fail this implicit test.',
+    },
+    {
+      mistake: 'Treating support as just a stepping stone to development',
+      fix: 'If you signal during interviews that you are using support to bridge into another field, you will be passed over for candidates who actually want the role. Even if support is a step, sound committed to doing it well.',
+    },
+  ],
 };

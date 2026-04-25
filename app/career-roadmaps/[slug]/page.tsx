@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import {
   Clock, TrendingUp, CheckCircle2, ChevronRight, Briefcase,
   Award, Lightbulb, Users, BookOpen, ArrowRight,
+  Wallet, MapPin, Gauge, HelpCircle, CalendarDays, AlertTriangle,
 } from 'lucide-react';
 import AuthorByline from '@/components/shared/AuthorByline';
 import CourseCard from '@/components/course/CourseCard';
@@ -83,10 +84,23 @@ export default async function CareerRoadmapPage({
     })),
   };
 
+  const faqSchema = roadmap.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: roadmap.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
 
       <main className="max-w-4xl mx-auto px-6 py-16">
         {/* Breadcrumb */}
@@ -116,14 +130,26 @@ export default async function CareerRoadmapPage({
           <p className="text-lg text-gray-500 mb-6">{roadmap.tagline}</p>
 
           {/* Stat pills */}
-          <div className="flex flex-wrap gap-4 mb-6 text-sm">
+          <div className="flex flex-wrap gap-3 mb-6 text-sm">
             <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
               <Clock size={16} className="text-primary shrink-0" />
               <span className="text-gray-600">Time to job-ready: <strong className="text-gray-900">{roadmap.timeToJobReady}</strong></span>
             </div>
             <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
+              <Wallet size={16} className="text-primary shrink-0" />
+              <span className="text-gray-600">Salary: <strong className="text-gray-900">{roadmap.salaryRange}</strong></span>
+            </div>
+            <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
               <TrendingUp size={16} className="text-primary shrink-0" />
               <span className="text-gray-600">Demand: <strong className="text-gray-900">{roadmap.demandLevel}</strong></span>
+            </div>
+            <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
+              <Gauge size={16} className="text-primary shrink-0" />
+              <span className="text-gray-600">Difficulty: <strong className="text-gray-900">{roadmap.difficulty}</strong></span>
+            </div>
+            <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
+              <MapPin size={16} className="text-primary shrink-0" />
+              <span className="text-gray-600">Remote: <strong className="text-gray-900">{roadmap.remoteFriendly}</strong></span>
             </div>
             <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
               <BookOpen size={16} className="text-primary shrink-0" />
@@ -301,6 +327,92 @@ export default async function CareerRoadmapPage({
             </ol>
           </div>
         </section>
+
+        {/* First 90 Days */}
+        {roadmap.firstNinetyDays.length > 0 && (
+          <section className="mb-12">
+            <div className="flex items-center gap-2 mb-4">
+              <CalendarDays size={20} className="text-primary" />
+              <h2 className="text-2xl font-extrabold text-gray-900">Your First 90 Days on the Job</h2>
+            </div>
+            <p className="text-gray-500 text-sm mb-5">
+              What real day-to-day work looks like once you land the role. Use this to set expectations and to know what skills to keep sharpening after you are hired.
+            </p>
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <ol className="space-y-4">
+                {roadmap.firstNinetyDays.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-blue-50 text-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                      {i + 1}
+                    </span>
+                    <p className="text-sm text-gray-700 leading-relaxed">{item}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        )}
+
+        {/* Common Mistakes */}
+        {roadmap.commonMistakes.length > 0 && (
+          <section className="mb-12">
+            <div className="flex items-center gap-2 mb-4">
+              <AlertTriangle size={20} className="text-amber-600" />
+              <h2 className="text-2xl font-extrabold text-gray-900">Common Mistakes to Avoid</h2>
+            </div>
+            <p className="text-gray-500 text-sm mb-5">
+              The pitfalls that keep candidates stuck at the application stage. Each one comes from real hiring feedback in the South African market.
+            </p>
+            <div className="flex flex-col gap-3">
+              {roadmap.commonMistakes.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-xl border border-gray-100 shadow-sm p-5"
+                >
+                  <div className="flex items-start gap-3 mb-2">
+                    <AlertTriangle size={16} className="text-amber-500 mt-1 shrink-0" />
+                    <p className="font-bold text-gray-900 text-sm leading-snug">{item.mistake}</p>
+                  </div>
+                  <div className="flex items-start gap-3 ml-7">
+                    <CheckCircle2 size={14} className="text-emerald-500 mt-1 shrink-0" />
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      <strong className="text-gray-900">Fix: </strong>{item.fix}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* FAQ */}
+        {roadmap.faqs.length > 0 && (
+          <section className="mb-12">
+            <div className="flex items-center gap-2 mb-4">
+              <HelpCircle size={20} className="text-primary" />
+              <h2 className="text-2xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+            </div>
+            <div className="flex flex-col gap-3">
+              {roadmap.faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group bg-white rounded-xl border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                >
+                  <summary className="cursor-pointer list-none flex items-start justify-between gap-4 p-5">
+                    <h3 className="font-bold text-gray-900 text-base leading-snug">{faq.q}</h3>
+                    <ChevronRight
+                      size={18}
+                      className="text-gray-400 shrink-0 mt-0.5 transition-transform group-open:rotate-90"
+                    />
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Newsletter */}
         <div className="mb-12">

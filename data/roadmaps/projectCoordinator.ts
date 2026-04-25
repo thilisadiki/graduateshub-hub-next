@@ -123,4 +123,62 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
     'Sprint facilitation pack: a set of agendas and templates for daily standup, sprint planning, sprint review, and retrospective, written so a new coordinator could use them on day one',
   ],
   relatedRoadmapIds: ['business-analyst', 'data-analyst', 'it-support-specialist'],
+  salaryRange: 'R180,000 – R320,000 per year (entry level, SA)',
+  remoteFriendly: 'Hybrid',
+  difficulty: 'Beginner',
+  faqs: [
+    {
+      q: 'What is the difference between a project coordinator and a project manager?',
+      a: 'A coordinator runs the operational machinery: schedule updates, meeting minutes, risk register maintenance, stakeholder communication. A project manager owns delivery: scope decisions, budget control, escalation, and overall accountability. Coordinator to manager is one of the most natural progressions in corporate.',
+    },
+    {
+      q: 'CAPM, PRINCE2, or Google Project Management Certificate first?',
+      a: 'For SA corporate environments, PRINCE2 Foundation has the highest recognition in government and financial services. CAPM is more international. Google PM is the most accessible if you are entirely self-funded. Pick based on the industry you are targeting and your budget.',
+    },
+    {
+      q: 'Do I need to know JIRA before applying?',
+      a: 'Yes for any IT or tech-adjacent role. JIRA fluency is the most commonly listed tool requirement in SA project coordinator job specs. The Atlassian University free training plus a few hours of practice in a free JIRA Cloud account is enough to interview confidently.',
+    },
+    {
+      q: 'Can a project coordinator work remotely?',
+      a: 'Hybrid is the SA norm because the role often involves on-site meeting facilitation and informal corridor conversations that move projects forward. Fully remote PC roles exist at distributed tech companies but are less common at traditional corporates.',
+    },
+    {
+      q: 'Is project coordination a good route into Scrum Master?',
+      a: 'Yes, especially in tech and banking. Coordinators with Agile fluency are often the natural pool that Scrum Master roles get filled from. Pursuing PSM I or CSM while in a coordinator role signals readiness for the move.',
+    },
+    {
+      q: 'How do I get coordinator experience without a project management role?',
+      a: 'Reframe past responsibilities as projects with scope, timeline, stakeholders, and outcomes. Volunteering as a project lead at a community organisation, NGO, or church event produces real coordination artefacts (plans, status reports, post-mortems) you can show at interview.',
+    },
+  ],
+  firstNinetyDays: [
+    'Week one is mapping the project landscape: who the project sponsor is, who the stakeholders are, where the project plan lives, what the current risks and issues look like, and which ceremonies you are expected to attend',
+    'By week three you should be running the recurring meetings: capturing minutes, logging actions, updating the schedule, and circulating status updates without being asked',
+    'Month two: take ownership of the risk register, the action log, and one workstream of stakeholder communication. Start producing the weekly status report yourself for the project manager to review',
+    'By month three expect to be facilitating ceremonies (standup, sprint review, retrospective) independently and chasing dependencies across teams without escalation',
+    'Build a habit of "no surprise Fridays": every project meeting on Friday should contain zero updates a stakeholder has not already heard during the week. Coordinators who pre-empt surprises become trusted very quickly',
+  ],
+  commonMistakes: [
+    {
+      mistake: 'Using "manager" language without owning manager-level decisions',
+      fix: 'A coordinator coordinates. Do not present yourself as having owned scope, budget, or escalation calls if a project manager actually owned them. Senior interviewers spot the inflation immediately.',
+    },
+    {
+      mistake: 'Writing minutes nobody reads',
+      fix: 'Minutes are useless if they document discussion but miss decisions and actions. Capture three things ruthlessly: decisions made, actions assigned, and items still open. The chronological narrative is optional.',
+    },
+    {
+      mistake: 'Treating JIRA, Asana, and MS Project as interchangeable',
+      fix: 'They have different mental models. Become genuinely fluent in one (whichever your target employers use most) rather than shallowly aware of all three. Most SA tech roles require JIRA specifically.',
+    },
+    {
+      mistake: 'Avoiding hard conversations with late stakeholders',
+      fix: 'A coordinator who silently absorbs slipping deadlines becomes the person blamed when the project misses. Document, escalate appropriately, and keep the conversation factual rather than emotional.',
+    },
+    {
+      mistake: 'Treating Agile and Waterfall as opposing camps',
+      fix: 'Most SA corporates use both, often in the same programme. Be fluent in the language of each, and adapt to the team you are joining rather than evangelising one approach.',
+    },
+  ],
 };
