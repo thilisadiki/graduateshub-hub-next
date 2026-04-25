@@ -90,6 +90,6 @@ export const juniorQATesterPrep: InterviewPrep = {
     },
   ],
 
-  relatedRoadmapId: 'web-developer',
+  relatedRoadmapId: 'junior-qa-tester',
   relatedPrepIds: ['web-developer', 'data-analyst', 'it-support-specialist'],
 };

@@ -5,6 +5,8 @@ import { digitalMarketingSpecialistRoadmap } from './digitalMarketingSpecialist'
 import { juniorAccountantRoadmap } from './juniorAccountant';
 import { webDeveloperRoadmap } from './webDeveloper';
 import { businessAnalystRoadmap } from './businessAnalyst';
+import { juniorQATesterRoadmap } from './juniorQATester';
+import { projectCoordinatorRoadmap } from './projectCoordinator';
 
 export const roadmaps: CareerRoadmap[] = [
   dataAnalystRoadmap,
@@ -13,4 +15,6 @@ export const roadmaps: CareerRoadmap[] = [
   juniorAccountantRoadmap,
   webDeveloperRoadmap,
   businessAnalystRoadmap,
+  juniorQATesterRoadmap,
+  projectCoordinatorRoadmap,
 ];

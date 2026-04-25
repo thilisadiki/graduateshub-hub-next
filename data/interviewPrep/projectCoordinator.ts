@@ -89,6 +89,6 @@ export const projectCoordinatorPrep: InterviewPrep = {
     },
   ],
 
-  relatedRoadmapId: 'business-analyst',
+  relatedRoadmapId: 'project-coordinator',
   relatedPrepIds: ['business-analyst', 'it-support-specialist', 'data-analyst'],
 };
