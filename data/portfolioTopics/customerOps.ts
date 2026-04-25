@@ -81,4 +81,12 @@ export const customerOpsTopics: PortfolioTopic[] = [
       'Interpret CSAT, First Reply Time, and SLA breaches. Tests data interpretation, reporting, and operational insight.',
     skillsProven: ['Metrics interpretation', 'Reporting', 'CSAT analysis', 'SLA tracking'],
   },
+  {
+    id: 'it-service-management',
+    categoryId: 'customer-ops',
+    title: 'IT Service Management',
+    description:
+      'Run an IT helpdesk the way a corporate operates one. Tests ITIL incident handling, network documentation, troubleshooting workflows, and acceptable-use policy design.',
+    skillsProven: ['ITIL fundamentals', 'Network documentation', 'Helpdesk triage', 'IT policy writing'],
+  },
 ];

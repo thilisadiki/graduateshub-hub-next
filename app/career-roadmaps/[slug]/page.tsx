@@ -5,6 +5,7 @@ import {
   Clock, TrendingUp, CheckCircle2, ChevronRight, Briefcase,
   Award, Lightbulb, Users, BookOpen, ArrowRight,
   Wallet, MapPin, Gauge, HelpCircle, CalendarDays, AlertTriangle,
+  Target,
 } from 'lucide-react';
 import AuthorByline from '@/components/shared/AuthorByline';
 import CourseCard from '@/components/course/CourseCard';
@@ -12,6 +13,7 @@ import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 import { courses } from '@/data/courses';
+import { portfolioTasks, getTaskUrl } from '@/data/portfolioTasks';
 import type { AuthorKey, CareerRoadmap } from '@/types';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
@@ -59,6 +61,11 @@ export default async function CareerRoadmapPage({
 
   const relatedRoadmaps = roadmaps.filter((r) => roadmap.relatedRoadmapIds.includes(r.id));
   const linkedPrep = interviewPreps.find((p) => p.relatedRoadmapId === roadmap.id);
+  const LEVEL_ORDER = { beginner: 0, intermediate: 1, advanced: 2 } as const;
+  const practiceTasks = portfolioTasks
+    .filter((t) => t.relatedRoadmapIds.includes(roadmap.id))
+    .sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level])
+    .slice(0, 6);
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -327,6 +334,52 @@ export default async function CareerRoadmapPage({
             </ol>
           </div>
         </section>
+
+        {/* Practice Tasks */}
+        {practiceTasks.length > 0 && (
+          <section className="mb-12">
+            <div className="flex items-center gap-2 mb-4">
+              <Target size={20} className="text-primary" />
+              <h2 className="text-2xl font-extrabold text-gray-900">Practice with Real Tasks</h2>
+            </div>
+            <p className="text-gray-500 text-sm mb-5">
+              Stop reading, start building. Each task below is a structured exercise with a brief, deliverables, and a rubric. Submit your work to earn a public Badge of Competence on your profile.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {practiceTasks.map((task) => {
+                const difficultyColour = task.level === 'beginner'
+                  ? 'bg-emerald-50 text-emerald-700 border-emerald-100'
+                  : task.level === 'intermediate'
+                    ? 'bg-blue-50 text-blue-700 border-blue-100'
+                    : 'bg-purple-50 text-purple-700 border-purple-100';
+                return (
+                  <Link
+                    key={task.id}
+                    href={getTaskUrl(task)}
+                    className="group bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:border-primary hover:shadow-md transition-all flex flex-col gap-3"
+                  >
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${difficultyColour}`}>
+                        {task.difficulty}
+                      </span>
+                      <span className="flex items-center gap-1 text-xs text-gray-400">
+                        <Clock size={11} />
+                        {task.estimatedHours}
+                      </span>
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-sm leading-snug group-hover:text-primary transition-colors">
+                      {task.title}
+                    </h3>
+                    <p className="text-xs text-gray-500 leading-relaxed">{task.tagline}</p>
+                    <span className="text-xs font-bold text-primary group-hover:underline mt-auto">
+                      Start Task →
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         {/* First 90 Days */}
         {roadmap.firstNinetyDays.length > 0 && (

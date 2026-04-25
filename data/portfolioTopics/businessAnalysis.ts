@@ -83,4 +83,12 @@ export const businessAnalysisTopics: PortfolioTopic[] = [
       'Build the argument for investment in a solution. Tests one-pagers, cost-benefit analysis, and full investment cases.',
     skillsProven: ['Business cases', 'Cost-benefit analysis', 'NPV', 'Executive communication'],
   },
+  {
+    id: 'project-coordination',
+    categoryId: 'business-analysis',
+    title: 'Project Coordination & Delivery',
+    description:
+      'Run the operational machinery of a project. Tests project planning, risk register maintenance, RACI design, status reporting, and Agile ceremony facilitation.',
+    skillsProven: ['Project planning', 'Risk management', 'RACI design', 'Status reporting', 'Agile facilitation'],
+  },
 ];

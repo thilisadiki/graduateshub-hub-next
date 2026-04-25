@@ -9,6 +9,9 @@ import { webDevelopmentTasks } from './webDevelopment';
 import { businessAnalysisTasks } from './businessAnalysis';
 import { customerOpsTasks } from './customerOps';
 import { aiPromptingTasks } from './aiPrompting';
+import { qaTestingTasks } from './qaTesting';
+import { projectCoordinationTasks } from './projectCoordination';
+import { itServiceManagementTasks } from './itServiceManagement';
 
 export const portfolioTasks: PortfolioTask[] = [
   ...digitalMarketingTasks,
@@ -20,6 +23,9 @@ export const portfolioTasks: PortfolioTask[] = [
   ...businessAnalysisTasks,
   ...customerOpsTasks,
   ...aiPromptingTasks,
+  ...qaTestingTasks,
+  ...projectCoordinationTasks,
+  ...itServiceManagementTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {

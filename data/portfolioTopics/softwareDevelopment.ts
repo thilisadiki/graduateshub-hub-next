@@ -108,4 +108,12 @@ export const softwareDevelopmentTopics: PortfolioTopic[] = [
       'Deploy applications reliably at scale. Tests Docker best practices, multi-container Compose setups, and Kubernetes fundamentals.',
     skillsProven: ['Docker', 'Kubernetes', 'Infrastructure as Code', 'Microservices'],
   },
+  {
+    id: 'quality-assurance-testing',
+    categoryId: 'software-development',
+    title: 'Quality Assurance & Bug Reporting',
+    description:
+      'Think like a tester, not a developer. Tests manual test case design, structured bug reporting, exploratory test charters, regression planning, and the bridge from manual to automated testing.',
+    skillsProven: ['Test case design', 'Bug reporting', 'Exploratory testing', 'Regression planning', 'STLC'],
+  },
 ];
