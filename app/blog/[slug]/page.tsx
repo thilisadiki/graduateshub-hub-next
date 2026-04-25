@@ -30,8 +30,10 @@ const fetchPostBySlug = cache(async (slug: string) => {
 
 function cleanContent(html: string): string {
   return html
-    // 1. Rewrite subdomain links to internal /blog/ paths
-    .replace(/https:\/\/articles\.graduateshub\.co\.za\//g, '/blog/')
+    // 1. Rewrite subdomain post links to internal /blog/ paths.
+    //    Negative lookahead skips wp-content / wp-includes / wp-json / wp-admin
+    //    so image src and other static asset URLs stay on the articles subdomain.
+    .replace(/https:\/\/articles\.graduateshub\.co\.za\/(?!wp-(?:content|includes|json|admin)\/)/g, '/blog/')
     // 2. Strip Gutenberg HTML comments (<!-- wp:paragraph --> etc.)
     .replace(/<!--\s*\/?wp:[^>]*-->/g, '')
     // 3. Strip inline style attributes
