@@ -6,12 +6,12 @@ import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
+import { SITE_URL } from '@/lib/seo';
 
 export const revalidate = 3600;   // regenerate cached posts every hour
 export const dynamicParams = true; // posts published after build still work
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
-const SITE_URL = 'https://www.graduateshub.co.za';
 
 // React.cache deduplicates: generateMetadata and the page component
 // both call this, it only hits the WP API once per request.
@@ -97,13 +97,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = await fetchPostBySlug(slug);
-  if (!post) return { title: 'Article Not Found | Graduates Hub' };
+  if (!post) return { title: 'Article Not Found' };
 
   const description = post.excerpt.rendered.replace(/<[^>]+>/g, '').substring(0, 160);
   const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
 
   return {
-    title: `${post.title.rendered} | Graduates Hub`,
+    title: post.title.rendered,
     description,
     alternates: { canonical: `${SITE_URL}/blog/${slug}` },
     robots: {

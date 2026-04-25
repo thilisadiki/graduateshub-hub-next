@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Sparkles, CheckCircle, Users, GraduationCap, Briefcase, RefreshCw, HelpCircle } from 'lucide-react';
 import ToolsGrid from './ToolsGrid';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Free AI Career Tools: CV Reviewer, Interview Prep, Skills Gap Analyser and More',
@@ -14,6 +13,7 @@ export const metadata: Metadata = {
     description: '7 free tools to plan your career, review your CV, prep for interviews, and find the right courses. Powered by Google Gemini. No account needed.',
     url: `${SITE_URL}/tools`,
     type: 'website',
+    images: [OG_IMAGE],
   },
 };
 

@@ -7,8 +7,7 @@ import { getSupabase } from '@/utils/supabase';
 import { getTaskById } from '@/data/portfolioTasks';
 import type { PortfolioProof } from '@/types';
 import ShareButtons from './ShareButtons';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL } from '@/lib/seo';
 
 const getProof = cache(async (id: string): Promise<PortfolioProof | null> => {
   try {

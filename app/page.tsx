@@ -12,19 +12,19 @@ import AIToolsBanner from '@/components/home/AIToolsBanner';
 import PortfolioBanner from '@/components/home/PortfolioBanner';
 import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const revalidate = 300;
 
-const SITE_URL = 'https://www.graduateshub.co.za';
-
 export const metadata: Metadata = {
-  title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
+  title: 'Free Learning Resources, Guides & Courses',
   description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
     description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
     url: `${SITE_URL}/`,
+    images: [OG_IMAGE],
   },
 };
 

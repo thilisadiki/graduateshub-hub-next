@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, CheckCircle2, XCircle, RefreshCw, Users } from 'lucide-react';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'How We Curate Courses | Curation Policy – Graduates Hub',
+  title: 'How We Curate Courses — Curation Policy',
   description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
   alternates: { canonical: `${SITE_URL}/curation-policy` },
   openGraph: {
     title: 'How We Curate Courses | Curation Policy – Graduates Hub',
     description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
     url: `${SITE_URL}/curation-policy`,
+    images: [OG_IMAGE],
   },
 };
 

@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { courses } from '@/data/courses';
-import { formatCategoryName } from '@/utils/formatters';
+import { formatCategoryName, courseCategoryHref } from '@/utils/formatters';
 import CourseDetailsContent from './CourseDetailsContent';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return courses.map(course => ({ courseId: course.id }));
@@ -53,7 +52,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
       { '@type': 'ListItem', position: 2, name: 'Categories', item: `${SITE_URL}/categories` },
-      { '@type': 'ListItem', position: 3, name: formatCategoryName(course.category), item: `${SITE_URL}/category/${course.category.toLowerCase().replace(/ /g, '-')}` },
+      { '@type': 'ListItem', position: 3, name: formatCategoryName(course.category), item: `${SITE_URL}${courseCategoryHref(course.category)}` },
       { '@type': 'ListItem', position: 4, name: course.title },
     ],
   };

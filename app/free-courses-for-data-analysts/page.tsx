@@ -4,8 +4,8 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
+import { SITE_URL } from '@/lib/seo';
 
-const SITE_URL = 'https://www.graduateshub.co.za';
 const CANONICAL = `${SITE_URL}/free-courses-for-data-analysts`;
 
 export const metadata: Metadata = {

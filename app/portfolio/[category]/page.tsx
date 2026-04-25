@@ -7,8 +7,7 @@ import { getTopicsByCategory } from '@/data/portfolioTopics';
 import { getTasksByTopic } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return portfolioCategories.map((c) => ({ category: c.id }));
@@ -26,7 +25,7 @@ export async function generateMetadata({
   const topicTitles = topics.slice(0, 5).map((t) => t.title).join(', ');
   const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
   return {
-    title: `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates | Graduates Hub`,
+    title: `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates`,
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}` },
     openGraph: {
@@ -34,6 +33,7 @@ export async function generateMetadata({
       description,
       url: `${SITE_URL}/portfolio/${cat.id}`,
       type: 'website',
+      images: [OG_IMAGE],
     },
   };
 }

@@ -3,13 +3,18 @@ import Link from 'next/link';
 import { Mail, Clock, ExternalLink } from 'lucide-react';
 import ContactForm from './ContactForm';
 import WhatsAppCard from './WhatsAppCard';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Graduates Hub',
+  title: 'Contact Us',
   description: 'Get in touch with the Graduates Hub team. We are here to help with course questions, content feedback, partnership enquiries, and POPIA privacy requests.',
   alternates: { canonical: `${SITE_URL}/contact` },
+  openGraph: {
+    title: 'Contact Us | Graduates Hub',
+    description: 'Get in touch with the Graduates Hub team. We are here to help with course questions, content feedback, partnership enquiries, and POPIA privacy requests.',
+    url: `${SITE_URL}/contact`,
+    images: [OG_IMAGE],
+  },
 };
 
 const breadcrumbSchema = {

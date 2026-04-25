@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } from 'lucide-react';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Online Course Guides for 2026 | Graduates Hub',
+  title: 'Online Course Guides for 2026',
   description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
   alternates: { canonical: `${SITE_URL}/guides` },
   openGraph: {
     title: 'Online Course Guides for 2026 | Graduates Hub',
     description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
     url: `${SITE_URL}/guides`,
+    images: [OG_IMAGE],
   },
 };
 

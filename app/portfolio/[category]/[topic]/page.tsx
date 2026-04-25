@@ -7,8 +7,7 @@ import { portfolioTopics, getTopicById } from '@/data/portfolioTopics';
 import { getTaskByLocation } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return portfolioTopics.map((t) => ({ category: t.categoryId, topic: t.id }));
@@ -26,7 +25,7 @@ export async function generateMetadata({
   const skills = top.skillsProven.slice(0, 4).join(', ');
   const description = `${top.description}${skills ? ` Skills: ${skills}.` : ''} Beginner, Intermediate, and Advanced levels with graded rubrics.`;
   return {
-    title: `${top.title} — ${cat.name} Portfolio Tasks | Graduates Hub`,
+    title: `${top.title} — ${cat.name} Portfolio Tasks`,
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
     openGraph: {
@@ -34,6 +33,7 @@ export async function generateMetadata({
       description,
       url: `${SITE_URL}/portfolio/${cat.id}/${top.id}`,
       type: 'article',
+      images: [OG_IMAGE],
     },
   };
 }

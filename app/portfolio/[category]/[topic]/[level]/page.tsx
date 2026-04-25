@@ -8,8 +8,7 @@ import { getTopicById } from '@/data/portfolioTopics';
 import type { PortfolioLevel } from '@/types';
 import SubmissionForm from './SubmissionForm';
 import { BreadcrumbList, LearningResource, WithContext } from 'schema-dts';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 const LEVELS: PortfolioLevel[] = ['beginner', 'intermediate', 'advanced'];
 
@@ -45,7 +44,7 @@ export async function generateMetadata({
   const firstDeliverable = task.deliverables[0] ?? '';
   const description = `${task.tagline} ${firstDeliverable ? `Deliverable: ${firstDeliverable}.` : ''} Earn a public Badge of Competence.`.trim();
   return {
-    title: `${task.title} — ${topicLabel} ${task.difficulty} Task | Graduates Hub`,
+    title: `${task.title} — ${topicLabel} ${task.difficulty} Task`,
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}/${level}` },
     openGraph: {
@@ -53,6 +52,7 @@ export async function generateMetadata({
       description,
       url: `${SITE_URL}/portfolio/${category}/${topic}/${level}`,
       type: 'article',
+      images: [OG_IMAGE],
     },
   };
 }

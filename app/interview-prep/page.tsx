@@ -2,11 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FileText, ChevronRight, DollarSign } from 'lucide-react';
 import { interviewPreps } from '@/data/interviewPrep';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'CV & Interview Prep: South African Job Market | Graduates Hub',
+  title: 'CV & Interview Prep: South African Job Market',
   description:
     'Field-specific CV tips and the most common interview questions for junior roles in South Africa. IT support, data analyst, web developer, accounting, marketing, and business analyst.',
   alternates: { canonical: `${SITE_URL}/interview-prep` },
@@ -15,6 +14,7 @@ export const metadata: Metadata = {
     description:
       'Field-specific CV tips and the most common interview questions for junior roles in South Africa. IT support, data analyst, web developer, accounting, marketing, and business analyst.',
     url: `${SITE_URL}/interview-prep`,
+    images: [OG_IMAGE],
   },
 };
 

@@ -1,11 +1,16 @@
 import type { Metadata } from 'next';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclosure',
   description: 'Information regarding the affiliate relationships and compensation associated with courses listed on Graduates Hub.',
   alternates: { canonical: `${SITE_URL}/disclosure` },
+  openGraph: {
+    title: 'Affiliate Disclosure | Graduates Hub',
+    description: 'Information regarding the affiliate relationships and compensation associated with courses listed on Graduates Hub.',
+    url: `${SITE_URL}/disclosure`,
+    images: [OG_IMAGE],
+  },
 };
 
 export default function DisclosurePage() {

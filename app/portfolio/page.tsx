@@ -5,11 +5,10 @@ import { portfolioTasks } from '@/data/portfolioTasks';
 import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
 import { BreadcrumbList, ItemList, WebPage, WithContext } from 'schema-dts';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Proof of Work Portfolio for SA Graduates — Graded Micro-Internship Tasks | Graduates Hub',
+  title: 'Proof of Work Portfolio for SA Graduates — Graded Micro-Internship Tasks',
   description:
     'Complete short, practical micro-internship tasks graded against a public rubric and earn a shareable Badge of Competence for your LinkedIn. Built for South African graduates and career changers. No account required.',
   alternates: { canonical: `${SITE_URL}/portfolio` },
@@ -19,6 +18,7 @@ export const metadata: Metadata = {
       'Most graduates have a CV. Very few have a portfolio. Complete practical tasks, get them graded, and earn a shareable Badge of Competence.',
     url: `${SITE_URL}/portfolio`,
     type: 'website',
+    images: [OG_IMAGE],
   },
 };
 

@@ -6,7 +6,7 @@ import { ChevronDown, MapPin, Clock, BookOpen, GraduationCap, Building, Star, Ex
 import CourseCarousel from '@/components/course/CourseCarousel';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import LatestArticles from '@/components/home/LatestArticles';
-import { formatCategoryName } from '@/utils/formatters';
+import { formatCategoryName, courseCategoryHref } from '@/utils/formatters';
 import type { Course } from '@/types';
 
 function AccordionItem({ title, isActive, onClick, children }: {
@@ -90,7 +90,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
           <span className="text-gray-300">›</span>
           <Link href="/categories" className="hover:text-primary transition-colors">Categories</Link>
           <span className="text-gray-300">›</span>
-          <Link href={`/category/${course.category.toLowerCase().split(',')[0].trim().replace(/ /g, '-')}`} className="hover:text-primary transition-colors">{formatCategoryName(course.category)}</Link>
+          <Link href={courseCategoryHref(course.category)} className="hover:text-primary transition-colors">{formatCategoryName(course.category)}</Link>
           <span className="text-gray-300">›</span>
           <span className="text-gray-900 font-medium truncate max-w-[200px] sm:max-w-xs md:max-w-md">{course.title}</span>
         </div>

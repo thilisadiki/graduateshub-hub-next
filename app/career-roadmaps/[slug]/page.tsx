@@ -12,8 +12,7 @@ import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 import { courses } from '@/data/courses';
 import type { AuthorKey, CareerRoadmap } from '@/types';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return roadmaps.map((r) => ({ slug: r.id }));
@@ -28,13 +27,14 @@ export async function generateMetadata({
   const roadmap = roadmaps.find((r) => r.id === slug);
   if (!roadmap) return {};
   return {
-    title: `${roadmap.title} (2026) | Graduates Hub`,
+    title: `${roadmap.title} (2026)`,
     description: roadmap.description,
     alternates: { canonical: `${SITE_URL}/career-roadmaps/${roadmap.id}` },
     openGraph: {
       title: `${roadmap.title} (2026) | Graduates Hub`,
       description: roadmap.description,
       url: `${SITE_URL}/career-roadmaps/${roadmap.id}`,
+      images: [OG_IMAGE],
     },
   };
 }

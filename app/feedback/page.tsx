@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FeedbackForm from './FeedbackForm';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Share Your Feedback | Graduates Hub',
+  title: 'Share Your Feedback',
   description: 'Help us improve the free course directory for South African graduates. Tell us what you think - takes about 60 seconds.',
   alternates: { canonical: `${SITE_URL}/feedback` },
   openGraph: {
     title: 'Share Your Feedback - Graduates Hub',
     description: 'Help us improve the free course directory for South African graduates. Tell us what you think - takes about 60 seconds.',
     url: `${SITE_URL}/feedback`,
+    images: [OG_IMAGE],
   },
 };
 

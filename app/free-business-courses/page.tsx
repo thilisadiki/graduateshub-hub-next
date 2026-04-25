@@ -5,12 +5,12 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
+import { SITE_URL } from '@/lib/seo';
 
-const SITE_URL = 'https://www.graduateshub.co.za';
 const CANONICAL = `${SITE_URL}/free-business-courses`;
 
 export const metadata: Metadata = {
-  title: 'Best Free Business Courses Online (2026) | Graduates Hub',
+  title: 'Best Free Business Courses Online (2026)',
   description:
     'Discover the best free business courses in 2026. Project management, Lean Six Sigma, GDPR compliance, and economic strategy. All CPD-accredited with free certificates.',
   alternates: { canonical: CANONICAL },

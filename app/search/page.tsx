@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import SearchContent from './SearchContent';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Search Free Online Courses | Graduates Hub',
+  title: 'Search Free Online Courses',
   description: 'Search hundreds of free online courses in IT, Software Development, Business, Marketing, Accounting, and Finance. Find the right course to advance your career with no fees and no paywalls.',
   alternates: { canonical: `${SITE_URL}/search` },
   robots: {

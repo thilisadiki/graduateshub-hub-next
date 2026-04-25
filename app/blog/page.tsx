@@ -3,25 +3,40 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const revalidate = 300;
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
-const SITE_URL = 'https://www.graduateshub.co.za';
 const PER_PAGE = 12;
 
-export const metadata: Metadata = {
-  title: 'Career Guides & Study Tips | Graduates Hub Blog',
-  description:
-    'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',
-  alternates: { canonical: `${SITE_URL}/blog` },
-  openGraph: {
-    title: 'Career Guides & Study Tips | Graduates Hub Blog',
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}): Promise<Metadata> {
+  const { page } = await searchParams;
+  const pageNum = Math.max(1, parseInt(page ?? '1'));
+  const url = pageNum === 1 ? `${SITE_URL}/blog` : `${SITE_URL}/blog?page=${pageNum}`;
+  const title =
+    pageNum === 1
+      ? 'Career Guides & Study Tips Blog'
+      : `Career Guides & Study Tips Blog — Page ${pageNum}`;
+  return {
+    title,
     description:
       'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',
-    url: `${SITE_URL}/blog`,
-  },
-};
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | Graduates Hub`,
+      description:
+        'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',
+      url,
+      images: [OG_IMAGE],
+    },
+    ...(pageNum > 1 && { robots: { index: false, follow: true } }),
+  };
+}
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

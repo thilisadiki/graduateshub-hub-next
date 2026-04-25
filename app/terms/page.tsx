@@ -1,11 +1,16 @@
 import type { Metadata } from 'next';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Read the Terms of Service for Graduates Hub. Information about your use of our platform and resources.',
   alternates: { canonical: `${SITE_URL}/terms` },
+  openGraph: {
+    title: 'Terms of Service | Graduates Hub',
+    description: 'Read the Terms of Service for Graduates Hub. Information about your use of our platform and resources.',
+    url: `${SITE_URL}/terms`,
+    images: [OG_IMAGE],
+  },
 };
 
 export default function TermsPage() {

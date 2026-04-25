@@ -3,11 +3,10 @@ import Link from 'next/link';
 import { Clock, TrendingUp, ChevronRight, Map } from 'lucide-react';
 import { roadmaps } from '@/data/roadmaps';
 import type { CareerRoadmap } from '@/types';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Career Roadmaps: How to Break Into Any Field | Graduates Hub',
+  title: 'Career Roadmaps: How to Break Into Any Field',
   description:
     'Step-by-step career roadmaps for data analysis, IT support, web development, digital marketing, accounting, and business analysis. Curated by working professionals. Free to follow.',
   alternates: { canonical: `${SITE_URL}/career-roadmaps` },
@@ -16,6 +15,7 @@ export const metadata: Metadata = {
     description:
       'Step-by-step career roadmaps for data analysis, IT support, web development, digital marketing, accounting, and business analysis. Curated by working professionals. Free to follow.',
     url: `${SITE_URL}/career-roadmaps`,
+    images: [OG_IMAGE],
   },
 };
 

@@ -10,8 +10,7 @@ import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { interviewPreps } from '@/data/interviewPrep';
 import { roadmaps } from '@/data/roadmaps';
 import type { AuthorKey } from '@/types';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return interviewPreps.map((p) => ({ slug: p.id }));
@@ -26,13 +25,14 @@ export async function generateMetadata({
   const prep = interviewPreps.find((p) => p.id === slug);
   if (!prep) return {};
   return {
-    title: `${prep.role} CV & Interview Prep (2026) | Graduates Hub`,
+    title: `${prep.role} CV & Interview Prep (2026)`,
     description: prep.description,
     alternates: { canonical: `${SITE_URL}/interview-prep/${prep.id}` },
     openGraph: {
       title: `${prep.role} CV & Interview Prep (2026) | Graduates Hub`,
       description: prep.description,
       url: `${SITE_URL}/interview-prep/${prep.id}`,
+      images: [OG_IMAGE],
     },
   };
 }

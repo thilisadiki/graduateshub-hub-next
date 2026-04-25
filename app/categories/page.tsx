@@ -5,11 +5,10 @@ import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
 import CourseCarousel from '@/components/course/CourseCarousel';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
-
-const SITE_URL = 'https://www.graduateshub.co.za';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',
+  title: 'Free Online Courses by Subject Area (2026)',
   description:
     'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
   alternates: { canonical: `${SITE_URL}/categories` },
@@ -18,6 +17,7 @@ export const metadata: Metadata = {
     description:
       'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
     url: `${SITE_URL}/categories`,
+    images: [OG_IMAGE],
   },
 };
 
