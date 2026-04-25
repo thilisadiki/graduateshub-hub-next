@@ -97,9 +97,9 @@ export default function AboutPage() {
             {/* Jason */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="flex flex-col md:flex-row gap-0">
-                <div className="md:w-56 lg:w-64 shrink-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8 md:p-0">
-                  <div className="w-32 h-32 md:w-full md:h-full md:min-h-[280px] rounded-full md:rounded-none overflow-hidden bg-slate-200 relative">
-                    <Image src="/jason-sadiki.jpg" alt="Jason Sadiki, Founder of Graduates Hub" fill sizes="(max-width: 768px) 128px, 256px" className="object-cover" />
+                <div className="md:w-48 shrink-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
+                  <div className="w-32 h-32 rounded-full overflow-hidden bg-slate-200 relative shadow-md ring-4 ring-white">
+                    <Image src="/jason-sadiki.jpg" alt="Jason Sadiki, Founder of Graduates Hub" fill sizes="128px" className="object-cover" />
                   </div>
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
@@ -137,9 +137,9 @@ export default function AboutPage() {
             {/* Ndulamiso */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="flex flex-col md:flex-row gap-0">
-                <div className="md:w-56 lg:w-64 shrink-0 bg-gradient-to-br from-teal-50 to-emerald-100 flex items-center justify-center p-8 md:p-0">
-                  <div className="w-32 h-32 md:w-full md:h-full md:min-h-[260px] rounded-full md:rounded-none overflow-hidden bg-teal-100 relative">
-                    <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu, Co-Founder of Graduates Hub" fill sizes="(max-width: 768px) 128px, 256px" className="object-cover" />
+                <div className="md:w-48 shrink-0 bg-gradient-to-br from-teal-50 to-emerald-100 flex items-center justify-center p-8">
+                  <div className="w-32 h-32 rounded-full overflow-hidden bg-teal-100 relative shadow-md ring-4 ring-white">
+                    <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu, Co-Founder of Graduates Hub" fill sizes="128px" className="object-cover object-top" />
                   </div>
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
