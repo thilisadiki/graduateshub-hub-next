@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
 import SearchBar from '@/components/shared/SearchBar';
 import { categories } from '@/data/categories';
+import LinkPendingDot from '@/components/ui/LinkPendingDot';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -113,20 +114,20 @@ export default function Navbar() {
         {/* Right Actions */}
         <div className="flex items-center gap-4 shrink-0">
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/blog" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Blog</Link>
-            <Link href="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">About</Link>
+            <Link href="/blog" className="flex items-center text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Blog<LinkPendingDot /></Link>
+            <Link href="/about" className="flex items-center text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">About<LinkPendingDot /></Link>
             <Link
               href="/tools"
               className="flex items-center gap-1.5 text-sm font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 hover:text-indigo-700 px-3 py-1.5 rounded-full transition-colors border border-indigo-100"
             >
               <Sparkles size={14} className="text-yellow-500" />
-              AI Tools
+              AI Tools<LinkPendingDot />
             </Link>
             <Link
               href="/search"
-              className="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
+              className="flex items-center bg-white border-2 border-primary text-primary hover:bg-blue-50 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
             >
-              Find a Course
+              Find a Course<LinkPendingDot />
             </Link>
           </div>
 
@@ -188,8 +189,8 @@ export default function Navbar() {
         </Link>
         <div className="flex flex-col gap-3 pt-6 pb-2">
           <Link href="/search" onClick={toggleMobileMenu}
-            className="block text-center bg-primary hover:bg-blue-800 text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
-            Find a Course
+            className="flex items-center justify-center bg-primary hover:bg-blue-800 text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
+            Find a Course<LinkPendingDot />
           </Link>
         </div>
       </div>

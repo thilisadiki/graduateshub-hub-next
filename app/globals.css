@@ -27,6 +27,31 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Link pending dot — shown on slow navigations, debounced 100ms */
+.link-pending-dot {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-left: 0.35rem;
+  border-radius: 9999px;
+  background: currentColor;
+  opacity: 0;
+  visibility: hidden;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.link-pending-dot.is-pending {
+  visibility: visible;
+  animation-name: lp-fadein, lp-pulse;
+  animation-duration: 200ms, 1s;
+  animation-delay: 100ms, 100ms;
+  animation-timing-function: ease, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+}
+@keyframes lp-fadein { to { opacity: 0.5; } }
+@keyframes lp-pulse  { 50% { opacity: 0.2; } }
+
 /* WordPress post content rendering */
 .wp-content {
   font-size: 1.0625rem;

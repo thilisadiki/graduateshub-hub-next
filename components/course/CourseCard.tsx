@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Star, Clock } from 'lucide-react';
 import { formatCategoryName } from '@/utils/formatters';
 import type { Course } from '@/types';
+import LinkPendingDot from '@/components/ui/LinkPendingDot';
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
@@ -31,8 +32,8 @@ export default function CourseCard({ course }: { course: Course }) {
             View on Alison →
           </a>
         ) : (
-          <Link href={`/course/${course.id}`} aria-label={`View course details for ${course.title}`} className="mt-6 block w-full text-center border-2 border-primary text-primary py-2.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-            View Course Details →
+          <Link href={`/course/${course.id}`} aria-label={`View course details for ${course.title}`} className="mt-6 flex items-center justify-center w-full border-2 border-primary text-primary py-2.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
+            View Course Details →<LinkPendingDot />
           </Link>
         )}
       </div>
