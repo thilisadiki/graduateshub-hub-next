@@ -86,9 +86,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const coursePages: MetadataRoute.Sitemap = courses.map((course) => ({
     url: `${SITE_URL}/course/${course.id}`,
-    lastModified,
-    changeFrequency: 'monthly',
-    priority: 0.7,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
   }));
 
   const roadmapPages: MetadataRoute.Sitemap = roadmaps.map((r) => ({

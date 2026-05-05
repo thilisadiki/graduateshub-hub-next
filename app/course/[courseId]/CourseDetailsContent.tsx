@@ -193,7 +193,11 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   {course.longDescription || 'This course has been curated to provide you with the most up-to-date and relevant information. It is structured to cater to both beginners and those looking to refresh their knowledge.'}
                 </p>
                 <ul className="list-none space-y-3 mt-4">
-                  {['Self-paced learning, anytime and anywhere.', 'Accessible on any device (Desktop, Tablet, Mobile).', 'Interactive content designed for maximum retention.'].map(item => (
+                  {[
+                    `Study ${course.subCategory || course.category} at your own pace, anytime and anywhere.`,
+                    `Earn a free ${course.tag?.toLowerCase() || 'certificate'} from ${course.title.split(':')[0]}.`,
+                    'Accessible on any device — desktop, tablet, or mobile.',
+                  ].map(item => (
                     <li key={item} className="flex items-start text-gray-600 text-[15px]"><span className="text-primary mr-3 mt-0.5">•</span>{item}</li>
                   ))}
                 </ul>
@@ -242,12 +246,14 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   <div className="bg-gray-50 border border-gray-100 p-3 rounded-xl shadow-sm"><Building className="text-primary" size={28} /></div>
                   <div><h4 className="font-bold text-gray-900 text-lg">Alison</h4><p className="text-sm text-gray-500 font-medium tracking-wide uppercase">Global Online Learning Platform</p></div>
                 </div>
-                <p className="text-gray-600 text-[15px] leading-relaxed">Alison is one of the world's largest free learning platforms for education and skills training, empowering millions of learners worldwide.</p>
+                <p className="text-gray-600 text-[15px] leading-relaxed">
+                  Alison is one of the world&apos;s largest free learning platforms, offering over 4,000 courses across {course.category} and other disciplines to millions of learners in 195 countries. All Alison courses — including {course.title} — are completely free to study, with optional paid certificates available upon completion.
+                </p>
               </AccordionItem>
 
               <AccordionItem title="Questions" isActive={openSection === 'Questions'} onClick={() => toggleSection('Questions')}>
                 <div className="bg-[#F8FAFC] p-6 sm:p-8 rounded-xl border border-[#E2E8F0] mt-2 text-center">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Still have questions?</h4>
+                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Questions about {course.title}?</h4>
                   <p className="text-gray-600 text-[15px] mb-6">Our support team is here to help you make the right choice for your career development.</p>
                   <Link href="/contact" className="inline-block bg-white border-2 border-primary text-primary font-bold px-8 py-2.5 rounded-lg hover:bg-blue-50 transition-colors shadow-sm">Contact Support</Link>
                 </div>
