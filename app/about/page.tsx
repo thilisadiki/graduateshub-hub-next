@@ -95,7 +95,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-6">
 
             {/* Jason */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div id="jason-sadiki" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-28">
               <div className="flex flex-col md:flex-row gap-0">
                 <div className="md:w-48 shrink-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
                   <div className="w-32 h-32 rounded-full overflow-hidden bg-slate-200 relative shadow-md ring-4 ring-white">
@@ -135,7 +135,7 @@ export default function AboutPage() {
             </div>
 
             {/* Ndulamiso */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div id="ndulamiso-mamburu" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-28">
               <div className="flex flex-col md:flex-row gap-0">
                 <div className="md:w-48 shrink-0 bg-gradient-to-br from-teal-50 to-emerald-100 flex items-center justify-center p-8">
                   <div className="w-32 h-32 rounded-full overflow-hidden bg-teal-100 relative shadow-md ring-4 ring-white">

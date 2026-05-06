@@ -36,14 +36,18 @@ const CURATORS = {
   jason: {
     name: 'Jason Sadiki',
     title: 'Technical SEO Specialist & Web Developer',
+    credential: '7+ years in Technical SEO & web development · Founder, Graduates Hub',
     photo: '/jason-sadiki.jpg',
     linkedin: 'https://www.linkedin.com/in/jasonsadiki/',
+    aboutAnchor: '/about#jason-sadiki',
   },
   ndulamiso: {
     name: 'Ndulamiso Mamburu',
-    title: 'Accounting Science Graduate · SARS',
+    title: 'Tax Professional · Accounting Science Graduate',
+    credential: 'Works at the South African Revenue Service (SARS) · Pursuing Taxation degree',
     photo: '/ndulamiso-mamburu.jpg',
     linkedin: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
+    aboutAnchor: '/about#ndulamiso-mamburu',
   },
 } as const;
 
@@ -134,18 +138,25 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   const curatorKey = CATEGORY_CURATOR[primaryCategory];
                   const curator = CURATORS[curatorKey ?? 'jason'];
                   return (
-                    <div className="flex items-center gap-2.5 mt-4">
-                      <div className="relative w-7 h-7 shrink-0">
-                        <Image src={curator.photo} alt={curator.name} fill sizes="28px" className="rounded-full object-cover ring-2 ring-white" />
+                    <div className="flex items-start gap-3 mt-4 bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
+                      <Link href={curator.aboutAnchor} className="relative w-10 h-10 shrink-0 block mt-0.5">
+                        <Image src={curator.photo} alt={curator.name} fill sizes="40px" className="rounded-full object-cover ring-2 ring-white shadow-sm" />
+                      </Link>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+                          <span className="text-xs text-gray-400">Curated by</span>
+                          <Link href={curator.aboutAnchor} className="font-semibold text-gray-800 hover:text-primary transition-colors text-sm">
+                            {curator.name}
+                          </Link>
+                          <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 text-xs text-blue-500 hover:text-blue-700 transition-colors">
+                            <ExternalLink size={10} /> LinkedIn
+                          </a>
+                        </div>
+                        <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">
+                          {curator.credential} ·{' '}
+                          <Link href="/curation-policy" className="text-gray-400 hover:text-primary transition-colors">How we curate →</Link>
+                        </p>
                       </div>
-                      <span className="text-sm text-gray-500">
-                        Curated by{' '}
-                        <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 hover:text-primary transition-colors inline-flex items-center gap-1">
-                          {curator.name} <ExternalLink size={11} className="text-gray-400" />
-                        </a>
-                        <span className="text-gray-400"> · {curator.title} · </span>
-                        <Link href="/curation-policy" className="text-gray-400 hover:text-primary transition-colors text-xs">How we curate</Link>
-                      </span>
                     </div>
                   );
                 })()}
