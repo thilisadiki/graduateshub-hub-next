@@ -122,8 +122,27 @@ export default function CurationPolicyPage() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Curates all IT, software engineering, digital marketing, and AI courses. Jason&apos;s 7+ years in Technical SEO means every resource is also assessed for discoverability - whether the right learners can actually find it.
                 </p>
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {[
+                    { label: 'SEO Certified', issuer: 'HubSpot Academy', url: 'https://app-eu1.hubspot.com/academy/achievements/6z3p70zn/en/1/jason-sadiki/seo' },
+                    { label: 'Google Analytics 4', issuer: 'Google Skillshop', url: 'https://skillshop.credential.net/c8c90dfb-fba6-4296-8e42-e451b00c2660#acc.tNqRO1Ex' },
+                    { label: 'Digital Marketing', issuer: 'Google', url: 'https://skillshop.exceedlms.com/student/award/rHfzphDrFqaZ7PNRdvdUnBMZ' },
+                    { label: 'Full Stack Engineer', issuer: 'Codecademy', url: 'https://www.codecademy.com/profiles/jasonsadiki/certificates/ffd0f42cce1a44e9a0108b365047a0a6' },
+                  ].map(({ label, issuer, url }) => (
+                    <a
+                      key={label}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-medium bg-green-50 text-green-700 border border-green-200 px-2 py-1 rounded-full hover:bg-green-100 transition-colors"
+                    >
+                      <svg className="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      {label} · {issuer}
+                    </a>
+                  ))}
+                </div>
                 <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-2 transition-colors">
+                  className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-3 transition-colors">
                   <ExternalLink size={12} /> LinkedIn
                 </a>
               </div>

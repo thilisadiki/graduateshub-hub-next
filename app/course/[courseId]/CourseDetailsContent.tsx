@@ -36,7 +36,7 @@ const CURATORS = {
   jason: {
     name: 'Jason Sadiki',
     title: 'Technical SEO Specialist & Web Developer',
-    credential: '7+ years in Technical SEO & web development · Founder, Graduates Hub',
+    credential: 'Google-certified · HubSpot SEO-certified · 7+ years Technical SEO & web development',
     photo: '/jason-sadiki.jpg',
     linkedin: 'https://www.linkedin.com/in/jasonsadiki/',
     aboutAnchor: '/about#jason-sadiki',
