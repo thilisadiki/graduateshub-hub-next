@@ -39,7 +39,7 @@ const criteria = [
   {
     pass: true,
     label: 'Accreditation',
-    detail: 'CPD-certified, internationally recognised, or issued by a credible institution (e.g. Google, IBM, Alison).',
+    detail: 'CPD-certified by the CPD Standards Office (UK), internationally recognised, or issued by a credible institution (e.g. Google, IBM, Alison).',
   },
   {
     pass: true,

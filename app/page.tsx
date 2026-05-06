@@ -228,19 +228,20 @@ export default async function Home() {
         <div className="mt-12"><NewsletterBanner /></div>
 
         <div className="mt-20 border-t border-gray-100 pt-12 pb-4 text-center">
-          <h3 className="text-lg md:text-xl font-bold text-slate-600 mb-10">Access Curriculum from Top Global Institutions</h3>
+          <h3 className="text-lg md:text-xl font-bold text-slate-600 mb-3">Free Certified Courses from Industry Leaders</h3>
+          <p className="text-sm text-gray-400 mb-8">
+            Delivered free via{' '}
+            <a href="https://alison.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Alison</a>
+            {' '}— CPD-certified by the{' '}
+            <a href="https://cpduk.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">CPD Standards Office (UK)</a>
+          </p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" loading="lazy" className="h-8 md:h-10 object-contain" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/University_of_Cambridge_logo.svg" alt="University of Cambridge" loading="lazy" className="h-10 md:h-12 object-contain" />
-            <span className="text-3xl md:text-4xl tracking-tighter" style={{ fontFamily: 'Georgia, serif', color: '#8C1515', fontWeight: 'bold' }}>Stanford</span>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" loading="lazy" className="h-8 md:h-10 object-contain" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" loading="lazy" className="h-8 md:h-9 object-contain" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/MIT_logo_2003-2023.svg" alt="MIT" loading="lazy" className="h-8 md:h-10 object-contain" />
           </div>
         </div>
 
@@ -262,7 +263,7 @@ export default async function Home() {
             <div className="flex flex-col items-center text-center">
               <Globe className="text-slate-400 mb-4" size={36} strokeWidth={1.5} />
               <h3 className="font-bold text-gray-800 mb-2">Global Recognition</h3>
-              <p className="text-gray-500 text-sm">Earn certificates & diplomas recognized worldwide.</p>
+              <p className="text-gray-500 text-sm">CPD-certified by the CPD Standards Office (UK) — recognized by employers across 195+ countries.</p>
             </div>
           </div>
         </div>

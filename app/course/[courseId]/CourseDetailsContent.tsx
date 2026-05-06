@@ -132,8 +132,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                 {(() => {
                   const primaryCategory = course.category.split(',')[0].trim();
                   const curatorKey = CATEGORY_CURATOR[primaryCategory];
-                  const curator = curatorKey ? CURATORS[curatorKey] : null;
-                  if (!curator) return null;
+                  const curator = CURATORS[curatorKey ?? 'jason'];
                   return (
                     <div className="flex items-center gap-2.5 mt-4">
                       <div className="relative w-7 h-7 shrink-0">
@@ -144,7 +143,8 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                         <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 hover:text-primary transition-colors inline-flex items-center gap-1">
                           {curator.name} <ExternalLink size={11} className="text-gray-400" />
                         </a>
-                        <span className="text-gray-400"> · {curator.title}</span>
+                        <span className="text-gray-400"> · {curator.title} · </span>
+                        <Link href="/curation-policy" className="text-gray-400 hover:text-primary transition-colors text-xs">How we curate</Link>
                       </span>
                     </div>
                   );
@@ -247,7 +247,9 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   <div><h4 className="font-bold text-gray-900 text-lg">Alison</h4><p className="text-sm text-gray-500 font-medium tracking-wide uppercase">Global Online Learning Platform</p></div>
                 </div>
                 <p className="text-gray-600 text-[15px] leading-relaxed">
-                  Alison is one of the world&apos;s largest free learning platforms, offering over 4,000 courses across {course.category} and other disciplines to millions of learners in 195 countries. All Alison courses — including {course.title} — are completely free to study, with optional paid certificates available upon completion.
+                  Alison is one of the world&apos;s largest free learning platforms, offering over 4,000 courses across {course.category} and other disciplines to millions of learners in 195 countries. All Alison courses — including {course.title} — are completely free to study, with optional paid certificates available upon completion. Alison is certified by the{' '}
+                  <a href="https://cpduk.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">CPD Standards Office (UK)</a>
+                  , meaning certificates earned are recognised by employers globally.
                 </p>
               </AccordionItem>
 
