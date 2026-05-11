@@ -38,6 +38,38 @@ const nextConfig: NextConfig = {
         destination: '/disclosure',
         permanent: true,
       },
+      // Career roadmap redirects
+      {
+        source: '/career-roadmaps/accounting',
+        destination: '/career-roadmaps/junior-accountant',
+        permanent: true,
+      },
+      {
+        source: '/career-roadmaps/marketing',
+        destination: '/career-roadmaps/digital-marketing-specialist',
+        permanent: true,
+      },
+      {
+        source: '/career-roadmaps/data-analytics',
+        destination: '/career-roadmaps/data-analyst',
+        permanent: true,
+      },
+      {
+        source: '/career-roadmaps/software-engineering',
+        destination: '/career-roadmaps',
+        permanent: true,
+      },
+      // Category redirects
+      {
+        source: '/category/business-management',
+        destination: '/category/business',
+        permanent: true,
+      },
+      {
+        source: '/category/data-analytics',
+        destination: '/categories',
+        permanent: true,
+      },
     ];
   },
   devIndicators: false,
