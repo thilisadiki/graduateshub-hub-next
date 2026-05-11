@@ -12,6 +12,7 @@ import AIToolsBanner from '@/components/home/AIToolsBanner';
 import PortfolioBanner from '@/components/home/PortfolioBanner';
 import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
+import { popularGuides } from '@/data/navigation';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const revalidate = 300;
@@ -145,17 +146,7 @@ export default async function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { title: 'Free Courses for Beginners', desc: 'Zero experience needed. Start building real skills from scratch.', href: '/free-courses-for-beginners', badge: 'Beginner' },
-              { title: 'Free Courses with Certificates', desc: 'Top-rated courses across IT, Business, Marketing, and Finance.', href: '/free-courses-with-certificates', badge: 'Popular' },
-              { title: 'Best Alison Courses (2026)', desc: 'CPD-accredited diplomas and certificates. Free to study.', href: '/best-alison-courses-with-certificates', badge: 'Alison' },
-              { title: 'Free Courses for Data Analysts', desc: 'Excel, SQL, Python, and Power BI: the full analyst learning path.', href: '/free-courses-for-data-analysts', badge: 'Data' },
-              { title: 'Free AI Courses for Beginners', desc: 'Learn AI and Generative AI without any coding background.', href: '/free-ai-courses-for-beginners', badge: 'AI' },
-              { title: 'Free Digital Marketing Courses', desc: 'SEO, content, growth hacking, and conversion. Build a marketing career from scratch.', href: '/free-digital-marketing-courses', badge: 'Marketing' },
-              { title: 'Free Courses for Software Developers', desc: 'Web development, programming languages, DevOps, and software architecture. All free.', href: '/free-courses-for-software-developers', badge: 'Dev' },
-              { title: 'Free Courses for Accounting & Finance', desc: 'Bookkeeping, financial management, payroll, and auditing. Curated by an accounting specialist.', href: '/free-courses-for-accounting-and-finance', badge: 'Finance' },
-              { title: 'Free Business Courses Online', desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. CPD-accredited and free.', href: '/free-business-courses', badge: 'Business' },
-            ].map(({ title, desc, href, badge }) => (
+            {popularGuides.map(({ title, desc, href, badge }) => (
               <Link
                 key={href}
                 href={href}

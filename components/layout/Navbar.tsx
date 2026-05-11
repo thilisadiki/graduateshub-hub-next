@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
 import SearchBar from '@/components/shared/SearchBar';
 import { categories } from '@/data/categories';
+import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
 
 export default function Navbar() {
@@ -48,32 +49,16 @@ export default function Navbar() {
 
                 {/* Left: Guides and Roadmaps */}
                 <div className="p-4 flex flex-col gap-1">
-                  <Link href="/career-roadmaps" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors mb-1">
-                    <span className="text-sm font-bold text-primary">Career Roadmaps</span>
-                    <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
-                  </Link>
-                  <Link href="/interview-prep" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 transition-colors mb-1">
-                    <span className="text-sm font-bold text-emerald-700">CV & Interview Prep</span>
-                    <span className="text-xs bg-emerald-600 text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
-                  </Link>
-                  <Link href="/cv-builder" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-violet-50 hover:bg-violet-100 transition-colors mb-1">
-                    <span className="text-sm font-bold text-violet-700">Free CV Builder</span>
-                    <span className="text-xs bg-violet-600 text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
-                  </Link>
-                  <Link href="/portfolio" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-amber-50 hover:bg-amber-100 transition-colors mb-1">
-                    <span className="text-sm font-bold text-amber-700">Proof of Work Portfolio</span>
-                    <span className="text-xs bg-amber-600 text-white px-1.5 py-0.5 rounded-full font-bold leading-none">New</span>
-                  </Link>
+                  {featuredLinks.map(link => (
+                    <Link key={link.href} href={link.href} className={`flex items-center gap-2 px-3 py-2 rounded-lg ${link.colors.bg} ${link.colors.hover} transition-colors mb-1`}>
+                      <span className={`text-sm font-bold ${link.colors.text}`}>{link.label}</span>
+                      <span className={`text-xs ${link.colors.badge} text-white px-1.5 py-0.5 rounded-full font-bold leading-none`}>{link.badge}</span>
+                    </Link>
+                  ))}
                   <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
-                  <Link href="/free-courses-for-beginners" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Beginners</Link>
-                  <Link href="/free-courses-with-certificates" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses with Certificates</Link>
-                  <Link href="/best-alison-courses-with-certificates" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Best Alison Courses</Link>
-                  <Link href="/free-courses-for-data-analysts" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Data Analysts</Link>
-                  <Link href="/free-ai-courses-for-beginners" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free AI Courses for Beginners</Link>
-                  <Link href="/free-digital-marketing-courses" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Digital Marketing Courses</Link>
-                  <Link href="/free-courses-for-software-developers" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Software Developers</Link>
-                  <Link href="/free-courses-for-accounting-and-finance" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Courses for Accounting & Finance</Link>
-                  <Link href="/free-business-courses" className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">Free Business Courses</Link>
+                  {popularGuides.map(guide => (
+                    <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">{guide.title}</Link>
+                  ))}
                   <div className="mt-auto pt-2 border-t border-gray-100">
                     <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-blue-50 rounded-md transition-colors block text-sm">
                       View All Guides →
@@ -145,29 +130,16 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
         <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-b border-gray-100">Home</Link>
-        <Link href="/career-roadmaps" onClick={toggleMobileMenu} className="font-bold text-primary hover:text-blue-800 py-3 border-b border-gray-100 flex items-center gap-2">
-          Career Roadmaps <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full">New</span>
-        </Link>
-        <Link href="/interview-prep" onClick={toggleMobileMenu} className="font-bold text-emerald-700 hover:text-emerald-900 py-3 border-b border-gray-100 flex items-center gap-2">
-          CV & Interview Prep <span className="text-xs bg-emerald-600 text-white px-1.5 py-0.5 rounded-full">New</span>
-        </Link>
-        <Link href="/cv-builder" onClick={toggleMobileMenu} className="font-bold text-violet-700 hover:text-violet-900 py-3 border-b border-gray-100 flex items-center gap-2">
-          Free CV Builder <span className="text-xs bg-violet-600 text-white px-1.5 py-0.5 rounded-full">New</span>
-        </Link>
-        <Link href="/portfolio" onClick={toggleMobileMenu} className="font-bold text-amber-700 hover:text-amber-900 py-3 border-b border-gray-100 flex items-center gap-2">
-          Proof of Work Portfolio <span className="text-xs bg-amber-600 text-white px-1.5 py-0.5 rounded-full">New</span>
-        </Link>
+        {featuredLinks.map(link => (
+          <Link key={link.href} href={link.href} onClick={toggleMobileMenu} className={`font-bold ${link.colors.mobileFocus} py-3 border-b border-gray-100 flex items-center gap-2`}>
+            {link.label} <span className={`text-xs ${link.colors.badge} text-white px-1.5 py-0.5 rounded-full`}>{link.badge}</span>
+          </Link>
+        ))}
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
-          <Link href="/free-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Beginners</Link>
-          <Link href="/free-courses-with-certificates" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses with Certificates</Link>
-          <Link href="/best-alison-courses-with-certificates" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Best Alison Courses</Link>
-          <Link href="/free-courses-for-data-analysts" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Data Analysts</Link>
-          <Link href="/free-ai-courses-for-beginners" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free AI Courses for Beginners</Link>
-          <Link href="/free-digital-marketing-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Digital Marketing Courses</Link>
-          <Link href="/free-courses-for-software-developers" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Software Developers</Link>
-          <Link href="/free-courses-for-accounting-and-finance" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Courses for Accounting & Finance</Link>
-          <Link href="/free-business-courses" onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">Free Business Courses</Link>
+          {popularGuides.map(guide => (
+            <Link key={guide.href} href={guide.href} onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">{guide.title}</Link>
+          ))}
         </div>
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
