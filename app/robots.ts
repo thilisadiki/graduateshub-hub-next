@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/api/',
       },
     ],
-    host: 'https://www.graduateshub.co.za',
-    sitemap: 'https://www.graduateshub.co.za/sitemap.xml',
+    host: 'https://www.graduateshub.org',
+    sitemap: 'https://www.graduateshub.org/sitemap.xml',
   };
 }

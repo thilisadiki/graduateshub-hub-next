@@ -7,7 +7,7 @@ import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
 import { portfolioTasks } from '@/data/portfolioTasks';
 
-const SITE_URL = 'https://www.graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.org';
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
 async function fetchAllBlogPosts(): Promise<{ slug: string; modified: string }[]> {

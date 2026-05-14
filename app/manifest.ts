@@ -4,14 +4,14 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Graduates Hub',
     short_name: 'Graduates Hub',
-    description: 'Free certified online courses for South African graduates. IT, Accounting, Business, Marketing and more.',
+    description: 'Free certified online courses for graduates. IT, Accounting, Business, Marketing and more.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#2563eb',
     orientation: 'portrait-primary',
     categories: ['education'],
-    lang: 'en-ZA',
+    lang: 'en',
     icons: [
       {
         src: '/logo-512x512.png',

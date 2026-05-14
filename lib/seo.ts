@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://www.graduateshub.co.za';
+export const SITE_URL = 'https://www.graduateshub.org';
 
 export const OG_IMAGE = {
   url: '/graduates-hub-logo.png',

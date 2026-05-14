@@ -11,7 +11,7 @@ import ToolsPromo from '@/components/shared/ToolsPromo';
 import { courses as allCourses } from '@/data/courses';
 import type { Course } from '@/types';
 
-const SITE_URL = 'https://www.graduateshub.co.za';
+const SITE_URL = 'https://www.graduateshub.org';
 
 export interface BenefitItem {
   icon: LucideIcon;

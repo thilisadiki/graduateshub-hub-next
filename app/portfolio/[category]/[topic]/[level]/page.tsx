@@ -92,7 +92,7 @@ export default async function TaskSubmissionPage({
     name: task.title,
     description: task.tagline,
     url: taskUrl,
-    inLanguage: 'en-ZA',
+    inLanguage: 'en',
     learningResourceType: 'Assignment',
     educationalLevel: task.difficulty,
     about: top.title,
