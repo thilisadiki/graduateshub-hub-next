@@ -95,9 +95,9 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
-      from: 'Graduates Hub <noreply@graduateshub.co.za>',
+      from: 'Graduates Hub <noreply@graduateshub.org>',
       ...(email ? { replyTo: `${name} <${email}>` } : {}),
-      to: ['info@graduateshub.co.za'],
+      to: ['info@graduateshub.org'],
       subject: `[Feedback] ${stars} - ${areaLabel}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
             <p style="margin: 0; color: #374151; white-space: pre-wrap;">${esc(message.trim())}</p>
           </div>
           <p style="margin-top: 24px; color: #9ca3af; font-size: 12px;">
-            Sent via the feedback form at graduateshub.co.za/feedback.${email ? ` Reply directly to respond to ${esc(name)}.` : ''}
+            Sent via the feedback form at graduateshub.org/feedback.${email ? ` Reply directly to respond to ${esc(name)}.` : ''}
           </p>
         </div>
       `,

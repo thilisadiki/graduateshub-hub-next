@@ -1,7 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(curl -sI https://www.graduateshub.org/sitemap.xml)",
+      "Bash(curl -s https://www.graduateshub.org/sitemap.xml)",
+      "Bash(curl -sI -L --max-redirs 5 http://graduateshub.co.za/)",
+      "Bash(curl -sI https://graduateshub.co.za/)",
+      "Bash(curl -sI https://www.graduateshub.co.za/blog/alison-vs-coursera-which-is-better-2026-complete-guide)",
+      "Bash(curl -s https://www.graduateshub.org/best-alison-courses-with-certificates -o /tmp/ghub-page.html)",
+      "Read(//tmp/**)",
+      "Bash(grep -oE '<script[^>]*>' /tmp/ghub-page.html | head -30 && echo \"---script count---\" && grep -oc '<script' /tmp/ghub-page.html)",
+      "Read(//private/tmp/**)",
+      "Bash(grep -oE 'class=\"[^\"]{0,80}\"' /tmp/ghub-page.html)",
+      "Bash(awk '{print length}')",
+      "Bash(curl -sI -H \"Accept-Encoding: br, gzip\" https://www.graduateshub.org/best-alison-courses-with-certificates)",
+      "Bash(curl -s -H \"Accept-Encoding: br, gzip\" -o /tmp/ghub-page.br -w \"%{size_download}\\\\n\" https://www.graduateshub.org/best-alison-courses-with-certificates)"
     ]
   }
 }

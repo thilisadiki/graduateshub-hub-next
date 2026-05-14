@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         <h2>1. Introduction and Responsible Party</h2>
         <p>
           Graduates Hub (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) operates the website at{' '}
-          <strong>graduateshub.co.za</strong>. We are committed to protecting your personal information and processing
+          <strong>graduateshub.org</strong>. We are committed to protecting your personal information and processing
           it lawfully in accordance with the <strong>Protection of Personal Information Act, Act 4 of 2013 (POPIA)</strong>,
           which came into full effect on 1 July 2021.
         </p>
@@ -38,8 +38,8 @@ export default function PrivacyPage() {
           For purposes of POPIA, Graduates Hub is the <strong>responsible party</strong>: the entity that determines
           the purpose and means of processing your personal information. All queries regarding this policy may be
           directed to our Information Officer at{' '}
-          <a href="mailto:info@graduateshub.co.za" className="text-primary font-bold hover:underline">
-            info@graduateshub.co.za
+          <a href="mailto:info@graduateshub.org" className="text-primary font-bold hover:underline">
+            info@graduateshub.org
           </a>.
         </p>
 
@@ -142,8 +142,8 @@ export default function PrivacyPage() {
         </ul>
         <p>
           To exercise any of the above rights, contact us at{' '}
-          <a href="mailto:info@graduateshub.co.za" className="text-primary font-bold hover:underline">
-            info@graduateshub.co.za
+          <a href="mailto:info@graduateshub.org" className="text-primary font-bold hover:underline">
+            info@graduateshub.org
           </a>.
         </p>
 
@@ -217,8 +217,8 @@ export default function PrivacyPage() {
         </p>
         <p>
           You may object to receiving direct marketing from us at any time by emailing{' '}
-          <a href="mailto:info@graduateshub.co.za" className="text-primary font-bold hover:underline">
-            info@graduateshub.co.za
+          <a href="mailto:info@graduateshub.org" className="text-primary font-bold hover:underline">
+            info@graduateshub.org
           </a>{' '}
           or by clicking the unsubscribe link in any email we send you.
         </p>
@@ -308,8 +308,8 @@ export default function PrivacyPage() {
           wish to contact our Information Officer, please reach out at:
         </p>
         <ul>
-          <li><strong>Email:</strong> <a href="mailto:info@graduateshub.co.za" className="text-primary font-bold hover:underline">info@graduateshub.co.za</a></li>
-          <li><strong>Website:</strong> <a href="https://www.graduateshub.co.za/contact" className="text-primary hover:underline">graduateshub.co.za/contact</a></li>
+          <li><strong>Email:</strong> <a href="mailto:info@graduateshub.org" className="text-primary font-bold hover:underline">info@graduateshub.org</a></li>
+          <li><strong>Website:</strong> <a href="https://www.graduateshub.org/contact" className="text-primary hover:underline">graduateshub.org/contact</a></li>
         </ul>
       </main>
     </div>

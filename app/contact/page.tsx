@@ -61,10 +61,10 @@ export default function ContactPage() {
                 <h3 className="font-bold text-gray-900">Email us directly</h3>
               </div>
               <a
-                href="mailto:info@graduateshub.co.za"
+                href="mailto:info@graduateshub.org"
                 className="text-sm font-bold text-primary hover:underline break-all"
               >
-                info@graduateshub.co.za
+                info@graduateshub.org
               </a>
               <p className="text-xs text-gray-500 mt-1">For all general enquiries</p>
             </div>

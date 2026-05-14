@@ -161,7 +161,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
               {verdict}
             </div>
             <div style={{ display: 'flex', fontSize: 20, color: '#94a3b8' }}>
-              Verifiable at graduateshub.co.za
+              Verifiable at graduateshub.org
             </div>
           </div>
           {proof && (
