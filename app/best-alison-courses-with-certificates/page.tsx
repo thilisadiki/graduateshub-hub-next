@@ -9,14 +9,14 @@ import { SITE_URL } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/best-alison-courses-with-certificates`;
 
 export const metadata: Metadata = {
-  title: 'Best Alison Courses with Certificates (2026)',
+  title: 'Best Alison Courses With Free Certificates (2026): 20 Worth Your Time',
   description:
-    'The top CPD-accredited diplomas and certificates available on the Alison platform, hand-picked by subject specialists. Free to study with no deadlines, no enrolment fees, and no prior experience required.',
+    '20 best free Alison courses with CPD certificates. Learn business, IT, marketing & finance. Self-paced, 100% free, no deadlines. Expert curated for 2026.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Best Alison Courses with Certificates (2026) | Graduates Hub',
+    title: 'Best Alison Courses With Free Certificates (2026): 20 Worth Your Time | Graduates Hub',
     description:
-      'The top CPD-accredited diplomas and certificates available on the Alison platform, hand-picked by subject specialists. Free to study with no deadlines, no enrolment fees, and no prior experience required.',
+      '20 best free Alison courses with CPD certificates. Learn business, IT, marketing & finance. Self-paced, 100% free, no deadlines. Expert curated for 2026.',
     url: CANONICAL,
   },
 };
@@ -83,7 +83,7 @@ export default function BestAlisonCoursesPage() {
     <GuideTemplate
       canonicalUrl={CANONICAL}
       breadcrumb={[{ label: 'Best Alison Courses with Certificates' }]}
-      heading="Best Alison Courses with Certificates (2026)"
+      heading="Best Alison Courses With Free Certificates (2026): 20 Worth Your Time"
       heroDescription="Alison is one of the world's leading free learning platforms, with over 6,000 courses, 50 million learners, and CPD-accredited certificates across Business, IT, Marketing, Finance, and more. We have curated the best Alison courses to help you build real skills and earn a recognised certificate at no cost."
       heroBadges={[
         { icon: CheckCircle2, label: 'CPD-Accredited', iconClassName: 'text-green-500' },
