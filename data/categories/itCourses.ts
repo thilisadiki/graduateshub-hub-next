@@ -50,7 +50,7 @@ export const itCourses: Course[] = [
     },
     {
         "id": "foundations-of-itil-4",
-        "title": "Foundations of ITIL 4 for Service Management",
+        "title": "Alison Foundations of ITIL 4 — Full Course Review, Duration & Certificate Guide (2026)",
         "tag": "Certificate",
         "category": "IT Courses",
         "subCategory": "Networking & Infrastructure",
@@ -58,7 +58,7 @@ export const itCourses: Course[] = [
         "rating": 4.8,
         "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
         "affiliateLink": "https://alison.com/course/fundamentals-of-digital-operational-resilience-act-dora?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
-        "description": "Discover the core concepts and principles of ITIL 4 for effective IT service management.",
+        "description": "Free ITIL 4 certification course on Alison. Master Service Value System, Guiding Principles, ITSM practices, and incident management. 3-4 hours, verified certificate included.",
         "longDescription": "In the modern corporate world, IT is no longer just a support function; it is the fundamental engine of value creation. 'Foundations of ITIL 4 for Service Management' introduces you to the world's most widely adopted framework for IT Service Management (ITSM). This course moves beyond the traditional rigid processes of ITIL v3 and explores the more flexible, collaborative nature of ITIL 4. You will learn the Service Value System (SVS) and the four dimensions of service management: organizations and people, information and technology, partners and suppliers, and value streams and processes. The curriculum dives into the 'Guiding Principles' that help organizations adapt their service management to suit their specific culture and goals, ensuring that IT departments deliver meaningful, measurable outcomes to their stakeholders.",
         "outcomes": [
             "Understand the core concepts of value, service offerings, and service relationships.",

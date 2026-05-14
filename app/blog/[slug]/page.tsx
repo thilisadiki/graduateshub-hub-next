@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
+import DOMPurify from 'isomorphic-dompurify';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
 import { SITE_URL } from '@/lib/seo';
@@ -28,25 +29,36 @@ const fetchPostBySlug = cache(async (slug: string) => {
   }
 });
 
+function sanitizeText(html: string): string {
+  // Strip all HTML tags from text content (for titles and metadata)
+  return DOMPurify.sanitize(html, { ALLOWED_TAGS: [] });
+}
+
 function cleanContent(html: string): string {
-  return html
-    // 1. Rewrite subdomain post links to internal /blog/ paths.
-    //    Negative lookahead skips wp-content / wp-includes / wp-json / wp-admin
-    //    so image src and other static asset URLs stay on the articles subdomain.
+  // Sanitize with DOMPurify to remove script tags, event handlers, and other XSS vectors
+  const sanitized = DOMPurify.sanitize(html, {
+    ALLOWED_TAGS: ['p', 'br', 'span', 'strong', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'img', 'blockquote', 'code', 'pre', 'table', 'tr', 'td', 'th', 'thead', 'tbody', 'div', 'figure', 'figcaption'],
+    ALLOWED_ATTR: ['href', 'src', 'alt', 'title', 'width', 'height', 'class']
+  });
+
+  return sanitized
+    // Rewrite subdomain post links to internal /blog/ paths.
+    // Negative lookahead skips wp-content / wp-includes / wp-json / wp-admin
+    // so image src and other static asset URLs stay on the articles subdomain.
     .replace(/https:\/\/articles\.graduateshub\.co\.za\/(?!wp-(?:content|includes|json|admin)\/)/g, '/blog/')
-    // 2. Strip Gutenberg HTML comments (<!-- wp:paragraph --> etc.)
+    // Strip Gutenberg HTML comments (<!-- wp:paragraph --> etc.)
     .replace(/<!--\s*\/?wp:[^>]*-->/g, '')
-    // 3. Strip inline style attributes
+    // Strip inline style attributes
     .replace(/\s+style="[^"]*"/g, '')
-    // 4. Strip data-* attributes (editor metadata)
+    // Strip data-* attributes (editor metadata)
     .replace(/\s+data-[\w-]+="[^"]*"/g, '')
-    // 5. Strip wp-block-* classes but keep other classes (e.g. has-fixed-layout on tables)
+    // Strip wp-block-* classes but keep other classes (e.g. has-fixed-layout on tables)
     .replace(/\s+class="wp-block-[^"]*"/g, '')
-    // 6. Unwrap bare <span> tags that have no remaining attributes (pure noise wrappers)
+    // Unwrap bare <span> tags that have no remaining attributes (pure noise wrappers)
     .replace(/<span>([^<]*)<\/span>/g, '$1')
-    // 7. Remove empty paragraphs: <p></p>, <p> </p>, <p>&nbsp;</p>, <p><br/></p>
+    // Remove empty paragraphs: <p></p>, <p> </p>, <p>&nbsp;</p>, <p><br/></p>
     .replace(/<p>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, '')
-    // 8. Collapse 3+ consecutive blank lines left over after cleanup
+    // Collapse 3+ consecutive blank lines left over after cleanup
     .replace(/(\s*\n){3,}/g, '\n\n')
     .trim();
 }
@@ -101,7 +113,7 @@ export async function generateMetadata({
   const post = await fetchPostBySlug(slug);
   if (!post) return { title: 'Article Not Found' };
 
-  const description = post.excerpt.rendered.replace(/<[^>]+>/g, '').substring(0, 160);
+  const description = sanitizeText(post.excerpt.rendered).substring(0, 160);
   const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
 
   return {
@@ -151,8 +163,8 @@ export default async function BlogPostPage({
 
   const related = relatedRaw.map((p: any) => ({
     slug: p.slug,
-    title: p.title.rendered,
-    excerpt: (p.excerpt.rendered as string).replace(/<[^>]+>/g, '').substring(0, 120) + '...',
+    title: sanitizeText(p.title.rendered),
+    excerpt: sanitizeText(p.excerpt.rendered as string).substring(0, 120) + '...',
     date: new Date(p.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }),
     imageUrl: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ??
       'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80',
@@ -161,8 +173,8 @@ export default async function BlogPostPage({
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title.rendered,
-    description: post.excerpt.rendered.replace(/<[^>]+>/g, '').substring(0, 160),
+    headline: sanitizeText(post.title.rendered),
+    description: sanitizeText(post.excerpt.rendered).substring(0, 160),
     datePublished: post.date_gmt ? `${post.date_gmt}Z` : post.date,
     dateModified: post.modified_gmt ? `${post.modified_gmt}Z` : post.modified,
     url: `${SITE_URL}/blog/${slug}`,
@@ -191,6 +203,7 @@ export default async function BlogPostPage({
       url: imageUrl ?? `${SITE_URL}/graduates-hub-logo.png`,
       width: 1200,
       height: 630,
+      alt: sanitizeText(post.title.rendered),
     },
   };
 
@@ -205,9 +218,9 @@ export default async function BlogPostPage({
           <span className="text-gray-300">›</span>
           <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
           <span className="text-gray-300">›</span>
-          <span className="text-gray-900 font-medium truncate max-w-xs"
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          />
+          <span className="text-gray-900 font-medium truncate max-w-xs">
+            {sanitizeText(post.title.rendered)}
+          </span>
         </div>
       </div>
 
@@ -217,7 +230,7 @@ export default async function BlogPostPage({
           <div className="rounded-2xl overflow-hidden relative h-56 md:h-80">
             <Image
               src={imageUrl}
-              alt={post.title.rendered}
+              alt={sanitizeText(post.title.rendered)}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 896px"
@@ -261,10 +274,9 @@ export default async function BlogPostPage({
           </div>
 
           {/* Title */}
-          <h1
-            className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-10"
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          />
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-10">
+            {sanitizeText(post.title.rendered)}
+          </h1>
 
           {/* Content */}
           <div className="wp-content max-w-[72ch]" dangerouslySetInnerHTML={{ __html: content }} />
