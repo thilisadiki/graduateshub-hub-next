@@ -14,7 +14,12 @@
       "Bash(grep -oE 'class=\"[^\"]{0,80}\"' /tmp/ghub-page.html)",
       "Bash(awk '{print length}')",
       "Bash(curl -sI -H \"Accept-Encoding: br, gzip\" https://www.graduateshub.org/best-alison-courses-with-certificates)",
-      "Bash(curl -s -H \"Accept-Encoding: br, gzip\" -o /tmp/ghub-page.br -w \"%{size_download}\\\\n\" https://www.graduateshub.org/best-alison-courses-with-certificates)"
+      "Bash(curl -s -H \"Accept-Encoding: br, gzip\" -o /tmp/ghub-page.br -w \"%{size_download}\\\\n\" https://www.graduateshub.org/best-alison-courses-with-certificates)",
+      "Bash(curl -sI -L --max-redirs 10 -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" http://graduateshub.co.za/)",
+      "Bash(curl -sI -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" https://graduateshub.co.za/)",
+      "Bash(curl -sI -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" https://www.graduateshub.co.za/blog/alison-vs-coursera-which-is-better-2026-complete-guide)",
+      "Bash(dig +short graduateshub.co.za)",
+      "Bash(dig +short NS graduateshub.co.za)"
     ]
   }
 }
