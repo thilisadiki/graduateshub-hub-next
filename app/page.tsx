@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, ExternalLink } from 'lucide-react';
 import Hero from '@/components/home/Hero';
+import HowItWorks from '@/components/home/HowItWorks';
 import LatestArticles from '@/components/home/LatestArticles';
 import FAQ from '@/components/home/FAQ';
 import AIToolsBanner from '@/components/home/AIToolsBanner';
@@ -104,6 +105,7 @@ export default async function Home() {
       <Hero />
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
         <div className="mt-0"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
+        <div className="mt-24"><HowItWorks /></div>
         <div className="mt-16"><AIToolsBanner /></div>
         <div className="mt-16"><PortfolioBanner /></div>
 

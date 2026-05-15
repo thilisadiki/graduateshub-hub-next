@@ -1,10 +1,25 @@
 import Link from 'next/link';
-import { UserPlus, BookOpen, Award } from 'lucide-react';
+import { Map, BookOpen, BriefcaseBusiness } from 'lucide-react';
 
 const steps = [
-  { id: 1, title: 'Sign Up for Free', description: 'Create your free account in seconds and unlock access to hundreds of free learning resources.', icon: <UserPlus className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} /> },
-  { id: 2, title: 'Choose & Learn', description: 'Browse categories, select a course, and start learning at your own pace.', icon: <BookOpen className="text-primary scale-150 -rotate-3" size={40} strokeWidth={1.5} /> },
-  { id: 3, title: 'Earn Your Certificate', description: 'Complete the assessments and instantly download your globally recognized certificate.', icon: <Award className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} /> },
+  {
+    id: 1,
+    title: 'Start with a roadmap',
+    description: 'Use role-based career roadmaps to understand the skills, tools, and learning order behind a target career path.',
+    icon: <Map className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} />,
+  },
+  {
+    id: 2,
+    title: 'Read the supporting guides',
+    description: 'Use our study guides and career articles to compare options, avoid dead ends, and make better learning decisions.',
+    icon: <BookOpen className="text-primary scale-150 -rotate-3" size={40} strokeWidth={1.5} />,
+  },
+  {
+    id: 3,
+    title: 'Build proof of work',
+    description: 'Turn learning into portfolio evidence with practical tasks, rubrics, and examples that show what you can do.',
+    icon: <BriefcaseBusiness className="text-primary scale-150 rotate-3" size={40} strokeWidth={1.5} />,
+  },
 ];
 
 export default function HowItWorks() {
@@ -12,8 +27,8 @@ export default function HowItWorks() {
     <section className="py-20 bg-gradient-to-br from-blue-50 to-white overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Your Journey to Success</h2>
-          <p className="mt-4 text-lg text-gray-500">Achieving your goals has never been simpler. Follow these three steps to upgrade your skills.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">How to use Graduates Hub</h2>
+          <p className="mt-4 text-lg text-gray-500">A simple editorial path for choosing a direction, learning with context, and building evidence of your skills.</p>
         </div>
 
         <div className="relative">
@@ -36,9 +51,9 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-16 text-center">
-          <Link href="/search"
+          <Link href="/career-roadmaps"
             className="inline-flex items-center px-8 py-4 text-lg font-bold rounded-full text-white bg-primary hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-600/30 transition-all duration-300 transform hover:-translate-y-1">
-            Start Your First Step Now
+            Explore Career Roadmaps
           </Link>
         </div>
       </div>
