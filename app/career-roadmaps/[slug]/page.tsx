@@ -414,7 +414,7 @@ export default async function CareerRoadmapPage({
               <h2 className="text-2xl font-extrabold text-gray-900">Common Mistakes to Avoid</h2>
             </div>
             <p className="text-gray-500 text-sm mb-5">
-              The pitfalls that keep candidates stuck at the application stage. Each one comes from real hiring feedback in the South African market.
+              The pitfalls that keep candidates stuck at the application stage. Each one comes from real hiring feedback across entry-level hiring contexts.
             </p>
             <div className="flex flex-col gap-3">
               {roadmap.commonMistakes.map((item, i) => (
@@ -478,7 +478,7 @@ export default async function CareerRoadmapPage({
             <div className="flex-1">
               <p className="text-sm font-bold text-emerald-800">Ready to start applying?</p>
               <p className="text-sm text-emerald-700 mt-1">
-                The <strong>{linkedPrep.role}</strong> interview prep guide covers the exact CV tips and interview questions SA employers use to screen candidates for this role.
+                The <strong>{linkedPrep.role}</strong> interview prep guide covers practical CV tips and interview questions employers use to screen candidates for this role.
               </p>
             </div>
             <Link

@@ -6,8 +6,14 @@ export const itSupportSpecialistPrep: InterviewPrep = {
   category: 'it',
   curator: 'jason',
   lastUpdated: 'Apr 2026',
-  description: 'CV tips and the most common interview questions for IT support and helpdesk roles in South Africa. Covers hardware, networking, ITIL, and the soft skills SA employers actually test for.',
-  salaryRange: 'R120,000 – R220,000 per year (entry level, South Africa)',
+  description: 'CV tips and common interview questions for IT support and helpdesk roles. Covers hardware, networking, ITIL, ticketing, and the communication skills employers test for.',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$38,000 – $58,000/year' },
+    { region: 'United Kingdom', range: '£22,000 – £32,000/year' },
+    { region: 'Canada', range: 'CA$42,000 – CA$58,000/year' },
+    { region: 'Australia', range: 'A$55,000 – A$75,000/year' },
+    { region: 'South Africa', range: 'R120,000 – R220,000/year' },
+  ],
 
   cvMustInclude: [
     'A clear summary line stating your IT support focus and experience level (e.g. "Entry-level IT Support Specialist with CompTIA A+ certification and hands-on networking coursework")',
@@ -19,7 +25,7 @@ export const itSupportSpecialistPrep: InterviewPrep = {
   ],
 
   cvAvoid: [
-    'A photo on your CV (not standard for SA tech roles and introduces bias risk)',
+    'A photo on your CV unless it is explicitly expected in your country or industry; it can introduce bias risk',
     'Generic objective statements like "seeking a challenging role" with no specifics',
     'Listing every piece of software you have ever touched without context',
     'Putting references on the CV itself ("available on request" is sufficient)',
@@ -37,11 +43,11 @@ export const itSupportSpecialistPrep: InterviewPrep = {
     },
     {
       heading: 'Mirror the job description language',
-      body: 'South African IT job postings often list specific tools and acronyms (ITIL, Active Directory, VPN, DNS, DHCP). If you know them, use those exact terms in your CV. Many companies use applicant tracking systems that scan for keywords before a human ever reads your application.',
+      body: 'IT job postings often list specific tools and acronyms (ITIL, Active Directory, VPN, DNS, DHCP). If you know them, use those exact terms in your CV. Many companies use applicant tracking systems that scan for keywords before a human ever reads your application.',
     },
     {
       heading: 'Keep it to one page for entry-level',
-      body: 'South African hiring managers in IT expect a one-page CV for candidates with less than two years of experience. A two-page CV with padding signals poor judgement more than it signals thoroughness.',
+      body: 'For candidates with less than two years of experience, a focused one-page CV is usually stronger than a padded two-page version. Keep it concise and relevant.',
     },
   ],
 
@@ -64,29 +70,29 @@ export const itSupportSpecialistPrep: InterviewPrep = {
     },
     {
       question: 'What is the difference between a router and a switch?',
-      why: 'A baseline networking knowledge check. Asked in almost every SA IT support interview at entry level.',
+      why: 'A baseline networking knowledge check. Asked in many IT support interviews at entry level.',
       sampleAnswer: 'A switch operates at Layer 2 of the OSI model and connects devices within the same network, forwarding data based on MAC addresses. A router operates at Layer 3 and connects different networks together, forwarding data based on IP addresses. In a typical office, the switch connects all the computers and printers on the LAN, while the router connects that LAN to the internet.',
       redFlag: 'Confusing the two or being unable to explain in plain terms. If you know the theory, you should be able to explain it simply.',
     },
     {
       question: 'Describe the ITIL 4 incident management process.',
-      why: 'Corporate IT environments in South Africa run on ITIL. Even entry-level candidates are expected to know the framework.',
+      why: 'Many corporate IT environments run on ITIL. Even entry-level candidates benefit from knowing the framework.',
       sampleAnswer: 'In ITIL 4, an incident is an unplanned interruption to a service. When an incident is reported, it is logged and categorised by severity. The service desk attempts first-line resolution. If they cannot resolve it within the defined SLA, it is escalated to second or third line. Throughout the process, the user is kept informed of progress. Once resolved, the incident is closed and a record is kept. Major incidents trigger a post-incident review to identify root causes and prevent recurrence.',
     },
     {
       question: 'A user is frustrated and angry about a recurring technical problem. How do you handle it?',
-      why: 'IT support is a customer-facing role. SA hiring managers specifically test for patience and communication under pressure.',
+      why: 'IT support is a customer-facing role. Hiring managers specifically test for patience and communication under pressure.',
       sampleAnswer: 'I would let the user finish speaking without interrupting. I would acknowledge their frustration directly: "I understand this has been happening repeatedly and that is unacceptable, I am going to make sure it is resolved properly this time." Then I would focus on the problem, not the emotion. I would ask targeted questions to understand the full history of the issue, check the previous ticket notes, and escalate if needed rather than applying another temporary fix. The goal is to close the loop properly, not just get through the call.',
       redFlag: 'Saying "I would stay calm" without demonstrating empathy or a concrete resolution approach. Emotional intelligence matters as much as technical skill in support roles.',
     },
     {
       question: 'What is Active Directory and what is it used for?',
-      why: 'Almost every corporate SA environment uses Active Directory. Being unable to describe it is a red flag for IT support candidates.',
+      why: 'Many corporate environments use Active Directory. Being unable to describe it is a red flag for IT support candidates.',
       sampleAnswer: 'Active Directory is Microsoft\'s directory service used to manage users, computers, and resources across a corporate network. It allows administrators to create user accounts, apply group policies, control access to resources, and enforce security settings centrally. When a user logs into their work computer, Active Directory authenticates them and grants access based on their group memberships and permissions.',
     },
     {
       question: 'Where do you see yourself in two to three years in IT?',
-      why: 'Interviewers want to know you are serious about a career in IT, not just looking for any job. SA IT employers invest in training and want candidates who will stay.',
+      why: 'Interviewers want to know you are serious about a career in IT, not just looking for any job. Employers invest in training and want candidates who will stay.',
       sampleAnswer: 'I want to build a strong foundation in IT support over the next year, then pursue my CompTIA Network+ and work towards a network administration or systems administrator role. I am particularly interested in cloud infrastructure. I am committed to continuous learning and I am already studying towards further certifications on my own time.',
     },
   ],

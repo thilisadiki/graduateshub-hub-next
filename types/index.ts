@@ -48,6 +48,11 @@ export interface InterviewQuestion {
   redFlag?: string;
 }
 
+export interface SalaryBenchmark {
+  region: string;
+  range: string;
+}
+
 export interface InterviewPrep {
   id: string;
   role: string;
@@ -55,7 +60,7 @@ export interface InterviewPrep {
   curator: AuthorKey | AuthorKey[];
   lastUpdated: string;
   description: string;
-  salaryRange: string;
+  salaryBenchmarks: SalaryBenchmark[];
   cvMustInclude: string[];
   cvAvoid: string[];
   cvTips: { heading: string; body: string }[];

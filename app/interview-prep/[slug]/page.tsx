@@ -102,9 +102,22 @@ export default async function InterviewPrepPage({
             {prep.role}
           </h1>
           <p className="text-lg text-gray-500 mb-4">{prep.description}</p>
-          <div className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
-            <DollarSign size={15} className="text-gray-400 shrink-0" />
-            <span>{prep.salaryRange}</span>
+          <div className="mb-6">
+            <div className="flex items-center gap-1.5 text-sm font-bold text-gray-700 mb-3">
+              <DollarSign size={15} className="text-gray-400 shrink-0" />
+              <span>Entry-Level Salary Benchmarks by Region</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {prep.salaryBenchmarks.map((benchmark) => (
+                <div key={benchmark.region} className="rounded-lg border border-gray-100 bg-gray-50 px-3 py-2">
+                  <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">{benchmark.region}</p>
+                  <p className="text-sm font-semibold text-gray-800">{benchmark.range}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 mt-2">
+              Broad annual benchmarks. Actual pay varies by city, company size, industry, remote status, and experience.
+            </p>
           </div>
           <AuthorByline authors={curators} lastUpdated={prep.lastUpdated} />
         </div>

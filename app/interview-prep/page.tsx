@@ -5,14 +5,14 @@ import { interviewPreps } from '@/data/interviewPrep';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'CV & Interview Prep: South African Job Market',
+  title: 'CV & Interview Prep for Entry-Level Roles',
   description:
-    'Field-specific CV tips and the most common interview questions for junior roles in South Africa. IT support, data analyst, web developer, accounting, marketing, and business analyst.',
+    'Field-specific CV and interview prep for entry-level roles, with practical questions, CV tips, and regional salary benchmarks.',
   alternates: { canonical: `${SITE_URL}/interview-prep` },
   openGraph: {
-    title: 'CV & Interview Prep: South African Job Market | Graduates Hub',
+    title: 'CV & Interview Prep for Entry-Level Roles | Graduates Hub',
     description:
-      'Field-specific CV tips and the most common interview questions for junior roles in South Africa. IT support, data analyst, web developer, accounting, marketing, and business analyst.',
+      'Field-specific CV and interview prep for entry-level roles, with practical questions, CV tips, and regional salary benchmarks.',
     url: `${SITE_URL}/interview-prep`,
     images: [OG_IMAGE],
   },
@@ -31,7 +31,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'CV & Interview Prep Guides',
-  description: 'Field-specific CV tips and interview questions for South African junior roles.',
+  description: 'Field-specific CV tips, interview questions, and regional salary benchmarks for entry-level roles.',
   numberOfItems: interviewPreps.length,
   itemListElement: interviewPreps.map((p, i) => ({
     '@type': 'ListItem',
@@ -85,14 +85,14 @@ export default function InterviewPrepPage() {
           <div>
             <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">CV & Interview Prep</h1>
             <p className="text-gray-500 mt-2 text-lg max-w-2xl">
-              Role-specific CV advice and the real interview questions SA employers ask. Written by people who work in these fields and have sat on hiring panels.
+              Role-specific CV advice, practical interview questions, and global salary context for entry-level job seekers.
             </p>
           </div>
         </div>
 
         {/* Trust note */}
         <div className="mt-6 mb-6 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 text-sm text-blue-700 max-w-2xl">
-          Every guide covers the South African job market specifically: local tools, local salary ranges, and the questions SA hiring managers actually use.
+          Every guide is written with practical hiring context in mind: role-specific skills, common interview patterns, and salary benchmarks across several regions.
           <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-blue-900 transition-colors">
             How we curate →
           </Link>
@@ -134,7 +134,7 @@ export default function InterviewPrepPage() {
                   </h2>
                   <div className="flex items-center gap-1.5 mt-2 text-sm text-gray-500">
                     <DollarSign size={13} className="text-gray-400 shrink-0" />
-                    <span>{prep.salaryRange}</span>
+                    <span>Salary benchmarks by region</span>
                   </div>
                 </div>
 

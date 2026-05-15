@@ -6,8 +6,14 @@ export const digitalMarketingCoordinatorPrep: InterviewPrep = {
   category: 'marketing',
   curator: 'jason',
   lastUpdated: 'Apr 2026',
-  description: 'CV tips and interview questions for digital marketing coordinator and social media roles in South Africa. Curated by Jason Sadiki, a working Technical SEO Specialist who has reviewed and given feedback on many SA marketing CVs.',
-  salaryRange: 'R130,000 – R210,000 per year (entry level, South Africa)',
+  description: 'CV tips and interview questions for digital marketing coordinator and social media roles. Curated by Jason Sadiki, a working Technical SEO Specialist who has reviewed and given feedback on many marketing CVs.',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$42,000 – $60,000/year' },
+    { region: 'United Kingdom', range: '£24,000 – £34,000/year' },
+    { region: 'Canada', range: 'CA$42,000 – CA$58,000/year' },
+    { region: 'Australia', range: 'A$55,000 – A$75,000/year' },
+    { region: 'South Africa', range: 'R130,000 – R210,000/year' },
+  ],
 
   cvMustInclude: [
     'A portfolio link or samples section. Hiring managers will not take a marketing CV seriously without evidence of actual work',
@@ -29,15 +35,15 @@ export const digitalMarketingCoordinatorPrep: InterviewPrep = {
   cvTips: [
     {
       heading: 'Your portfolio is your CV',
-      body: 'In digital marketing, the CV gets you the interview and the portfolio gets you the job. If you do not have client work, build your own: start a niche social account, write SEO articles on a free blog, or run a small paid campaign with R200. Document everything. A candidate with a modest portfolio beats a candidate with a strong CV but no work to show.',
+      body: 'In digital marketing, the CV gets you the interview and the portfolio gets you the job. If you do not have client work, build your own: start a niche social account, write SEO articles on a free blog, or run a small paid campaign with $10. Document everything. A candidate with a modest portfolio beats a candidate with a strong CV but no work to show.',
     },
     {
       heading: 'Lead with results, not responsibilities',
-      body: 'South African marketing managers are tired of CVs that list tasks. Instead of "Managed social media accounts," write "Increased Instagram engagement rate from 1.2% to 4.7% over three months by shifting from product posts to educational content." One line like that is worth more than three bullets of responsibilities.',
+      body: 'Marketing managers are tired of CVs that list tasks. Instead of "Managed social media accounts," write "Increased Instagram engagement rate from 1.2% to 4.7% over three months by shifting from product posts to educational content." One line like that is worth more than three bullets of responsibilities.',
     },
     {
-      heading: 'Name the SA platforms and clients SA companies use',
-      body: 'Many SA agencies and brands use specific tools: Meta Business Suite, Google Ads, Mailchimp, HubSpot, Hootsuite, and Canva are the most common. Knowing that SA audiences engage differently on Facebook vs. Instagram (Facebook is still dominant in many SA demographics) is the kind of local knowledge that signals you are SA-market ready.',
+      heading: 'Name the platforms and audience context',
+      body: 'Many agencies and brands use specific tools: Meta Business Suite, Google Ads, Mailchimp, HubSpot, Hootsuite, Canva, and Google Analytics. Knowing that audiences behave differently across channels, age groups, and regions is the kind of practical knowledge that signals you are ready to work on real campaigns.',
     },
     {
       heading: 'Keep formatting clean and on-brand',
@@ -64,23 +70,23 @@ export const digitalMarketingCoordinatorPrep: InterviewPrep = {
     },
     {
       question: 'What is SEO and why does it matter?',
-      why: 'Basic knowledge check. Most marketing coordinator roles in SA involve at least some SEO work, even if it is just writing blog content with keywords.',
+      why: 'Basic knowledge check. Most marketing coordinator roles involve at least some SEO work, even if it is just writing blog content with keywords.',
       sampleAnswer: 'SEO stands for Search Engine Optimisation. It is the practice of improving a website\'s visibility in organic search results so that people searching for relevant terms find your business without you paying for the click. It matters because organic search traffic compounds over time: a well-written article can continue to bring in visitors for years. On-page SEO involves optimising the content and structure of individual pages, while off-page SEO involves building authority through backlinks from other sites.',
     },
     {
       question: 'How would you measure whether a social media campaign was successful?',
-      why: 'Tests whether you understand marketing metrics beyond likes and follows. SA employers want coordinators who connect activity to business outcomes.',
+      why: 'Tests whether you understand marketing metrics beyond likes and follows. Employers want coordinators who connect activity to business outcomes.',
       sampleAnswer: 'It depends on the campaign objective. If the goal was brand awareness, I would look at reach, impressions, and follower growth. If the goal was engagement, I would look at engagement rate (likes, comments, shares, saves divided by reach). If the goal was conversion, I would track link clicks, landing page visits, and the conversion rate on the destination page. The key is to define the metric before the campaign launches, not after, so you have a clear benchmark for success.',
     },
     {
-      question: 'You are given a small budget of R2,000 for a paid Facebook campaign. What do you do?',
-      why: 'SA agencies frequently give coordinators small budgets to manage. This question tests strategic thinking on a realistic SA budget.',
-      sampleAnswer: 'First I would clarify the objective: awareness, leads, or sales. Then I would define the target audience based on demographics, interests, and location relevant to the brand. With R2,000 I would run two ad sets with one ad each, targeting slightly different audiences, so I can compare performance. I would run it for at least 7 days to get meaningful data before making optimisation decisions. I would monitor cost per result daily and pause the underperforming ad set after day 5 to concentrate budget on what is working.',
+      question: 'You are given a small budget of $100 for a paid Facebook campaign. What do you do?',
+      why: 'Agencies frequently give coordinators small budgets to manage. This question tests strategic thinking on a realistic starter budget.',
+      sampleAnswer: 'First I would clarify the objective: awareness, leads, or sales. Then I would define the target audience based on demographics, interests, and location relevant to the brand. With $100 I would run two ad sets with one ad each, targeting slightly different audiences, so I can compare performance. I would run it for at least 7 days to get meaningful data before making optimisation decisions. I would monitor cost per result daily and pause the underperforming ad set after day 5 to concentrate budget on what is working.',
     },
     {
       question: 'How do you stay current with changes in digital marketing?',
-      why: 'The field changes constantly. SA employers want to know you are self-directed about learning, especially at entry level.',
-      sampleAnswer: 'I follow a mix of industry sources: Neil Patel, Search Engine Journal, and HubSpot\'s blog for SEO and content updates; Meta and Google\'s official blogs for platform changes; and I am active in a few local SA marketing communities on LinkedIn. I also try to test new formats myself. When Instagram Reels gained traction, I spent two weeks experimenting with short-form video on a personal account to understand the format before recommending it to anyone professionally.',
+      why: 'The field changes constantly. Employers want to know you are self-directed about learning, especially at entry level.',
+      sampleAnswer: 'I follow a mix of industry sources: Neil Patel, Search Engine Journal, and HubSpot\'s blog for SEO and content updates; Meta and Google\'s official blogs for platform changes; and I am active in marketing communities on LinkedIn. I also try to test new formats myself. When Instagram Reels gained traction, I spent two weeks experimenting with short-form video on a personal account to understand the format before recommending it to anyone professionally.',
     },
   ],
 

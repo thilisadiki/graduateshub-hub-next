@@ -6,16 +6,22 @@ export const juniorAccountantPrep: InterviewPrep = {
   category: 'accounting',
   curator: 'ndulamiso',
   lastUpdated: 'Apr 2026',
-  description: 'CV advice and interview questions for junior accountant and bookkeeper roles in South Africa. Written from the perspective of someone who works at SARS and understands what SA accounting employers are actually looking for.',
-  salaryRange: 'R140,000 – R240,000 per year (entry level, South Africa)',
+  description: 'CV advice and interview questions for junior accountant and bookkeeper roles. Written from the perspective of someone who understands accounting hiring, tax compliance, and entry-level finance teams.',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$45,000 – $60,000/year' },
+    { region: 'United Kingdom', range: '£24,000 – £34,000/year' },
+    { region: 'Canada', range: 'CA$45,000 – CA$60,000/year' },
+    { region: 'Australia', range: 'A$55,000 – A$75,000/year' },
+    { region: 'South Africa', range: 'R140,000 – R240,000/year' },
+  ],
 
   cvMustInclude: [
     'Your highest qualification with institution name, field of study, and year completed',
     'Any accounting-specific certifications: ICB (Institute of Certified Bookkeepers), Alison Diploma in Accounting, AAT Level 2',
     'Software proficiency: Sage, Pastel, Xero, or at minimum Microsoft Excel with specific functions listed (VLOOKUP, pivot tables, IF statements)',
-    'Your SAICA or SAIPA registration number if applicable',
+    'Any professional-body registration or student membership if applicable',
     'A clear summary of which accounting functions you have studied or practised (bookkeeping, payroll, accounts payable, financial statements)',
-    'Matric certificate and any relevant tertiary results, especially if your accounting grades were strong',
+    'High school certificate and any relevant tertiary results, especially if your accounting grades were strong',
   ],
 
   cvAvoid: [
@@ -28,8 +34,8 @@ export const juniorAccountantPrep: InterviewPrep = {
 
   cvTips: [
     {
-      heading: 'Tailor for SA firms specifically',
-      body: 'South African accounting firms and corporates frequently use Pastel (Sage), Xero, or AccPac. If you have any experience with these, name them explicitly. A CV that says "Proficient in Pastel Partner and Xero" immediately signals SA-market relevance.',
+      heading: 'Tailor for the software stack employers use',
+      body: 'Accounting firms and finance teams frequently use tools like Sage, Xero, QuickBooks, NetSuite, or local payroll systems. If you have any experience with these, name them explicitly. A CV that says "Proficient in Sage and Xero" immediately signals practical readiness.',
     },
     {
       heading: 'Show accuracy, not just knowledge',
@@ -37,29 +43,29 @@ export const juniorAccountantPrep: InterviewPrep = {
     },
     {
       heading: 'Your projects count as experience',
-      body: 'If you have completed a full bookkeeping cycle, prepared a set of financial statements, or processed a fictional payroll run as a study project, list it under a "Projects" or "Practical Experience" section. South African employers, especially smaller firms and SMEs, respect self-initiative from candidates with no formal work history.',
+      body: 'If you have completed a full bookkeeping cycle, prepared a set of financial statements, or processed a fictional payroll run as a study project, list it under a "Projects" or "Practical Experience" section. Smaller firms and SMEs respect self-initiative from candidates with no formal work history.',
     },
     {
-      heading: 'Reference the SA regulatory context',
-      body: 'Mentioning awareness of SARS compliance, VAT, PAYE, UIF, and SDL shows you understand the South African tax environment. Even one line in your summary ("familiar with South African payroll legislation including PAYE, UIF, and SDL") significantly differentiates you from candidates trained on international content only.',
+      heading: 'Reference the tax and payroll context',
+      body: 'Mentioning awareness of tax authority filings, payroll deductions, VAT/GST/sales tax, and employer reporting shows you understand that accounting work sits inside a compliance environment. Even one line in your summary, such as "familiar with payroll deductions, VAT/GST concepts, and monthly tax filing workflows," differentiates you from candidates who only studied theory.',
     },
   ],
 
   keySkills: [
     'Double-entry bookkeeping and trial balance preparation',
     'Financial statement preparation (IS, BS, Cash Flow)',
-    'Payroll processing: PAYE, UIF, SDL calculations',
+    'Payroll processing and statutory deduction basics',
     'Accounts payable and receivable management',
     'Microsoft Excel (VLOOKUP, IF, pivot tables)',
     'Pastel / Sage / Xero (advantageous)',
-    'VAT returns and SARS e-filing awareness',
+    'VAT/GST/sales tax return awareness',
   ],
 
   questions: [
     {
       question: 'Walk me through the double-entry bookkeeping principle.',
       why: 'The absolute foundation of every accounting interview. If you cannot explain this clearly and confidently, no other answer matters.',
-      sampleAnswer: 'Double-entry bookkeeping is based on the principle that every financial transaction affects at least two accounts and that debits must always equal credits. For example, if a business purchases equipment for R10,000 cash, we debit the Equipment account (an asset increases) and credit the Bank account (an asset decreases). The total debits and credits remain equal, which keeps the accounting equation balanced: Assets = Liabilities + Equity.',
+      sampleAnswer: 'Double-entry bookkeeping is based on the principle that every financial transaction affects at least two accounts and that debits must always equal credits. For example, if a business purchases equipment for $500 cash, we debit the Equipment account (an asset increases) and credit the Bank account (an asset decreases). The total debits and credits remain equal, which keeps the accounting equation balanced: Assets = Liabilities + Equity.',
       redFlag: 'Describing only one side of a transaction, or confusing the direction of debits and credits for specific account types.',
     },
     {
@@ -68,14 +74,14 @@ export const juniorAccountantPrep: InterviewPrep = {
       sampleAnswer: 'The Income Statement shows the revenues and expenses of a business over a specific period, resulting in a net profit or loss. The Balance Sheet is a snapshot of the business\'s financial position at a specific date, showing assets, liabilities, and equity. The Cash Flow Statement shows how cash moved into and out of the business during a period, split into operating, investing, and financing activities. Together, they give a complete picture of a business\'s financial health.',
     },
     {
-      question: 'How do you calculate PAYE for a South African employee?',
-      why: 'Payroll processing is a core junior accountant function in SA. Most SA firms handle payroll in-house and expect candidates to know the basics.',
-      sampleAnswer: 'PAYE is calculated on the employee\'s taxable income, which is their gross salary less any allowable deductions such as pension fund contributions. You apply the SARS tax tables for the relevant tax year to the annual taxable income to determine the annual tax liability, then divide by 12 for the monthly withholding amount. The employer deducts this from the employee\'s salary and pays it to SARS by the seventh of the following month via the EMP201 return.',
+      question: 'How would you approach a basic payroll tax calculation?',
+      why: 'Payroll processing is a core junior accountant function. Employers expect candidates to understand the logic even when payroll software does the final calculation.',
+      sampleAnswer: 'I would start with the employee\'s gross pay for the period, then identify taxable and non-taxable components according to the relevant country\'s rules. From there I would apply allowed deductions such as retirement contributions or benefits where applicable, then calculate the required withholding using the current tax tables or payroll system. I would also check employer-side contributions and any statutory deductions. Finally, I would reconcile the payroll report against the general ledger and make sure the filing and payment deadlines for the relevant tax authority are met.',
       redFlag: 'Saying "I would use software to calculate it" without being able to explain the underlying method. Software is a tool; the employer needs to know you understand the calculation.',
     },
     {
       question: 'What is the difference between accounts payable and accounts receivable?',
-      why: 'Foundational vocabulary check. SA firms often split these functions for entry-level hires.',
+      why: 'Foundational vocabulary check. Many firms split these functions for entry-level hires.',
       sampleAnswer: 'Accounts payable represents money the business owes to its suppliers for goods or services received but not yet paid for. It is a liability on the balance sheet. Accounts receivable represents money owed to the business by its customers for goods or services delivered but not yet collected. It is an asset. Managing both accurately is critical to a business\'s cash flow position.',
     },
     {
@@ -85,7 +91,7 @@ export const juniorAccountantPrep: InterviewPrep = {
     },
     {
       question: 'Why do you want to work in accounting?',
-      why: 'SA accounting employers, especially smaller firms, hire for long-term fit. They want genuine interest, not just a foot in the door.',
+      why: 'Accounting employers, especially smaller firms, hire for long-term fit. They want genuine interest, not just a foot in the door.',
       sampleAnswer: 'I am drawn to accounting because it is the language every business operates in, and I enjoy working with numbers in a structured way. What specifically interests me is the analytical side: being able to look at a set of financial statements and tell a story about the health of a business. I also appreciate that accounting has clear professional pathways and recognised qualifications, and I am working towards my ICB certification as a next step.',
     },
   ],
