@@ -3,14 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Unlock, Clock, Globe, ChevronRight, ExternalLink } from 'lucide-react';
 import Hero from '@/components/home/Hero';
-import CourseCard from '@/components/course/CourseCard';
 import HowItWorks from '@/components/home/HowItWorks';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import LatestArticles from '@/components/home/LatestArticles';
 import FAQ from '@/components/home/FAQ';
 import AIToolsBanner from '@/components/home/AIToolsBanner';
 import PortfolioBanner from '@/components/home/PortfolioBanner';
-import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
 import { popularGuides } from '@/data/navigation';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo';
@@ -98,34 +96,12 @@ async function fetchHomeArticles(perPage: number) {
 }
 
 export default async function Home() {
-  const featuredCourses = courses.filter(c => c.featured).slice(0, 6);
   const homeArticles = await fetchHomeArticles(6);
-
-  const itemListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: featuredCourses.map((course, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Course',
-        name: course.title,
-        description: course.description,
-        provider: { '@type': 'Organization', name: 'Graduates Hub', sameAs: SITE_URL },
-        hasCourseInstance: {
-          '@type': 'CourseInstance',
-          courseMode: 'online',
-          duration: `PT${parseInt(course.duration.split('-')[0])}H`,
-        },
-      },
-    })),
-  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       <Hero />
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
@@ -189,30 +165,6 @@ export default async function Home() {
                 <ChevronRight size={16} className="text-gray-300 group-hover:text-primary transition-colors mt-auto self-end" />
               </Link>
             ))}
-          </div>
-        </div>
-
-        <div className="mt-24">
-          <div className="flex justify-between items-end mb-8">
-            <div>
-              <h2 className="text-3xl font-extrabold text-gray-900">Featured Learning Resources</h2>
-              <p className="text-gray-500 mt-2">Hand-picked courses to help you grow your skills and advance your career.</p>
-            </div>
-            <Link href="/categories" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">
-              View All Categories →
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCourses.map(course => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
-
-          <div className="mt-8 text-center sm:hidden">
-            <Link href="/categories" className="inline-block bg-white border-2 border-primary text-primary font-bold px-8 py-3 rounded-lg w-full hover:bg-blue-50 transition-colors">
-              View All Categories
-            </Link>
           </div>
         </div>
 
