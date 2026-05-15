@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     icon: '/logo-512x512.png',
     apple: '/logo-512x512.png',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-7185526762692935',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
