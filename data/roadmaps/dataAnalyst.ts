@@ -62,7 +62,7 @@ export const dataAnalystRoadmap: CareerRoadmap = {
       title: 'Build Dashboards with Power BI',
       duration: '4–5 weeks',
       description:
-        'Knowing the numbers is only half the job. The other half is communicating them. Power BI is the most in-demand business intelligence tool in corporate South Africa and globally. After this stage you will be able to connect Power BI to a data source, transform raw data, and build the kind of interactive dashboards that companies use in boardroom presentations.',
+        'Knowing the numbers is only half the job. The other half is communicating them. Power BI is one of the most in-demand business intelligence tools globally, used by companies across industries. After this stage you will be able to connect Power BI to a data source, transform raw data, and build the kind of interactive dashboards that companies use in boardroom presentations.',
       courseIds: ['intro-power-bi'],
       milestone:
         'You have built at least one end-to-end Power BI dashboard from a raw dataset and published it for stakeholder access.',
@@ -93,7 +93,7 @@ export const dataAnalystRoadmap: CareerRoadmap = {
       name: 'Microsoft Power BI Data Analyst (PL-300)',
       provider: 'Microsoft',
       free: false,
-      why: 'The most employer-recognised BI certification for analysts. Exam costs roughly R2,500 but significantly differentiates your CV.',
+      why: 'The most employer-recognised BI certification for analysts. A paid certification that significantly differentiates your CV.',
     },
     {
       name: 'Google Data Analytics Certificate',
@@ -116,17 +116,23 @@ export const dataAnalystRoadmap: CareerRoadmap = {
     'End-to-end capstone: pick one public dataset, clean it in Python, query it in SQL, and visualise it in Power BI',
   ],
   relatedRoadmapIds: ['it-support-specialist', 'web-developer', 'business-analyst'],
-  salaryRange: 'R180,000 – R320,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$55,000 – $80,000/year' },
+    { region: 'United Kingdom', range: '£28,000 – £45,000/year' },
+    { region: 'Canada', range: 'CA$52,000 – CA$75,000/year' },
+    { region: 'Australia', range: 'A$65,000 – A$95,000/year' },
+    { region: 'South Africa', range: 'R180,000 – R320,000/year' },
+  ],
   remoteFriendly: 'Hybrid',
   difficulty: 'Intermediate',
   faqs: [
     {
       q: 'Do I need a degree to become a data analyst?',
-      a: 'No. While many SA companies still list a degree as preferred, almost none reject candidates outright if they can demonstrate the four core skills (Excel, SQL, Power BI, Python) through a portfolio. Your dashboards, SQL queries, and cleaned datasets are stronger evidence than a transcript.',
+      a: 'No. While many companies still list a degree as preferred, almost none reject candidates outright if they can demonstrate the four core skills (Excel, SQL, Power BI, Python) through a portfolio. Your dashboards, SQL queries, and cleaned datasets are stronger evidence than a transcript.',
     },
     {
       q: 'Which matters more: SQL or Python?',
-      a: 'SQL by a wide margin at entry level. Almost every junior analyst job in SA requires SQL because that is how you actually pull data from the company database. Python is a strong differentiator that elevates you from junior to mid-level, but you will be locked out of most roles without solid SQL.',
+      a: 'SQL by a wide margin at entry level. Almost every junior analyst job requires SQL because that is how you actually pull data from the company database. Python is a strong differentiator that elevates you from junior to mid-level, but you will be locked out of most roles without solid SQL.',
     },
     {
       q: 'How long does it realistically take to land a first job?',
@@ -142,7 +148,7 @@ export const dataAnalystRoadmap: CareerRoadmap = {
     },
     {
       q: 'Should I get a paid certification?',
-      a: 'The Microsoft PL-300 (Power BI) is the highest-ROI paid cert for SA analysts, costs roughly R2,500, and is widely recognised. Google Data Analytics is also useful and available free via Coursera financial aid. Free Alison diplomas help fill out the credentials section but do not replace project work.',
+      a: 'The Microsoft PL-300 (Power BI) is the highest-ROI paid certification for analysts and is widely recognised. Google Data Analytics is also useful and available free via Coursera financial aid. Free Alison diplomas help fill out the credentials section but do not replace project work.',
     },
   ],
   firstNinetyDays: [

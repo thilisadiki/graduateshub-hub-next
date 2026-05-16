@@ -11,7 +11,7 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
   demandLevel: 'High',
   entryLevel: true,
   description:
-    'A practical roadmap for breaking into software quality assurance. Covers manual testing fundamentals, the software testing life cycle, Agile and Scrum, JIRA, and security testing basics. Built around the exact skills SA development teams test for in junior QA interviews.',
+    'A practical roadmap for breaking into software quality assurance. Covers manual testing fundamentals, the software testing life cycle, Agile and Scrum, JIRA, and security testing basics. Built around the exact skills development teams test for in junior QA interviews.',
   overview:
     'QA testing is the most accessible path into a software career. Unlike development roles that require months of coding before you produce anything employable, you can write a competent bug report and design test cases after a few weeks of focused study. Every company that ships software, banks, retailers, fintechs, healthcare platforms, government systems, employs QA testers to make sure releases do not break in production.\n\nThe role rewards structured thinking and curiosity over coding ability. Junior QA testers in South Africa typically start with manual testing (designing test cases, executing them, and logging defects) before progressing into automation engineering. This roadmap is built around that progression: master the fundamentals first, build a credible portfolio of bug reports and test cases, then layer on tools like JIRA, Selenium, and security testing as you grow.',
   jobTitles: [
@@ -43,7 +43,7 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
       title: 'Build the Software Testing Foundation',
       duration: '4–6 weeks',
       description:
-        'Before touching any tools, you need to understand what software testing is, why it exists, and the vocabulary the industry uses. Concepts like verification versus validation, the testing pyramid, defect severity versus priority, and the seven principles of testing all originate here. This is the same material the ISTQB Foundation Level certification covers, and almost every SA QA interview opens with questions from this body of knowledge.',
+        'Before touching any tools, you need to understand what software testing is, why it exists, and the vocabulary the industry uses. Concepts like verification versus validation, the testing pyramid, defect severity versus priority, and the seven principles of testing all originate here. This is the same material the ISTQB Foundation Level certification covers, and almost every QA interview opens with questions from this body of knowledge.',
       courseIds: ['intro-software-testing', 'theory-software-testing'],
       milestone:
         'You can explain the testing principles, the difference between verification and validation, and the relationship between severity and priority in a bug report.',
@@ -73,7 +73,7 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
       title: 'Get Fluent in Agile and Scrum',
       duration: '4–5 weeks',
       description:
-        'Almost every SA software team you join as a junior QA tester will operate in Agile, usually Scrum. You need to understand how testing happens within a sprint rather than at the end of a project, how QA contributes to story refinement and acceptance criteria, and what ceremonies like daily standup, sprint review, and retrospective look like in practice. This stage is what separates candidates who can talk about Agile from those who can actually function inside an Agile team.',
+        'Most software teams you join as a junior QA tester operate in Agile, usually Scrum. You need to understand how testing happens within a sprint rather than at the end of a project, how QA contributes to story refinement and acceptance criteria, and what ceremonies like daily standup, sprint review, and retrospective look like in practice. This stage is what separates candidates who can talk about Agile from those who can actually function inside an Agile team.',
       courseIds: ['agile-essentials', 'scrum-developer-training', 'lean-agile-mindset'],
       milestone:
         'You can describe a complete Scrum sprint cycle, the role QA plays at each ceremony, and the difference between definition of ready and definition of done.',
@@ -83,7 +83,7 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
       title: 'Tools, Bug Tracking, and Security Testing',
       duration: '4–6 weeks',
       description:
-        'JIRA is the issue and test management tool used by most SA development teams. Knowing your way around JIRA workflows, custom fields, and reporting is non-negotiable for a junior QA role. Pair this with security testing fundamentals (OWASP basics, common vulnerability classes, and security acceptance criteria) and you become a meaningfully more valuable hire than candidates with manual testing skills only.',
+        'JIRA is the issue and test management tool used by many development teams worldwide. Knowing your way around JIRA workflows, custom fields, and reporting is non-negotiable for a junior QA role. Pair this with security testing fundamentals (OWASP basics, common vulnerability classes, and security acceptance criteria) and you become a meaningfully more valuable hire than candidates with manual testing skills only.',
       courseIds: ['jira-architecture', 'secure-software-testing'],
       milestone:
         'You can navigate JIRA confidently, log a properly structured defect with all required fields, and identify at least five common security vulnerabilities that should be tested for in a web application.',
@@ -94,13 +94,13 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
       name: 'ISTQB Certified Tester Foundation Level (CTFL)',
       provider: 'ISTQB',
       free: false,
-      why: 'The single most recognised QA credential globally and in South Africa. Almost every SA QA job advert mentions it. Exam costs roughly R3,000 to R5,000 and dramatically differentiates your CV.',
+      why: 'The single most recognised QA credential globally. Listed in nearly every QA job posting. A paid certification that dramatically differentiates your CV.',
     },
     {
       name: 'Certified Scrum Master (CSM) or PSM I',
       provider: 'Scrum Alliance / Scrum.org',
       free: false,
-      why: 'Optional but strong signal that you understand Agile delivery. PSM I from Scrum.org costs around R3,500 and is respected in SA tech.',
+      why: 'Optional but strong signal that you understand Agile delivery. PSM I from Scrum.org is respected in Agile-driven teams worldwide.',
     },
     {
       name: 'Alison Diploma in Software Testing',
@@ -117,17 +117,23 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
     'Manual to automated migration plan: pick five of your manual test cases and write a plan for how each would be automated using Selenium or Cypress, including the assertions and test data required',
   ],
   relatedRoadmapIds: ['web-developer', 'data-analyst', 'it-support-specialist'],
-  salaryRange: 'R180,000 – R320,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$50,000 – $75,000/year' },
+    { region: 'United Kingdom', range: '£26,000 – £38,000/year' },
+    { region: 'Canada', range: 'CA$50,000 – CA$70,000/year' },
+    { region: 'Australia', range: 'A$62,000 – A$88,000/year' },
+    { region: 'South Africa', range: 'R180,000 – R320,000/year' },
+  ],
   remoteFriendly: 'Hybrid',
   difficulty: 'Beginner',
   faqs: [
     {
       q: 'Do I need to know how to code to become a QA tester?',
-      a: 'Not at the start. Junior QA roles in SA are usually 80 percent manual testing where coding is not required. Once you progress toward automation engineering, basic Python, JavaScript, or Java becomes essential. Many testers grow into automation gradually over their first two years.',
+      a: 'Not at the start. Junior QA roles are typically 80 percent manual testing where coding is not required. Once you progress toward automation engineering, basic Python, JavaScript, or Java becomes essential. Many testers grow into automation gradually over their first two years.',
     },
     {
       q: 'Is ISTQB Foundation Level really necessary?',
-      a: 'For SA QA roles, effectively yes. Almost every job spec mentions it, recruiters filter on it, and interview questions are pulled directly from the syllabus. The exam costs roughly R3,000 to R5,000 and the study time is achievable in 4 to 6 weeks.',
+      a: 'Effectively yes. Almost every QA job spec mentions it, recruiters filter on it, and interview questions are pulled directly from the syllabus. Study time is achievable in 4 to 6 weeks.',
     },
     {
       q: 'How is QA different from being a developer?',
@@ -139,7 +145,7 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
     },
     {
       q: 'Manual testing or automation: which should I learn first?',
-      a: 'Manual first, always. You cannot write good automated tests if you do not understand test design, equivalence partitioning, and risk-based testing manually. Most SA junior roles are explicitly manual or hybrid for the first 6 to 12 months.',
+      a: 'Manual first, always. You cannot write good automated tests if you do not understand test design, equivalence partitioning, and risk-based testing manually. Most junior QA roles are explicitly manual or hybrid for the first 6 to 12 months.',
     },
     {
       q: 'What do I include in my QA portfolio without work experience?',

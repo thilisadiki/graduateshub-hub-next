@@ -13,7 +13,7 @@ export const webDeveloperRoadmap: CareerRoadmap = {
   description:
     'A structured roadmap for becoming a job-ready web developer. Covers HTML/CSS, JavaScript, backend development, databases, and DevOps fundamentals. Curated by Jason Sadiki, a working web developer with 7+ years of professional experience.',
   overview:
-    'Web development is consistently one of the most in-demand skills in the global job market. Every business needs a digital presence, and the people who build and maintain that presence are web developers. The field is broad: front-end (what users see), back-end (server logic and databases), and full-stack (both) all share the same foundation.\n\nThis roadmap was curated by Jason Sadiki, a Technical SEO Specialist and Web Developer who has built web products professionally for over seven years. The course selection is opinionated: it cuts through the noise and focuses on the specific languages, frameworks, and tools that appear most consistently in South African and international junior developer job postings. The roadmap is challenging but entirely achievable through self-study.',
+    'Web development is consistently one of the most in-demand skills in the global job market. Every business needs a digital presence, and the people who build and maintain that presence are web developers. The field is broad: front-end (what users see), back-end (server logic and databases), and full-stack (both) all share the same foundation.\n\nThis roadmap was curated by Jason Sadiki, a Technical SEO Specialist and Web Developer who has built web products professionally for over seven years. The course selection is opinionated: it cuts through the noise and focuses on the specific languages, frameworks, and tools that appear most consistently in junior developer job postings globally. The roadmap is challenging but entirely achievable through self-study.',
   jobTitles: [
     'Junior Web Developer',
     'Junior Front-End Developer',
@@ -106,7 +106,13 @@ export const webDeveloperRoadmap: CareerRoadmap = {
     'REST API: build a simple JSON API in Flask or PHP that supports GET, POST, PUT, and DELETE for a resource of your choice',
   ],
   relatedRoadmapIds: ['it-support-specialist', 'data-analyst', 'business-analyst'],
-  salaryRange: 'R160,000 – R300,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$55,000 – $85,000/year' },
+    { region: 'United Kingdom', range: '£28,000 – £45,000/year' },
+    { region: 'Canada', range: 'CA$52,000 – CA$78,000/year' },
+    { region: 'Australia', range: 'A$65,000 – A$95,000/year' },
+    { region: 'South Africa', range: 'R160,000 – R300,000/year' },
+  ],
   remoteFriendly: 'Fully',
   difficulty: 'Advanced',
   faqs: [
@@ -116,15 +122,15 @@ export const webDeveloperRoadmap: CareerRoadmap = {
     },
     {
       q: 'Front-end, back-end, or full-stack at entry level?',
-      a: 'For SA junior roles, full-stack is often the strongest entry point because smaller companies want generalists. Specialise once employed. If you are aiming at large product companies, picking a side (usually front-end with React) gets you more interviews per skill.',
+      a: 'For junior developer roles, full-stack is often the strongest entry point because smaller companies want generalists. Specialise once employed. If you are aiming at large product companies, picking a side (usually front-end with React) gets you more interviews per skill.',
     },
     {
       q: 'PHP, Python, or JavaScript on the back end?',
-      a: 'PHP/Laravel is still the most-deployed stack in SA SMEs and agencies, so PHP knowledge unlocks the largest number of jobs. Python (Django/Flask) is preferred at modern start-ups and data-heavy companies. Node.js is rare as a junior entry point in SA but common in remote international roles.',
+      a: 'PHP/Laravel remains widely deployed in SMEs and agencies globally, so PHP knowledge unlocks significant job opportunities. Python (Django/Flask) is preferred at modern start-ups and data-heavy companies. Node.js is increasingly common as a junior entry point, especially in remote and international roles.',
     },
     {
       q: 'Do I need a CS degree?',
-      a: 'No, but you do need a serious GitHub. SA hiring managers will trade a degree for a public portfolio with at least three substantial projects, clean commit history, and decent README documentation. Without that portfolio, lacking a degree becomes a real barrier.',
+      a: 'No, but you do need a serious GitHub. Hiring managers will trade a degree for a public portfolio with at least three substantial projects, clean commit history, and decent README documentation. Without that portfolio, lacking a degree becomes a real barrier.',
     },
     {
       q: 'Will AI replace web developers?',
@@ -153,7 +159,7 @@ export const webDeveloperRoadmap: CareerRoadmap = {
     },
     {
       mistake: 'Treating Git like a save button',
-      fix: 'Learn branches, rebase, merge, and resolving conflicts properly. Most junior dev rejection feedback in SA mentions "weak Git workflow" specifically. Practise on a public project where you make 50+ commits.',
+      fix: 'Learn branches, rebase, merge, and resolving conflicts properly. Most junior developer rejection feedback mentions "weak Git workflow" specifically. Practise on a public project where you make 50+ commits.',
     },
     {
       mistake: 'Hiding incomplete work instead of pushing it publicly',

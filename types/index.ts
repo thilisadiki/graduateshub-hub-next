@@ -33,7 +33,7 @@ export interface CareerRoadmap {
   }[];
   portfolioProjects: string[];
   relatedRoadmapIds: string[];
-  salaryRange: string;
+  salaryBenchmarks: SalaryBenchmark[];
   remoteFriendly: 'Fully' | 'Hybrid' | 'On-site';
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
   faqs: { q: string; a: string }[];

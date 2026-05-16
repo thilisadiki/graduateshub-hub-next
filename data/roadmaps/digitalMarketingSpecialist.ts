@@ -103,10 +103,16 @@ export const digitalMarketingSpecialistRoadmap: CareerRoadmap = {
     'Social media growth project: grow a brand-new account in any niche to 200 followers in 30 days, documenting strategy and weekly performance',
     'Conversion audit: take any landing page and produce a written CRO report identifying 5 specific improvements with reasoning',
     'Content calendar: build a fully planned 90-day content calendar for a fictional small business including channels, formats, topics, and KPIs',
-    'Campaign report: run a small-budget Facebook or Google Ads campaign (even R500), document the results, and write a lessons-learned analysis',
+    'Campaign report: run a small-budget Facebook or Google Ads campaign ($25–$50), document the results, and write a lessons-learned analysis',
   ],
   relatedRoadmapIds: ['data-analyst', 'business-analyst', 'it-support-specialist'],
-  salaryRange: 'R130,000 – R210,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$40,000 – $58,000/year' },
+    { region: 'United Kingdom', range: '£24,000 – £35,000/year' },
+    { region: 'Canada', range: 'CA$40,000 – CA$58,000/year' },
+    { region: 'Australia', range: 'A$52,000 – A$72,000/year' },
+    { region: 'South Africa', range: 'R130,000 – R210,000/year' },
+  ],
   remoteFriendly: 'Fully',
   difficulty: 'Beginner',
   faqs: [
@@ -116,7 +122,7 @@ export const digitalMarketingSpecialistRoadmap: CareerRoadmap = {
     },
     {
       q: 'Is digital marketing fully remote?',
-      a: 'Most agency and in-house specialist roles in SA are now fully remote or remote-first. Some larger corporates still require hybrid for collaboration, but the field has the strongest remote culture of any role on this roadmap site.',
+      a: 'Most agency and in-house specialist roles are now fully remote or remote-first. Some larger corporates still require hybrid for collaboration, but the field has one of the strongest remote cultures across most industries.',
     },
     {
       q: 'Should I specialise or stay generalist at entry level?',
@@ -128,7 +134,7 @@ export const digitalMarketingSpecialistRoadmap: CareerRoadmap = {
     },
     {
       q: 'Do I need to pay for Google Ads or Meta Ads to learn paid media?',
-      a: 'A small personal budget (R500 to R1,000) for one campaign teaches you more than any course. Many courses also offer credits. The hands-on metrics (CPC, CTR, conversion rate) are exactly what employers test you on.',
+      a: 'A small personal budget ($25–$75) for one campaign teaches you more than any course. Many courses also offer credits. The hands-on metrics (CPC, CTR, conversion rate) are exactly what employers test you on.',
     },
     {
       q: 'Is freelancing while learning a good idea?',
@@ -157,7 +163,7 @@ export const digitalMarketingSpecialistRoadmap: CareerRoadmap = {
     },
     {
       mistake: 'Avoiding paid ads because the spend feels scary',
-      fix: 'A R500 personal ad campaign teaches you more about CPC, CTR, and audience targeting than ten free courses. Start tiny, lose a small budget on purpose, and learn from real data.',
+      fix: 'A $25 personal ad campaign teaches you more about CPC, CTR, and audience targeting than ten free courses. Start tiny, lose a small budget on purpose, and learn from real data.',
     },
     {
       mistake: 'Building a portfolio of mock work no real person ever saw',

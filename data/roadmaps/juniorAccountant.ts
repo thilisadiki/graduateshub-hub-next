@@ -106,7 +106,13 @@ export const juniorAccountantRoadmap: CareerRoadmap = {
     'Inventory costing: apply FIFO, LIFO, and weighted average to the same fictional dataset and compare the effect on gross profit under each method',
   ],
   relatedRoadmapIds: ['business-analyst', 'data-analyst', 'digital-marketing-specialist'],
-  salaryRange: 'R140,000 – R240,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$45,000 – $65,000/year' },
+    { region: 'United Kingdom', range: '£25,000 – £38,000/year' },
+    { region: 'Canada', range: 'CA$48,000 – CA$68,000/year' },
+    { region: 'Australia', range: 'A$58,000 – A$78,000/year' },
+    { region: 'South Africa', range: 'R140,000 – R240,000/year' },
+  ],
   remoteFriendly: 'Hybrid',
   difficulty: 'Intermediate',
   faqs: [

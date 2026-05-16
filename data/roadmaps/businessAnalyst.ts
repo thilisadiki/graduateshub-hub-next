@@ -62,7 +62,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
       title: 'Learn Process Improvement Methodologies',
       duration: '5–6 weeks',
       description:
-        'A major part of a BA\'s work is identifying inefficiencies in current business processes and designing improvements. Lean Six Sigma provides the structured methodology for doing this: how to define a problem, measure its impact, analyse root causes, design a solution, and control the improvement. These frameworks are used in manufacturing, financial services, healthcare, and government across South Africa.',
+        'A major part of a BA\'s work is identifying inefficiencies in current business processes and designing improvements. Lean Six Sigma provides the structured methodology for doing this: how to define a problem, measure its impact, analyse root causes, design a solution, and control the improvement. These frameworks are used globally in manufacturing, financial services, healthcare, and government.',
       courseIds: ['lean-six-sigma-yellow-belt', 'lean-six-sigma-white-belt'],
       milestone:
         'You can apply the DMAIC framework to a real or fictional business process, identify waste and variation, and propose a measurable improvement.',
@@ -83,7 +83,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
       name: 'IIBA Entry Certificate in Business Analysis (ECBA)',
       provider: 'IIBA (International Institute of Business Analysis)',
       free: false,
-      why: 'The globally recognised entry-level BA certification. No work experience required. Highly valued in South African corporate environments.',
+      why: 'The globally recognised entry-level BA certification. No work experience required. Widely valued in corporate environments worldwide.',
     },
     {
       name: 'PMI Professional in Business Analysis (PMI-PBA)',
@@ -106,7 +106,13 @@ export const businessAnalystRoadmap: CareerRoadmap = {
     'Stakeholder map: for any fictional project, create a complete stakeholder register identifying all parties, their interests, influence level, and engagement strategy',
   ],
   relatedRoadmapIds: ['junior-accountant', 'data-analyst', 'it-support-specialist'],
-  salaryRange: 'R200,000 – R340,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$55,000 – $75,000/year' },
+    { region: 'United Kingdom', range: '£28,000 – £42,000/year' },
+    { region: 'Canada', range: 'CA$52,000 – CA$72,000/year' },
+    { region: 'Australia', range: 'A$65,000 – A$90,000/year' },
+    { region: 'South Africa', range: 'R200,000 – R340,000/year' },
+  ],
   remoteFriendly: 'Hybrid',
   difficulty: 'Intermediate',
   faqs: [
@@ -120,15 +126,15 @@ export const businessAnalystRoadmap: CareerRoadmap = {
     },
     {
       q: 'Is the IIBA ECBA worth getting?',
-      a: 'For SA corporates (banks, insurers, telecoms) yes. ECBA is the entry-level IIBA cert with no work experience required, costs roughly R3,500, and removes the "no formal BA training" objection in screening. CBAP comes later once you have experience.',
+      a: 'Yes, especially in corporate environments (banks, insurers, telecoms). ECBA is the entry-level IIBA cert with no work experience required, and removes the "no formal BA training" objection in screening. CBAP comes later once you have experience.',
     },
     {
       q: 'Agile BA or traditional BA?',
-      a: 'Most modern SA roles, especially in tech and banking, are Agile. You will write user stories, attend ceremonies, and refine backlogs rather than producing thick BRDs upfront. Traditional waterfall BA roles still exist in government and large infrastructure projects but are shrinking.',
+      a: 'Most modern roles, especially in tech and banking, are Agile. You will write user stories, attend ceremonies, and refine backlogs rather than producing thick BRDs upfront. Traditional waterfall BA roles still exist in government and large infrastructure projects but are shrinking.',
     },
     {
       q: 'Can I move from BA into product management?',
-      a: 'Yes, this is one of the most common SA career progressions. Product managers own outcomes; BAs own requirements. Building product judgment (understanding users, prioritising features, owning a metric) while in a BA role is the bridge.',
+      a: 'Yes, this is a common career progression. Product managers own outcomes; BAs own requirements. Building product judgment (understanding users, prioritising features, owning a metric) while in a BA role is the bridge.',
     },
     {
       q: 'How important is SQL for a BA?',
@@ -145,7 +151,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
   commonMistakes: [
     {
       mistake: 'Producing thick BRDs no one reads',
-      fix: 'Modern BA work in SA is iterative. Lead with user stories, decision logs, and process diagrams. Reserve full BRDs for regulated or contractually required deliverables.',
+      fix: 'Modern BA work is iterative. Lead with user stories, decision logs, and process diagrams. Reserve full BRDs for regulated or contractually required deliverables.',
     },
     {
       mistake: 'Documenting requirements without involving developers early',

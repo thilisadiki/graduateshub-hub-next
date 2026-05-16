@@ -11,9 +11,9 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
   demandLevel: 'High',
   entryLevel: true,
   description:
-    'A structured roadmap for becoming a junior project coordinator. Covers the project lifecycle, Agile and Scrum, JIRA, stakeholder communication, and process improvement basics. Built around the exact skills SA corporate project teams hire for at entry level.',
+    'A structured roadmap for becoming a junior project coordinator. Covers the project lifecycle, Agile and Scrum, JIRA, stakeholder communication, and process improvement basics. Built around the exact skills corporate project teams hire for at entry level.',
   overview:
-    'Project coordinators are the operational engine of every corporate project. They keep the schedule current, the risk register up to date, the stakeholders informed, and the meeting actions tracked. The role is one of the most teachable entry points into a business career because the work is structured, well documented, and built on frameworks (PMBOK, PRINCE2, Scrum) that you can learn through self-study.\n\nAlmost every large SA organisation, banks, telecoms, mining houses, retailers, government departments, runs projects continuously and needs coordinators to keep them on track. The role is also a launchpad: most project managers, programme managers, and Scrum Masters started in coordination roles. The knowledge you build here, how projects are initiated, planned, executed, and closed, applies directly to more senior roles you will grow into. This roadmap was curated by Ndulamiso Mamburu, who brings direct corporate experience navigating project environments in South African organisations.',
+    'Project coordinators are the operational engine of every corporate project. They keep the schedule current, the risk register up to date, the stakeholders informed, and the meeting actions tracked. The role is one of the most teachable entry points into a business career because the work is structured, well documented, and built on frameworks (PMBOK, PRINCE2, Scrum) that you can learn through self-study.\n\nEvery industry—banking, telecoms, mining, retail, government, technology—runs projects continuously and needs coordinators to keep them on track. The role is also a launchpad: most project managers, programme managers, and Scrum Masters started in coordination roles. The knowledge you build here, how projects are initiated, planned, executed, and closed, applies directly to more senior roles you will grow into. This roadmap was curated by Ndulamiso Mamburu, who brings direct corporate experience navigating project environments.',
   jobTitles: [
     'Junior Project Coordinator',
     'Project Administrator',
@@ -43,7 +43,7 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
       title: 'Master the Project Management Lifecycle',
       duration: '6–8 weeks',
       description:
-        'Every project, regardless of industry, follows the same five phases: initiation, planning, execution, monitoring and control, and closure. This is the PMBOK framework that almost every large SA organisation uses, and it is the body of knowledge interviewers test you on. Before specialising in any methodology or tool, you need to know what a project charter is, what a Gantt chart looks like, how a risk register is maintained, and how a project formally closes.',
+        'Every project, regardless of industry, follows the same five phases: initiation, planning, execution, monitoring and control, and closure. This is the PMBOK framework used by most large organisations worldwide, and it is the body of knowledge interviewers test you on. Before specialising in any methodology or tool, you need to know what a project charter is, what a Gantt chart looks like, how a risk register is maintained, and how a project formally closes.',
       courseIds: ['diploma-project-management'],
       milestone:
         'You can produce a basic project charter, a Gantt chart, and a risk register for a real or fictional project, and explain how each phase of the project lifecycle hands over to the next.',
@@ -53,7 +53,7 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
       title: 'Get Fluent in Agile and Scrum',
       duration: '4–5 weeks',
       description:
-        'SA project environments are split between traditional Waterfall (used in construction, government, and large ERP rollouts) and Agile (used in technology, banking, and retail). Most modern coordinator roles expect Agile fluency: you should understand sprints, the role of the Scrum Master and Product Owner, daily standups, sprint review, and retrospectives, and how to facilitate them. This stage gives you the vocabulary and the practical mechanics of Agile delivery.',
+        'Project environments are split between traditional Waterfall (used in construction, government, and large ERP rollouts) and Agile (used in technology, banking, and retail). Most modern coordinator roles expect Agile fluency: you should understand sprints, the role of the Scrum Master and Product Owner, daily standups, sprint review, and retrospectives, and how to facilitate them. This stage gives you the vocabulary and the practical mechanics of Agile delivery.',
       courseIds: ['agile-project-management', 'agile-essentials', 'scrum-developer-training'],
       milestone:
         'You can describe a complete Scrum sprint, write a clear User Story with acceptance criteria, and facilitate a daily standup or retrospective using a documented agenda.',
@@ -63,7 +63,7 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
       title: 'Learn the Tools and Documentation',
       duration: '3–4 weeks',
       description:
-        'Tools alone do not make a project coordinator, but coordinators who cannot use the tools do not get hired. JIRA is the issue and project tracking system used across most SA corporate IT, banking, and tech teams. Pair this with strong written communication and document production skills (status reports, meeting minutes, scope documents, change requests) and you become immediately useful on any project from day one.',
+        'Tools alone do not make a project coordinator, but coordinators who cannot use the tools do not get hired. JIRA is the issue and project tracking system used by many corporate IT, banking, and tech teams. Pair this with strong written communication and document production skills (status reports, meeting minutes, scope documents, change requests) and you become immediately useful on any project from day one.',
       courseIds: ['jira-architecture', 'workplace-communication', 'microsoft-word-2021'],
       milestone:
         'You can navigate JIRA confidently, produce a professional weekly status report and a set of meeting minutes, and structure a project document with a clear hierarchy and version control.',
@@ -83,7 +83,7 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
       title: 'Specialise in Software and IT Project Context',
       duration: '3–4 weeks',
       description:
-        'A large portion of SA project coordinator roles sit inside IT departments or at software consultancies. Understanding the specific dynamics of software project delivery (release management, deployment dependencies, technical debt, test environments) makes you a stronger candidate for these roles. This stage is optional if you intend to work in non-IT projects, but highly recommended given the volume of IT and digital project openings in South Africa.',
+        'Many project coordinator roles sit inside IT departments or at software consultancies. Understanding the specific dynamics of software project delivery (release management, deployment dependencies, technical debt, test environments) makes you a stronger candidate for these roles. This stage is optional if you intend to work in non-IT projects, but highly recommended given the growth of IT and digital projects globally.',
       courseIds: ['understanding-software-project-management', 'lean-agile-mindset'],
       milestone:
         'You can describe the unique characteristics of a software project versus a traditional engineering or construction project, and explain how Lean-Agile principles apply to a software delivery team.',
@@ -94,13 +94,13 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
       name: 'PMI Certified Associate in Project Management (CAPM)',
       provider: 'Project Management Institute',
       free: false,
-      why: 'The most recognised entry-level project management certification globally. No work experience required. Exam costs roughly R5,000 to R7,000 and is widely respected in SA corporate environments.',
+      why: 'The most recognised entry-level project management certification globally. No work experience required and widely respected in corporate environments worldwide.',
     },
     {
       name: 'PRINCE2 Foundation',
       provider: 'AXELOS',
       free: false,
-      why: 'Particularly valued in SA government, financial services, and consulting firms. Exam plus training costs roughly R8,000 to R12,000 but is often paid for by employers once you are hired.',
+      why: 'Highly valued in government, financial services, and consulting firms. Often paid for by employers once hired.',
     },
     {
       name: 'Google Project Management Certificate',
@@ -123,7 +123,13 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
     'Sprint facilitation pack: a set of agendas and templates for daily standup, sprint planning, sprint review, and retrospective, written so a new coordinator could use them on day one',
   ],
   relatedRoadmapIds: ['business-analyst', 'data-analyst', 'it-support-specialist'],
-  salaryRange: 'R180,000 – R320,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$42,000 – $62,000/year' },
+    { region: 'United Kingdom', range: '£24,000 – £36,000/year' },
+    { region: 'Canada', range: 'CA$45,000 – CA$65,000/year' },
+    { region: 'Australia', range: 'A$58,000 – A$82,000/year' },
+    { region: 'South Africa', range: 'R180,000 – R320,000/year' },
+  ],
   remoteFriendly: 'Hybrid',
   difficulty: 'Beginner',
   faqs: [
@@ -133,15 +139,15 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
     },
     {
       q: 'CAPM, PRINCE2, or Google Project Management Certificate first?',
-      a: 'For SA corporate environments, PRINCE2 Foundation has the highest recognition in government and financial services. CAPM is more international. Google PM is the most accessible if you are entirely self-funded. Pick based on the industry you are targeting and your budget.',
+      a: 'PRINCE2 Foundation has strong recognition in government and financial services, particularly in regulated environments. CAPM is widely recognised internationally. Google PM is the most accessible if you are entirely self-funded. Pick based on the industry you are targeting and your budget.',
     },
     {
       q: 'Do I need to know JIRA before applying?',
-      a: 'Yes for any IT or tech-adjacent role. JIRA fluency is the most commonly listed tool requirement in SA project coordinator job specs. The Atlassian University free training plus a few hours of practice in a free JIRA Cloud account is enough to interview confidently.',
+      a: 'Yes for any IT or tech-adjacent role. JIRA fluency is the most commonly listed tool requirement in project coordinator job specs. The Atlassian University free training plus a few hours of practice in a free JIRA Cloud account is enough to interview confidently.',
     },
     {
       q: 'Can a project coordinator work remotely?',
-      a: 'Hybrid is the SA norm because the role often involves on-site meeting facilitation and informal corridor conversations that move projects forward. Fully remote PC roles exist at distributed tech companies but are less common at traditional corporates.',
+      a: 'Hybrid is common because the role often involves on-site meeting facilitation and informal corridor conversations that move projects forward. Fully remote coordinator roles exist at distributed tech companies but are less common at traditional corporates.',
     },
     {
       q: 'Is project coordination a good route into Scrum Master?',
@@ -170,7 +176,7 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
     },
     {
       mistake: 'Treating JIRA, Asana, and MS Project as interchangeable',
-      fix: 'They have different mental models. Become genuinely fluent in one (whichever your target employers use most) rather than shallowly aware of all three. Most SA tech roles require JIRA specifically.',
+      fix: 'They have different mental models. Become genuinely fluent in one (whichever your target employers use most) rather than shallowly aware of all three. Most tech roles require JIRA specifically.',
     },
     {
       mistake: 'Avoiding hard conversations with late stakeholders',
@@ -178,7 +184,7 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
     },
     {
       mistake: 'Treating Agile and Waterfall as opposing camps',
-      fix: 'Most SA corporates use both, often in the same programme. Be fluent in the language of each, and adapt to the team you are joining rather than evangelising one approach.',
+      fix: 'Most corporate environments use both, often in the same programme. Be fluent in the language of each, and adapt to the team you are joining rather than evangelising one approach.',
     },
   ],
 };

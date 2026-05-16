@@ -83,7 +83,7 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
       name: 'CompTIA A+',
       provider: 'CompTIA',
       free: false,
-      why: 'The most recognised entry-level IT support certification globally. Covers hardware, networking, and troubleshooting. Exam costs roughly R4,000 but is almost universally listed in job postings.',
+      why: 'The most recognised entry-level IT support certification globally. Covers hardware, networking, and troubleshooting. Almost universally listed in job postings.',
     },
     {
       name: 'CompTIA Network+',
@@ -106,13 +106,19 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
     'IT policy document: draft a one-page acceptable use policy for a fictional SME',
   ],
   relatedRoadmapIds: ['data-analyst', 'web-developer', 'business-analyst'],
-  salaryRange: 'R120,000 – R220,000 per year (entry level, SA)',
+  salaryBenchmarks: [
+    { region: 'United States', range: '$38,000 – $55,000/year' },
+    { region: 'United Kingdom', range: '£22,000 – £32,000/year' },
+    { region: 'Canada', range: 'CA$40,000 – CA$55,000/year' },
+    { region: 'Australia', range: 'A$52,000 – A$72,000/year' },
+    { region: 'South Africa', range: 'R120,000 – R220,000/year' },
+  ],
   remoteFriendly: 'On-site',
   difficulty: 'Beginner',
   faqs: [
     {
       q: 'Is IT support a real career or just a stepping stone?',
-      a: 'Both. It is a fully viable long-term career (senior support, infrastructure manager, IT director) and the most common launchpad into network engineering, systems administration, and cybersecurity. Most senior IT people in SA started in support.',
+      a: 'Both. It is a fully viable long-term career (senior support, infrastructure manager, IT director) and the most common launchpad into network engineering, systems administration, and cybersecurity. Many senior IT professionals started in support.',
     },
     {
       q: 'Why is this role mostly on-site?',
@@ -120,7 +126,7 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
     },
     {
       q: 'Do I need CompTIA A+ to get hired?',
-      a: 'Not strictly, but it is the most recognised entry-level IT cert in SA and removes objections in screening. Expect to pay roughly R5,000 per exam (two exams required). Many employers will reimburse you once hired.',
+      a: 'Not strictly, but it is the most recognised entry-level IT certification globally and removes objections in screening. It is a paid certification with two exams required. Many employers will reimburse you once hired.',
     },
     {
       q: 'How important is ITIL?',
@@ -149,7 +155,7 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
     },
     {
       mistake: 'Skipping ITIL because it sounds bureaucratic',
-      fix: 'Every corporate IT department in SA runs on ITIL processes. Knowing the difference between an incident, a problem, and a change request is the price of admission. Take the free Foundations course early.',
+      fix: 'Most corporate IT departments run on ITIL or ITIL-like processes. Knowing the difference between an incident, a problem, and a change request is the price of admission to structured IT environments. Take the free Foundations course early.',
     },
     {
       mistake: 'Overinvesting in CompTIA before any practical experience',

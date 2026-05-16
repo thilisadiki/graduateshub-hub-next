@@ -5,7 +5,7 @@ import {
   Clock, TrendingUp, CheckCircle2, ChevronRight, Briefcase,
   Award, Lightbulb, Users, BookOpen, ArrowRight,
   Wallet, MapPin, Gauge, HelpCircle, CalendarDays, AlertTriangle,
-  Target,
+  Target, DollarSign,
 } from 'lucide-react';
 import AuthorByline from '@/components/shared/AuthorByline';
 import CourseCard from '@/components/course/CourseCard';
@@ -136,15 +136,30 @@ export default async function CareerRoadmapPage({
           </h1>
           <p className="text-lg text-gray-500 mb-6">{roadmap.tagline}</p>
 
+          {/* Salary Benchmarks */}
+          <div className="mb-6">
+            <div className="flex items-center gap-1.5 text-sm font-bold text-gray-700 mb-3">
+              <DollarSign size={15} className="text-gray-400 shrink-0" />
+              <span>Entry-Level Salary Benchmarks by Region</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+              {roadmap.salaryBenchmarks.map((benchmark) => (
+                <div key={benchmark.region} className="rounded-lg border border-gray-100 bg-gray-50 px-3 py-2">
+                  <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">{benchmark.region}</p>
+                  <p className="text-sm font-semibold text-gray-800">{benchmark.range}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 mb-6">
+              Broad annual benchmarks. Actual pay varies by city, company size, industry, remote status, and experience.
+            </p>
+          </div>
+
           {/* Stat pills */}
           <div className="flex flex-wrap gap-3 mb-6 text-sm">
             <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
               <Clock size={16} className="text-primary shrink-0" />
               <span className="text-gray-600">Time to job-ready: <strong className="text-gray-900">{roadmap.timeToJobReady}</strong></span>
-            </div>
-            <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
-              <Wallet size={16} className="text-primary shrink-0" />
-              <span className="text-gray-600">Salary: <strong className="text-gray-900">{roadmap.salaryRange}</strong></span>
             </div>
             <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-100">
               <TrendingUp size={16} className="text-primary shrink-0" />
