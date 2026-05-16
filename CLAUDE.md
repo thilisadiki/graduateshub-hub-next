@@ -232,6 +232,143 @@ Next.js 16 introduces breaking changes from older versions:
 3. Return JSON response
 4. Call from client-side forms or next/server functions
 
+## Security Patterns
+
+Forms (contact, feedback, etc.) implement multi-layer bot protection:
+
+### Cloudflare Turnstile (CAPTCHA)
+- Verify token server-side via `https://challenges.cloudflare.com/turnstile/v0/siteverify`
+- Gracefully degrades if `TURNSTILE_SECRET_KEY` not set
+- Returns 400 if verification fails
+
+### Honeypot Fields
+- Hidden form fields (`_hp`) that bots fill, humans don't
+- If filled, return 200 (appear successful to bot, silently discard)
+- Prevents form spam while maintaining good UX
+
+### Timing Checks
+- Reject submissions under 3 seconds (minimum `MIN_SUBMIT_MS`)
+- Bots submit instantly; humans take time to read and fill
+- Return 200 to appear successful to bot
+
+### Field Validation
+- Email regex check: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
+- Required field checks (name, email, subject, message)
+- Character limits (e.g., message < 2000 chars)
+- Return 400 with descriptive error on failure
+
+**Example Flow (Contact Form):**
+1. Parse request JSON
+2. Check honeypot (`_hp`)
+3. Check timing (`_t`, `_ts`)
+4. Validate all fields
+5. Verify Turnstile token
+6. Send email via Resend
+7. Return success or error with appropriate HTTP status
+
+## Supabase Database & RLS
+
+Supabase handles database and authentication. Key table:
+
+### portfolio_proofs
+Stores portfolio project submissions with:
+- `id` (primary key, text)
+- `task_id`, `task_title`, `task_field` (what was submitted)
+- `graduate_name`, `submission`, `submission_links` (who submitted what)
+- `evaluation` (JSONB - LLM evaluation results)
+- `created_at` (timestamp with timezone)
+
+**Indexes:** `created_at` (descending), `task_id`
+
+**Row-Level Security (RLS):**
+- Public read access via policy: `"Public read portfolio proofs"`
+- Public cannot insert/update/delete
+- Writes only via API route using service role key (`SUPABASE_SERVICE_ROLE_KEY`)
+- This prevents direct user manipulation while allowing portfolio showcase
+
+**Schema location:** `/supabase/schema.sql`
+
+## API Error Handling Pattern
+
+All API routes follow consistent error handling:
+
+### Graceful Degradation
+- If external service key missing (e.g., `RESEND_API_KEY`), log warning and return success
+- Prevents app crashes when services aren't fully configured
+- Useful for development and staging
+
+### HTTP Status Codes
+- `200` – Success OR bot-like submission (silently discard)
+- `400` – Validation failure or security check failed (user-facing error)
+- `500` – Unexpected server error
+
+### Error Logging
+- Use prefix for debugging: `[Feature Name]` (e.g., `[Contact Form]`)
+- Log to console with context (name, email, error details)
+- Example: `console.error('[Contact Form] Resend error:', error)`
+
+### Response Format
+```json
+// Success
+{ "success": true }
+
+// Error
+{ "error": "User-facing error message." }
+```
+
+## External Service Integrations
+
+### Google Gemini API
+**Purpose:** LLM calls for intelligent features
+**Used in:**
+- `/api/cv-review/` – Analyze user CV
+- `/api/recommendations/` – Course recommendations
+- `/api/learning-path/` – Custom learning path
+- `/api/interview-prep/` – Interview simulation
+- `/api/skills-gap/` – Skills gap analysis
+- `/api/jd-decoder/` – Job description analysis
+
+**Key:** `GEMINI_API_KEY`
+**SDK:** `@google/genai`
+
+### Resend
+**Purpose:** Transactional email delivery
+**Used in:**
+- `/api/contact/` – Contact form submissions
+- Any other email notifications
+
+**Key:** `RESEND_API_KEY`
+**From address:** `noreply@graduateshub.org`
+**Reply-to:** User's email (allows direct replies)
+**Template:** HTML emails with inline styling
+
+### Cloudflare Turnstile
+**Purpose:** Bot protection for forms
+**Flow:**
+1. Frontend sends CAPTCHA token with form
+2. Backend verifies token against Cloudflare API
+3. Return 400 if verification fails
+
+**Keys:**
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (frontend)
+- `TURNSTILE_SECRET_KEY` (backend/server-side)
+
+### OneSignal
+**Purpose:** Push notifications for user engagement
+**Hardcoded app ID:** `ab8387b0-92e7-4da6-9596-ccef9aae0600`
+**Initialization:** `/components/layout/OneSignalInit.tsx`
+**Behavior:** Lazy-loaded client-side, enables notification opt-in button (bottom-left)
+**Note:** App ID is not secret; it's safe to hardcode
+
+### Supabase
+**Purpose:** Database and authentication
+**Keys:**
+- `NEXT_PUBLIC_SUPABASE_URL` (frontend access)
+- `SUPABASE_SERVICE_ROLE_KEY` (server-side, for API routes)
+
+**Auth:** Used for portfolio submissions, feedback
+**Database:** `portfolio_proofs` table with RLS
+
 ## No Test Suite
 
 Currently, there are no automated tests (Jest, Vitest, etc.). Validation relies on:
