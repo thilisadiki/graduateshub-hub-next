@@ -5,7 +5,7 @@ import { portfolioTasks } from '@/data/portfolioTasks';
 import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
 import { BreadcrumbList, ItemList, WebPage, WithContext } from 'schema-dts';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Proof of Work Portfolio for SA Graduates — Graded Micro-Internship Tasks',
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'Complete short, practical micro-internship tasks graded against a public rubric and earn a shareable Badge of Competence for your LinkedIn. Built for South African graduates and career changers. No account required.',
   alternates: { canonical: `${SITE_URL}/portfolio` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Proof of Work Portfolio | Graduates Hub',
     description:
       'Most graduates have a CV. Very few have a portfolio. Complete practical tasks, get them graded, and earn a shareable Badge of Competence.',

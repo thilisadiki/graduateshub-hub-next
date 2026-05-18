@@ -17,7 +17,7 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/first-graduate-job-south-africa`;
 
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'A step-by-step guide for SA graduates on landing their first job. Learn how to write a standout CV, build in-demand skills, prepare for interviews, and navigate the South African job market.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'How to Get Your First Graduate Job in South Africa (2026) | Graduates Hub',
     description:
       'A step-by-step guide for SA graduates on landing their first job. Learn how to write a standout CV, build in-demand skills, prepare for interviews, and navigate the South African job market.',

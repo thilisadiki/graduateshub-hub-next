@@ -5,7 +5,7 @@ import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
 import CourseCarousel from '@/components/course/CourseCarousel';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Free Online Courses by Subject Area (2026)',
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',
   alternates: { canonical: `${SITE_URL}/categories` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Free Online Courses by Subject Area (2026) | Graduates Hub',
     description:
       'Browse free online courses across IT, Software Engineering, Business, Accounting, and Marketing. Every subject area is curated by a named specialist and updated for 2026.',

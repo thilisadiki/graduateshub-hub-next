@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const revalidate = 300;
 
@@ -28,6 +28,7 @@ export async function generateMetadata({
       'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',
     alternates: { canonical: url },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${title} | Graduates Hub`,
       description:
         'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',

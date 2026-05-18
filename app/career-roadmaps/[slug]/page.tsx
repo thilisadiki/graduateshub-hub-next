@@ -15,7 +15,7 @@ import { interviewPreps } from '@/data/interviewPrep';
 import { courses } from '@/data/courses';
 import { portfolioTasks, getTaskUrl } from '@/data/portfolioTasks';
 import type { AuthorKey, CareerRoadmap } from '@/types';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return roadmaps.map((r) => ({ slug: r.id }));
@@ -34,6 +34,7 @@ export async function generateMetadata({
     description: roadmap.description,
     alternates: { canonical: `${SITE_URL}/career-roadmaps/${roadmap.id}` },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${roadmap.title} (2026) | Graduates Hub`,
       description: roadmap.description,
       url: `${SITE_URL}/career-roadmaps/${roadmap.id}`,

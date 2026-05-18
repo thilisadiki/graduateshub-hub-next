@@ -19,7 +19,8 @@
       "Bash(curl -sI -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" https://graduateshub.co.za/)",
       "Bash(curl -sI -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" https://www.graduateshub.co.za/blog/alison-vs-coursera-which-is-better-2026-complete-guide)",
       "Bash(dig +short graduateshub.co.za)",
-      "Bash(dig +short NS graduateshub.co.za)"
+      "Bash(dig +short NS graduateshub.co.za)",
+      "Bash(npm audit *)"
     ]
   }
 }

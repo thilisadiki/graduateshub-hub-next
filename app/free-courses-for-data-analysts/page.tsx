@@ -4,7 +4,7 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/free-courses-for-data-analysts`;
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis, all free with certificates. No degree required.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Best Free Courses for Data Analysts (2026) | Graduates Hub',
     description:
       'Discover the best free courses for data analysts in 2026. Learn SQL, Python, databases, and financial analysis, all free with certificates. No degree required.',

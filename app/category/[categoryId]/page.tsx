@@ -5,7 +5,7 @@ import { categories } from '@/data/categories';
 import { formatCategoryName } from '@/utils/formatters';
 import { categoryContent } from '@/data/categoryContent';
 import CategoryContent from './CategoryContent';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const dynamicParams = false;
 
@@ -51,6 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryI
     description: custom?.description ?? `Browse completely free, high-quality online ${categoryName} courses leading to CPD-accredited certificates and diplomas.`,
     alternates: { canonical: `${SITE_URL}/category/${categoryId}` },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${title} | Graduates Hub`,
       description: custom?.description ?? `Browse completely free, high-quality online ${categoryName} courses leading to CPD-accredited certificates and diplomas.`,
       url: `${SITE_URL}/category/${categoryId}`,

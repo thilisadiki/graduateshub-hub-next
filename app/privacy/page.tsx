@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Our Privacy Policy explains how Graduates Hub collects, uses, and protects your personal information in compliance with the Protection of Personal Information Act (POPIA), Act 4 of 2013.',
   alternates: { canonical: `${SITE_URL}/privacy` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Privacy Policy | Graduates Hub',
     description: 'Our Privacy Policy explains how Graduates Hub collects, uses, and protects your personal information in compliance with the Protection of Personal Information Act (POPIA), Act 4 of 2013.',
     url: `${SITE_URL}/privacy`,

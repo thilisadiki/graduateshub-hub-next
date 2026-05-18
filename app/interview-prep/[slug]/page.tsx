@@ -10,7 +10,7 @@ import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { interviewPreps } from '@/data/interviewPrep';
 import { roadmaps } from '@/data/roadmaps';
 import type { AuthorKey } from '@/types';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return interviewPreps.map((p) => ({ slug: p.id }));
@@ -29,6 +29,7 @@ export async function generateMetadata({
     description: prep.description,
     alternates: { canonical: `${SITE_URL}/interview-prep/${prep.id}` },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${prep.role} CV & Interview Prep (2026) | Graduates Hub`,
       description: prep.description,
       url: `${SITE_URL}/interview-prep/${prep.id}`,

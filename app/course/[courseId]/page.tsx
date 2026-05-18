@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { courses } from '@/data/courses';
 import { formatCategoryName, courseCategoryHref } from '@/utils/formatters';
 import CourseDetailsContent from './CourseDetailsContent';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return courses.map(course => ({ courseId: course.id }));
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ courseId:
     description: course.description,
     alternates: { canonical: `${SITE_URL}/course/${course.id}` },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${course.title} - Free Online Course | Graduates Hub`,
       description: course.description,
       url: `${SITE_URL}/course/${course.id}`,

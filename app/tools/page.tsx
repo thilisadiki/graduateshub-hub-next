@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Sparkles, CheckCircle, Users, GraduationCap, Briefcase, RefreshCw, HelpCircle } from 'lucide-react';
 import ToolsGrid from './ToolsGrid';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Free AI Career Tools: CV Reviewer, Interview Prep, Skills Gap Analyser and More',
   description: '7 free AI-powered career tools for job seekers and graduates: CV reviewer, interview prep generator, skills gap analyser, learning path builder, course recommender, job description decoder, and career quiz. No sign-up required.',
   alternates: { canonical: `${SITE_URL}/tools` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Free AI Career Tools | Graduates Hub',
     description: '7 free tools to plan your career, review your CV, prep for interviews, and find the right courses. Powered by Google Gemini. No account needed.',
     url: `${SITE_URL}/tools`,

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FeedbackForm from './FeedbackForm';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Share Your Feedback',
   description: 'Help us improve the free course directory for South African graduates. Tell us what you think - takes about 60 seconds.',
   alternates: { canonical: `${SITE_URL}/feedback` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Share Your Feedback - Graduates Hub',
     description: 'Help us improve the free course directory for South African graduates. Tell us what you think - takes about 60 seconds.',
     url: `${SITE_URL}/feedback`,

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclosure',
   description: 'Information regarding the affiliate relationships and compensation associated with courses listed on Graduates Hub.',
   alternates: { canonical: `${SITE_URL}/disclosure` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Affiliate Disclosure | Graduates Hub',
     description: 'Information regarding the affiliate relationships and compensation associated with courses listed on Graduates Hub.',
     url: `${SITE_URL}/disclosure`,

@@ -4,7 +4,7 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/best-alison-courses-with-certificates`;
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     '20 best free Alison courses with CPD certificates. Learn business, IT, marketing & finance. Self-paced, 100% free, no deadlines. Expert curated for 2026.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Best Alison Courses With Free Certificates (2026): 20 Worth Your Time | Graduates Hub',
     description:
       '20 best free Alison courses with CPD certificates. Learn business, IT, marketing & finance. Self-paced, 100% free, no deadlines. Expert curated for 2026.',

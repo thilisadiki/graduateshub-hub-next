@@ -8,7 +8,7 @@ import { getTopicById } from '@/data/portfolioTopics';
 import type { PortfolioLevel } from '@/types';
 import SubmissionForm from './SubmissionForm';
 import { BreadcrumbList, LearningResource, WithContext } from 'schema-dts';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 const LEVELS: PortfolioLevel[] = ['beginner', 'intermediate', 'advanced'];
 
@@ -48,6 +48,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}/${level}` },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${task.title} | Graduates Hub Portfolio`,
       description,
       url: `${SITE_URL}/portfolio/${category}/${topic}/${level}`,

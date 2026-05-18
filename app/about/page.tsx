@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BookOpen, Users, Award, Heart, ArrowRight, Newspaper, ExternalLink } from 'lucide-react';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'About Graduates Hub – Meet the Team',
   description: 'Graduates Hub is co-founded by Jason Sadiki (Technical SEO Specialist & Web Developer) and Ndulamiso Mamburu (Accounting Science Graduate, SARS). Real credentials behind every resource.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'About Graduates Hub – Meet the Team',
     description: 'Graduates Hub is co-founded by Jason Sadiki (Technical SEO Specialist & Web Developer) and Ndulamiso Mamburu (Accounting Science Graduate, SARS). Real credentials behind every resource.',
     url: `${SITE_URL}/about`,

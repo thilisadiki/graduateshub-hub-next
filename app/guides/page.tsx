@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } from 'lucide-react';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Online Course Guides for 2026',
   description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
   alternates: { canonical: `${SITE_URL}/guides` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Online Course Guides for 2026 | Graduates Hub',
     description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
     url: `${SITE_URL}/guides`,

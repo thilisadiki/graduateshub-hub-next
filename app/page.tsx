@@ -10,7 +10,7 @@ import AIToolsBanner from '@/components/home/AIToolsBanner';
 import PortfolioBanner from '@/components/home/PortfolioBanner';
 import { categories } from '@/data/categories';
 import { popularGuides } from '@/data/navigation';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const revalidate = 300;
 
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
     description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
     url: `${SITE_URL}/`,

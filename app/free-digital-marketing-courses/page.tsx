@@ -4,7 +4,7 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/free-digital-marketing-courses`;
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking, all free, all beginner-friendly.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Best Free Courses for Digital Marketing Careers (2026) | Graduates Hub',
     description:
       'Discover the best free digital marketing courses in 2026. Learn SEO, content marketing, paid ads, conversion strategy, and growth hacking, all free, all beginner-friendly.',

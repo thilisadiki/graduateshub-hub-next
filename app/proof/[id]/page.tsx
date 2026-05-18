@@ -7,7 +7,7 @@ import { getSupabase } from '@/utils/supabase';
 import { getTaskById } from '@/data/portfolioTasks';
 import type { PortfolioProof } from '@/types';
 import ShareButtons from './ShareButtons';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const getProof = cache(async (id: string): Promise<PortfolioProof | null> => {
   try {
@@ -46,6 +46,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `${SITE_URL}/proof/${proof.id}` },
     openGraph: {
+      siteName: SITE_NAME,
       title,
       description,
       url: `${SITE_URL}/proof/${proof.id}`,

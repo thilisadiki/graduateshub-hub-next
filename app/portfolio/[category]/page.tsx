@@ -7,7 +7,7 @@ import { getTopicsByCategory } from '@/data/portfolioTopics';
 import { getTasksByTopic } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return portfolioCategories.map((c) => ({ category: c.id }));
@@ -29,6 +29,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}` },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${cat.name} Portfolio Tasks | Graduates Hub`,
       description,
       url: `${SITE_URL}/portfolio/${cat.id}`,

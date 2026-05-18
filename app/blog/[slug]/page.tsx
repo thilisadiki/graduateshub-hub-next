@@ -7,7 +7,7 @@ import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
 import DOMPurify from 'isomorphic-dompurify';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 export const revalidate = 3600;   // regenerate cached posts every hour
 export const dynamicParams = true; // posts published after build still work
@@ -126,6 +126,7 @@ export async function generateMetadata({
       'max-image-preview': 'large',
     },
     openGraph: {
+      siteName: SITE_NAME,
       title: post.title.rendered,
       description,
       url: `${SITE_URL}/blog/${slug}`,

@@ -5,7 +5,7 @@ import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/free-courses-with-certificates`;
 
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Best Free Online Courses with Certificates (2026) | Graduates Hub',
     description:
       'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',

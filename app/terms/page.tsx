@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Read the Terms of Service for Graduates Hub. Information about your use of our platform and resources.',
   alternates: { canonical: `${SITE_URL}/terms` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Terms of Service | Graduates Hub',
     description: 'Read the Terms of Service for Graduates Hub. Information about your use of our platform and resources.',
     url: `${SITE_URL}/terms`,

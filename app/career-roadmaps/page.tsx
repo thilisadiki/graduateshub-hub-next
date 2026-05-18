@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, TrendingUp, ChevronRight, Map } from 'lucide-react';
 import { roadmaps } from '@/data/roadmaps';
 import type { CareerRoadmap } from '@/types';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Career Roadmaps: How to Break Into Any Field',
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Step-by-step career roadmaps for data analysis, IT support, web development, digital marketing, accounting, and business analysis. Curated by working professionals. Free to follow.',
   alternates: { canonical: `${SITE_URL}/career-roadmaps` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'Career Roadmaps: How to Break Into Any Field | Graduates Hub',
     description:
       'Step-by-step career roadmaps for data analysis, IT support, web development, digital marketing, accounting, and business analysis. Curated by working professionals. Free to follow.',

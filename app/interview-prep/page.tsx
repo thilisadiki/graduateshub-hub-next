@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FileText, ChevronRight, DollarSign } from 'lucide-react';
 import { interviewPreps } from '@/data/interviewPrep';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'CV & Interview Prep for Entry-Level Roles',
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     'Field-specific CV and interview prep for entry-level roles, with practical questions, CV tips, and regional salary benchmarks.',
   alternates: { canonical: `${SITE_URL}/interview-prep` },
   openGraph: {
+    siteName: SITE_NAME,
     title: 'CV & Interview Prep for Entry-Level Roles | Graduates Hub',
     description:
       'Field-specific CV and interview prep for entry-level roles, with practical questions, CV tips, and regional salary benchmarks.',
