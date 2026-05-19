@@ -23,9 +23,39 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'Spreadsheets & Visualisation', description: 'Excel and Power BI are the two tools most entry-level analyst roles test on day one.', ids: ['microsoft-excel-data-analysis', 'intro-power-bi', 'mastering-financial-statement-analysis'], categoryHref: '/category/accounting', categoryLabel: 'Accounting & Finance' },
-  { label: 'SQL & Databases', description: 'SQL is the single most important technical skill for a data analyst. Start here.', ids: ['intro-database-concepts', 'diploma-databases-t-sql', 'databases-dml-sql-server'], categoryHref: '/category/it', categoryLabel: 'IT & Technology' },
-  { label: 'Python for Data', description: 'Python handles datasets, automates reporting, and unlocks machine learning.', ids: ['python-for-beginners-data', 'diploma-python-programming', 'machine-learning-with-ai'], categoryHref: '/category/software-engineering', categoryLabel: 'Software Development' },
+  {
+    label: 'Spreadsheets & Visualisation',
+    description: 'Excel and Power BI are the two tools most entry-level analyst roles test on day one.',
+    categoryHref: '/category/accounting',
+    categoryLabel: 'Accounting & Finance',
+    items: [
+      { id: 'microsoft-excel-data-analysis', customContent: 'Excel remains the undisputed backbone of corporate data analytics, and most entry-level interviews will test your spreadsheet proficiency before anything else. This comprehensive course skips the basic data entry and dives straight into the advanced analytical tools that employers actually care about. You will learn how to write complex nested formulas, master VLOOKUP and XLOOKUP functions, and build dynamic pivot tables that can summarize thousands of rows of data instantly. By the end of this course, you will be able to take messy, unstructured datasets and transform them into clean, actionable business reports that drive decision-making.' },
+      { id: 'intro-power-bi', customContent: 'Once your data is clean and analyzed, you need to present it in a way that non-technical stakeholders can easily understand. This beginner-friendly course introduces you to Microsoft Power BI, one of the most widely used business intelligence tools in the corporate world. You will learn how to connect raw data sources, build relational data models, and create interactive, visually compelling dashboards. Understanding how to tell a story with data through dynamic charts and graphs is what separates a good analyst from a great one, and this course provides the perfect starting point.' },
+      { id: 'mastering-financial-statement-analysis', customContent: 'Data analysts do not work in a vacuum; they often collaborate closely with finance and operations teams to evaluate corporate performance. This specialized course bridges the gap between raw data analysis and financial literacy. You will learn how to read, interpret, and extract insights from balance sheets, income statements, and cash flow reports. Developing this commercial awareness allows you to translate data trends into tangible business outcomes, making you a highly valuable asset to management teams and financial directors.' }
+    ]
+  },
+  {
+    label: 'SQL & Databases',
+    description: 'SQL is the single most important technical skill for a data analyst. Start here.',
+    categoryHref: '/category/it',
+    categoryLabel: 'IT & Technology',
+    items: [
+      { id: 'intro-database-concepts', customContent: 'Before you can write complex queries to extract data, you must understand how modern relational databases are fundamentally structured. This foundational course covers the core architecture of databases, explaining critical concepts like primary keys, foreign keys, table schemas, and data normalization. It lays the essential groundwork for understanding how data is stored, organized, and linked across different tables, ensuring that when you do start writing SQL, you understand exactly how the underlying system is executing your requests.' },
+      { id: 'diploma-databases-t-sql', customContent: 'SQL (Structured Query Language) is the single most important technical skill for any data analyst, period. This comprehensive diploma moves you from writing basic SELECT statements to mastering complex JOINs, subqueries, and data aggregation techniques using T-SQL. You will gain the fluency needed to extract precisely the data you need from massive, multi-table corporate databases. Employers expect analysts to be entirely self-sufficient when pulling data, and this diploma provides the rigorous, practical training required to meet that expectation on day one.' },
+      { id: 'databases-dml-sql-server', customContent: 'While extracting data is crucial, understanding how to manipulate it safely is equally important. This course focuses specifically on Data Manipulation Language (DML) within a SQL Server environment. You will learn the correct procedures for safely inserting new records, updating existing data, and executing controlled deletions without risking dataset corruption. This knowledge of database integrity and safe data handling practices is highly attractive to hiring managers who need analysts they can trust with production databases.' }
+    ]
+  },
+  {
+    label: 'Python for Data',
+    description: 'Python handles datasets, automates reporting, and unlocks machine learning.',
+    categoryHref: '/category/software-engineering',
+    categoryLabel: 'Software Development',
+    items: [
+      { id: 'python-for-beginners-data', customContent: 'As datasets grow too large for Excel to handle efficiently, Python has rapidly become the programming language of choice for data professionals. This accessible primer introduces you to Python syntax and core data structures, specifically focusing on how the language is used to automate repetitive data tasks. You will learn how to set up your environment, write basic scripts, and understand how Python can drastically reduce the time spent on manual data cleaning and processing.' },
+      { id: 'diploma-python-programming', customContent: 'Taking your skills to the next level, this comprehensive diploma dives deeper into Python\'s powerful capabilities. You will master the logic and scripting techniques required to interact with external APIs, scrape web data, and handle complex data transformations. It covers essential programming concepts like loops, conditional logic, and error handling, giving you the robust technical foundation needed to utilize advanced data science libraries like Pandas and NumPy in your future projects.' },
+      { id: 'machine-learning-with-ai', customContent: 'For ambitious analysts looking to future-proof their careers, moving from historical data analysis to predictive modeling is the natural next step. This introductory course demystifies machine learning, showing you how algorithms can recognize complex patterns within large datasets. You will explore the differences between supervised and unsupervised learning, and understand how predictive models are trained, tested, and deployed to forecast future trends and behaviors in real-world business scenarios.' }
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [

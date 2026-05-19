@@ -23,10 +23,50 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'Web Development', description: 'Master the foundational and full-stack web development skills every developer needs.', ids: ['html-css-web-dev', 'diploma-html5-css3-javascript', 'diploma-ecommerce-web-dev'], categoryHref: '/category/software-engineering', categoryLabel: 'Software Development' },
-  { label: 'Programming Languages', description: 'Build fluency in the languages that power modern software, Python, Java, and C#.', ids: ['java-programming-basics', 'python-flask-docker', 'diploma-csharp-fundamentals'], categoryHref: '/category/software-engineering', categoryLabel: 'Software Development' },
-  { label: 'Engineering Practices', description: 'Learn Agile, project management, and DevOps, the workflows used in every professional team.', ids: ['agile-essentials', 'understanding-software-project-management', 'intro-devops'], categoryHref: '/category/software-engineering', categoryLabel: 'Software Development' },
-  { label: 'Advanced Development', description: 'Take your skills further with architecture, microservices, and AI-assisted development.', ids: ['microservices-beginners', 'vibe-coding-basics', 'become-software-architect'], categoryHref: '/category/software-engineering', categoryLabel: 'Software Development' },
+  {
+    label: 'Web Development',
+    description: 'Master the foundational and full-stack web development skills every developer needs.',
+    categoryHref: '/category/software-engineering',
+    categoryLabel: 'Software Development',
+    items: [
+      { id: 'html-css-web-dev', customContent: 'Every software developer needs to understand how the web is built, making this the absolute starting point for your journey into front-end development. This course provides a deep dive into semantic HTML markup and responsive CSS styling, ensuring your web pages look professional and function flawlessly across both desktop and mobile devices. You will learn modern layout techniques like Flexbox and CSS Grid, empowering you to translate design mockups into pixel-perfect, accessible code that forms the foundation of any web application.' },
+      { id: 'diploma-html5-css3-javascript', customContent: 'This comprehensive diploma packages a full frontend developer toolkit into one intensive program. It bridges the critical gap between building static web pages and creating interactive, dynamic web applications. You will learn how to use JavaScript to manipulate the Document Object Model (DOM), handle user events, and manage application state. By mastering these core web technologies together, you will be capable of building responsive interfaces that provide smooth, modern user experiences without relying entirely on heavy external frameworks.' },
+      { id: 'diploma-ecommerce-web-dev', customContent: 'Moving beyond basic websites, this course teaches you how to architect and build fully functional, transactional web applications. Focusing on the complex architecture of e-commerce platforms, you will learn how to design shopping cart functionality, manage secure user authentication sessions, and understand the foundational concepts behind payment gateway integrations. This practical, project-focused approach demonstrates to employers that you can build applications that directly drive revenue and handle complex user flows.' }
+    ]
+  },
+  {
+    label: 'Programming Languages',
+    description: 'Build fluency in the languages that power modern software, Python, Java, and C#.',
+    categoryHref: '/category/software-engineering',
+    categoryLabel: 'Software Development',
+    items: [
+      { id: 'java-programming-basics', customContent: 'Java remains a dominant, battle-tested language in enterprise software, banking, and large-scale backend systems. This thorough course introduces you to the core principles of object-oriented programming (OOP), including inheritance, polymorphism, and encapsulation. You will learn how to structure robust, scalable back-end applications, manage memory effectively, and write code that meets the strict performance and security standards required by large corporate employers.' },
+      { id: 'python-flask-docker', customContent: 'This course introduces you to a highly popular, modern back-end technology stack. You will learn how to use Python and the lightweight Flask framework to build fast, secure web APIs from scratch. Crucially, the course also covers containerization using Docker, teaching you how to package your applications into predictable, isolated environments. This ensures that your code runs consistently across development, testing, and production servers—a skill that is absolutely essential in modern cloud-based development teams.' },
+      { id: 'diploma-csharp-fundamentals', customContent: 'C# and the broader .NET ecosystem power countless corporate systems, Windows applications, and enterprise web services globally. This in-depth diploma builds a rigorous foundation in C# syntax, strong type safety, and advanced backend application logic. You will learn how to leverage the extensive .NET libraries to build scalable, secure applications, making you a highly attractive candidate for enterprise software roles that demand structural discipline and high performance.' }
+    ]
+  },
+  {
+    label: 'Engineering Practices',
+    description: 'Learn Agile, project management, and DevOps, the workflows used in every professional team.',
+    categoryHref: '/category/software-engineering',
+    categoryLabel: 'Software Development',
+    items: [
+      { id: 'agile-essentials', customContent: 'In the professional world, writing code is only half the job; the other half is collaborating effectively within a team environment. This vital course covers the principles of Agile methodologies, including Scrum frameworks, sprint planning, and daily stand-ups. You will gain the professional vocabulary and workflow understanding needed to integrate seamlessly into modern development teams, allowing you to participate actively in product planning and iterative software delivery from your very first week on the job.' },
+      { id: 'understanding-software-project-management', customContent: 'To become a truly effective developer, you need to understand how software moves from a client\'s initial request to a fully deployed product. This course provides a high-level view of the Software Development Life Cycle (SDLC). You will learn how technical leads estimate project timelines, manage scope creep, prioritize feature backlogs, and effectively communicate technical constraints to non-technical stakeholders—skills that are critical as you progress toward senior or lead developer roles.' },
+      { id: 'intro-devops', customContent: 'The modern software industry has bridged the traditional gap between writing code (development) and deploying it (operations). This essential introduction to DevOps culture covers the fundamentals of continuous integration and continuous deployment (CI/CD) pipelines. You will learn the importance of automated testing, version control integration, and infrastructure as code, understanding how high-performing engineering teams are able to safely ship new features to users multiple times a day.' }
+    ]
+  },
+  {
+    label: 'Advanced Development',
+    description: 'Take your skills further with architecture, microservices, and AI-assisted development.',
+    categoryHref: '/category/software-engineering',
+    categoryLabel: 'Software Development',
+    items: [
+      { id: 'microservices-beginners', customContent: 'Traditional, monolithic application architectures are rapidly being replaced by more scalable microservices. This forward-looking course explains the theory and practice of breaking down large, unwieldy applications into small, independent services that communicate seamlessly via APIs. You will learn about service discovery, fault tolerance, and API gateways, gaining a strong conceptual understanding of how modern tech giants architect their global platforms to handle massive user loads.' },
+      { id: 'vibe-coding-basics', customContent: 'The landscape of software engineering is shifting with the rapid adoption of AI-assisted development tools. This cutting-edge course explores how to leverage large language models (LLMs) and AI coding assistants to dramatically increase your development velocity. You will learn how to generate boilerplate code instantly, debug complex logic errors faster, and write effective prompts that allow you to focus on high-level architecture and problem-solving rather than rote syntax memorization.' },
+      { id: 'become-software-architect', customContent: 'This advanced course encourages you to step back from writing individual lines of code and look at the system as a whole. It introduces the fundamental principles of high-level system design, teaching you how to make critical decisions regarding scalability, security, and database selection. You will learn how to evaluate trade-offs between different tech stacks and design architectures that can support business growth, preparing you for senior technical leadership and architectural roles.' }
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [

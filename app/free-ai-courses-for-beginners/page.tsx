@@ -27,16 +27,24 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'AI Fundamentals',
     description: 'Start with the core concepts, what AI is, how it works, and where it is headed.',
-    ids: ['diploma-fundamentals-ai', 'diploma-applied-generative-ai', 'machine-learning-with-ai'],
     categoryHref: '/category/software-engineering',
     categoryLabel: 'AI & ML',
+    items: [
+      { id: 'diploma-fundamentals-ai', customContent: 'If you are completely new to the world of artificial intelligence, this is exactly where you should start. This comprehensive diploma strips away the media hype and sci-fi tropes to explain the core mathematical and logical mechanics of AI in plain, accessible English. You will gain a solid, foundational understanding of how machine learning algorithms operate, what neural networks actually are, and how these systems process data to make decisions. It provides the critical context needed before you start using or building AI tools yourself.' },
+      { id: 'diploma-applied-generative-ai', customContent: 'Moving from theoretical concepts to immediate, practical application, this course focuses on the tools that are reshaping the modern workplace. You will learn how to effectively use powerful generative models like ChatGPT, Claude, and Midjourney to accelerate your daily tasks. The curriculum places a heavy emphasis on advanced prompt engineering—teaching you how to structure your requests to get precise, high-quality outputs—and explores how to integrate these generative AI capabilities seamlessly into your existing business workflows and creative processes.' },
+      { id: 'machine-learning-with-ai', customContent: 'This course provides a gentle, structured introduction to the core engine behind modern AI: how machines actually learn from data. You will explore the critical differences between supervised learning (training models on labeled data) and unsupervised learning (finding hidden patterns in raw data). By understanding how algorithms evaluate data, adjust their parameters, and improve their accuracy over time, you will develop a clear, intuitive understanding of the mechanisms that power everything from recommendation engines to fraud detection systems.' }
+    ]
   },
   {
     label: 'Tech Skills for AI',
     description: 'Build the foundational data and programming skills that underpin every AI system.',
-    ids: ['python-flask-docker', 'databases-dml-sql-server', 'diploma-foundations-cognitive-robotics'],
     categoryHref: '/category/software-engineering',
     categoryLabel: 'AI & ML',
+    items: [
+      { id: 'python-flask-docker', customContent: 'Python is universally recognized as the lingua franca of the artificial intelligence and data science communities. While it is possible to use consumer AI tools without knowing how to code, learning Python unlocks the ability to build custom AI solutions. This course provides the foundational programming skills needed to interact programmatically with APIs (like OpenAI\'s), process and clean large datasets at scale, and eventually build and deploy your own lightweight AI-powered web applications using Flask and Docker.' },
+      { id: 'databases-dml-sql-server', customContent: 'The secret behind every successful artificial intelligence model is the quality and quantity of the data it was trained on. This essential course teaches you how to interact with large-scale relational databases using SQL. You will learn how to write efficient queries to extract specific datasets, manipulate records, and structure data in a way that is ready for machine learning ingestion. Mastering database management is an absolutely critical skill for anyone looking to prepare training data or work seriously in the AI space.' },
+      { id: 'diploma-foundations-cognitive-robotics', customContent: 'This fascinating, forward-looking diploma explores the physical application of artificial intelligence. It examines the exciting intersection between hardware engineering and cognitive AI, covering how artificial intelligence is applied to physical systems, sensors, and automated decision-making in the real world. You will learn about computer vision, spatial awareness, and how robotic systems process environmental data to navigate and interact with their physical surroundings intelligently.' }
+    ]
   },
 ];
 
