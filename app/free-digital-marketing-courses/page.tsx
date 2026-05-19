@@ -23,10 +23,45 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'Marketing Fundamentals', slug: 'marketing', description: 'Understand the strategy, channels, and core concepts behind digital marketing before you specialise.', ids: ['basic-concepts-of-digital-marketing', 'digital-marketing-overview', 'digital-marketing'] },
-  { label: 'Social Media Marketing', slug: 'marketing', description: 'Build, manage, and grow brand presence across Facebook, Instagram, and every major social platform.', ids: ['diploma-social-media-strategy', 'social-media-marketing-course', 'facebook-marketing-foundations'] },
-  { label: 'Content Marketing & SEO', slug: 'marketing', description: 'Create content that actually gets found, covering YouTube SEO, content strategy, and Instagram growth.', ids: ['youtube-marketing-seo', 'content-creation-strategy', 'instagram-marketing-hashtags'] },
-  { label: 'Growth & Conversion', slug: 'marketing', description: 'Take your skills further, learn how to grow audiences fast and turn traffic into paying customers.', ids: ['growth-hacking-techniques-for-digital-marketing', 'using-digital-marketing-to-convert-customers'] },
+  {
+    label: 'Marketing Fundamentals',
+    slug: 'marketing',
+    description: 'Understand the strategy, channels, and core concepts behind digital marketing before you specialise.',
+    items: [
+      { id: 'basic-concepts-of-digital-marketing', customContent: 'The perfect starting point for any aspiring marketer. This course cuts through the industry jargon to explain exactly how digital marketing functions as a cohesive system. You will learn how businesses define their target audiences, choose the right digital channels, and measure success, giving you the strategic overview needed before diving into specialized technical skills.' },
+      { id: 'digital-marketing-overview', customContent: 'A rapid, broad-spectrum introduction to the modern marketing toolkit. This course touches on the mechanics of SEO, the logic behind pay-per-click advertising, and the importance of email marketing. It provides a foundational understanding of the digital ecosystem, making it an excellent primer for small business owners or those exploring a career change.' },
+      { id: 'digital-marketing', customContent: 'A deeper dive into executing comprehensive marketing strategies. This course teaches you how to align digital campaigns with broader business objectives. You will learn how to allocate budgets across different channels, create detailed buyer personas, and understand the customer journey from initial brand awareness through to final purchase and retention.' }
+    ]
+  },
+  {
+    label: 'Social Media Marketing',
+    slug: 'marketing',
+    description: 'Build, manage, and grow brand presence across Facebook, Instagram, and every major social platform.',
+    items: [
+      { id: 'diploma-social-media-strategy', customContent: 'Moving beyond simply posting content, this comprehensive diploma teaches the science of audience growth and brand management. You will learn how to conduct competitor analysis, develop a consistent brand voice, and manage crisis communications across platforms. Earning this diploma proves you can manage a brand\'s public reputation strategically and safely.' },
+      { id: 'social-media-marketing-course', customContent: 'A practical, platform-focused course. You will learn the specific algorithms, content formats, and best practices for major networks like Facebook, Twitter, and LinkedIn. It covers the crucial difference between organic reach and paid promotion, teaching you how to build engaged communities and drive targeted traffic back to a company website.' },
+      { id: 'facebook-marketing-foundations', customContent: 'Meta (Facebook and Instagram) remains the most powerful advertising platform in the world. This specialized course focuses entirely on mastering the Facebook ecosystem. You will learn how to set up business pages correctly, understand audience targeting, and run basic ad campaigns, a non-negotiable skill for any modern social media manager.' }
+    ]
+  },
+  {
+    label: 'Content Marketing & SEO',
+    slug: 'marketing',
+    description: 'Create content that actually gets found, covering YouTube SEO, content strategy, and Instagram growth.',
+    items: [
+      { id: 'youtube-marketing-seo', customContent: 'Video is the dominant medium on the internet, and YouTube is the world’s second-largest search engine. This highly specific course teaches you how to optimize video content to rank highly in search results. You will learn about keyword research for video, thumbnail optimization, and audience retention metrics, skills that are incredibly valuable to modern media brands.' },
+      { id: 'content-creation-strategy', customContent: 'Great marketing requires great content. This course teaches you how to plan, produce, and distribute content that actually drives business results. You will learn how to map content to different stages of the buying cycle, write compelling copy, and repurpose assets across multiple platforms, transforming you from a mere writer into a strategic content marketer.' },
+      { id: 'instagram-marketing-hashtags', customContent: 'Instagram is a highly visual, rapidly evolving platform. This tactical course dives deep into Instagram\'s specific growth mechanics. You will learn how to develop a cohesive grid aesthetic, master hashtag strategies for maximum discoverability, and utilize Stories and Reels effectively to build a loyal, engaged following for e-commerce or personal brands.' }
+    ]
+  },
+  {
+    label: 'Growth & Conversion',
+    slug: 'marketing',
+    description: 'Take your skills further, learn how to grow audiences fast and turn traffic into paying customers.',
+    items: [
+      { id: 'growth-hacking-techniques-for-digital-marketing', customContent: 'The mindset of Silicon Valley startups. This advanced course teaches you how to prioritize rapid experimentation over traditional, slow-moving marketing plans. You will learn how to analyze user data to find unconventional, low-cost ways to acquire and retain customers, making you an incredibly attractive hire for fast-paced tech companies.' },
+      { id: 'using-digital-marketing-to-convert-customers', customContent: 'Generating website traffic is useless if those visitors do not take action. This critical course focuses entirely on the science of Conversion Rate Optimization (CRO). You will learn how to use A/B testing, heatmaps, and psychological copywriting to systematically improve the percentage of users who buy, sign up, or subscribe, directly impacting a company\'s revenue.' }
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [

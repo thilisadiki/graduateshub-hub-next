@@ -24,9 +24,39 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'Accounting Foundations', description: 'The core principles every accounting professional needs before moving into specialised roles.', ids: ['fundamentals-of-accounting', 'diploma-financial-accounting', 'introduction-bookkeeping-accounting'], categoryHref: '/category/accounting', categoryLabel: 'Accounting & Finance' },
-  { label: 'Bookkeeping & Payroll', description: 'Two of the most in-demand entry-level skills across small businesses and corporate finance teams.', ids: ['diploma-effective-bookkeeping-payroll', 'payroll-computation-bookkeeping', 'introduction-payroll-accounting'], categoryHref: '/category/accounting', categoryLabel: 'Accounting & Finance' },
-  { label: 'Financial Management & Analysis', description: 'Go beyond the basics. Understand how businesses manage, report, and evaluate financial performance.', ids: ['mastering-financial-statement-analysis', 'diploma-financial-management-managers', 'internal-auditing'], categoryHref: '/category/accounting', categoryLabel: 'Accounting & Finance' },
+  {
+    label: 'Accounting Foundations',
+    description: 'The core principles every accounting professional needs before moving into specialised roles.',
+    categoryHref: '/category/accounting',
+    categoryLabel: 'Accounting & Finance',
+    items: [
+      { id: 'fundamentals-of-accounting', customContent: 'Every successful finance career begins with a rock-solid understanding of the basics. This course explains the fundamental accounting equation (Assets = Liabilities + Equity) and introduces you to the core financial statements. You will develop the critical commercial vocabulary required to understand how money flows through an organization, laying the groundwork for all future financial study.' },
+      { id: 'diploma-financial-accounting', customContent: 'This comprehensive diploma takes you deep into the mechanics of corporate finance. You will learn how to prepare detailed balance sheets, income statements, and cash flow reports in accordance with standard accounting principles. This rigorous training ensures you have the technical competence expected of a Junior Accountant or Finance Officer on day one.' },
+      { id: 'introduction-bookkeeping-accounting', customContent: 'Accurate data entry is the lifeblood of accounting. This highly practical course focuses on the day-to-day realities of bookkeeping. You will master the rules of debits and credits, learn how to maintain accurate general ledgers, and understand the critical process of bank reconciliation—the exact tasks required for the vast majority of entry-level finance jobs.' }
+    ]
+  },
+  {
+    label: 'Bookkeeping & Payroll',
+    description: 'Two of the most in-demand entry-level skills across small businesses and corporate finance teams.',
+    categoryHref: '/category/accounting',
+    categoryLabel: 'Accounting & Finance',
+    items: [
+      { id: 'diploma-effective-bookkeeping-payroll', customContent: 'Small and medium-sized businesses desperately need staff who can handle both their books and their staff payments. This powerful dual-certification teaches you how to manage accounts payable/receivable while simultaneously mastering the complexities of calculating wages, tax deductions, and statutory leave. It is one of the most direct routes to immediate employment in administrative finance.' },
+      { id: 'payroll-computation-bookkeeping', customContent: 'Focus specifically on the intricacies of employee compensation. This course dives into the legal and mathematical requirements of payroll processing. You will learn how to handle overtime calculations, bonus structures, and compliance with local tax regulations, ensuring employees are paid accurately and the company avoids legal penalties.' },
+      { id: 'introduction-payroll-accounting', customContent: 'A gentle introduction to the critical payroll function. You will learn the basic lifecycle of a payroll period, from timesheet collection to final disbursement and journal entry. Understanding how payroll integrates with the broader accounting system provides valuable context for anyone looking to specialize in HR or finance administration.' }
+    ]
+  },
+  {
+    label: 'Financial Management & Analysis',
+    description: 'Go beyond the basics. Understand how businesses manage, report, and evaluate financial performance.',
+    categoryHref: '/category/accounting',
+    categoryLabel: 'Accounting & Finance',
+    items: [
+      { id: 'mastering-financial-statement-analysis', customContent: 'Gathering financial data is only the first step; interpreting it is where the real value lies. This advanced course teaches you how to perform ratio analysis, evaluate corporate liquidity, and assess long-term solvency. You will learn how to look beyond the numbers to understand a company\'s true financial health, a critical skill for financial analysts and investors.' },
+      { id: 'diploma-financial-management-managers', customContent: 'Designed for those moving into leadership, this diploma focuses on the strategic deployment of capital. You will learn how to evaluate investment opportunities, manage working capital, and understand the cost of debt versus equity. It equips you with the financial acumen needed to make high-level decisions that drive corporate profitability.' },
+      { id: 'internal-auditing', customContent: 'Trust in financial reporting relies entirely on robust internal controls. This specialized course introduces the principles of internal auditing. You will learn how to independently evaluate a company\'s risk management processes, identify fraudulent activities, and ensure strict compliance with financial regulations—a highly respected and well-compensated niche within the finance industry.' }
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [

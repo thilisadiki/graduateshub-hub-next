@@ -24,10 +24,46 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'Technology for Beginners', slug: 'it', description: 'Understand computers, the internet, and foundational tech concepts. No technical knowledge required.', ids: ['diploma-fundamentals-ai', 'intro-computer-hardware-software', 'html-css-web-dev'] },
-  { label: 'Data & Productivity Tools', slug: 'data-analytics', description: 'Excel, Python, and digital marketing, the tools that appear in almost every job description.', ids: ['microsoft-excel-data-analysis', 'python-for-beginners-data', 'basic-concepts-of-digital-marketing'] },
-  { label: 'Business Fundamentals', slug: 'business', description: 'Learn how organisations work, planning, processes, and productivity from the ground up.', ids: ['diploma-project-management', 'lean-six-sigma-white-belt', 'time-management-for-professionals'] },
-  { label: 'Accounting & Finance', slug: 'accounting', description: 'Understand how money moves in a business, no maths degree required.', ids: ['fundamentals-of-accounting', 'introduction-bookkeeping-accounting', 'introduction-payroll-accounting'] },
+  {
+    label: 'Technology for Beginners',
+    slug: 'it',
+    description: 'Understand computers, the internet, and foundational tech concepts. No technical knowledge required.',
+    items: [
+      { id: 'diploma-fundamentals-ai', customContent: 'Before diving into complex coding, it is essential to understand the landscape of modern technology. This course demystifies Artificial Intelligence, explaining how machines learn and process information in plain English. It provides the perfect, non-technical entry point for anyone curious about the future of work and the tools that are reshaping every industry.' },
+      { id: 'intro-computer-hardware-software', customContent: 'If you are starting your tech journey from absolute zero, this is where you begin. This course breaks down the physical components of a computer and the operating systems that run them. Understanding the difference between RAM and storage, or how an OS manages resources, gives you the confidence to troubleshoot basic issues and forms the bedrock of all further IT learning.' },
+      { id: 'html-css-web-dev', customContent: 'The internet runs on HTML and CSS. This highly practical course introduces you to the languages used to build every webpage you visit. By writing your first lines of code to structure text and style layouts, you will quickly move from being a consumer of technology to a creator, opening the door to further software development studies.' }
+    ]
+  },
+  {
+    label: 'Data & Productivity Tools',
+    slug: 'data-analytics',
+    description: 'Excel, Python, and digital marketing, the tools that appear in almost every job description.',
+    items: [
+      { id: 'microsoft-excel-data-analysis', customContent: 'Excel is the universal language of business. This course skips the intimidating jargon and teaches you exactly how to organize data, use basic formulas, and create simple charts. Being comfortable with spreadsheets is often the baseline requirement for office-based roles, and this course ensures you can navigate Excel with total confidence.' },
+      { id: 'python-for-beginners-data', customContent: 'Python is famous for being incredibly beginner-friendly while remaining powerful enough for professional data scientists. This introductory course focuses entirely on the basics: how to write simple scripts, automate repetitive tasks, and handle basic data lists. It is the perfect first step if you want to explore programming without feeling overwhelmed.' },
+      { id: 'basic-concepts-of-digital-marketing', customContent: 'The modern economy operates online. This course provides a broad, easy-to-understand overview of how businesses find customers on the internet. You will learn the difference between SEO, paid ads, and social media marketing, giving you a strong foundation whether you want to start a side hustle or apply for marketing assistant roles.' }
+    ]
+  },
+  {
+    label: 'Business Fundamentals',
+    slug: 'business',
+    description: 'Learn how organisations work, planning, processes, and productivity from the ground up.',
+    items: [
+      { id: 'diploma-project-management', customContent: 'Every business initiative, from launching a product to organizing an event, is a project. This diploma introduces you to the structured way professionals plan, execute, and deliver results on time. Learning basic project management vocabulary allows you to integrate into corporate teams smoothly and demonstrate that you are organized and reliable.' },
+      { id: 'lean-six-sigma-white-belt', customContent: 'Companies are always looking for ways to do things faster and cheaper without sacrificing quality. This introductory "White Belt" course teaches you the basic philosophy behind Lean Six Sigma—a world-famous methodology for reducing waste and improving processes. It is a fantastic credential that shows employers you care about efficiency.' },
+      { id: 'time-management-for-professionals', customContent: 'The transition into the professional world requires serious organizational skills. This course teaches you practical frameworks for prioritizing tasks, managing your inbox, and protecting your focus in a distracting work environment. These soft skills are rarely taught in school but are the secret to thriving in your first professional role.' }
+    ]
+  },
+  {
+    label: 'Accounting & Finance',
+    slug: 'accounting',
+    description: 'Understand how money moves in a business, no maths degree required.',
+    items: [
+      { id: 'fundamentals-of-accounting', customContent: 'You do not need a maths degree to understand business finance. This accessible course explains the core concepts of money management within an organization. You will learn the difference between assets and liabilities, and understand how profit is actually calculated, providing critical commercial awareness for any career path.' },
+      { id: 'introduction-bookkeeping-accounting', customContent: 'Bookkeeping is the meticulous recording of every financial transaction a business makes. This practical course teaches you the rules of double-entry bookkeeping and how to maintain accurate ledgers. Because every small business needs a bookkeeper, this is one of the fastest skills to learn if you are looking for immediate entry-level employment.' },
+      { id: 'introduction-payroll-accounting', customContent: 'Managing employee salaries, tax deductions, and benefits is a sensitive and critical business function. This course introduces you to the mechanics of payroll processing. Understanding how payroll works is a highly specific, very hireable skill that immediately makes you a valuable asset to HR and finance teams.' }
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [

@@ -24,11 +24,56 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'IT & Technology', slug: 'it', description: 'From networking fundamentals to cybersecurity and IT management.', ids: ['diploma-in-it-management', 'computer-networking', 'html-css-web-dev'] },
-  { label: 'Business & Project Management', slug: 'business', description: 'Learn the skills that keep organisations running efficiently.', ids: ['diploma-project-management', 'agile-project-management', 'lean-six-sigma-yellow-belt'] },
-  { label: 'Accounting & Finance', slug: 'accounting', description: 'Read financial statements, manage books, and understand money.', ids: ['diploma-financial-management-managers', 'diploma-effective-bookkeeping-payroll', 'accounts-management-xero'] },
-  { label: 'Digital Marketing', slug: 'marketing', description: 'SEO, content strategy, social media, and conversion skills.', ids: ['growth-hacking-techniques-for-digital-marketing', 'digital-marketing', 'using-digital-marketing-to-convert-customers'] },
-  { label: 'Software Development', slug: 'software-engineering', description: 'Web development, databases, and agile engineering practices.', ids: ['agile-essentials', 'it-management-software-databases', 'diploma-ecommerce-web-dev'] },
+  {
+    label: 'IT & Technology',
+    slug: 'it',
+    description: 'From networking fundamentals to cybersecurity and IT management.',
+    items: [
+      { id: 'diploma-in-it-management', customContent: 'Moving beyond basic support, this diploma prepares you for the strategic side of technology. You will learn how IT departments are structured, how to manage corporate networks, and the principles of IT security policies. This course is essential for anyone looking to transition from a technical support role into IT management and infrastructure planning.' },
+      { id: 'computer-networking', customContent: 'The invisible infrastructure of the modern world relies on networks. This rigorous course covers the fundamentals of LANs, WANs, IP addressing, and the OSI model. Understanding how data travels securely from one point to another is a non-negotiable skill for aspiring system administrators, network engineers, and cybersecurity professionals.' },
+      { id: 'html-css-web-dev', customContent: 'The foundation of the web. Earning a certificate in HTML and CSS proves to employers that you understand how to structure and style digital content. You will learn semantic markup, responsive design principles using Flexbox, and how to ensure websites are accessible and performant across all devices.' }
+    ]
+  },
+  {
+    label: 'Business & Project Management',
+    slug: 'business',
+    description: 'Learn the skills that keep organisations running efficiently.',
+    items: [
+      { id: 'diploma-project-management', customContent: 'A highly respected credential across every industry. This comprehensive diploma covers the entire project lifecycle, from initial scoping and risk assessment to resource allocation and final delivery. Earning this certificate demonstrates that you have the formal frameworks required to lead teams and take ownership of complex business initiatives.' },
+      { id: 'agile-project-management', customContent: 'Traditional project management is being rapidly replaced by Agile methodologies, especially in tech and marketing. This course teaches you how to run sprints, facilitate daily stand-ups, and manage product backlogs using frameworks like Scrum. It is a critical certification for anyone wanting to work in modern, fast-paced corporate environments.' },
+      { id: 'lean-six-sigma-yellow-belt', customContent: 'Go beyond the theory of process improvement. The Yellow Belt certification proves you understand the DMAIC (Define, Measure, Analyze, Improve, Control) framework. Employers actively look for this certificate when hiring for operations, quality assurance, and manufacturing roles, as it shows you know how to use data to eliminate waste.' }
+    ]
+  },
+  {
+    label: 'Accounting & Finance',
+    slug: 'accounting',
+    description: 'Read financial statements, manage books, and understand money.',
+    items: [
+      { id: 'diploma-financial-management-managers', customContent: 'Financial literacy is required for all senior leadership roles. This diploma bridges the gap between accounting and management, teaching you how to analyze financial statements, manage corporate cash flows, and make strategic investment decisions. It is the perfect certification for non-financial managers looking to step up into executive positions.' },
+      { id: 'diploma-effective-bookkeeping-payroll', customContent: 'A highly practical dual-certification. By mastering both accurate ledger maintenance and the complexities of payroll processing, you become immediately employable in small to medium-sized businesses. This diploma proves you can handle the day-to-day financial operations that keep a company legally compliant and financially transparent.' },
+      { id: 'accounts-management-xero', customContent: 'Theoretical accounting knowledge must translate into software skills. This course teaches you how to navigate Xero, one of the world’s leading cloud accounting platforms. Earning a certificate in specific industry software demonstrates that you require minimal onboarding and can start reconciling accounts on your first day.' }
+    ]
+  },
+  {
+    label: 'Digital Marketing',
+    slug: 'marketing',
+    description: 'SEO, content strategy, social media, and conversion skills.',
+    items: [
+      { id: 'growth-hacking-techniques-for-digital-marketing', customContent: 'Traditional marketing is slow; growth hacking is fast. This specialized course teaches you how to run rapid, data-driven experiments across the marketing funnel to identify the most efficient ways to grow an audience. It is a highly sought-after certification for anyone looking to join fast-paced tech startups or agile marketing agencies.' },
+      { id: 'digital-marketing', customContent: 'A comprehensive overview of the digital landscape. This certificate covers the core pillars of modern marketing: SEO, content strategy, email campaigns, and paid advertising. It proves to employers that you understand how these different channels integrate to create a cohesive, profitable marketing strategy.' },
+      { id: 'using-digital-marketing-to-convert-customers', customContent: 'Traffic is useless if it doesn\'t convert into sales. This critical course focuses entirely on Conversion Rate Optimization (CRO). You will learn how to analyze user behavior, optimize landing pages, and craft compelling calls-to-action, directly impacting a company\'s bottom line and proving your immediate commercial value.' }
+    ]
+  },
+  {
+    label: 'Software Development',
+    slug: 'software-engineering',
+    description: 'Web development, databases, and agile engineering practices.',
+    items: [
+      { id: 'agile-essentials', customContent: 'Modern software is built by teams, not lone wolves. This certificate proves you understand the Agile rituals that govern professional development teams. You will learn the terminology of sprints, story points, and retrospectives, ensuring you can integrate smoothly into any corporate engineering department.' },
+      { id: 'it-management-software-databases', customContent: 'Software relies entirely on the databases that store its information. This course bridges the gap between application development and database administration. You will learn how to design efficient database architectures, manage SQL servers, and ensure data integrity—critical skills for any aspiring full-stack developer or systems architect.' },
+      { id: 'diploma-ecommerce-web-dev', customContent: 'E-commerce is the engine of the digital economy. This rigorous diploma teaches you how to architect transactional web applications. Earning this certificate proves you understand the complex logic behind shopping carts, secure user authentication, and payment gateway integration, making you highly valuable to retail and tech employers.' }
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [

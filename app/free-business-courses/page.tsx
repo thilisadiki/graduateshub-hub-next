@@ -27,30 +27,44 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Project Management',
     description: 'The skills behind planning, executing, and delivering projects on time and within scope.',
-    ids: ['diploma-project-management', 'agile-project-management'],
     categoryHref: '/category/business',
     categoryLabel: 'Business',
+    items: [
+      { id: 'diploma-project-management', customContent: 'The gold standard for business organization. This comprehensive diploma moves beyond simple task tracking, teaching you how to manage complex stakeholder relationships, mitigate severe project risks, and control budgets. Whether you are launching a marketing campaign or opening a new retail store, the frameworks taught here are the backbone of corporate execution.' },
+      { id: 'agile-project-management', customContent: 'While traditional project management is rigid, Agile is flexible and adaptive. This essential course teaches you how to manage projects in environments where requirements change rapidly. You will learn how to prioritize iterative delivery, run Scrum ceremonies, and foster continuous improvement, skills heavily demanded by modern, fast-moving businesses.' }
+    ]
   },
   {
     label: 'Process & Quality',
     description: 'Lean, Six Sigma, and ISO auditing frameworks used across manufacturing, logistics, and corporate services.',
-    ids: ['lean-six-sigma-white-belt', 'lean-six-sigma-yellow-belt', 'iso-19011-lead-auditor'],
     categoryHref: '/category/business',
     categoryLabel: 'Business',
+    items: [
+      { id: 'lean-six-sigma-white-belt', customContent: 'A fantastic entry point into the world of corporate efficiency. This course introduces the foundational vocabulary and mindset of Lean Six Sigma. You will learn how to identify the "8 wastes" in any business process and understand the importance of continuous improvement, making you a valuable contributor to any company\'s operational goals.' },
+      { id: 'lean-six-sigma-yellow-belt', customContent: 'Moving from theory to practice, the Yellow Belt certification equips you with the tools to actively solve problems. You will master the DMAIC framework (Define, Measure, Analyze, Improve, Control) and learn how to collect and analyze process data. This is a highly respected credential for anyone targeting roles in operations, logistics, or quality assurance.' },
+      { id: 'iso-19011-lead-auditor', customContent: 'Quality and safety standards are legally mandated in many industries. This advanced course teaches the principles of auditing management systems based on ISO 19011 guidelines. You will learn how to plan, execute, and report on compliance audits, an incredibly niche, high-demand skill required in manufacturing, healthcare, and corporate governance.' }
+    ]
   },
   {
     label: 'Compliance & Regulation',
     description: 'The regulatory knowledge required in any organisation that handles personal data or financial transactions.',
-    ids: ['gdpr-general-data-protection', 'anti-money-laundering'],
     categoryHref: '/category/business',
     categoryLabel: 'Business',
+    items: [
+      { id: 'gdpr-general-data-protection', customContent: 'Data privacy is no longer optional; it is a strict legal requirement globally. This critical course breaks down the General Data Protection Regulation (GDPR). You will understand the legal obligations companies have when handling personal data, the rights of consumers, and how to avoid catastrophic compliance fines—essential knowledge for HR, marketing, and IT professionals.' },
+      { id: 'anti-money-laundering', customContent: 'The financial sector is heavily regulated to prevent criminal activity. This specialized course covers the mechanisms of Anti-Money Laundering (AML) and Know Your Customer (KYC) protocols. If you are aiming for a career in banking, fintech, or corporate compliance, understanding how to identify and report suspicious financial transactions is a strict prerequisite.' }
+    ]
   },
   {
     label: 'Economics & Strategy',
     description: 'Macroeconomic theory, sustainable development, and AI in business for those thinking at a strategic level.',
-    ids: ['intro-economic-growth-development', 'diploma-economic-growth-development', 'intro-ai-business'],
     categoryHref: '/category/business',
     categoryLabel: 'Business',
+    items: [
+      { id: 'intro-economic-growth-development', customContent: 'Business decisions do not happen in a vacuum; they are driven by macroeconomic trends. This course introduces the fundamental theories of economic growth, explaining how inflation, interest rates, and government policy impact corporate strategy. Developing this macro-awareness is crucial for anyone aspiring to senior leadership or strategic consulting roles.' },
+      { id: 'diploma-economic-growth-development', customContent: 'Taking economic theory further, this diploma explores the complex relationship between economic development, international trade, and sustainability. You will learn how global markets interact and how businesses must adapt to changing economic realities in developing nations. It is an excellent credential for roles in public policy, NGOs, or international business.' },
+      { id: 'intro-ai-business', customContent: 'Artificial Intelligence is the most significant strategic shift in modern business. This forward-looking course ignores the technical coding and focuses entirely on commercial strategy. You will learn how AI can be deployed to automate operations, personalize customer experiences, and drive revenue, giving you the strategic foresight needed by modern executive teams.' }
+    ]
   },
 ];
 
