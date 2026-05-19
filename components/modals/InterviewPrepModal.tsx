@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { X, MessageSquare, Loader2, ChevronDown, ChevronUp, Lightbulb, Star, AlertTriangle, BookOpen, ArrowRight } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
@@ -97,6 +98,11 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
   const [result, setResult] = useState<PrepResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   if (!isOpen) return null;
 
@@ -113,13 +119,15 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
       const res = await fetch('/api/interview-prep', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ jobTitle, experienceLevel }),
+        body: JSON.stringify({ jobTitle, experienceLevel, _hp: honeypot, _t: formLoadTime.current, _ts: turnstileToken }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to generate interview prep.');
       setResult(data);
     } catch (err: any) {
       setError(err.message || 'Failed to generate interview prep. Please try again.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
@@ -149,6 +157,13 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
           {/* Input */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm shrink-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+                <label htmlFor="ip_hp">Leave this blank</label>
+                <input id="ip_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="sm:col-span-2">
                   <label htmlFor="interview-job-title" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">Job Title</label>
@@ -174,9 +189,18 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                 </div>
               </div>
 
+              <div className="self-end">
+                <TurnstileWidget 
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
+                />
+              </div>
+
               <button
                 type="submit"
-                disabled={isLoading || !jobTitle.trim()}
+                disabled={isLoading || !jobTitle.trim() || turnstileToken === null}
                 className="self-end bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading

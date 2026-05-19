@@ -1,40 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { checkBotProtection } from '@/utils/security';
 
-const MIN_SUBMIT_MS = 3000; // reject submissions faster than 3 seconds
-
-async function verifyTurnstile(token: string): Promise<boolean> {
-  const secret = process.env.TURNSTILE_SECRET_KEY;
-  if (!secret) return true; // not configured - skip verification
-
-  try {
-    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ secret, response: token }),
-    });
-    const data = await res.json();
-    return data.success === true;
-  } catch {
-    return false;
-  }
-}
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, subject, message, _hp, _t, _ts } = body;
+    const botCheck = await checkBotProtection(body);
+    if (botCheck) return botCheck;
 
-    // Honeypot check - bots fill hidden fields, humans don't
-    if (_hp) {
-      // Return 200 so bots think they succeeded
-      return NextResponse.json({ success: true });
-    }
-
-    // Timing check - reject submissions under 3 seconds (bot speed)
-    if (_t && Date.now() - Number(_t) < MIN_SUBMIT_MS) {
-      return NextResponse.json({ success: true });
-    }
+    const { name, email, subject, message } = body;
 
     // Field validation
     if (!name || !email || !subject || !message) {
@@ -48,12 +23,6 @@ export async function POST(request: NextRequest) {
 
     if (message.length > 2000) {
       return NextResponse.json({ error: 'Message must be under 2000 characters.' }, { status: 400 });
-    }
-
-    // Turnstile verification
-    const turnstileValid = await verifyTurnstile(_ts ?? '');
-    if (!turnstileValid) {
-      return NextResponse.json({ error: 'Security check failed. Please try again.' }, { status: 400 });
     }
 
     // Send email via Resend

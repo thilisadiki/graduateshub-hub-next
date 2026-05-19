@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { Loader2, Send, AlertCircle } from 'lucide-react';
 import GradingOverlay from './GradingOverlay';
 
@@ -15,6 +16,11 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
   const [linksRaw, setLinksRaw] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   const submissionLength = submission.length;
   const belowMin = submissionLength < MIN_CHARS;
@@ -53,12 +59,17 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
           graduateName: graduateName.trim(),
           submission: submission.trim(),
           submissionLinks,
+          _hp: honeypot,
+          _t: formLoadTime.current,
+          _ts: turnstileToken,
         }),
       });
 
       const data = await res.json();
       if (!res.ok) {
         setError(data.error || 'Something went wrong. Please try again.');
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
         setSubmitting(false);
         return;
       }
@@ -67,9 +78,13 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
         return;
       }
       setError('Unexpected response. Please try again.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
       setSubmitting(false);
     } catch {
       setError('Network error. Please try again.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
       setSubmitting(false);
     }
   }
@@ -84,6 +99,12 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+        {/* Honeypot */}
+        <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+          <label htmlFor="pf_hp">Leave this blank</label>
+          <input id="pf_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+        </div>
+        
         <div>
           <label htmlFor="graduate-name" className="block text-sm font-bold text-gray-900 mb-1.5">
             Name on Badge
@@ -150,13 +171,22 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
           </div>
         )}
 
+        <div className="self-end">
+          <TurnstileWidget 
+            ref={turnstileRef}
+            onVerify={(token) => setTurnstileToken(token)}
+            onExpire={() => setTurnstileToken(null)}
+            onError={() => setTurnstileToken(null)}
+          />
+        </div>
+
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2 border-t border-gray-100">
           <p className="text-xs text-gray-500 leading-relaxed">
             By submitting, you agree your submission text, name, and evaluation will appear on a public Badge URL.
           </p>
           <button
             type="submit"
-            disabled={submitting || belowMin || aboveMax}
+            disabled={submitting || belowMin || aboveMax || turnstileToken === null}
             className="bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-5 py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors whitespace-nowrap shrink-0"
           >
             {submitting ? (

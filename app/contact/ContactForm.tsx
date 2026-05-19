@@ -1,22 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Script from 'next/script';
-import { Send, CheckCircle2, AlertCircle, Loader2, ShieldCheck } from 'lucide-react';
-
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (container: HTMLElement, options: {
-        sitekey: string;
-        callback: (token: string) => void;
-        'expired-callback': () => void;
-        'error-callback': () => void;
-      }) => string;
-      reset: (widgetId: string) => void;
-    };
-  }
-}
+import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 
 const SUBJECTS = [
   'General enquiry',
@@ -27,7 +13,7 @@ const SUBJECTS = [
   'Other',
 ];
 
-const SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '';
+
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -36,27 +22,10 @@ export default function ContactForm() {
   const [honeypot, setHoneypot] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
-  const [turnstileToken, setTurnstileToken] = useState('');
-  const [turnstileReady, setTurnstileReady] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const formLoadTime = useRef(Date.now());
-  const turnstileRef = useRef<HTMLDivElement>(null);
-  const widgetId = useRef<string | null>(null);
-
-  const renderTurnstile = () => {
-    if (!SITE_KEY || !turnstileRef.current || !window.turnstile) return;
-    widgetId.current = window.turnstile.render(turnstileRef.current, {
-      sitekey: SITE_KEY,
-      callback: (token) => { setTurnstileToken(token); setTurnstileReady(true); },
-      'expired-callback': () => { setTurnstileToken(''); setTurnstileReady(false); },
-      'error-callback': () => { setTurnstileToken(''); setTurnstileReady(false); },
-    });
-  };
-
-  // If Turnstile is not configured, treat form as ready
-  useEffect(() => {
-    if (!SITE_KEY) setTurnstileReady(true);
-  }, []);
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -87,21 +56,15 @@ export default function ContactForm() {
 
       setStatus('success');
       setForm({ name: '', email: '', subject: '', message: '' });
-      setTurnstileToken('');
-      setTurnstileReady(!SITE_KEY);
-      if (SITE_KEY && widgetId.current && window.turnstile) {
-        window.turnstile.reset(widgetId.current);
-      }
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } catch (err: unknown) {
       setStatus('error');
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
       setStatus('error');
       // Reset Turnstile on error so they can try again
-      setTurnstileToken('');
-      setTurnstileReady(!SITE_KEY);
-      if (SITE_KEY && widgetId.current && window.turnstile) {
-        window.turnstile.reset(widgetId.current);
-      }
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     }
   };
 
@@ -127,14 +90,6 @@ export default function ContactForm() {
 
   return (
     <>
-      {SITE_KEY && (
-        <Script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="lazyOnload"
-          onLoad={renderTurnstile}
-        />
-      )}
-
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
 
         {/* Honeypot - visually hidden, never filled by real users */}
@@ -213,16 +168,14 @@ export default function ContactForm() {
         </div>
 
         {/* Turnstile widget */}
-        {SITE_KEY && (
-          <div>
-            <div ref={turnstileRef} />
-            {!turnstileReady && (
-              <p className="text-xs text-gray-400 mt-1.5 flex items-center gap-1">
-                <ShieldCheck size={12} /> Loading security check...
-              </p>
-            )}
-          </div>
-        )}
+        <div>
+          <TurnstileWidget 
+            ref={turnstileRef}
+            onVerify={(token) => setTurnstileToken(token)}
+            onExpire={() => setTurnstileToken(null)}
+            onError={() => setTurnstileToken(null)}
+          />
+        </div>
 
         {status === 'error' && (
           <div className="flex items-center gap-2 bg-red-50 border border-red-100 rounded-lg px-4 py-3 text-sm text-red-700">
@@ -233,7 +186,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          disabled={status === 'submitting' || !turnstileReady}
+          disabled={status === 'submitting' || turnstileToken === null}
           className="flex items-center justify-center gap-2 bg-primary hover:bg-blue-800 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold px-6 py-3.5 rounded-lg transition-colors text-sm"
         >
           {status === 'submitting' ? (

@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { X, TrendingUp, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
@@ -25,6 +26,11 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
   const [result, setResult] = useState<GapResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   if (!isOpen) return null;
 
@@ -41,13 +47,15 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
       const res = await fetch('/api/skills-gap', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ jobTarget, currentSkills }),
+        body: JSON.stringify({ jobTarget, currentSkills, _hp: honeypot, _t: formLoadTime.current, _ts: turnstileToken }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to analyze skills gap.');
       setResult(data);
     } catch (err: any) {
       setError(err.message || 'Failed to analyze skills gap.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
@@ -77,6 +85,13 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
           {/* Input */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm shrink-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+                <label htmlFor="sg_hp">Leave this blank</label>
+                <input id="sg_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+              </div>
+
               <div>
                 <label htmlFor="job-target" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">Target Job / Role</label>
                 <input
@@ -98,9 +113,19 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
                   className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-shadow resize-none h-24 text-gray-800"
                 />
               </div>
+
+              <div className="self-end">
+                <TurnstileWidget 
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
+                />
+              </div>
+
               <button
                 type="submit"
-                disabled={isLoading || !jobTarget.trim()}
+                disabled={isLoading || !jobTarget.trim() || turnstileToken === null}
                 className="self-end bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading ? <><Loader2 size={18} className="animate-spin" /> Analyzing...</> : <><TrendingUp size={18} /> Analyze My Gap</>}

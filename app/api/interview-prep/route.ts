@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
+import { checkBotProtection } from '@/utils/security';
 import { courses } from '@/data/courses';
 
 const getSimplifiedCatalog = () =>
@@ -19,6 +20,9 @@ export async function POST(request: NextRequest) {
   let experienceLevel: string;
   try {
     const body = await request.json();
+    const botCheck = await checkBotProtection(body);
+    if (botCheck) return botCheck;
+
     jobTitle = body.jobTitle;
     experienceLevel = body.experienceLevel || 'Mid Level';
   } catch {

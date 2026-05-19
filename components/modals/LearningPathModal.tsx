@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { X, Map, Loader2, CheckCircle } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
@@ -31,6 +32,11 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
   const [phases, setPhases] = useState<Phase[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   if (!isOpen) return null;
 
@@ -47,13 +53,15 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
       const res = await fetch('/api/learning-path', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ goal }),
+        body: JSON.stringify({ goal, _hp: honeypot, _t: formLoadTime.current, _ts: turnstileToken }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to generate learning path.');
       setPhases(data.phases);
     } catch (err: any) {
       setError(err.message || 'Failed to generate learning path.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
@@ -83,6 +91,13 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
           {/* Input */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm shrink-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+                <label htmlFor="lp_hp">Leave this blank</label>
+                <input id="lp_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+              </div>
+
               <label htmlFor="lp-goal" className="font-bold text-gray-700 text-sm tracking-wide uppercase">What career goal do you want to achieve?</label>
               <div className="relative">
                 <textarea
@@ -94,11 +109,20 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
                 />
                 <button
                   type="submit"
-                  disabled={isLoading || !goal.trim()}
+                  disabled={isLoading || !goal.trim() || turnstileToken === null}
                   className="absolute bottom-3 right-3 bg-blue-700 hover:bg-blue-800 disabled:bg-blue-300 text-white px-5 py-2 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
                 >
                   {isLoading ? <><Loader2 size={18} className="animate-spin" /> Building...</> : <><Map size={18} /> Build My Path</>}
                 </button>
+              </div>
+
+              <div className="self-end">
+                <TurnstileWidget 
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
+                />
               </div>
             </form>
 

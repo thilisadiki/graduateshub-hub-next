@@ -3,6 +3,7 @@ import { GoogleGenAI } from '@google/genai';
 import { getTaskById } from '@/data/portfolioTasks';
 import { getCategoryById } from '@/data/portfolioCategories';
 import { getSupabase } from '@/utils/supabase';
+import { checkBotProtection } from '@/utils/security';
 import type { PortfolioEvaluation, RubricScore } from '@/types';
 
 const MIN_SUBMISSION_LENGTH = 200;
@@ -47,6 +48,9 @@ export async function POST(request: NextRequest) {
   let submissionLinks: string[];
   try {
     const body = await request.json();
+    const botCheck = await checkBotProtection(body);
+    if (botCheck) return botCheck;
+
     taskId = String(body.taskId || '').trim();
     graduateName = String(body.graduateName || '').trim().slice(0, MAX_NAME_LENGTH);
     submission = String(body.submission || '').trim();

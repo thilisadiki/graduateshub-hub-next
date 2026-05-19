@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
+import { checkBotProtection } from '@/utils/security';
 import { courses } from '@/data/courses';
 
 const getSimplifiedCatalog = () =>
@@ -18,6 +19,9 @@ export async function POST(request: NextRequest) {
   let jobDescription: string;
   try {
     const body = await request.json();
+    const botCheck = await checkBotProtection(body);
+    if (botCheck) return botCheck;
+
     jobDescription = body.jobDescription;
   } catch {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });

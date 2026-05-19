@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { X, FileText, Loader2, CheckCircle, AlertTriangle, LightbulbIcon, BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
@@ -86,6 +87,11 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
   const [result, setResult] = useState<CVReviewResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   if (!isOpen) return null;
 
@@ -102,13 +108,15 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
       const res = await fetch('/api/cv-review', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cvText, targetRole }),
+        body: JSON.stringify({ cvText, targetRole, _hp: honeypot, _t: formLoadTime.current, _ts: turnstileToken }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to review CV.');
       setResult(data);
     } catch (err: any) {
       setError(err.message || 'Failed to review CV. Please try again.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
@@ -146,6 +154,13 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
           {/* Input */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm shrink-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+                <label htmlFor="cv_hp">Leave this blank</label>
+                <input id="cv_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+              </div>
+
               <div>
                 <label htmlFor="cv-target-role" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">
                   Target Role <span className="text-gray-400 font-normal normal-case">(optional - improves accuracy)</span>
@@ -188,9 +203,18 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
                 <p className="text-xs text-gray-400 mt-1">{cvText.length} characters - minimum 50 required</p>
               </div>
 
+              <div className="self-end">
+                <TurnstileWidget 
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
+                />
+              </div>
+
               <button
                 type="submit"
-                disabled={isLoading || cvText.trim().length < 50}
+                disabled={isLoading || cvText.trim().length < 50 || turnstileToken === null}
                 className="self-end bg-violet-600 hover:bg-violet-700 disabled:bg-violet-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading

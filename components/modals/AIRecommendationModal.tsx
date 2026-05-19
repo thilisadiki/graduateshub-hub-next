@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { X, Sparkles, Loader2 } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
@@ -10,6 +11,11 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
   const [recommendations, setRecommendations] = useState<Course[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   if (!isOpen) return null;
 
@@ -26,13 +32,15 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
       const res = await fetch('/api/recommendations', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ query, _hp: honeypot, _t: formLoadTime.current, _ts: turnstileToken }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to fetch recommendations.');
       setRecommendations(data.courses);
     } catch (err: any) {
       setError(err.message || 'Failed to fetch recommendations.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
@@ -61,6 +69,13 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
         <div className="flex-1 overflow-y-auto p-6 md:p-8 bg-gray-50 flex flex-col gap-8">
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm shrink-0">
             <form onSubmit={handleSearch} className="flex flex-col gap-4">
+              
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+                <label htmlFor="ai_hp">Leave this blank</label>
+                <input id="ai_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+              </div>
+
               <label htmlFor="ai-prompt" className="font-bold text-gray-700 text-sm tracking-wide uppercase">Describe what you want to learn:</label>
               <div className="relative">
                 <textarea
@@ -72,11 +87,20 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
                 />
                 <button
                   type="submit"
-                  disabled={isLoading || !query.trim()}
+                  disabled={isLoading || !query.trim() || turnstileToken === null}
                   className="absolute bottom-3 right-3 bg-primary hover:bg-blue-700 disabled:bg-blue-300 text-white px-6 py-2 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
                 >
                   {isLoading ? <><Loader2 size={18} className="animate-spin" /> Analyzing...</> : <><Sparkles size={18} /> Match Courses</>}
                 </button>
+              </div>
+              
+              <div className="self-end">
+                <TurnstileWidget 
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
+                />
               </div>
             </form>
 

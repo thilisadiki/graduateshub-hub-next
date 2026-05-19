@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TurnstileWidget, { TurnstileWidgetHandle } from '@/components/shared/TurnstileWidget';
 import { X, ScanText, Loader2, CheckCircle, Star, AlertTriangle, Briefcase, GraduationCap, BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
 import CourseCard from '@/components/course/CourseCard';
 import type { Course } from '@/types';
@@ -59,6 +60,11 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
   const [result, setResult] = useState<DecodeResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef(Date.now());
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
 
   if (!isOpen) return null;
 
@@ -75,13 +81,15 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
       const res = await fetch('/api/jd-decoder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ jobDescription }),
+        body: JSON.stringify({ jobDescription, _hp: honeypot, _t: formLoadTime.current, _ts: turnstileToken }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to decode job description.');
       setResult(data);
     } catch (err: any) {
       setError(err.message || 'Failed to decode job description. Please try again.');
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
@@ -111,6 +119,13 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
           {/* Input */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm shrink-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
+                <label htmlFor="jd_hp">Leave this blank</label>
+                <input id="jd_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+              </div>
+
               <div>
                 <label htmlFor="jd-text" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">
                   Job Description
@@ -125,9 +140,18 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                 <p className="text-xs text-gray-400 mt-1">{jobDescription.length} characters - minimum 100 required</p>
               </div>
 
+              <div className="self-end">
+                <TurnstileWidget 
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
+                />
+              </div>
+
               <button
                 type="submit"
-                disabled={isLoading || jobDescription.trim().length < 100}
+                disabled={isLoading || jobDescription.trim().length < 100 || turnstileToken === null}
                 className="self-end bg-cyan-600 hover:bg-cyan-700 disabled:bg-cyan-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading

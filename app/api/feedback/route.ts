@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { checkBotProtection } from '@/utils/security';
 
-const MIN_SUBMIT_MS = 3000;
+
 
 const ALLOWED_AREAS: Record<string, string> = {
   'course-content': 'Course quality and content',
@@ -16,35 +17,15 @@ const ALLOWED_AREAS: Record<string, string> = {
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-async function verifyTurnstile(token: string): Promise<boolean> {
-  const secret = process.env.TURNSTILE_SECRET_KEY;
-  if (!secret) return true;
 
-  try {
-    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ secret, response: token }),
-    });
-    const data = await res.json();
-    return data.success === true;
-  } catch {
-    return false;
-  }
-}
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { respondent_name, respondent_email, rating, area, message, can_follow_up, _hp, _t, _ts } = body;
+    const botCheck = await checkBotProtection(body);
+    if (botCheck) return botCheck;
 
-    // Honeypot
-    if (_hp) return NextResponse.json({ success: true });
-
-    // Timing
-    if (_t && Date.now() - Number(_t) < MIN_SUBMIT_MS) {
-      return NextResponse.json({ success: true });
-    }
+    const { respondent_name, respondent_email, rating, area, message, can_follow_up } = body;
 
     // Rating validation
     const numRating = parseInt(rating, 10);
@@ -69,12 +50,6 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (respondent_email && !emailRegex.test(respondent_email)) {
       return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 });
-    }
-
-    // Turnstile
-    const turnstileValid = await verifyTurnstile(_ts ?? '');
-    if (!turnstileValid) {
-      return NextResponse.json({ error: 'Security check failed. Please try again.' }, { status: 400 });
     }
 
     // Normalise optional fields
