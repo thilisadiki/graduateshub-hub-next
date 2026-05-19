@@ -111,9 +111,11 @@ const exploreCategories = [
 ];
 
 export default function FreeCoursesForBeginnersPage() {
-  const featured = courseCategories.flatMap((cat) =>
-    cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean)
-  );
+  const featured = courseCategories.flatMap((cat) => {
+    if (cat.ids) return cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean);
+    if (cat.items) return cat.items.map((i) => allCourses.find((c) => c.id === i.id)).filter(Boolean);
+    return [];
+  });
   const relatedCourses = courses
     .filter((c) => c.rating >= 4.6 && !featured.find((f) => f?.id === c.id))
     .sort((a, b) => b.rating - a.rating)

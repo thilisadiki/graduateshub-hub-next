@@ -95,9 +95,11 @@ const faqs: FaqItem[] = [
 ];
 
 export default function FreeBusinessCoursesPage() {
-  const featured = courseCategories.flatMap((cat) =>
-    cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean)
-  );
+  const featured = courseCategories.flatMap((cat) => {
+    if (cat.ids) return cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean);
+    if (cat.items) return cat.items.map((i) => allCourses.find((c) => c.id === i.id)).filter(Boolean);
+    return [];
+  });
   const relatedCourses = courses
     .filter((c) => c.category.toLowerCase().includes('business') && c.rating >= 4.5 && !featured.find((f) => f?.id === c.id))
     .sort((a, b) => b.rating - a.rating)

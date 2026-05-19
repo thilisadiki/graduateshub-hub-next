@@ -23,10 +23,46 @@ export const metadata: Metadata = {
 };
 
 const courseCategories: CourseCategory[] = [
-  { label: 'Business & Project Management', slug: 'business', description: 'Master the project lifecycle, agile methods, and process optimisation.', ids: ['diploma-project-management', 'agile-project-management', 'lean-six-sigma-yellow-belt'] },
-  { label: 'IT & Technology', slug: 'it', description: 'From networking fundamentals to IT service management and infrastructure.', ids: ['diploma-in-it-management', 'computer-networking', 'foundations-of-itil-4'] },
-  { label: 'Accounting & Finance', slug: 'accounting', description: 'Build the financial literacy employers expect from business professionals.', ids: ['fundamentals-of-accounting', 'diploma-effective-bookkeeping-payroll', 'diploma-financial-management-managers'] },
-  { label: 'Digital Marketing', slug: 'marketing', description: 'SEO, content strategy, social media, and digital growth techniques.', ids: ['digital-marketing', 'basic-concepts-of-digital-marketing', 'growth-hacking-techniques-for-digital-marketing'] },
+  {
+    label: 'Business & Project Management',
+    slug: 'business',
+    description: 'Master the project lifecycle, agile methods, and process optimisation.',
+    items: [
+      { id: 'diploma-project-management', customContent: 'This comprehensive diploma covers the entire project management lifecycle from initiation to closure. It is an excellent starting point if you want to move into a Project Coordinator role, offering practical frameworks that employers immediately recognize.' },
+      { id: 'agile-project-management', customContent: 'Agile methodologies are now the standard in software and modern business environments. This course breaks down Scrum, Kanban, and Agile sprints, giving you the vocabulary and skills needed to join fast-paced development teams.' },
+      { id: 'lean-six-sigma-yellow-belt', customContent: 'Process improvement is a highly sought-after skill in corporate environments. The Lean Six Sigma Yellow Belt introduces you to waste reduction and quality control, helping you stand out when applying for operational and management positions.' },
+    ]
+  },
+  {
+    label: 'IT & Technology',
+    slug: 'it',
+    description: 'From networking fundamentals to IT service management and infrastructure.',
+    items: [
+      { id: 'diploma-in-it-management', customContent: 'A broad, foundational diploma that touches on hardware, software, and IT service delivery. If you are aiming for an IT Support or Junior Sysadmin role, this provides the structured knowledge required to troubleshoot effectively.' },
+      { id: 'computer-networking', customContent: 'Understanding how data moves across local and wide area networks is non-negotiable for IT professionals. This course unpacks the OSI model, IP addressing, and network security essentials.' },
+      { id: 'foundations-of-itil-4', customContent: 'ITIL is the gold standard for IT service management globally. Learning the ITIL 4 framework shows enterprise employers that you understand how IT aligns with business objectives, not just how to fix computers.' },
+    ]
+  },
+  {
+    label: 'Accounting & Finance',
+    slug: 'accounting',
+    description: 'Build the financial literacy employers expect from business professionals.',
+    items: [
+      { id: 'fundamentals-of-accounting', customContent: 'Perfect for absolute beginners, this course demystifies debits, credits, and the accounting equation. It is the critical first step before tackling complex financial statements or bookkeeping software.' },
+      { id: 'diploma-effective-bookkeeping-payroll', customContent: 'Every business needs someone who can manage the books and ensure staff get paid. This practical diploma dives into payroll legislation, ledgers, and trial balances, setting you up for entry-level bookkeeping roles.' },
+      { id: 'diploma-financial-management-managers', customContent: 'Aimed at aspiring managers, this course shifts focus from data entry to financial strategy. You will learn how to interpret balance sheets, analyze cash flow, and make data-driven business decisions.' },
+    ]
+  },
+  {
+    label: 'Digital Marketing',
+    slug: 'marketing',
+    description: 'SEO, content strategy, social media, and digital growth techniques.',
+    items: [
+      { id: 'digital-marketing', customContent: 'A complete overview of the modern digital marketing landscape. From SEO to paid advertising, this course gives you the foundational knowledge needed to plan and execute campaigns across multiple channels.' },
+      { id: 'basic-concepts-of-digital-marketing', customContent: 'If you are completely new to the field, this course breaks down industry jargon and core concepts. It is a quick, accessible primer that will help you understand how brands attract and convert customers online.' },
+      { id: 'growth-hacking-techniques-for-digital-marketing', customContent: 'Traditional marketing can be slow; growth hacking is about rapid experimentation. Learn how to use data analytics, viral loops, and low-cost acquisition strategies to scale a business quickly.' },
+    ]
+  },
 ];
 
 const benefits: BenefitItem[] = [
@@ -72,9 +108,11 @@ const exploreCategories = [
 ];
 
 export default function BestAlisonCoursesPage() {
-  const featured = courseCategories.flatMap((cat) =>
-    cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean)
-  );
+  const featured = courseCategories.flatMap((cat) => {
+    if (cat.ids) return cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean);
+    if (cat.items) return cat.items.map((i) => allCourses.find((c) => c.id === i.id)).filter(Boolean);
+    return [];
+  });
   const relatedCourses = courses
     .filter((c) => c.rating >= 4.6 && !featured.find((f) => f?.id === c.id))
     .sort((a, b) => b.rating - a.rating)

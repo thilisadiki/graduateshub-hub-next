@@ -19,10 +19,16 @@ export interface BenefitItem {
   body: string;
 }
 
+export interface GuideCourseItem {
+  id: string;
+  customContent: string;
+}
+
 export interface CourseCategory {
   label: string;
   description: string;
-  ids: string[];
+  ids?: string[];
+  items?: GuideCourseItem[];
   /** Used for the "See all X courses" link. Falls back to /category/${slug} */
   categoryHref?: string;
   /** Label for the "See all" link. Falls back to cat.label */
@@ -159,7 +165,11 @@ export default function GuideTemplate({
   ctaSecondaryLabel,
   ctaSecondaryHref,
 }: GuideTemplateProps) {
-  const allFeatured = courseCategories.flatMap((cat) => getCoursesByIds(cat.ids));
+  const allFeatured = courseCategories.flatMap((cat) => {
+    if (cat.ids) return getCoursesByIds(cat.ids);
+    if (cat.items) return getCoursesByIds(cat.items.map(i => i.id));
+    return [];
+  });
 
   const itemListSchema = {
     '@context': 'https://schema.org',
@@ -288,8 +298,13 @@ export default function GuideTemplate({
 
         {/* Course sections */}
         {courseCategories.map((cat, i) => {
-          const catCourses = getCoursesByIds(cat.ids);
-          if (catCourses.length === 0) return null;
+          const catCourses = cat.ids ? getCoursesByIds(cat.ids) : [];
+          const catItems = cat.items 
+            ? cat.items.map(item => ({ course: getCoursesByIds([item.id])[0], customContent: item.customContent })).filter(x => x.course) 
+            : [];
+
+          if (catCourses.length === 0 && catItems.length === 0) return null;
+          
           const allHref = cat.categoryHref ?? (cat.slug ? `/category/${cat.slug}` : null);
           const allLabel = cat.categoryLabel ?? cat.label;
           return (
@@ -309,11 +324,29 @@ export default function GuideTemplate({
                 )}
               </div>
               <div className="w-12 h-1 bg-primary rounded-full mb-8" />
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {catCourses.map((course) => (
-                  <CourseCard key={course.id} course={course} />
-                ))}
-              </div>
+              
+              {cat.ids && catCourses.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {catCourses.map((course) => (
+                    <CourseCard key={course.id} course={course} />
+                  ))}
+                </div>
+              )}
+
+              {cat.items && catItems.length > 0 && (
+                <ul className="flex flex-col gap-6">
+                  {catItems.map(({ course, customContent }) => (
+                    <li key={course.id} className="flex flex-col gap-2">
+                      <h3 className="font-bold text-gray-900 text-lg">
+                        <Link href={`/course/${course.id}`} className="hover:text-primary transition-colors hover:underline">
+                          {course.title}
+                        </Link>
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-sm">{customContent}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </section>
           );
         })}

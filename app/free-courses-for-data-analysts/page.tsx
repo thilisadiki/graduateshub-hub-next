@@ -70,9 +70,11 @@ const faqs: FaqItem[] = [
 ];
 
 export default function FreeCoursesForDataAnalystsPage() {
-  const featured = courseCategories.flatMap((cat) =>
-    cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean)
-  );
+  const featured = courseCategories.flatMap((cat) => {
+    if (cat.ids) return cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean);
+    if (cat.items) return cat.items.map((i) => allCourses.find((c) => c.id === i.id)).filter(Boolean);
+    return [];
+  });
   const relatedCourses = courses
     .filter(
       (c) =>

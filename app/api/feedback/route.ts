@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { checkBotProtection } from '@/utils/security';
 
-
-
 const ALLOWED_AREAS: Record<string, string> = {
   'course-content': 'Course quality and content',
   'missing-courses': "A topic or course that's missing",
@@ -16,8 +14,6 @@ const ALLOWED_AREAS: Record<string, string> = {
 
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-
 
 export async function POST(request: NextRequest) {
   try {
