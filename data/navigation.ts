@@ -100,4 +100,34 @@ export const popularGuides: GuideLink[] = [
     desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. CPD-accredited and free.',
     badge: 'Business',
   },
+  {
+    href: '/free-cybersecurity-courses',
+    title: 'Free Cybersecurity Courses',
+    desc: 'Master security governance, network protocols, secure coding, and DORA.',
+    badge: 'Security',
+  },
+  {
+    href: '/free-cloud-computing-courses',
+    title: 'Free Cloud Computing Courses',
+    desc: 'AWS, Azure, GCP serverless database scaling, infrastructure, and DevOps pipelines.',
+    badge: 'Cloud',
+  },
+  {
+    href: '/free-ui-ux-design-courses',
+    title: 'Free UI/UX Design Courses',
+    desc: 'Figma wireframes, user research, conversion optimization, and product design.',
+    badge: 'Design',
+  },
+  {
+    href: '/free-excel-courses-with-certificates',
+    title: 'Free Excel Courses',
+    desc: 'VLOOKUP, Pivot Tables, charts, macros, and financial modeling spreadsheets.',
+    badge: 'Excel',
+  },
+  {
+    href: '/free-python-courses-with-certificates',
+    title: 'Free Python Courses',
+    desc: 'Python programming, Flask web frameworks, database models, and Docker containerization.',
+    badge: 'Python',
+  },
 ];
