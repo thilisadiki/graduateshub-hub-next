@@ -10,8 +10,8 @@ Graduates Hub is a Next.js 16 (React 19) codebase containing career roadmaps, in
 ## Developer Quickstart & Documentation
 All codebase architecture blueprints and security patterns are documented in the `/docs` directory. Before modifying or implementing features, you MUST review the appropriate guides:
 
-1. **[Architecture Blueprint](docs/architecture.md)** — Project structure, dynamic routing patterns, dynamic metadata conventions, static-data setups, components organization, and database schema mappings.
-2. **[Security Standards](docs/security.md)** — Rate limiting scopes, Cloudflare Turnstile CAPTCHA forms, Honeypot and Timing bot protection checks, HTTP security headers, input length validation parameters, HTML/WordPress sanitization processes, and client-side access guards.
+1. **[Architecture Blueprint](docs/architecture.html)** — Project structure, dynamic routing patterns, dynamic metadata conventions, static-data setups, components organization, and database schema mappings.
+2. **[Security Standards](docs/security.html)** — Rate limiting scopes, Cloudflare Turnstile CAPTCHA forms, Honeypot and Timing bot protection checks, HTTP security headers, input length validation parameters, HTML/WordPress sanitization processes, and client-side access guards.
 
 ## Development Commands
 ```bash

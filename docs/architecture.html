@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Architecture — Graduates Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0f172a;
+      --bg-sidebar: #020617;
+      --bg-card: #1e293b;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --text-heading: #ffffff;
+      --accent: #8b5cf6;
+      --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      --border: #334155;
+      --code-bg: #090d16;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Styling */
+    aside {
+      width: 300px;
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      background: var(--accent-gradient);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: white;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item a:hover {
+      color: var(--text-heading);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-item.active a {
+      color: var(--text-heading);
+      background: var(--accent-gradient);
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+    }
+
+    .doc-links {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .doc-links-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* Main Content Styling */
+    main {
+      margin-left: 300px;
+      flex: 1;
+      padding: 3rem 4.5rem;
+      max-width: 1200px;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .doc-meta {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Code Blocks */
+    pre {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      color: #38bdf8;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: var(--code-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: #38bdf8;
+      font-size: 0.95rem;
+    }
+
+    pre code {
+      padding: 0;
+      background-color: transparent;
+      color: inherit;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      border-color: var(--accent);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-bottom: 0.75rem;
+    }
+
+    .card-text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Alerts */
+    .alert {
+      border-left: 4px solid var(--accent);
+      background-color: rgba(139, 92, 246, 0.1);
+      padding: 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .alert-title {
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+      }
+      main {
+        margin-left: 0;
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <div class="brand">
+      <div class="brand-logo">G</div>
+      <span class="brand-title">Graduates Hub</span>
+    </div>
+    
+    <ul class="nav-list">
+      <li class="nav-item active">
+        <a href="#overview">Overview & Stack</a>
+      </li>
+      <li class="nav-item">
+        <a href="#structure">Directory Layout</a>
+      </li>
+      <li class="nav-item">
+        <a href="#patterns">Architectural Patterns</a>
+      </li>
+      <li class="nav-item">
+        <a href="#database">Database Schema</a>
+      </li>
+      <li class="nav-item">
+        <a href="#integrations">Integrations</a>
+      </li>
+    </ul>
+
+    <div class="doc-links">
+      <div class="doc-links-title">Other Documentation</div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="security.html">Security Standards &rarr;</a>
+        </li>
+        <li class="nav-item">
+          <a href="../README.md">README.md &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div class="doc-meta">System Blueprint</div>
+      <h1>System Architecture</h1>
+      <p class="text-muted">Technical overview, file structures, and data flow patterns in Graduates Hub.</p>
+    </header>
+
+    <section id="overview">
+      <h2>1. Tech Stack Overview</h2>
+      <p>Graduates Hub is built on a highly optimized, modern Next.js stack, leveraging serverless architecture for fast deployment and scalability:</p>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">Next.js 16.2.4 & React 19</div>
+          <div class="card-text">Framework with App Router structure, leveraging React Server Components (RSC) and server actions.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Supabase</div>
+          <div class="card-text">PostgreSQL database, Row-Level Security (RLS), and API clients handling data persistence.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Google Gemini v1 SDK</div>
+          <div class="card-text">AI integration via `@google/genai` to analyze user inputs, CVs, and code files.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Tailwind CSS 4</div>
+          <div class="card-text">Modern visual styling, leveraging native features and PostCSS for speed and efficiency.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure">
+      <h2>2. Directory Layout</h2>
+      <p>The codebase follows a standardized Next.js structure:</p>
+      <pre><code>graduateshub-hub-next/
+├── app/                          # Next.js App Router (Pages & API endpoints)
+│   ├── api/                      # Serverless API routes (Gemini, Supabase, Resend)
+│   ├── blog/                     # Blog dynamic routes & listing page
+│   ├── career-roadmaps/          # Career roadmaps static/dynamic pages
+│   ├── interview-prep/           # Interview preparation guides
+│   ├── portfolio/                # Portfolio builder and category listings
+│   ├── proof/[id]/               # Public portfolio submission showcases
+│   └── tools/                    # Interactive career tools (Gemini-powered)
+├── components/                   # Reusable React components
+│   ├── home/                     # Home page elements
+│   ├── course/                   # Course display templates
+│   ├── layout/                   # Global layout (Navbar, Footer, CookieConsent)
+│   └── shared/                   # Common elements (Newsletter, Promos)
+├── data/                         # Hardcoded site datasets (Fast static page builds)
+├── lib/                          # Site-wide constants and SEO configuration
+├── supabase/                     # SQL database schema and initialization scripts
+├── types/                        # Main TypeScript interfaces (types/index.ts)
+└── utils/                        # Utilities (rate limiter, safety guards, email escaping)</code></pre>
+    </section>
+
+    <section id="patterns">
+      <h2>3. Key Architectural Patterns</h2>
+      
+      <h3>A. Data-Driven Static Content (Zero Database Overhead)</h3>
+      <p>Rather than pulling career data or course listings from a database dynamically on every request, all primary site content is stored inside <code>/data</code> as TypeScript datasets. This ensures high speed, low database billing, and robust static generation.</p>
+      
+      <pre><code>import { roadmaps } from '@/data/roadmaps';
+
+export async function generateStaticParams() {
+  return roadmaps.map((r) => ({ slug: r.id }));
+}
+
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const roadmap = roadmaps.find((r) => r.id === slug);
+  if (!roadmap) return notFound();
+  // ... render roadmap UI
+}</code></pre>
+
+      <h3>B. Routing & Metadata Generation</h3>
+      <p>Dynamic pages utilize the <code>[slug]</code> format. Every route defines a <code>generateMetadata()</code> export to load canonical URLs, OpenGraph (OG) cards, Twitter cards, and descriptions for SEO.</p>
+
+      <h3>C. Component Separation</h3>
+      <ul>
+        <li><strong>Layout components (<code>components/layout/</code>)</strong>: Global layouts (e.g. Navbar, Footer, CookieConsent).</li>
+        <li><strong>Feature components (<code>components/home/</code>, <code>components/course/</code>)</strong>: Domain-specific files.</li>
+        <li><strong>Shared components (<code>components/shared/</code>)</strong>: Multi-page blocks like banners.</li>
+      </ul>
+    </section>
+
+    <section id="database">
+      <h2>4. Database Schema</h2>
+      <p>Supabase acts as our primary database, structured strictly for tracking portfolio projects and evaluations.</p>
+      
+      <div class="alert">
+        <div class="alert-title">Row-Level Security (RLS)</div>
+        <p>The <code>portfolio_proofs</code> table enforces strict read-write access rules via policies in <code>/supabase/schema.sql</code>. Read operations are public, but write access is restricted only to backend routes running the private service role key.</p>
+      </div>
+
+      <h3>Table Details: <code>portfolio_proofs</code></h3>
+      <ul>
+        <li><code>id</code> (text, Primary Key): Unique hash identifying the badge proof.</li>
+        <li><code>task_id</code> & <code>task_title</code> & <code>task_field</code> (text): Information representing the completed project task.</li>
+        <li><code>graduate_name</code> (text): Display name of the graduate who submitted the task.</li>
+        <li><code>submission</code> (text): User's description or text proving task completion.</li>
+        <li><code>submission_links</code> (jsonb): Array of verified links (e.g. GitHub repos, live sites).</li>
+        <li><code>evaluation</code> (jsonb): JSON payload from the Gemini API containing grading score, code review summary, and comments.</li>
+        <li><code>created_at</code> (timestamptz): Timestamp of the submission.</li>
+      </ul>
+    </section>
+
+    <section id="integrations">
+      <h2>5. Third-Party Integrations</h2>
+      <ul>
+        <li><strong>Google Gemini API:</strong> Orchestrated server-side via the `@google/genai` SDK to evaluate student submissions, build learning paths, and audit CVs.</li>
+        <li><strong>Resend:</strong> Handles mail sending for feedback and contact pages.</li>
+        <li><strong>OneSignal:</strong> Delivers browser-push notifications initialized through a lazy client script.</li>
+        <li><strong>Cloudflare Turnstile:</strong> Secures form inputs by executing verification tokens before executing endpoints.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // Simple script to track active menu item in viewport
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        const link = item.querySelector('a');
+        if (link.getAttribute('href') === '#' + current) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -82,5 +82,5 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 Detailed structural blueprints and safety guidelines are located in the `/docs` directory:
 
-1.  **[Architecture Blueprint](docs/architecture.md)** — Core routing conventions, layout design systems, static data configurations, and Supabase integration schemas.
-2.  **[Security Standards](docs/security.md)** — Rate limiting configs, turnstile bot defenses, input size validations, HTTP headers, and client-side guards.
+1.  **[Architecture Blueprint](docs/architecture.html)** — Core routing conventions, layout design systems, static data configurations, and Supabase integration schemas.
+2.  **[Security Standards](docs/security.html)** — Rate limiting configs, turnstile bot defenses, input size validations, HTTP headers, and client-side guards.

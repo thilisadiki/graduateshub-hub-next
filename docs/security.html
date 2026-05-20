@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Standards — Graduates Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0f172a;
+      --bg-sidebar: #020617;
+      --bg-card: #1e293b;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --text-heading: #ffffff;
+      --accent: #8b5cf6;
+      --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      --border: #334155;
+      --code-bg: #090d16;
+      
+      --color-caution: #f43f5e;
+      --bg-caution: rgba(244, 63, 94, 0.1);
+      --color-tip: #10b981;
+      --bg-tip: rgba(16, 185, 129, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Styling */
+    aside {
+      width: 300px;
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      background: var(--accent-gradient);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: white;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item a:hover {
+      color: var(--text-heading);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-item.active a {
+      color: var(--text-heading);
+      background: var(--accent-gradient);
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+    }
+
+    .doc-links {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .doc-links-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* Main Content Styling */
+    main {
+      margin-left: 300px;
+      flex: 1;
+      padding: 3rem 4.5rem;
+      max-width: 1200px;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .doc-meta {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Code Blocks */
+    pre {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      color: #38bdf8;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: var(--code-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: #38bdf8;
+      font-size: 0.95rem;
+    }
+
+    pre code {
+      padding: 0;
+      background-color: transparent;
+      color: inherit;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--text-heading);
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Alerts */
+    .alert {
+      border-left: 4px solid var(--accent);
+      background-color: rgba(139, 92, 246, 0.08);
+      padding: 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .alert.caution {
+      border-left-color: var(--color-caution);
+      background-color: var(--bg-caution);
+    }
+
+    .alert.tip {
+      border-left-color: var(--color-tip);
+      background-color: var(--bg-tip);
+    }
+
+    .alert-title {
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+      }
+      main {
+        margin-left: 0;
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <div class="brand">
+      <div class="brand-logo">G</div>
+      <span class="brand-title">Graduates Hub</span>
+    </div>
+    
+    <ul class="nav-list">
+      <li class="nav-item active">
+        <a href="#bot-protection">Bot Protection</a>
+      </li>
+      <li class="nav-item">
+        <a href="#rate-limiting">Rate Limiting</a>
+      </li>
+      <li class="nav-item">
+        <a href="#input-limits">Input Constraints</a>
+      </li>
+      <li class="nav-item">
+        <a href="#security-headers">Security Headers</a>
+      </li>
+      <li class="nav-item">
+        <a href="#xss-protection">HTML/XSS Protection</a>
+      </li>
+      <li class="nav-item">
+        <a href="#error-handling">Error Sanitization</a>
+      </li>
+      <li class="nav-item">
+        <a href="#supabase-guard">Supabase Guard</a>
+      </li>
+    </ul>
+
+    <div class="doc-links">
+      <div class="doc-links-title">Other Documentation</div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="architecture.html">Architecture Blueprint &rarr;</a>
+        </li>
+        <li class="nav-item">
+          <a href="../README.md">README.md &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div class="doc-meta">Security Standards</div>
+      <h1>Security Standards & Patterns</h1>
+      <p class="text-muted">Security boundaries, rate limits, protections against abuse, and serverless architectural guards.</p>
+    </header>
+
+    <section id="bot-protection">
+      <h2>1. Bot Protection Triad</h2>
+      <p>All user-facing forms (Contact Form, Feedback Form, Portfolio badge submission) implement three combined layers of bot defense, managed server-side via the <code>checkBotProtection()</code> helper in <code>utils/security.ts</code>:</p>
+      
+      <div class="alert tip">
+        <div class="alert-title">Layer A: Cloudflare Turnstile</div>
+        <p>Verified against <code>https://challenges.cloudflare.com/turnstile/v0/siteverify</code>. If Turnstile tokens are invalid or missing, request fails closed with a <code>400 Bad Request</code>.</p>
+      </div>
+
+      <div class="alert">
+        <div class="alert-title">Layer B: Honeypot Fields</div>
+        <p>A hidden form input field <code>_hp</code> is placed in templates. If automated bots fill out this field, the server returns a successful <code>200 OK</code> response, but silently discards the submission without running any backend handlers.</p>
+      </div>
+
+      <div class="alert caution">
+        <div class="alert-title">Layer C: Submission Timing limits</div>
+        <p>Submissions occurring in under 3 seconds (as calculated by request parameters <code>_t</code> and <code>_ts</code>) are flagged as automated bot scripts. The endpoint returns a simulated successful <code>200 OK</code>, silently dropping the payload.</p>
+      </div>
+    </section>
+
+    <section id="rate-limiting">
+      <h2>2. API Rate Limiting</h2>
+      <p>All Next.js serverless routes verify client request frequencies. Rates are tracked in-memory using a sliding-window algorithm defined in <code>utils/rateLimit.ts</code>, automatically pruning old logs every minute. When client IP addresses exceed their budget, the route returns an HTTP <code>429 Too Many Requests</code> with a <code>Retry-After</code> header.</p>
+
+      <h3>Endpoint Frequency Budgets</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>API Endpoint</th>
+            <th>Minute Limit</th>
+            <th>Reasoning / Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/api/cv-review</code></td>
+            <td>5 req/min</td>
+            <td>High-cost Gemini resume parse API</td>
+          </tr>
+          <tr>
+            <td><code>/api/interview-prep</code></td>
+            <td>5 req/min</td>
+            <td>Gemini conversational interview engine</td>
+          </tr>
+          <tr>
+            <td><code>/api/learning-path</code></td>
+            <td>5 req/min</td>
+            <td>Gemini pathing algorithms</td>
+          </tr>
+          <tr>
+            <td><code>/api/skills-gap</code></td>
+            <td>5 req/min</td>
+            <td>Gemini gap analytics</td>
+          </tr>
+          <tr>
+            <td><code>/api/jd-decoder</code></td>
+            <td>5 req/min</td>
+            <td>Gemini job parsing</td>
+          </tr>
+          <tr>
+            <td><code>/api/portfolio/submit</code></td>
+            <td>3 req/min</td>
+            <td>Gemini code review + Supabase write limit</td>
+          </tr>
+          <tr>
+            <td><code>/api/contact</code></td>
+            <td>3 req/min</td>
+            <td>Prevents spamming the mailer (Resend)</td>
+          </tr>
+          <tr>
+            <td><code>/api/feedback</code></td>
+            <td>3 req/min</td>
+            <td>Prevents spamming the mailer (Resend)</td>
+          </tr>
+          <tr>
+            <td><code>/api/recommendations</code></td>
+            <td>10 req/min</td>
+            <td>Gemini course searching queries</td>
+          </tr>
+          <tr>
+            <td><code>/api/articles</code></td>
+            <td>30 req/min</td>
+            <td>Lenient rate for WP proxy</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="input-limits">
+      <h2>3. Gemini Input Size Limits</h2>
+      <p>Before executing prompts inside the Google Gemini AI models, API routes clamp character inputs to prevent billing and token exploitation:</p>
+      <ul>
+        <li><code>cvText</code> (Resume text payload): Max 15,000 chars</li>
+        <li><code>jobDescription</code> (Job specification content): Max 15,000 chars</li>
+        <li><code>submission</code> (Portfolio project content): Max 20,000 chars</li>
+        <li><code>currentSkills</code>: Max 2,000 chars</li>
+        <li><code>goal</code> / <code>query</code>: Max 1,000 chars</li>
+        <li><code>targetRole</code> / <code>jobTitle</code>: Max 200 chars</li>
+        <li><code>experienceLevel</code>: Max 50 chars</li>
+      </ul>
+    </section>
+
+    <section id="security-headers">
+      <h2>4. HTTP Security Headers</h2>
+      <p>Implemented globally via <code>next.config.ts</code> configuration:</p>
+      <ul>
+        <li><code>X-Frame-Options: SAMEORIGIN</code> &mdash; Clickjacking browser prevention.</li>
+        <li><code>Strict-Transport-Security</code> &mdash; Forces HTTPS traffic for a duration of 1 year.</li>
+        <li><code>X-Content-Type-Options: nosniff</code> &mdash; Stops MIME-type sniffing vulnerabilities.</li>
+        <li><code>Referrer-Policy: strict-origin-when-cross-origin</code> &mdash; Sanitizes Referer info on cross-origin requests.</li>
+        <li><code>Permissions-Policy</code> &mdash; Restricts unused browser features (geolocation, mic, camera).</li>
+      </ul>
+    </section>
+
+    <section id="xss-protection">
+      <h2>5. HTML & XSS Protection</h2>
+      
+      <h3>A. Resend Mail Sanitization</h3>
+      <p>All variables injected into email bodies (e.g. contact form text, author names) are escaped via <code>escapeHtml()</code> in <code>utils/security.ts</code> before templates render, neutralizing HTML/CSS injections.</p>
+
+      <h3>B. DOMPurify for WordPress Posts</h3>
+      <p>Dynamic content fetched from WordPress is sanitized using a strict allowlist. Attributes such as inline styling, editor identifiers, and script sections are removed completely before being injected into page templates.</p>
+
+      <h3>C. JSON-LD Escape Guards</h3>
+      <p>To avoid attacks where users insert string values containing <code>&lt;/script&gt;</code> inside metadata scripts, all JSON-LD output uses a replace query:</p>
+      <pre><code>dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/&lt;/g, '\\u003c') }}</code></pre>
+    </section>
+
+    <section id="error-handling">
+      <h2>6. Error Sanitization</h2>
+      <p>All catch blocks are standardized across endpoints. Stack traces and SDK exception variables are strictly kept in the server environment (via <code>console.error()</code> for log review) and are never exposed to browser interfaces. Clients receive a generic message:</p>
+      <pre><code>{ "error": "An unexpected error occurred. Please try again later." }</code></pre>
+    </section>
+
+    <section id="supabase-guard">
+      <h2>7. Supabase Client Guard</h2>
+      <p>To prevent developers from accidentally importing the database client running the admin role key (<code>SUPABASE_SERVICE_ROLE_KEY</code>) into client-side files, a check is verified on initialization inside <code>utils/supabase.ts</code>:</p>
+      <pre><code>if (typeof window !== 'undefined') {
+  throw new Error('getSupabase must only be called server-side.');
+}</code></pre>
+    </section>
+  </main>
+
+  <script>
+    // Simple script to track active menu item in viewport
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        const link = item.querySelector('a');
+        if (link.getAttribute('href') === '#' + current) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
