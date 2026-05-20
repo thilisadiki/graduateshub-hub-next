@@ -56,7 +56,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                   <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
-                  {popularGuides.map(guide => (
+                  {popularGuides.slice(0, 6).map(guide => (
                     <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">{guide.title}</Link>
                   ))}
                   <div className="mt-auto pt-2 border-t border-gray-100">
@@ -137,7 +137,7 @@ export default function Navbar() {
         ))}
         <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
-          {popularGuides.map(guide => (
+          {popularGuides.slice(0, 6).map(guide => (
             <Link key={guide.href} href={guide.href} onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">{guide.title}</Link>
           ))}
         </div>
