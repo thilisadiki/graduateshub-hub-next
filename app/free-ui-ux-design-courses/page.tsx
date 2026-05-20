@@ -24,43 +24,51 @@ export const metadata: Metadata = {
 
 const courseCategories: CourseCategory[] = [
   {
-    label: 'UI Design & Front-End Implementation',
-    slug: 'software-engineering',
-    description: 'Learn how interface designs are structured, styled, and translated into clean code.',
+    label: 'Foundational UI/UX Design Principles',
+    slug: 'it',
+    description: 'Learn the theories of user experience, interaction models, and brand design.',
     items: [
       {
-        id: 'html-css-web-dev',
-        customContent: 'To design interfaces that are technically feasible, you must understand the underlying layout code. This course covers semantic HTML tags, CSS box models, and responsive layout systems like Flexbox and CSS Grid. Knowing how browsers position elements allows you to collaborate better with developers and hand over clean Figma designs.'
+        id: 'introduction-to-ui-ux-design',
+        customContent: 'Every digital product must balance aesthetics with functional ease. This course covers sitemaps, information architecture, user persona development, and usability testing. Learning these fundamentals allows you to construct intuitive user journeys before diving into high-fidelity design tools.'
+      },
+      {
+        id: 'diploma-user-experience-design-web-adobe-xd',
+        customContent: 'To build websites that engage visitors, you must master the complete web design lifecycle. This comprehensive diploma details user profiles, sales funnel architectures, wireframes, and interactive prototyping using Adobe XD. It also covers branding, logo creation, and freelance client communication.'
       }
     ]
   },
   {
-    label: 'User Experience (UX) & Conversion Optimization',
+    label: 'Figma & Interactive Prototyping',
+    slug: 'it',
+    description: 'Master the industry-standard tools and front-end coding layouts used by product teams.',
+    items: [
+      {
+        id: 'user-interface-design-with-figma',
+        customContent: 'Figma is the industry-standard collaborative tool for modern design teams. This practical course covers layout grids, component states, vector networks, and interactive prototyping. You will learn to construct responsive interfaces and build high-fidelity interactive prototypes that look and feel like real applications.'
+      },
+      {
+        id: 'html-css-web-dev',
+        customContent: 'To design digital interfaces that are actually buildable, you must understand the underlying code. This course covers semantic HTML tags, CSS box models, and responsive layout systems like Flexbox and CSS Grid. Knowing these constraints lets you hand over pixel-perfect design assets to development teams.'
+      }
+    ]
+  },
+  {
+    label: 'Conversion Design & Agile Collaboration',
     slug: 'marketing',
-    description: 'Understand user behaviors, identify design friction, and create interfaces that convert.',
+    description: 'Align your designs with business metrics and collaborate in Agile product sprints.',
     items: [
       {
         id: 'using-digital-marketing-to-convert-customers',
-        customContent: 'UI design must drive business actions to be successful. This conversion optimization course covers landing page layouts, user behavior psychology, checkout processes, and A/B test methodologies. You will learn to identify interface friction, design user flows that improve signup rates, and build interfaces that convert.'
+        customContent: 'Designers must align their layouts with business metrics to drive signups and sales. This conversion optimization course covers landing page visual hierarchies, user behavior psychology, and checkout flow design. You will learn how to identify design friction and design interfaces that convert.'
       },
       {
-        id: 'growth-hacking-techniques',
-        customContent: 'The user journey does not end at signup; products must keep users engaged. This growth-focused course covers activation flows, retention mechanisms, viral loop design, and referral psychology. You will learn how to analyze user behavior data and design onboarding experiences that turn first-time visitors into active users.'
-      }
-    ]
-  },
-  {
-    label: 'Agile Product Design & AI Integration',
-    slug: 'business',
-    description: 'Master the collaborative workflows and AI tools shaping the modern design industry.',
-    items: [
-      {
-        id: 'agile-project-management',
-        customContent: 'In modern tech companies, designers work in collaborative cross-functional product teams. This course teaches the Scrum methodology, product owner collaboration, and backlog grooming. Learning how to translate user research into clear development user stories allows you to integrate design phases into short development sprints.'
+        id: 'growth-hacking-techniques-for-digital-marketing',
+        customContent: 'Digital products must keep users engaged long after their first visit. This course covers user onboarding flow design, retention loops, and user activation strategies. You will learn how to analyze user behavior data and design engaging interfaces that keep users coming back.'
       },
       {
-        id: 'introduction-to-ai-in-business',
-        customContent: 'AI tools are transforming how designers conduct research and generate design assets. This course explores how generative AI models are used to synthesize user interview transcripts, generate placeholder copy, and build fast prototypes. You will learn how to integrate AI workflows to speed up your design process.'
+        id: 'intro-ai-business',
+        customContent: 'AI tools are transforming how designers conduct user research and generate interface copy. This course explores how to use generative AI models to summarize user interviews, create placeholder text, and build fast concept mockups, allowing you to design and iterate much faster.'
       }
     ]
   }
@@ -108,7 +116,7 @@ export default function FreeUiUxDesignCoursesPage() {
   });
   
   const relatedCourses = allCourses
-    .filter((c) => (c.category.includes('Marketing') || c.category.includes('Software Engineering')) && !featuredIds.includes(c.id))
+    .filter((c) => (c.category.includes('Marketing') || c.category.includes('Software Engineering') || c.category.includes('IT Courses')) && !featuredIds.includes(c.id))
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 12);
 

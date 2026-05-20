@@ -55,11 +55,11 @@ const courseCategories: CourseCategory[] = [
     description: 'Build serverless web applications and model highly scalable cloud-native databases.',
     items: [
       {
-        id: 'advanced-diploma-in-modern-application-development',
+        id: 'advanced-diploma-modern-app-dev',
         customContent: 'Building for the cloud requires a shift from monolithic frameworks to distributed, serverless codebases. This intensive diploma covers SPA architecture, serverless backend functions, including AWS Lambda or Google Cloud Functions, and client authentication. You will learn how to design scalable backend APIs that handle high user volumes efficiently.'
       },
       {
-        id: 'diploma-in-firestore-development',
+        id: 'diploma-firestore-dev',
         customContent: 'Scalable cloud apps need globally distributed, high-performance database backends. This course covers Cloud Firestore, Google Cloud\'s serverless NoSQL database. You will learn how to design document structures, write queries, manage indices, and write security rules to prevent unauthorized direct client database access.'
       },
       {

@@ -63,7 +63,7 @@ const courseCategories: CourseCategory[] = [
         customContent: 'Python scripts and web apps must save information in structured, persistent storage. This course covers relational database designs, normalization, and primary/foreign keys. Understanding database structures helps you design better SQLAlchemy database tables for your Flask web apps.'
       },
       {
-        id: 'introduction-to-ai-in-business',
+        id: 'intro-ai-business',
         customContent: 'AI features and LLM integrations are built and deployed using Python code. This course details the strategic applications of machine learning models, chatbots, and NLP systems in business. You will understand the data pipelines needed to connect your Python apps to modern AI interfaces.'
       }
     ]

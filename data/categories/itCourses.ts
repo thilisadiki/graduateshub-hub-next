@@ -1362,5 +1362,77 @@ export const itCourses: Course[] = [
         "careerPath": "Completing this diploma gives you the core front-end skills required for entry-level web development roles. Typical career paths include Junior Front-End Developer, Web Designer, UI Developer, and Freelance Web Developer. Combined with a framework like React or Vue.js, the skills learned here can fast-track your progression into mid-level and senior front-end engineering positions.",
         "targetAudience": "This diploma is ideal for complete beginners who want to break into web development, designers who want to code their own designs, or anyone looking to build a portfolio of real web projects. No prior programming experience is required.",
         "editorsTake": "HTML, CSS, and JavaScript are the non-negotiables of web development, you simply cannot build for the web without them. This diploma covers all three in one structured program, saving you from piecing together scattered tutorials. We particularly recommend it to anyone who wants a clean, accredited credential to show employers alongside their first portfolio projects."
+    },
+    {
+        "id": "introduction-to-ui-ux-design",
+        "featured": false,
+        "title": "Introduction to UI/UX Design",
+        "tag": "Certificate",
+        "category": "IT Courses",
+        "subCategory": "Web & App Development",
+        "duration": "3-4 Hours",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1541462608141-2ff030a64e40?auto=format&fit=crop&w=600&q=80",
+        "affiliateLink": "https://alison.com/course/introduction-to-ui-ux-design?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        "description": "Master the fundamental concepts of user experience (UX) and user interface (UI) design, from information architecture to prototyping.",
+        "longDescription": "Every digital product must balance aesthetics with functional ease. The Certificate in Introduction to UI/UX Design provides a solid foundation in the core methodologies of modern digital design. You will explore the critical differences between UI (visual styling and layout) and UX (behavioral research and user journeys). The course details how to construct user personas, design clear sitemaps, and structure logical information architectures. You will also learn the principles of high-fidelity wireframing and how usability testing is conducted to refine interfaces before final deployment. By understanding the end-to-end design thinking process, you will be equipped to design products that users find both beautiful and intuitive.",
+        "outcomes": [
+            "Distinguish between user interface (UI) and user experience (UX) design roles and goals.",
+            "Create structured sitemaps and information architectures for digital products.",
+            "Design low-fidelity and high-fidelity wireframes that guide user flows.",
+            "Understand the methods and goals of usability testing and user feedback analysis.",
+            "Utilize industry design principles to create accessible and intuitive interfaces."
+        ],
+        "careerPath": "Prepares you for entry-level roles such as Junior UX Designer, UI Designer, or Associate Product Manager. This foundational certificate is a key milestone for building a professional design portfolio.",
+        "targetAudience": "Ideal for aspiring designers, web developers, and product managers who want to understand user-centric design principles and improve the usability of their digital products.",
+        "editorsTake": "This course is a brilliant entry point for anyone curious about digital design. It focuses on the fundamental 'why' of user journeys rather than just how to use a specific software tool, ensuring you build a robust theoretical foundation."
+    },
+    {
+        "id": "user-interface-design-with-figma",
+        "featured": false,
+        "title": "User Interface Design with Figma",
+        "tag": "Certificate",
+        "category": "IT Courses",
+        "subCategory": "Web & App Development",
+        "duration": "4-5 Hours",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=600&q=80",
+        "affiliateLink": "https://alison.com/course/user-interface-design-with-figma?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        "description": "Learn how to conduct user research, map journeys, and create interactive high-fidelity prototypes using Figma.",
+        "longDescription": "Figma is the industry-standard collaborative design tool used by top tech teams globally. This practical course, 'User Interface Design with Figma,' walks you through the practical process of translating user research into interactive prototypes. You will learn the mechanics of Figma's design environment, covering layout grids, vector networks, and typography systems. The curriculum guides you step-by-step through conducting UX research, creating comprehensive user journey maps, and building interactive, clickable prototypes. By mastering component structures and auto-layout features, you will learn to build responsive designs that developers can easily translate into clean front-end code.",
+        "outcomes": [
+            "Conduct foundational user research and build comprehensive user journey maps.",
+            "Utilize Figma's vector tools, components, and libraries to create clean UI layouts.",
+            "Implement responsive design principles using Figma's auto-layout features.",
+            "Build interactive, clickable high-fidelity prototypes for testing and presentation.",
+            "Prepare design files for a smooth handoff to engineering teams."
+        ],
+        "careerPath": "Essential training for aspiring UI/UX Designers, Product Designers, and Front-End Developers. Figma proficiency is one of the most in-demand design skills in the modern job market.",
+        "targetAudience": "Designed for graphic designers looking to transition to digital interfaces, developers wanting to build better mockups, and entry-level UX designers who want to master Figma.",
+        "editorsTake": "Hands-on Figma experience is absolutely mandatory for modern UI/UX design jobs. This course stands out because it doesn't just show you how to draw shapes; it teaches you how to structure designs in a clean, professional way that matches developer workflows."
+    },
+    {
+        "id": "diploma-user-experience-design-web-adobe-xd",
+        "featured": false,
+        "title": "Diploma in User Experience Design for the Web using Adobe XD",
+        "tag": "Diploma",
+        "category": "IT Courses",
+        "subCategory": "Web & App Development",
+        "duration": "10-15 Hours",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
+        "affiliateLink": "https://alison.com/course/diploma-in-user-experience-design-for-the-web-using-adobe-xd?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205",
+        "description": "Master the complete UX design lifecycle, from user persona development to advanced web layout prototypes using Adobe XD.",
+        "longDescription": "A great website must be designed with the user's specific goals in mind. The 'Diploma in User Experience Design for the Web using Adobe XD' covers the entire lifecycle of professional web design. You will explore advanced UX concepts, including user profile development, customer journey maps, and sales funnel structures. The course provides deep practical instruction in Adobe XD, teaching you how to build storyboards, wireframe layouts, and configure interactive web prototypes. You will also cover essential branding topics, including logo design and visual systems, alongside practical business strategies for landing clients, building a freelance design business, and coordinating with developers.",
+        "outcomes": [
+            "Develop detailed user profiles, personas, and behavioral journey maps.",
+            "Create functional storyboards and wireframes to outline website structure.",
+            "Build high-fidelity, interactive web layout prototypes using Adobe XD.",
+            "Design logos and establish unified brand identity systems.",
+            "Understand the business of design, from client communication to freelancing."
+        ],
+        "careerPath": "Prepares you for roles such as UX/UI Web Designer, Interactive Designer, or Freelance Design Consultant. The comprehensive nature of this diploma makes it excellent for building multi-step case studies.",
+        "targetAudience": "Perfect for aspiring web designers, freelancers, and creative professionals who want a complete, step-by-step training program in user experience design and prototyping.",
+        "editorsTake": "What makes this diploma outstanding is its career-oriented focus. It doesn't just cover the mechanics of Adobe XD; it explains how to think like a design business owner, manage clients, and package your case studies to win high-paying jobs."
     }
 ];
