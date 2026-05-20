@@ -30,11 +30,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'python-for-beginners-data',
-        customContent: 'The perfect entry point. This course introduces you to Python syntax from the ground up. You will learn data types, conditional logic, loops, custom functions, reading/writing files, and build a voice assistant project using Google APIs.'
+        customContent: 'Python is the most popular, readable programming language for automation and development. This course teaches core syntax, variables, lists, conditional statements, and custom functions from scratch. You will learn to read and write files, handle basic data processing, and build an API-driven voice assistant project.'
       },
       {
         id: 'diploma-python-programming',
-        customContent: 'Take your skills to the level required by employers. Learn Visual Studio setup, intermediate logic, processing CSV files programmatically, and implementing robust exception handling to write crash-resistant programs.'
+        customContent: 'Elevate your coding skills to build production-grade automation scripts. This course covers Visual Studio IDE setup, CSV library operations, and debugging patterns. You will place a strong emphasis on writing try-except exception blocks, ensuring your data processing scripts fail gracefully rather than crashing.'
       }
     ]
   },
@@ -45,11 +45,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'diploma-scalable-python-flask',
-        customContent: 'Transform your scripts into web interfaces. Master URL routing, Jinja2 page templating, dynamic form handling, and SQLAlchemy database integration using classes instead of raw SQL.'
+        customContent: 'Move beyond local scripts and share your code through the web. This backend course covers URL routing, dynamic form processing, and SQLAlchemy database integration. You will learn how to connect Python logic to relational databases using Object-Relational Mapping (ORM) to build web interfaces.'
       },
       {
         id: 'python-flask-docker',
-        customContent: 'Bridge coding and server operations. Build a backend REST API in Flask, package it with Dockerfiles, and orchestrate multi-container setups using Docker Compose so your code runs consistently in production.'
+        customContent: 'Packaging applications correctly is vital to ensuring they run reliably in production. This course teaches you to build Flask REST APIs, write Dockerfiles, configure network routing, and run multi-container deployments using Docker Compose. This is a critical skill for modern backend development and DevOps pipelines.'
       }
     ]
   },
@@ -60,11 +60,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'intro-database-concepts',
-        customContent: 'Relational databases are key to backend development. Learn about data normalization, primary/foreign keys, and transaction management to build robust database tables for your Python apps.'
+        customContent: 'Python scripts and web apps must save information in structured, persistent storage. This course covers relational database designs, normalization, and primary/foreign keys. Understanding database structures helps you design better SQLAlchemy database tables for your Flask web apps.'
       },
       {
         id: 'introduction-to-ai-in-business',
-        customContent: 'Understand how Python-powered machine learning models, chatbots, and predictive tools are applied strategically by corporate leaders to drive efficiency and automate services.'
+        customContent: 'AI features and LLM integrations are built and deployed using Python code. This course details the strategic applications of machine learning models, chatbots, and NLP systems in business. You will understand the data pipelines needed to connect your Python apps to modern AI interfaces.'
       }
     ]
   }

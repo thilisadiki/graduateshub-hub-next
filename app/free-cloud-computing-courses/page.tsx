@@ -30,7 +30,7 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'computer-networking',
-        customContent: 'VPCs, security groups, subnets, and routing tables all rely on networking. This diploma teaches LANs, WANs, IP addressing, and the OSI model. Understanding these protocols is mandatory before you configure cloud networks on AWS, Azure, or GCP.'
+        customContent: 'Cloud infrastructure is built entirely on virtualized networking layers. This course details routers, switches, IP routing tables, and port configuration, which are directly applicable when configuring Virtual Private Clouds (VPCs) in AWS or Azure. You will learn to configure subnetting and secure access gateways to keep cloud applications isolated and secure.'
       }
     ]
   },
@@ -41,11 +41,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'devops-alm',
-        customContent: 'This course details Application Lifecycle Management (ALM) in DevOps. You will learn about infrastructure as code (IaC), automated testing, and how to configure continuous delivery (CI/CD) pipelines to run on cloud platforms.'
+        customContent: 'Modern cloud development relies on automated delivery pipelines rather than manual server configurations. This course covers Application Lifecycle Management (ALM), version control integration, automated build triggers, and continuous deployment (CI/CD) environments. You will learn how to automate deployments and track software changes, a core requirement for platform and DevOps roles.'
       },
       {
         id: 'devops-fundamentals',
-        customContent: 'Focuses on the cultural shifts and technical processes of DevOps. Learn how breaking down the silos between development and operations drives velocity, improves deployment frequency, and reduces cloud application failure rates.'
+        customContent: 'Infrastructure is only as reliable as the practices used to deploy it. This course introduces DevOps culture, container lifecycle automation, and continuous delivery loops. You will understand how breaking down traditional silos between developers and operations reduces cloud hosting costs, increases deployment frequency, and ensures high availability.'
       }
     ]
   },
@@ -56,15 +56,15 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'advanced-diploma-in-modern-application-development',
-        customContent: 'A deep-dive diploma covering frontend SPA frameworks, OAuth authentication, and serverless computing concepts—including AWS Lambda functions—to handle millions of active cloud users.'
+        customContent: 'Building for the cloud requires a shift from monolithic frameworks to distributed, serverless codebases. This intensive diploma covers SPA architecture, serverless backend functions, including AWS Lambda or Google Cloud Functions, and client authentication. You will learn how to design scalable backend APIs that handle high user volumes efficiently.'
       },
       {
         id: 'diploma-in-firestore-development',
-        customContent: 'Master NoSQL document modeling using Google Cloud\'s globally distributed, serverless database, Cloud Firestore. Learn data modeling, indexing, and how to write security rules to prevent unauthorized direct-client access.'
+        customContent: 'Scalable cloud apps need globally distributed, high-performance database backends. This course covers Cloud Firestore, Google Cloud\'s serverless NoSQL database. You will learn how to design document structures, write queries, manage indices, and write security rules to prevent unauthorized direct client database access.'
       },
       {
         id: 'information-systems-technology-business-models',
-        customContent: 'Explores how digital platforms utilize cloud architecture to build software-as-a-service (SaaS) products, scale business models, and create value in the platform economy.'
+        customContent: 'Cloud systems must be optimized to drive business value and efficiency. This course analyzes the business economics of SaaS architectures, digital platform models, and capital to operational expenditure transitions. You will learn how to design cloud solutions that fit organizational financial goals and support rapid business growth.'
       }
     ]
   }

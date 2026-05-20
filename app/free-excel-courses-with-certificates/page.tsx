@@ -30,11 +30,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'microsoft-excel-data-analysis',
-        customContent: 'Excel is present in virtually every corporate office. This course takes you from basic column layout to advanced analysis. You will master VLOOKUP, IF statements, pivot tables, chart styling, and recording macros to automate repetitive tasks.'
+        customContent: 'Excel is the foundational tool for business reporting and modeling across the corporate world. This course takes you from cell navigation to advanced functionalities, including nested IF functions, VLOOKUP, Pivot Tables, and charts. You will also learn to write and record macros to automate reporting workflows, saving hours of manual data cleaning.'
       },
       {
         id: 'intro-power-bi',
-        customContent: 'The natural next step after mastering Excel. Power BI allows you to connect Excel workbooks, build highly interactive dashboards, and share dynamic reports with senior management. An essential business intelligence skill.'
+        customContent: 'When datasets grow too complex for spreadsheets, Power BI is the industry standard for reporting. This course teaches you how to import data from Excel tables, build interactive visualizations, and design dashboards for executive reviews. You will learn to transform raw transactional data into clear business insights.'
       }
     ]
   },
@@ -45,11 +45,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'fundamentals-of-accounting',
-        customContent: 'Excel is the primary tool used for corporate bookkeeping. This course teaches the accounting equation, journal ledger postings, and financial statement structures—providing the practical context you need to build clean corporate models.'
+        customContent: 'Financial models and budgets in Excel must follow standard corporate finance rules. This course teaches double-entry bookkeeping, general ledger postings, and the structure of balance sheets and income statements. Knowing these principles helps you build structured Excel sheets that corporate finance teams can trust.'
       },
       {
         id: 'intro-database-concepts',
-        customContent: 'Before you can analyze data in Excel, you must import it from database systems. Learn relational database design, data normalization, and SQL server fundamentals so you can work confidently with data teams.'
+        customContent: 'Before you can analyze data in spreadsheets, you must retrieve it from database systems. This course covers relational database designs, tables, keys, and data normalization. Understanding how databases store data allows you to clean up data exports, write better lookups, and import data into Excel cleanly.'
       }
     ]
   },
@@ -60,11 +60,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'time-management-for-professionals',
-        customContent: 'Excel modeling requires deep focus. Learn to manage your calendar, prioritize tasks using the Eisenhower Matrix, reduce distractions, and design email routines so you can get more deep analysis work done.'
+        customContent: 'Excel analysis requires blocks of focused time to avoid modeling mistakes. This course teaches calendar blocking, email management routines, task prioritization, and boundaries. You will learn how to eliminate distractions, prioritize analytical tasks, and meet tight business reporting deadlines.'
       },
       {
         id: 'lean-six-sigma-white-belt',
-        customContent: 'A short course on modern process improvement. Learn the DMAIC methodology to identify bottlenecks and streamline operations, helping you apply Excel models to real-world corporate efficiency problems.'
+        customContent: 'Spreadsheet models are built to identify business bottlenecks and process waste. This course covers the DMAIC framework for process optimization and efficiency testing. You will learn to use Excel data to trace operational issues back to their root causes and present actionable solutions to management.'
       }
     ]
   }

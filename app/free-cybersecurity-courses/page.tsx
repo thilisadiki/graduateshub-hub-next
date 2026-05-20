@@ -30,7 +30,7 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'diploma-in-cissp-2024',
-        customContent: 'This diploma provides a comprehensive survey of the eight core domains of the CISSP Body of Knowledge. You will study risk management, asset security, governance, identity access management, and security operations. It serves as an excellent preparation tool for the industry-standard CISSP credential.'
+        customContent: 'This diploma provides a comprehensive survey of the eight core domains of the CISSP Body of Knowledge. You will study risk management, asset security, governance, identity access management, and security operations. It serves as an excellent preparation tool for the industry-standard CISSP credential, helping you build senior governance capabilities.'
       }
     ]
   },
@@ -41,11 +41,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'secure-software-design',
-        customContent: 'A highly technical course covering structural security and practical mitigation of the OWASP Top 10 vulnerabilities. You will learn input sanitization, secure password hashing, and how to defend against cross-site scripting (XSS) and SQL injection.'
+        customContent: 'A highly technical course covering structural security and practical mitigation of the OWASP Top 10 vulnerabilities. You will learn input sanitization, secure password hashing, and how to defend against cross-site scripting (XSS) and SQL injection. This knowledge helps you design systems that are resilient to active cyber threats and injection attacks.'
       },
       {
         id: 'secure-software-concepts',
-        customContent: 'Focuses on the foundational tenets of security by design. Understand the CIA Triad (Confidentiality, Integrity, Availability), secure software architectures, and how to formulate non-functional security requirements during early software engineering phases.'
+        customContent: 'Focuses on the foundational tenets of security by design. Understand the CIA Triad (Confidentiality, Integrity, and Availability), secure software architectures, and how to formulate non-functional security requirements during early software engineering phases. You will learn how to prevent vulnerabilities before the coding phase begins.'
       }
     ]
   },
@@ -56,15 +56,15 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'computer-networking',
-        customContent: 'A comprehensive diploma detailing how data travels across local and wide area networks. You will master the OSI model, TCP/IP protocols, routers, switches, and the basic steps required to identify and secure network vulnerabilities.'
+        customContent: 'You cannot defend a network without understanding how data moves through it. This foundational course covers the core protocols of the internet, including TCP/IP addressing, subnet mask allocation, routers, switches, and the OSI stack. By mastering how packets are routed, you will be prepared to configure firewalls, audit port security, and identify potential entry points for attackers in enterprise environments.'
       },
       {
         id: 'computer-networking-lan-osi',
-        customContent: 'A focused certificate looking specifically at LAN structures and the OSI reference model. It teaches you how to map traffic flows and isolate troubleshooting steps to the correct layer of the network stack.'
+        customContent: 'A focused certificate looking specifically at Local Area Network (LAN) structures and the OSI reference model. It teaches you how to map traffic flows and isolate troubleshooting steps to the correct layer of the network stack. This helps you build a solid understanding of how physical and logical components interact in a company network.'
       },
       {
         id: 'fundamentals-of-dora',
-        customContent: 'Examines the Digital Operational Resilience Act (DORA), the strict new regulatory framework governing information security in the European financial sector and its global supply chain. A vital course for IT compliance specialists.'
+        customContent: 'Examines the Digital Operational Resilience Act (DORA), the strict regulatory framework governing information security in the European financial sector and its global supply chain. You will learn about ICT risk management, incident reporting protocols, and third-party risk assessments. This knowledge is a vital asset for IT compliance specialists working in global fintech and banking environments.'
       }
     ]
   }

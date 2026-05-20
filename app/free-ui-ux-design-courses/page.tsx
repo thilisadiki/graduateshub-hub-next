@@ -30,7 +30,7 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'html-css-web-dev',
-        customContent: 'Every digital UI design is ultimately rendered in HTML and CSS. This course covers the semantic box model, responsive sizing, and Flexbox layouts. Translating Figma wireframes into structured, accessible web pages is a vital skill for any interface designer.'
+        customContent: 'To design interfaces that are technically feasible, you must understand the underlying layout code. This course covers semantic HTML tags, CSS box models, and responsive layout systems like Flexbox and CSS Grid. Knowing how browsers position elements allows you to collaborate better with developers and hand over clean Figma designs.'
       }
     ]
   },
@@ -41,11 +41,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'using-digital-marketing-to-convert-customers',
-        customContent: 'Design without conversion is just art. Learn how to map user journeys, eliminate checkout friction, write persuasive copy, and conduct A/B testing on landing pages. Essential UX foundations for commercial product design.'
+        customContent: 'UI design must drive business actions to be successful. This conversion optimization course covers landing page layouts, user behavior psychology, checkout processes, and A/B test methodologies. You will learn to identify interface friction, design user flows that improve signup rates, and build interfaces that convert.'
       },
       {
         id: 'growth-hacking-techniques',
-        customContent: 'Focuses on the user activation and retention stages of the product funnel. Learn how to design engaging onboarding flows, viral loops, and user-centric features that keep customers coming back.'
+        customContent: 'The user journey does not end at signup; products must keep users engaged. This growth-focused course covers activation flows, retention mechanisms, viral loop design, and referral psychology. You will learn how to analyze user behavior data and design onboarding experiences that turn first-time visitors into active users.'
       }
     ]
   },
@@ -56,11 +56,11 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'agile-project-management',
-        customContent: 'UI/UX designers work closely with engineers and product managers. This course teaches the Scrum framework, sprint planning, and writing effective user stories so you can seamlessly integrate into modern product teams.'
+        customContent: 'In modern tech companies, designers work in collaborative cross-functional product teams. This course teaches the Scrum methodology, product owner collaboration, and backlog grooming. Learning how to translate user research into clear development user stories allows you to integrate design phases into short development sprints.'
       },
       {
         id: 'introduction-to-ai-in-business',
-        customContent: 'Discover how generative AI is transforming productivity. Learn how to use AI tools for user research synthesis, copywriting, and interface prototyping to build designs faster.'
+        customContent: 'AI tools are transforming how designers conduct research and generate design assets. This course explores how generative AI models are used to synthesize user interview transcripts, generate placeholder copy, and build fast prototypes. You will learn how to integrate AI workflows to speed up your design process.'
       }
     ]
   }
