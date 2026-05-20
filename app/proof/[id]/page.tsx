@@ -114,7 +114,7 @@ export default async function ProofPage({
     <div className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(credentialSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(credentialSchema).replace(/</g, '\\u003c') }}
       />
 
       {/* Hero */}

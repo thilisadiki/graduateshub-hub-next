@@ -3,6 +3,10 @@ import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 let cachedClient: SupabaseClient | null = null;
 
 export function getSupabase(): SupabaseClient {
+  if (typeof window !== 'undefined') {
+    throw new Error('getSupabase must only be called server-side.');
+  }
+
   if (cachedClient) return cachedClient;
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;

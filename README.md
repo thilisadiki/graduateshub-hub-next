@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Graduates Hub — Global Career & Course Directory
 
-## Getting Started
+Graduates Hub is a Next.js web application designed to connect learners worldwide with free online courses and career guidance. The platform features structured, stage-by-stage career roadmaps, interactive interview prep guides, and a suite of AI-powered career tools built on Google Gemini.
 
-First, run the development server:
+---
 
+## 🌟 Key Features
+
+*   **Career Roadmaps:** Structured guides for entry-level roles (e.g. Junior Accountant, Business Analyst, Data Analyst) containing curated courses, durations, milestones, and regional salary benchmarks.
+*   **Interview Prep Guides:** Curated questions, sample answers, red-flag advice, CV construction recommendations, and salary data across multiple regions (US, UK, Canada, Australia, South Africa).
+*   **AI-Powered Career Tools:**
+    *   *CV Review / Resume Analyzer:* Analyzes resumes and targets role alignment.
+    *   *Interview Simulator:* Conducts realistic AI mock interview sessions.
+    *   *Custom Learning Path Generator:* Builds tailored educational pathways.
+    *   *Job Description Decoder:* Extracts key skills and gaps from job specifications.
+*   **Portfolio Competency Badges:** Evaluates user-submitted course project files or descriptions using Gemini to reward shareable proof-of-competence badges stored on Supabase.
+
+---
+
+## 🛠 Tech Stack
+
+*   **Framework:** Next.js 16 (App Router)
+*   **Core:** React 19, TypeScript 5, Tailwind CSS 4
+*   **Auth & Database:** Supabase (PostgreSQL with Row-Level Security)
+*   **AI API:** Google Gemini SDK (`@google/genai`)
+*   **Notifications:** OneSignal Push
+*   **Mailing:** Resend API
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Ensure you have Node.js 18+ installed on your system.
+
+### 2. Install Dependencies
+Clone the repository and install the project packages:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Setup Environment Variables
+Create a `.env.local` file in the project root containing the following variables:
+```env
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Google Gemini API
+GEMINI_API_KEY=your_gemini_api_key
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Email Sending (Resend)
+RESEND_API_KEY=your_resend_api_key
 
-## Learn More
+# Cloudflare Turnstile CAPTCHA
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_turnstile_site_key
+TURNSTILE_SECRET_KEY=your_turnstile_secret_key
 
-To learn more about Next.js, take a look at the following resources:
+# Cron Job Secret (Keepalive)
+CRON_SECRET=your_cron_secret_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Run Development Server
+Start the Next.js development server with hot-reload enabled:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Project Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+*   `npm run dev` — Launches the local Next.js development server.
+*   `npm run build` — Generates a static-optimized production build of the project.
+*   `npm start` — Boots the production server locally (must run `npm run build` first).
+*   `npx tsc --noEmit` — Executes static TypeScript validation checks.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📖 System Documentation
+
+Detailed structural blueprints and safety guidelines are located in the `/docs` directory:
+
+1.  **[Architecture Blueprint](docs/architecture.md)** — Core routing conventions, layout design systems, static data configurations, and Supabase integration schemas.
+2.  **[Security Standards](docs/security.md)** — Rate limiting configs, turnstile bot defenses, input size validations, HTTP headers, and client-side guards.

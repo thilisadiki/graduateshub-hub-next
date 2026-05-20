@@ -18,7 +18,7 @@ const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 // both call this, it only hits the WP API once per request.
 const fetchPostBySlug = cache(async (slug: string) => {
   try {
-    const res = await fetch(`${WP_API}/wp/v2/posts?slug=${slug}&_embed`, {
+    const res = await fetch(`${WP_API}/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed`, {
       next: { revalidate: 3600 },
     });
     if (!res.ok) return null;
@@ -210,7 +210,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
