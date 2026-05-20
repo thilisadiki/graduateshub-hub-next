@@ -13,6 +13,8 @@ const getSimplifiedCatalog = () =>
     keywords: course.description.substring(0, 150) + '...',
   }));
 
+const MAX_QUERY_LENGTH = 1_000;
+
 export async function POST(request: NextRequest) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
@@ -33,6 +35,12 @@ export async function POST(request: NextRequest) {
   if (!userQuery || userQuery.trim() === '') {
     return NextResponse.json(
       { error: "Please provide some information about what you'd like to learn." },
+      { status: 400 }
+    );
+  }
+  if (userQuery.length > MAX_QUERY_LENGTH) {
+    return NextResponse.json(
+      { error: `Your query must be under ${MAX_QUERY_LENGTH.toLocaleString()} characters.` },
       { status: 400 }
     );
   }

@@ -12,6 +12,9 @@ const getSimplifiedCatalog = () =>
     keywords: course.description.substring(0, 150),
   }));
 
+const MAX_TITLE_LENGTH = 200;
+const MAX_LEVEL_LENGTH = 50;
+
 export async function POST(request: NextRequest) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
@@ -31,6 +34,12 @@ export async function POST(request: NextRequest) {
 
   if (!jobTitle?.trim()) {
     return NextResponse.json({ error: 'Please provide a job title.' }, { status: 400 });
+  }
+  if (jobTitle.length > MAX_TITLE_LENGTH) {
+    return NextResponse.json({ error: `Job title must be under ${MAX_TITLE_LENGTH} characters.` }, { status: 400 });
+  }
+  if (experienceLevel.length > MAX_LEVEL_LENGTH) {
+    return NextResponse.json({ error: `Experience level must be under ${MAX_LEVEL_LENGTH} characters.` }, { status: 400 });
   }
 
   const ai = new GoogleGenAI({ apiKey });

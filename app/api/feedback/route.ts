@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { checkBotProtection } from '@/utils/security';
+import { checkBotProtection, escapeHtml } from '@/utils/security';
 
 const ALLOWED_AREAS: Record<string, string> = {
   'course-content': 'Course quality and content',
@@ -12,8 +12,7 @@ const ALLOWED_AREAS: Record<string, string> = {
   'other': 'Something else',
 };
 
-const esc = (s: string) =>
-  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 
 export async function POST(request: NextRequest) {
   try {
@@ -75,16 +74,16 @@ export async function POST(request: NextRequest) {
           <h2 style="color: #1d4ed8;">New feedback submission</h2>
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
             <tr><td style="padding: 8px 0; color: #6b7280; width: 120px;"><strong>Rating</strong></td><td style="padding: 8px 0; color: #111827; font-size: 18px;">${stars} (${numRating}/5)</td></tr>
-            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Area</strong></td><td style="padding: 8px 0; color: #111827;">${esc(areaLabel)}</td></tr>
-            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Name</strong></td><td style="padding: 8px 0; color: #111827;">${esc(name)}</td></tr>
-            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Email</strong></td><td style="padding: 8px 0;">${email ? `<a href="mailto:${esc(email)}" style="color: #1d4ed8;">${esc(email)}</a>` : '<span style="color: #9ca3af;">Not provided</span>'}</td></tr>
+            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Area</strong></td><td style="padding: 8px 0; color: #111827;">${escapeHtml(areaLabel)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Name</strong></td><td style="padding: 8px 0; color: #111827;">${escapeHtml(name)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Email</strong></td><td style="padding: 8px 0;">${email ? `<a href="mailto:${escapeHtml(email)}" style="color: #1d4ed8;">${escapeHtml(email)}</a>` : '<span style="color: #9ca3af;">Not provided</span>'}</td></tr>
             <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Follow-up OK</strong></td><td style="padding: 8px 0; color: #111827;">${followUp ? 'Yes' : 'No'}</td></tr>
           </table>
           <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px;">
-            <p style="margin: 0; color: #374151; white-space: pre-wrap;">${esc(message.trim())}</p>
+            <p style="margin: 0; color: #374151; white-space: pre-wrap;">${escapeHtml(message.trim())}</p>
           </div>
           <p style="margin-top: 24px; color: #9ca3af; font-size: 12px;">
-            Sent via the feedback form at graduateshub.org/feedback.${email ? ` Reply directly to respond to ${esc(name)}.` : ''}
+            Sent via the feedback form at graduateshub.org/feedback.${email ? ` Reply directly to respond to ${escapeHtml(name)}.` : ''}
           </p>
         </div>
       `,

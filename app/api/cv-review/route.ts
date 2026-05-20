@@ -12,6 +12,9 @@ const getSimplifiedCatalog = () =>
     keywords: course.description.substring(0, 150),
   }));
 
+const MAX_CV_LENGTH = 15_000;
+const MAX_ROLE_LENGTH = 200;
+
 export async function POST(request: NextRequest) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
@@ -31,6 +34,12 @@ export async function POST(request: NextRequest) {
 
   if (!cvText?.trim() || cvText.trim().length < 50) {
     return NextResponse.json({ error: 'Please paste your CV text (at least 50 characters).' }, { status: 400 });
+  }
+  if (cvText.length > MAX_CV_LENGTH) {
+    return NextResponse.json({ error: `CV text must be under ${MAX_CV_LENGTH.toLocaleString()} characters.` }, { status: 400 });
+  }
+  if (targetRole && targetRole.length > MAX_ROLE_LENGTH) {
+    return NextResponse.json({ error: `Target role must be under ${MAX_ROLE_LENGTH} characters.` }, { status: 400 });
   }
 
   const ai = new GoogleGenAI({ apiKey });

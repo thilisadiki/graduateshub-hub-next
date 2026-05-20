@@ -12,6 +12,8 @@ const getSimplifiedCatalog = () =>
     keywords: course.description.substring(0, 150),
   }));
 
+const MAX_JD_LENGTH = 15_000;
+
 export async function POST(request: NextRequest) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
@@ -29,6 +31,9 @@ export async function POST(request: NextRequest) {
 
   if (!jobDescription?.trim() || jobDescription.trim().length < 100) {
     return NextResponse.json({ error: 'Please paste a job description (at least 100 characters).' }, { status: 400 });
+  }
+  if (jobDescription.length > MAX_JD_LENGTH) {
+    return NextResponse.json({ error: `Job description must be under ${MAX_JD_LENGTH.toLocaleString()} characters.` }, { status: 400 });
   }
 
   const ai = new GoogleGenAI({ apiKey });

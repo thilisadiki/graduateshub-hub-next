@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { checkBotProtection } from '@/utils/security';
+import { checkBotProtection, escapeHtml } from '@/utils/security';
 
 
 export async function POST(request: NextRequest) {
@@ -34,6 +34,11 @@ export async function POST(request: NextRequest) {
 
     const resend = new Resend(apiKey);
 
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safeSubject = escapeHtml(subject);
+    const safeMessage = escapeHtml(message);
+
     const { error } = await resend.emails.send({
       from: 'Graduates Hub <noreply@graduateshub.org>',
       replyTo: `${name} <${email}>`,
@@ -43,15 +48,15 @@ export async function POST(request: NextRequest) {
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #1d4ed8;">New contact form submission</h2>
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
-            <tr><td style="padding: 8px 0; color: #6b7280; width: 100px;"><strong>Name</strong></td><td style="padding: 8px 0; color: #111827;">${name}</td></tr>
-            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Email</strong></td><td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #1d4ed8;">${email}</a></td></tr>
-            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Subject</strong></td><td style="padding: 8px 0; color: #111827;">${subject}</td></tr>
+            <tr><td style="padding: 8px 0; color: #6b7280; width: 100px;"><strong>Name</strong></td><td style="padding: 8px 0; color: #111827;">${safeName}</td></tr>
+            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Email</strong></td><td style="padding: 8px 0;"><a href="mailto:${safeEmail}" style="color: #1d4ed8;">${safeEmail}</a></td></tr>
+            <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Subject</strong></td><td style="padding: 8px 0; color: #111827;">${safeSubject}</td></tr>
           </table>
           <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px;">
-            <p style="margin: 0; color: #374151; white-space: pre-wrap;">${message}</p>
+            <p style="margin: 0; color: #374151; white-space: pre-wrap;">${safeMessage}</p>
           </div>
           <p style="margin-top: 24px; color: #9ca3af; font-size: 12px;">
-            Sent via the contact form at graduateshub.org. Reply directly to this email to respond to ${name}.
+            Sent via the contact form at graduateshub.org. Reply directly to this email to respond to ${safeName}.
           </p>
         </div>
       `,

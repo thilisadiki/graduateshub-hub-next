@@ -2,6 +2,15 @@ import { NextResponse } from 'next/server';
 
 const MIN_SUBMIT_MS = 3000; // reject submissions faster than 3 seconds
 
+/** Escape HTML special characters to prevent injection in email templates. */
+export function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 export async function verifyTurnstile(token: string): Promise<boolean> {
   const secret = process.env.TURNSTILE_SECRET_KEY;
   if (!secret) return true; // not configured - skip verification
