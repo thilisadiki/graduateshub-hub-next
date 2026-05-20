@@ -102,7 +102,7 @@ Tracks verified learning completions.
   - `created_at`: Timestamptz (Submission timestamp)
 
 ### Row-Level Security (RLS)
-The database enforces strict policies defined in [supabase/schema.sql](file:///Users/jasonsadiki/projects/graduateshub-hub-next/supabase/schema.sql):
+The database enforces strict policies defined in [supabase/schema.sql](/supabase/schema.sql):
 - **Read:** Public select access is allowed (`Public read portfolio proofs`).
 - **Write:** Denied to standard users. Insertions are performed strictly by serverless API routes using the private `SUPABASE_SERVICE_ROLE_KEY`.
 
