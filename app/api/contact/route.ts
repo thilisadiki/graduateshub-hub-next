@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     // Send email via Resend
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.log('[Contact Form] RESEND_API_KEY not set. Submission received:', { name, email, subject });
+      console.warn('[Contact Form] RESEND_API_KEY not configured — email not sent.');
       return NextResponse.json({ success: true });
     }
 
