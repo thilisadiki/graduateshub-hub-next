@@ -70,7 +70,7 @@ const courseCategories: CourseCategory[] = [
     description: 'Web development, databases, and agile engineering practices.',
     items: [
       { id: 'agile-essentials', customContent: 'Modern software is built by teams, not lone wolves. This certificate proves you understand the Agile rituals that govern professional development teams. You will learn the terminology of sprints, story points, and retrospectives, ensuring you can integrate smoothly into any corporate engineering department.' },
-      { id: 'it-management-software-databases', customContent: 'Software relies entirely on the databases that store its information. This course bridges the gap between application development and database administration. You will learn how to design efficient database architectures, manage SQL servers, and ensure data integrity—critical skills for any aspiring full-stack developer or systems architect.' },
+      { id: 'it-management-software-databases', customContent: 'Software relies entirely on the databases that store its information. This course bridges the gap between application development and database administration. You will learn how to design efficient database architectures, manage SQL servers, and ensure data integrity, which are critical skills for any aspiring full-stack developer or systems architect.' },
       { id: 'diploma-ecommerce-web-dev', customContent: 'E-commerce is the engine of the digital economy. This rigorous diploma teaches you how to architect transactional web applications. Earning this certificate proves you understand the complex logic behind shopping carts, secure user authentication, and payment gateway integration, making you highly valuable to retail and tech employers.' }
     ]
   },

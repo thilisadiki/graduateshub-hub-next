@@ -143,7 +143,7 @@ export default function FreeCybersecurityCoursesPage() {
       exploreCategories={exploreCategories}
       faqs={faqs}
       ctaHeading="Start Securing Your Future"
-      ctaBody="Pick your first course—we recommend starting with Networking if you are a beginner—and build a foundation in security today."
+      ctaBody="Pick your first course (we recommend starting with Networking if you are a beginner) and build a foundation in security today."
       ctaPrimaryLabel="View All IT Courses"
       ctaPrimaryHref="/category/it"
       ctaSecondaryLabel="Build Your Portfolio"

@@ -51,7 +51,7 @@ const courseCategories: CourseCategory[] = [
     categoryHref: '/category/business',
     categoryLabel: 'Business',
     items: [
-      { id: 'gdpr-general-data-protection', customContent: 'Data privacy is no longer optional; it is a strict legal requirement globally. This critical course breaks down the General Data Protection Regulation (GDPR). You will understand the legal obligations companies have when handling personal data, the rights of consumers, and how to avoid catastrophic compliance fines—essential knowledge for HR, marketing, and IT professionals.' },
+      { id: 'gdpr-general-data-protection', customContent: 'Data privacy is no longer optional; it is a strict legal requirement globally. This critical course breaks down the General Data Protection Regulation (GDPR). You will understand the legal obligations companies have when handling personal data, the rights of consumers, and how to avoid catastrophic compliance fines, which is essential knowledge for HR, marketing, and IT professionals.' },
       { id: 'anti-money-laundering', customContent: 'The financial sector is heavily regulated to prevent criminal activity. This specialized course covers the mechanisms of Anti-Money Laundering (AML) and Know Your Customer (KYC) protocols. If you are aiming for a career in banking, fintech, or corporate compliance, understanding how to identify and report suspicious financial transactions is a strict prerequisite.' }
     ]
   },

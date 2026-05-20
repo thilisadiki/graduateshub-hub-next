@@ -207,7 +207,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   {[
                     `Study ${course.subCategory || course.category} at your own pace, anytime and anywhere.`,
                     `Earn a free ${course.tag?.toLowerCase() || 'certificate'} from ${course.title.split(':')[0]}.`,
-                    'Accessible on any device — desktop, tablet, or mobile.',
+                    'Accessible on any device (desktop, tablet, or mobile).',
                   ].map(item => (
                     <li key={item} className="flex items-start text-gray-600 text-[15px]"><span className="text-primary mr-3 mt-0.5">•</span>{item}</li>
                   ))}
@@ -258,7 +258,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   <div><h4 className="font-bold text-gray-900 text-lg">Alison</h4><p className="text-sm text-gray-500 font-medium tracking-wide uppercase">Global Online Learning Platform</p></div>
                 </div>
                 <p className="text-gray-600 text-[15px] leading-relaxed">
-                  Alison is one of the world&apos;s largest free learning platforms, offering over 4,000 courses across {course.category} and other disciplines to millions of learners in 195 countries. All Alison courses — including {course.title} — are completely free to study, with optional paid certificates available upon completion. Alison is certified by the{' '}
+                  Alison is one of the world&apos;s largest free learning platforms, offering over 4,000 courses across {course.category} and other disciplines to millions of learners in 195 countries. All Alison courses, including {course.title}, are completely free to study, with optional paid certificates available upon completion. Alison is certified by the{' '}
                   <a href="https://cpduk.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">CPD Standards Office (UK)</a>
                   , meaning certificates earned are recognised by employers globally.
                 </p>

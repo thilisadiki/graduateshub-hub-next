@@ -97,7 +97,7 @@ const relatedGuides: RelatedGuide[] = [
 ];
 
 const faqs: FaqItem[] = [
-  { q: 'What is the difference between UI and UX design?', a: 'UI (User Interface) design focuses on the visual and interactive elements of a product—such as buttons, typography, colors, and layout. UX (User Experience) design focuses on the overall feel of the product, user research, and how easily a user can achieve their goals without friction.' },
+  { q: 'What is the difference between UI and UX design?', a: 'UI (User Interface) design focuses on the visual and interactive elements of a product, such as buttons, typography, colors, and layout. UX (User Experience) design focuses on the overall feel of the product, user research, and how easily a user can achieve their goals without friction.' },
   { q: 'Do I need to know how to code to be a UI/UX designer?', a: 'No, coding is not strictly required. However, understanding HTML, CSS, and how layouts are built makes you a far more effective designer because you can build designs that are technically feasible and communicate better with developers.' },
   { q: 'How do I build a UI/UX portfolio with these free courses?', a: 'Apply the concepts from these courses to redesign an existing app or build a new product concept. Document your process: show your user research, wireframes, user flows, and final high-fidelity Figma screens. Employers hire designers based on their portfolio case studies, not just certificates.' }
 ];
