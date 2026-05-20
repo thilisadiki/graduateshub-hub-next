@@ -236,37 +236,118 @@ Next.js 16 introduces breaking changes from older versions:
 
 ## Security Patterns
 
-Forms (contact, feedback, etc.) implement multi-layer bot protection:
+### Bot Protection (Forms)
 
-### Cloudflare Turnstile (CAPTCHA)
+Forms (contact, feedback, portfolio submit, etc.) implement multi-layer bot protection via the shared `checkBotProtection()` utility in `/utils/security.ts`:
+
+#### Cloudflare Turnstile (CAPTCHA)
 - Verify token server-side via `https://challenges.cloudflare.com/turnstile/v0/siteverify`
 - Gracefully degrades if `TURNSTILE_SECRET_KEY` not set
 - Returns 400 if verification fails
 
-### Honeypot Fields
+#### Honeypot Fields
 - Hidden form fields (`_hp`) that bots fill, humans don't
 - If filled, return 200 (appear successful to bot, silently discard)
 - Prevents form spam while maintaining good UX
 
-### Timing Checks
+#### Timing Checks
 - Reject submissions under 3 seconds (minimum `MIN_SUBMIT_MS`)
 - Bots submit instantly; humans take time to read and fill
 - Return 200 to appear successful to bot
 
-### Field Validation
+#### Field Validation
 - Email regex check: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
 - Required field checks (name, email, subject, message)
 - Character limits (e.g., message < 2000 chars)
 - Return 400 with descriptive error on failure
 
 **Example Flow (Contact Form):**
-1. Parse request JSON
-2. Check honeypot (`_hp`)
-3. Check timing (`_t`, `_ts`)
-4. Validate all fields
-5. Verify Turnstile token
-6. Send email via Resend
-7. Return success or error with appropriate HTTP status
+1. Rate limit check (reject with 429 if exceeded)
+2. Parse request JSON
+3. Check honeypot (`_hp`)
+4. Check timing (`_t`, `_ts`)
+5. Validate all fields
+6. Verify Turnstile token
+7. Escape all user input with `escapeHtml()` before email template interpolation
+8. Send email via Resend
+9. Return success or error with appropriate HTTP status
+
+### Rate Limiting
+
+All API routes enforce per-IP rate limits via the in-memory sliding-window rate limiter in `/utils/rateLimit.ts`. The check runs **before** body parsing or any external API call, so rate-limited requests cost nothing.
+
+**Implementation:** Each route creates a `createRateLimiter()` instance at module scope with its own `max` and `windowSeconds`. The limiter tracks request timestamps per IP in a `Map`, auto-prunes stale entries every 60 seconds, and returns a 429 response with a `Retry-After` header when exceeded.
+
+**IP detection:** Reads `x-forwarded-for` (set by Vercel/Cloudflare edge), falls back to `x-real-ip`, then `"unknown"`.
+
+| Route | Limit | Rationale |
+|-------|-------|-----------|
+| `/api/cv-review` | 5/min | Expensive Gemini call |
+| `/api/recommendations` | 10/min | Lighter Gemini call |
+| `/api/interview-prep` | 5/min | Expensive Gemini call |
+| `/api/learning-path` | 5/min | Expensive Gemini call |
+| `/api/skills-gap` | 5/min | Expensive Gemini call |
+| `/api/jd-decoder` | 5/min | Expensive Gemini call |
+| `/api/portfolio/submit` | 3/min | Gemini + Supabase write |
+| `/api/contact` | 3/min | Email send |
+| `/api/feedback` | 3/min | Email send |
+| `/api/articles` | 30/min | Cached proxy, lenient |
+
+> **Note:** State is per serverless instance — it resets when Vercel spins up a new instance. This catches rapid-fire abuse (the 90% case) without needing Redis or any external service.
+
+### HTML Escaping in Email Templates
+
+All user-supplied values are escaped before interpolation into HTML email templates using the shared `escapeHtml()` utility in `/utils/security.ts`. This prevents HTML/XSS injection in email bodies.
+
+- **Escapes:** `&`, `<`, `>`, `"` characters
+- **Used in:** `/api/contact/route.ts` and `/api/feedback/route.ts`
+- **Pattern:** Create `safe*` variables (e.g., `safeName = escapeHtml(name)`) and use those in the template
+
+### Input Length Limits on Gemini Endpoints
+
+All Gemini-powered API routes enforce maximum input lengths to prevent LLM cost abuse (large payloads consuming API quota). Oversized inputs are rejected with a 400 status **before** the Gemini API is called.
+
+| Route | Field | Max Length |
+|-------|-------|------------|
+| `/api/cv-review` | `cvText` | 15,000 |
+| `/api/cv-review` | `targetRole` | 200 |
+| `/api/recommendations` | `query` | 1,000 |
+| `/api/interview-prep` | `jobTitle` | 200 |
+| `/api/interview-prep` | `experienceLevel` | 50 |
+| `/api/learning-path` | `goal` | 1,000 |
+| `/api/skills-gap` | `jobTarget` | 200 |
+| `/api/skills-gap` | `currentSkills` | 2,000 |
+| `/api/jd-decoder` | `jobDescription` | 15,000 |
+| `/api/portfolio/submit` | `submission` | 20,000 |
+
+### HTTP Security Headers
+
+Set globally in `next.config.ts` `headers()` for all routes:
+
+| Header | Value | Purpose |
+|--------|-------|---------|
+| `X-Frame-Options` | `SAMEORIGIN` | Prevents clickjacking via iframes |
+| `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` | Forces HTTPS for 1 year |
+| `X-Content-Type-Options` | `nosniff` | Prevents MIME-type sniffing attacks |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Limits URL path leakage to third parties |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` | Blocks unused device APIs from third-party scripts |
+
+### WordPress Content Sanitization
+
+Blog content fetched from the WordPress API is sanitized before rendering:
+
+- **Post content** (`dangerouslySetInnerHTML`): Sanitized via `DOMPurify` with a strict allowlist of tags (`p`, `a`, `img`, `h1`–`h6`, `ul`, `ol`, `li`, `table`, etc.) and attributes (`href`, `src`, `alt`, `title`, `width`, `height`, `class`). Inline styles, `data-*` attributes, and Gutenberg comments are stripped via regex cleanup.
+- **Titles and excerpts**: All HTML tags stripped using `DOMPurify.sanitize(html, { ALLOWED_TAGS: [] })` — only plain text is rendered.
+- **Implementation:** `cleanContent()` and `sanitizeText()` functions in `/app/blog/[slug]/page.tsx`
+
+### Articles API Proxy (`/api/articles`)
+
+The articles proxy fetches posts from the WordPress REST API and returns a filtered response:
+
+- **`per_page` clamped** to 1–12 (validated as a positive integer, defaults to 3)
+- **Response stripped** to only the fields the frontend uses: `id`, `slug`, `title`, `excerpt`, `date`, and `_embedded` featured media `source_url`
+- **`search` param encoded** via `encodeURIComponent()` to prevent query injection
+- **Cached** with `next: { revalidate: 300 }` (5 minutes)
 
 ## Supabase Database & RLS
 
@@ -302,7 +383,13 @@ All API routes follow consistent error handling:
 ### HTTP Status Codes
 - `200` – Success OR bot-like submission (silently discard)
 - `400` – Validation failure or security check failed (user-facing error)
+- `429` – Rate limit exceeded (includes `Retry-After` header)
 - `500` – Unexpected server error
+
+### Error Sanitization
+- **Never** return `error.message` to the client — it may expose SDK internals, API keys in URLs, or stack traces
+- All 500 responses use a generic message: `"An unexpected error occurred."` or route-specific equivalent
+- The real error is logged server-side via `console.error` for debugging in Vercel logs
 
 ### Error Logging
 - Use prefix for debugging: `[Feature Name]` (e.g., `[Contact Form]`)

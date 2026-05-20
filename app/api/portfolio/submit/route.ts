@@ -4,6 +4,7 @@ import { getTaskById } from '@/data/portfolioTasks';
 import { getCategoryById } from '@/data/portfolioCategories';
 import { getSupabase } from '@/utils/supabase';
 import { checkBotProtection } from '@/utils/security';
+import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import type { PortfolioEvaluation, RubricScore } from '@/types';
 
 const MIN_SUBMISSION_LENGTH = 200;
@@ -36,7 +37,12 @@ function sanitiseLinks(raw: unknown): string[] {
     .slice(0, MAX_LINKS);
 }
 
+const limiter = createRateLimiter({ max: 3, windowSeconds: 60 });
+
 export async function POST(request: NextRequest) {
+  const limited = limiter.check(getClientIp(request));
+  if (limited) return limited;
+
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });

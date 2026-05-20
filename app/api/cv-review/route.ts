@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 import { checkBotProtection } from '@/utils/security';
+import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import { courses } from '@/data/courses';
 
 const getSimplifiedCatalog = () =>
@@ -15,7 +16,12 @@ const getSimplifiedCatalog = () =>
 const MAX_CV_LENGTH = 15_000;
 const MAX_ROLE_LENGTH = 200;
 
+const limiter = createRateLimiter({ max: 5, windowSeconds: 60 });
+
 export async function POST(request: NextRequest) {
+  const limited = limiter.check(getClientIp(request));
+  if (limited) return limited;
+
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
 
@@ -136,6 +142,6 @@ INSTRUCTIONS:
     });
   } catch (error: any) {
     console.error('Error fetching CV review from Gemini:', error);
-    return NextResponse.json({ error: error.message || 'An unexpected error occurred.' }, { status: 500 });
+    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
   }
 }

@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const MAX_PER_PAGE = 12;
 
+const limiter = createRateLimiter({ max: 30, windowSeconds: 60 });
+
 export async function GET(request: NextRequest) {
+  const limited = limiter.check(getClientIp(request));
+  if (limited) return limited;
+
   const { searchParams } = new URL(request.url);
   const search = searchParams.get('search');
 

@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { checkBotProtection, escapeHtml } from '@/utils/security';
+import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 
+
+const limiter = createRateLimiter({ max: 3, windowSeconds: 60 });
 
 export async function POST(request: NextRequest) {
+  const limited = limiter.check(getClientIp(request));
+  if (limited) return limited;
+
   try {
     const body = await request.json();
     const botCheck = await checkBotProtection(body);
