@@ -5,7 +5,7 @@ How our code moves from local to production, and how the environments are wired 
 ## Environments
 
 ```
-  LOCAL (your laptop)
+  LOCAL
   │
   │  git push
   ▼
