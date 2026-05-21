@@ -20,7 +20,7 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0f172a] leading-[1.15] tracking-tight mb-6">
-              Your free career<br className="hidden sm:block" />
+              Your free career<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 resource hub.
               </span>
