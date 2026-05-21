@@ -12,6 +12,7 @@ All codebase architecture blueprints and security patterns are documented in the
 
 1. **[Architecture Blueprint](docs/architecture.html)** — Project structure, dynamic routing patterns, dynamic metadata conventions, static-data setups, components organization, and database schema mappings.
 2. **[Security Standards](docs/security.html)** — Rate limiting scopes, Cloudflare Turnstile CAPTCHA forms, Honeypot and Timing bot protection checks, HTTP security headers, input length validation parameters, HTML/WordPress sanitization processes, and client-side access guards.
+3. **[Development Workflow](WORKFLOW.md)** — Branch/deploy model (`dev`→staging, `main`→production), how to ship changes, and environment/SEO guardrails (`proxy.ts` noindex, staging 401).
 
 ## Development Commands
 ```bash
