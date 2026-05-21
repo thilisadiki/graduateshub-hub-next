@@ -27,7 +27,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-slate-600 mb-8 max-w-xl font-medium leading-relaxed">
-              Everything you need to go from student to hired — step-by-step career roadmaps, in-depth guides, proof-of-work portfolios, and interview prep that lands the offer.
+              Master your career journey. Explore step-by-step career roadmaps, in-depth guides, proof of work portfolios, and ace your next interview.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
