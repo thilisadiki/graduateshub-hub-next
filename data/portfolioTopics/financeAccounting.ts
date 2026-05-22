@@ -83,4 +83,21 @@ export const financeAccountingTopics: PortfolioTopic[] = [
       'Build financial models and value businesses. Tests revenue driver modelling, three-statement linkage, and DCF valuation.',
     skillsProven: ['Financial modelling', 'DCF valuation', 'Revenue forecasting', 'Three-statement models'],
   },
+  {
+    id: 'sars-dispute-resolution',
+    categoryId: 'finance-accounting',
+    title: 'SARS Dispute Resolution & Representation',
+    description:
+      'Navigate the South African Revenue Service (SARS) dispute process. Tests handling audits, drafting objections (NOO), compiling letters of demand, and managing SARS compliance.',
+    skillsProven: ['SARS dispute process', 'Tax administration act', 'Drafting Notice of Objection (NOO)', 'Supporting document compilation', 'Legal/tax writing'],
+  },
+  {
+    id: 'sme-bookkeeping-cloud-accounting',
+    categoryId: 'finance-accounting',
+    title: 'Practical SME Bookkeeping & Cloud Accounting',
+    description:
+      'Manage day-to-day bookkeeping, reconcile bank statements, and configure cloud accounting software for SMEs. Tests double-entry principles, software setup, and financial reporting.',
+    skillsProven: ['Cloud accounting setup (Xero/QuickBooks)', 'Bank reconciliation', 'Double-entry bookkeeping', 'SME financial reporting', 'Journal adjustments'],
+  },
 ];
+

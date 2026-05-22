@@ -893,6 +893,102 @@ export const aiPromptingTasks: PortfolioTask[] = [
     skillsProven: ['Workflow architecture', 'High-risk automation', 'Fail-safe design', 'Deterministic bridging'],
     relatedRoadmapIds: [],
   },
+  {
+    id: 'lead-categorization-auto-responder',
+    categoryId: 'ai-prompting',
+    topicId: 'nocode-ai-automation',
+    level: 'beginner',
+    title: 'Build a Lead Categorization & Auto-Responder Workflow',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Map a workflow logic and write prompts to automate email lead categorization and replies.',
+    scenario:
+      'A boutique real estate agency receives hundreds of web inquiries daily. Agents spend hours manual-sorting them. The agency manager wants an automated workflow that reads an inquiry, categorizes it by intent (buying, renting, selling), and drafts a contextual email response.',
+    brief:
+      'Design a step-by-step logic map for a workflow (e.g. using Zapier or Make.com) that triggers on a new form submission. Outline how the payload is structured, the exact system prompt sent to the LLM for categorization and drafting, and the schema output of the LLM.',
+    deliverables: [
+      'Graphical or markdown flowchart illustrating the workflow steps.',
+      'The detailed LLM prompt used to categorize the lead and draft the response (with variables like {{lead_message}} and {{property_type}}).',
+      'The input/output JSON payload structure mapping fields between the form, the LLM step, and the email sender.',
+      'One safeguard implementation to prevent sending inappropriate AI-generated responses to clients.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Deliver your solution in clean Markdown. Present the prompts clearly with variable placeholders, and describe the input/output schemas as structured JSON blocks.',
+    rubric: [
+      { key: 'workflow_logic', label: 'Workflow Logic Map', description: 'Is the sequence of events logical, robust, and correctly mapped with variables?', weight: 30 },
+      { key: 'prompt_design', label: 'Prompt Design & Constraints', description: 'Are the prompts well-constructed, descriptive, and enforce classification constraints?', weight: 30 },
+      { key: 'payload_mapping', label: 'Payload Mapping Schema', description: 'Are the input/output JSON payloads between system nodes properly defined and accurate?', weight: 20 },
+      { key: 'safeguards', label: 'Safety Safeguards', description: 'Is there a robust and practical safeguard (e.g., human approval or fallback filters) implemented?', weight: 20 }
+    ],
+    skillsProven: ['No-code automation', 'Make.com / Zapier integration', 'LLM prompt chaining', 'API payload mapping', 'Error handling & fallbacks'],
+    relatedRoadmapIds: []
+  },
+  {
+    id: 'feedback-sentiment-routing-pipeline',
+    categoryId: 'ai-prompting',
+    topicId: 'nocode-ai-automation',
+    level: 'intermediate',
+    title: 'Multi-Stage Customer Feedback Sentiment & Routing Pipeline',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Design a multi-stage prompt chaining pipeline with JSON outputs and routing logic.',
+    scenario:
+      'A SaaS company wants to monitor customer support feedback. They need a pipeline that retrieves new reviews, performs sentiment analysis, extracts product features mentioned, runs a secondary prompt to suggest bug-fixes or customer success responses, and routes high-priority complaints to a specific Slack channel.',
+    brief:
+      'Map out a multi-stage prompt chaining workflow using Zapier/Make and an LLM. Create two chained prompts: Prompt 1 (Sentiment classification, feature extraction, and priority scoring in strict JSON format), and Prompt 2 (Drafting a tailored customer success response or dev bug ticket depending on priority). Detail how you parse the JSON from Prompt 1 to dynamically route the data.',
+    deliverables: [
+      'Logic diagram showing the path of customer feedback through the workflow (including branching paths based on sentiment/priority).',
+      'Prompt 1 and Prompt 2 templates with variables.',
+      'The exact JSON schema returned by Prompt 1.',
+      'The routing logic configuration (e.g. conditional rules for Slack notifications vs email drafts).',
+      'An error-handling plan detailing what happens if the LLM fails to return valid JSON.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Format your submission in Markdown. Provide clear step-by-step documentation of the flow, prompt definitions, and JSON schemas.',
+    rubric: [
+      { key: 'prompt_chaining', label: 'Prompt Chaining Design', description: 'Is the data handoff between Prompt 1 and Prompt 2 logical, cohesive, and robust?', weight: 30 },
+      { key: 'json_reliability', label: 'JSON Parsing Reliability', description: 'Does the Prompt 1 structure enforce reliable JSON output with strict key definitions?', weight: 25 },
+      { key: 'routing_logic', label: 'Conditional Routing Logic', description: 'Are the routing paths for support/dev channels well-defined and logical?', weight: 20 },
+      { key: 'error_handling', label: 'Error/Exception Handling', description: 'Is there a robust fallback strategy in case the LLM returns invalid JSON or times out?', weight: 25 }
+    ],
+    skillsProven: ['No-code automation', 'Make.com / Zapier integration', 'LLM prompt chaining', 'JSON output formatting', 'Conditional routing'],
+    relatedRoadmapIds: []
+  },
+  {
+    id: 'invoice-processing-erp-sync',
+    categoryId: 'ai-prompting',
+    topicId: 'nocode-ai-automation',
+    level: 'advanced',
+    title: 'Enterprise Invoice Processing & ERP Sync Automation',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 8 hours',
+    tagline: 'Architect a production-ready, compliance-first document processing pipeline with full exception handling.',
+    scenario:
+      'A mid-sized logistics firm processes 2,000 invoices per month manually. Invoices arrive as PDFs in an email inbox. The CFO wants a fully automated, reliable pipeline that retrieves the emails, extracts the PDFs, runs them through an OCR/LLM step to extract structured data, validates the extracted totals against database records, and updates the ERP system, handling OCR errors gracefully.',
+    brief:
+      'Design an end-to-end automated enterprise workflow. You must define the trigger, PDF extraction, LLM-based structured data extraction, double-entry validation logic, custom webhook endpoints, and a comprehensive retry/error mitigation architecture for high-compliance auditing.',
+    deliverables: [
+      'Detailed architecture diagram of the automated pipeline (including Webhooks, OCR/LLM API, and ERP Database).',
+      'System and user prompts for extraction, specifying schema, constraints, and confidence score outputs.',
+      'A comprehensive exception-handling playbook: handling OCR transcription errors, tax/total mismatch (validation rules), and API downtime (retry strategy with exponential backoff).',
+      'Data security and compliance plan (protecting personally identifiable information (PII) and financial details in transit and rest).',
+      'Sandbox testing plan to run parallel dry-runs before decommissioning the manual process.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Create a comprehensive, production-grade PDF processing architecture document in Markdown. Frame your design around enterprise security, data compliance, and operational robustness.',
+    rubric: [
+      { key: 'architecture_robustness', label: 'Workflow Architecture', description: 'Is the overall API orchestration, integration pattern, and scalability defensible for an enterprise workflow?', weight: 25 },
+      { key: 'prompt_extraction_quality', label: 'Structured Extraction Prompts', description: 'Do the prompts successfully instruct the model to handle formatting issues and output high-confidence schema maps?', weight: 20 },
+      { key: 'validation_rules', label: 'Mathematical Validation', description: 'Are there clear validation algorithms (e.g. line items total matching subtotal + tax) mapped in the flow?', weight: 20 },
+      { key: 'exception_management', label: 'Exception & Retry Playbook', description: 'Is there a thorough mitigation plan for OCR mismatches, API timeouts, and a human-in-the-loop validation queue?', weight: 20 },
+      { key: 'compliance_security', label: 'Security & Compliance', description: 'Does the plan protect PII (POPIA/GDPR) and outline secure API credential/token handling?', weight: 15 }
+    ],
+    skillsProven: ['Enterprise automation design', 'JSON schema validation', 'OCR error handling', 'API security & POPIA', 'Systems integration'],
+    relatedRoadmapIds: []
+  }
 ];
 
 

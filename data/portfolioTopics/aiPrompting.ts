@@ -81,4 +81,13 @@ export const aiPromptingTopics: PortfolioTopic[] = [
       'Design the logic for connecting LLMs to tools like Zapier, Make, or internal APIs. Tests function calling logic and automation.',
     skillsProven: ['Function calling logic', 'Automation design', 'API bridging', 'Workflow mapping'],
   },
+  {
+    id: 'nocode-ai-automation',
+    categoryId: 'ai-prompting',
+    title: 'No-Code AI Automation & Workflow Design',
+    description:
+      'Build automated business workflows using no-code platforms combined with LLM prompting. Tests system integration, prompt chaining, error handling, and automation efficiency.',
+    skillsProven: ['No-code automation', 'Make.com / Zapier integration', 'LLM prompt chaining', 'API payload mapping', 'Error handling & fallbacks'],
+  },
 ];
+

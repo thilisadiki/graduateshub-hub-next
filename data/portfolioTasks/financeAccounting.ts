@@ -924,4 +924,189 @@ export const financeAccountingTasks: PortfolioTask[] = [
     skillsProven: ['DCF valuation', 'WACC', 'Terminal value', 'Business valuation'],
     relatedRoadmapIds: ['junior-accountant'],
   },
+  {
+    id: 'sars-verification-response-letter',
+    categoryId: 'finance-accounting',
+    topicId: 'sars-dispute-resolution',
+    level: 'beginner',
+    title: 'Draft a Response to a SARS Verification of Documents Request',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Draft a professional verification response letter and compile a home office expense checklist.',
+    scenario:
+      'A sole proprietor has filed their personal income tax return (ITR12). SARS has selected the return for verification and requested supporting documents for claimed home office expenses. The client is anxious and doesn\'t know what to submit.',
+    brief:
+      'Assist the client by drafting a professional response letter to SARS and creating a checklist of the required supporting documents to support the home office deduction under section 11(a) read with section 23(b) of the Income Tax Act.',
+    deliverables: [
+      'A draft response letter addressed to SARS explaining the nature of the claimed expenses and confirming the attached documents.',
+      'A clear checklist of the necessary supporting documents that the client must provide to substantiate the claim.',
+      'A brief explanation of the timeline the client must adhere to to avoid auto-assessments or default penalties.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Submit your response in Markdown. Ensure the letter is written in a formal, respectful, and professional tone suitable for tax authorities. Detail the checklists clearly.',
+    rubric: [
+      { key: 'letter_professionalism', label: 'Letter Professionalism', description: 'Is the draft letter professional, well-structured, clear, and formal?', weight: 35 },
+      { key: 'checklist_completeness', label: 'Checklist Completeness', description: 'Does the checklist accurately list all required documents for home office deductions under SA tax law?', weight: 35 },
+      { key: 'regulatory_accuracy', label: 'Regulatory Accuracy', description: 'Does the candidate demonstrate a correct understanding of SARS eFiling submission channels and timelines?', weight: 30 }
+    ],
+    skillsProven: ['SARS dispute process', 'Tax administration act', 'Home office deduction', 'Supporting document compilation', 'Legal/tax writing'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'sars-notice-of-objection-travel',
+    categoryId: 'finance-accounting',
+    topicId: 'sars-dispute-resolution',
+    level: 'intermediate',
+    title: 'Draft a Notice of Objection (NOO) for Disallowed Expenses',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Prepare a formal written representation and objection grounds for disallowed travel expenses.',
+    scenario:
+      'SARS has audited a small business (Pty) Ltd client and disallowed travel expense claims of R150,000, issuing an additional assessment. The audit report states that the logbook was insufficient. The client has a detailed logbook and wishes to object to the assessment.',
+    brief:
+      'Prepare a comprehensive written representation to support a Notice of Objection (NOO / LXP) to SARS. You must detail the grounds of objection, cite the relevant sections of the Income Tax Act, and organize the corroborating evidence.',
+    deliverables: [
+      'A formal written statement of the grounds of objection, referencing the relevant provisions of the Income Tax Act (e.g., section 8(1)(b) for travel allowance).',
+      'An organized list of supporting evidence, including logbook analysis, employment contracts, and invoices.',
+      'A step-by-step guide explaining how to submit the objection via SARS eFiling and the statutory timelines involved.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Format your submission in Markdown. Cite relevant sections of the Income Tax Act correctly and describe the electronic submission steps clearly.',
+    rubric: [
+      { key: 'grounds_of_objection', label: 'Grounds of Objection', description: 'Are the grounds of objection legally sound, referencing correct tax provisions and logical arguments?', weight: 35 },
+      { key: 'evidence_organization', label: 'Evidence Organization', description: 'Is the corroborating evidence list comprehensive, detailed, and audit-ready?', weight: 25 },
+      { key: 'efiling_procedure', label: 'eFiling & Timelines Guide', description: 'Are the eFiling submission steps and statutory timelines (30 days from assessment) accurate?', weight: 20 },
+      { key: 'tax_communication', label: 'Tax Communication Craft', description: 'Is the communication professional, clear, and persuasive for SARS auditors?', weight: 20 }
+    ],
+    skillsProven: ['SARS dispute process', 'Tax administration act', 'Drafting Notice of Objection (NOO)', 'Section 8(1)(b) compliance', 'Legal/tax writing'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'sars-notice-of-appeal-bad-debts',
+    categoryId: 'finance-accounting',
+    topicId: 'sars-dispute-resolution',
+    level: 'advanced',
+    title: 'Manage a SARS Audit & Draft a Notice of Appeal (NOA)',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 8 hours',
+    tagline: 'Act as a tax consultant to prepare a formal Notice of Appeal (NOA) with case law analysis and ADR strategy.',
+    scenario:
+      'A corporate client\'s Notice of Objection against disallowed R2,000,000 bad debt deductions under section 11(i) has been disallowed by SARS. The client wants to appeal the decision and prepare for Tax Board or Tax Court proceedings.',
+    brief:
+      'Act as the tax consultant to prepare the appeal. Draft the grounds of appeal (Notice of Appeal / ADR1), analyze the legal precedents (case law), design an Alternative Dispute Resolution (ADR) strategy, and compile the final appeal bundle layout.',
+    deliverables: [
+      'Detailed Notice of Appeal (ADR1 statement) articulating the legal arguments, focusing on section 11(i) of the Income Tax Act.',
+      'Case law analysis citing at least one relevant South African tax court judgment supporting the deductibility of bad debts.',
+      'Alternative Dispute Resolution (ADR) strategy outlining the client\'s position, potential concessions, and settlement boundaries.',
+      'Table of contents for the appeal bundle (exhibits, correspondence, financial records).',
+      'Risk assessment report outlining the potential costs, interest (section 89quat), and penalties (understatement penalties) of proceeding to court.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Provide a formal, comprehensive tax appeal memorandum. Ground your analysis in South African tax law and judicial precedents.',
+    rubric: [
+      { key: 'legal_argumentation', label: 'Legal Argumentation', description: 'Depth and legal validity of the grounds of appeal and accurate interpretation of section 11(i).', weight: 30 },
+      { key: 'adr_strategy', label: 'ADR & Settlement Strategy', description: 'Is the ADR strategy commercially sound, offering pragmatic negotiation limits?', weight: 25 },
+      { key: 'audit_bundle', label: 'Audit Bundle Structure', description: 'Is the appeal bundle layout logical, structured, and complete?', weight: 15 },
+      { key: 'risk_assessment', label: 'Financial Risk Assessment', description: 'Are potential costs, section 89quat interest, and understatement penalties modeled accurately?', weight: 15 },
+      { key: 'professional_craft', label: 'Professional Opinion Format', description: 'Does the submission follow standard tax practice opinion formatting and professional tone?', weight: 15 }
+    ],
+    skillsProven: ['Tax litigation & appeals', 'Section 11(i) deductions', 'ADR negotiation', 'Case law analysis', 'Financial risk modeling'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'sme-chart-accounts-double-entry',
+    categoryId: 'finance-accounting',
+    topicId: 'sme-bookkeeping-cloud-accounting',
+    level: 'beginner',
+    title: 'Set Up a Chart of Accounts and Process Basic Transactions',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Configure a customized Chart of Accounts and record double-entry transactions for a freelancer.',
+    scenario:
+      'A freelance graphic designer wants to move from Excel spreadsheets to cloud accounting software. They need a custom Chart of Accounts set up and their first month of business transactions processed.',
+    brief:
+      'Create a custom Chart of Accounts tailored for a service-based freelancer. Record a list of 10 initial transactions (including capital injection, equipment purchase, client invoicing, and bank expenses) using double-entry ledger format (debits and credits).',
+    deliverables: [
+      'Custom Chart of Accounts list categorized by Assets, Liabilities, Equity, Revenue, and Expenses.',
+      'General Journal entries for the 10 listed transactions with correct debit/credit allocations.',
+      'A simple initial Trial Balance as of the end of the month.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Format your journal entries in clear tables. Ensure all debits equal credits and explain the ledger mapping logic.',
+    rubric: [
+      { key: 'chart_design', label: 'Chart of Accounts Design', description: 'Is the Chart of Accounts logically organized and tailored for a freelancer?', weight: 30 },
+      { key: 'double_entry', label: 'Double-Entry Accuracy', description: 'Are debits and credits mathematically correct and conceptually accurate for all 10 transactions?', weight: 35 },
+      { key: 'trial_balance', label: 'Trial Balance Integrity', description: 'Does the Trial Balance balance correctly and trace accurately from the journal entries?', weight: 20 },
+      { key: 'documentation', label: 'Bookkeeping Notes', description: 'Are the explanation notes clear, professional, and explain basic accounting concepts well?', weight: 15 }
+    ],
+    skillsProven: ['Double-entry bookkeeping', 'Chart of Accounts setup', 'Journal entry parsing', 'Trial balance preparation'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'sme-bank-reconciliation-adjustments',
+    categoryId: 'finance-accounting',
+    topicId: 'sme-bookkeeping-cloud-accounting',
+    level: 'intermediate',
+    title: 'Reconcile a Bank Statement and Post Adjusting Journals',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 4 hours',
+    tagline: 'Resolve complex unreconciled bank items and post month-end adjusting journals.',
+    scenario:
+      'A retail startup has linked its bank account to cloud accounting software. However, the automated bank feed has left 15 complex transactions unreconciled (including merchant fee deductions, cash withdrawals, customer overpayments, and prepayments).',
+    brief:
+      'Resolve the unreconciled transactions. Perform the bank reconciliation, create adjusting journal entries (for accrued expenses, prepayments, and depreciation), and draft the month-end bank reconciliation statement.',
+    deliverables: [
+      'Completed bank reconciliation ledger showing matching balance per bank vs balance per books.',
+      'General journal entries for the adjusting transactions (depreciation, prepayments, accruals).',
+      'Explanation of how to handle unallocated customer deposits and bank charges in cloud software (Xero or QuickBooks).'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Provide your reconciliations and adjusting journals in Markdown tables. Include clear, step-by-step descriptions of the reconciliation steps.',
+    rubric: [
+      { key: 'reconciliation_accuracy', label: 'Reconciliation Accuracy', description: 'Were unreconciled transactions resolved correctly and does the bank reconciliation balance?', weight: 35 },
+      { key: 'adjusting_journals', label: 'Adjusting Journal Entries', description: 'Are month-end adjustments (depreciation, prepayments, accruals) computed and posted correctly?', weight: 30 },
+      { key: 'cloud_best_practices', label: 'Cloud Matching Logic', description: 'Does the candidate show correct knowledge of Xero/QuickBooks matching and feed rules?', weight: 20 },
+      { key: 'reporting', label: 'Reconciliation Statement', description: 'Is the final reconciliation statement clear, structured, and audit-ready?', weight: 15 }
+    ],
+    skillsProven: ['Bank reconciliation', 'Adjusting journal entries', 'Accruals & Prepayments', 'Xero/QuickBooks matching'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'sme-cloud-accounting-system-close',
+    categoryId: 'finance-accounting',
+    topicId: 'sme-bookkeeping-cloud-accounting',
+    level: 'advanced',
+    title: 'Design and Implement a Cloud Accounting System and Month-End Close',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 8 hours',
+    tagline: 'Architect a cloud accounting solution for a retail/e-commerce SME and establish month-end closing procedures.',
+    scenario:
+      'A fast-growing SME with a brick-and-mortar store and an online shop is upgrading its manual accounting system to Xero. They have multiple currency transactions, inventory tracking, integrated Point of Sale (POS), and require a structured month-end close process.',
+    brief:
+      'Design a cloud accounting system architecture and month-end close procedure for the company. Include integrations (POS, payment gateways like Stripe/PayFast), multi-currency ledger setup, month-end closing checklist, and draft the first month-end management report (Income Statement and Balance Sheet) with variance commentary.',
+    deliverables: [
+      'Integrations and data flow diagram detailing how POS, payment gateway, and bank feeds sync to the cloud general ledger.',
+      'Multi-currency and inventory tracking setup recommendations.',
+      'A comprehensive 15-step month-end close checklist (covering cut-offs, reconciliation, control accounts, and review).',
+      'Draft financial reports (Income Statement & Balance Sheet) based on a provided trial balance.',
+      'Variance analysis commentary explaining operational performance to the business owner.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Submit a detailed systems integration and month-end procedure report in Markdown. Ensure your financial reports and commentary are audit-ready and presentable to the executive board.',
+    rubric: [
+      { key: 'system_architecture', label: 'System Integration Architecture', description: 'Is the POS, payment gateway, and bank feed data flow well-designed and integration-efficient?', weight: 25 },
+      { key: 'checklist_thoroughness', label: 'Month-End Close Checklist', description: 'Is the 15-step closing checklist logically ordered, complete, and robust?', weight: 25 },
+      { key: 'financial_statement_prep', label: 'Financial Statements Prep', description: 'Are the Income Statement and Balance Sheet drafted accurately based on accounting principles?', weight: 20 },
+      { key: 'variance_commentary', label: 'Management Commentary', description: 'Is the variance analysis insight-driven, addressing actual performance drivers rather than repeating the numbers?', weight: 15 },
+      { key: 'controls_security', label: 'Internal Controls Design', description: 'Does the setup protect financial integrity via segregation of duties and software permissions controls?', weight: 15 }
+    ],
+    skillsProven: ['Cloud systems integration', 'Multi-currency accounting', 'Month-end close procedures', 'Financial statements prep', 'Management reporting'],
+    relatedRoadmapIds: ['junior-accountant']
+  }
 ];

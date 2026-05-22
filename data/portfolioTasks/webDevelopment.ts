@@ -990,4 +990,97 @@ export const webDevelopmentTasks: PortfolioTask[] = [
     skillsProven: ['Finite State Machines (FSM)', 'XState', 'Enterprise Architecture', 'Deterministic Logic'],
     relatedRoadmapIds: ['web-developer'],
   },
+  {
+    id: 'optimize-core-web-vitals-static',
+    categoryId: 'web-development',
+    topicId: 'technical-seo-core-web-vitals',
+    level: 'beginner',
+    title: 'Optimize Core Web Vitals for a Static Page',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Optimize a basic landing page to achieve sub-second load times and eliminate layout shifts.',
+    scenario:
+      'A local bakery is losing mobile search rankings because their site takes over 5 seconds to become interactive. The owner wants a quick audit and performance optimization.',
+    brief:
+      'Analyze a basic HTML/CSS page setup with some large unoptimized images, layout shifts, and blocking scripts. Identify the Core Web Vitals bottlenecks (LCP, CLS, INP) and fix them by optimizing images (modern formats, sizing), adding dimensions to avoid layout shifts, and making scripts async/defer.',
+    deliverables: [
+      'Optimized HTML/CSS snippet implementing the performance fixes.',
+      'A short audit report (in markdown) listing the 3 main performance bottlenecks identified and how they were solved.',
+      'The specific Core Web Vitals metrics target expected after changes (LCP, CLS).'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Format your submission in Markdown. Provide code snippets using fenced blocks and write clear, concise explanations for your audit and metrics target.',
+    rubric: [
+      { key: 'bottlenecks', label: 'Bottleneck Identification', description: 'Did the candidate correctly identify LCP, CLS, and script blocking bottlenecks?', weight: 30 },
+      { key: 'optimization', label: 'Image & Resource Optimization', description: 'Did the candidate properly apply image sizing, responsive attributes, modern formats, and defer scripts?', weight: 30 },
+      { key: 'a11y_seo', label: 'SEO & Layout Shift Prevention', description: 'Are layout shifts eliminated (CLS) and are basic SEO/a11y practices followed?', weight: 25 },
+      { key: 'reasoning', label: 'Performance Reasoning', description: 'Is the reasoning sound and grounded in how browsers parse and render pages?', weight: 15 }
+    ],
+    skillsProven: ['Core Web Vitals', 'LCP/INP/CLS optimization', 'Resource Prioritization', 'Responsive Images'],
+    relatedRoadmapIds: ['web-developer']
+  },
+  {
+    id: 'schema-markup-structured-data',
+    categoryId: 'web-development',
+    topicId: 'technical-seo-core-web-vitals',
+    level: 'intermediate',
+    title: 'Implement Structured Data & Schema Markup',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Add nested JSON-LD schema markup and design a crawl budget optimization strategy.',
+    scenario:
+      'An e-commerce site selling handmade leather goods has plenty of products but doesn\'t show up in search results with product prices, reviews, or stock status. The marketing director wants you to implement rich results schema.',
+    brief:
+      'Write a JSON-LD structured data script for a complex product page that includes nesting (Product, Offer, AggregateRating, Review, and Organization). Test the schema validity and ensure it conforms strictly to Schema.org standards. Write a robots.txt configuration and a canonicalization strategy for dynamic query parameters.',
+    deliverables: [
+      'JSON-LD script containing the full product schema.',
+      'Robots.txt file content with crawl directives.',
+      'A canonical URL and query-param handling documentation.',
+      'Explanation of how structured data helps search crawlers index content.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Paste your JSON-LD script and robots.txt in fenced code blocks. Keep the documentation clear, well-structured, and written in plain English.',
+    rubric: [
+      { key: 'schema_accuracy', label: 'Schema Accuracy', description: 'Is the JSON-LD script valid, syntactically correct, and compliant with Schema.org?', weight: 35 },
+      { key: 'nesting', label: 'Nesting Structure', description: 'Are the Product, Offer, AggregateRating, and Review objects nested correctly?', weight: 25 },
+      { key: 'crawling', label: 'Crawling & Indexing Strategy', description: 'Are the robots.txt directives and canonicalization rules mathematically/conceptually sound?', weight: 20 },
+      { key: 'documentation', label: 'Explanatory Clarity', description: 'Is the explanation of search engine rendering and indexing of metadata clear and accurate?', weight: 20 }
+    ],
+    skillsProven: ['Schema markup', 'JSON-LD', 'Canonicalization', 'Crawl budget optimization'],
+    relatedRoadmapIds: ['web-developer']
+  },
+  {
+    id: 'technical-seo-performance-audit',
+    categoryId: 'web-development',
+    topicId: 'technical-seo-core-web-vitals',
+    level: 'advanced',
+    title: 'Conduct a Full-Scale Technical SEO & Core Web Vitals Audit',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 8 hours',
+    tagline: 'Perform a comprehensive technical audit for a large SPA and propose code-level fixes.',
+    scenario:
+      'A media publishing site with over 100,000 pages has suffered a 30% drop in organic traffic after a recent Google core update. The VP of Growth needs a comprehensive technical audit report detailing server response times, JavaScript rendering issues (hydration lag), Core Web Vitals (INP optimization), and crawl architecture.',
+    brief:
+      'Provide a technical SEO and performance audit for a large-scale single-page application (SPA) with slow initial load times, high Interaction to Next Paint (INP), and broken internal link equity. Draft a complete, developer-friendly audit report with concrete code fixes and architectural recommendations.',
+    deliverables: [
+      'Full Technical Audit report (markdown) covering: Indexability & Crawling, Core Web Vitals (LCP, INP, CLS) bottlenecks, and Information Architecture/Internal Linking.',
+      'Code snippets showing how to fix a hydration/INP bottleneck in a React/Next.js client-side interactive component (e.g. debouncing/deferring non-critical render blocks, using requestIdleCallback or CSS content-visibility).',
+      'Dynamic rendering or SSR recommendation with clear trade-offs.',
+      'Implementation plan for monitoring Core Web Vitals in production using Real User Monitoring (RUM).'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Submit a detailed, publication-ready markdown report. Break down your analysis systematically and defend your code-level and architectural decisions.',
+    rubric: [
+      { key: 'audit_depth', label: 'Audit Depth', description: 'Thoroughness of the crawlability, indexing, and architecture analysis.', weight: 30 },
+      { key: 'inp_lcp_fixes', label: 'INP & LCP Fixes', description: 'Technical code-level solutions for INP, hydration lag, and render blocking.', weight: 25 },
+      { key: 'rendering_strategy', label: 'Rendering Strategy', description: 'Defensible architecture comparison (SSR, ISR, CSR) with trade-offs.', weight: 20 },
+      { key: 'rum_monitoring', label: 'RUM Monitoring Plan', description: 'Sound implementation plan for RUM data collection in production.', weight: 15 },
+      { key: 'communication', label: 'Communication & Impact', description: 'Is the audit report professional, action-oriented, and ready for engineering/executive stakeholders?', weight: 10 }
+    ],
+    skillsProven: ['Core Web Vitals', 'INP optimization', 'Technical SEO auditing', 'Real User Monitoring (RUM)', 'React rendering performance'],
+    relatedRoadmapIds: ['web-developer']
+  }
 ];
