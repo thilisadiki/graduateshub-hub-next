@@ -1,0 +1,55 @@
+{
+  "id": "content-roi-framework",
+  "categoryId": "digital-marketing",
+  "topicId": "content-strategy",
+  "level": "advanced",
+  "title": "Content ROI Framework",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a measurement framework that ties content to pipeline and revenue.",
+  "scenario": "A B2B SaaS company spends R200K/month on content marketing (writers, designers, tools). The CFO asks: \"What are we getting for this money?\" The content team can only show traffic numbers. The CFO wants pipeline attribution.",
+  "brief": "Build a content ROI framework that connects content production to business outcomes. Move beyond traffic metrics to pipeline contribution, influenced revenue, and cost-per-lead by content type.",
+  "deliverables": [
+    "A content attribution model: how you track a user from blog visit → lead → MQL → opportunity → closed deal",
+    "KPIs by content type: blog (traffic, leads), case study (influence on deals), whitepaper (lead gen cost)",
+    "A monthly content ROI report template showing investment vs return by content category",
+    "One honest limitation of content attribution and how you work around it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Content rarely drives last-touch conversions. It influences. Show that you understand multi-touch attribution and its messiness.",
+  "rubric": [
+    {
+      "key": "attribution",
+      "label": "Attribution Model",
+      "description": "Is the attribution model realistic about content's role in a multi-touch journey?",
+      "weight": 30
+    },
+    {
+      "key": "kpis",
+      "label": "KPI Framework",
+      "description": "Are the KPIs appropriate for each content type?",
+      "weight": 25
+    },
+    {
+      "key": "report",
+      "label": "Report Design",
+      "description": "Would the CFO find this report useful for investment decisions?",
+      "weight": 25
+    },
+    {
+      "key": "limitations",
+      "label": "Honest Limitations",
+      "description": "Does the candidate acknowledge attribution gaps without dismissing the effort?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Content ROI",
+    "Marketing attribution",
+    "Pipeline analytics",
+    "Executive reporting"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

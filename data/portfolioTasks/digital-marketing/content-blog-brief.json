@@ -1,0 +1,48 @@
+{
+  "id": "content-blog-brief",
+  "categoryId": "digital-marketing",
+  "topicId": "content-strategy",
+  "level": "beginner",
+  "title": "Write a Blog Content Brief",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a detailed content brief for an SEO-targeted blog post.",
+  "scenario": "A fintech company publishes a blog but the posts are written without briefs. Writers guess what to cover, resulting in unfocused articles that rank for nothing. The content lead wants every post to start with a brief.",
+  "brief": "Write a comprehensive content brief for a blog post targeting the keyword \"how to save money in South Africa\". The brief should be detailed enough that any competent writer could produce the article without further input.",
+  "deliverables": [
+    "The brief: target keyword, secondary keywords, search intent, target word count, and audience persona",
+    "A detailed outline with H2/H3 headings, the key points to cover under each, and the CTA",
+    "Three competitor articles you would analyse (invent titles and URLs) and the content gaps your article should fill"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A brief is not an outline. It also includes tone of voice, internal linking targets, and what NOT to cover. Show this level of detail.",
+  "rubric": [
+    {
+      "key": "brief",
+      "label": "Brief Completeness",
+      "description": "Does the brief include all necessary elements for a writer to execute without questions?",
+      "weight": 35
+    },
+    {
+      "key": "outline",
+      "label": "Outline Quality",
+      "description": "Is the outline logically structured with clear H2/H3 hierarchy?",
+      "weight": 30
+    },
+    {
+      "key": "gaps",
+      "label": "Competitive Analysis",
+      "description": "Are the content gaps specific and actionable?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Content briefs",
+    "SEO content",
+    "Editorial planning",
+    "Content strategy"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

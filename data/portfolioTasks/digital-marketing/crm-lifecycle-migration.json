@@ -1,0 +1,49 @@
+{
+  "id": "crm-lifecycle-migration",
+  "categoryId": "digital-marketing",
+  "topicId": "marketing-automation-crm",
+  "level": "advanced",
+  "title": "CRM Lifecycle Database Migration",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a migration plan from spreadsheets to a structured CRM lifecycle database.",
+  "scenario": "A growing commercial real estate broker in Johannesburg manages R150M in properties using 15 separate Excel spreadsheets. Leads get lost, sales cycles are untracked, and duplicate communications are common. They have purchased Salesforce/HubSpot and need a complete data migration and pipeline configuration.",
+  "brief": "Act as the CRM Implementation Consultant. Design a migration and schema plan to move their spreadsheets into a structured CRM, ensuring clean data mapping, deduplication rules, and custom deal pipeline stages.",
+  "deliverables": [
+    "The data schema: custom property definitions, object mappings (Contacts, Accounts, Deals, Properties)",
+    "Data mapping and cleaning procedure: step-by-step instructions for preparing, cleaning, and deduplicating Excel data before import",
+    "The custom Deal Pipeline stages tailored to commercial real estate with clear probability scores and criteria to move cards",
+    "A 30-day user adoption and training plan for the sales agents"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A CRM is only as good as the cleanliness of the data entered. Detail how you handle fields that are inconsistent across spreadsheets (e.g., phone formats, blank company names).",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Schema Architecture",
+      "description": "Is the data architecture logical, avoiding redundancy and capturing essential property sales data?",
+      "weight": 35
+    },
+    {
+      "key": "migration",
+      "label": "Migration Procedure",
+      "description": "Is the data cleansing and import process rigorous enough to prevent garbage-in-garbage-out?",
+      "weight": 35
+    },
+    {
+      "key": "pipeline",
+      "label": "Pipeline Fit",
+      "description": "Are the pipeline stages relevant to a high-value B2B sales cycle?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "CRM data schema",
+    "Database migration",
+    "Salesforce/HubSpot setup",
+    "Data governance"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

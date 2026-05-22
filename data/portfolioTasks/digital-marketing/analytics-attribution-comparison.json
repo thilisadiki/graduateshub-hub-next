@@ -1,0 +1,48 @@
+{
+  "id": "analytics-attribution-comparison",
+  "categoryId": "digital-marketing",
+  "topicId": "marketing-analytics-attribution",
+  "level": "intermediate",
+  "title": "Attribution Model Comparison",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Compare first-touch, last-touch, and multi-touch attribution for a real campaign.",
+  "scenario": "A subscription box company runs ads on Google, Instagram, and YouTube. A typical customer journey is: YouTube ad → Instagram retarget → Google brand search → purchase. The marketing team argues about which channel \"deserves\" the credit.",
+  "brief": "Apply three attribution models (first-touch, last-touch, and linear multi-touch) to this customer journey. Show how each model distributes credit differently and recommend the best model for this business.",
+  "deliverables": [
+    "A credit distribution table: Channel × First Touch % × Last Touch % × Linear %",
+    "An analysis of how each model biases decision-making (first-touch overvalues awareness, last-touch overvalues brand search)",
+    "Your recommended model with a justification tied to the business's growth stage and goals"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "There is no \"right\" attribution model. The right model depends on what question you are trying to answer. Show this nuance.",
+  "rubric": [
+    {
+      "key": "models",
+      "label": "Model Application",
+      "description": "Are the three models correctly applied with accurate credit distribution?",
+      "weight": 30
+    },
+    {
+      "key": "analysis",
+      "label": "Bias Analysis",
+      "description": "Does the candidate understand how each model biases budget allocation?",
+      "weight": 35
+    },
+    {
+      "key": "recommendation",
+      "label": "Recommendation",
+      "description": "Is the recommended model justified by the business context?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Attribution modelling",
+    "Marketing analytics",
+    "Multi-touch analysis",
+    "Strategic thinking"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "cro-landing-page-teardown",
+  "categoryId": "digital-marketing",
+  "topicId": "conversion-rate-optimisation",
+  "level": "beginner",
+  "title": "Landing Page Teardown",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Critique a landing page using CRO principles and propose 3 changes.",
+  "scenario": "A SaaS company's landing page converts at 2.1%, which is below the industry average of 3.5%. The marketing team suspects the page has friction points but cannot pinpoint them.",
+  "brief": "Invent a plausible SaaS landing page (headline, subhead, hero image, features section, testimonials, CTA button). Then critique it using CRO principles and propose 3 specific, testable changes.",
+  "deliverables": [
+    "A description of the current landing page layout and copy (invented but realistic)",
+    "A CRO critique covering: headline clarity, value proposition, social proof placement, CTA visibility, and friction points",
+    "Three specific changes, each framed as a testable hypothesis (e.g., \"Moving the CTA above the fold will increase clicks by 15% because...\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Each change must be a testable hypothesis, not just \"make the CTA bigger.\" Why do you think it will work? What evidence supports this?",
+  "rubric": [
+    {
+      "key": "critique",
+      "label": "CRO Critique",
+      "description": "Are the friction points correctly identified using CRO principles?",
+      "weight": 30
+    },
+    {
+      "key": "changes",
+      "label": "Proposed Changes",
+      "description": "Are the 3 changes specific, testable, and grounded in CRO best practices?",
+      "weight": 40
+    },
+    {
+      "key": "hypotheses",
+      "label": "Hypothesis Quality",
+      "description": "Is each change framed as a falsifiable hypothesis with reasoning?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "CRO",
+    "Landing page optimisation",
+    "Hypothesis formation",
+    "UX analysis"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

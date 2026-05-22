@@ -1,0 +1,54 @@
+{
+  "id": "social-media-audit-coffee-shop",
+  "categoryId": "digital-marketing",
+  "topicId": "social-media-audit",
+  "level": "beginner",
+  "title": "Social Media Audit for a Local Coffee Shop",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Audit a small business Instagram and recommend a 30-day fix.",
+  "scenario": "Bean & Brew is an independent coffee shop in Braamfontein, Johannesburg. They post on Instagram roughly twice a week but engagement has been flat for six months. The owner wants honest feedback and a simple plan she can execute herself.",
+  "brief": "Imagine you have been given access to Bean & Brew's Instagram analytics. You cannot see the real account, so use reasonable assumptions about a typical independent coffee shop with 1,200 followers, mixed content quality, and no posting schedule.",
+  "deliverables": [
+    "A short audit (3 to 5 bullet points) covering content mix, posting cadence, visual identity, and caption quality",
+    "A 30-day content calendar with at least 12 post ideas (caption angle, content type, suggested time)",
+    "Three specific metrics the owner should track and a realistic target for each over 30 days"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Use Markdown headings. Be specific: do not say \"post more engaging content\". Say \"Tuesday 8am, barista Q&A reel about their favourite drink to make, goal 40+ saves\".",
+  "rubric": [
+    {
+      "key": "diagnosis",
+      "label": "Diagnosis Quality",
+      "description": "Did the audit identify specific, credible issues rather than generic advice?",
+      "weight": 25
+    },
+    {
+      "key": "calendar",
+      "label": "Content Calendar",
+      "description": "Are the 12 posts varied, realistic for a small business, and tied to business goals?",
+      "weight": 30
+    },
+    {
+      "key": "metrics",
+      "label": "Metrics & Targets",
+      "description": "Are the chosen metrics the right ones, and are the targets realistic?",
+      "weight": 20
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity & Presentation",
+      "description": "Is the submission well structured, free of fluff, and actionable by a non-marketer?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Social media strategy",
+    "Content planning",
+    "Marketing analytics",
+    "Small business marketing"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

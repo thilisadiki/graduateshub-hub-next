@@ -1,0 +1,48 @@
+{
+  "id": "content-pillar-strategy",
+  "categoryId": "digital-marketing",
+  "topicId": "content-strategy",
+  "level": "intermediate",
+  "title": "Design a Content Pillar Strategy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Build a topic cluster model with one pillar page and 8 supporting articles.",
+  "scenario": "A South African fintech company wants to own the search results for \"personal finance South Africa\". They need a topic cluster strategy that builds topical authority through a pillar page and supporting content.",
+  "brief": "Design a complete topic cluster. Define the pillar page, 8 supporting articles (cluster content), and the internal linking architecture that connects them.",
+  "deliverables": [
+    "The pillar page: title, target keyword, scope (what it covers), and estimated word count",
+    "A table of 8 cluster articles: title, target keyword, search intent, and how it links back to the pillar",
+    "An internal linking map showing the hub-and-spoke architecture"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A pillar page is broad. Cluster articles are narrow. The pillar page for \"personal finance\" should NOT cover everything — it should link out to detailed articles on budgeting, saving, investing, debt, etc.",
+  "rubric": [
+    {
+      "key": "pillar",
+      "label": "Pillar Page Design",
+      "description": "Is the pillar page scoped correctly (broad enough to warrant clusters)?",
+      "weight": 30
+    },
+    {
+      "key": "clusters",
+      "label": "Cluster Articles",
+      "description": "Are the 8 articles genuinely distinct with non-overlapping keywords?",
+      "weight": 35
+    },
+    {
+      "key": "linking",
+      "label": "Internal Linking",
+      "description": "Is the hub-and-spoke linking architecture clearly defined?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Topic clusters",
+    "Content architecture",
+    "SEO strategy",
+    "Internal linking"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

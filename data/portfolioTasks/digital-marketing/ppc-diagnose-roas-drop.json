@@ -1,0 +1,49 @@
+{
+  "id": "ppc-diagnose-roas-drop",
+  "categoryId": "digital-marketing",
+  "topicId": "paid-media-ppc",
+  "level": "intermediate",
+  "title": "Diagnose a Declining ROAS",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "A Meta Ads campaign's ROAS dropped from 4.2× to 1.8×. Find the root cause.",
+  "scenario": "A DTC skincare brand runs Meta Ads. Over 6 weeks, ROAS dropped from 4.2× to 1.8×. The media buyer says \"the algorithm is broken.\" The CMO wants a real diagnosis.",
+  "brief": "Conduct a systematic diagnosis. Decompose ROAS into its component parts (CPM, CTR, CPC, CVR, AOV), identify which lever(s) moved, and propose hypotheses for each.",
+  "deliverables": [
+    "A ROAS decomposition: ROAS = Revenue / Spend = (Clicks × CVR × AOV) / (Impressions × CPM / 1000)",
+    "A week-by-week trend table (invented but plausible) showing which metric deteriorated",
+    "At least 4 hypotheses for the decline, with the data you would check to confirm each",
+    "A recommended action plan to recover ROAS within 2 weeks"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A declining ROAS is a symptom, not a diagnosis. If CPM went up, that is a demand-side issue (competition, audience fatigue). If CVR went down, the problem is on the landing page. Show this thinking.",
+  "rubric": [
+    {
+      "key": "decomposition",
+      "label": "ROAS Decomposition",
+      "description": "Is the metric decomposition correct and complete?",
+      "weight": 30
+    },
+    {
+      "key": "diagnosis",
+      "label": "Root Cause Diagnosis",
+      "description": "Are the hypotheses specific and tied to individual metric movements?",
+      "weight": 35
+    },
+    {
+      "key": "action",
+      "label": "Recovery Plan",
+      "description": "Is the action plan tactical and executable within 2 weeks?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Paid media analytics",
+    "ROAS optimisation",
+    "Root-cause analysis",
+    "Meta Ads"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

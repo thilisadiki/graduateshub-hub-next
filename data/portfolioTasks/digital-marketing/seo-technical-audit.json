@@ -1,0 +1,48 @@
+{
+  "id": "seo-technical-audit",
+  "categoryId": "digital-marketing",
+  "topicId": "seo-organic-growth",
+  "level": "advanced",
+  "title": "Technical SEO Site Audit",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Audit a 5,000-page e-commerce site for crawlability, Core Web Vitals, and indexation.",
+  "scenario": "A South African e-commerce site selling 3,000 products has seen organic traffic decline 25% over 3 months despite no content changes. The SEO manager suspects technical issues — possibly crawl budget waste, duplicate content from faceted navigation, or Core Web Vitals failures.",
+  "brief": "Design a comprehensive technical SEO audit. You do not need to crawl a real site — describe the audit methodology, the tools you would use, and the prioritised findings you would expect.",
+  "deliverables": [
+    "An audit methodology covering: crawlability (robots.txt, sitemap, crawl budget), indexation (canonical tags, noindex, duplicate content), and performance (Core Web Vitals)",
+    "A list of 5 hypothetical findings, prioritised by traffic impact, with remediation steps for each",
+    "A recommendation on handling faceted navigation URLs (crawl, noindex, or canonical) with reasoning"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "E-commerce sites generate thousands of URL variants from filters (colour, size, price). If Google crawls all of them, it wastes crawl budget. Show you understand this.",
+  "rubric": [
+    {
+      "key": "methodology",
+      "label": "Audit Methodology",
+      "description": "Is the audit structured across crawlability, indexation, and performance?",
+      "weight": 30
+    },
+    {
+      "key": "findings",
+      "label": "Finding Quality",
+      "description": "Are the hypothetical findings realistic for a large e-commerce site?",
+      "weight": 35
+    },
+    {
+      "key": "faceted",
+      "label": "Faceted Navigation",
+      "description": "Does the candidate understand the crawl budget implications of faceted URLs?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Technical SEO",
+    "Crawl budget",
+    "Core Web Vitals",
+    "E-commerce SEO"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

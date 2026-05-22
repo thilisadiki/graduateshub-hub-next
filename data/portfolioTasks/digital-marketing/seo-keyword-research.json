@@ -1,0 +1,48 @@
+{
+  "id": "seo-keyword-research",
+  "categoryId": "digital-marketing",
+  "topicId": "seo-organic-growth",
+  "level": "beginner",
+  "title": "Keyword Research for a Local Business",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Find 15 high-intent keywords for a Cape Town plumber and group them by search intent.",
+  "scenario": "A plumbing business in Cape Town wants to start ranking on Google. They currently have zero organic traffic. The owner asks: \"What should we write about on our website?\"",
+  "brief": "Conduct keyword research for this local plumbing business. Find 15 keywords, classify each by search intent (informational, navigational, transactional), and recommend the top 5 to target first.",
+  "deliverables": [
+    "A table of 15 keywords with columns: Keyword, Estimated Monthly Volume (plausible range), Search Intent, Difficulty (Low/Med/High)",
+    "Your top 5 priority keywords and a one-sentence justification for each",
+    "One long-tail keyword opportunity the business is unlikely to find without research"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You may invent plausible search volumes. The key is showing you understand search intent — \"plumber near me\" (transactional) vs \"how to fix a leaky tap\" (informational) require different page types.",
+  "rubric": [
+    {
+      "key": "keywords",
+      "label": "Keyword Selection",
+      "description": "Are the 15 keywords realistic and relevant to a local plumber?",
+      "weight": 30
+    },
+    {
+      "key": "intent",
+      "label": "Search Intent",
+      "description": "Is each keyword correctly classified by intent?",
+      "weight": 35
+    },
+    {
+      "key": "prioritisation",
+      "label": "Prioritisation",
+      "description": "Are the top 5 chosen strategically (high intent, achievable difficulty)?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Keyword research",
+    "Search intent",
+    "Local SEO",
+    "Content prioritisation"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

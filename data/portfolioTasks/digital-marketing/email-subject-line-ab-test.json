@@ -1,0 +1,55 @@
+{
+  "id": "email-subject-line-ab-test",
+  "categoryId": "digital-marketing",
+  "topicId": "email-experimentation",
+  "level": "beginner",
+  "title": "Email Subject Line A/B Test Plan",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Design a rigorous A/B test for a cart abandonment email.",
+  "scenario": "A fictional online bookstore has a cart abandonment email that sees a 14% open rate. The marketing team wants to lift it to 20%+ but has only run one prior test and it was inconclusive because the sample size was too small.",
+  "brief": "Design a subject line A/B test that could actually be run and trusted. You can assume the list is 60,000 active subscribers and the email is triggered roughly 400 times per day.",
+  "deliverables": [
+    "Two competing subject lines with a one-sentence hypothesis for each",
+    "Sample size per variant and how many days the test needs to run, with your reasoning",
+    "Primary metric, guardrail metrics, and the decision rule (what result would cause you to ship the winner vs. keep testing)",
+    "One risk or confound you need to control for"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Show your working on sample size. A test plan without a stopping rule is not a test plan.",
+  "rubric": [
+    {
+      "key": "hypothesis",
+      "label": "Hypothesis Quality",
+      "description": "Are the two variants genuinely different and is each hypothesis testable?",
+      "weight": 25
+    },
+    {
+      "key": "sizing",
+      "label": "Statistical Reasoning",
+      "description": "Is the sample size and duration justified with clear reasoning?",
+      "weight": 30
+    },
+    {
+      "key": "decision",
+      "label": "Decision Rule",
+      "description": "Is the primary metric correct and the shipping rule unambiguous?",
+      "weight": 25
+    },
+    {
+      "key": "risks",
+      "label": "Risk Awareness",
+      "description": "Did the candidate spot a real confound (seasonality, time of day, etc.)?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Email marketing",
+    "A/B testing",
+    "Marketing analytics",
+    "Experimentation design"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

@@ -2,7 +2,6 @@ import type { PortfolioTask, PortfolioLevel } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
-import { digitalMarketingTasks } from './digitalMarketing';
 import { financeAccountingTasks } from './financeAccounting';
 import { designUxTasks } from './designUx';
 import { businessAnalysisTasks } from './businessAnalysis';
@@ -27,6 +26,7 @@ import { itDatabaseAdminTasks } from './itDatabaseAdmin';
 const WEB_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/web-development');
 const SOFT_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/software-development');
 const DATA_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/data-analysis');
+const DIGITAL_MARKETING_DIR = path.join(process.cwd(), 'data/portfolioTasks/digital-marketing');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -85,8 +85,27 @@ function loadDataAnalysisTasks(): PortfolioTask[] {
   }
 }
 
+function loadDigitalMarketingTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(DIGITAL_MARKETING_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(DIGITAL_MARKETING_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(DIGITAL_MARKETING_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load digital marketing tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
-  ...digitalMarketingTasks,
+  ...loadDigitalMarketingTasks(),
   ...loadSoftDevTasks(),
   ...loadDataAnalysisTasks(),
   ...financeAccountingTasks,

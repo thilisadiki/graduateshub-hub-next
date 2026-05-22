@@ -1,0 +1,48 @@
+{
+  "id": "copywriting-ad-variants",
+  "categoryId": "digital-marketing",
+  "topicId": "copywriting-content-creation",
+  "level": "beginner",
+  "title": "Ad Variant Copywriting",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write 5 distinct ad copy variants for a South African food delivery service.",
+  "scenario": "ChowNow is a local food delivery app launching in Cape Town. They want to run Meta ads targeting busy professionals, families, and students, but their current ads are generic. They need 5 copy variants testing different hooks.",
+  "brief": "Write 5 distinct Facebook/Instagram ad copy variants. Each variant must target a different buyer angle (e.g., convenience, cost-saving, late-night cravings) and use different copy frameworks (like AIDA or PAS).",
+  "deliverables": [
+    "Target persona definition and selected hook/framework for each of the 5 variants",
+    "The actual ad copy (Primary Text, Headline, and Link Description) for all 5 variants",
+    "A one-sentence explanation of what specific variable each variant is testing"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Show your creativity. Ensure the copy is tailored to the South African context (e.g., using terms like \"lekker\", local foods, or commuting habits) without overdoing it. A strong hook is essential.",
+  "rubric": [
+    {
+      "key": "copy-frameworks",
+      "label": "Use of Frameworks",
+      "description": "Did the candidate correctly apply AIDA, PAS, or other copywriting formulas?",
+      "weight": 30
+    },
+    {
+      "key": "persuasion",
+      "label": "Persuasion & Hook",
+      "description": "Are the headlines and first lines scroll-stopping and persuasive?",
+      "weight": 40
+    },
+    {
+      "key": "context",
+      "label": "Local Relevance",
+      "description": "Is the tone and terminology appropriate for the South African target audience?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Direct response copywriting",
+    "AIDA framework",
+    "Ad copy testing",
+    "Persuasive writing"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

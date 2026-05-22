@@ -1,0 +1,55 @@
+{
+  "id": "brand-architecture-multi-product",
+  "categoryId": "digital-marketing",
+  "topicId": "brand-strategy-positioning",
+  "level": "advanced",
+  "title": "Brand Architecture for a Multi-Product Company",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design the brand architecture for a company launching its 4th product.",
+  "scenario": "A South African fintech company started with a payment processing product. They then launched a lending product and an insurance product. Now they are launching a business banking product. Each product has its own brand identity, which is confusing customers and diluting marketing spend.",
+  "brief": "Recommend a brand architecture strategy: branded house (Google), house of brands (P&G), endorsed brands (Marriott), or hybrid. Justify your choice and design the naming, visual identity, and go-to-market implications.",
+  "deliverables": [
+    "A comparison of at least 3 brand architecture models with pros and cons for this specific company",
+    "Your recommended model with a justification tied to the company's growth stage, market, and customer base",
+    "The naming convention for the 4 products under your chosen architecture",
+    "Go-to-market implications: how the architecture affects advertising, SEO, and customer acquisition cost"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Brand architecture is not just a naming exercise. It affects marketing spend efficiency, cross-selling, and customer trust. Show you understand these business implications.",
+  "rubric": [
+    {
+      "key": "comparison",
+      "label": "Model Comparison",
+      "description": "Are the architecture models correctly explained with relevant pros/cons?",
+      "weight": 25
+    },
+    {
+      "key": "recommendation",
+      "label": "Recommendation",
+      "description": "Is the chosen model justified by the business context?",
+      "weight": 30
+    },
+    {
+      "key": "naming",
+      "label": "Naming Convention",
+      "description": "Is the naming system consistent and scalable?",
+      "weight": 20
+    },
+    {
+      "key": "gtm",
+      "label": "GTM Implications",
+      "description": "Does the candidate understand how architecture affects marketing efficiency?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Brand architecture",
+    "Multi-product strategy",
+    "Naming strategy",
+    "Marketing efficiency"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

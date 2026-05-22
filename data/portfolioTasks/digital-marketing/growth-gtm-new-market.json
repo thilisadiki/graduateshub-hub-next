@@ -1,0 +1,55 @@
+{
+  "id": "growth-gtm-new-market",
+  "categoryId": "digital-marketing",
+  "topicId": "growth-strategy-gtm",
+  "level": "advanced",
+  "title": "Go-to-Market Plan for a New Market",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "A SA edtech company is expanding into Nigeria. Write the GTM strategy.",
+  "scenario": "A South African edtech company has 200,000 users domestically. They are expanding into Nigeria, a market with 100M+ internet users and a growing appetite for online learning. The board has approved a R1M budget for the first 90 days.",
+  "brief": "Write the go-to-market strategy for the Nigeria launch. Cover market entry channel selection, localisation requirements, pricing strategy, and the 90-day execution plan.",
+  "deliverables": [
+    "A market assessment: Nigeria's edtech landscape, key competitors, and the opportunity size",
+    "Channel strategy: the 2-3 acquisition channels for the first 90 days and why",
+    "Localisation requirements: pricing in Naira, content adaptation, payment method integration, and cultural considerations",
+    "A 90-day execution plan with milestones, budget allocation, and success metrics"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Nigeria is not South Africa. Data costs, payment infrastructure, and content preferences are different. Show that you would research the market, not just copy the SA playbook.",
+  "rubric": [
+    {
+      "key": "market",
+      "label": "Market Assessment",
+      "description": "Is the Nigeria market analysis specific and grounded in real dynamics?",
+      "weight": 25
+    },
+    {
+      "key": "channels",
+      "label": "Channel Strategy",
+      "description": "Are the chosen channels appropriate for Nigeria's digital landscape?",
+      "weight": 25
+    },
+    {
+      "key": "localisation",
+      "label": "Localisation Depth",
+      "description": "Does the candidate go beyond translation to genuine market adaptation?",
+      "weight": 25
+    },
+    {
+      "key": "execution",
+      "label": "Execution Plan",
+      "description": "Is the 90-day plan specific enough to execute and measure?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Go-to-market strategy",
+    "Market expansion",
+    "Localisation",
+    "Growth strategy"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "seo-onpage-audit",
+  "categoryId": "digital-marketing",
+  "topicId": "seo-organic-growth",
+  "level": "intermediate",
+  "title": "On-Page SEO Audit",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Audit a page's title tags, headings, internal links, and schema markup.",
+  "scenario": "A travel blog published a 2,000-word guide on \"Best Hiking Trails in the Drakensberg\" six months ago. Despite great content, it ranks on page 3 of Google. The editor suspects on-page SEO issues.",
+  "brief": "Conduct an on-page SEO audit of this hypothetical article. Identify issues in the title tag, meta description, heading hierarchy, image alt text, internal linking, URL structure, and schema markup.",
+  "deliverables": [
+    "An audit checklist with at least 10 on-page elements, their current state (hypothetical), and your recommended fix",
+    "A rewritten title tag and meta description optimised for both CTR and keyword targeting",
+    "A recommended schema markup type for this content and why it would improve SERP appearance"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Invent the current page state (e.g., \"title tag is 80 characters, keyword not in first 3 words\"). The value is the audit methodology, not the specific page.",
+  "rubric": [
+    {
+      "key": "audit",
+      "label": "Audit Completeness",
+      "description": "Are at least 10 on-page elements covered with specific findings?",
+      "weight": 30
+    },
+    {
+      "key": "fixes",
+      "label": "Fix Quality",
+      "description": "Are the recommended fixes specific and correctly prioritised?",
+      "weight": 35
+    },
+    {
+      "key": "schema",
+      "label": "Schema Knowledge",
+      "description": "Is the schema markup recommendation appropriate for the content type?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "On-page SEO",
+    "Meta tag optimisation",
+    "Schema markup",
+    "SEO auditing"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "mobile-referral-growth",
+  "categoryId": "digital-marketing",
+  "topicId": "mobile-app-marketing",
+  "level": "advanced",
+  "title": "Mobile App Referral Engine",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a viral, dual-sided referral engine for a mobile remittance app.",
+  "scenario": "SendKash is a mobile remittance app allowing workers in SA to send money home to Zimbabwe/Mozambique. They want to launch a mobile-only referral engine. Word of mouth is their biggest driver, but they need to productize it to scale. They have a R200,000 budget for referral payouts.",
+  "brief": "Design the complete referral mechanics, UX flow, and fraud detection framework for this remittance referral program. Explain how users discover it, the referral loops, and calculations of return on investment (ROI).",
+  "deliverables": [
+    "The referral mechanics: rewards for referrer and referee, payout triggers, and conditions (e.g., first successful transfer)",
+    "The user flow description: step-by-step from discovering the invite code to copying, sending via WhatsApp, and reward claim",
+    "Anti-fraud rules: how you prevent self-referral, device farming, and empty account creation",
+    "The financial model: cost per acquisition (CAC), viral coefficient projection, and lifetime value (LTV) comparison"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Remittance involves money transfers. The fraud risk in referrals is high (e.g., users creating fake accounts to get signup bonuses). Your security and validation rules must be detailed.",
+  "rubric": [
+    {
+      "key": "incentive-mechanics",
+      "label": "Referral Engine Mechanics",
+      "description": "Is the payout loop financially viable and aligned with customer value?",
+      "weight": 30
+    },
+    {
+      "key": "security-fraud",
+      "label": "Fraud Mitigation",
+      "description": "Are the security measures detailed enough to stop systemic exploitation?",
+      "weight": 40
+    },
+    {
+      "key": "financials",
+      "label": "Financial Projection Model",
+      "description": "Are the CAC and viral growth metrics mathematically sound?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Mobile referral loops",
+    "Growth modeling",
+    "Fraud prevention",
+    "Remittance marketing"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

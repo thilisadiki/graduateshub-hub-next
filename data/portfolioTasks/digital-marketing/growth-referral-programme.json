@@ -1,0 +1,55 @@
+{
+  "id": "growth-referral-programme",
+  "categoryId": "digital-marketing",
+  "topicId": "growth-strategy-gtm",
+  "level": "intermediate",
+  "title": "Design a Referral Programme",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a two-sided referral programme and model the viral coefficient.",
+  "scenario": "A South African online banking app wants to reduce their customer acquisition cost (currently R180 per customer via paid ads). They believe a referral programme could acquire customers for under R80 each.",
+  "brief": "Design a complete referral programme. Define the incentive structure for both sides (referrer and referee), calculate the viral coefficient, and project the impact on monthly growth.",
+  "deliverables": [
+    "The incentive structure: what the referrer gets, what the referee gets, and when each reward is triggered",
+    "A viral coefficient calculation: invites per user × conversion rate = K-factor, with realistic assumptions",
+    "A 6-month growth projection comparing organic growth vs organic + referral growth",
+    "One anti-fraud mechanism to prevent referral abuse"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A K-factor above 1.0 means viral growth. Most referral programmes achieve 0.2-0.5. Be realistic about your assumptions.",
+  "rubric": [
+    {
+      "key": "incentives",
+      "label": "Incentive Design",
+      "description": "Are the incentives compelling for both sides without being unprofitable?",
+      "weight": 30
+    },
+    {
+      "key": "viral",
+      "label": "Viral Coefficient",
+      "description": "Is the K-factor calculation correct with realistic assumptions?",
+      "weight": 30
+    },
+    {
+      "key": "projection",
+      "label": "Growth Projection",
+      "description": "Is the 6-month model internally consistent and honest about uncertainty?",
+      "weight": 25
+    },
+    {
+      "key": "fraud",
+      "label": "Anti-Fraud",
+      "description": "Is the anti-fraud mechanism practical and proportionate?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Referral programmes",
+    "Viral growth",
+    "Growth modelling",
+    "Product marketing"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

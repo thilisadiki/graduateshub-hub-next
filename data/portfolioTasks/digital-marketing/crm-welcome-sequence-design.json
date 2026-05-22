@@ -1,0 +1,48 @@
+{
+  "id": "crm-welcome-sequence-design",
+  "categoryId": "digital-marketing",
+  "topicId": "marketing-automation-crm",
+  "level": "beginner",
+  "title": "SaaS Welcome Sequence Workflow",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Design the automation steps and branching rules for a SaaS welcome workflow.",
+  "scenario": "A B2B task management tool has high signup rates but low activation rates. Many users log in once and never return. The growth team needs a 3-part automated welcome sequence triggered based on user behaviour inside the app.",
+  "brief": "Design the logical workflow steps, delay times, and conditional branching for the welcome email automation sequence. You do not need the software itself; document the flow structure in markdown.",
+  "deliverables": [
+    "A step-by-step description or visual flowchart of the automation logic (triggers, delays, actions, and conditional checks)",
+    "The logic for at least 2 behavioral branching paths (e.g., user created a project vs user did not create a project)",
+    "Key performance metrics you would track to measure the automation's effectiveness"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on behavioral triggers. Instead of just \"wait 2 days, send email 2\", use logic like \"if user has not completed task X within 48 hours, send email 2a. If they have, wait and send email 2b.\"",
+  "rubric": [
+    {
+      "key": "logic",
+      "label": "Workflow Logic",
+      "description": "Are the trigger definitions and workflow structures clear and free of logical gaps?",
+      "weight": 40
+    },
+    {
+      "key": "behavioral",
+      "label": "Behavioral Targeting",
+      "description": "Does the workflow intelligently branch based on user activity?",
+      "weight": 35
+    },
+    {
+      "key": "measurement",
+      "label": "KPI Definitions",
+      "description": "Are the success metrics defined accurately and actionable?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Workflow design",
+    "Marketing automation",
+    "Customer onboarding",
+    "Logical planning"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

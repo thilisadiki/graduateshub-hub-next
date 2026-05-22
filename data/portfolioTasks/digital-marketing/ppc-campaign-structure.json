@@ -1,0 +1,48 @@
+{
+  "id": "ppc-campaign-structure",
+  "categoryId": "digital-marketing",
+  "topicId": "paid-media-ppc",
+  "level": "beginner",
+  "title": "Build a Google Ads Campaign Structure",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Set up campaigns, ad groups, keywords, and match types for an online tutoring company.",
+  "scenario": "An online tutoring company wants to run Google Search Ads for the first time. They offer Maths, English, and Science tutoring for high school students. Their monthly budget is R15,000.",
+  "brief": "Design the campaign structure. Define the campaigns, ad groups, keywords (with match types), and write one ad for each ad group. You do not need a Google Ads account — document everything in Markdown.",
+  "deliverables": [
+    "The campaign structure: campaign names, ad group names, and 5-8 keywords per ad group with match types (broad, phrase, exact)",
+    "One responsive search ad per ad group with 3 headlines and 2 descriptions",
+    "A list of negative keywords to prevent wasted spend"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Match types matter enormously. Broad match for \"maths tutor\" will show your ad for \"math games\" and \"tutor salary\". Show you understand this.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Campaign Structure",
+      "description": "Are campaigns and ad groups logically organised by service or intent?",
+      "weight": 30
+    },
+    {
+      "key": "keywords",
+      "label": "Keyword Strategy",
+      "description": "Are match types chosen correctly and negative keywords included?",
+      "weight": 35
+    },
+    {
+      "key": "ads",
+      "label": "Ad Copy",
+      "description": "Are the ads compelling with clear CTAs and keyword relevance?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Google Ads",
+    "Campaign structure",
+    "Keyword match types",
+    "Ad copywriting"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}
