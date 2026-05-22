@@ -2,8 +2,7 @@ import type { PortfolioTask, PortfolioLevel } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
-import { qaTestingTasks } from './qaTesting';
-import { projectCoordinationTasks } from './projectCoordination';
+
 
 const WEB_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/web-development');
 const SOFT_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/software-development');
@@ -217,8 +216,6 @@ export const portfolioTasks: PortfolioTask[] = [
   ...loadCustomerOpsTasks(),
   ...loadItTasks(),
   ...loadAiPromptingTasks(),
-  ...qaTestingTasks,
-  ...projectCoordinationTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {

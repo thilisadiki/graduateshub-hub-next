@@ -1,0 +1,56 @@
+{
+  "id": "pc-project-plan-charter",
+  "categoryId": "business-analysis",
+  "topicId": "project-coordination",
+  "level": "beginner",
+  "title": "Project Plan with Charter and Gantt",
+  "difficulty": "Beginner",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Produce a complete project plan for a real or fictional initiative, the way a junior coordinator does on day one.",
+  "scenario": "You have just joined a SA fintech as a junior project coordinator. Your project manager hands you a brief for a new internal initiative (\"Migrate the customer onboarding form from PDF to a digital flow\") and asks for a complete project plan by Friday.",
+  "brief": "Produce the artefacts a project manager would expect: a one-page project charter, a milestone schedule, a Gantt chart (sketched), and a budget summary. Make sensible assumptions about scope, team size, and timeline; document them.",
+  "deliverables": [
+    "A one-page project charter covering: business case summary, objectives (SMART), in-scope and out-of-scope, key deliverables, stakeholders, success criteria, assumptions, and constraints",
+    "A milestone schedule with at least eight milestones across initiation, planning, execution, and closure phases",
+    "A Gantt chart description (text-based or linked sketch) showing dependencies and the critical path",
+    "A budget summary with at least three cost categories (people, software, contingency) and a defended contingency percentage"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Real coordinators document assumptions because they do not know everything on day one. Where you make a guess, mark it as an assumption. Senior PMs respect that more than guessing confidently.",
+  "rubric": [
+    {
+      "key": "charter",
+      "label": "Charter Quality",
+      "description": "Does the charter contain all standard sections, with SMART objectives and clear scope boundaries?",
+      "weight": 30
+    },
+    {
+      "key": "schedule",
+      "label": "Schedule Coherence",
+      "description": "Are milestones logical, dependencies correct, and the critical path identified?",
+      "weight": 30
+    },
+    {
+      "key": "budget",
+      "label": "Budget Realism",
+      "description": "Is the budget reasonable for the project size, with a defended contingency?",
+      "weight": 20
+    },
+    {
+      "key": "assumptions",
+      "label": "Assumption Discipline",
+      "description": "Are assumptions and constraints called out explicitly rather than buried or guessed?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Project planning",
+    "Charter writing",
+    "Schedule development",
+    "Budget estimation"
+  ],
+  "relatedRoadmapIds": [
+    "project-coordinator",
+    "business-analyst"
+  ]
+}

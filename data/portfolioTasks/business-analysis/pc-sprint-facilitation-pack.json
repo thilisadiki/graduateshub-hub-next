@@ -1,0 +1,56 @@
+{
+  "id": "pc-sprint-facilitation-pack",
+  "categoryId": "business-analysis",
+  "topicId": "project-coordination",
+  "level": "advanced",
+  "title": "Sprint Facilitation Pack: Templates a New Coordinator Can Use Day One",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Build the agendas and templates for a full Scrum cycle that a brand new coordinator could use without training.",
+  "scenario": "Your SA tech company just hired three new project coordinators in one quarter. The PMO lead asks you to produce a \"facilitation pack\" so each new joiner can run sprint ceremonies without learning by trial and error. The pack must work in your specific corporate context, not generic Scrum theory.",
+  "brief": "Produce facilitation templates for a complete sprint cycle: sprint planning, daily standup, sprint review, and retrospective. Each template must contain enough structure that a new coordinator can run the meeting without senior support.",
+  "deliverables": [
+    "Four meeting templates, each with: purpose, attendees, time allocation, agenda with timing, facilitator scripts (what to say to open, redirect, and close), inputs required, outputs produced",
+    "A \"first-time coordinator\" coaching note for each ceremony, identifying the three most common mistakes and how to avoid them",
+    "A retrospective format library: at least three retrospective formats (e.g., Start-Stop-Continue, 4Ls, Sailboat) and guidance on when to use which",
+    "A short policy on remote and hybrid facilitation, covering camera norms, async input, and how to keep distributed team members engaged"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The test of a good facilitation pack is not whether it sounds professional. It is whether a nervous new coordinator could open it five minutes before standup and confidently run the meeting. Aim for that bar.",
+  "rubric": [
+    {
+      "key": "usability",
+      "label": "Day-One Usability",
+      "description": "Could a new coordinator actually run these meetings using only this pack?",
+      "weight": 30
+    },
+    {
+      "key": "completeness",
+      "label": "Coverage Completeness",
+      "description": "Do all four ceremonies have agendas, scripts, inputs, and outputs?",
+      "weight": 25
+    },
+    {
+      "key": "coaching",
+      "label": "Coaching Quality",
+      "description": "Are the common mistakes real ones, not generic advice?",
+      "weight": 25
+    },
+    {
+      "key": "context",
+      "label": "Hybrid Context",
+      "description": "Does the pack reflect modern hybrid SA team realities, not pre-2020 in-person Scrum?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Agile facilitation",
+    "Meeting design",
+    "Scrum ceremonies",
+    "Coaching new joiners"
+  ],
+  "relatedRoadmapIds": [
+    "project-coordinator",
+    "business-analyst"
+  ]
+}

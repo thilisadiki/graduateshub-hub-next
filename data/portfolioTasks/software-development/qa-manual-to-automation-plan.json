@@ -1,0 +1,55 @@
+{
+  "id": "qa-manual-to-automation-plan",
+  "categoryId": "software-development",
+  "topicId": "quality-assurance-testing",
+  "level": "advanced",
+  "title": "Manual to Automation Migration Plan",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Pick five manual test cases, plan their automation, and defend why these five.",
+  "scenario": "Your team has 100 manual test cases and limited automation engineering time. The QA lead asks you to recommend which five to automate first. The wrong answer is \"all of them eventually\". The right answer demonstrates the cost-versus-benefit thinking expected of a senior tester.",
+  "brief": "From a hypothetical login, search, checkout, and admin module suite, pick five test cases to automate first. Write the automation specification for each in a way that an automation engineer could implement.",
+  "deliverables": [
+    "A prioritisation matrix scoring candidate test cases on: execution frequency, automation cost, stability, and risk-of-failure",
+    "Five automation specs, each containing: test name, preconditions, automation framework recommendation (Selenium, Cypress, Playwright), test steps in pseudocode, key assertions, test data strategy, and expected runtime",
+    "A short paragraph explaining what you deliberately did not automate and why (the \"expensive to automate, low value\" cases)",
+    "A maintenance plan: how often these tests will need updating, who owns them, and what flake-rate is acceptable before they get muted"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Pseudocode is fine; you do not need to write real Selenium. The point is the thinking: which assertions matter, what test data setup is required, what flakiness risk you have introduced. A senior tester picks the boring repeatable cases first, not the exciting ones.",
+  "rubric": [
+    {
+      "key": "prioritisation",
+      "label": "Prioritisation Logic",
+      "description": "Are the five chosen cases the right candidates given the matrix? Is the scoring consistent?",
+      "weight": 30
+    },
+    {
+      "key": "specifications",
+      "label": "Spec Quality",
+      "description": "Could an automation engineer implement these without further clarification? Are the assertions correct?",
+      "weight": 30
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Trade-off Awareness",
+      "description": "Is the \"did not automate\" list real and well reasoned, not a token afterthought?",
+      "weight": 20
+    },
+    {
+      "key": "maintenance",
+      "label": "Maintenance Realism",
+      "description": "Does the plan show awareness of test flakiness, ownership, and the cost of automated test maintenance?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Test automation strategy",
+    "Cost-benefit analysis",
+    "Automation specification",
+    "Test maintenance planning"
+  ],
+  "relatedRoadmapIds": [
+    "junior-qa-tester"
+  ]
+}

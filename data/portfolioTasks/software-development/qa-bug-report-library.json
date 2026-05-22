@@ -1,0 +1,54 @@
+{
+  "id": "qa-bug-report-library",
+  "categoryId": "software-development",
+  "topicId": "quality-assurance-testing",
+  "level": "beginner",
+  "title": "Bug Report Library: Document 5 Real Defects",
+  "difficulty": "Beginner",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Find and document five real bugs in a public South African app or website using a professional bug report template.",
+  "scenario": "You are applying for junior QA roles. Hiring managers want proof you can write a bug report that a developer can actually act on. Without work experience, your portfolio is the only evidence.",
+  "brief": "Pick a publicly accessible SA app or website (Takealot, FNB or Capitec banking app, MyGov, gov.za services, a local retailer). Use it the way a curious user would, looking for genuine defects. Document each bug as a structured report.",
+  "deliverables": [
+    "Five bug reports, each containing: title, environment (browser, OS, app version), preconditions, steps to reproduce, expected result, actual result, severity, and priority",
+    "For at least three of the bugs, include a screenshot or short screen recording link",
+    "A short cover note explaining your overall approach: which areas you focused on, which test heuristics you used (boundary values, error handling, navigation), and what you would test next if you had more time"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Severity is technical impact (does it crash, lose data, look broken). Priority is business urgency (how soon must it be fixed). They are independent. Be ready to defend why you assigned each one separately.",
+  "rubric": [
+    {
+      "key": "reproduction",
+      "label": "Reproduction Quality",
+      "description": "Could a developer reproduce the bug from your steps without asking follow-up questions?",
+      "weight": 35
+    },
+    {
+      "key": "classification",
+      "label": "Severity vs Priority",
+      "description": "Are severity and priority assigned independently and defended with reasoning?",
+      "weight": 25
+    },
+    {
+      "key": "coverage",
+      "label": "Test Coverage",
+      "description": "Do the bugs reflect varied test heuristics, not just one type of issue?",
+      "weight": 25
+    },
+    {
+      "key": "professional",
+      "label": "Professional Polish",
+      "description": "Are the reports formatted consistently, free of vague language, and ready to paste into JIRA?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Bug reporting",
+    "Test heuristics",
+    "Severity classification",
+    "Defect lifecycle"
+  ],
+  "relatedRoadmapIds": [
+    "junior-qa-tester"
+  ]
+}

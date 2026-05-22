@@ -1,0 +1,56 @@
+{
+  "id": "pc-status-report-library",
+  "categoryId": "business-analysis",
+  "topicId": "project-coordination",
+  "level": "intermediate",
+  "title": "Status Report Library: Three Reports Across the Lifecycle",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Write three status reports for the same project at different phases. Show how communication shifts as a project matures.",
+  "scenario": "A weekly status report is the deliverable a junior coordinator produces most often. Hiring managers want to see whether your reports actually communicate progress and risk, or whether they read like padding. The same project at different phases needs different emphasis.",
+  "brief": "Pick a fictional 6-month project. Produce three weekly status reports: one in early planning (week 3), one in mid-execution (week 14), and one in pre-closure (week 24). Each report should reflect what genuinely matters at that phase.",
+  "deliverables": [
+    "Three status reports, each one page, with consistent sections: RAG status (overall, scope, schedule, cost, quality, risk), highlights since last week, planned for next week, decisions needed, top risks, and key issues",
+    "A short paragraph before the reports explaining what shifts in emphasis as the project moves through its lifecycle",
+    "For at least one of the reports, explicitly model an \"amber\" or \"red\" status with a clear explanation of why and what is being done about it",
+    "A reflection paragraph: which report was the hardest to write, and why"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A status report is not a meeting agenda or a list of activities. It is an executive answer to \"are we on track, and if not, what are you doing about it?\" If a stakeholder cannot answer that after reading 30 seconds of your report, the report has failed.",
+  "rubric": [
+    {
+      "key": "clarity",
+      "label": "Executive Clarity",
+      "description": "Could a busy executive answer \"are we on track\" within 30 seconds of opening each report?",
+      "weight": 30
+    },
+    {
+      "key": "progression",
+      "label": "Phase-Appropriate Emphasis",
+      "description": "Does the emphasis genuinely shift between planning, execution, and closure?",
+      "weight": 25
+    },
+    {
+      "key": "rag-honesty",
+      "label": "RAG Honesty",
+      "description": "Is at least one report honestly amber or red, with a credible recovery plan?",
+      "weight": 25
+    },
+    {
+      "key": "consistency",
+      "label": "Consistency",
+      "description": "Are the reports consistently structured, free of jargon, and free of padding?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Status reporting",
+    "RAG status assessment",
+    "Executive communication",
+    "Project transparency"
+  ],
+  "relatedRoadmapIds": [
+    "project-coordinator",
+    "business-analyst"
+  ]
+}
