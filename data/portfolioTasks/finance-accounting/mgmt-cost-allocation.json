@@ -1,0 +1,55 @@
+{
+  "id": "mgmt-cost-allocation",
+  "categoryId": "finance-accounting",
+  "topicId": "management-accounting",
+  "level": "intermediate",
+  "title": "Cost Allocation for Shared Services",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Allocate IT costs across 4 business units using activity-based costing.",
+  "scenario": "A company's IT department costs R3.6M/year to run. Four business units use IT services (Sales, Operations, Finance, HR). The CFO wants to allocate IT costs fairly so each unit sees its \"true\" operating cost. Currently costs are split equally (25% each), which Sales thinks is unfair because they use far less IT than Operations.",
+  "brief": "Design an activity-based cost allocation model. Identify the cost drivers (helpdesk tickets, server usage, headcount, etc.), gather hypothetical data, and allocate costs. Compare your allocation to the current 25/25/25/25 split.",
+  "deliverables": [
+    "The cost drivers you chose and why each is appropriate",
+    "A hypothetical data table: Business Unit × Cost Driver quantities",
+    "The ABC allocation vs the current equal split, showing the difference for each unit",
+    "A recommendation on which allocation method the company should adopt"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Equal allocation is easy but wrong. Activity-based allocation is accurate but complex. Show that you understand the trade-off.",
+  "rubric": [
+    {
+      "key": "drivers",
+      "label": "Cost Driver Selection",
+      "description": "Are the cost drivers causally related to IT consumption?",
+      "weight": 30
+    },
+    {
+      "key": "allocation",
+      "label": "Allocation Accuracy",
+      "description": "Is the ABC calculation correct and well-documented?",
+      "weight": 30
+    },
+    {
+      "key": "comparison",
+      "label": "Method Comparison",
+      "description": "Is the comparison between ABC and equal split clearly presented?",
+      "weight": 20
+    },
+    {
+      "key": "recommendation",
+      "label": "Practical Recommendation",
+      "description": "Does the recommendation balance accuracy with administrative simplicity?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Activity-based costing",
+    "Cost allocation",
+    "Management accounting",
+    "Decision support"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

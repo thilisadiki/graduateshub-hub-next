@@ -1,0 +1,48 @@
+{
+  "id": "cash-flow-personal-budget",
+  "categoryId": "finance-accounting",
+  "topicId": "cash-flow-forecasting",
+  "level": "beginner",
+  "title": "Personal Cash Flow Budget",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Build a 3-month personal cash flow for a graduate earning R18,000/month.",
+  "scenario": "A recent graduate just started their first job at R18,000/month (before tax). They have R45,000 in student debt, rent of R4,500, and no savings. They want to know: \"Will I make it through the first 3 months?\"",
+  "brief": "Build a 3-month personal cash flow showing inflows (net salary after PAYE), outflows (rent, transport, food, debt repayment, etc.), and the closing balance each month.",
+  "deliverables": [
+    "A 3-month cash flow table: Opening Balance, Net Salary, each expense category, Closing Balance",
+    "A rough PAYE calculation showing how you arrived at the net salary figure",
+    "One specific recommendation for the graduate to build a R5,000 emergency fund within 6 months"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Use realistic South African costs. Transport in Gauteng is not the same as Cape Town. Show that you have thought about real expenses, not textbook categories.",
+  "rubric": [
+    {
+      "key": "accuracy",
+      "label": "Calculation Accuracy",
+      "description": "Are the PAYE calculation and expense estimates realistic for SA?",
+      "weight": 30
+    },
+    {
+      "key": "completeness",
+      "label": "Expense Completeness",
+      "description": "Are common expenses included (transport, data, food, insurance)?",
+      "weight": 30
+    },
+    {
+      "key": "advice",
+      "label": "Savings Recommendation",
+      "description": "Is the emergency fund plan realistic and specific?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Personal finance",
+    "Cash flow budgeting",
+    "PAYE basics",
+    "Financial planning"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

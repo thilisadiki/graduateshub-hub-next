@@ -1,0 +1,55 @@
+{
+  "id": "invest-npv-irr-basic",
+  "categoryId": "finance-accounting",
+  "topicId": "investment-appraisal",
+  "level": "beginner",
+  "title": "NPV and IRR Calculation",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Calculate NPV and IRR for an equipment purchase and make a recommendation.",
+  "scenario": "A printing company is considering buying a new digital press for R850,000. It will generate additional net cash flows of R220,000 per year for 5 years. The company's cost of capital is 12%. Should they buy it?",
+  "brief": "Calculate the NPV and IRR. Show your working step by step. Make a clear recommendation based on the results.",
+  "deliverables": [
+    "The NPV calculation with each year's discounted cash flow shown",
+    "The IRR (you can estimate using interpolation or trial and error — show the method)",
+    "The payback period (simple, not discounted)",
+    "A one-paragraph recommendation: buy or not, and why"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "NPV > 0 means the project creates value. IRR > cost of capital means the same thing. They should agree. If they do not in your calculation, you have made an error.",
+  "rubric": [
+    {
+      "key": "npv",
+      "label": "NPV Calculation",
+      "description": "Is the NPV correctly calculated with proper discounting?",
+      "weight": 35
+    },
+    {
+      "key": "irr",
+      "label": "IRR Estimation",
+      "description": "Is the IRR estimated correctly with the method clearly shown?",
+      "weight": 30
+    },
+    {
+      "key": "payback",
+      "label": "Payback Period",
+      "description": "Is the payback period correctly calculated?",
+      "weight": 15
+    },
+    {
+      "key": "recommendation",
+      "label": "Recommendation",
+      "description": "Is the recommendation consistent with the NPV and IRR results?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "NPV",
+    "IRR",
+    "Payback period",
+    "Investment decision-making"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

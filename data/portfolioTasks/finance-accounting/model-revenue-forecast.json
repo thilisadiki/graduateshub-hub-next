@@ -1,0 +1,48 @@
+{
+  "id": "model-revenue-forecast",
+  "categoryId": "finance-accounting",
+  "topicId": "financial-modelling-valuation",
+  "level": "beginner",
+  "title": "Build a Simple Revenue Model",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Forecast 12 months of revenue for a subscription business using drivers.",
+  "scenario": "A SaaS startup has 500 paying customers at R299/month. They add roughly 40 new customers per month and lose 15 (churn). The CEO wants a 12-month revenue forecast.",
+  "brief": "Build a driver-based revenue model. Use new customer additions, churn rate, and ARPU to forecast monthly revenue for 12 months.",
+  "deliverables": [
+    "A 12-month table: Opening Customers, New, Churned, Closing Customers, ARPU, Monthly Revenue",
+    "The implied monthly churn rate and annual churn rate",
+    "One scenario: what if churn drops from 15 to 10 per month? Show the revenue impact by month 12"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Revenue = Customers × ARPU. But customers compound — losing fewer customers each month has a dramatic effect by month 12. Show this compounding.",
+  "rubric": [
+    {
+      "key": "model",
+      "label": "Model Construction",
+      "description": "Is the driver-based model correctly built with month-on-month logic?",
+      "weight": 35
+    },
+    {
+      "key": "churn",
+      "label": "Churn Calculation",
+      "description": "Is the churn rate correctly calculated as a percentage?",
+      "weight": 25
+    },
+    {
+      "key": "scenario",
+      "label": "Scenario Impact",
+      "description": "Does the reduced-churn scenario show the compounding effect?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Revenue modelling",
+    "SaaS metrics",
+    "Financial forecasting",
+    "Driver-based modelling"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

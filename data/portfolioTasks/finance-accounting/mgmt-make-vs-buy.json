@@ -1,0 +1,55 @@
+{
+  "id": "mgmt-make-vs-buy",
+  "categoryId": "finance-accounting",
+  "topicId": "management-accounting",
+  "level": "advanced",
+  "title": "Make vs Buy Decision",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Analyse whether a manufacturer should produce in-house or outsource.",
+  "scenario": "A Johannesburg electronics manufacturer currently produces a circuit board in-house at a total cost of R85 per unit (R35 variable, R50 allocated fixed). A Chinese supplier offers to produce the same board for R55 per unit, delivered. The production manager says \"it is cheaper to outsource.\" The CFO is not so sure.",
+  "brief": "Conduct a make-vs-buy analysis. Consider relevant costs only (sunk costs and allocated overheads that will not change are irrelevant). Include qualitative factors like quality control, lead times, and supply chain risk.",
+  "deliverables": [
+    "A relevant cost comparison: Make (variable cost only) vs Buy (supplier price + any additional costs)",
+    "An analysis of which allocated fixed costs would actually be saved vs which would remain",
+    "At least 4 qualitative factors that could override the financial analysis",
+    "A recommendation with a clear decision rule (at what volume does the decision flip?)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The trap is comparing R85 (full cost) to R55 (supplier price). If R50 of the R85 is allocated overhead that does not go away, the real comparison is R35 vs R55. Show this.",
+  "rubric": [
+    {
+      "key": "relevant-cost",
+      "label": "Relevant Cost Analysis",
+      "description": "Does the candidate correctly identify which costs are relevant (avoid the full-cost trap)?",
+      "weight": 35
+    },
+    {
+      "key": "fixed-costs",
+      "label": "Fixed Cost Treatment",
+      "description": "Is the avoidable vs unavoidable fixed cost distinction correct?",
+      "weight": 25
+    },
+    {
+      "key": "qualitative",
+      "label": "Qualitative Factors",
+      "description": "Are the qualitative factors specific and commercially important?",
+      "weight": 20
+    },
+    {
+      "key": "decision",
+      "label": "Decision Rule",
+      "description": "Is the volume-based decision rule correct and actionable?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Relevant costing",
+    "Make vs buy analysis",
+    "Decision analysis",
+    "Strategic sourcing"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

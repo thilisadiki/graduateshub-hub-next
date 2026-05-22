@@ -1,0 +1,49 @@
+{
+  "id": "corp-fin-financing-options",
+  "categoryId": "finance-accounting",
+  "topicId": "corporate-finance-capital-structure",
+  "level": "intermediate",
+  "title": "Financing Options Comparison & Dilution Analysis",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Compare a bank term loan against an equity investor offer for a growing SaaS startup.",
+  "scenario": "A growing SaaS startup needs to raise $3,000,000 to fund product R&D and scale global sales. The founders are evaluating two term sheets: Option A is a 5-year bank term loan at a 9% interest rate with no equity dilution. Option B is an equity investment of $3,000,000 in exchange for 20% ownership of the company. The startup's current valuation is $12,000,000 pre-money, and they expect net income to grow from $500,000 to $2,500,000 over the next 5 years.",
+  "brief": "Perform a comparative financial analysis of the two options. Model the debt service requirements, compile a cap table dilution schedule under Option B, and calculate the founders' remaining equity value after 5 years under both scenarios.",
+  "deliverables": [
+    "Debt amortization table for Option A showing annual principal, interest payments, and remaining balance.",
+    "Cap table dilution schedule showing post-money ownership percentages for Option B.",
+    "Founder return on equity (ROE) and remaining equity valuation comparison at Year 5.",
+    "A recommendation report (max 400 words) summarizing the strategic trade-offs between debt interest burdens vs equity dilution."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Provide your analysis in clean Markdown. Use tables for the cap table and debt amortization schedules. Back your recommendation with quantitative output.",
+  "rubric": [
+    {
+      "key": "scenario_model",
+      "label": "Financial Model Analysis",
+      "description": "Are the debt amortization and ROE calculations accurate and complete?",
+      "weight": 35
+    },
+    {
+      "key": "cap_table",
+      "label": "Cap Table Dilution",
+      "description": "Is the dilution impact on existing shareholders modeled correctly and ownership percentages precise?",
+      "weight": 35
+    },
+    {
+      "key": "strategic_recommendation",
+      "label": "Strategic Recommendations",
+      "description": "Does the recommendation clearly address debt covenant risks, interest burden, and dilution trade-offs?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Debt modeling",
+    "Equity dilution analysis",
+    "Cap table management",
+    "Strategic capital structuring"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

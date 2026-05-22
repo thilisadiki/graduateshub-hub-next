@@ -1,0 +1,55 @@
+{
+  "id": "payroll-emp201-emp501",
+  "categoryId": "finance-accounting",
+  "topicId": "payroll-statutory-returns",
+  "level": "intermediate",
+  "title": "EMP201 and EMP501 Filing",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Prepare the monthly EMP201 and annual EMP501 reconciliation.",
+  "scenario": "The financial year has just ended. You need to prepare the monthly EMP201 (PAYE/UIF/SDL payment declaration) and reconcile it to the annual EMP501 submission. The previous preparer left no documentation.",
+  "brief": "Walk through the EMP201 and EMP501 process. Show the monthly declaration amounts, the annual reconciliation, and how to identify and resolve discrepancies.",
+  "deliverables": [
+    "A 12-month EMP201 summary showing PAYE, UIF, and SDL declared and paid each month",
+    "The EMP501 reconciliation: total declared vs total per IRP5 certificates issued",
+    "Two common discrepancy scenarios (e.g., late payment, wrong tax period) and how to resolve each",
+    "The key deadlines and penalties for late EMP501 submission"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The EMP501 must reconcile to the total of all IRP5s issued. If it does not, SARS will reject the submission. Show this reconciliation logic.",
+  "rubric": [
+    {
+      "key": "emp201",
+      "label": "EMP201 Monthly Summary",
+      "description": "Are the monthly declarations correctly structured with PAYE + UIF + SDL?",
+      "weight": 25
+    },
+    {
+      "key": "reconciliation",
+      "label": "EMP501 Reconciliation",
+      "description": "Is the annual reconciliation to IRP5 totals correctly demonstrated?",
+      "weight": 35
+    },
+    {
+      "key": "discrepancies",
+      "label": "Discrepancy Resolution",
+      "description": "Are the discrepancy scenarios realistic and resolutions correct?",
+      "weight": 25
+    },
+    {
+      "key": "deadlines",
+      "label": "Compliance Awareness",
+      "description": "Are the deadlines and penalties correctly stated?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "EMP201",
+    "EMP501",
+    "Payroll reconciliation",
+    "SARS compliance"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "corp-fin-merger-model",
+  "categoryId": "finance-accounting",
+  "topicId": "corporate-finance-capital-structure",
+  "level": "advanced",
+  "title": "Simplified M&A Merger Model & Synergy Valuation",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Build a simplified consolidation merger model with accretion/dilution analysis in USD.",
+  "scenario": "A global retail corporation (Acquirer) plans to acquire a smaller specialty retail chain (Target) for $50,000,000 in a transaction funded 60% with new debt and 40% with stock. Acquirer has a share price of $50, shares outstanding of 10 million, and EPS of $4.00. Target has net income of $5,000,000. New debt will carry an interest rate of 6%. Acquirer expects to achieve $1,500,000 in pre-tax cost synergies. The acquisition team needs to build a model to determine if the deal is accretive or dilutive to the Acquirer's EPS in Year 1.",
+  "brief": "Build a simplified M&A consolidation model. Compute the acquisition purchase price and funding mix. Calculate the new share count, target net income contribution, debt interest expense (after 21% tax), cost synergies (after 21% tax), consolidated net income, and pro-forma EPS. Determine accretion/dilution.",
+  "deliverables": [
+    "M&A transaction structure summary (deal value, debt issued, new stock issued, share count impact).",
+    "Pro-forma income statement adjustments table (Target Net Income, interest expense, tax adjustment, synergies).",
+    "Accretion / Dilution calculation showing pro-forma EPS compared to standalone EPS.",
+    "Synergy sensitivity table (what if synergies are only 50% achieved or transaction debt interest rate rises to 8%).",
+    "Executive memo (max 500 words) advising the Board of Directors on deal feasibility and risk factors."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Submit the pro-forma financial calculations and sensitivity matrices using Markdown tables. Ensure all formulas and assumptions are fully explained in the accompanying board memo.",
+  "rubric": [
+    {
+      "key": "consolidation_model",
+      "label": "Consolidation Model",
+      "description": "Are pro-forma financial statement adjustments, including tax shields and share additions, calculated correctly?",
+      "weight": 35
+    },
+    {
+      "key": "accretion_dilution",
+      "label": "Accretion / Dilution Analysis",
+      "description": "Is the pro-forma EPS calculation accurate, and is accretion/dilution correctly determined?",
+      "weight": 35
+    },
+    {
+      "key": "synergy_valuation",
+      "label": "Synergy Sensitivity Valuation",
+      "description": "Are the synergy thresholds and sensitivity scenarios modeled correctly?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "M&A modeling",
+    "Pro-forma statement consolidation",
+    "Accretion/dilution analysis",
+    "Corporate valuation",
+    "Board communication"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

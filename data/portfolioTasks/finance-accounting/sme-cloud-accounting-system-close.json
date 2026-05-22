@@ -1,0 +1,63 @@
+{
+  "id": "sme-cloud-accounting-system-close",
+  "categoryId": "finance-accounting",
+  "topicId": "sme-bookkeeping-cloud-accounting",
+  "level": "advanced",
+  "title": "Design and Implement a Cloud Accounting System and Month-End Close",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 8 hours",
+  "tagline": "Architect a cloud accounting solution for a retail/e-commerce SME and establish month-end closing procedures.",
+  "scenario": "A fast-growing SME with a brick-and-mortar store and an online shop is upgrading its manual accounting system to Xero. They have multiple currency transactions, inventory tracking, integrated Point of Sale (POS), and require a structured month-end close process.",
+  "brief": "Design a cloud accounting system architecture and month-end close procedure for the company. Include integrations (POS, payment gateways like Stripe/PayFast), multi-currency ledger setup, month-end closing checklist, and draft the first month-end management report (Income Statement and Balance Sheet) with variance commentary.",
+  "deliverables": [
+    "Integrations and data flow diagram detailing how POS, payment gateway, and bank feeds sync to the cloud general ledger.",
+    "Multi-currency and inventory tracking setup recommendations.",
+    "A comprehensive 15-step month-end close checklist (covering cut-offs, reconciliation, control accounts, and review).",
+    "Draft financial reports (Income Statement & Balance Sheet) based on a provided trial balance.",
+    "Variance analysis commentary explaining operational performance to the business owner."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Submit a detailed systems integration and month-end procedure report in Markdown. Ensure your financial reports and commentary are audit-ready and presentable to the executive board.",
+  "rubric": [
+    {
+      "key": "system_architecture",
+      "label": "System Integration Architecture",
+      "description": "Is the POS, payment gateway, and bank feed data flow well-designed and integration-efficient?",
+      "weight": 25
+    },
+    {
+      "key": "checklist_thoroughness",
+      "label": "Month-End Close Checklist",
+      "description": "Is the 15-step closing checklist logically ordered, complete, and robust?",
+      "weight": 25
+    },
+    {
+      "key": "financial_statement_prep",
+      "label": "Financial Statements Prep",
+      "description": "Are the Income Statement and Balance Sheet drafted accurately based on accounting principles?",
+      "weight": 20
+    },
+    {
+      "key": "variance_commentary",
+      "label": "Management Commentary",
+      "description": "Is the variance analysis insight-driven, addressing actual performance drivers rather than repeating the numbers?",
+      "weight": 15
+    },
+    {
+      "key": "controls_security",
+      "label": "Internal Controls Design",
+      "description": "Does the setup protect financial integrity via segregation of duties and software permissions controls?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Cloud systems integration",
+    "Multi-currency accounting",
+    "Month-end close procedures",
+    "Financial statements prep",
+    "Management reporting"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "budget-variance-report",
+  "categoryId": "finance-accounting",
+  "topicId": "budgeting-variance",
+  "level": "intermediate",
+  "title": "Variance Analysis Report",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Explain why actual results differ from budget — controllable vs uncontrollable.",
+  "scenario": "Q1 is over. The marketing team spent R680K against a budget of R600K — 13% over. The CFO wants to know why and whether it will happen again.",
+  "brief": "Write a variance analysis report. Decompose the R80K overspend into specific line items, classify each as controllable or uncontrollable, and recommend corrective actions for Q2.",
+  "deliverables": [
+    "A variance table: Line Item, Budget, Actual, Variance (R and %), Controllable/Uncontrollable",
+    "An explanation for each significant variance (>5%) with root cause",
+    "A recommendation for Q2: which spending to cut, which to maintain, and what approvals to tighten"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Not all overspends are bad. If the team overspent on a campaign that generated 3× ROI, that is a good overspend. Show this judgment.",
+  "rubric": [
+    {
+      "key": "decomposition",
+      "label": "Variance Decomposition",
+      "description": "Is the overspend broken into specific, meaningful line items?",
+      "weight": 30
+    },
+    {
+      "key": "classification",
+      "label": "Controllable vs Uncontrollable",
+      "description": "Is the classification correct and well-justified?",
+      "weight": 30
+    },
+    {
+      "key": "action",
+      "label": "Corrective Actions",
+      "description": "Are the Q2 recommendations specific and balanced?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Variance analysis",
+    "Cost control",
+    "Financial reporting",
+    "Business judgment"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

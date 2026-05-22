@@ -1,0 +1,48 @@
+{
+  "id": "budget-department-build",
+  "categoryId": "finance-accounting",
+  "topicId": "budgeting-variance",
+  "level": "beginner",
+  "title": "Build a Department Budget",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Create a 12-month operating budget for a 10-person marketing team.",
+  "scenario": "A marketing director has been told to submit next year's budget to the CFO by Friday. The team has 10 people, spends on advertising, software tools, events, and travel. Last year's total was R2.4M.",
+  "brief": "Build the 12-month budget. Break it down by expense category, allocate realistically across months (not just R200K × 12), and explain any seasonal patterns.",
+  "deliverables": [
+    "A 12-month budget table with rows for each expense category and columns for each month",
+    "Assumptions for each line item (e.g., \"Ad spend peaks in Nov-Dec for Black Friday\")",
+    "The total budget with a comparison to last year and a justification for any increase or decrease"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A flat R200K/month budget is lazy. Real spending has seasonal peaks (events, campaigns, hiring). Show this variation.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Budget Structure",
+      "description": "Are the expense categories comprehensive and logically grouped?",
+      "weight": 30
+    },
+    {
+      "key": "seasonality",
+      "label": "Seasonal Allocation",
+      "description": "Does the monthly allocation reflect realistic business patterns?",
+      "weight": 35
+    },
+    {
+      "key": "assumptions",
+      "label": "Assumption Quality",
+      "description": "Are the assumptions explicit and defensible?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Budget construction",
+    "Financial planning",
+    "Cost estimation",
+    "Business acumen"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

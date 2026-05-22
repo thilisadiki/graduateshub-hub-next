@@ -1,0 +1,49 @@
+{
+  "id": "corp-fin-debt-cost",
+  "categoryId": "finance-accounting",
+  "topicId": "corporate-finance-capital-structure",
+  "level": "beginner",
+  "title": "Calculate Cost of Debt & WACC",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Calculate the cost of debt and Weighted Average Cost of Capital (WACC) in USD for an expanding franchise.",
+  "scenario": "A global coffee franchise plans to open 3 new international locations, requiring a capital injection of $1,500,000. The expansion will be funded through a mix of new debt and equity. The management team needs to determine their Cost of Debt, Cost of Equity, and the Weighted Average Cost of Capital (WACC) to evaluate the project's viability against their hurdle rate.",
+  "brief": "Given a set of financial parameters (risk-free rate of 4.5%, beta of 1.2, market risk premium of 6%, cost of debt of 7%, tax rate of 21%, and a target debt-to-equity ratio of 40/60), calculate the Cost of Equity using CAPM, the after-tax Cost of Debt, and the Weighted Average Cost of Capital (WACC). Provide a recommendation on whether to proceed with the expansion.",
+  "deliverables": [
+    "Step-by-step CAPM calculation for the Cost of Equity.",
+    "Calculation of the after-tax Cost of Debt.",
+    "WACC calculation table and formula breakdown.",
+    "A brief investment recommendation (max 250 words) comparing WACC to the project's expected return of 9.5%."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Present your calculations clearly in Markdown tables. Show your working for each formula. Explain the financial logic behind why the tax shield reduces the effective cost of debt.",
+  "rubric": [
+    {
+      "key": "wacc_formula",
+      "label": "WACC Formula Execution",
+      "description": "Are all inputs (weights, rates, tax rate) applied correctly to calculate WACC?",
+      "weight": 40
+    },
+    {
+      "key": "cost_equity",
+      "label": "Cost of Equity Calculation",
+      "description": "Is the CAPM equation executed correctly with the provided inputs?",
+      "weight": 30
+    },
+    {
+      "key": "financial_recommendations",
+      "label": "Financial Recommendations",
+      "description": "Is the final recommendation logically sound and compared appropriately against the hurdle rate?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Cost of Capital calculation",
+    "CAPM modeling",
+    "WACC analysis",
+    "Financial decision-making"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

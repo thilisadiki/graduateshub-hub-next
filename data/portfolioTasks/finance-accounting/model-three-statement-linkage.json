@@ -1,0 +1,48 @@
+{
+  "id": "model-three-statement-linkage",
+  "categoryId": "finance-accounting",
+  "topicId": "financial-modelling-valuation",
+  "level": "intermediate",
+  "title": "Three-Statement Model Linkage",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Explain and diagram how the three financial statements connect.",
+  "scenario": "A finance graduate is asked in an interview: \"Walk me through how the three financial statements link together. If revenue increases by R1M, what happens on each statement?\" She freezes. Do not be her.",
+  "brief": "Explain the linkages between the income statement, balance sheet, and cash flow statement. Use a concrete example (R1M revenue increase) to trace the impact through all three statements.",
+  "deliverables": [
+    "A diagram showing the key linkages between the three statements (which line items feed where)",
+    "A walkthrough of the R1M revenue increase: impact on IS → BS → CFS, assuming 30% tax and 60-day debtors",
+    "Three common modelling errors that break the linkage (e.g., depreciation mismatch) and how to prevent each"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Revenue on the IS increases net income, which flows to retained earnings on the BS. But if the sale is on credit, cash does not increase until the debtor pays. The CFS bridges this gap. Show the full chain.",
+  "rubric": [
+    {
+      "key": "diagram",
+      "label": "Linkage Diagram",
+      "description": "Is the diagram accurate and showing the key connections?",
+      "weight": 25
+    },
+    {
+      "key": "walkthrough",
+      "label": "Revenue Walkthrough",
+      "description": "Is the R1M revenue traced correctly through all three statements?",
+      "weight": 40
+    },
+    {
+      "key": "errors",
+      "label": "Modelling Errors",
+      "description": "Are the 3 common errors realistic and the prevention advice practical?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Three-statement models",
+    "Financial statement linkages",
+    "Financial modelling",
+    "Accounting logic"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

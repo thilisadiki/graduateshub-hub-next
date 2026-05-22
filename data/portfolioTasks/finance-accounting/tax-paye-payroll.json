@@ -1,0 +1,54 @@
+{
+  "id": "tax-paye-payroll",
+  "categoryId": "finance-accounting",
+  "topicId": "tax-compliance-sa",
+  "level": "intermediate",
+  "title": "PAYE and Payroll Tax Compliance",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Calculate PAYE, UIF, and SDL for 5 employees at different salary levels.",
+  "scenario": "A small business has 5 employees with annual salaries of R120K, R250K, R420K, R650K, and R1.2M. The bookkeeper resigned and you need to calculate the monthly payroll tax obligations.",
+  "brief": "Calculate the monthly PAYE (using current SA tax tables), UIF (employee and employer contributions), and SDL for each employee. Show the total employer cost and total payable to SARS.",
+  "deliverables": [
+    "A payroll summary table: Employee, Gross Monthly, PAYE, UIF (Employee), UIF (Employer), SDL, Net Pay",
+    "The total monthly SARS payment (PAYE + UIF + SDL combined)",
+    "A note explaining the difference between employee deductions and employer contributions"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Use the current SA tax brackets. UIF is 1% employee + 1% employer (capped). SDL is 1% of total payroll. Show you know these rates.",
+  "rubric": [
+    {
+      "key": "paye",
+      "label": "PAYE Calculation",
+      "description": "Is PAYE correctly calculated using the progressive tax table?",
+      "weight": 35
+    },
+    {
+      "key": "uif-sdl",
+      "label": "UIF and SDL",
+      "description": "Are UIF and SDL correctly calculated with the right rates and caps?",
+      "weight": 30
+    },
+    {
+      "key": "presentation",
+      "label": "Payroll Presentation",
+      "description": "Is the summary clear enough for the business owner to understand total cost?",
+      "weight": 20
+    },
+    {
+      "key": "distinction",
+      "label": "Employee vs Employer",
+      "description": "Is the distinction between deductions and contributions clear?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "PAYE",
+    "UIF",
+    "SDL",
+    "Payroll tax compliance"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

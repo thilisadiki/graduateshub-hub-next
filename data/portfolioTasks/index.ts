@@ -2,7 +2,6 @@ import type { PortfolioTask, PortfolioLevel } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
-import { financeAccountingTasks } from './financeAccounting';
 import { designUxTasks } from './designUx';
 import { businessAnalysisTasks } from './businessAnalysis';
 import { customerOpsTasks } from './customerOps';
@@ -27,6 +26,7 @@ const WEB_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/web-developmen
 const SOFT_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/software-development');
 const DATA_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/data-analysis');
 const DIGITAL_MARKETING_DIR = path.join(process.cwd(), 'data/portfolioTasks/digital-marketing');
+const FINANCE_ACCOUNTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/finance-accounting');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -104,11 +104,30 @@ function loadDigitalMarketingTasks(): PortfolioTask[] {
   }
 }
 
+function loadFinanceAccountingTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(FINANCE_ACCOUNTING_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(FINANCE_ACCOUNTING_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(FINANCE_ACCOUNTING_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load finance and accounting tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
   ...loadDigitalMarketingTasks(),
   ...loadSoftDevTasks(),
   ...loadDataAnalysisTasks(),
-  ...financeAccountingTasks,
+  ...loadFinanceAccountingTasks(),
   ...designUxTasks,
   ...loadWebDevTasks(),
   ...businessAnalysisTasks,

@@ -1,0 +1,48 @@
+{
+  "id": "fin-statements-income-interpret",
+  "categoryId": "finance-accounting",
+  "topicId": "financial-statements-reporting",
+  "level": "beginner",
+  "title": "Read and Interpret an Income Statement",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Extract key insights from a fictional income statement for a non-finance manager.",
+  "scenario": "The operations manager asks you: \"I got this income statement from finance. Revenue went up but profit went down. How is that possible?\" She needs a plain English explanation.",
+  "brief": "Invent a plausible 2-year income statement where revenue grows 15% but net profit declines 10%. Then write a memo explaining what happened to a non-finance manager.",
+  "deliverables": [
+    "A 2-year income statement (Revenue, COGS, Gross Profit, Operating Expenses, EBIT, Interest, Tax, Net Profit)",
+    "A memo (max 200 words) explaining in plain English why profit fell despite revenue growth",
+    "The one line item you would investigate first and what question you would ask the finance team"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The income statement must be internally consistent. If COGS grew faster than revenue, that is a margin squeeze — explain it in terms the ops manager understands.",
+  "rubric": [
+    {
+      "key": "statement",
+      "label": "Statement Construction",
+      "description": "Is the income statement internally consistent and plausible?",
+      "weight": 25
+    },
+    {
+      "key": "explanation",
+      "label": "Plain English Explanation",
+      "description": "Would a non-finance manager actually understand this memo?",
+      "weight": 40
+    },
+    {
+      "key": "investigation",
+      "label": "Follow-Up Question",
+      "description": "Is the investigation question specific and analytically sound?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Income statement interpretation",
+    "Financial communication",
+    "Business acumen",
+    "Analytical thinking"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "sme-chart-accounts-double-entry",
+  "categoryId": "finance-accounting",
+  "topicId": "sme-bookkeeping-cloud-accounting",
+  "level": "beginner",
+  "title": "Set Up a Chart of Accounts and Process Basic Transactions",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Configure a customized Chart of Accounts and record double-entry transactions for a freelancer.",
+  "scenario": "A freelance graphic designer wants to move from Excel spreadsheets to cloud accounting software. They need a custom Chart of Accounts set up and their first month of business transactions processed.",
+  "brief": "Create a custom Chart of Accounts tailored for a service-based freelancer. Record a list of 10 initial transactions (including capital injection, equipment purchase, client invoicing, and bank expenses) using double-entry ledger format (debits and credits).",
+  "deliverables": [
+    "Custom Chart of Accounts list categorized by Assets, Liabilities, Equity, Revenue, and Expenses.",
+    "General Journal entries for the 10 listed transactions with correct debit/credit allocations.",
+    "A simple initial Trial Balance as of the end of the month."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Format your journal entries in clear tables. Ensure all debits equal credits and explain the ledger mapping logic.",
+  "rubric": [
+    {
+      "key": "chart_design",
+      "label": "Chart of Accounts Design",
+      "description": "Is the Chart of Accounts logically organized and tailored for a freelancer?",
+      "weight": 30
+    },
+    {
+      "key": "double_entry",
+      "label": "Double-Entry Accuracy",
+      "description": "Are debits and credits mathematically correct and conceptually accurate for all 10 transactions?",
+      "weight": 35
+    },
+    {
+      "key": "trial_balance",
+      "label": "Trial Balance Integrity",
+      "description": "Does the Trial Balance balance correctly and trace accurately from the journal entries?",
+      "weight": 20
+    },
+    {
+      "key": "documentation",
+      "label": "Bookkeeping Notes",
+      "description": "Are the explanation notes clear, professional, and explain basic accounting concepts well?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Double-entry bookkeeping",
+    "Chart of Accounts setup",
+    "Journal entry parsing",
+    "Trial balance preparation"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}
