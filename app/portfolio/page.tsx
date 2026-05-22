@@ -66,13 +66,13 @@ export default function PortfolioLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FFF8F1]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
+      <div className="bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#7A5900]/20 border border-[#FFDF9C]/30 text-[#FFDF9C] font-bold text-xs uppercase tracking-wider mb-6">
             <Sparkles size={12} className="text-yellow-400" />
@@ -82,10 +82,10 @@ export default function PortfolioLandingPage() {
             Most graduates have a CV.
             <br className="hidden sm:block" /> Very few have a portfolio.
           </h1>
-          <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#D1C5B4] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Pick a category. Pick a difficulty. Submit a practical task graded against a public rubric. Earn a Badge of Competence you can link straight from your LinkedIn.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm text-slate-400">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm text-[#7C7061]">
             {[
               `${totalTasks} tasks across ${totalCategories} categories`,
               '3 difficulty levels per topic',
@@ -118,8 +118,8 @@ export default function PortfolioLandingPage() {
         {/* Categories */}
         <section id="categories">
           <div className="mb-10">
-            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Choose a Category</h2>
-            <p className="text-gray-500">Each category has topics, and each topic has up to three levels to choose from.</p>
+            <h2 className="text-2xl font-extrabold text-[#1F1B13] mb-2">Choose a Category</h2>
+            <p className="text-[#4F4639]">Each category has topics, and each topic has up to three levels to choose from.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {portfolioCategories.map((cat) => {
@@ -130,15 +130,15 @@ export default function PortfolioLandingPage() {
                 <Link
                   key={cat.id}
                   href={`/portfolio/${cat.id}`}
-                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all flex flex-col overflow-hidden"
+                  className="group bg-white rounded-2xl border border-[#D1C5B4] shadow-sm hover:shadow-md hover:border-[#7C7061] transition-all flex flex-col overflow-hidden"
                 >
                   <div className={`h-1.5 bg-gradient-to-r ${cat.accentFrom} ${cat.accentTo}`} />
                   <div className="p-6 flex flex-col flex-1 gap-3">
-                    <h3 className="text-lg font-black text-gray-900 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-black text-[#1F1B13] group-hover:text-primary transition-colors">
                       {cat.name}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{cat.tagline}</p>
-                    <div className="flex items-center gap-4 text-xs text-gray-500 mt-auto pt-3 border-t border-gray-100">
+                    <p className="text-sm text-[#4F4639] leading-relaxed">{cat.tagline}</p>
+                    <div className="flex items-center gap-4 text-xs text-[#7C7061] mt-auto pt-3 border-t border-[#D1C5B4]">
                       <span>{topicsInCat.length} {topicsInCat.length === 1 ? 'topic' : 'topics'}</span>
                       <span>{available} {available === 1 ? 'task' : 'tasks'} available</span>
                     </div>
@@ -155,12 +155,12 @@ export default function PortfolioLandingPage() {
         {/* How it works */}
         <section id="how-it-works">
           <div className="mb-10">
-            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">How It Works</h2>
-            <p className="text-gray-500">Three steps from brief to Badge.</p>
+            <h2 className="text-2xl font-extrabold text-[#1F1B13] mb-2">How It Works</h2>
+            <p className="text-[#4F4639]">Three steps from brief to Badge.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {steps.map(({ step, icon: Icon, title, body }) => (
-              <div key={step} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4">
+              <div key={step} className="bg-white rounded-2xl border border-[#D1C5B4] shadow-sm p-6 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-primary text-white font-black text-lg flex items-center justify-center shrink-0">
                     {step}
@@ -168,8 +168,8 @@ export default function PortfolioLandingPage() {
                   <Icon size={22} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">{title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+                  <h3 className="font-bold text-[#1F1B13] text-lg mb-2">{title}</h3>
+                  <p className="text-[#4F4639] text-sm leading-relaxed">{body}</p>
                 </div>
               </div>
             ))}
@@ -184,27 +184,27 @@ export default function PortfolioLandingPage() {
                 <Share2 size={18} className="text-[#5a4000]" />
                 <span className="text-xs font-bold uppercase tracking-wider text-[#5a4000]">LinkedIn-ready</span>
               </div>
-              <h2 className="text-2xl font-extrabold text-gray-900 mb-3">What the Badge looks like</h2>
-              <p className="text-gray-600 leading-relaxed text-[15px] mb-4">
+              <h2 className="text-2xl font-extrabold text-[#1F1B13] mb-3">What the Badge looks like</h2>
+              <p className="text-[#4F4639] leading-relaxed text-[15px] mb-4">
                 Every Badge lives at a unique public URL. It shows your name, the task, your submission, your rubric scores, and a short evaluation summary. Share it directly from your LinkedIn profile or a job application, and any hiring manager can verify it with one click.
               </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-[#4F4639] text-sm leading-relaxed">
                 Badges show they are reviewed by Google Gemini. We believe in being honest about that, because trust matters more than the illusion of human review.
               </p>
             </div>
             <div className="flex-1 w-full">
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6">
+              <div className="bg-white rounded-2xl border border-[#D1C5B4] shadow-lg p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Award size={18} className="text-primary" />
                   <span className="text-xs font-bold uppercase tracking-wider text-primary">Badge of Competence</span>
                 </div>
-                <div className="text-lg font-black text-gray-900 mb-1">Social Media Audit for a Local Coffee Shop</div>
-                <div className="text-sm text-gray-500 mb-4">Awarded to Jane Mokoena, April 2026</div>
+                <div className="text-lg font-black text-[#1F1B13] mb-1">Social Media Audit for a Local Coffee Shop</div>
+                <div className="text-sm text-[#7C7061] mb-4">Awarded to Jane Mokoena, April 2026</div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="text-3xl font-black text-emerald-600">82<span className="text-lg text-gray-400">/100</span></div>
+                  <div className="text-3xl font-black text-emerald-600">82<span className="text-lg text-[#7C7061]">/100</span></div>
                   <div className="text-xs font-bold px-2 py-1 rounded-full bg-emerald-100 text-emerald-700">Pass with Distinction</div>
                 </div>
-                <div className="text-xs text-gray-500 border-t border-gray-100 pt-3">
+                <div className="text-xs text-[#7C7061] border-t border-[#D1C5B4] pt-3">
                   Graded by rubric. Full evaluation, submission text, and scores are public at the Badge URL.
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function PortfolioLandingPage() {
 
         {/* Why it matters */}
         <section>
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-8">Why a Proof of Work Portfolio?</h2>
+          <h2 className="text-2xl font-extrabold text-[#1F1B13] mb-8">Why a Proof of Work Portfolio?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: 'Proof beats claims', body: 'Saying "I know digital marketing" on a CV is forgettable. Linking a graded social media audit is not.' },
@@ -222,13 +222,13 @@ export default function PortfolioLandingPage() {
               { title: 'Built for entry-level', body: 'Tasks are scoped for graduates and career changers. No prior work history required.' },
               { title: 'Fair, transparent grading', body: 'Every task publishes its rubric before you submit. Your score breaks down criterion-by-criterion so you know exactly where you stood out.' },
             ].map(({ title, body }) => (
-              <div key={title} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0">
+              <div key={title} className="bg-white rounded-2xl border border-[#D1C5B4] shadow-sm p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#CCECC8]/50 flex items-center justify-center shrink-0">
                   <ShieldCheck size={20} className="text-emerald-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+                  <h3 className="font-bold text-[#1F1B13] mb-2">{title}</h3>
+                  <p className="text-[#4F4639] text-sm leading-relaxed">{body}</p>
                 </div>
               </div>
             ))}

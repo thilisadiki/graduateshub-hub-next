@@ -7,8 +7,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Build, style, and polish real web pages.',
     description:
       'Practical front-end tasks: rebuilding layouts from a screenshot, improving accessibility, and handling responsive behaviour the way a junior front-end developer is expected to.',
-    accentFrom: 'from-sky-500',
-    accentTo: 'to-blue-500',
+    accentFrom: 'from-[#7A5900]',
+    accentTo: 'to-[#FFDF9C]',
   },
   {
     id: 'software-development',
@@ -16,8 +16,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Debug, design, and reason about working software.',
     description:
       'Programming-focused tasks: finding and fixing bugs, designing small APIs, writing clean specs, and thinking about edge cases the way a working engineer does.',
-    accentFrom: 'from-indigo-500',
-    accentTo: 'to-violet-500',
+    accentFrom: 'from-[#6C5D3F]',
+    accentTo: 'to-[#F5E0BB]',
   },
   {
     id: 'data',
@@ -25,8 +25,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Turn messy data into decisions.',
     description:
       'Analytics tasks: cleaning real-world data, choosing the right chart, writing insight memos, and defending your metric choices to a non-technical stakeholder.',
-    accentFrom: 'from-emerald-500',
-    accentTo: 'to-teal-500',
+    accentFrom: 'from-[#4B6649]',
+    accentTo: 'to-[#CCECC8]',
   },
   {
     id: 'digital-marketing',
@@ -34,8 +34,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Plan campaigns, experiments, and content that actually ship.',
     description:
       'Marketing briefs grounded in real businesses: social media audits, email A/B tests, content calendars, and ad copy experiments.',
-    accentFrom: 'from-pink-500',
-    accentTo: 'to-rose-500',
+    accentFrom: 'from-[#7A5900]',
+    accentTo: 'to-[#FFDF9C]',
   },
   {
     id: 'finance-accounting',
@@ -43,8 +43,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Build financial thinking, not just formulas.',
     description:
       'Cash flow forecasts, ratio analysis, and financial memos tied to realistic South African SME scenarios. Interpretation and judgment matter more than calculation.',
-    accentFrom: 'from-amber-500',
-    accentTo: 'to-orange-500',
+    accentFrom: 'from-[#6C5D3F]',
+    accentTo: 'to-[#F5E0BB]',
   },
   {
     id: 'design-ux',
@@ -52,8 +52,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Critique, prototype, and defend your design decisions.',
     description:
       'Hands-on UX tasks: teardowns of real local sites, rebuilding design handoffs, and prioritising fixes with a product lens.',
-    accentFrom: 'from-violet-500',
-    accentTo: 'to-fuchsia-500',
+    accentFrom: 'from-[#4B6649]',
+    accentTo: 'to-[#CCECC8]',
   },
   {
     id: 'business-analysis',
@@ -61,8 +61,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Turn vague problems into crisp specs.',
     description:
       'Requirements documents, stakeholder maps, and process improvement briefs. How a BA translates ambiguity into something a team can actually build.',
-    accentFrom: 'from-slate-500',
-    accentTo: 'to-slate-700',
+    accentFrom: 'from-[#7A5900]',
+    accentTo: 'to-[#FFDF9C]',
   },
   {
     id: 'customer-ops',
@@ -70,8 +70,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Run the unglamorous things that keep a business alive.',
     description:
       'Support triage, standard operating procedure write-ups, and critiquing customer-facing policies. Roles that rarely have portfolios but should.',
-    accentFrom: 'from-cyan-500',
-    accentTo: 'to-teal-500',
+    accentFrom: 'from-[#4B6649]',
+    accentTo: 'to-[#CCECC8]',
   },
   {
     id: 'it',
@@ -79,8 +79,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Document the network, run the helpdesk, ship the policy.',
     description:
       'Practical IT support and service management tasks: home labs, ITIL-aligned ticket logs, troubleshooting flows, and the policy work that real corporate IT teams produce.',
-    accentFrom: 'from-blue-500',
-    accentTo: 'to-indigo-500',
+    accentFrom: 'from-[#6C5D3F]',
+    accentTo: 'to-[#F5E0BB]',
   },
   {
     id: 'ai-prompting',
@@ -88,8 +88,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     tagline: 'Work with AI the way modern teams are starting to.',
     description:
       'Prompt rewrites, AI evaluation rubrics, and agent flow designs. The emerging skillset every role will touch in the next few years.',
-    accentFrom: 'from-fuchsia-500',
-    accentTo: 'to-purple-600',
+    accentFrom: 'from-[#7A5900]',
+    accentTo: 'to-[#FFDF9C]',
   },
 ];
 
