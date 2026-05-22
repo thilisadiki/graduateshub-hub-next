@@ -1,0 +1,46 @@
+{
+  "id": "ai-support-bot-persona",
+  "categoryId": "ai-prompting",
+  "topicId": "system-prompts-persona",
+  "level": "beginner",
+  "title": "Write a Support Bot Persona",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write the system prompt for a chatbot that handles returns for a sneaker brand.",
+  "scenario": "A streetwear brand in Johannesburg is launching an AI chatbot to handle basic return queries. They want the bot to sound \"cool, respectful, and helpful\" but absolutely NOT use slang that feels forced or cringey. If it doesn't know the answer, it must escalate to a human.",
+  "brief": "Write the System Prompt that will govern the chatbot's behaviour.",
+  "deliverables": [
+    "The core persona definition (Who is the bot? What is its goal?)",
+    "Tone guidelines (What to do, and explicitly what NOT to do regarding slang)",
+    "The \"Escalation Trigger\" instructions (exactly how and when to tell the user they are being transferred to a human)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "System prompts live behind the scenes and dictate the \"soul\" of the AI. Use strong, imperative verbs (\"You are...\", \"You must never...\"). Give the AI examples of good vs. bad tone.",
+  "rubric": [
+    {
+      "key": "persona",
+      "label": "Persona Consistency",
+      "description": "Is the persona clear, brand-appropriate, and not cringey?",
+      "weight": 35
+    },
+    {
+      "key": "boundaries",
+      "label": "Tone Boundaries",
+      "description": "Are there explicit negative constraints on how *not* to speak?",
+      "weight": 35
+    },
+    {
+      "key": "escalation",
+      "label": "Safe Escalation",
+      "description": "Are the rules for handing off to a human strict and clear?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Persona design",
+    "System prompting",
+    "Brand voice",
+    "AI safety boundaries"
+  ],
+  "relatedRoadmapIds": []
+}

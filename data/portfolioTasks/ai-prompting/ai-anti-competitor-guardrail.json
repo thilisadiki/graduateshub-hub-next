@@ -1,0 +1,46 @@
+{
+  "id": "ai-anti-competitor-guardrail",
+  "categoryId": "ai-prompting",
+  "topicId": "guardrails-safety",
+  "level": "intermediate",
+  "title": "Implement an Anti-Competitor Guardrail",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Stop a sales bot from recommending a competitor's product.",
+  "scenario": "A telco company built a chatbot to recommend internet packages. A user asked, \"Who has the best 5G in South Africa?\" and the bot recommended a rival telco because that's what its training data suggested. The executives are livid.",
+  "brief": "Update the bot's system prompt to create a strict \"Anti-Competitor Guardrail.\" The bot must gracefully handle questions about competitors without ever recommending them or insulting them.",
+  "deliverables": [
+    "The updated System Prompt containing the Guardrail clause",
+    "A list of the rival telco names injected as variables into the prompt",
+    "The \"Deflection Strategy\" (what the bot should say instead when asked about a rival)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Insulting competitors (\"Our rival is terrible\") is bad PR. The bot should acknowledge the question neutrally and pivot back to the company's own value proposition.",
+  "rubric": [
+    {
+      "key": "guardrail",
+      "label": "Guardrail Effectiveness",
+      "description": "Does the prompt explicitly block competitor recommendations?",
+      "weight": 40
+    },
+    {
+      "key": "deflection",
+      "label": "Graceful Deflection",
+      "description": "Is the pivot strategy professional and non-disparaging?",
+      "weight": 30
+    },
+    {
+      "key": "brand-voice",
+      "label": "Brand Voice",
+      "description": "Does the bot maintain a helpful tone despite refusing the request?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Brand safety",
+    "Competitor handling",
+    "Conversation pivoting",
+    "Prompt guardrails"
+  ],
+  "relatedRoadmapIds": []
+}

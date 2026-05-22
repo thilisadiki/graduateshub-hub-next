@@ -1,0 +1,46 @@
+{
+  "id": "ai-policy-conflict-resolver",
+  "categoryId": "ai-prompting",
+  "topicId": "chain-of-thought-reasoning",
+  "level": "intermediate",
+  "title": "Resolve Policy Conflicts",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Prompt an AI to navigate two conflicting company policies to make a decision.",
+  "scenario": "An airline has two policies: 1) \"No refunds on basic economy tickets.\" 2) \"Full refunds for passengers experiencing documented medical emergencies.\" A customer with a basic economy ticket submits a doctor's note. If you just ask the AI \"Should we refund?\", it might hallucinate or pick randomly.",
+  "brief": "Write a prompt that forces the AI to evaluate the customer's request against Policy 1, then Policy 2, identify the conflict, and apply a tie-breaking rule (which you must define in the prompt).",
+  "deliverables": [
+    "The prompt containing the two policies and the tie-breaking rule",
+    "The step-by-step reasoning structure you are forcing the AI to output (e.g., \"Step 1: Does Policy A apply? Step 2: Does Policy B apply? Step 3: Conflict Resolution\")",
+    "The simulated output from the AI showing it following your logic"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Complex business logic requires strict guardrails. Do not let the AI decide what is fair. Give it a framework for evaluating facts against rules.",
+  "rubric": [
+    {
+      "key": "framework",
+      "label": "Evaluation Framework",
+      "description": "Does the prompt provide a clear, step-by-step framework for policy evaluation?",
+      "weight": 40
+    },
+    {
+      "key": "tie-breaker",
+      "label": "Tie-Breaker Logic",
+      "description": "Is the tie-breaking rule explicit and logical?",
+      "weight": 30
+    },
+    {
+      "key": "simulated-output",
+      "label": "Output Adherence",
+      "description": "Does the simulated output strictly follow the requested structure?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Logic branching",
+    "Policy evaluation",
+    "Structured reasoning",
+    "Prompt guardrails"
+  ],
+  "relatedRoadmapIds": []
+}

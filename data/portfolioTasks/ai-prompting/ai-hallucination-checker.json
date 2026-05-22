@@ -1,0 +1,46 @@
+{
+  "id": "ai-hallucination-checker",
+  "categoryId": "ai-prompting",
+  "topicId": "chain-of-thought-reasoning",
+  "level": "advanced",
+  "title": "Build a Hallucination Checker",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Create a prompt that reviews another AI's output and flags invented facts.",
+  "scenario": "A news aggregator is using AI to summarise financial articles. Sometimes the AI invents numbers (hallucinates). You need to build a \"Reviewer AI\" prompt whose only job is to read the Source Article and the AI Summary, and flag any claims in the summary that are not explicitly stated in the source.",
+  "brief": "Design an advanced \"Fact-Checking\" prompt. It must break down the summary into individual claims, search for evidence in the source text, and output a strict \"Supported\" or \"Hallucinated\" verdict for each claim.",
+  "deliverables": [
+    "The Fact-Checking System Prompt",
+    "The specific Chain of Thought instructions (e.g., \"Extract Claim 1 -> Quote source text -> Verdict\")",
+    "A short test case (Source Text + Flawed Summary) to demonstrate how the prompt catches a hallucination"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Verification is easier for LLMs than generation. By explicitly forcing the model to quote the source text *before* giving a verdict, you drastically reduce its tendency to rubber-stamp bad summaries.",
+  "rubric": [
+    {
+      "key": "claim-extraction",
+      "label": "Claim Breakdown",
+      "description": "Does the prompt force the AI to evaluate claims individually rather than holistically?",
+      "weight": 35
+    },
+    {
+      "key": "evidence-forcing",
+      "label": "Evidence Quoting",
+      "description": "Must the AI explicitly quote the source text before rendering a verdict?",
+      "weight": 40
+    },
+    {
+      "key": "test-case",
+      "label": "Test Case Quality",
+      "description": "Does the provided test case effectively demonstrate a subtle hallucination?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Hallucination mitigation",
+    "LLM-as-a-judge",
+    "Fact-checking workflows",
+    "Prompt engineering"
+  ],
+  "relatedRoadmapIds": []
+}

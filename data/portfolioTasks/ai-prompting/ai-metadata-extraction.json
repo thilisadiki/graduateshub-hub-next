@@ -1,0 +1,46 @@
+{
+  "id": "ai-metadata-extraction",
+  "categoryId": "ai-prompting",
+  "topicId": "rag-prep",
+  "level": "intermediate",
+  "title": "Prompt for Metadata Extraction",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Extract tags from documents to improve RAG search filtering.",
+  "scenario": "Your RAG system is returning bad results because it relies entirely on vector similarity. A search for \"2024 budget\" is returning the \"2022 budget\" because the words are similar. You need to extract metadata (Year, Department, DocType) from every document *before* embedding so you can use hard filters.",
+  "brief": "Write the LLM prompt that will process raw document text and output a strict JSON block of metadata for the vector database.",
+  "deliverables": [
+    "The Metadata Extraction Prompt",
+    "The JSON Schema required (Year, Department, DocType, Summary)",
+    "A fallback instruction (what the AI should do if the Year is not mentioned in the text)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Hybrid search (Vector Similarity + Metadata Filtering) is the industry standard for RAG. Your prompt must be robust enough to handle documents that are missing information without hallucinating dates.",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Schema Enforcement",
+      "description": "Does the prompt clearly define the JSON structure and allowed values?",
+      "weight": 35
+    },
+    {
+      "key": "fallback",
+      "label": "Hallucination Prevention",
+      "description": "Are there strict instructions (e.g., \"return null\") if data is missing?",
+      "weight": 35
+    },
+    {
+      "key": "usefulness",
+      "label": "Metadata Utility",
+      "description": "Are the extracted fields actually useful for filtering a database?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Metadata extraction",
+    "Hybrid search prep",
+    "JSON prompting",
+    "RAG architecture"
+  ],
+  "relatedRoadmapIds": []
+}

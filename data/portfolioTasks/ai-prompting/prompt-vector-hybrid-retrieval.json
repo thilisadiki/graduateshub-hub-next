@@ -1,0 +1,48 @@
+{
+  "id": "prompt-vector-hybrid-retrieval",
+  "categoryId": "ai-prompting",
+  "topicId": "prompting-vector-databases",
+  "level": "advanced",
+  "title": "Hybrid Retrieval Prompt Orchestration Framework",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 hours",
+  "tagline": "Build an orchestration prompt chain that filters, reranks, and ground-answers search results.",
+  "scenario": "A global fintech company is building a customer support assistant. The assistant retrieves data from a vector database of help documents. However, raw search results can contain irrelevant or outdated information, causing hallucinations. You need to build a comprehensive RAG prompting workflow that evaluates retrieved document relevance, reranks documents, runs compliance filters, and generates a grounded response.",
+  "brief": "Create an advanced prompt system that orchestrates RAG context ingestion, document relevance filtering, cross-document consolidation, and final grounded answer generation with inline citations.",
+  "deliverables": [
+    "A complete orchestration prompt template containing system instructions, context variables, formatting blocks, and guardrail rules.",
+    "A document-filtering validation instruction to classify retrieved documents as \"relevant\" or \"irrelevant\" based on the user question.",
+    "A detailed hallucination mitigation prompt strategy that forces the LLM to only answer using retrieved facts and cite sources.",
+    "An optimization analysis proposing token cost management, handling larger document payloads, and mitigating prompt drift."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Document the complete prompting architecture in Markdown. Provide detailed system instructions and explain the formatting variables and guardrails with code examples.",
+  "rubric": [
+    {
+      "key": "hallucination_mitigation",
+      "label": "Hallucination Mitigation",
+      "description": "Does the system prompt enforce strict grounding, and prevent answering when facts are missing?",
+      "weight": 35
+    },
+    {
+      "key": "prompt_chaining_logic",
+      "label": "Prompt Chain Orchestration",
+      "description": "Is the sequence of filtering, citation-mapping, and answering logical and cohesive?",
+      "weight": 35
+    },
+    {
+      "key": "token_cost_optimization",
+      "label": "Token & Cost Management",
+      "description": "Does the architecture present viable strategies for managing token cost and window limitations?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "RAG architecture design",
+    "Hallucination mitigation",
+    "Source citation prompting",
+    "Context engineering",
+    "Token optimization"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ai-extract-invoice-json",
+  "categoryId": "ai-prompting",
+  "topicId": "output-formatting-extraction",
+  "level": "beginner",
+  "title": "Extract Invoice Data to JSON",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a prompt that forces an LLM to read a messy email and output valid JSON.",
+  "scenario": "A finance ops team receives vendor invoices in the body of emails (often messy, unstructured text). They want to use an LLM to read the email and extract the Vendor Name, Total Amount, and Date into a strict JSON format so it can be sent to their database via API.",
+  "brief": "Write a prompt that takes an unstructured email and guarantees the output is *only* a valid JSON object, with no conversational filler like \"Here is your JSON:\".",
+  "deliverables": [
+    "The extraction prompt",
+    "The JSON schema/structure you are instructing the AI to use",
+    "A technique used in the prompt to prevent \"chatty\" preamble (e.g., forcing it to start with `{`)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "If an LLM outputs \"Sure, here is the JSON: { ... }\", it breaks the API. Your prompt must use aggressive constraints to forbid all text outside the JSON block. Providing a TypeScript interface or exact JSON template in the prompt helps immensely.",
+  "rubric": [
+    {
+      "key": "json-schema",
+      "label": "Schema Clarity",
+      "description": "Is the required JSON structure clearly defined in the prompt?",
+      "weight": 35
+    },
+    {
+      "key": "strictness",
+      "label": "Formatting Strictness",
+      "description": "Does the prompt aggressively forbid conversational preamble/postamble?",
+      "weight": 40
+    },
+    {
+      "key": "accuracy",
+      "label": "Extraction Instructions",
+      "description": "Are the instructions clear on what to do if a field (like Date) is missing?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "JSON extraction",
+    "Format constraints",
+    "Data parsing",
+    "Zero-shot formatting"
+  ],
+  "relatedRoadmapIds": []
+}

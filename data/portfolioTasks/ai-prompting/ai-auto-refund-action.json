@@ -1,0 +1,46 @@
+{
+  "id": "ai-auto-refund-action",
+  "categoryId": "ai-prompting",
+  "topicId": "workflow-integration",
+  "level": "advanced",
+  "title": "Design an Auto-Refund Action",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a high-risk workflow where an LLM is allowed to execute actual refunds via API.",
+  "scenario": "An e-commerce company wants to let their AI support bot issue refunds via the Stripe API for orders under R500, but only if the package is proven lost by the courier API. This is high risk. If the AI hallucinates, it costs the company money.",
+  "brief": "Design the secure, multi-step workflow required to safely allow an AI to trigger a financial transaction.",
+  "deliverables": [
+    "The architecture flow: User Query -> AI Intent -> Courier API Check -> Rule Evaluation -> Stripe API Action",
+    "The \"Rules Engine\" prompt (the separate prompt that evaluates the courier data against the R500 rule before approving the action)",
+    "The fail-safe mechanisms (What happens if the courier API is down? What if the order is R501?)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Never let one LLM prompt handle user intent and financial execution simultaneously. You must design a deterministic rules engine (or a separate strict LLM judge) to authorize the transaction.",
+  "rubric": [
+    {
+      "key": "architecture",
+      "label": "Secure Architecture",
+      "description": "Does the workflow separate user interaction from financial execution?",
+      "weight": 40
+    },
+    {
+      "key": "rules-engine",
+      "label": "Rules Engine Rigor",
+      "description": "Is the rule evaluation prompt strict, mathematical, and hallucination-resistant?",
+      "weight": 30
+    },
+    {
+      "key": "fail-safes",
+      "label": "Fail-Safe Design",
+      "description": "Are all API failure states and policy edge cases safely caught and escalated?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Workflow architecture",
+    "High-risk automation",
+    "Fail-safe design",
+    "Deterministic bridging"
+  ],
+  "relatedRoadmapIds": []
+}

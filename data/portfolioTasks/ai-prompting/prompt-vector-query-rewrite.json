@@ -1,0 +1,47 @@
+{
+  "id": "prompt-vector-query-rewrite",
+  "categoryId": "ai-prompting",
+  "topicId": "prompting-vector-databases",
+  "level": "intermediate",
+  "title": "Semantic Query Rewriting for Search Optimization",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Design a query rewriting prompt that maps conversational searches to search terms and filters.",
+  "scenario": "A global e-commerce platform wants to improve search relevance. When a customer types a conversational query like \"find a laptop under $1000 with good battery life\", standard keyword search fails. They want an LLM-based query-rewriter to transform the input into: (1) a clean semantic search string, and (2) structured metadata filter parameters (price limit in USD, product category).",
+  "brief": "Develop a prompt template that acts as a middleware query translation step. It must convert user queries into a structured JSON query object containing refined search terms and vector search filter arguments.",
+  "deliverables": [
+    "System prompt containing the query rewriting rules, classification hierarchy, and target format instructions.",
+    "JSON payload schema definition mapping incoming queries to vector database filter syntax (e.g., Pinecone/Milvus metadata filter syntax).",
+    "Five diverse user queries (ranging from straightforward to vague/conversational) along with the expected rewritten JSON payloads.",
+    "Performance guidelines explaining how to minimize query translation latency and optimize token usage."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Deliver the complete solution in Markdown. Ensure your system prompt is thoroughly documented, and provide the query-to-payload examples in clear JSON blocks.",
+  "rubric": [
+    {
+      "key": "query_rewrite_logic",
+      "label": "Query Rewrite Logic",
+      "description": "Does the prompt correctly separate semantic intent from hard constraints?",
+      "weight": 35
+    },
+    {
+      "key": "metadata_classification",
+      "label": "Filter Classification",
+      "description": "Are filter parameters (price thresholds in USD, category tags) parsed and mapped accurately?",
+      "weight": 35
+    },
+    {
+      "key": "latency_efficiency",
+      "label": "Latency & Token Optimization",
+      "description": "Are token savings and caching guidelines correctly addressed in prompt design?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Query rewriting",
+    "Metadata filtering",
+    "Semantic query expansion",
+    "Vector database search optimization"
+  ],
+  "relatedRoadmapIds": []
+}

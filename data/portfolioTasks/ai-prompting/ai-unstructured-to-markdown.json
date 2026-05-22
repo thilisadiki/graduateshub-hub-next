@@ -1,0 +1,46 @@
+{
+  "id": "ai-unstructured-to-markdown",
+  "categoryId": "ai-prompting",
+  "topicId": "output-formatting-extraction",
+  "level": "intermediate",
+  "title": "Parse Meeting Transcripts to Markdown",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a prompt that turns a 30-page rambling Zoom transcript into a strict Markdown table.",
+  "scenario": "A product team records all their user interviews. The auto-generated transcripts are huge and full of \"um\", \"ah\", and tangents. They want an LLM to read the transcript and extract specific Feature Requests and Bug Reports into a perfectly formatted Markdown table for Notion.",
+  "brief": "Write a prompt that processes a raw transcript and outputs a specific Markdown table structure, discarding all off-topic conversation.",
+  "deliverables": [
+    "The processing prompt",
+    "The strict Markdown table template (Columns: Type, Mentioned By, Quote, Summary)",
+    "Instructions to the AI on how to handle ambiguous statements (e.g., is it a bug or a feature?)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "LLMs can get lazy with long texts and summarize too heavily. You must instruct it to be exhaustive in finding *every* feature/bug, but concise in how it populates the table row.",
+  "rubric": [
+    {
+      "key": "table-format",
+      "label": "Markdown Strictness",
+      "description": "Does the prompt clearly enforce the Markdown table syntax?",
+      "weight": 30
+    },
+    {
+      "key": "extraction",
+      "label": "Signal vs Noise",
+      "description": "Are the instructions clear on how to ignore tangents and focus only on bugs/features?",
+      "weight": 40
+    },
+    {
+      "key": "ambiguity",
+      "label": "Handling Ambiguity",
+      "description": "Does the prompt provide a rule for classifying vague statements?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Markdown formatting",
+    "Data extraction",
+    "Transcript parsing",
+    "Prompt constraints"
+  ],
+  "relatedRoadmapIds": []
+}

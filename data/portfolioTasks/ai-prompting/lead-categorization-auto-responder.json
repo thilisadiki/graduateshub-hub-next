@@ -1,0 +1,54 @@
+{
+  "id": "lead-categorization-auto-responder",
+  "categoryId": "ai-prompting",
+  "topicId": "nocode-ai-automation",
+  "level": "beginner",
+  "title": "Build a Lead Categorization & Auto-Responder Workflow",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Map a workflow logic and write prompts to automate email lead categorization and replies.",
+  "scenario": "A boutique real estate agency receives hundreds of web inquiries daily. Agents spend hours manual-sorting them. The agency manager wants an automated workflow that reads an inquiry, categorizes it by intent (buying, renting, selling), and drafts a contextual email response.",
+  "brief": "Design a step-by-step logic map for a workflow (e.g. using Zapier or Make.com) that triggers on a new form submission. Outline how the payload is structured, the exact system prompt sent to the LLM for categorization and drafting, and the schema output of the LLM.",
+  "deliverables": [
+    "Graphical or markdown flowchart illustrating the workflow steps.",
+    "The detailed LLM prompt used to categorize the lead and draft the response (with variables like {{lead_message}} and {{property_type}}).",
+    "The input/output JSON payload structure mapping fields between the form, the LLM step, and the email sender.",
+    "One safeguard implementation to prevent sending inappropriate AI-generated responses to clients."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Deliver your solution in clean Markdown. Present the prompts clearly with variable placeholders, and describe the input/output schemas as structured JSON blocks.",
+  "rubric": [
+    {
+      "key": "workflow_logic",
+      "label": "Workflow Logic Map",
+      "description": "Is the sequence of events logical, robust, and correctly mapped with variables?",
+      "weight": 30
+    },
+    {
+      "key": "prompt_design",
+      "label": "Prompt Design & Constraints",
+      "description": "Are the prompts well-constructed, descriptive, and enforce classification constraints?",
+      "weight": 30
+    },
+    {
+      "key": "payload_mapping",
+      "label": "Payload Mapping Schema",
+      "description": "Are the input/output JSON payloads between system nodes properly defined and accurate?",
+      "weight": 20
+    },
+    {
+      "key": "safeguards",
+      "label": "Safety Safeguards",
+      "description": "Is there a robust and practical safeguard (e.g., human approval or fallback filters) implemented?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "No-code automation",
+    "Make.com / Zapier integration",
+    "LLM prompt chaining",
+    "API payload mapping",
+    "Error handling & fallbacks"
+  ],
+  "relatedRoadmapIds": []
+}

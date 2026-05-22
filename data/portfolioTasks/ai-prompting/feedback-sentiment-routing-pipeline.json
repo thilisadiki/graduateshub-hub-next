@@ -1,0 +1,55 @@
+{
+  "id": "feedback-sentiment-routing-pipeline",
+  "categoryId": "ai-prompting",
+  "topicId": "nocode-ai-automation",
+  "level": "intermediate",
+  "title": "Multi-Stage Customer Feedback Sentiment & Routing Pipeline",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Design a multi-stage prompt chaining pipeline with JSON outputs and routing logic.",
+  "scenario": "A SaaS company wants to monitor customer support feedback. They need a pipeline that retrieves new reviews, performs sentiment analysis, extracts product features mentioned, runs a secondary prompt to suggest bug-fixes or customer success responses, and routes high-priority complaints to a specific Slack channel.",
+  "brief": "Map out a multi-stage prompt chaining workflow using Zapier/Make and an LLM. Create two chained prompts: Prompt 1 (Sentiment classification, feature extraction, and priority scoring in strict JSON format), and Prompt 2 (Drafting a tailored customer success response or dev bug ticket depending on priority). Detail how you parse the JSON from Prompt 1 to dynamically route the data.",
+  "deliverables": [
+    "Logic diagram showing the path of customer feedback through the workflow (including branching paths based on sentiment/priority).",
+    "Prompt 1 and Prompt 2 templates with variables.",
+    "The exact JSON schema returned by Prompt 1.",
+    "The routing logic configuration (e.g. conditional rules for Slack notifications vs email drafts).",
+    "An error-handling plan detailing what happens if the LLM fails to return valid JSON."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Format your submission in Markdown. Provide clear step-by-step documentation of the flow, prompt definitions, and JSON schemas.",
+  "rubric": [
+    {
+      "key": "prompt_chaining",
+      "label": "Prompt Chaining Design",
+      "description": "Is the data handoff between Prompt 1 and Prompt 2 logical, cohesive, and robust?",
+      "weight": 30
+    },
+    {
+      "key": "json_reliability",
+      "label": "JSON Parsing Reliability",
+      "description": "Does the Prompt 1 structure enforce reliable JSON output with strict key definitions?",
+      "weight": 25
+    },
+    {
+      "key": "routing_logic",
+      "label": "Conditional Routing Logic",
+      "description": "Are the routing paths for support/dev channels well-defined and logical?",
+      "weight": 20
+    },
+    {
+      "key": "error_handling",
+      "label": "Error/Exception Handling",
+      "description": "Is there a robust fallback strategy in case the LLM returns invalid JSON or times out?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "No-code automation",
+    "Make.com / Zapier integration",
+    "LLM prompt chaining",
+    "JSON output formatting",
+    "Conditional routing"
+  ],
+  "relatedRoadmapIds": []
+}

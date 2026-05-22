@@ -1,0 +1,46 @@
+{
+  "id": "ai-synthetic-qa-pairs",
+  "categoryId": "ai-prompting",
+  "topicId": "rag-prep",
+  "level": "advanced",
+  "title": "Generate Synthetic Q&A Pairs",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Improve RAG retrieval by embedding hypothetical questions instead of raw text.",
+  "scenario": "Raw text embeddings often fail because user queries (\"How do I claim overtime?\") don't look like formal handbook text (\"Overtime remuneration is subject to clause 4...\"). To fix this, you want an LLM to read the handbook chunk and generate 3 hypothetical questions a user might ask about it. You will then embed those questions.",
+  "brief": "Write the \"Synthetic Q&A\" prompt pipeline. This is an advanced technique (Hypothetical Document Embeddings / HyDE).",
+  "deliverables": [
+    "The Prompt: Takes a chunk of text and generates 3 diverse user queries that this text answers",
+    "Instructions on Tone: The questions must sound like a real, frustrated employee, not a robot",
+    "A short explanation of why embedding user-style questions improves vector similarity search compared to embedding formal document text."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A user searches using symptoms (\"My app keeps crashing\"). Documentation is written in solutions (\"Troubleshooting memory leaks\"). Your synthetic questions bridge this vocabulary gap.",
+  "rubric": [
+    {
+      "key": "generation-prompt",
+      "label": "Q&A Prompt Quality",
+      "description": "Does the prompt force the AI to generate diverse, realistic user queries?",
+      "weight": 40
+    },
+    {
+      "key": "vocabulary-gap",
+      "label": "Bridging the Gap",
+      "description": "Do the instructions explicitly focus on colloquial/symptom-based phrasing?",
+      "weight": 30
+    },
+    {
+      "key": "technical-rationale",
+      "label": "HyDE Rationale",
+      "description": "Is the explanation of vector space similarity and vocabulary mismatch accurate?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Synthetic data generation",
+    "HyDE (Hypothetical Document Embeddings)",
+    "RAG optimization",
+    "Vocabulary mapping"
+  ],
+  "relatedRoadmapIds": []
+}

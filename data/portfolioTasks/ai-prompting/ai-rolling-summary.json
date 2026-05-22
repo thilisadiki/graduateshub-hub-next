@@ -1,0 +1,46 @@
+{
+  "id": "ai-rolling-summary",
+  "categoryId": "ai-prompting",
+  "topicId": "context-window-management",
+  "level": "intermediate",
+  "title": "Design a Rolling Summary Flow",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Solve the context limit problem for a 3-hour podcast transcript.",
+  "scenario": "You are trying to process a 3-hour podcast transcript, but it exceeds the model's context window (e.g., an older model with an 8k token limit). You cannot process it all at once.",
+  "brief": "Design a \"Rolling Summary\" (or Chunking) workflow. Write the prompt that will be used to summarise Chunk 1, and the modified prompt that will be used for Chunk 2 (which must incorporate the summary of Chunk 1).",
+  "deliverables": [
+    "An explanation of how you will chunk the text (e.g., by speaker change, by word count, with overlap)",
+    "Prompt A (used for the very first chunk)",
+    "Prompt B (the \"Rolling\" prompt that takes [Previous Summary] + [New Chunk] and outputs an [Updated Summary])"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Rolling summaries can suffer from \"forgetting\" early details. Your Prompt B needs to instruct the AI to keep core themes alive while adding new developments.",
+  "rubric": [
+    {
+      "key": "chunking-logic",
+      "label": "Chunking Strategy",
+      "description": "Is the strategy for splitting the text logical (e.g., using overlaps to avoid cutting sentences in half)?",
+      "weight": 30
+    },
+    {
+      "key": "rolling-prompt",
+      "label": "Rolling Prompt Design",
+      "description": "Does Prompt B effectively merge the old context with the new text?",
+      "weight": 40
+    },
+    {
+      "key": "theme-retention",
+      "label": "Theme Retention",
+      "description": "Are there instructions to prevent early important facts from being lost in later iterations?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Context limits",
+    "Chunking strategies",
+    "Rolling summaries",
+    "Token efficiency"
+  ],
+  "relatedRoadmapIds": []
+}

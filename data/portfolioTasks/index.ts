@@ -2,7 +2,6 @@ import type { PortfolioTask, PortfolioLevel } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
-import { aiPromptingTasks } from './aiPrompting';
 import { qaTestingTasks } from './qaTesting';
 import { projectCoordinationTasks } from './projectCoordination';
 
@@ -15,6 +14,7 @@ const DESIGN_UX_DIR = path.join(process.cwd(), 'data/portfolioTasks/design-ux');
 const BUSINESS_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/business-analysis');
 const CUSTOMER_OPS_DIR = path.join(process.cwd(), 'data/portfolioTasks/customer-ops');
 const IT_DIR = path.join(process.cwd(), 'data/portfolioTasks/it');
+const AI_PROMPTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/ai-prompting');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -187,6 +187,25 @@ function loadItTasks(): PortfolioTask[] {
   }
 }
 
+function loadAiPromptingTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(AI_PROMPTING_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(AI_PROMPTING_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(AI_PROMPTING_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load AI prompting tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
   ...loadDigitalMarketingTasks(),
   ...loadSoftDevTasks(),
@@ -197,7 +216,7 @@ export const portfolioTasks: PortfolioTask[] = [
   ...loadBusinessAnalysisTasks(),
   ...loadCustomerOpsTasks(),
   ...loadItTasks(),
-  ...aiPromptingTasks,
+  ...loadAiPromptingTasks(),
   ...qaTestingTasks,
   ...projectCoordinationTasks,
 ];

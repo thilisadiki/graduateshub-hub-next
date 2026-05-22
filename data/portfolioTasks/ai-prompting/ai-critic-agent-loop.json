@@ -1,0 +1,47 @@
+{
+  "id": "ai-critic-agent-loop",
+  "categoryId": "ai-prompting",
+  "topicId": "agent-flow-design",
+  "level": "advanced",
+  "title": "Build a Self-Correcting Agent Loop",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design an autonomous coding loop with a Generator Agent and a Critic Agent.",
+  "scenario": "You are designing an AI coding assistant. Agent 1 (The Coder) writes a Python script. Agent 2 (The Critic) reviews the code against best practices and security rules. If the Critic finds flaws, it sends feedback back to the Coder to try again. The loop continues until the Critic approves.",
+  "brief": "Map out the logic for this autonomous loop. Define the prompts and the stopping condition to prevent infinite loops.",
+  "deliverables": [
+    "The System Prompt for The Critic (focusing on strict code review)",
+    "The \"Feedback Template\" The Critic uses to send errors back to The Coder",
+    "The \"Stopping Condition\" logic (e.g., max 3 loops, or specific approval syntax)",
+    "A flowchart/description of the state machine"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Autonomous loops can easily get stuck in infinite feedback cycles (\"You missed a comma\" -> \"Fixed\" -> \"You added a space\" -> \"Fixed\"). The Critic must be pragmatic, and the system needs a hard circuit breaker.",
+  "rubric": [
+    {
+      "key": "critic-prompt",
+      "label": "Critic Rigor",
+      "description": "Does the Critic prompt focus on objective rules rather than subjective style?",
+      "weight": 30
+    },
+    {
+      "key": "feedback-loop",
+      "label": "Feedback Efficacy",
+      "description": "Is the feedback template actionable for the Coder agent?",
+      "weight": 35
+    },
+    {
+      "key": "circuit-breaker",
+      "label": "Circuit Breaker",
+      "description": "Is the stopping condition logical and fail-safe?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Autonomous agents",
+    "Self-correction loops",
+    "State machines",
+    "AI code review"
+  ],
+  "relatedRoadmapIds": []
+}
