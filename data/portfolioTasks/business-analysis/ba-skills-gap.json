@@ -1,0 +1,46 @@
+{
+  "id": "ba-skills-gap",
+  "categoryId": "business-analysis",
+  "topicId": "gap-analysis",
+  "level": "beginner",
+  "title": "Skills Gap Analysis",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Conduct a skills gap analysis for a team transitioning to automated dashboards.",
+  "scenario": "A 6-person finance team at a South African retailer currently produces monthly reports in Excel. The company is moving to Power BI dashboards. The team lead suspects not everyone has the skills to make the transition.",
+  "brief": "Conduct a skills gap analysis. Identify the required skills, assess the current team against them, and propose a training plan.",
+  "deliverables": [
+    "A skills matrix: Required Skill × Team Member with current proficiency (1-5) for at least 8 skills",
+    "A gap summary: which skills have the largest gaps and which team members need the most development",
+    "A training plan: recommended training for each gap with timeline and estimated cost/effort"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A skills gap analysis is not a performance review. It identifies capability gaps, not individual failings. Frame it constructively.",
+  "rubric": [
+    {
+      "key": "matrix",
+      "label": "Skills Matrix",
+      "description": "Is the matrix comprehensive with realistic proficiency ratings?",
+      "weight": 30
+    },
+    {
+      "key": "gaps",
+      "label": "Gap Identification",
+      "description": "Are the critical gaps correctly identified and prioritised?",
+      "weight": 35
+    },
+    {
+      "key": "training",
+      "label": "Training Plan",
+      "description": "Is the training plan practical with realistic timelines?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Skills gap analysis",
+    "Training needs assessment",
+    "Capability planning",
+    "HR collaboration"
+  ],
+  "relatedRoadmapIds": []
+}

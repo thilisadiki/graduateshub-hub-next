@@ -1,0 +1,53 @@
+{
+  "id": "ba-readiness-assessment",
+  "categoryId": "business-analysis",
+  "topicId": "change-management",
+  "level": "advanced",
+  "title": "Organisational Readiness Assessment",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design an organisational readiness assessment for a digital transformation.",
+  "scenario": "A South African financial services company (500 employees, 8 departments) is about to start a 2-year digital transformation. The CEO wants to know: \"Are we ready?\" before committing R15M. Past technology projects have failed due to poor adoption.",
+  "brief": "Design and conduct a hypothetical organisational readiness assessment. Cover leadership alignment, culture, capability, infrastructure, and change history.",
+  "deliverables": [
+    "A readiness assessment framework: 5 dimensions with 3-4 indicators each, scored on a maturity scale",
+    "Hypothetical assessment results with honest scores and evidence for each indicator",
+    "A readiness heatmap: which departments are ready, which are at risk, and which are blockers",
+    "A pre-launch remediation plan for the 3 lowest-scoring areas"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Organisational readiness is not about technology. A company with great tech but poor change leadership will fail. A company with basic tech but strong leadership will adapt. Show this understanding.",
+  "rubric": [
+    {
+      "key": "framework",
+      "label": "Assessment Framework",
+      "description": "Is the framework comprehensive with meaningful indicators?",
+      "weight": 25
+    },
+    {
+      "key": "results",
+      "label": "Assessment Results",
+      "description": "Are the scores realistic with honest evidence?",
+      "weight": 25
+    },
+    {
+      "key": "heatmap",
+      "label": "Readiness Heatmap",
+      "description": "Does the heatmap clearly show departmental variation?",
+      "weight": 25
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Plan",
+      "description": "Is the pre-launch plan targeted at the real blockers?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Organisational readiness",
+    "Maturity assessment",
+    "Change management",
+    "Digital transformation"
+  ],
+  "relatedRoadmapIds": []
+}

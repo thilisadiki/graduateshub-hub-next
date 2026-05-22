@@ -1,0 +1,46 @@
+{
+  "id": "ba-acceptance-criteria",
+  "categoryId": "business-analysis",
+  "topicId": "user-stories-acceptance",
+  "level": "intermediate",
+  "title": "Acceptance Criteria & Edge Cases",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write Given/When/Then acceptance criteria for 3 user stories with edge cases.",
+  "scenario": "The development team has asked for detailed acceptance criteria before they commit to the sprint. Three user stories need full criteria: (1) Send money via phone number, (2) View transaction history, (3) Set a daily transfer limit.",
+  "brief": "Write detailed acceptance criteria for all 3 stories using Given/When/Then format. Include edge cases, error scenarios, and boundary conditions.",
+  "deliverables": [
+    "At least 5 acceptance criteria per story in Given/When/Then format",
+    "Edge cases for each story (e.g., invalid phone number, transfer exceeding limit, empty history)",
+    "A \"Definition of Done\" checklist that applies across all 3 stories"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Given/When/Then is a testing language. \"Given I have R500 in my account, When I try to send R600, Then I see an error 'Insufficient funds' and the transaction is not processed.\" Be this precise.",
+  "rubric": [
+    {
+      "key": "gwt",
+      "label": "Given/When/Then Quality",
+      "description": "Are the criteria precise, testable, and correctly formatted?",
+      "weight": 35
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Case Coverage",
+      "description": "Are edge cases realistic and comprehensive?",
+      "weight": 35
+    },
+    {
+      "key": "dod",
+      "label": "Definition of Done",
+      "description": "Is the DoD practical and complete?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Acceptance criteria",
+    "Given/When/Then",
+    "Edge case analysis",
+    "Definition of Done"
+  ],
+  "relatedRoadmapIds": []
+}

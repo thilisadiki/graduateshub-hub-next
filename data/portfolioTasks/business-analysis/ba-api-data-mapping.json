@@ -1,0 +1,47 @@
+{
+  "id": "ba-api-data-mapping",
+  "categoryId": "business-analysis",
+  "topicId": "interface-specs-api-mapping",
+  "level": "beginner",
+  "title": "Legacy CRM to REST API Data Mapping",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Map customer registration data from a legacy database schema to a new REST API JSON format.",
+  "scenario": "An insurance firm is migrating its client management workflows to a modern SaaS platform. You need to map customer profiles from the legacy SQL database table (`TBL_CLIENT_MASTER`) to the new REST API registration payload (`/api/v1/customers`). The systems use different field names, date formats, and validation constraints.",
+  "brief": "Create a detailed source-to-target data mapping document. Map at least 15 fields (including names, addresses, contact details, policy types, and status flags). Define transformation rules for data types, formatting, and default values.",
+  "deliverables": [
+    "A data mapping spreadsheet/table: Legacy Field Name → Legacy Type → Target JSON Key → Target Type → Transformation/Validation Rules.",
+    "JSON payload example of the target schema after transformation.",
+    "A field-level data dictionary detailing validation constraints (e.g. regex for emails, phone numbers, state abbreviations).",
+    "A mapping exception playbook detailing what to do if mandatory fields are null in the legacy source."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Present the mapping grid using a clean Markdown table. Provide validation rules and JSON examples in code blocks.",
+  "rubric": [
+    {
+      "key": "field_mapping",
+      "label": "Field Mapping Accuracy",
+      "description": "Are source-to-target fields correctly paired and data types appropriately converted?",
+      "weight": 40
+    },
+    {
+      "key": "transformation_rules",
+      "label": "Type Conversion Rules",
+      "description": "Are transformation rules (e.g. date format conversions, status codes mapping) complete and logical?",
+      "weight": 30
+    },
+    {
+      "key": "data_dictionary",
+      "label": "Data Dictionary Mapping",
+      "description": "Are data constraints and error handling logic for missing values robust?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Data mapping schema design",
+    "REST API payload modeling",
+    "Data type conversion",
+    "Data dictionary creation"
+  ],
+  "relatedRoadmapIds": []
+}

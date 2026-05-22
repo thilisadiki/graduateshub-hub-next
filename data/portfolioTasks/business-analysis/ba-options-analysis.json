@@ -1,0 +1,46 @@
+{
+  "id": "ba-options-analysis",
+  "categoryId": "business-analysis",
+  "topicId": "feasibility-studies",
+  "level": "intermediate",
+  "title": "Options Analysis",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Evaluate build vs buy vs hybrid for a document management system.",
+  "scenario": "A law firm with 80 staff stores documents across shared drives, email attachments, and physical filing cabinets. They need a document management system. Three options: (A) build custom, (B) buy an off-the-shelf solution, (C) hybrid — buy a platform and customise.",
+  "brief": "Evaluate all 3 options using weighted scoring. Define evaluation criteria, assign weights, score each option, and make a recommendation.",
+  "deliverables": [
+    "Evaluation criteria: at least 8 criteria (cost, time, fit, risk, etc.) with weights that sum to 100%",
+    "A scoring matrix: Option × Criterion with scores (1-5) and weighted totals",
+    "A recommendation with sensitivity analysis: does the recommendation change if you shift weights?"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Weighted scoring is only as good as the weights. If \"cost\" is 50% of the score, the cheapest option always wins. Show you have thought about weight balance.",
+  "rubric": [
+    {
+      "key": "criteria",
+      "label": "Criteria Selection",
+      "description": "Are the criteria comprehensive and appropriately weighted?",
+      "weight": 30
+    },
+    {
+      "key": "scoring",
+      "label": "Scoring Matrix",
+      "description": "Are the scores consistent and defensible?",
+      "weight": 35
+    },
+    {
+      "key": "sensitivity",
+      "label": "Sensitivity Analysis",
+      "description": "Does the sensitivity test show how robust the recommendation is?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Options analysis",
+    "Weighted scoring",
+    "Decision-making",
+    "Sensitivity analysis"
+  ],
+  "relatedRoadmapIds": []
+}

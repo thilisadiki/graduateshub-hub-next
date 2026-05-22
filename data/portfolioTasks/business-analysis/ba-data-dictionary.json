@@ -1,0 +1,46 @@
+{
+  "id": "ba-data-dictionary",
+  "categoryId": "business-analysis",
+  "topicId": "data-modelling-erds",
+  "level": "advanced",
+  "title": "Data Dictionary for a System Migration",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a data dictionary for migrating a legacy HR system.",
+  "scenario": "A South African company is migrating from a 15-year-old HR system to a modern cloud HRIS. The legacy system has 40+ tables with inconsistent naming, undocumented fields, and data quality issues. No documentation exists.",
+  "brief": "Build a comprehensive data dictionary for the migration. Cover field mappings, data transformations, validation rules, and data quality issues.",
+  "deliverables": [
+    "A data dictionary for at least 5 key tables: Field Name, Data Type, Description, Source (legacy), Target (new), Transformation Rule",
+    "A data quality report: at least 5 data quality issues found (nulls, duplicates, format inconsistencies) with remediation approach",
+    "A migration validation plan: how to verify data integrity after migration (row counts, checksum, business rule validation)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Legacy systems always have surprises: fields repurposed for unintended data, business logic embedded in field values, and undocumented codes. Show you expect this.",
+  "rubric": [
+    {
+      "key": "dictionary",
+      "label": "Data Dictionary",
+      "description": "Is the dictionary comprehensive with clear transformation rules?",
+      "weight": 35
+    },
+    {
+      "key": "quality",
+      "label": "Data Quality Report",
+      "description": "Are the quality issues realistic for a legacy system?",
+      "weight": 30
+    },
+    {
+      "key": "validation",
+      "label": "Validation Plan",
+      "description": "Is the post-migration validation thorough and practical?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Data dictionary",
+    "Data migration",
+    "Data quality",
+    "Legacy system analysis"
+  ],
+  "relatedRoadmapIds": []
+}

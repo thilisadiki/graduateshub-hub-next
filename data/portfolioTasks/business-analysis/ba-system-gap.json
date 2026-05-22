@@ -1,0 +1,46 @@
+{
+  "id": "ba-system-gap",
+  "categoryId": "business-analysis",
+  "topicId": "gap-analysis",
+  "level": "intermediate",
+  "title": "System Gap Analysis",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Analyse gaps between a current CRM and a proposed replacement.",
+  "scenario": "A property management company uses a 10-year-old CRM that lacks mobile access, automated workflows, and tenant self-service. They are evaluating a modern cloud CRM. The CEO wants to know: \"What can the new system do that ours cannot, and what will we lose?\"",
+  "brief": "Conduct a system gap analysis comparing the current CRM to the proposed replacement. Cover features, data, processes, and integration points.",
+  "deliverables": [
+    "A feature comparison matrix: Feature × Current System × Proposed System × Gap/Overlap (at least 15 features)",
+    "A data migration risk assessment: which data maps cleanly, which needs transformation, which will be lost",
+    "A process impact analysis: which business processes change, which stay the same, and which break"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A gap analysis is not a sales pitch for the new system. Be honest about what the current system does well and what will be lost in migration.",
+  "rubric": [
+    {
+      "key": "features",
+      "label": "Feature Comparison",
+      "description": "Is the feature matrix comprehensive and balanced?",
+      "weight": 30
+    },
+    {
+      "key": "data",
+      "label": "Data Migration Risk",
+      "description": "Is the data assessment realistic about transformation challenges?",
+      "weight": 35
+    },
+    {
+      "key": "process",
+      "label": "Process Impact",
+      "description": "Does the analysis cover broken processes, not just improved ones?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "System gap analysis",
+    "Feature comparison",
+    "Data migration",
+    "Process impact assessment"
+  ],
+  "relatedRoadmapIds": []
+}

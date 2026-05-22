@@ -1,0 +1,47 @@
+{
+  "id": "ba-backlog-prioritization",
+  "categoryId": "business-analysis",
+  "topicId": "backlog-management-refinement",
+  "level": "beginner",
+  "title": "Kano Model Feature Prioritization",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Prioritize a backlog of 10 key features for a global e-learning platform using the Kano Model.",
+  "scenario": "A global e-learning platform is planning its next product release cycle. The product backlog contains 10 diverse feature ideas (e.g., download certificates, offline video mode, dark mode, AI quiz generator, 2FA, dark mode interface). The Product Manager needs a structured prioritization model to separate \"must-haves\" from \"delighters\" and avoid feature bloat.",
+  "brief": "Classify the 10 features into Kano categories (Must-Be, One-Dimensional, Attractive, Indifferent, Reverse) based on mock customer questionnaire feedback. Create a prioritization roadmap recommending which features to build first.",
+  "deliverables": [
+    "Kano questionnaire mapping showing functional and dysfunctional question pairs for each feature.",
+    "A Kano categorization matrix classifying all 10 features.",
+    "A prioritized release plan outlining what features must go into the MVP, what will follow in the next release, and what should be deferred.",
+    "A short analysis (max 200 words) on how Kano prioritization prevents gold-plating."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Present your classifications and roadmap using clear Markdown tables. Justify each classification with user behavior assumptions.",
+  "rubric": [
+    {
+      "key": "kano_classification",
+      "label": "Kano Classification Accuracy",
+      "description": "Are the 10 features categorized logically based on customer satisfaction metrics?",
+      "weight": 35
+    },
+    {
+      "key": "satisfaction_mapping",
+      "label": "User Satisfaction Mapping",
+      "description": "Is the mapping between customer needs and Kano categories explained clearly?",
+      "weight": 35
+    },
+    {
+      "key": "prioritization_output",
+      "label": "Prioritized Roadmap",
+      "description": "Is the final release recommendation logical and actionable for a product release cycle?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Kano Model prioritization",
+    "Product backlog refinement",
+    "Customer satisfaction mapping",
+    "Agile release planning"
+  ],
+  "relatedRoadmapIds": []
+}

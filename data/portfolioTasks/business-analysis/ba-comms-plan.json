@@ -1,0 +1,46 @@
+{
+  "id": "ba-comms-plan",
+  "categoryId": "business-analysis",
+  "topicId": "stakeholder-analysis",
+  "level": "intermediate",
+  "title": "Stakeholder Communication Plan",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a comms plan for a 6-month ERP implementation across 3 departments.",
+  "scenario": "A manufacturing company is implementing an ERP system affecting Finance, Operations, and HR. Each department has different concerns: Finance worries about data migration, Operations about downtime, HR about change fatigue. The project manager wants a structured comms plan.",
+  "brief": "Design a stakeholder communication plan covering all 3 departments, the executive sponsor, and the IT team. Define channels, frequency, content, and escalation paths.",
+  "deliverables": [
+    "A comms matrix: Stakeholder Group × Channel × Frequency × Content Summary × Owner",
+    "A message calendar for Month 1 showing specific communications scheduled",
+    "An escalation path for when stakeholders raise concerns that exceed the BA's authority"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not send the same message to everyone. The CFO needs a different update than the warehouse supervisor.",
+  "rubric": [
+    {
+      "key": "matrix",
+      "label": "Comms Matrix",
+      "description": "Is the matrix comprehensive with appropriate channels per audience?",
+      "weight": 35
+    },
+    {
+      "key": "calendar",
+      "label": "Message Calendar",
+      "description": "Is the Month 1 calendar specific and realistic?",
+      "weight": 30
+    },
+    {
+      "key": "escalation",
+      "label": "Escalation Path",
+      "description": "Is the escalation path clear with defined triggers?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Communication planning",
+    "Stakeholder management",
+    "Project communication",
+    "Escalation design"
+  ],
+  "relatedRoadmapIds": []
+}

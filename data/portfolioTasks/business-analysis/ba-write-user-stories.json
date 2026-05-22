@@ -1,0 +1,46 @@
+{
+  "id": "ba-write-user-stories",
+  "categoryId": "business-analysis",
+  "topicId": "user-stories-acceptance",
+  "level": "beginner",
+  "title": "Write User Stories for a Feature",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write 8 user stories for a mobile banking \"Send Money\" feature.",
+  "scenario": "A South African digital bank is adding a \"Send Money\" feature to their app. Users can send money to contacts via phone number or bank account. The product owner needs user stories before the sprint starts.",
+  "brief": "Write 8 user stories using the standard \"As a [user], I want [goal], so that [benefit]\" format. Cover the happy path, edge cases, and at least one admin/back-office story.",
+  "deliverables": [
+    "Eight user stories in standard format with unique IDs",
+    "Priority ranking (High/Medium/Low) for each story with justification",
+    "One story that the team might miss (e.g., failed transfers, insufficient funds, daily limits)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "\"As a user, I want to send money\" is too vague. \"As a registered user, I want to send money to a contact using their phone number, so that I can transfer funds without knowing their bank details\" is specific.",
+  "rubric": [
+    {
+      "key": "format",
+      "label": "Story Format",
+      "description": "Do all 8 stories follow the standard format correctly?",
+      "weight": 25
+    },
+    {
+      "key": "coverage",
+      "label": "Coverage",
+      "description": "Do the stories cover happy path, edge cases, and admin needs?",
+      "weight": 35
+    },
+    {
+      "key": "priority",
+      "label": "Prioritisation",
+      "description": "Is the priority ranking logical and well-justified?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "User story writing",
+    "Agile requirements",
+    "Edge case thinking",
+    "Prioritisation"
+  ],
+  "relatedRoadmapIds": []
+}

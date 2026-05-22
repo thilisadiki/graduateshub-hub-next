@@ -1,0 +1,53 @@
+{
+  "id": "ba-resistance-strategy",
+  "categoryId": "business-analysis",
+  "topicId": "stakeholder-analysis",
+  "level": "advanced",
+  "title": "Managing Resistance to Change",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Write a strategy for handling senior stakeholder resistance to digital transformation.",
+  "scenario": "A South African logistics company is digitising its dispatch process. The Head of Operations (20 years tenure) is openly resistant — he believes the paper-based system \"works fine\" and fears job losses for his team. He has influence over 60% of the affected staff.",
+  "brief": "Analyse the resistance, identify its root causes, and design an engagement strategy that addresses legitimate concerns while keeping the project on track.",
+  "deliverables": [
+    "A resistance analysis: stated objections vs likely root causes (fear, loss of control, lack of understanding)",
+    "An engagement strategy with at least 5 specific tactics (not generic platitudes)",
+    "A \"win-win\" proposal that addresses the Head of Ops' legitimate concerns while delivering the project's objectives",
+    "A contingency plan if engagement fails: escalation triggers and alternative approaches"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Resistance is not irrational. A 20-year veteran who fears job losses has a legitimate concern. Dismissing it as \"resistance to change\" is lazy analysis.",
+  "rubric": [
+    {
+      "key": "analysis",
+      "label": "Resistance Analysis",
+      "description": "Does the analysis distinguish stated from root causes?",
+      "weight": 25
+    },
+    {
+      "key": "tactics",
+      "label": "Engagement Tactics",
+      "description": "Are the 5 tactics specific, empathetic, and realistic?",
+      "weight": 30
+    },
+    {
+      "key": "win-win",
+      "label": "Win-Win Proposal",
+      "description": "Does the proposal genuinely address concerns, not just appease?",
+      "weight": 25
+    },
+    {
+      "key": "contingency",
+      "label": "Contingency Plan",
+      "description": "Is the escalation plan proportionate and professional?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Resistance management",
+    "Stakeholder engagement",
+    "Conflict resolution",
+    "Change leadership"
+  ],
+  "relatedRoadmapIds": []
+}

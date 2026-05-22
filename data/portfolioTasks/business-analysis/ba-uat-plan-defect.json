@@ -1,0 +1,46 @@
+{
+  "id": "ba-uat-plan-defect",
+  "categoryId": "business-analysis",
+  "topicId": "uat-planning",
+  "level": "intermediate",
+  "title": "UAT Plan & Defect Triage",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write a UAT plan with entry/exit criteria and a defect triage process.",
+  "scenario": "A payroll system upgrade is entering UAT. 15 business users from HR and Finance will test over 2 weeks. The project manager needs a structured UAT plan and a defect management process.",
+  "brief": "Write a complete UAT plan including scope, entry/exit criteria, test schedule, and a defect triage process with severity classifications.",
+  "deliverables": [
+    "A UAT plan: scope, objectives, assumptions, entry criteria (what must be true before UAT starts)",
+    "Exit criteria: what constitutes a successful UAT (e.g., \"zero Critical defects, fewer than 3 Major\")",
+    "A defect triage process: severity levels (Critical/Major/Minor/Cosmetic), SLA for each, and escalation path"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Entry criteria prevent wasted effort. If the system crashes on login, UAT should not start. Exit criteria prevent premature go-live. Show both gates.",
+  "rubric": [
+    {
+      "key": "plan",
+      "label": "UAT Plan Structure",
+      "description": "Is the plan comprehensive with clear scope and objectives?",
+      "weight": 30
+    },
+    {
+      "key": "criteria",
+      "label": "Entry/Exit Criteria",
+      "description": "Are the criteria specific, measurable, and realistic?",
+      "weight": 35
+    },
+    {
+      "key": "triage",
+      "label": "Defect Triage Process",
+      "description": "Is the severity classification clear with appropriate SLAs?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "UAT planning",
+    "Entry/exit criteria",
+    "Defect management",
+    "Test governance"
+  ],
+  "relatedRoadmapIds": []
+}

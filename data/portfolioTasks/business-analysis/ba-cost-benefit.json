@@ -1,0 +1,53 @@
+{
+  "id": "ba-cost-benefit",
+  "categoryId": "business-analysis",
+  "topicId": "business-case-development",
+  "level": "intermediate",
+  "title": "Cost-Benefit Analysis",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Produce a 3-year cost-benefit analysis for automating invoice processing.",
+  "scenario": "A company processes 500 invoices per month manually. Each invoice takes 15 minutes to process. The finance manager wants to automate using an invoice processing tool that costs R8,000/month. Is it worth it?",
+  "brief": "Produce a 3-year cost-benefit analysis covering all tangible and intangible costs and benefits. Show the break-even point.",
+  "deliverables": [
+    "A cost table: Year 1-3 costs including software, implementation, training, and ongoing support",
+    "A benefit table: Year 1-3 benefits including time savings (monetised), error reduction, and faster processing",
+    "A break-even analysis showing when cumulative benefits exceed cumulative costs",
+    "Intangible benefits and costs that cannot be easily quantified but should be considered"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Time savings must be monetised. 15 min × 500 invoices = 125 hours/month. At R200/hour loaded cost, that is R25,000/month in labour. But automation will not eliminate 100% — assume 70% reduction.",
+  "rubric": [
+    {
+      "key": "costs",
+      "label": "Cost Analysis",
+      "description": "Are all costs identified including hidden ones (training, change management)?",
+      "weight": 25
+    },
+    {
+      "key": "benefits",
+      "label": "Benefit Quantification",
+      "description": "Are benefits realistically quantified with clear assumptions?",
+      "weight": 30
+    },
+    {
+      "key": "breakeven",
+      "label": "Break-Even Analysis",
+      "description": "Is the break-even calculation correct and clearly presented?",
+      "weight": 25
+    },
+    {
+      "key": "intangibles",
+      "label": "Intangible Factors",
+      "description": "Are intangible costs and benefits identified and discussed?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Cost-benefit analysis",
+    "Financial modelling",
+    "Break-even analysis",
+    "Business case"
+  ],
+  "relatedRoadmapIds": []
+}

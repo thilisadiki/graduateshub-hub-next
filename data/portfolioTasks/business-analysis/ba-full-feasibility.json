@@ -1,0 +1,53 @@
+{
+  "id": "ba-full-feasibility",
+  "categoryId": "business-analysis",
+  "topicId": "feasibility-studies",
+  "level": "advanced",
+  "title": "Full Feasibility Study",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Produce a feasibility study for digitising a municipality's service delivery.",
+  "scenario": "A South African metropolitan municipality wants to digitise its service delivery processes: utility bill payments, service requests (water leaks, potholes), building plan approvals. Currently everything is paper-based with 6-week turnarounds. The mayor wants a feasibility study.",
+  "brief": "Produce a comprehensive feasibility study covering technical, financial, operational, legal, and schedule feasibility. Include a risk register and a phased implementation recommendation.",
+  "deliverables": [
+    "A feasibility assessment across 5 dimensions with detailed evidence for each rating",
+    "A financial analysis: estimated costs (capex + opex), potential savings, and break-even timeline",
+    "A risk register with at least 10 risks rated by likelihood × impact with mitigations",
+    "A phased implementation recommendation: Phase 1 (quick wins), Phase 2 (core), Phase 3 (advanced)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Government digitisation has unique challenges: procurement regulations (PFMA), digital literacy of staff and citizens, and infrastructure constraints in some areas. Factor these in.",
+  "rubric": [
+    {
+      "key": "assessment",
+      "label": "Feasibility Assessment",
+      "description": "Are all 5 dimensions assessed with SA public sector realities?",
+      "weight": 25
+    },
+    {
+      "key": "financial",
+      "label": "Financial Analysis",
+      "description": "Are costs and savings realistic for a municipality context?",
+      "weight": 25
+    },
+    {
+      "key": "risks",
+      "label": "Risk Register",
+      "description": "Are the 10 risks realistic with proportionate mitigations?",
+      "weight": 25
+    },
+    {
+      "key": "phasing",
+      "label": "Phased Recommendation",
+      "description": "Is the phasing logical with clear criteria for progression?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Feasibility studies",
+    "Public sector analysis",
+    "Risk management",
+    "Phased implementation"
+  ],
+  "relatedRoadmapIds": []
+}

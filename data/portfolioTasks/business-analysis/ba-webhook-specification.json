@@ -1,0 +1,48 @@
+{
+  "id": "ba-webhook-specification",
+  "categoryId": "business-analysis",
+  "topicId": "interface-specs-api-mapping",
+  "level": "intermediate",
+  "title": "Stripe Webhook Callback Specification",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Write a webhook integration specification for a Stripe payment gateway callback in USD.",
+  "scenario": "A global e-commerce business relies on Stripe to process customer payments. When a payment completes, Stripe sends a webhook callback notification to the merchant system to trigger order fulfillment. The Business Analyst must write a detailed system integration specification so the engineering team can build the webhook receiver endpoint (`/api/webhooks/stripe-payments`).",
+  "brief": "Write the webhook integration specification. Define the webhook event type (`payment_intent.succeeded`), outline the incoming payload structure (in USD), document the endpoint authentication method (webhook signature verification), and model the error/retry handling workflow.",
+  "deliverables": [
+    "Stripe webhook payload JSON schema (covering payment intent ID, customer ID, amount in USD, transaction status, metadata).",
+    "Interface interaction diagram showing the flow between Customer, Stripe, and the Merchant endpoint.",
+    "Detailed API response status code mappings (e.g. 200 OK, 400 Bad Request, 401 Unauthorized, 500 Server Error).",
+    "A retry and idempotency policy to prevent double-processing orders if Stripe retries a delivery."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Deliver your specification in Markdown. Include JSON samples and response schemas. Draw the interaction sequence using a text-based or mermaid flowchart.",
+  "rubric": [
+    {
+      "key": "webhook_schema",
+      "label": "Webhook Payload Schema",
+      "description": "Is the JSON payload complete, matching standard webhook event properties and amount variables?",
+      "weight": 35
+    },
+    {
+      "key": "retry_logic",
+      "label": "Retry & Error Flow Logic",
+      "description": "Are idempotency, retry mechanisms, and HTTP response codes defined securely?",
+      "weight": 35
+    },
+    {
+      "key": "security_authentication",
+      "label": "Security & Authentication",
+      "description": "Is webhook signature validation and data encryption in transit handled correctly?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Webhook specification",
+    "JSON schema modeling",
+    "Idempotency design",
+    "API security standards",
+    "Systems integration"
+  ],
+  "relatedRoadmapIds": []
+}

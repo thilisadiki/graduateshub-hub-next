@@ -1,0 +1,53 @@
+{
+  "id": "ba-story-mapping",
+  "categoryId": "business-analysis",
+  "topicId": "user-stories-acceptance",
+  "level": "advanced",
+  "title": "Story Mapping a Product Release",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a user story map for an MVP launch with backbone and release slices.",
+  "scenario": "A fintech startup is building a personal budgeting app. They have 40 user stories but can only ship 15 in the MVP. The CEO wants to launch in 8 weeks. The team needs to know what to build first and what to defer.",
+  "brief": "Build a user story map. Organise stories into a backbone (user activities), a walking skeleton (minimum stories per activity), and release slices (MVP, v1.1, v1.2).",
+  "deliverables": [
+    "A story map structure: User Activities (backbone) across the top, stories grouped vertically by priority",
+    "The walking skeleton: the minimum set of stories that delivers an end-to-end user journey",
+    "Release slices: MVP (15 stories), v1.1 (next 12), v1.2 (remaining) with rationale for each cut",
+    "Three stories that were hard to cut from the MVP and why you cut them anyway"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The walking skeleton is not the MVP. It is the minimum set of stories that lets a user complete the entire journey, even if poorly. The MVP adds enough polish to be shippable.",
+  "rubric": [
+    {
+      "key": "backbone",
+      "label": "Story Map Structure",
+      "description": "Is the backbone well-organised with logical user activities?",
+      "weight": 25
+    },
+    {
+      "key": "skeleton",
+      "label": "Walking Skeleton",
+      "description": "Does the skeleton deliver a complete (if minimal) user journey?",
+      "weight": 25
+    },
+    {
+      "key": "slices",
+      "label": "Release Slices",
+      "description": "Are the release cuts defensible with clear rationale?",
+      "weight": 30
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Trade-Off Thinking",
+      "description": "Do the \"hard to cut\" stories show genuine product judgment?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Story mapping",
+    "MVP definition",
+    "Release planning",
+    "Product judgment"
+  ],
+  "relatedRoadmapIds": []
+}

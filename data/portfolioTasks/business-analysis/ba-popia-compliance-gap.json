@@ -1,0 +1,46 @@
+{
+  "id": "ba-popia-compliance-gap",
+  "categoryId": "business-analysis",
+  "topicId": "gap-analysis",
+  "level": "advanced",
+  "title": "Regulatory Compliance Gap Assessment",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Assess POPIA compliance gaps and produce a remediation roadmap.",
+  "scenario": "A South African healthcare provider processes patient data across 12 clinics. They have never formally assessed their POPIA compliance. The Information Regulator has started issuing enforcement notices to similar organisations. The board wants an honest assessment.",
+  "brief": "Conduct a POPIA compliance gap assessment. Evaluate current practices against POPIA requirements and produce a prioritised remediation roadmap.",
+  "deliverables": [
+    "A compliance assessment matrix: POPIA Condition × Current Practice × Gap × Risk Rating (at least 8 conditions)",
+    "A data flow map showing where personal information is collected, processed, stored, and shared",
+    "A prioritised remediation roadmap: Critical (0-30 days), Important (30-90 days), Maintenance (ongoing)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "POPIA has 8 conditions for lawful processing. Do not just list them — assess each against what the healthcare provider actually does (invent realistic current practices).",
+  "rubric": [
+    {
+      "key": "assessment",
+      "label": "Compliance Assessment",
+      "description": "Are the POPIA conditions correctly assessed with realistic gaps?",
+      "weight": 30
+    },
+    {
+      "key": "data-flow",
+      "label": "Data Flow Map",
+      "description": "Is the data flow comprehensive for a healthcare context?",
+      "weight": 30
+    },
+    {
+      "key": "roadmap",
+      "label": "Remediation Roadmap",
+      "description": "Is the roadmap prioritised by risk with realistic timelines?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "POPIA compliance",
+    "Regulatory gap analysis",
+    "Data flow mapping",
+    "Remediation planning"
+  ],
+  "relatedRoadmapIds": []
+}

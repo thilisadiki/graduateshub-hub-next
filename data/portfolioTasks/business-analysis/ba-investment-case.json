@@ -1,0 +1,54 @@
+{
+  "id": "ba-investment-case",
+  "categoryId": "business-analysis",
+  "topicId": "business-case-development",
+  "level": "advanced",
+  "title": "Investment Business Case with Risk Analysis",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Build a comprehensive business case for a R5M system overhaul.",
+  "scenario": "A South African logistics company's core operations system is 12 years old. It crashes weekly, cannot integrate with modern tracking APIs, and the vendor has announced end-of-life. A replacement will cost approximately R5M over 2 years. The board meets in 3 weeks.",
+  "brief": "Build a comprehensive investment business case suitable for board presentation. Include strategic alignment, financial analysis, risk assessment, and a clear recommendation.",
+  "deliverables": [
+    "Strategic alignment: how the investment supports the company's 3-year strategy",
+    "Financial analysis: 5-year NPV, ROI, and payback period with stated assumptions",
+    "A risk register with at least 8 risks, each rated by likelihood × impact, with mitigations and contingencies",
+    "A sensitivity analysis: how the NPV changes if costs increase by 20% or benefits decrease by 30%",
+    "An executive summary (max 200 words) that a non-technical board member would understand"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A board-level business case is not a technical document. The board cares about: \"How much? How long? What if it goes wrong? What happens if we do nothing?\" Answer these.",
+  "rubric": [
+    {
+      "key": "strategy",
+      "label": "Strategic Alignment",
+      "description": "Is the investment clearly linked to business strategy?",
+      "weight": 20
+    },
+    {
+      "key": "financials",
+      "label": "Financial Analysis",
+      "description": "Are NPV, ROI, and payback correctly calculated?",
+      "weight": 25
+    },
+    {
+      "key": "risks",
+      "label": "Risk Assessment",
+      "description": "Is the risk register comprehensive with realistic mitigations?",
+      "weight": 25
+    },
+    {
+      "key": "executive",
+      "label": "Executive Summary",
+      "description": "Would a non-technical board member understand and act on this?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Business case development",
+    "NPV/ROI",
+    "Risk analysis",
+    "Board-level communication"
+  ],
+  "relatedRoadmapIds": []
+}
