@@ -99,5 +99,13 @@ export const financeAccountingTopics: PortfolioTopic[] = [
       'Manage day-to-day bookkeeping, reconcile bank statements, and configure cloud accounting software for SMEs. Tests double-entry principles, software setup, and financial reporting.',
     skillsProven: ['Cloud accounting setup (Xero/QuickBooks)', 'Bank reconciliation', 'Double-entry bookkeeping', 'SME financial reporting', 'Journal adjustments'],
   },
+  {
+    id: 'corporate-finance-capital-structure',
+    categoryId: 'finance-accounting',
+    title: 'Corporate Finance & Capital Structure Decision Making',
+    description:
+      'Evaluate financing options (debt vs. equity), analyze capital structure costs, and make decisions for international expansion.',
+    skillsProven: ['Capital structure optimization', 'WACC calculation', 'Debt vs. equity financing', 'Corporate valuation', 'Scenario modeling'],
+  },
 ];
 

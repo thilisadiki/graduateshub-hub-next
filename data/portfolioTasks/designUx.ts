@@ -932,4 +932,275 @@ export const designUxTasks: PortfolioTask[] = [
     skillsProven: ['Voice & tone', 'Content design systems', 'UX writing patterns', 'Design governance'],
     relatedRoadmapIds: [],
   },
+  {
+    id: 'mobile-ux-navigation-audit',
+    categoryId: 'design-ux',
+    topicId: 'mobile-ux-design',
+    level: 'beginner',
+    title: 'Mobile Navigation Audit for a South African FinTech App',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Audit a local peer-to-peer payment app\'s mobile navigation against best practices.',
+    scenario:
+      'PayEasy is a hypothetical South African peer-to-peer mobile payments startup competing with EFTs and cash. Users report difficulty finding the "Scan to Pay" and "Request Cash" features on small screens (like older entry-level Android devices common in SA).',
+    brief:
+      'Conduct a mobile navigation audit of PayEasy. Evaluate the tab bar, menu structure, and touch targets specifically for smaller viewport sizes, recommending 3 mobile-first adjustments.',
+    deliverables: [
+      'An audit of the current navigation menu (identifying 3 distinct issues under 48x48px touch target guidelines or thumb-zone constraints)',
+      'A paper prototype sketch or structured wireframe description of a revised tab-bar navigation flow',
+      'Two specific mobile-first recommendation bullet points with WCAG 2.1 AA target sizes',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Keep suggestions highly actionable. Cite specific screen real estate dimensions and thumb zone maps in your rationale.',
+    rubric: [
+      { key: 'audit', label: 'Audit Quality', description: 'Did the audit cover thumb-zone usability and touch target sizing?', weight: 30 },
+      { key: 'proposals', label: 'Revised Flow Proposals', description: 'Are the recommendations practical and optimized for typical South African viewports?', weight: 40 },
+      { key: 'standards', label: 'Standards Compliance', description: 'Are touch targets and contrast targets referenced against WCAG standards?', weight: 30 },
+    ],
+    skillsProven: ['Mobile UX analysis', 'Thumb-zone mapping', 'Touch target optimization', 'Heuristic evaluation'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'mobile-ux-rebuild',
+    categoryId: 'design-ux',
+    topicId: 'mobile-ux-design',
+    level: 'intermediate',
+    title: 'Mobile-First Registration Redesign for a Local Retailer',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Redesign a complex desktop-centric signup form into an elegant mobile-first flow.',
+    scenario:
+      'A South African homeware boutique, "Karoo Living", has a desktop registration flow that requires ID number verification, physical address, and loyalty options. Mobile drop-offs are at 70% because typing on smartphones is frustrating and error-prone on their legacy web views.',
+    brief:
+      'Redesign the registration process into a mobile-first, multi-step flow. Leverage mobile input design patterns (like native date pickers, autofocus, specific keyboard types, and address autocomplete).',
+    deliverables: [
+      'A before-and-after flow map outlining the step reduction',
+      'Detailed wireframe descriptions or mockups for the redesigned mobile registration screen states (showing keyboard states, inline validations, and step indicators)',
+      'A list of 4 optimized input configurations (e.g. inputmode="numeric" for South African ID numbers) with rationale',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Provide clear, step-by-step logic for the mobile form. Emphasize reduction of typing effort (e.g., using SA ID parsing to prefill birthday/gender).',
+    rubric: [
+      { key: 'flow', label: 'Flow Optimization', description: 'Is the multi-step flow logical, minimizing cognitive load for mobile users?', weight: 35 },
+      { key: 'inputs', label: 'Mobile Input Best Practices', description: 'Did the candidate specify native keyboard behaviors, autocomplete attributes, and input modes?', weight: 35 },
+      { key: 'sa-context', label: 'SA Context & Prefills', description: 'Is there a clever use of SA-specific inputs like the 13-digit ID prefill logic?', weight: 30 },
+    ],
+    skillsProven: ['Mobile form design', 'Input optimization', 'Interaction flow design', 'Information architecture'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'mobile-ux-onboarding',
+    categoryId: 'design-ux',
+    topicId: 'mobile-ux-design',
+    level: 'advanced',
+    title: 'Mobile App Onboarding Strategy for an InsurTech App',
+    difficulty: 'Advanced',
+    estimatedHours: '4 hours',
+    tagline: 'Design a privacy-aware, high-conversion mobile onboarding flow for a micro-insurance app.',
+    scenario:
+      'SureCover is a South African micro-insurance provider launching an app for informal workers. Because users are highly sensitive to mobile data costs (airtime/data) and wary of sharing personal details before seeing value, the onboarding must balance education, trust, permissions (location/camera), and POPIA compliance.',
+    brief:
+      'Design a complete mobile onboarding strategy that minimizes early friction. Decide when to ask for high-friction permissions, how to handle data-sensitive assets, and how to communicate value before registration.',
+    deliverables: [
+      'A storyboard or interaction flow mapping the first-time user experience from app launch to completed setup',
+      'Permission-request strategy detailing when and how to ask for camera and location permissions with context screens',
+      'Copy deck and UX design recommendations for POPIA-compliant consent gates that remain user-friendly',
+      'A data-saving configuration proposal (e.g., optional image loading or offline capability alerts) for data-conscious users',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'The focus is on user psychology and localized constraints (such as expensive data and high security awareness in SA). Vague descriptions will fail.',
+    rubric: [
+      { key: 'permissions', label: 'Permission Strategy', description: 'Is the contextual permission flow logical and designed to maximize opt-in rates?', weight: 30 },
+      { key: 'psychology', label: 'User Value Communication', description: 'Is value demonstrated prior to demanding registration or high-friction info?', weight: 30 },
+      { key: 'compliance', label: 'POPIA & Data Considerations', description: 'Are POPIA consent gates clear and is the interface optimized for low-bandwidth environments?', weight: 25 },
+      { key: 'clarity', label: 'Presentation & Rationale', description: 'Is the overall submission highly professional and developer-ready?', weight: 15 },
+    ],
+    skillsProven: ['Onboarding design', 'Mobile permission strategy', 'Data-sensitive UX', 'POPIA compliance in UI'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'handoff-button-spec',
+    categoryId: 'design-ux',
+    topicId: 'design-handoff-spec',
+    level: 'beginner',
+    title: 'Button Component Handoff Documentation',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Document a primary call-to-action button for developers, defining styling tokens and states.',
+    scenario:
+      'Your design agency is handing over a new website design for a Durban tourism booking agency. The frontend developer has received the Figma mockups but has asked for a formal specification of the primary button to avoid guess-work about hover states and padding.',
+    brief:
+      'Create a developer-ready handoff specification for a standard primary button. Use clear design tokens (spacing, typography, border-radius, background-color) and define every interaction state.',
+    deliverables: [
+      'A specifications table detailing padding, borders, typography size/weight, and corner radius using rem or pixel values',
+      'Visual style descriptions for 5 states: Default, Hover, Active, Focus, and Disabled',
+      'A set of HTML/CSS code snippets representing the specified button styles',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Ensure CSS class naming is logical and properties match standard web values.',
+    rubric: [
+      { key: 'anatomy', label: 'Button Anatomy Spec', description: 'Are the physical dimensions, margins, and padding values precise?', weight: 35 },
+      { key: 'states', label: 'Interactive States', description: 'Are all 5 interactive states defined with visual changes like outline/shadow?', weight: 35 },
+      { key: 'code', label: 'Code Alignment', description: 'Does the CSS match the specifications table exactly?', weight: 30 },
+    ],
+    skillsProven: ['Design handoff', 'Component specifications', 'CSS layout', 'State documentation'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'handoff-card-layout',
+    categoryId: 'design-ux',
+    topicId: 'design-handoff-spec',
+    level: 'intermediate',
+    title: 'Responsive E-Commerce Product Card Specification',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Write a detailed spec sheet for a responsive product card grid.',
+    scenario:
+      'A Johannesburg-based online grocer, "FreshFetch", needs a responsive product card grid for their store. The product cards display price in ZAR, discounts, product image, badge, rating, and an "Add to Cart" button. The layout must adapt from mobile screens to large desktop monitors.',
+    brief:
+      'Document the layout rules, spacing tokens, responsive behaviors, and text-truncation logic for the product card. Ensure developer handoff is unambiguous regarding grid behavior.',
+    deliverables: [
+      'Card layout blueprint detailing exact internal spacing (padding, gaps) and absolute dimensions (or flexible bounds)',
+      'Text-wrapping and truncation rules for long product titles (e.g. "Organic Free-Range Extra Large Eggs 12 Pack")',
+      'Responsive layout rules: grid columns and gaps at 3 standard breakpoints (320px, 768px, 1200px)',
+      'Interactive behaviors for the cart button (e.g., hover, loading, added state)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Write this as if it were a direct ticket for a frontend engineer. Address edge cases like slow-loading images and extremely long titles.',
+    rubric: [
+      { key: 'spacing', label: 'Spacing & Typography Specs', description: 'Are internal alignments and font hierarchies clearly defined?', weight: 30 },
+      { key: 'responsive', label: 'Responsive Grid Behavior', description: 'Are the media query rules and grid behaviors clearly detailed for developers?', weight: 30 },
+      { key: 'edge-cases', label: 'Edge Case Handling', description: 'Did the spec address text wrapping, placeholder images, and load states?', weight: 25 },
+      { key: 'clarity', label: 'Handoff Professionalism', description: 'Is the document clear, logical, and structured for developers?', weight: 15 },
+    ],
+    skillsProven: ['Developer specs', 'Responsive design systems', 'Grid layouts', 'UI edge cases'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'handoff-design-tokens',
+    categoryId: 'design-ux',
+    topicId: 'design-handoff-spec',
+    level: 'advanced',
+    title: 'Multi-Theme Design Token System Architecture',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 5 hours',
+    tagline: 'Architect a JSON-structured design token format to support light, dark, and high-contrast accessibility themes.',
+    scenario:
+      'A South African educational platform, "EduSouth", is standardizing its design system across web and mobile. To comply with accessibility guidelines and support white-labelling for corporate clients, the design team must establish a formal token structure. They need a system that translates Figma variables into developer-friendly JSON structures.',
+    brief:
+      'Architect a scalable 3-tier design token structure (Global/Primitive -> Alias/Semantic -> Component) in JSON format. Provide documentation on how colors, spacing, and typography resolve across themes.',
+    deliverables: [
+      'A JSON representation of the Primitive color and spacing palettes',
+      'A JSON representation of the Semantic tokens showing references to Primitive tokens',
+      'A table demonstrating theme mapping: how variables change when switching between light, dark, and high-contrast modes',
+      'Handoff workflow guidelines explaining how designers and engineers sync token updates',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Use standard JSON structure. Verify that token reference variables follow a strict naming convention (e.g., `{color.brand.primary}`).',
+    rubric: [
+      { key: 'architecture', label: 'Token Architecture', description: 'Is the 3-tier hierarchy correctly applied with valid reference variables?', weight: 35 },
+      { key: 'json', label: 'JSON Syntactical Quality', description: 'Are the JSON files well-formed and structured according to industry standards?', weight: 25 },
+      { key: 'theming', label: 'Theme Resolution', description: 'Is the multi-theme translation logic clear, addressing light, dark, and high-contrast states?', weight: 25 },
+      { key: 'workflow', label: 'Sync & Handoff Process', description: 'Is the team coordination model practical and realistic?', weight: 15 },
+    ],
+    skillsProven: ['Design token architecture', 'JSON structure', 'Theming systems', 'Design-to-developer workflow'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'ecommerce-cart-drawer',
+    categoryId: 'design-ux',
+    topicId: 'ecommerce-ux',
+    level: 'beginner',
+    title: 'Slide-Out Cart Drawer UX Audit & Redesign',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Optimise a slide-out cart drawer for a local fashion e-commerce store.',
+    scenario:
+      '"SlayStyle", a local fashion retailer based in Cape Town, has a sliding cart drawer. Analytics show customers add items to the cart but drop off immediately without clicking checkout. The cart drawer currently displays only item names and prices, with a tiny checkout button.',
+    brief:
+      'Audit the cart drawer and design a higher-converting alternative. Incorporate UX best practices like visible delivery estimates, ZAR currency formatting, clear quantity selectors, shipping thresholds (e.g., "Spend R150 more for free delivery"), and payment trust badges.',
+    deliverables: [
+      'A list of 4 UX issues in the current cart drawer layout',
+      'A proposed wireframe layout description of the optimized cart drawer',
+      'Copy and placement strategy for trust badges and South African payment options (like PayFast, Ozow, or Capitec Pay)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Make sure all ZAR prices and delivery policies align with realistic South African ecommerce settings.',
+    rubric: [
+      { key: 'audit', label: 'UX Friction Audit', description: 'Are the identified issues concrete and based on established checkout UX principles?', weight: 30 },
+      { key: 'layout', label: 'Redesign Layout', description: 'Does the proposed layout incorporate high-conversion tactics like shipping progress and trust badges?', weight: 40 },
+      { key: 'localization', label: 'Local Payments & Copy', description: 'Is the copy localized with correct ZAR currency and relevant payment providers?', weight: 30 },
+    ],
+    skillsProven: ['E-commerce UX', 'Conversion rate optimization', 'Cart design', 'Localized trust design'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'ecommerce-checkout-form',
+    categoryId: 'design-ux',
+    topicId: 'ecommerce-ux',
+    level: 'intermediate',
+    title: 'One-Page E-Commerce Checkout Form Redesign',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Redesign a multi-step checkout form into a single-page layout, reducing friction for mobile users.',
+    scenario:
+      'An online boutique nursery in Pretoria has a legacy 5-step checkout: Shipping → Billing → Coupon → Delivery Method → Payment. Customer surveys indicate they drop out due to the form length and confusing postal code requirements (since SA doesn\'t use rigid US-style ZIP codes).',
+    brief:
+      'Redesign the checkout flow into an optimized one-page layout. Focus on address search autocomplete, flexible postal code input, inline validation, and order summary visibility.',
+    deliverables: [
+      'A detailed layout plan for the one-page checkout, including column grouping and field ordering',
+      'A specification of form fields showing autocomplete attributes and error handling logic',
+      'A localized postal code and shipping cost selector interaction flow (addressing SA suburban naming complexities)',
+      'An order summary sidebar/header sticky block design detailing item cost, VAT, delivery fee, and discount calculations',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Make sure the calculation breakdown is mathematically correct (e.g. VAT at 15% in South Africa).',
+    rubric: [
+      { key: 'layout', label: 'Checkout Layout Strategy', description: 'Does the layout minimize steps and visually separate sections?', weight: 30 },
+      { key: 'form-design', label: 'Form Usability Spec', description: 'Are fields optimized for autocomplete, focus, error states, and inline validation?', weight: 35 },
+      { key: 'localization', label: 'SA Shipping & VAT', description: 'Are South African postal rules and 15% VAT calculations handled correctly?', weight: 20 },
+      { key: 'clarity', label: 'Submission Structure', description: 'Is the text clear and professional?', weight: 15 },
+    ],
+    skillsProven: ['Form design', 'Checkout optimization', 'VAT & checkout calculations', 'Information architecture'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'ecommerce-product-page',
+    categoryId: 'design-ux',
+    topicId: 'ecommerce-ux',
+    level: 'advanced',
+    title: 'Product Details Page (PDP) Optimization Strategy',
+    difficulty: 'Advanced',
+    estimatedHours: '4 to 5 hours',
+    tagline: 'Design a high-conversion product details page layout for an online tech retailer.',
+    scenario:
+      '"TechSA", a major electronics e-commerce site, wants to redesign their product details page for high-value items (like R20,000+ laptops). The goal is to maximize immediate purchases while addressing customer concerns about warranties, delivery speeds, stock availability, and payment plans (like buy now pay later - BNPL).',
+    brief:
+      'Develop a complete PDP design strategy. Detail the layout hierarchy for both desktop and mobile, content priorities (above/below the fold), interactive widgets (spec comparison, color selectors), and local trust elements.',
+    deliverables: [
+      'A layout wireframe specification mapping desktop (1440px) and mobile (375px) views',
+      'A detailed description of the product buy box components (price, stock status, shipping estimates, CTA button)',
+      'An integration plan for Buy Now Pay Later (BNPL) services (like PayFlex or Float) showing price breakdowns',
+      'A content plan for handling technical specifications, user reviews, and FAQs without creating cognitive overload',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on the visual and information hierarchy. Address how high-value pricing is contextualized for South African consumers.',
+    rubric: [
+      { key: 'hierarchy', label: 'PDP Layout & Hierarchy', description: 'Is the information prioritised correctly for buying psychology?', weight: 30 },
+      { key: 'buy-box', label: 'Buy Box & CTA Design', description: 'Are stock, pricing, BNPL options, and CTAs tightly integrated and clear?', weight: 30 },
+      { key: 'responsive', label: 'Responsive PDP Execution', description: 'Are desktop and mobile adaptations seamless and well-documented?', weight: 25 },
+      { key: 'trust-elements', label: 'Localized Trust & Info', description: 'Are warranties, SA delivery rules, and local currency handled correctly?', weight: 15 },
+    ],
+    skillsProven: ['Product page design', 'E-commerce conversion', 'Information architecture', 'BNPL integration UX'],
+    relatedRoadmapIds: [],
+  },
 ];

@@ -21,6 +21,9 @@ import { itBackupRecoveryTasks } from './itBackupRecovery';
 import { itMicrosoft365Tasks } from './itMicrosoft365';
 import { itComplianceGovernanceTasks } from './itComplianceGovernance';
 import { itServerAdministrationTasks } from './itServerAdministration';
+import { itAssetManagementTasks } from './itAssetManagement';
+import { itVoipTelephonyTasks } from './itVoipTelephony';
+import { itDatabaseAdminTasks } from './itDatabaseAdmin';
 
 export const portfolioTasks: PortfolioTask[] = [
   ...digitalMarketingTasks,
@@ -44,6 +47,9 @@ export const portfolioTasks: PortfolioTask[] = [
   ...itMicrosoft365Tasks,
   ...itComplianceGovernanceTasks,
   ...itServerAdministrationTasks,
+  ...itAssetManagementTasks,
+  ...itVoipTelephonyTasks,
+  ...itDatabaseAdminTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {

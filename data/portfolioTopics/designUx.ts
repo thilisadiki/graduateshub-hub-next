@@ -83,4 +83,28 @@ export const designUxTopics: PortfolioTopic[] = [
       'Write interface copy that helps users accomplish tasks. Tests error messages, onboarding copy, and content design systems.',
     skillsProven: ['UX writing', 'Microcopy', 'Voice & tone', 'Content design'],
   },
+  {
+    id: 'mobile-ux-design',
+    categoryId: 'design-ux',
+    title: 'Mobile UX & Mobile-First Design',
+    description:
+      'Design responsive, mobile-first mobile app experiences that respect platform guidelines. Tests iOS/Android patterns, touch target sizing, and mobile gesture design.',
+    skillsProven: ['Mobile UX design', 'iOS/Android guidelines', 'Mobile patterns', 'Touch target optimisation'],
+  },
+  {
+    id: 'design-handoff-spec',
+    categoryId: 'design-ux',
+    title: 'Design Handoff & Developer Specs',
+    description:
+      'Bridge the gap between design and development by writing precise design specifications. Tests design system mapping, redlining, and CSS layout coordination.',
+    skillsProven: ['Developer handoff', 'Redlining specs', 'Design system alignment', 'CSS layout collaboration'],
+  },
+  {
+    id: 'ecommerce-ux',
+    categoryId: 'design-ux',
+    title: 'E-commerce UX & Checkout Optimisation',
+    description:
+      'Design friction-free e-commerce flows that drive purchases. Tests cart flows, form validation, trust signals, and guest checkout design.',
+    skillsProven: ['E-commerce UX', 'Checkout optimization', 'Form design', 'Friction reduction'],
+  },
 ];

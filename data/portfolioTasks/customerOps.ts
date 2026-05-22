@@ -904,6 +904,276 @@ export const customerOpsTasks: PortfolioTask[] = [
     skillsProven: ['Capacity planning', 'Forecasting', 'Budgeting', 'Data modeling'],
     relatedRoadmapIds: [],
   },
+  {
+    id: 'crm-macro-creation',
+    categoryId: 'customer-ops',
+    topicId: 'crm-ticketing-setup',
+    level: 'beginner',
+    title: 'WhatsApp Support Macro Suite for a Local Courier Service',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Design a suite of 4 WhatsApp support macros for a local delivery business.',
+    scenario:
+      '"SupaDelivery" is a fast-growing Durban-based courier service operating in KwaZulu-Natal. The support team is flooded with WhatsApp inquiries about delayed packages, delivery driver coordinates, delivery address corrections, and cash-on-delivery queries. The support desk has no standardized quick-replies (macros).',
+    brief:
+      'Draft a suite of 4 WhatsApp support macros. Keep the tone warm, clear, and highly focused on the South African WhatsApp channel context, utilizing emojis, bolding, and bullet points where appropriate.',
+    deliverables: [
+      'A set of 4 templates (Delayed Delivery, Address Correction, Driver Location, Cash on Delivery policy)',
+      'A guideline table detailing variable fields (e.g., `{customer_first_name}`, `{tracking_number}`) and how they map to CRM placeholder attributes',
+      'A one-paragraph explanation of how WhatsApp communication style differs from traditional email communication',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Keep WhatsApp replies short and structured. A customer waiting on their phone does not want a wall of text.',
+    rubric: [
+      { key: 'templates', label: 'Macro Text Quality', description: 'Are the templates clear, concise, and structured for WhatsApp (emojis, lists)?', weight: 40 },
+      { key: 'variables', label: 'Variable Mapping', description: 'Are context placeholders mapped correctly to common database keys?', weight: 30 },
+      { key: 'channel-style', label: 'Channel Awareness', description: 'Does the candidate understand WhatsApp versus email tone differences?', weight: 30 },
+    ],
+    skillsProven: ['Customer support writing', 'WhatsApp support channels', 'CRM configuration', 'Macro design'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'crm-routing-rules',
+    categoryId: 'customer-ops',
+    topicId: 'crm-ticketing-setup',
+    level: 'intermediate',
+    title: 'Ticket Routing Architecture for a Local Fiber Provider',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Design a multi-brand CRM ticket routing system using logic gates and tags.',
+    scenario:
+      'A South African ISP, "VumaLink", serves both residential customers and business clients. Residential tickets are high volume and low complexity (like router resets), while business clients pay for a premium SLA. Currently, all emails land in a single support inbox, causing business tickets to get lost in the noise.',
+    brief:
+      'Design a routing logic blueprint that automatically tags and assigns tickets to the correct support tier. Map out how routing rules handle priority, customer tier, and language.',
+    deliverables: [
+      'A list of 5 routing rules detailing trigger conditions, action tags, and agent assignment groups',
+      'A logical flow diagram or pseudo-code representation of the routing path for incoming tickets',
+      'An SLA override rule for high-value business accounts (ZAR monthly spend threshold)',
+      'Two test case walkthroughs proving the routing logic works as intended',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Specify conditions precisely (e.g. `Subject contains [RESET] AND Domain NOT EQUAL to business.com`).',
+    rubric: [
+      { key: 'routing-rules', label: 'Routing Rules Design', description: 'Are the triggers, conditions, and actions logical and complete?', weight: 35 },
+      { key: 'sla-rules', label: 'SLA Priority Logic', description: 'Is the logic robust enough to separate premium business from residential tickets?', weight: 35 },
+      { key: 'walkthroughs', label: 'Test Cases & Edge Cases', description: 'Do the walkthrough test cases validate that the routing logic holds up?', weight: 30 },
+    ],
+    skillsProven: ['CRM routing rules', 'Logic flow design', 'SLA configuration', 'Ticket tag taxonomies'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'crm-sla-policy',
+    categoryId: 'customer-ops',
+    topicId: 'crm-ticketing-setup',
+    level: 'advanced',
+    title: 'SLA and Business Hours Policy Configuration for a Fintech',
+    difficulty: 'Advanced',
+    estimatedHours: '4 hours',
+    tagline: 'Formulate a multi-channel SLA policy considering public holidays and load-shedding shifts.',
+    scenario:
+      '"PayUnion", a Cape Town-based merchant aggregator, supports retailers across SA. Support is offered over email, chat, and voice. The CEO wants to implement formal Service Level Agreements (SLAs) for merchants. However, the model must handle South African business hours, public holidays, and operational shifts caused by stage-based power grids.',
+    brief:
+      'Design a comprehensive SLA policy. Specify response and resolution target times by channel, ticket priority, and tier. Include operational protocols for handling timezone and business hour calculations.',
+    deliverables: [
+      'SLA matrix table mapping priority levels (Urgent, High, Medium, Low) to target first-response and resolution times by channel',
+      'A business hours configuration plan that accounts for public holidays and timezone schedules',
+      'An automated SLA breach warning system specification (when and who to alert before a breach occurs)',
+      'A continuity plan details block explaining how SLAs are adjusted or paused during major infrastructure outages',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Make sure the SLA goals are realistically achievable for a small-to-medium business while maintaining customer trust.',
+    rubric: [
+      { key: 'sla-matrix', label: 'SLA Matrix Design', description: 'Is the matrix structured, realistic, and complete across channels?', weight: 35 },
+      { key: 'warning-systems', label: 'Escalation Alert Logic', description: 'Are the automated triggers for pre-breach alerts well-designed?', weight: 25 },
+      { key: 'continuity-plan', label: 'Business Hour & Outage Rules', description: 'Are public holidays and load-shedding realities handled systematically?', weight: 25 },
+      { key: 'clarity', label: 'Handoff Quality', description: 'Is the document clear and ready for a systems administrator to configure?', weight: 15 },
+    ],
+    skillsProven: ['SLA policy design', 'Business hours configuration', 'Outage contingency planning', 'Escalation alert logic'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'churn-exit-survey',
+    categoryId: 'customer-ops',
+    topicId: 'churn-recovery-retention',
+    level: 'beginner',
+    title: 'SaaS Exit Survey & Automated Retention Campaign',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Create an exit survey and recovery template for a local SaaS product.',
+    scenario:
+      '"TaxSimple" is a South African digital accounting assistant used by sole proprietors. Subscription cancellations increase after tax filing season in August/September. The product manager wants a short exit survey to find out why users cancel, and a retention screen to encourage pauses instead.',
+    brief:
+      'Design a 3-question exit survey that captures the root cause of churn and write a contextual recovery email based on the survey selections.',
+    deliverables: [
+      'A 3-question exit survey with multiple-choice options (covering pricing, usability, seasonal needs)',
+      'A retention screen layout description offering alternative actions (e.g. "Pause account for R50/mo instead of cancel")',
+      'A recovery email draft targeting users who selected "too expensive" or "only needed it temporarily"',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Survey options should be mutually exclusive and collectively exhaustive (MECE) to make reporting useful.',
+    rubric: [
+      { key: 'survey', label: 'Survey Design', description: 'Are the exit questions clear, unbiased, and structured for analysis?', weight: 35 },
+      { key: 'retention-screen', label: 'Retention Strategy', description: 'Is the alternate offer (pause/downgrade) persuasive?', weight: 35 },
+      { key: 'recovery-copy', label: 'Recovery Email Copy', description: 'Is the email copy friendly, localized, and clearly valuable?', weight: 30 },
+    ],
+    skillsProven: ['Churn analysis', 'Survey methodology', 'Copywriting for retention', 'SaaS operations'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'churn-health-score',
+    categoryId: 'customer-ops',
+    topicId: 'churn-recovery-retention',
+    level: 'intermediate',
+    title: 'Customer Health Score Modeling for a B2B SaaS',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Design a weighted customer health score model using usage metrics.',
+    scenario:
+      'A Durban-based school administration software company, "EduPortal", tracks user actions. They want to flag high-risk schools before they churn. The database records logins, report cards generated, messages sent to parents, and invoices issued. You must build a predictive health scoring model.',
+    brief:
+      'Develop a weighted scoring model that assigns a health score (0-100) to each school. Define the indicators of healthy usage, warning signs of low activity, and critical triggers for outreach.',
+    deliverables: [
+      'A table of 5 health indicators with their definitions, formulas, and weights (totaling 100%)',
+      'A classification system defining Green (Healthy), Amber (At Risk), and Red (High Risk) scores',
+      'A playbook outline detailing automated triggers for the Customer Success team when an account drops to Amber or Red',
+      'A worked example calculating the score for a hypothetical healthy school and a struggling school',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Ensure weights reflect actual value to the customer. For example, generating report cards is a higher-value task than simply logging in.',
+    rubric: [
+      { key: 'indicators', label: 'Indicator Selection', description: 'Are the chosen metrics active indicators of value, not just vanity login stats?', weight: 35 },
+      { key: 'scoring-logic', label: 'Health Score Logic', description: 'Is the math correct, consistent, and well-weighted?', weight: 35 },
+      { key: 'playbook', label: 'Trigger Playbook', description: 'Are the CS outreach recommendations practical and timely?', weight: 30 },
+    ],
+    skillsProven: ['Customer health scoring', 'B2B customer success', 'Usage metrics analysis', 'CS playbook design'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'churn-turnaround-plan',
+    categoryId: 'customer-ops',
+    topicId: 'churn-recovery-retention',
+    level: 'advanced',
+    title: 'Churn Prevention & Account Turnaround Plan',
+    difficulty: 'Advanced',
+    estimatedHours: '4 hours',
+    tagline: 'Draft a turnaround playbook for an enterprise customer showing signs of churn.',
+    scenario:
+      'A South African fleet logistics company, "CargoTrack", has a client ("KZN Transport") paying R30,000/month. KZN Transport has recently stopped tracking fuel usage through the portal, and their support tickets have gone silent. A competitor, "LogiFleet", is actively pitching to them. The CS director needs a turnaround plan.',
+    brief:
+      'Produce a step-by-step turnaround plan to re-engage the customer, identify their frustrations, demonstrate the ROI of CargoTrack, and secure a renewal.',
+    deliverables: [
+      'An account audit analyzing historical tickets, login drops, and feature usage anomalies',
+      'A 14-day re-engagement communication schedule including executive and operations-level touchpoints',
+      'A customized value realization deck outline showing specific ZAR fuel savings calculations',
+      'A concession framework: what parameters (discounts, training, features) CS is allowed to negotiate to keep the contract',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Turnaround plans require understanding both the executive decision-maker and the daily system users. Address both groups.',
+    rubric: [
+      { key: 'audit', label: 'Usage & Friction Audit', description: 'Did the candidate trace the drop in usage back to a business cause?', weight: 30 },
+      { key: 'schedule', label: 'Communication Cadence', description: 'Is the outreach schedule professional, multi-tier, and timely?', weight: 25 },
+      { key: 'value-deck', label: 'ZAR ROI Calculations', description: 'Are the calculations of cost savings and ROI clear and tailored?', weight: 25 },
+      { key: 'negotiation', label: 'Concession Framework', description: 'Are the concessions realistic, protecting company margin while solving customer pain?', weight: 20 },
+    ],
+    skillsProven: ['Account management', 'Turnaround strategy', 'ROI presentations', 'Negotiation and retention'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'privacy-dsar-response',
+    categoryId: 'customer-ops',
+    topicId: 'data-privacy-gdpr-popia',
+    level: 'beginner',
+    title: 'POPIA Data Subject Access Request (DSAR) Response Flow',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Handle a POPIA Section 23 request from a customer asking to delete their personal data.',
+    scenario:
+      'A customer contact center for "SA-Gifts" (an online portal) receives an email requesting access to and deletion of all personal data under the Protection of Personal Information Act (POPIA). The customer support agent has never handled a POPIA request before and is unsure what data can be deleted and what must be kept for tax purposes.',
+    brief:
+      'Write a standard response protocol for handling a POPIA Section 23 request, including identity verification and a response template.',
+    deliverables: [
+      'A checklist for verifying the identity of the requester securely before disclosing information',
+      'A standard draft response email informing the user what data is being deleted and what must legally be retained (SARS compliance)',
+      'An internal action checklist for the database administrator indicating where customer records must be anonymised',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Acknowledge that under SA tax law (SARS), transaction and invoicing history must be kept for 5 years, even if a user requests deletion under POPIA.',
+    rubric: [
+      { key: 'verification', label: 'Identity Verification', description: 'Is the verification process secure without creating excessive user friction?', weight: 35 },
+      { key: 'template', label: 'Response Draft Quality', description: 'Is the email polite, legal-compliant (POPIA vs. SARS), and free of confusing jargon?', weight: 35 },
+      { key: 'internal', label: 'Internal Workflow', description: 'Are the database anonymisation steps clear and compliant?', weight: 30 },
+    ],
+    skillsProven: ['POPIA compliance', 'Customer data privacy', 'DSAR workflows', 'Email templates'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'privacy-data-audit',
+    categoryId: 'customer-ops',
+    topicId: 'data-privacy-gdpr-popia',
+    level: 'intermediate',
+    title: 'Data Mapping and Privacy Audit for a Local Insurtech',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Map personal information flows and audit compliance against POPIA principles.',
+    scenario:
+      '"PayGuard", a Johannesburg-based digital insurance broker, collects user names, IDs, banking details, and location data. They store this in Firebase, send emails via Mailchimp, and use WhatsApp for support. They have never mapped their data flows or registered an Information Officer.',
+    brief:
+      'Conduct a data mapping audit. Map how personal information enters the system, where it is stored, who has access, and identify 3 critical security risks under POPIA.',
+    deliverables: [
+      'A data inventory table detailing data types, collection points, storage locations, and third-party tools used',
+      'A visual data flow map description showing transfer paths of Personally Identifiable Information (PII)',
+      'Identification of 3 POPIA compliance gaps (e.g. cross-border transfers, lack of consent check boxes) with concrete remediation steps',
+      'A list of duties and registration requirements for the company\'s designated Information Officer',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Address cross-border data transfer regulations (POPIA Section 72) since Mailchimp and Firebase host data outside South Africa.',
+    rubric: [
+      { key: 'data-mapping', label: 'Data Mapping Accuracy', description: 'Is the data inventory comprehensive and are the data flows mapped clearly?', weight: 35 },
+      { key: 'gap-analysis', label: 'POPIA Compliance Gaps', description: 'Are the 3 identified risks legally valid under POPIA (e.g. cross-border transfer laws)?', weight: 35 },
+      { key: 'remediation', label: 'Remediation Steps', description: 'Are the remediation recommendations practical for a small technology firm?', weight: 30 },
+    ],
+    skillsProven: ['Data privacy audit', 'POPIA Section 72', 'Data flow mapping', 'Compliance management'],
+    relatedRoadmapIds: [],
+  },
+  {
+    id: 'privacy-compliance-training',
+    categoryId: 'customer-ops',
+    topicId: 'data-privacy-gdpr-popia',
+    level: 'advanced',
+    title: 'POPIA & Data Privacy Compliance Training Program',
+    difficulty: 'Advanced',
+    estimatedHours: '4 hours',
+    tagline: 'Design a data privacy training program and policy deck for customer support teams.',
+    scenario:
+      'A South African BPO call center handles customer queries for a retail bank. A recent internal audit revealed agents are copying customer credit card details into Slack to resolve disputes, and sharing logins to the CRM. The Chief Risk Officer has ordered an immediate training program and strict policy enforcement.',
+    brief:
+      'Develop a complete data privacy compliance program and interactive slide deck outline for the customer support department to eliminate unsafe data practices.',
+    deliverables: [
+      'A training module outline covering POPIA principles, card security (PCI-DSS), and secure credential management',
+      'Three interactive scenarios/quizzes to test agents on data sharing, phishing, and social engineering',
+      'A support team operational policy outlining strict boundaries for handling PII (e.g., zero-tolerance Slack rules)',
+      'A response workflow to be followed if an agent accidentally leaks customer PII (incident reporting procedure)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on practical daily habits. A dry lecture on legislation won\'t stop agents from pasting passwords. Make the rules highly operational.',
+    rubric: [
+      { key: 'curriculum', label: 'Training Curriculum', description: 'Is the training outline comprehensive, covering POPIA, PCI-DSS, and credential hygiene?', weight: 30 },
+      { key: 'interactive', label: 'Scenarios & Quizzes', description: 'Are the test scenarios realistic and effective at teaching compliance behavior?', weight: 30 },
+      { key: 'policy', label: 'PII Handling Policy', description: 'Are the rules clear and enforceable for a call center team?', weight: 25 },
+      { key: 'incident', label: 'Leak Response Plan', description: 'Is the incident containment workflow clear and compliant with regulatory reporting?', weight: 15 },
+    ],
+    skillsProven: ['Compliance training design', 'PCI-DSS in support ops', 'Social engineering defense', 'Incident reporting protocols'],
+    relatedRoadmapIds: [],
+  },
 ];
 
 

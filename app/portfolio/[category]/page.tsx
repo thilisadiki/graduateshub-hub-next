@@ -8,6 +8,7 @@ import { getTasksByTopic } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import Pagination from '@/components/shared/Pagination';
 
 export async function generateStaticParams() {
   return portfolioCategories.map((c) => ({ category: c.id }));
@@ -15,27 +16,37 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ page?: string }>;
 }): Promise<Metadata> {
   const { category } = await params;
+  const { page } = await searchParams;
+  const pageNum = Math.max(1, parseInt(page ?? '1'));
   const cat = getCategoryById(category);
   if (!cat) return {};
   const topics = getTopicsByCategory(cat.id);
   const topicTitles = topics.slice(0, 5).map((t) => t.title).join(', ');
   const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
+  const url = pageNum === 1 ? `${SITE_URL}/portfolio/${cat.id}` : `${SITE_URL}/portfolio/${cat.id}?page=${pageNum}`;
+  const title = pageNum === 1 
+    ? `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates`
+    : `${cat.name} Portfolio Tasks — Page ${pageNum} — Graded Briefs`;
+  
   return {
-    title: `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates`,
+    title,
     description,
-    alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}` },
+    alternates: { canonical: url },
     openGraph: {
       siteName: SITE_NAME,
-      title: `${cat.name} Portfolio Tasks | Graduates Hub`,
+      title: `${title} | Graduates Hub`,
       description,
-      url: `${SITE_URL}/portfolio/${cat.id}`,
+      url,
       type: 'website',
       images: [OG_IMAGE],
     },
+    ...(pageNum > 1 && { robots: { index: false, follow: true } }),
   };
 }
 
@@ -61,14 +72,21 @@ const LEVEL_STYLES: Record<PortfolioLevel, { label: string; available: string; m
 
 export default async function CategoryPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ page?: string }>;
 }) {
   const { category } = await params;
+  const resolvedParams = await searchParams;
   const cat = getCategoryById(category);
   if (!cat) notFound();
 
-  const topics = getTopicsByCategory(cat.id);
+  const allTopics = getTopicsByCategory(cat.id);
+  const PER_PAGE = 10;
+  const totalPages = Math.ceil(allTopics.length / PER_PAGE);
+  const page = Math.max(1, Math.min(totalPages || 1, parseInt(resolvedParams.page ?? '1')));
+  const topics = allTopics.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
@@ -88,7 +106,7 @@ export default async function CategoryPage({
     numberOfItems: topics.length,
     itemListElement: topics.map((t, i) => ({
       '@type': 'ListItem',
-      position: i + 1,
+      position: (page - 1) * PER_PAGE + i + 1,
       url: `${SITE_URL}/portfolio/${cat.id}/${t.id}`,
       name: t.title,
     })),
@@ -112,7 +130,7 @@ export default async function CategoryPage({
       </div>
 
       <main className="max-w-5xl mx-auto px-6 py-10">
-        {topics.length === 0 ? (
+        {allTopics.length === 0 ? (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 text-center">
             <h2 className="text-xl font-extrabold text-gray-900 mb-2">Topics coming soon</h2>
             <p className="text-gray-500">We are still writing the first briefs for this category. Check back soon or explore another category.</p>
@@ -161,6 +179,12 @@ export default async function CategoryPage({
                 </Link>
               );
             })}
+
+            <Pagination 
+              currentPage={page} 
+              totalPages={totalPages} 
+              baseUrl={`/portfolio/${cat.id}`} 
+            />
           </div>
         )}
       </main>

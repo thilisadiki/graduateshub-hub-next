@@ -89,5 +89,21 @@ export const aiPromptingTopics: PortfolioTopic[] = [
       'Build automated business workflows using no-code platforms combined with LLM prompting. Tests system integration, prompt chaining, error handling, and automation efficiency.',
     skillsProven: ['No-code automation', 'Make.com / Zapier integration', 'LLM prompt chaining', 'API payload mapping', 'Error handling & fallbacks'],
   },
+  {
+    id: 'prompting-vector-databases',
+    categoryId: 'ai-prompting',
+    title: 'Prompting for Vector Databases & Semantic Search',
+    description:
+      'Optimize query formatting, hybrid search parameters, and metadata retrieval filtering through LLM prompting. Tests metadata extraction, embedding preparation, and retrieval ranking logic.',
+    skillsProven: ['Vector database querying', 'Metadata extraction', 'Semantic search optimization', 'Hybrid search prompting'],
+  },
+  {
+    id: 'prompt-security-jailbreak',
+    categoryId: 'ai-prompting',
+    title: 'Prompt Security, Injection & Jailbreak Mitigation',
+    description:
+      'Audit security vulnerabilities in AI prompts, protect system guidelines from adversarial jailbreaks, and sanitize inputs to prevent prompt injection attacks.',
+    skillsProven: ['Jailbreak defense', 'Prompt injection mitigation', 'Security vulnerability audit', 'Adversarial evaluation'],
+  },
 ];
 

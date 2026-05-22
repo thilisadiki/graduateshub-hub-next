@@ -915,4 +915,271 @@ export const digitalMarketingTasks: PortfolioTask[] = [
     skillsProven: ['Go-to-market strategy', 'Market expansion', 'Localisation', 'Growth strategy'],
     relatedRoadmapIds: ['digital-marketing-specialist'],
   },
+  {
+    id: 'copywriting-ad-variants',
+    categoryId: 'digital-marketing',
+    topicId: 'copywriting-content-creation',
+    level: 'beginner',
+    title: 'Ad Variant Copywriting',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Write 5 distinct ad copy variants for a South African food delivery service.',
+    scenario:
+      'ChowNow is a local food delivery app launching in Cape Town. They want to run Meta ads targeting busy professionals, families, and students, but their current ads are generic. They need 5 copy variants testing different hooks.',
+    brief:
+      'Write 5 distinct Facebook/Instagram ad copy variants. Each variant must target a different buyer angle (e.g., convenience, cost-saving, late-night cravings) and use different copy frameworks (like AIDA or PAS).',
+    deliverables: [
+      'Target persona definition and selected hook/framework for each of the 5 variants',
+      'The actual ad copy (Primary Text, Headline, and Link Description) for all 5 variants',
+      'A one-sentence explanation of what specific variable each variant is testing',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Show your creativity. Ensure the copy is tailored to the South African context (e.g., using terms like "lekker", local foods, or commuting habits) without overdoing it. A strong hook is essential.',
+    rubric: [
+      { key: 'copy-frameworks', label: 'Use of Frameworks', description: 'Did the candidate correctly apply AIDA, PAS, or other copywriting formulas?', weight: 30 },
+      { key: 'persuasion', label: 'Persuasion & Hook', description: 'Are the headlines and first lines scroll-stopping and persuasive?', weight: 40 },
+      { key: 'context', label: 'Local Relevance', description: 'Is the tone and terminology appropriate for the South African target audience?', weight: 30 },
+    ],
+    skillsProven: ['Direct response copywriting', 'AIDA framework', 'Ad copy testing', 'Persuasive writing'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'copywriting-landing-page',
+    categoryId: 'digital-marketing',
+    topicId: 'copywriting-content-creation',
+    level: 'intermediate',
+    title: 'Long-Form Sales Page Copy',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Write a persuasive long-form sales page for a premium career coaching bootcamp.',
+    scenario:
+      'A South African tech career coaching brand is launching an intensive 8-week bootcamp priced at R15,000. They need high-converting long-form landing page copy that overcomes price objections, builds trust, and drives conversions.',
+    brief:
+      'Draft the complete text for a long-form sales landing page. Structure it logically: Headline, Pain Identification, The Solution, Feature/Benefit breakdown, Testimonials/Social Proof, Pricing & Guarantees, FAQs, and multiple Call-to-Actions (CTAs).',
+    deliverables: [
+      'A structural outline of the page indicating section-by-section layouts and copy goals',
+      'The complete written copy for each section, including headlines, body copy, bullet points, and CTA button texts',
+      'An objection-handling guide listing the top 3 customer doubts (e.g., cost, time, job guarantees) and how the copy addresses them',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Long copy out-converts short copy when selling premium offers, but it must be readable. Use formatting, bold text, bullet points, and subheadings. Avoid corporate speak.',
+    rubric: [
+      { key: 'structure', label: 'Copy Structure & Flow', description: 'Does the copy flow logically from hook to pain to solution to close?', weight: 30 },
+      { key: 'objection-handling', label: 'Objection Handling', description: 'Are customer objections addressed directly and persuasively in the copy?', weight: 40 },
+      { key: 'clarity', label: 'Readability & Formatting', description: 'Is the page copy formatted with scan-friendly visual hierarchy and compelling CTAs?', weight: 30 },
+    ],
+    skillsProven: ['Sales page copywriting', 'Objection handling', 'Persuasion principles', 'Formatting & structure'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'copywriting-funnel-flow',
+    categoryId: 'digital-marketing',
+    topicId: 'copywriting-content-creation',
+    level: 'advanced',
+    title: 'Multi-Stage Funnel Copywriting',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Write copy for a lead magnet landing page, welcome sequence, and sales offer page.',
+    scenario:
+      'A financial education platform wants to build an email marketing funnel to sell their stock-market investing course. They need a lead magnet landing page copy, a 4-part automated email nurture sequence, and the final sales email copy.',
+    brief:
+      'Write the copy for a complete customer acquisition funnel. Start with the landing page offering a free guide, then write the 4 nurture emails that build authority and handle objections, and end with the sales promotion email.',
+    deliverables: [
+      'The copy for the Lead Magnet Landing Page (compelling headline, 3-5 benefit bullets, email form title, CTA button)',
+      'A 4-part email sequence (Subject Line, Preview Text, and Body for each) showing the progression of nurturing to offering',
+      'The final Sales Pitch Email copy designed for high-click rates to the course sales page',
+      'A mapping of the micro-decisions and psychology behind each piece of copy in the funnel flow',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'A funnel is a chain. If the landing page copy fails, the emails are never sent. If email 1 is boring, email 2 is never opened. Write copy that carries the reader through each step.',
+    rubric: [
+      { key: 'consistency', label: 'Voice & Message Consistency', description: 'Is the brand voice consistent across landing page, nurture emails, and sales emails?', weight: 25 },
+      { key: 'email-craft', label: 'Email Copywriting Craft', description: 'Are subject lines clickable, preview texts hooky, and the email bodies engaging and readable?', weight: 35 },
+      { key: 'funnel-psychology', label: 'Funnel Psychology', description: 'Does the sequence build authority and value before asking for the sale?', weight: 40 },
+    ],
+    skillsProven: ['Funnel copywriting', 'Email sequence writing', 'Direct response strategy', 'Consumer psychology'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'crm-welcome-sequence-design',
+    categoryId: 'digital-marketing',
+    topicId: 'marketing-automation-crm',
+    level: 'beginner',
+    title: 'SaaS Welcome Sequence Workflow',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Design the automation steps and branching rules for a SaaS welcome workflow.',
+    scenario:
+      'A B2B task management tool has high signup rates but low activation rates. Many users log in once and never return. The growth team needs a 3-part automated welcome sequence triggered based on user behaviour inside the app.',
+    brief:
+      'Design the logical workflow steps, delay times, and conditional branching for the welcome email automation sequence. You do not need the software itself; document the flow structure in markdown.',
+    deliverables: [
+      'A step-by-step description or visual flowchart of the automation logic (triggers, delays, actions, and conditional checks)',
+      'The logic for at least 2 behavioral branching paths (e.g., user created a project vs user did not create a project)',
+      'Key performance metrics you would track to measure the automation\'s effectiveness',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Focus on behavioral triggers. Instead of just "wait 2 days, send email 2", use logic like "if user has not completed task X within 48 hours, send email 2a. If they have, wait and send email 2b."',
+    rubric: [
+      { key: 'logic', label: 'Workflow Logic', description: 'Are the trigger definitions and workflow structures clear and free of logical gaps?', weight: 40 },
+      { key: 'behavioral', label: 'Behavioral Targeting', description: 'Does the workflow intelligently branch based on user activity?', weight: 35 },
+      { key: 'measurement', label: 'KPI Definitions', description: 'Are the success metrics defined accurately and actionable?', weight: 25 },
+    ],
+    skillsProven: ['Workflow design', 'Marketing automation', 'Customer onboarding', 'Logical planning'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'crm-lead-scoring-model',
+    categoryId: 'digital-marketing',
+    topicId: 'marketing-automation-crm',
+    level: 'intermediate',
+    title: 'B2B Lead Scoring Matrix',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Design a dual-axis lead scoring matrix for an enterprise security software vendor.',
+    scenario:
+      'An enterprise cybersecurity company is getting 1,000 downloads a month of their free whitepapers, but sales reps are wasting time calling low-quality leads (like students or freelancers). They need a lead scoring model in HubSpot to prioritize hot prospects.',
+    brief:
+      'Build a lead scoring matrix that grades leads on two dimensions: Fit (demographics, firmographics) and Behavior (engagement, interest level). Specify points, thresholds, and routing actions.',
+    deliverables: [
+      'Fit criteria table (Company size, Job title, Location) with positive/negative points allocated to each',
+      'Behavioral criteria table (Web visits, Email opens, Form fills, Demo requests) with points for each action',
+      'A threshold definition: when a lead becomes an MQL (Marketing Qualified Lead) and is automatically routed to Sales',
+      'An explanation of how you handle score decay (leads who go inactive)',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Do not just add points; remember to subtract points for bad fits (e.g., email address contains ".edu" or "gmail.com"). Keep it simple enough for a team to implement in HubSpot or Marketo.',
+    rubric: [
+      { key: 'fit-criteria', label: 'Fit Scoring Quality', description: 'Are demographical and firmographical points aligned with realistic enterprise buying personas?', weight: 35 },
+      { key: 'behavior-criteria', label: 'Behavioral Scoring Quality', description: 'Are behavioral points weighted appropriately (e.g., downloading a PDF vs requesting a pricing page)?', weight: 35 },
+      { key: 'routing', label: 'Decay & Routing rules', description: 'Are the MQL handover thresholds and score decay rules practical and well-defined?', weight: 30 },
+    ],
+    skillsProven: ['Lead scoring models', 'HubSpot administration', 'B2B sales routing', 'Database governance'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'crm-lifecycle-migration',
+    categoryId: 'digital-marketing',
+    topicId: 'marketing-automation-crm',
+    level: 'advanced',
+    title: 'CRM Lifecycle Database Migration',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Design a migration plan from spreadsheets to a structured CRM lifecycle database.',
+    scenario:
+      'A growing commercial real estate broker in Johannesburg manages R150M in properties using 15 separate Excel spreadsheets. Leads get lost, sales cycles are untracked, and duplicate communications are common. They have purchased Salesforce/HubSpot and need a complete data migration and pipeline configuration.',
+    brief:
+      'Act as the CRM Implementation Consultant. Design a migration and schema plan to move their spreadsheets into a structured CRM, ensuring clean data mapping, deduplication rules, and custom deal pipeline stages.',
+    deliverables: [
+      'The data schema: custom property definitions, object mappings (Contacts, Accounts, Deals, Properties)',
+      'Data mapping and cleaning procedure: step-by-step instructions for preparing, cleaning, and deduplicating Excel data before import',
+      'The custom Deal Pipeline stages tailored to commercial real estate with clear probability scores and criteria to move cards',
+      'A 30-day user adoption and training plan for the sales agents',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'A CRM is only as good as the cleanliness of the data entered. Detail how you handle fields that are inconsistent across spreadsheets (e.g., phone formats, blank company names).',
+    rubric: [
+      { key: 'schema', label: 'Schema Architecture', description: 'Is the data architecture logical, avoiding redundancy and capturing essential property sales data?', weight: 35 },
+      { key: 'migration', label: 'Migration Procedure', description: 'Is the data cleansing and import process rigorous enough to prevent garbage-in-garbage-out?', weight: 35 },
+      { key: 'pipeline', label: 'Pipeline Fit', description: 'Are the pipeline stages relevant to a high-value B2B sales cycle?', weight: 30 },
+    ],
+    skillsProven: ['CRM data schema', 'Database migration', 'Salesforce/HubSpot setup', 'Data governance'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'mobile-aso-listing',
+    categoryId: 'digital-marketing',
+    topicId: 'mobile-app-marketing',
+    level: 'beginner',
+    title: 'App Store Optimisation (ASO) Plan',
+    difficulty: 'Beginner',
+    estimatedHours: '1 to 2 hours',
+    tagline: 'Optimise metadata and app listings for a South African personal finance app.',
+    scenario:
+      'SpendSmart is a South African budgeting app. They are preparing to launch on iOS and Android. They face competition from established apps and need their listing optimized to show up for keywords like "budget app SA" and "expense tracker".',
+    brief:
+      'Create an App Store Optimization (ASO) listing and strategy plan. Draft the metadata for the Apple App Store and Google Play Store, find target keywords, and suggest a screenshot style.',
+    deliverables: [
+      'Keyword research list of 10 primary and secondary keywords for the South African market',
+      'Optimised listing fields for iOS: App Name, Subtitle, and Keywords field (100 characters)',
+      'Optimised listing fields for Android: App Title, Short Description, and Long Description (first 500 characters optimized)',
+      'A brief screenshot brief describing the layout and main text overlays for the first 3 app screenshots',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Store algorithms have character limits and prioritize keyword placement. The App Name and Title are the most valuable fields—put high-volume keywords there.',
+    rubric: [
+      { key: 'keywords', label: 'ASO Keyword Search', description: 'Are the keywords highly relevant to budgeting in South Africa and selected by search volume likelihood?', weight: 35 },
+      { key: 'metadata', label: 'ASO Writing Quality', description: 'Are character limits strictly respected and keywords naturally integrated without stuffing?', weight: 40 },
+      { key: 'screenshots', label: 'Visual Brief', description: 'Are the screenshot briefs clear, benefit-driven, and engaging?', weight: 25 },
+    ],
+    skillsProven: ['ASO', 'App marketing', 'Keyword optimization', 'Mobile copy'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'mobile-push-campaign',
+    categoryId: 'digital-marketing',
+    topicId: 'mobile-app-marketing',
+    level: 'intermediate',
+    title: 'Mobile Push Notification Strategy',
+    difficulty: 'Intermediate',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Design a 7-day push notification sequence to reactivate dormant users.',
+    scenario:
+      'An e-commerce mobile app in South Africa notices that 40% of users who download the app make one purchase in the first week, but never open the app again. The mobile marketer needs to design a 7-day push campaign that triggers on day 7 of inactivity to bring them back.',
+    brief:
+      'Design a 7-day automated push notification flow. Write the actual copy, select trigger timings, set target screens (deep-linking rules), and define control groups for testing.',
+    deliverables: [
+      'The flow schedule (days and times) and segment specifications (e.g., users inactive for 7-14 days with historical purchase)',
+      'Copy for 4 push notifications (Title, Body, Emoji) optimized for lock screen readability',
+      'The deep-link mapping for each push notification (where in the app the user lands when they tap)',
+      'The experiment design: how you would measure lift against a holdout control group',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Push notifications are highly intrusive. Too many will lead to app uninstalls. Keep the copy short (under 90 characters), hyper-personalized, and value-focused.',
+    rubric: [
+      { key: 'push-copy', label: 'Push Notification Copy', description: 'Is the copy engaging, concise, and direct about the incentive?', weight: 35 },
+      { key: 'trigger-logic', label: 'Timing & Deep Links', description: 'Are the trigger timings logical and do deep links drop the user in the correct high-value screens?', weight: 35 },
+      { key: 'experimentation', label: 'Experimentation Design', description: 'Is the control group methodology sound to prove incremental lift?', weight: 30 },
+    ],
+    skillsProven: ['Mobile push strategy', 'Mobile analytics', 'Customer reactivation', 'Deep linking rules'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
+  {
+    id: 'mobile-referral-growth',
+    categoryId: 'digital-marketing',
+    topicId: 'mobile-app-marketing',
+    level: 'advanced',
+    title: 'Mobile App Referral Engine',
+    difficulty: 'Advanced',
+    estimatedHours: '3 to 5 hours',
+    tagline: 'Design a viral, dual-sided referral engine for a mobile remittance app.',
+    scenario:
+      'SendKash is a mobile remittance app allowing workers in SA to send money home to Zimbabwe/Mozambique. They want to launch a mobile-only referral engine. Word of mouth is their biggest driver, but they need to productize it to scale. They have a R200,000 budget for referral payouts.',
+    brief:
+      'Design the complete referral mechanics, UX flow, and fraud detection framework for this remittance referral program. Explain how users discover it, the referral loops, and calculations of return on investment (ROI).',
+    deliverables: [
+      'The referral mechanics: rewards for referrer and referee, payout triggers, and conditions (e.g., first successful transfer)',
+      'The user flow description: step-by-step from discovering the invite code to copying, sending via WhatsApp, and reward claim',
+      'Anti-fraud rules: how you prevent self-referral, device farming, and empty account creation',
+      'The financial model: cost per acquisition (CAC), viral coefficient projection, and lifetime value (LTV) comparison',
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Remittance involves money transfers. The fraud risk in referrals is high (e.g., users creating fake accounts to get signup bonuses). Your security and validation rules must be detailed.',
+    rubric: [
+      { key: 'incentive-mechanics', label: 'Referral Engine Mechanics', description: 'Is the payout loop financially viable and aligned with customer value?', weight: 30 },
+      { key: 'security-fraud', label: 'Fraud Mitigation', description: 'Are the security measures detailed enough to stop systemic exploitation?', weight: 40 },
+      { key: 'financials', label: 'Financial Projection Model', description: 'Are the CAC and viral growth metrics mathematically sound?', weight: 30 },
+    ],
+    skillsProven: ['Mobile referral loops', 'Growth modeling', 'Fraud prevention', 'Remittance marketing'],
+    relatedRoadmapIds: ['digital-marketing-specialist'],
+  },
 ];
