@@ -1,0 +1,56 @@
+{
+  "id": "bi-filters-drilldowns",
+  "categoryId": "data",
+  "topicId": "dashboard-design-bi",
+  "level": "intermediate",
+  "title": "Build Filters and Drill-Downs",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design interactive dashboard filters that let users slice data by region, product, and time.",
+  "scenario": "A national sales dashboard currently shows a single view of total company revenue. The regional managers want to filter by their region, drill into product categories, and compare this quarter to last quarter. The current dashboard has no interactivity.",
+  "brief": "Design the filter architecture for an interactive BI dashboard. Specify which filters exist, how they interact (cascading vs independent), and what happens when a user applies multiple filters simultaneously.",
+  "deliverables": [
+    "A list of all filters: Region (multi-select), Product Category (cascading), Date Range (picker), and Comparison Period (toggle)",
+    "The filter interaction model: which filters are independent and which cascade (e.g., selecting a region narrows the product list)",
+    "The default state: what the dashboard shows when no filters are applied",
+    "One edge case: what happens when a filter combination returns zero results"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A dashboard with 10 filters and no guidance is unusable. Think about progressive disclosure — show the most-used filters first.",
+  "rubric": [
+    {
+      "key": "filters",
+      "label": "Filter Design",
+      "description": "Are the filter types appropriate for each data dimension?",
+      "weight": 30
+    },
+    {
+      "key": "interaction",
+      "label": "Interaction Model",
+      "description": "Is the cascading vs independent logic clearly defined and user-friendly?",
+      "weight": 35
+    },
+    {
+      "key": "defaults",
+      "label": "Default State",
+      "description": "Is the default dashboard view useful without any filter changes?",
+      "weight": 20
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Case Handling",
+      "description": "Is the zero-results state handled gracefully?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Dashboard interactivity",
+    "Filter design",
+    "BI tools",
+    "UX design"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

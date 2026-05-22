@@ -1,0 +1,56 @@
+{
+  "id": "governance-quality-checks",
+  "categoryId": "data",
+  "topicId": "data-governance-quality",
+  "level": "intermediate",
+  "title": "Design Data Quality Checks",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Build a set of automated validation rules for a sales pipeline.",
+  "scenario": "A company discovered that 5% of their revenue reports were wrong last quarter because duplicates, nulls, and out-of-range values slipped through their data pipeline undetected. The CTO wants automated quality gates.",
+  "brief": "Design a comprehensive set of data quality checks for a sales data pipeline. The checks should run automatically after each data load and block bad data from reaching the reporting layer.",
+  "deliverables": [
+    "A framework of check categories: completeness, accuracy, consistency, timeliness, and uniqueness",
+    "At least 10 specific check rules with SQL or pseudo-code (e.g., \"SELECT COUNT(*) FROM orders WHERE total < 0\")",
+    "A severity classification: which failures block the pipeline (critical) vs which generate warnings (non-critical)",
+    "A reporting mechanism: how the data team is notified and what the quality dashboard looks like"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Quality checks that nobody looks at are worse than no checks (false sense of security). Design the alerting so it is impossible to ignore.",
+  "rubric": [
+    {
+      "key": "framework",
+      "label": "Quality Framework",
+      "description": "Are the check categories comprehensive and correctly defined?",
+      "weight": 25
+    },
+    {
+      "key": "rules",
+      "label": "Check Rules",
+      "description": "Are the 10 rules specific, correct, and covering different quality dimensions?",
+      "weight": 30
+    },
+    {
+      "key": "severity",
+      "label": "Severity Classification",
+      "description": "Is the critical vs warning distinction well-reasoned?",
+      "weight": 25
+    },
+    {
+      "key": "alerting",
+      "label": "Alerting Design",
+      "description": "Would the team actually see and act on quality failures?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Data quality",
+    "Automated validation",
+    "Pipeline design",
+    "Data governance"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "etl-simple-flow",
+  "categoryId": "data",
+  "topicId": "etl-data-pipelines",
+  "level": "beginner",
+  "title": "Design a Simple ETL Flow",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Document the Extract, Transform, Load steps for moving CSV data into a database.",
+  "scenario": "A small business receives a daily CSV export from their point-of-sale system. They want to load this data into a PostgreSQL database so they can query it with SQL instead of opening Excel every morning.",
+  "brief": "Document the complete ETL flow. You do not need to write production code — describe each step clearly enough that a junior developer could implement it.",
+  "deliverables": [
+    "Extract: Where the CSV comes from, how it is retrieved, and what validation you do before processing",
+    "Transform: The specific cleaning and transformation steps (date parsing, null handling, type casting)",
+    "Load: The database table schema and the insertion strategy (truncate-and-reload vs upsert)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Think about what happens when the CSV is missing, empty, or has a new column that was not there yesterday.",
+  "rubric": [
+    {
+      "key": "extract",
+      "label": "Extract Step",
+      "description": "Is the source validation thorough (file exists, not empty, expected columns)?",
+      "weight": 30
+    },
+    {
+      "key": "transform",
+      "label": "Transform Step",
+      "description": "Are the cleaning steps specific and appropriate for POS data?",
+      "weight": 35
+    },
+    {
+      "key": "load",
+      "label": "Load Strategy",
+      "description": "Is the insertion strategy chosen with awareness of idempotency and duplicates?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "ETL design",
+    "Data validation",
+    "Database loading",
+    "Pipeline documentation"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

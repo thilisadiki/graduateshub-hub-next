@@ -1,0 +1,49 @@
+{
+  "id": "kpi-startup-definition",
+  "categoryId": "data",
+  "topicId": "business-metrics-kpis",
+  "level": "beginner",
+  "title": "Define KPIs for a Startup",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Identify the 5 most important metrics for a food delivery startup.",
+  "scenario": "A food delivery startup in Johannesburg has just closed its seed round. The CEO asks you: \"What 5 numbers should I look at every morning?\" They currently track nothing.",
+  "brief": "Define the 5 most important KPIs for this startup. For each, explain what it measures, why it matters at this stage, how to calculate it, and what a healthy target looks like.",
+  "deliverables": [
+    "A table of 5 KPIs with columns: Name, Formula, Why It Matters, Target Range",
+    "A one-paragraph explanation of why you chose these 5 over other candidates you considered",
+    "One \"vanity metric\" the CEO might be tempted to track and why it would be misleading"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The startup is pre-product-market-fit. Revenue is important but retention and unit economics matter more at this stage.",
+  "rubric": [
+    {
+      "key": "selection",
+      "label": "KPI Selection",
+      "description": "Are the 5 KPIs appropriate for an early-stage food delivery startup?",
+      "weight": 35
+    },
+    {
+      "key": "definition",
+      "label": "KPI Definitions",
+      "description": "Are the formulas precise and the targets realistic?",
+      "weight": 30
+    },
+    {
+      "key": "judgment",
+      "label": "Business Judgment",
+      "description": "Does the vanity metric choice show mature analytical thinking?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "KPI definition",
+    "Startup metrics",
+    "Business acumen",
+    "Analytical judgment"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

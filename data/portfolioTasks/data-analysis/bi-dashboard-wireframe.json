@@ -1,0 +1,49 @@
+{
+  "id": "bi-dashboard-wireframe",
+  "categoryId": "data",
+  "topicId": "dashboard-design-bi",
+  "level": "beginner",
+  "title": "Design a Dashboard Wireframe",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Sketch a dashboard layout for a retail store manager with clear information hierarchy.",
+  "scenario": "A retail chain with 15 stores wants a dashboard for store managers. Each manager checks it once a day on a tablet. They care about: today's sales vs target, top-selling products, staff on shift, and any stock alerts.",
+  "brief": "Design a dashboard wireframe (described in Markdown or as a simple layout sketch). Focus on information hierarchy: what is biggest, what is smallest, what is always visible vs what requires a click.",
+  "deliverables": [
+    "A wireframe description showing the layout grid (e.g., \"top bar: today's revenue KPI card; left column: product sales table; right: staff roster\")",
+    "An explanation of your information hierarchy: what is most prominent and why",
+    "One design choice you made to optimise for a tablet-first, glance-based use case"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This manager checks the dashboard standing in a stockroom. It must be readable at a glance from 2 feet away on a 10-inch screen.",
+  "rubric": [
+    {
+      "key": "layout",
+      "label": "Layout Design",
+      "description": "Is the layout logical with appropriate sizing for the most important information?",
+      "weight": 35
+    },
+    {
+      "key": "hierarchy",
+      "label": "Information Hierarchy",
+      "description": "Is the hierarchy well-justified and appropriate for a daily check-in?",
+      "weight": 35
+    },
+    {
+      "key": "context",
+      "label": "Contextual Design",
+      "description": "Does the design account for the tablet-first, standing-in-stockroom context?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Dashboard design",
+    "Information hierarchy",
+    "UX thinking",
+    "Retail analytics"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

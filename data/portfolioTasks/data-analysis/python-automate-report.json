@@ -1,0 +1,55 @@
+{
+  "id": "python-automate-report",
+  "categoryId": "data",
+  "topicId": "python-data-analysis",
+  "level": "advanced",
+  "title": "Automate a Weekly Report with Python",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a script that ingests data, generates statistics, and outputs a formatted HTML report.",
+  "scenario": "Every Monday, a data analyst manually opens 3 CSVs, calculates KPIs, pastes them into an email template, and sends it to 12 stakeholders. It takes 90 minutes. You need to automate this.",
+  "brief": "Write a Python script that reads the data, calculates the KPIs, generates an HTML report with inline CSS (suitable for email), and saves it to a file. The script should be idempotent and handle missing files gracefully.",
+  "deliverables": [
+    "The complete Python script with clear function separation (load, calculate, render, save)",
+    "The HTML template showing at least 3 KPIs with conditional formatting (green/red based on targets)",
+    "Error handling for missing files, empty datasets, and data quality issues"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is a software engineering task disguised as a data task. Clean function boundaries, error handling, and logging matter as much as the calculations.",
+  "rubric": [
+    {
+      "key": "architecture",
+      "label": "Code Architecture",
+      "description": "Is the script cleanly separated into load, calculate, render, and save functions?",
+      "weight": 30
+    },
+    {
+      "key": "output",
+      "label": "Report Quality",
+      "description": "Is the HTML output professional and suitable for email delivery?",
+      "weight": 30
+    },
+    {
+      "key": "robustness",
+      "label": "Error Handling",
+      "description": "Does the script handle missing files and bad data without crashing?",
+      "weight": 25
+    },
+    {
+      "key": "automation",
+      "label": "Automation Readiness",
+      "description": "Could this script be scheduled with cron/Task Scheduler without modification?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Python automation",
+    "HTML templating",
+    "Error handling",
+    "Report generation"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

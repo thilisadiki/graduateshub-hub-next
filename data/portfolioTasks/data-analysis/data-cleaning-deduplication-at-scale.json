@@ -1,0 +1,56 @@
+{
+  "id": "data-cleaning-deduplication-at-scale",
+  "categoryId": "data",
+  "topicId": "data-cleaning",
+  "level": "advanced",
+  "title": "Deduplication at Scale",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a fuzzy-matching deduplication pipeline for a CRM with 500K records.",
+  "scenario": "A sales team has been entering customer data manually for 5 years. The CRM now has 500,000 contact records, but an estimated 15% are duplicates caused by typos, abbreviations (\"Pty Ltd\" vs \"Proprietary Limited\"), merged company names, and inconsistent phone formats.",
+  "brief": "Design a deduplication pipeline. You must choose blocking/indexing strategies to avoid comparing every pair (O(n²)), select similarity metrics (Levenshtein, Jaro-Winkler, phonetic), and define merge rules for when two records are \"probably the same\".",
+  "deliverables": [
+    "A pipeline diagram showing the stages: standardisation → blocking → comparison → classification → merging",
+    "Your blocking strategy and why it reduces comparisons from 125 billion to a manageable number",
+    "The similarity metrics you would use for name, email, phone, and address fields, with thresholds",
+    "A merge policy: which record becomes the \"golden record\" and how conflicting field values are resolved"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is a systems-thinking task. You do not need to write production code, but your pipeline must be specific enough that a developer could implement it.",
+  "rubric": [
+    {
+      "key": "pipeline",
+      "label": "Pipeline Design",
+      "description": "Are the stages logically ordered and well-defined?",
+      "weight": 25
+    },
+    {
+      "key": "blocking",
+      "label": "Blocking Strategy",
+      "description": "Does the blocking approach credibly reduce the comparison space?",
+      "weight": 25
+    },
+    {
+      "key": "matching",
+      "label": "Similarity Metrics",
+      "description": "Are the chosen metrics appropriate for each field type?",
+      "weight": 25
+    },
+    {
+      "key": "merging",
+      "label": "Merge Policy",
+      "description": "Is the golden record strategy defensible and conflict-aware?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Record linkage",
+    "Fuzzy matching",
+    "Data quality at scale",
+    "Pipeline design"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

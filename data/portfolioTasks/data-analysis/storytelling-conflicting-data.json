@@ -1,0 +1,56 @@
+{
+  "id": "storytelling-conflicting-data",
+  "categoryId": "data",
+  "topicId": "data-storytelling",
+  "level": "advanced",
+  "title": "Present Conflicting Data to Stakeholders",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Two datasets tell opposite stories. Write the brief that acknowledges both.",
+  "scenario": "The marketing team says their new campaign increased website traffic by 40%. The sales team says revenue dropped 10% during the same period. Both are right. The CMO and CRO are in a heated argument, and the CEO has asked you to write a neutral brief that makes sense of both numbers.",
+  "brief": "Write a stakeholder brief that presents both datasets honestly, explains why they can both be true simultaneously, and recommends a path forward that neither team will reject.",
+  "deliverables": [
+    "A summary of both datasets with the key numbers, presented without bias",
+    "An explanation of how traffic can rise while revenue falls (at least 3 plausible mechanisms)",
+    "A recommended next step that both teams can agree on, framed as a shared investigation rather than a blame assignment",
+    "One metric you would propose tracking going forward to prevent this confusion in the future"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is a political task as much as an analytical one. The brief must be diplomatically written — neither team should feel attacked.",
+  "rubric": [
+    {
+      "key": "neutrality",
+      "label": "Neutrality",
+      "description": "Is the brief genuinely unbiased between marketing and sales?",
+      "weight": 25
+    },
+    {
+      "key": "mechanisms",
+      "label": "Explanatory Mechanisms",
+      "description": "Are the proposed explanations analytically sound and specific?",
+      "weight": 30
+    },
+    {
+      "key": "recommendation",
+      "label": "Path Forward",
+      "description": "Is the recommendation constructive and politically viable?",
+      "weight": 25
+    },
+    {
+      "key": "prevention",
+      "label": "Future Prevention",
+      "description": "Would the proposed metric actually prevent this confusion?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Stakeholder management",
+    "Conflicting data analysis",
+    "Diplomatic communication",
+    "Analytical judgment"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

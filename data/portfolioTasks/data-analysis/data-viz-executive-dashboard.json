@@ -1,0 +1,56 @@
+{
+  "id": "data-viz-executive-dashboard",
+  "categoryId": "data",
+  "topicId": "data-visualisation",
+  "level": "advanced",
+  "title": "Build a Dashboard Narrative",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a 4-chart executive dashboard where every chart answers a specific stakeholder question.",
+  "scenario": "A logistics company moves 50,000 parcels per day across South Africa. The COO wants a single dashboard she checks every Monday morning. She cares about: delivery speed, cost per parcel, regional bottlenecks, and customer complaints. Your job is to design the dashboard.",
+  "brief": "Design a 4-chart executive dashboard. Each chart must answer one of the COO's four questions. You must justify every design decision: chart type, time range, comparison baseline, colour coding, and what you deliberately excluded.",
+  "deliverables": [
+    "A wireframe or detailed description of the 4-chart layout with the information hierarchy",
+    "For each chart: the exact metric, chart type, time range, and comparison baseline",
+    "Three deliberate design decisions (what you excluded, simplified, or highlighted) and why",
+    "One alert or threshold rule you would add to make the dashboard proactive rather than reactive"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good dashboard is not 4 random charts. It is a story that flows top-left to bottom-right. Show that your layout has a reading order.",
+  "rubric": [
+    {
+      "key": "metrics",
+      "label": "Metric Selection",
+      "description": "Does each chart directly answer one of the four stakeholder questions?",
+      "weight": 30
+    },
+    {
+      "key": "design",
+      "label": "Dashboard Design",
+      "description": "Is the layout logical with clear information hierarchy and reading order?",
+      "weight": 25
+    },
+    {
+      "key": "decisions",
+      "label": "Design Decisions",
+      "description": "Are the exclusions and simplifications well-reasoned?",
+      "weight": 25
+    },
+    {
+      "key": "proactive",
+      "label": "Proactive Alerting",
+      "description": "Is the alert rule practical and tied to a meaningful threshold?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Dashboard design",
+    "Executive communication",
+    "Information hierarchy",
+    "Analytical judgment"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

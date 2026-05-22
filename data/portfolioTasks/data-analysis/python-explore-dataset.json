@@ -1,0 +1,48 @@
+{
+  "id": "python-explore-dataset",
+  "categoryId": "data",
+  "topicId": "python-data-analysis",
+  "level": "beginner",
+  "title": "Explore a Dataset with pandas",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Load, inspect, filter, and summarise a CSV using pandas fundamentals.",
+  "scenario": "You have been given a CSV file of 10,000 e-commerce orders. Your manager wants a quick exploration before the team decides what analysis to pursue.",
+  "brief": "Write a Python script using pandas that loads the CSV, inspects its shape and data types, handles any obvious issues, and produces a summary. You do not need the actual file — write the code as if the CSV exists at `orders.csv`.",
+  "deliverables": [
+    "The Python script covering: loading, `.info()`, `.describe()`, null checks, and at least 3 filtered views",
+    "A markdown summary of what you found (as if reporting to your manager)",
+    "One follow-up question your exploration raised that requires deeper analysis"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Write production-quality pandas code. Use method chaining where it improves readability. Comments should explain *why*, not *what*.",
+  "rubric": [
+    {
+      "key": "code",
+      "label": "pandas Fundamentals",
+      "description": "Are read_csv, info, describe, filtering, and groupby used correctly?",
+      "weight": 35
+    },
+    {
+      "key": "exploration",
+      "label": "Exploration Quality",
+      "description": "Do the filtered views reveal something interesting rather than being arbitrary?",
+      "weight": 30
+    },
+    {
+      "key": "communication",
+      "label": "Summary Communication",
+      "description": "Is the summary actionable and honest about what the data does and does not show?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "pandas",
+    "Exploratory data analysis",
+    "Python scripting",
+    "Data communication"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

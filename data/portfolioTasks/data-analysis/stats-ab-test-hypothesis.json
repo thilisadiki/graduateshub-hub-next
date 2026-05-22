@@ -1,0 +1,55 @@
+{
+  "id": "stats-ab-test-hypothesis",
+  "categoryId": "data",
+  "topicId": "statistical-thinking",
+  "level": "intermediate",
+  "title": "Hypothesis Testing (A/B Test)",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Determine if a website change actually improved conversion, or if it was just noise.",
+  "scenario": "An e-commerce site ran an A/B test on their checkout button colour. Control (blue) had 1,200 conversions out of 15,000 visitors. Variant (green) had 1,350 conversions out of 15,000 visitors. The product manager is celebrating, but is the difference statistically significant?",
+  "brief": "Conduct a hypothesis test. State your null and alternative hypotheses, choose the right test, calculate the result, and write your recommendation to the product manager.",
+  "deliverables": [
+    "The null and alternative hypotheses stated formally",
+    "The statistical test you chose (z-test for proportions, chi-square, etc.) and why",
+    "The test statistic, p-value, and your conclusion at α = 0.05",
+    "A one-paragraph recommendation to the product manager in plain English"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Show your working. A p-value without the calculation behind it is not convincing. If you would not ship this change, say so and explain why.",
+  "rubric": [
+    {
+      "key": "hypotheses",
+      "label": "Hypothesis Formulation",
+      "description": "Are H₀ and H₁ correctly and formally stated?",
+      "weight": 25
+    },
+    {
+      "key": "test",
+      "label": "Test Selection",
+      "description": "Is the chosen statistical test appropriate for comparing two proportions?",
+      "weight": 25
+    },
+    {
+      "key": "calculation",
+      "label": "Calculation",
+      "description": "Is the p-value calculation correct and the conclusion consistent with it?",
+      "weight": 25
+    },
+    {
+      "key": "recommendation",
+      "label": "Business Recommendation",
+      "description": "Is the recommendation practical and honest about uncertainty?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Hypothesis testing",
+    "A/B testing",
+    "Statistical significance",
+    "Business communication"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

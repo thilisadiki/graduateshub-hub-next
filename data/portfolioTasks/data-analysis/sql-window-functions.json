@@ -1,0 +1,48 @@
+{
+  "id": "sql-window-functions",
+  "categoryId": "data",
+  "topicId": "sql-querying",
+  "level": "intermediate",
+  "title": "Window Functions for Ranking & Trends",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "ROW_NUMBER, LAG, and running totals on a time-series dataset.",
+  "scenario": "A SaaS company tracks monthly recurring revenue (MRR) per customer. The finance team wants to rank customers, calculate month-over-month growth per customer, and see a running total of total MRR.",
+  "brief": "Write three SQL queries using window functions. Assume a table `monthly_mrr` with columns: `customer_id`, `month`, `mrr_amount`.",
+  "deliverables": [
+    "Query 1: Rank customers by their latest month MRR using ROW_NUMBER or RANK, partitioned by month",
+    "Query 2: Calculate month-over-month MRR change per customer using LAG",
+    "Query 3: A running total of company-wide MRR ordered by month"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Explain the difference between ROW_NUMBER, RANK, and DENSE_RANK in one sentence each.",
+  "rubric": [
+    {
+      "key": "window",
+      "label": "Window Function Usage",
+      "description": "Are OVER(), PARTITION BY, and ORDER BY used correctly?",
+      "weight": 40
+    },
+    {
+      "key": "lag",
+      "label": "LAG / Running Total",
+      "description": "Are LAG and SUM OVER correctly applied for trend analysis?",
+      "weight": 35
+    },
+    {
+      "key": "explanation",
+      "label": "Conceptual Understanding",
+      "description": "Does the candidate understand the ranking function differences?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Window functions",
+    "Time-series SQL",
+    "Analytical queries",
+    "MRR analysis"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

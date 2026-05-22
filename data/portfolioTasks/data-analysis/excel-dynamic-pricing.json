@@ -1,0 +1,50 @@
+{
+  "id": "excel-dynamic-pricing",
+  "categoryId": "data",
+  "topicId": "spreadsheet-modelling",
+  "level": "intermediate",
+  "title": "Dynamic Pricing Model",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Build a what-if model with data validation dropdowns and conditional formatting.",
+  "scenario": "A SaaS startup wants to model how changing their subscription price affects revenue. They currently have 5,000 customers at R199/month. They believe a 10% price increase will cause 3-8% churn, but are unsure.",
+  "brief": "Design a spreadsheet model (describe it in detail) that lets the CEO pick a price change percentage from a dropdown and instantly see projected revenue, churn impact, and break-even month.",
+  "deliverables": [
+    "The model layout: which cells are inputs, which are calculations, and which are outputs",
+    "The key formulas including the churn sensitivity calculation",
+    "How you would use Data Validation dropdowns and Conditional Formatting to make it user-friendly",
+    "A sensitivity table showing revenue at 5%, 10%, 15%, and 20% price increases with low/mid/high churn assumptions"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The CEO is the user. The model must be impossible to break by entering wrong values. Explain your defensive design choices.",
+  "rubric": [
+    {
+      "key": "model",
+      "label": "Model Logic",
+      "description": "Are the pricing, churn, and revenue formulas internally consistent?",
+      "weight": 35
+    },
+    {
+      "key": "usability",
+      "label": "User Experience",
+      "description": "Are dropdowns, formatting, and layout designed for a non-technical user?",
+      "weight": 30
+    },
+    {
+      "key": "sensitivity",
+      "label": "Sensitivity Analysis",
+      "description": "Does the sensitivity table cover a meaningful range of scenarios?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Financial modelling",
+    "What-if analysis",
+    "Data validation",
+    "Spreadsheet UX"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}
