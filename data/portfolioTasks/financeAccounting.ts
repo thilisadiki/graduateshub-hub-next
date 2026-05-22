@@ -1108,5 +1108,98 @@ export const financeAccountingTasks: PortfolioTask[] = [
     ],
     skillsProven: ['Cloud systems integration', 'Multi-currency accounting', 'Month-end close procedures', 'Financial statements prep', 'Management reporting'],
     relatedRoadmapIds: ['junior-accountant']
+  },
+
+  // --- Topic 13: Corporate Finance & Capital Structure Decision Making ---
+  {
+    id: 'corp-fin-debt-cost',
+    categoryId: 'finance-accounting',
+    topicId: 'corporate-finance-capital-structure',
+    level: 'beginner',
+    title: 'Calculate Cost of Debt & WACC',
+    difficulty: 'Beginner',
+    estimatedHours: '2 to 3 hours',
+    tagline: 'Calculate the cost of debt and Weighted Average Cost of Capital (WACC) in USD for an expanding franchise.',
+    scenario:
+      'A global coffee franchise plans to open 3 new international locations, requiring a capital injection of $1,500,000. The expansion will be funded through a mix of new debt and equity. The management team needs to determine their Cost of Debt, Cost of Equity, and the Weighted Average Cost of Capital (WACC) to evaluate the project\'s viability against their hurdle rate.',
+    brief:
+      'Given a set of financial parameters (risk-free rate of 4.5%, beta of 1.2, market risk premium of 6%, cost of debt of 7%, tax rate of 21%, and a target debt-to-equity ratio of 40/60), calculate the Cost of Equity using CAPM, the after-tax Cost of Debt, and the Weighted Average Cost of Capital (WACC). Provide a recommendation on whether to proceed with the expansion.',
+    deliverables: [
+      'Step-by-step CAPM calculation for the Cost of Equity.',
+      'Calculation of the after-tax Cost of Debt.',
+      'WACC calculation table and formula breakdown.',
+      'A brief investment recommendation (max 250 words) comparing WACC to the project\'s expected return of 9.5%.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Present your calculations clearly in Markdown tables. Show your working for each formula. Explain the financial logic behind why the tax shield reduces the effective cost of debt.',
+    rubric: [
+      { key: 'wacc_formula', label: 'WACC Formula Execution', description: 'Are all inputs (weights, rates, tax rate) applied correctly to calculate WACC?', weight: 40 },
+      { key: 'cost_equity', label: 'Cost of Equity Calculation', description: 'Is the CAPM equation executed correctly with the provided inputs?', weight: 30 },
+      { key: 'financial_recommendations', label: 'Financial Recommendations', description: 'Is the final recommendation logically sound and compared appropriately against the hurdle rate?', weight: 30 }
+    ],
+    skillsProven: ['Cost of Capital calculation', 'CAPM modeling', 'WACC analysis', 'Financial decision-making'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'corp-fin-financing-options',
+    categoryId: 'finance-accounting',
+    topicId: 'corporate-finance-capital-structure',
+    level: 'intermediate',
+    title: 'Financing Options Comparison & Dilution Analysis',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 to 4 hours',
+    tagline: 'Compare a bank term loan against an equity investor offer for a growing SaaS startup.',
+    scenario:
+      'A growing SaaS startup needs to raise $3,000,000 to fund product R&D and scale global sales. The founders are evaluating two term sheets: Option A is a 5-year bank term loan at a 9% interest rate with no equity dilution. Option B is an equity investment of $3,000,000 in exchange for 20% ownership of the company. The startup\'s current valuation is $12,000,000 pre-money, and they expect net income to grow from $500,000 to $2,500,000 over the next 5 years.',
+    brief:
+      'Perform a comparative financial analysis of the two options. Model the debt service requirements, compile a cap table dilution schedule under Option B, and calculate the founders\' remaining equity value after 5 years under both scenarios.',
+    deliverables: [
+      'Debt amortization table for Option A showing annual principal, interest payments, and remaining balance.',
+      'Cap table dilution schedule showing post-money ownership percentages for Option B.',
+      'Founder return on equity (ROE) and remaining equity valuation comparison at Year 5.',
+      'A recommendation report (max 400 words) summarizing the strategic trade-offs between debt interest burdens vs equity dilution.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Provide your analysis in clean Markdown. Use tables for the cap table and debt amortization schedules. Back your recommendation with quantitative output.',
+    rubric: [
+      { key: 'scenario_model', label: 'Financial Model Analysis', description: 'Are the debt amortization and ROE calculations accurate and complete?', weight: 35 },
+      { key: 'cap_table', label: 'Cap Table Dilution', description: 'Is the dilution impact on existing shareholders modeled correctly and ownership percentages precise?', weight: 35 },
+      { key: 'strategic_recommendation', label: 'Strategic Recommendations', description: 'Does the recommendation clearly address debt covenant risks, interest burden, and dilution trade-offs?', weight: 30 }
+    ],
+    skillsProven: ['Debt modeling', 'Equity dilution analysis', 'Cap table management', 'Strategic capital structuring'],
+    relatedRoadmapIds: ['junior-accountant']
+  },
+  {
+    id: 'corp-fin-merger-model',
+    categoryId: 'finance-accounting',
+    topicId: 'corporate-finance-capital-structure',
+    level: 'advanced',
+    title: 'Simplified M&A Merger Model & Synergy Valuation',
+    difficulty: 'Advanced',
+    estimatedHours: '5 to 7 hours',
+    tagline: 'Build a simplified consolidation merger model with accretion/dilution analysis in USD.',
+    scenario:
+      'A global retail corporation (Acquirer) plans to acquire a smaller specialty retail chain (Target) for $50,000,000 in a transaction funded 60% with new debt and 40% with stock. Acquirer has a share price of $50, shares outstanding of 10 million, and EPS of $4.00. Target has net income of $5,000,000. New debt will carry an interest rate of 6%. Acquirer expects to achieve $1,500,000 in pre-tax cost synergies. The acquisition team needs to build a model to determine if the deal is accretive or dilutive to the Acquirer\'s EPS in Year 1.',
+    brief:
+      'Build a simplified M&A consolidation model. Compute the acquisition purchase price and funding mix. Calculate the new share count, target net income contribution, debt interest expense (after 21% tax), cost synergies (after 21% tax), consolidated net income, and pro-forma EPS. Determine accretion/dilution.',
+    deliverables: [
+      'M&A transaction structure summary (deal value, debt issued, new stock issued, share count impact).',
+      'Pro-forma income statement adjustments table (Target Net Income, interest expense, tax adjustment, synergies).',
+      'Accretion / Dilution calculation showing pro-forma EPS compared to standalone EPS.',
+      'Synergy sensitivity table (what if synergies are only 50% achieved or transaction debt interest rate rises to 8%).',
+      'Executive memo (max 500 words) advising the Board of Directors on deal feasibility and risk factors.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Submit the pro-forma financial calculations and sensitivity matrices using Markdown tables. Ensure all formulas and assumptions are fully explained in the accompanying board memo.',
+    rubric: [
+      { key: 'consolidation_model', label: 'Consolidation Model', description: 'Are pro-forma financial statement adjustments, including tax shields and share additions, calculated correctly?', weight: 35 },
+      { key: 'accretion_dilution', label: 'Accretion / Dilution Analysis', description: 'Is the pro-forma EPS calculation accurate, and is accretion/dilution correctly determined?', weight: 35 },
+      { key: 'synergy_valuation', label: 'Synergy Sensitivity Valuation', description: 'Are the synergy thresholds and sensitivity scenarios modeled correctly?', weight: 30 }
+    ],
+    skillsProven: ['M&A modeling', 'Pro-forma statement consolidation', 'Accretion/dilution analysis', 'Corporate valuation', 'Board communication'],
+    relatedRoadmapIds: ['junior-accountant']
   }
 ];

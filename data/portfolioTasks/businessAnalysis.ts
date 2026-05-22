@@ -910,6 +910,190 @@ export const businessAnalysisTasks: PortfolioTask[] = [
     skillsProven: ['Business case development', 'NPV/ROI', 'Risk analysis', 'Board-level communication'],
     relatedRoadmapIds: [],
   },
+
+  // --- Topic 12: Agile Product Backlog Management & Refinement ---
+  {
+    id: 'ba-backlog-prioritization',
+    categoryId: 'business-analysis',
+    topicId: 'backlog-management-refinement',
+    level: 'beginner',
+    title: 'Kano Model Feature Prioritization',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Prioritize a backlog of 10 key features for a global e-learning platform using the Kano Model.',
+    scenario:
+      'A global e-learning platform is planning its next product release cycle. The product backlog contains 10 diverse feature ideas (e.g., download certificates, offline video mode, dark mode, AI quiz generator, 2FA, dark mode interface). The Product Manager needs a structured prioritization model to separate "must-haves" from "delighters" and avoid feature bloat.',
+    brief:
+      'Classify the 10 features into Kano categories (Must-Be, One-Dimensional, Attractive, Indifferent, Reverse) based on mock customer questionnaire feedback. Create a prioritization roadmap recommending which features to build first.',
+    deliverables: [
+      'Kano questionnaire mapping showing functional and dysfunctional question pairs for each feature.',
+      'A Kano categorization matrix classifying all 10 features.',
+      'A prioritized release plan outlining what features must go into the MVP, what will follow in the next release, and what should be deferred.',
+      'A short analysis (max 200 words) on how Kano prioritization prevents gold-plating.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Present your classifications and roadmap using clear Markdown tables. Justify each classification with user behavior assumptions.',
+    rubric: [
+      { key: 'kano_classification', label: 'Kano Classification Accuracy', description: 'Are the 10 features categorized logically based on customer satisfaction metrics?', weight: 35 },
+      { key: 'satisfaction_mapping', label: 'User Satisfaction Mapping', description: 'Is the mapping between customer needs and Kano categories explained clearly?', weight: 35 },
+      { key: 'prioritization_output', label: 'Prioritized Roadmap', description: 'Is the final release recommendation logical and actionable for a product release cycle?', weight: 30 }
+    ],
+    skillsProven: ['Kano Model prioritization', 'Product backlog refinement', 'Customer satisfaction mapping', 'Agile release planning'],
+    relatedRoadmapIds: []
+  },
+  {
+    id: 'ba-refinement-session-plan',
+    categoryId: 'business-analysis',
+    topicId: 'backlog-management-refinement',
+    level: 'intermediate',
+    title: 'Backlog Refinement Session Agenda & Plan',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Design a backlog refinement session checklist and estimation agenda for a Stripe payment integration.',
+    scenario:
+      'A software development team is starting work on a Stripe-based global payment integration. The backlog items are high-level and lack clear acceptance criteria or estimates. The Business Analyst must design and facilitate a 1-hour backlog refinement session to ensure the user stories are "Ready for Development" (Definition of Ready).',
+    brief:
+      'Create a comprehensive facilitation plan for the backlog refinement session. Define the meeting agenda, select the appropriate estimation method (e.g. Planning Poker), and document the pre-refinement checklists, participant roles, and dependency tracking rules.',
+    deliverables: [
+      'A detailed 60-minute facilitation agenda specifying time blocks, goals, and role responsibilities.',
+      'The Definition of Ready (DoR) checklist tailored for the Stripe integration stories.',
+      'An estimation methodology guide explaining how story points will be estimated (e.g. Fibonacci sequence rules).',
+      'A dependency register identifying external system and team dependencies (e.g. Stripe API sandbox availability, security review).'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Format your session plan in Markdown using clear headings, time tables, and bulleted checklists.',
+    rubric: [
+      { key: 'agenda_facilitation', label: 'Agenda & Facilitation Timeline', description: 'Is the meeting schedule realistic, collaborative, and designed for maximum outcome in 60 minutes?', weight: 35 },
+      { key: 'estimation_method', label: 'Estimation Method & DoR', description: 'Are the estimation guidelines clear, and does the DoR successfully prevent ambiguous tickets from entering development?', weight: 35 },
+      { key: 'dependency_documentation', label: 'Dependency Management', description: 'Are system and team dependencies mapped out proactively with mitigation actions?', weight: 30 }
+    ],
+    skillsProven: ['Backlog refinement facilitation', 'Definition of Ready design', 'Agile estimation techniques', 'Dependency mapping'],
+    relatedRoadmapIds: []
+  },
+  {
+    id: 'ba-wsjf-model',
+    categoryId: 'business-analysis',
+    topicId: 'backlog-management-refinement',
+    level: 'advanced',
+    title: 'Weighted Shortest Job First (WSJF) Roadmapping',
+    difficulty: 'Advanced',
+    estimatedHours: '5 hours',
+    tagline: 'Implement a WSJF prioritization model for a complex medical logistics roadmap.',
+    scenario:
+      'A global medical logistics company needs to prioritize 8 major development initiatives (e.g., vaccine cold-chain monitoring API, driver dispatch app optimization, ERP sync, GDPR data compliance portal). The engineering team is a bottleneck, and stakeholder conflict is high. You must implement the Weighted Shortest Job First (WSJF) prioritization model to maximize economic value delivery.',
+    brief:
+      'Build a WSJF scoring model. Rate each initiative across User-Business Value, Time Criticality, Risk Reduction/Opportunity Enablement, and Job Size/Duration. Calculate the WSJF scores and propose the final implementation sequence.',
+    deliverables: [
+      'A complete WSJF matrix table showing scores for all 8 initiatives and the calculated WSJF score.',
+      'A detailed definition document establishing the scoring rubrics for each WSJF component (1 to 21 Fibonacci scale).',
+      'The Cost of Delay (CoD) explanation for the three highest-scoring initiatives.',
+      'A roadmap sequencing report (max 400 words) explaining the economic rationale for the resulting backlog priority.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Submit your scoring sheet and roadmap sequencing in a Markdown table. Justify the inputs with clear business and operational assumptions.',
+    rubric: [
+      { key: 'wsjf_scoring', label: 'WSJF Score Calculation', description: 'Are the WSJF mathematical equations correct, and is the scoring scale applied consistently?', weight: 35 },
+      { key: 'cost_of_delay', label: 'Cost of Delay Definition', description: 'Are user value, time criticality, and risk reduction scored with sound business reasoning?', weight: 35 },
+      { key: 'roadmap_sequencing', label: 'Roadmap Sequencing Decisions', description: 'Is the final initiative sequence economically justified, reflecting shortest job first principles?', weight: 30 }
+    ],
+    skillsProven: ['WSJF framework', 'Cost of Delay calculation', 'Economic prioritization', 'Roadmap sequencing', 'Stakeholder alignment'],
+    relatedRoadmapIds: []
+  },
+
+  // --- Topic 13: Interface Specifications & API Mapping ---
+  {
+    id: 'ba-api-data-mapping',
+    categoryId: 'business-analysis',
+    topicId: 'interface-specs-api-mapping',
+    level: 'beginner',
+    title: 'Legacy CRM to REST API Data Mapping',
+    difficulty: 'Beginner',
+    estimatedHours: '2 hours',
+    tagline: 'Map customer registration data from a legacy database schema to a new REST API JSON format.',
+    scenario:
+      'An insurance firm is migrating its client management workflows to a modern SaaS platform. You need to map customer profiles from the legacy SQL database table (`TBL_CLIENT_MASTER`) to the new REST API registration payload (`/api/v1/customers`). The systems use different field names, date formats, and validation constraints.',
+    brief:
+      'Create a detailed source-to-target data mapping document. Map at least 15 fields (including names, addresses, contact details, policy types, and status flags). Define transformation rules for data types, formatting, and default values.',
+    deliverables: [
+      'A data mapping spreadsheet/table: Legacy Field Name → Legacy Type → Target JSON Key → Target Type → Transformation/Validation Rules.',
+      'JSON payload example of the target schema after transformation.',
+      'A field-level data dictionary detailing validation constraints (e.g. regex for emails, phone numbers, state abbreviations).',
+      'A mapping exception playbook detailing what to do if mandatory fields are null in the legacy source.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Present the mapping grid using a clean Markdown table. Provide validation rules and JSON examples in code blocks.',
+    rubric: [
+      { key: 'field_mapping', label: 'Field Mapping Accuracy', description: 'Are source-to-target fields correctly paired and data types appropriately converted?', weight: 40 },
+      { key: 'transformation_rules', label: 'Type Conversion Rules', description: 'Are transformation rules (e.g. date format conversions, status codes mapping) complete and logical?', weight: 30 },
+      { key: 'data_dictionary', label: 'Data Dictionary Mapping', description: 'Are data constraints and error handling logic for missing values robust?', weight: 30 }
+    ],
+    skillsProven: ['Data mapping schema design', 'REST API payload modeling', 'Data type conversion', 'Data dictionary creation'],
+    relatedRoadmapIds: []
+  },
+  {
+    id: 'ba-webhook-specification',
+    categoryId: 'business-analysis',
+    topicId: 'interface-specs-api-mapping',
+    level: 'intermediate',
+    title: 'Stripe Webhook Callback Specification',
+    difficulty: 'Intermediate',
+    estimatedHours: '3 hours',
+    tagline: 'Write a webhook integration specification for a Stripe payment gateway callback in USD.',
+    scenario:
+      'A global e-commerce business relies on Stripe to process customer payments. When a payment completes, Stripe sends a webhook callback notification to the merchant system to trigger order fulfillment. The Business Analyst must write a detailed system integration specification so the engineering team can build the webhook receiver endpoint (`/api/webhooks/stripe-payments`).',
+    brief:
+      'Write the webhook integration specification. Define the webhook event type (`payment_intent.succeeded`), outline the incoming payload structure (in USD), document the endpoint authentication method (webhook signature verification), and model the error/retry handling workflow.',
+    deliverables: [
+      'Stripe webhook payload JSON schema (covering payment intent ID, customer ID, amount in USD, transaction status, metadata).',
+      'Interface interaction diagram showing the flow between Customer, Stripe, and the Merchant endpoint.',
+      'Detailed API response status code mappings (e.g. 200 OK, 400 Bad Request, 401 Unauthorized, 500 Server Error).',
+      'A retry and idempotency policy to prevent double-processing orders if Stripe retries a delivery.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Deliver your specification in Markdown. Include JSON samples and response schemas. Draw the interaction sequence using a text-based or mermaid flowchart.',
+    rubric: [
+      { key: 'webhook_schema', label: 'Webhook Payload Schema', description: 'Is the JSON payload complete, matching standard webhook event properties and amount variables?', weight: 35 },
+      { key: 'retry_logic', label: 'Retry & Error Flow Logic', description: 'Are idempotency, retry mechanisms, and HTTP response codes defined securely?', weight: 35 },
+      { key: 'security_authentication', label: 'Security & Authentication', description: 'Is webhook signature validation and data encryption in transit handled correctly?', weight: 30 }
+    ],
+    skillsProven: ['Webhook specification', 'JSON schema modeling', 'Idempotency design', 'API security standards', 'Systems integration'],
+    relatedRoadmapIds: []
+  },
+  {
+    id: 'ba-integration-specification',
+    categoryId: 'business-analysis',
+    topicId: 'interface-specs-api-mapping',
+    level: 'advanced',
+    title: 'Enterprise ERP to Courier API Integration Specification',
+    difficulty: 'Advanced',
+    estimatedHours: '5 hours',
+    tagline: 'Write a systems integration specification linking an ERP inventory system to a global courier API (DHL/FedEx).',
+    scenario:
+      'A global electronics distributor needs to automate its shipping dispatch. Currently, warehouse staff copy shipment details from their SAP ERP system into a DHL/FedEx shipping portal manually. The company wants to integrate the ERP directly with the courier REST API, automating the generation of shipping labels, tracking numbers, and international customs documents when an order is packed.',
+    brief:
+      'Write a comprehensive Systems Integration Specification Document. Design the interface data flows, specify the REST API request/response mappings, detail the customs declaration data payload, and design a robust exception-handling strategy for address validation failures and API downtime.',
+    deliverables: [
+      'A systems integration architecture diagram (sequence flow showing ERP, Integration Middleware, and Courier API).',
+      'API field-level mapping tables for the shipment creation request (mapping ERP order data to Courier API fields).',
+      'Customs declaration JSON payload template (including HTS codes, weight in kilograms, declared value in USD, and country of origin).',
+      'A comprehensive exception handling playbook: retry policies with exponential backoff, handling address validation errors (e.g. Zip/Postal code mismatch), and a manual fallback queue.'
+    ],
+    deliverableFormat: 'markdown',
+    submissionGuidance:
+      'Write a formal Systems Integration Document in Markdown. Structure the data mappings and schemas as tables and code blocks, and model the integration flows using a Mermaid sequence diagram.',
+    rubric: [
+      { key: 'sequence_flow', label: 'Interface Sequence Flow', description: 'Is the integration sequence logically designed, showing clear synchronous/asynchronous boundaries?', weight: 35 },
+      { key: 'payload_mappings', label: 'Data Payload Mapping', description: 'Are fields (weights, currencies, HTS codes) mapped accurately with correct schemas and validation guidelines?', weight: 35 },
+      { key: 'exception_handling', label: 'Exception Handling Workflows', description: 'Are network failures, authentication expired, validation issues, and back-office review queues detailed comprehensively?', weight: 30 }
+    ],
+    skillsProven: ['Systems integration specification', 'Mermaid sequence diagrams', 'API request/response mapping', 'Customs compliance documentation', 'Exception handling frameworks'],
+    relatedRoadmapIds: []
+  }
 ];
 
 
