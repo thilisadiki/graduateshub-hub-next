@@ -194,7 +194,7 @@ export default async function BlogPage({
       </div>
 
       {/* Hero */}
-      <div className="bg-blue-50 border-b border-blue-100 py-14 px-6">
+      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-14 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-3">
             <BookOpen className="text-primary" size={28} />
@@ -263,14 +263,14 @@ export default async function BlogPage({
             </div>
 
             {/* Find a course strip */}
-            <div className="mb-12 bg-blue-50 border border-blue-100 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="mb-12 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <p className="font-bold text-gray-900 mb-1">Reading about careers? Find a free course to go with it.</p>
                 <p className="text-sm text-gray-500">Browse 100+ free certified courses across IT, Business, Marketing, Accounting, and more.</p>
               </div>
               <Link
                 href="/search"
-                className="shrink-0 bg-primary hover:bg-blue-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
+                className="shrink-0 bg-primary hover:bg-[#5a4000] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
               >
                 Browse Free Courses →
               </Link>
@@ -286,7 +286,7 @@ export default async function BlogPage({
                     href={href}
                     className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all flex flex-col gap-2"
                   >
-                    <span className="self-start text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">
+                    <span className="self-start text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full">
                       {badge}
                     </span>
                     <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm leading-snug">{title}</p>
@@ -318,7 +318,7 @@ export default async function BlogPage({
             {page < totalPages && (
               <Link
                 href={`/blog?page=${page + 1}`}
-                className="px-5 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-blue-800 transition-colors text-sm"
+                className="px-5 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-[#5a4000] transition-colors text-sm"
               >
                 Next
               </Link>

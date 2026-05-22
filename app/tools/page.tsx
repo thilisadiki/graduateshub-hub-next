@@ -174,9 +174,9 @@ export default function ToolsPage() {
       />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 font-bold text-xs uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#7A5900]/20 border border-[#FFDF9C]/30 text-[#FFDF9C] font-bold text-xs uppercase tracking-wider mb-6">
             <Sparkles size={12} className="text-yellow-400" />
             7 Free Tools · No Sign-up Required
           </div>
@@ -238,7 +238,7 @@ export default function ToolsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {howItWorks.map(({ step, title, body }) => (
               <div key={step} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white font-black text-lg flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-primary text-white font-black text-lg flex items-center justify-center shrink-0">
                   {step}
                 </div>
                 <div>
@@ -259,8 +259,8 @@ export default function ToolsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {audiences.map(({ icon: Icon, title, body }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center shrink-0">
-                  <Icon size={20} className="text-indigo-600" />
+                <div className="w-10 h-10 rounded-xl bg-[#FFDF9C]/20 flex items-center justify-center shrink-0">
+                  <Icon size={20} className="text-primary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
@@ -272,7 +272,7 @@ export default function ToolsPage() {
         </section>
 
         {/* Why Graduates Hub */}
-        <section className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border border-indigo-100 p-8 md:p-10">
+        <section className="bg-gradient-to-br from-[#FBF3EB] to-[#FFF8F1] rounded-2xl border border-[#D1C5B4] p-8 md:p-10">
           <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Why Graduates Hub Built These Tools</h2>
           <div className="flex flex-col gap-4 text-[15px] text-gray-600 leading-relaxed">
             <p>
@@ -290,7 +290,7 @@ export default function ToolsPage() {
         {/* FAQ */}
         <section>
           <div className="flex items-center gap-3 mb-8">
-            <HelpCircle size={24} className="text-indigo-600 shrink-0" />
+            <HelpCircle size={24} className="text-primary shrink-0" />
             <h2 className="text-2xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
           </div>
           <div className="flex flex-col gap-4">
@@ -335,7 +335,7 @@ export default function ToolsPage() {
           <div className="flex gap-3 shrink-0">
             <Link
               href="/search"
-              className="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm whitespace-nowrap"
+              className="bg-primary hover:bg-[#5a4000] text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm whitespace-nowrap"
             >
               Browse All Courses
             </Link>

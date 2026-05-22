@@ -1,7 +1,7 @@
 import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
-  { id: 1, name: 'Sarah Jenkins', role: 'Marketing Manager', image: 'SJ', quote: 'The digital marketing diploma I completed on Graduates Hub completely transformed my career trajectory. I went from a junior role to leading a team within six months of getting my certificate.', rating: 5, color: 'bg-blue-100 text-blue-700' },
+  { id: 1, name: 'Sarah Jenkins', role: 'Marketing Manager', image: 'SJ', quote: 'The digital marketing diploma I completed on Graduates Hub completely transformed my career trajectory. I went from a junior role to leading a team within six months of getting my certificate.', rating: 5, color: 'bg-[#FFDF9C]/40 text-[#5a4000]' },
   { id: 2, name: 'David Chen', role: 'Software Developer', image: 'DC', quote: 'I had no coding experience before finding this platform. The Python and JavaScript courses were structured perfectly for a beginner, and now I\'m working full-time in tech!', rating: 5, color: 'bg-green-100 text-green-700' },
   { id: 3, name: 'Elena Rodriguez', role: 'Small Business Owner', image: 'ER', quote: 'Running a business is hard, but the accounting and business management courses gave me the foundational knowledge I desperately needed to balance my books and grow.', rating: 5, color: 'bg-purple-100 text-purple-700' },
 ];

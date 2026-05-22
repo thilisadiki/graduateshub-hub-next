@@ -6,7 +6,7 @@ interface Props {
   onChange: (items: WorkExperience[]) => void;
 }
 
-const inputCls = 'w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-900 bg-gray-50 border-gray-300 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition';
+const inputCls = 'w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-900 bg-gray-50 border-gray-300 focus:outline-none focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition';
 const labelCls = 'block text-xs font-medium text-gray-600 mb-1';
 
 const EMPLOYMENT_TYPES = ['Full-time', 'Part-time', 'Contract', 'Self-employed', 'Freelance', 'Internship', 'Apprenticeship', 'Seasonal'];
@@ -102,7 +102,7 @@ export default function ExperienceStep({ items, onChange }: Props) {
       <button
         type="button"
         onClick={add}
-        className="w-full border-2 border-dashed border-blue-200 text-blue-600 hover:border-blue-400 hover:bg-blue-50 rounded-xl py-3 text-sm font-medium transition"
+        className="w-full border-2 border-dashed border-[#D1C5B4] text-primary hover:border-primary hover:bg-[#FFDF9C]/20 rounded-xl py-3 text-sm font-medium transition"
       >
         + Add Work Experience
       </button>

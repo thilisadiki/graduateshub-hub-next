@@ -42,7 +42,7 @@ export default function NewsletterBanner() {
   return (
     <section className="bg-gray-50 py-16 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-800 rounded-3xl p-8 md:p-16 shadow-2xl overflow-hidden relative">
+        <div className="bg-gradient-to-r from-[#1F1B13] to-[#261A00] rounded-3xl p-8 md:p-16 shadow-2xl overflow-hidden relative">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-black opacity-10 rounded-full transform -translate-x-1/4 translate-y-1/4"></div>
 
@@ -51,14 +51,14 @@ export default function NewsletterBanner() {
               <div className="bg-white p-4 rounded-full shadow-lg">
                 <Mail size={40} className="text-primary" strokeWidth={1.5} />
               </div>
-              <div className="absolute top-1 right-1 w-3 h-3 bg-blue-300 rounded-full border-2 border-primary animate-pulse"></div>
+              <div className="absolute top-1 right-1 w-3 h-3 bg-[#FFDF9C] rounded-full border-2 border-primary animate-pulse"></div>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
               Accelerate Your Career
             </h2>
 
-            <p className="text-blue-50 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-medium">
+            <p className="text-[#D1C5B4] text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-medium">
               Join over{' '}
               <span className="text-white font-bold underline decoration-blue-400 decoration-2 underline-offset-4">
                 10,000+
@@ -68,7 +68,7 @@ export default function NewsletterBanner() {
 
             <form onSubmit={handleSubmit} className="w-full max-w-lg relative group">
               <div className="relative flex flex-col sm:flex-row shadow-2xl rounded-2xl sm:rounded-full bg-white/10 p-2 sm:p-0 backdrop-blur-md">
-                <div className="absolute left-4 top-4 sm:top-1/2 sm:-translate-y-1/2 text-blue-700 group-focus-within:text-primary transition-colors z-10">
+                <div className="absolute left-4 top-4 sm:top-1/2 sm:-translate-y-1/2 text-[#5a4000] group-focus-within:text-primary transition-colors z-10">
                   <Mail size={20} />
                 </div>
                 <input
@@ -85,7 +85,7 @@ export default function NewsletterBanner() {
                 <button
                   type="submit"
                   disabled={status === 'loading' || status === 'success'}
-                  className="w-full mt-3 sm:mt-0 sm:absolute sm:right-1.5 sm:top-1.5 sm:bottom-1.5 sm:w-auto px-6 py-4 sm:py-0 bg-primary hover:bg-blue-800 text-white font-bold rounded-full transition-colors flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed shadow-md sm:shadow-none"
+                  className="w-full mt-3 sm:mt-0 sm:absolute sm:right-1.5 sm:top-1.5 sm:bottom-1.5 sm:w-auto px-6 py-4 sm:py-0 bg-primary hover:bg-[#5a4000] text-white font-bold rounded-full transition-colors flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed shadow-md sm:shadow-none"
                 >
                   {status === 'loading' ? (
                     <span className="flex items-center gap-2">
@@ -107,7 +107,7 @@ export default function NewsletterBanner() {
             <div className="h-8 mt-3 flex items-center justify-center">
               {status === 'success' && (
                 <p className="text-white font-medium flex items-center gap-2 bg-black/20 px-4 py-1.5 rounded-full backdrop-blur-sm text-sm">
-                  <CheckCircle2 size={18} className="text-blue-300" /> {message}
+                  <CheckCircle2 size={18} className="text-[#FFDF9C]" /> {message}
                 </p>
               )}
               {status === 'error' && (
@@ -120,7 +120,7 @@ export default function NewsletterBanner() {
               )}
             </div>
 
-            <p className="text-blue-100/70 text-sm mt-6">
+            <p className="text-[#FFDF9C]/70 text-sm mt-6">
               By subscribing, you agree to our{' '}
               <a href="/terms" className="underline hover:text-white transition-colors">Terms of Service</a>
               {' '}and{' '}

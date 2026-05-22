@@ -25,7 +25,7 @@ export default function CookieConsent() {
         <div className="text-sm text-gray-600 flex-1">
           <p>
             We use cookies to enhance your browsing experience, display personalized ads, and analyze our traffic. By clicking &quot;Accept&quot;, you consent to our use of cookies according to our{' '}
-            <Link href="/privacy" className="text-blue-600 hover:text-blue-800 underline font-medium">
+            <Link href="/privacy" className="text-primary hover:text-[#261A00] underline font-medium">
               Privacy Policy
             </Link>.
           </p>
@@ -33,7 +33,7 @@ export default function CookieConsent() {
         <div className="flex-shrink-0">
           <button
             onClick={handleAccept}
-            className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors shadow-sm"
+            className="w-full sm:w-auto px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-[#5a4000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors shadow-sm"
           >
             Accept
           </button>

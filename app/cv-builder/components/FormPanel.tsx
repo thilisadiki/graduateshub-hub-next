@@ -30,12 +30,12 @@ export default function FormPanel({ data, onChange, currentStep, onStepChange }:
               onClick={() => onStepChange(idx)}
               className={`shrink-0 px-3 py-2 text-xs font-semibold rounded-t-lg border-b-2 transition whitespace-nowrap ${
                 idx === currentStep
-                  ? 'border-blue-600 text-blue-700 bg-blue-50'
+                  ? 'border-primary text-[#5a4000] bg-[#FFDF9C]/20'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-50'
               }`}
             >
               <span className={`inline-flex items-center justify-center w-4 h-4 rounded-full text-xs mr-1.5 ${
-                idx < currentStep ? 'bg-green-500 text-white' : idx === currentStep ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-500'
+                idx < currentStep ? 'bg-green-500 text-white' : idx === currentStep ? 'bg-primary text-white' : 'bg-gray-200 text-gray-500'
               }`}>
                 {idx < currentStep ? '✓' : idx + 1}
               </span>
@@ -86,7 +86,7 @@ export default function FormPanel({ data, onChange, currentStep, onStepChange }:
           <button
             type="button"
             onClick={() => onStepChange(currentStep + 1)}
-            className="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+            className="px-4 py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-[#5a4000] transition"
           >
             Next →
           </button>

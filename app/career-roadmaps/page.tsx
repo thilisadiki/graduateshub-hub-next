@@ -51,7 +51,7 @@ const CURATORS = {
 
 const DEMAND_COLOURS: Record<CareerRoadmap['demandLevel'], string> = {
   'Very High': 'bg-emerald-50 text-emerald-700 border-emerald-100',
-  'High': 'bg-blue-50 text-blue-700 border-blue-100',
+  'High': 'bg-[#FFDF9C]/20 text-[#5a4000] border-[#D1C5B4]',
   'Moderate': 'bg-amber-50 text-amber-700 border-amber-100',
 };
 
@@ -91,9 +91,9 @@ export default function CareerRoadmapsPage() {
         </div>
 
         {/* Trust note */}
-        <div className="mt-6 mb-12 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 text-sm text-blue-700 max-w-2xl">
+        <div className="mt-6 mb-12 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-xl px-5 py-4 text-sm text-[#5a4000] max-w-2xl">
           Every roadmap is curated by a named specialist with real-world experience in that field, not generated from a generic list.
-          <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-blue-900 transition-colors">
+          <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-[#261A00] transition-colors">
             How we curate →
           </Link>
         </div>
@@ -110,7 +110,7 @@ export default function CareerRoadmapsPage() {
               >
                 {/* Category + Demand */}
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">
+                  <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full">
                     {CATEGORY_BADGES[roadmap.category] ?? roadmap.category}
                   </span>
                   <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${DEMAND_COLOURS[roadmap.demandLevel]}`}>
@@ -177,13 +177,13 @@ export default function CareerRoadmapsPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/categories"
-              className="bg-primary hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+              className="bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
             >
               Browse All Courses
             </Link>
             <Link
               href="/guides"
-              className="bg-white border-2 border-primary text-primary hover:bg-blue-50 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+              className="bg-white border-2 border-primary text-primary hover:bg-[#FFDF9C]/20 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
             >
               View All Guides
             </Link>

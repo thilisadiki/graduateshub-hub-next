@@ -152,7 +152,7 @@ export default function FreeBusinessCoursesPage() {
                   <div>
                     <h3 className="font-bold text-gray-900 text-lg mb-1">{title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-2">{detail}</p>
-                    <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-blue-800 transition-colors">
+                    <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
                       <ChevronRight size={12} /> {courseName}
                     </Link>
                   </div>
@@ -161,15 +161,15 @@ export default function FreeBusinessCoursesPage() {
             </div>
           </section>
 
-          <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Do You Need a Degree to Work in Business?</h2>
-            <p className="text-blue-100 mb-10">Not for most entry-level and mid-level roles. Here is how to think about it.</p>
+            <p className="text-[#FFDF9C] mb-10">Not for most entry-level and mid-level roles. Here is how to think about it.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
                 <h3 className="font-bold text-white text-lg mb-4">You can start without a degree:</h3>
                 <ul className="space-y-3">
                   {['Project coordinator and administrator roles', 'Process improvement and quality support positions', 'Compliance and data protection assistant roles', 'Operations support and business analyst entry points'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-blue-100 text-sm">
+                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
                       <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
                     </li>
                   ))}
@@ -179,7 +179,7 @@ export default function FreeBusinessCoursesPage() {
                 <h3 className="font-bold text-white text-lg mb-4">For senior roles, further study helps:</h3>
                 <ul className="space-y-3">
                   {['Senior project manager roles often require a PMP or Prince2 certification', 'Chartered compliance and risk roles typically require postgraduate qualifications', 'Executive leadership benefits from an MBA or equivalent credential'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-blue-100 text-sm">
+                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
                       <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
                     </li>
                   ))}

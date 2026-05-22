@@ -164,7 +164,7 @@ export default function FreeDigitalMarketingCoursesPage() {
                   <div key={skill} className="grid grid-cols-3 px-6 py-4 items-center gap-4">
                     <span className="font-bold text-gray-900 text-sm">{skill}</span>
                     <span className="text-gray-500 text-sm leading-snug col-span-1 hidden sm:block">{desc}</span>
-                    <span className={`text-right justify-self-end text-xs font-bold px-2.5 py-1 rounded-full ${level === 'Foundation' ? 'bg-green-50 text-green-700' : level === 'Intermediate' ? 'bg-blue-50 text-primary' : 'bg-purple-50 text-purple-700'}`}>{level}</span>
+                    <span className={`text-right justify-self-end text-xs font-bold px-2.5 py-1 rounded-full ${level === 'Foundation' ? 'bg-green-50 text-green-700' : level === 'Intermediate' ? 'bg-[#FFDF9C]/20 text-primary' : 'bg-purple-50 text-purple-700'}`}>{level}</span>
                   </div>
                 ))}
               </div>
@@ -172,9 +172,9 @@ export default function FreeDigitalMarketingCoursesPage() {
           </section>
 
           <section className="mb-20">
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Digital Marketing Career Progression</h2>
-              <p className="text-blue-100 mb-10 text-lg max-w-2xl">Digital marketing has a clear, achievable progression, from entry-level assistant to senior strategist. Here is what the path typically looks like.</p>
+              <p className="text-[#FFDF9C] mb-10 text-lg max-w-2xl">Digital marketing has a clear, achievable progression, from entry-level assistant to senior strategist. Here is what the path typically looks like.</p>
               <div className="flex flex-col md:flex-row gap-4 md:gap-0 md:items-stretch">
                 {[
                   { stage: 'Start', role: 'Digital Marketing Assistant', detail: 'Apply fundamentals across multiple channels under supervision', time: '0 to 1 year' },
@@ -184,14 +184,14 @@ export default function FreeDigitalMarketingCoursesPage() {
                 ].map(({ stage, role, detail, time }, i, arr) => (
                   <div key={stage} className="flex md:flex-col items-start md:items-stretch gap-4 md:gap-0 flex-1">
                     <div className="bg-white/10 rounded-xl p-5 flex-1 backdrop-blur-sm">
-                      <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">{stage}</p>
+                      <p className="text-xs font-bold text-[#FFDF9C] uppercase tracking-wider mb-2">{stage}</p>
                       <p className="font-bold text-white mb-1">{role}</p>
-                      <p className="text-blue-100 text-xs leading-relaxed mb-3">{detail}</p>
-                      <p className="text-xs text-blue-200 font-semibold">{time}</p>
+                      <p className="text-[#FFDF9C] text-xs leading-relaxed mb-3">{detail}</p>
+                      <p className="text-xs text-[#FFDF9C] font-semibold">{time}</p>
                     </div>
                     {i < arr.length - 1 && (
                       <div className="flex md:justify-center items-center md:py-2 shrink-0">
-                        <ArrowRight size={18} className="text-blue-300 rotate-90 md:rotate-0" />
+                        <ArrowRight size={18} className="text-[#FFDF9C] rotate-90 md:rotate-0" />
                       </div>
                     )}
                   </div>

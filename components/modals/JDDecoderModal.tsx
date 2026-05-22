@@ -152,7 +152,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
               <button
                 type="submit"
                 disabled={isLoading || jobDescription.trim().length < 100 || turnstileToken === null}
-                className="self-end bg-cyan-600 hover:bg-cyan-700 disabled:bg-cyan-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
+                className="self-end bg-[#4B6649] hover:bg-[#3a5038] disabled:bg-cyan-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading
                   ? <><Loader2 size={18} className="animate-spin" /> Decoding...</>
@@ -169,7 +169,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
 
               {isLoading && (
                 <div className="flex flex-col items-center justify-center py-16 text-gray-400">
-                  <Loader2 size={40} className="animate-spin text-cyan-600 mb-4" />
+                  <Loader2 size={40} className="animate-spin text-[#4B6649] mb-4" />
                   <p className="font-medium animate-pulse">Reading the job description...</p>
                 </div>
               )}
@@ -185,11 +185,11 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                 <div className="flex flex-col gap-4 pb-8">
 
                   {/* Role header */}
-                  <div className="bg-cyan-50 border border-cyan-100 rounded-xl p-5">
+                  <div className="bg-[#CCECC8/20] border border-cyan-100 rounded-xl p-5">
                     <p className="font-black text-cyan-900 text-xl">
                       {result.jobTitle}
                       {result.company && (
-                        <span className="ml-2 text-sm font-semibold text-cyan-600 bg-cyan-100 px-2 py-0.5 rounded-full">
+                        <span className="ml-2 text-sm font-semibold text-[#4B6649] bg-cyan-100 px-2 py-0.5 rounded-full">
                           @ {result.company}
                         </span>
                       )}
@@ -235,7 +235,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                   {result.responsibilities.length > 0 && (
                     <Section
                       title="What You'll Actually Do"
-                      icon={<Briefcase size={16} className="text-cyan-600" />}
+                      icon={<Briefcase size={16} className="text-[#4B6649]" />}
                     >
                       <ul className="mt-3 flex flex-col gap-2">
                         {result.responsibilities.map((r, i) => (
@@ -252,13 +252,13 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                   {(result.experienceRequired || result.qualifications.length > 0) && (
                     <Section
                       title="Experience & Qualifications"
-                      icon={<GraduationCap size={16} className="text-indigo-500" />}
+                      icon={<GraduationCap size={16} className="text-primary" />}
                       defaultOpen={false}
                     >
                       <div className="mt-3 flex flex-col gap-3">
                         {result.experienceRequired && (
-                          <div className="bg-indigo-50 rounded-lg px-4 py-3">
-                            <p className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">Experience</p>
+                          <div className="bg-[#FFDF9C]/20 rounded-lg px-4 py-3">
+                            <p className="text-xs font-bold text-primary uppercase tracking-wide mb-1">Experience</p>
                             <p className="text-sm text-gray-700">{result.experienceRequired}</p>
                           </div>
                         )}
@@ -266,7 +266,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                           <ul className="flex flex-col gap-1.5">
                             {result.qualifications.map((q, i) => (
                               <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                                <CheckCircle size={14} className="text-indigo-400 mt-0.5 shrink-0" />
+                                <CheckCircle size={14} className="text-[#FFDF9C] mt-0.5 shrink-0" />
                                 {q}
                               </li>
                             ))}
@@ -298,13 +298,13 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                   {result.courses.length > 0 && (
                     <div>
                       <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        <BookOpen size={16} className="text-cyan-600" /> Courses to Meet These Requirements
+                        <BookOpen size={16} className="text-[#4B6649]" /> Courses to Meet These Requirements
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {result.courses.map(course => (
                           <div key={course.id} className="flex flex-col gap-1">
                             {course.targetSkill && (
-                              <span className="text-xs font-bold text-cyan-700 bg-cyan-50 border border-cyan-100 px-2.5 py-1 rounded-full self-start">
+                              <span className="text-xs font-bold text-cyan-700 bg-[#CCECC8/20] border border-cyan-100 px-2.5 py-1 rounded-full self-start">
                                 Covers: {course.targetSkill}
                               </span>
                             )}

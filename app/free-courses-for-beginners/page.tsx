@@ -78,7 +78,7 @@ const benefits: BenefitItem[] = [
 const learningPaths = [
   {
     label: 'Tech Path',
-    color: 'bg-blue-50 border-blue-100',
+    color: 'bg-[#FFDF9C]/20 border-[#D1C5B4]',
     accent: 'text-primary',
     steps: [
       { title: 'AI Fundamentals', href: '/course/diploma-fundamentals-ai' },
@@ -175,12 +175,12 @@ export default function FreeCoursesForBeginnersPage() {
       benefits={benefits}
       courseCategories={courseCategories}
       preCarouselSection={
-        <div className="mb-20 bg-indigo-50 border border-indigo-100 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mb-20 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <p className="font-bold text-gray-900 mb-1">Interested in AI specifically?</p>
             <p className="text-sm text-gray-500">We have a dedicated guide covering the best free AI courses for people with no prior AI or coding experience.</p>
           </div>
-          <Link href="/free-ai-courses-for-beginners" className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap">
+          <Link href="/free-ai-courses-for-beginners" className="shrink-0 bg-primary hover:bg-[#5a4000] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap">
             View AI Courses Guide →
           </Link>
         </div>
@@ -220,9 +220,9 @@ export default function FreeCoursesForBeginnersPage() {
           </section>
 
           <section className="mb-20">
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Do You Need Any Experience to Start?</h2>
-              <p className="text-blue-100 text-lg mb-8 max-w-2xl leading-relaxed">No. Every course on this page is built for people who are starting from zero. You do not need a degree, technical skills, or any prior knowledge in the subject.</p>
+              <p className="text-[#FFDF9C] text-lg mb-8 max-w-2xl leading-relaxed">No. Every course on this page is built for people who are starting from zero. You do not need a degree, technical skills, or any prior knowledge in the subject.</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {[
                   { stat: 'No degree needed', body: 'These courses are designed to stand on their own. A school certificate or matric is more than enough to begin.' },
@@ -231,7 +231,7 @@ export default function FreeCoursesForBeginnersPage() {
                 ].map(({ stat, body }) => (
                   <div key={stat} className="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
                     <p className="font-bold text-white mb-2">{stat}</p>
-                    <p className="text-blue-100 text-sm leading-relaxed">{body}</p>
+                    <p className="text-[#FFDF9C] text-sm leading-relaxed">{body}</p>
                   </div>
                 ))}
               </div>

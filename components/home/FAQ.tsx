@@ -48,19 +48,19 @@ function FAQItem({
   onClick: () => void;
 }) {
   return (
-    <div className="border border-gray-100 bg-white rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300">
+    <div className="border border-[#D1C5B4] bg-white rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300">
       <button
-        className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors group"
+        className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-[#FBF3EB] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors group"
         onClick={onClick}
       >
-        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors pr-4">{question}</h3>
+        <h3 className="text-lg font-bold text-[#1F1B13] group-hover:text-primary transition-colors pr-4">{question}</h3>
         <ChevronDown
           className={`text-primary shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           size={20}
         />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="px-6 pb-5 pt-1 text-gray-600 leading-relaxed">{node ?? answer}</div>
+        <div className="px-6 pb-5 pt-1 text-[#4F4639] leading-relaxed">{node ?? answer}</div>
       </div>
     </div>
   );
@@ -80,13 +80,13 @@ export default function FAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="text-center mb-10">
-        <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-blue-50 text-primary mb-4 shadow-sm">
+        <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#FFDF9C]/60 text-primary mb-4 shadow-sm">
           <MessageCircleQuestion size={32} />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1F1B13] tracking-tight mb-4">
           Frequently Asked Questions
         </h2>
-        <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+        <p className="text-lg text-[#4F4639] max-w-2xl mx-auto">
           Everything you need to know about learning with Graduates Hub.
         </p>
       </div>

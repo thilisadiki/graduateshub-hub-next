@@ -99,7 +99,7 @@ export default async function CategoryPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400">
             <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
@@ -116,7 +116,7 @@ export default async function CategoryPage({
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 text-center">
             <h2 className="text-xl font-extrabold text-gray-900 mb-2">Topics coming soon</h2>
             <p className="text-gray-500">We are still writing the first briefs for this category. Check back soon or explore another category.</p>
-            <Link href="/portfolio" className="inline-flex items-center gap-1.5 mt-5 text-indigo-600 font-bold text-sm">
+            <Link href="/portfolio" className="inline-flex items-center gap-1.5 mt-5 text-primary font-bold text-sm">
               Back to all categories <ArrowRight size={14} />
             </Link>
           </div>
@@ -132,8 +132,8 @@ export default async function CategoryPage({
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-2">
-                      <Award size={16} className="text-indigo-500 shrink-0" />
-                      <h2 className="text-lg md:text-xl font-black text-gray-900 group-hover:text-indigo-600 transition-colors">
+                      <Award size={16} className="text-primary shrink-0" />
+                      <h2 className="text-lg md:text-xl font-black text-gray-900 group-hover:text-primary transition-colors">
                         {topic.title}
                       </h2>
                     </div>
@@ -155,7 +155,7 @@ export default async function CategoryPage({
                       })}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-sm font-bold text-indigo-600 shrink-0">
+                  <div className="flex items-center gap-2 text-sm font-bold text-primary shrink-0">
                     Open topic <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>

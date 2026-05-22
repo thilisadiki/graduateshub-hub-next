@@ -187,7 +187,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'submitting' || turnstileToken === null}
-          className="flex items-center justify-center gap-2 bg-primary hover:bg-blue-800 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold px-6 py-3.5 rounded-lg transition-colors text-sm"
+          className="flex items-center justify-center gap-2 bg-primary hover:bg-[#5a4000] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold px-6 py-3.5 rounded-lg transition-colors text-sm"
         >
           {status === 'submitting' ? (
             <>

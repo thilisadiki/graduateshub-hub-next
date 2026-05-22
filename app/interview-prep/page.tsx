@@ -57,7 +57,7 @@ const CATEGORY_BADGES: Record<string, string> = {
 };
 
 const CATEGORY_COLOURS: Record<string, string> = {
-  it: 'bg-blue-50 text-blue-700 border-blue-100',
+  it: 'bg-[#FFDF9C]/20 text-[#5a4000] border-[#D1C5B4]',
   'software-engineering': 'bg-violet-50 text-violet-700 border-violet-100',
   marketing: 'bg-pink-50 text-pink-700 border-pink-100',
   accounting: 'bg-amber-50 text-amber-700 border-amber-100',
@@ -92,9 +92,9 @@ export default function InterviewPrepPage() {
         </div>
 
         {/* Trust note */}
-        <div className="mt-6 mb-6 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 text-sm text-blue-700 max-w-2xl">
+        <div className="mt-6 mb-6 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-xl px-5 py-4 text-sm text-[#5a4000] max-w-2xl">
           Every guide is written with practical hiring context in mind: role-specific skills, common interview patterns, and salary benchmarks across several regions.
-          <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-blue-900 transition-colors">
+          <Link href="/curation-policy" className="font-bold ml-1 underline underline-offset-2 hover:text-[#261A00] transition-colors">
             How we curate →
           </Link>
         </div>
@@ -181,13 +181,13 @@ export default function InterviewPrepPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/career-roadmaps"
-              className="bg-primary hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+              className="bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
             >
               Browse Career Roadmaps
             </Link>
             <Link
               href="/guides"
-              className="bg-white border-2 border-primary text-primary hover:bg-blue-50 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+              className="bg-white border-2 border-primary text-primary hover:bg-[#FFDF9C]/20 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
             >
               View All Guides
             </Link>

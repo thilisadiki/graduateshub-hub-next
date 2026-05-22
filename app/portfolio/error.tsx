@@ -34,7 +34,7 @@ export default function PortfolioError({
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <button
             onClick={() => reset()}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/20 w-full sm:w-auto"
+            className="bg-primary hover:bg-[#5a4000] text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/20 w-full sm:w-auto"
           >
             <RotateCcw size={18} />
             Try again

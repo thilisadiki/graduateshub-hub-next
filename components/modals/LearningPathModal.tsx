@@ -20,10 +20,10 @@ const QUICK_PROMPTS = [
 ];
 
 const PHASE_COLORS = [
-  { bg: 'bg-blue-600', light: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
-  { bg: 'bg-indigo-600', light: 'bg-indigo-50', text: 'text-indigo-700', border: 'border-indigo-200' },
-  { bg: 'bg-purple-600', light: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200' },
-  { bg: 'bg-violet-600', light: 'bg-violet-50', text: 'text-violet-700', border: 'border-violet-200' },
+  { bg: 'bg-primary', light: 'bg-[#FFDF9C]/20', text: 'text-[#5a4000]', border: 'border-[#D1C5B4]' },
+  { bg: 'bg-primary', light: 'bg-[#FFDF9C]/20', text: 'text-[#5a4000]', border: 'border-[#D1C5B4]' },
+  { bg: 'bg-[#6C5D3F]', light: 'bg-[#F5E0BB/20]', text: 'text-purple-700', border: 'border-purple-200' },
+  { bg: 'bg-[#6C5D3F]', light: 'bg-[#F5E0BB/20]', text: 'text-violet-700', border: 'border-violet-200' },
 ];
 
 export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
@@ -72,13 +72,13 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
       <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-700 to-purple-600 p-6 flex justify-between items-start text-white relative overflow-hidden shrink-0">
+        <div className="bg-gradient-to-r from-[#1F1B13] to-[#261A00] p-6 flex justify-between items-start text-white relative overflow-hidden shrink-0">
           <div className="absolute top-0 right-0 p-4 opacity-10"><Map size={100} /></div>
           <div className="relative z-10 w-full">
             <h2 className="text-2xl font-black mb-2 flex items-center gap-2">
               <Map size={24} className="text-yellow-300" /> Learning Path Generator
             </h2>
-            <p className="text-blue-100 font-medium">Tell us your career goal and we'll build you a step-by-step course roadmap.</p>
+            <p className="text-[#FFDF9C] font-medium">Tell us your career goal and we'll build you a step-by-step course roadmap.</p>
             <button onClick={onClose} className="absolute top-0 right-0 mt-1 mr-1 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors">
               <X size={20} />
             </button>
@@ -110,7 +110,7 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
                 <button
                   type="submit"
                   disabled={isLoading || !goal.trim() || turnstileToken === null}
-                  className="absolute bottom-3 right-3 bg-blue-700 hover:bg-blue-800 disabled:bg-blue-300 text-white px-5 py-2 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
+                  className="absolute bottom-3 right-3 bg-[#5a4000] hover:bg-[#5a4000] disabled:bg-[#D1C5B4] text-white px-5 py-2 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
                 >
                   {isLoading ? <><Loader2 size={18} className="animate-spin" /> Building...</> : <><Map size={18} /> Build My Path</>}
                 </button>
@@ -131,7 +131,7 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
                 <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Try one of these:</span>
                 <div className="flex flex-wrap gap-2">
                   {QUICK_PROMPTS.map(p => (
-                    <button key={p} onClick={() => setGoal(p)} className="text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full transition-colors border border-blue-100">
+                    <button key={p} onClick={() => setGoal(p)} className="text-sm bg-[#FFDF9C]/20 hover:bg-[#FFDF9C]/40 text-[#5a4000] px-3 py-1.5 rounded-full transition-colors border border-[#D1C5B4]">
                       {p}
                     </button>
                   ))}
@@ -147,7 +147,7 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
 
               {isLoading && (
                 <div className="flex flex-col items-center justify-center py-16 text-gray-400">
-                  <Loader2 size={40} className="animate-spin text-blue-600 mb-4" />
+                  <Loader2 size={40} className="animate-spin text-primary mb-4" />
                   <p className="font-medium animate-pulse">Building your personalised roadmap...</p>
                 </div>
               )}

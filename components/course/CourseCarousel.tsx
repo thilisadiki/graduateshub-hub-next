@@ -35,7 +35,7 @@ export default function CourseCarousel({
               <h2 className="text-3xl font-extrabold text-gray-900">{title}</h2>
             </div>
             <p className="text-gray-500">{subtitle}</p>
-            <div className="flex items-center gap-1.5 mt-3 text-primary text-sm font-semibold md:hidden bg-blue-50 w-max px-3 py-1 rounded-full">
+            <div className="flex items-center gap-1.5 mt-3 text-primary text-sm font-semibold md:hidden bg-[#FFDF9C]/20 w-max px-3 py-1 rounded-full">
               <ChevronRight size={16} className="animate-pulse" />
               <span>Swipe to see more</span>
             </div>
@@ -43,14 +43,14 @@ export default function CourseCarousel({
           <div className="hidden md:flex gap-3">
             <button
               onClick={() => scroll('left')}
-              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors bg-white shadow-sm"
+              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#FFDF9C]/20 hover:text-primary hover:border-[#D1C5B4] transition-colors bg-white shadow-sm"
               aria-label="Scroll left"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors bg-white shadow-sm"
+              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#FFDF9C]/20 hover:text-primary hover:border-[#D1C5B4] transition-colors bg-white shadow-sm"
               aria-label="Scroll right"
             >
               <ChevronRight size={20} />

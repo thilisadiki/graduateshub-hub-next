@@ -42,7 +42,7 @@ export default function FeedbackPage() {
       {/* Hero */}
       <div className="bg-slate-900 text-white py-12 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">We read every response</p>
+          <p className="text-[#7C7061] font-bold text-sm uppercase tracking-widest mb-3">We read every response</p>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Share Your Feedback</h1>
           <p className="text-gray-300 max-w-lg mx-auto">
             What would make Graduates Hub better for you? Your input shapes what we build next - takes about 60 seconds.

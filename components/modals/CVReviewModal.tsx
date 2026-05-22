@@ -180,7 +180,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
                         type="button"
                         key={r}
                         onClick={() => setTargetRole(r)}
-                        className="text-xs bg-violet-50 hover:bg-violet-100 text-violet-700 px-3 py-1 rounded-full transition-colors border border-violet-100"
+                        className="text-xs bg-[#F5E0BB/20] hover:bg-[#F5E0BB/40] text-violet-700 px-3 py-1 rounded-full transition-colors border border-violet-100"
                       >
                         {r}
                       </button>
@@ -215,7 +215,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
               <button
                 type="submit"
                 disabled={isLoading || cvText.trim().length < 50 || turnstileToken === null}
-                className="self-end bg-violet-600 hover:bg-violet-700 disabled:bg-violet-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
+                className="self-end bg-[#6C5D3F] hover:bg-[#524633] disabled:bg-violet-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading
                   ? <><Loader2 size={18} className="animate-spin" /> Reviewing...</>
@@ -232,7 +232,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
 
               {isLoading && (
                 <div className="flex flex-col items-center justify-center py-16 text-gray-400">
-                  <Loader2 size={40} className="animate-spin text-violet-600 mb-4" />
+                  <Loader2 size={40} className="animate-spin text-[#6C5D3F] mb-4" />
                   <p className="font-medium animate-pulse">Reading your CV and generating feedback...</p>
                 </div>
               )}
@@ -314,7 +314,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
                         {result.courses.map(course => (
                           <div key={course.id} className="flex flex-col gap-1">
                             {course.targetSkill && (
-                              <span className="text-xs font-bold text-violet-700 bg-violet-50 border border-violet-100 px-2.5 py-1 rounded-full self-start">
+                              <span className="text-xs font-bold text-violet-700 bg-[#F5E0BB/20] border border-violet-100 px-2.5 py-1 rounded-full self-start">
                                 Builds: {course.targetSkill}
                               </span>
                             )}

@@ -12,7 +12,7 @@ interface Props {
 }
 
 const TEMPLATES: { id: TemplateType; label: string; description: string; accent: string }[] = [
-  { id: 'modern', label: 'Modern', description: 'Coloured sidebar', accent: 'bg-blue-600' },
+  { id: 'modern', label: 'Modern', description: 'Coloured sidebar', accent: 'bg-primary' },
   { id: 'professional', label: 'Professional', description: 'Classic ATS', accent: 'bg-slate-700' },
   { id: 'minimalist', label: 'Minimalist', description: 'Elegant & clean', accent: 'bg-gray-400' },
 ];
@@ -78,7 +78,7 @@ export default function PreviewPanel({ data, template, onTemplateChange }: Props
               onClick={() => onTemplateChange(t.id)}
               className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-medium transition ${
                 template === t.id
-                  ? 'border-blue-600 bg-blue-50 text-blue-700'
+                  ? 'border-primary bg-[#FFDF9C]/20 text-[#5a4000]'
                   : 'border-gray-200 text-gray-500 hover:border-gray-300 hover:bg-gray-50'
               }`}
             >
@@ -92,7 +92,7 @@ export default function PreviewPanel({ data, template, onTemplateChange }: Props
         <button
           type="button"
           onClick={handleDownload}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition shadow-sm"
+          className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-[#5a4000] text-white text-xs font-semibold rounded-lg transition shadow-sm"
         >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

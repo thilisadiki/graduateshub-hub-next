@@ -28,7 +28,7 @@ export default function CVBuilderPage() {
           </div>
           <a
             href="/free-courses-with-certificates"
-            className="text-xs text-blue-600 hover:text-blue-700 font-medium transition hidden sm:block"
+            className="text-xs text-primary hover:text-[#5a4000] font-medium transition hidden sm:block"
           >
             Browse free courses to add to your CV →
           </a>

@@ -72,9 +72,9 @@ export default function PortfolioLandingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 font-bold text-xs uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#7A5900]/20 border border-[#FFDF9C]/30 text-[#FFDF9C] font-bold text-xs uppercase tracking-wider mb-6">
             <Sparkles size={12} className="text-yellow-400" />
             New: Proof of Work Portfolio
           </div>
@@ -100,7 +100,7 @@ export default function PortfolioLandingPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
             <Link
               href="#categories"
-              className="bg-indigo-500 hover:bg-indigo-400 text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/40"
+              className="bg-primary hover:bg-[#5a4000] text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#261A00]/40"
             >
               Browse Categories <ArrowRight size={16} />
             </Link>
@@ -134,7 +134,7 @@ export default function PortfolioLandingPage() {
                 >
                   <div className={`h-1.5 bg-gradient-to-r ${cat.accentFrom} ${cat.accentTo}`} />
                   <div className="p-6 flex flex-col flex-1 gap-3">
-                    <h3 className="text-lg font-black text-gray-900 group-hover:text-indigo-600 transition-colors">
+                    <h3 className="text-lg font-black text-gray-900 group-hover:text-primary transition-colors">
                       {cat.name}
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">{cat.tagline}</p>
@@ -142,7 +142,7 @@ export default function PortfolioLandingPage() {
                       <span>{topicsInCat.length} {topicsInCat.length === 1 ? 'topic' : 'topics'}</span>
                       <span>{available} {available === 1 ? 'task' : 'tasks'} available</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm font-bold text-indigo-600">
+                    <div className="flex items-center gap-2 text-sm font-bold text-primary">
                       Explore category <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
@@ -162,10 +162,10 @@ export default function PortfolioLandingPage() {
             {steps.map(({ step, icon: Icon, title, body }) => (
               <div key={step} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white font-black text-lg flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-primary text-white font-black text-lg flex items-center justify-center shrink-0">
                     {step}
                   </div>
-                  <Icon size={22} className="text-indigo-500" />
+                  <Icon size={22} className="text-primary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">{title}</h3>
@@ -177,12 +177,12 @@ export default function PortfolioLandingPage() {
         </section>
 
         {/* The Badge */}
-        <section className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border border-indigo-100 p-8 md:p-10">
+        <section className="bg-gradient-to-br from-[#FBF3EB] to-[#FFF8F1] rounded-2xl border border-[#D1C5B4] p-8 md:p-10">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-3">
-                <Share2 size={18} className="text-blue-700" />
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-700">LinkedIn-ready</span>
+                <Share2 size={18} className="text-[#5a4000]" />
+                <span className="text-xs font-bold uppercase tracking-wider text-[#5a4000]">LinkedIn-ready</span>
               </div>
               <h2 className="text-2xl font-extrabold text-gray-900 mb-3">What the Badge looks like</h2>
               <p className="text-gray-600 leading-relaxed text-[15px] mb-4">
@@ -195,8 +195,8 @@ export default function PortfolioLandingPage() {
             <div className="flex-1 w-full">
               <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Award size={18} className="text-indigo-600" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">Badge of Competence</span>
+                  <Award size={18} className="text-primary" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary">Badge of Competence</span>
                 </div>
                 <div className="text-lg font-black text-gray-900 mb-1">Social Media Audit for a Local Coffee Shop</div>
                 <div className="text-sm text-gray-500 mb-4">Awarded to Jane Mokoena, April 2026</div>

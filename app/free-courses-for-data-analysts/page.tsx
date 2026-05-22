@@ -158,7 +158,7 @@ export default function FreeCoursesForDataAnalystsPage() {
                       <td className="py-4 pr-6 font-semibold text-gray-800 whitespace-nowrap">{tool}</td>
                       <td className="py-4 pr-6 text-gray-600">{use}</td>
                       <td className="py-4">
-                        <span className={`px-2.5 py-1 rounded-full text-xs font-bold whitespace-nowrap ${level === 'Beginner' ? 'bg-green-50 text-green-700' : level === 'Intermediate' ? 'bg-blue-50 text-blue-700' : level === 'Beginner to Intermediate' ? 'bg-yellow-50 text-yellow-700' : 'bg-purple-50 text-purple-700'}`}>{level}</span>
+                        <span className={`px-2.5 py-1 rounded-full text-xs font-bold whitespace-nowrap ${level === 'Beginner' ? 'bg-green-50 text-green-700' : level === 'Intermediate' ? 'bg-[#FFDF9C]/20 text-[#5a4000]' : level === 'Beginner to Intermediate' ? 'bg-yellow-50 text-yellow-700' : 'bg-purple-50 text-purple-700'}`}>{level}</span>
                       </td>
                     </tr>
                   ))}
@@ -167,15 +167,15 @@ export default function FreeCoursesForDataAnalystsPage() {
             </div>
           </section>
 
-          <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Do You Need Coding to Become a Data Analyst?</h2>
-            <p className="text-blue-100 mb-10">Not always, but learning Python and SQL will make you significantly more competitive.</p>
+            <p className="text-[#FFDF9C] mb-10">Not always, but learning Python and SQL will make you significantly more competitive.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
                 <h3 className="font-bold text-white text-lg mb-4">You can start without coding:</h3>
                 <ul className="space-y-3">
                   {['Excel and Google Sheets for basic data manipulation', 'Online dashboarding tools with drag-and-drop interfaces', 'Basic reporting and data interpretation skills'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-blue-100 text-sm"><CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}</li>
+                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm"><CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}</li>
                   ))}
                 </ul>
               </div>
@@ -183,7 +183,7 @@ export default function FreeCoursesForDataAnalystsPage() {
                 <h3 className="font-bold text-white text-lg mb-4">However, learning Python and SQL will:</h3>
                 <ul className="space-y-3">
                   {['Increase your job opportunities significantly', 'Let you work with larger, more complex datasets', 'Make you more competitive at salary negotiation', 'Open paths into data science and machine learning'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-blue-100 text-sm"><CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}</li>
+                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm"><CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}</li>
                   ))}
                 </ul>
               </div>

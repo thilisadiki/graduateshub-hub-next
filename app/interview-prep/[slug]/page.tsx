@@ -125,16 +125,16 @@ export default async function InterviewPrepPage({
 
         {/* Linked Roadmap CTA */}
         {linkedRoadmap && (
-          <div className="mb-10 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3">
+          <div className="mb-10 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-xl px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3">
             <div className="flex-1">
-              <p className="text-sm font-bold text-blue-800">Want the full study plan?</p>
-              <p className="text-sm text-blue-700 mt-0.5">
+              <p className="text-sm font-bold text-[#261A00]">Want the full study plan?</p>
+              <p className="text-sm text-[#5a4000] mt-0.5">
                 The <strong>{linkedRoadmap.title}</strong> roadmap covers every skill you need to build before the interview.
               </p>
             </div>
             <Link
               href={`/career-roadmaps/${linkedRoadmap.id}`}
-              className="shrink-0 bg-primary hover:bg-blue-800 text-white font-bold px-5 py-2.5 rounded-lg transition-colors text-sm whitespace-nowrap"
+              className="shrink-0 bg-primary hover:bg-[#5a4000] text-white font-bold px-5 py-2.5 rounded-lg transition-colors text-sm whitespace-nowrap"
             >
               View Roadmap →
             </Link>
@@ -310,14 +310,14 @@ export default async function InterviewPrepPage({
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/interview-prep"
-            className="flex-1 text-center bg-white border-2 border-primary text-primary hover:bg-blue-50 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+            className="flex-1 text-center bg-white border-2 border-primary text-primary hover:bg-[#FFDF9C]/20 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
           >
             All Interview Prep Guides
           </Link>
           {linkedRoadmap && (
             <Link
               href={`/career-roadmaps/${linkedRoadmap.id}`}
-              className="flex-1 text-center bg-primary hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+              className="flex-1 text-center bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
             >
               {linkedRoadmap.title} Roadmap →
             </Link>

@@ -111,7 +111,7 @@ export default async function TaskSubmissionPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />
 
-      <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400 flex-wrap">
             <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
@@ -123,7 +123,7 @@ export default async function TaskSubmissionPage({
             <span className="text-slate-300 font-medium">{task.difficulty}</span>
           </div>
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300">
+            <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#7A5900]/20 border border-[#FFDF9C]/30 text-[#FFDF9C]">
               {cat.name}
             </span>
             <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-slate-300">
@@ -155,7 +155,7 @@ export default async function TaskSubmissionPage({
             <ul className="flex flex-col gap-3">
               {task.deliverables.map((d, i) => (
                 <li key={i} className="flex gap-3 text-[15px] text-gray-700">
-                  <CheckCircle2 size={18} className="text-indigo-500 shrink-0 mt-0.5" />
+                  <CheckCircle2 size={18} className="text-primary shrink-0 mt-0.5" />
                   <span>{d}</span>
                 </li>
               ))}
@@ -163,9 +163,9 @@ export default async function TaskSubmissionPage({
           </section>
 
           {task.submissionGuidance && (
-            <section className="bg-indigo-50 rounded-2xl border border-indigo-100 p-6 md:p-8">
+            <section className="bg-[#FFDF9C]/20 rounded-2xl border border-[#D1C5B4] p-6 md:p-8">
               <h2 className="text-lg font-extrabold text-gray-900 mb-3 flex items-center gap-2">
-                <Target size={18} className="text-indigo-600" /> Submission Guidance
+                <Target size={18} className="text-primary" /> Submission Guidance
               </h2>
               <p className="text-gray-700 leading-relaxed text-[15px] whitespace-pre-wrap">
                 {task.submissionGuidance}
@@ -179,7 +179,7 @@ export default async function TaskSubmissionPage({
         <aside className="lg:col-span-1">
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-24">
             <div className="flex items-center gap-2 mb-4">
-              <Award size={18} className="text-indigo-600" />
+              <Award size={18} className="text-primary" />
               <h2 className="font-extrabold text-gray-900">Grading Rubric</h2>
             </div>
             <p className="text-xs text-gray-500 mb-5 leading-relaxed">
@@ -187,10 +187,10 @@ export default async function TaskSubmissionPage({
             </p>
             <ul className="flex flex-col gap-4">
               {task.rubric.map((c) => (
-                <li key={c.key} className="border-l-2 border-indigo-200 pl-3">
+                <li key={c.key} className="border-l-2 border-[#D1C5B4] pl-3">
                   <div className="flex items-center justify-between gap-2 mb-1">
                     <div className="font-bold text-gray-900 text-sm">{c.label}</div>
-                    <div className="text-xs font-bold text-indigo-600">{c.weight}%</div>
+                    <div className="text-xs font-bold text-primary">{c.weight}%</div>
                   </div>
                   <p className="text-xs text-gray-500 leading-relaxed">{c.description}</p>
                 </li>

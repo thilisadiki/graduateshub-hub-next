@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-gray-300 py-12 px-6 border-t border-slate-800">
+    <footer className="bg-[#1F1B13] text-[#D1C5B4] py-12 px-6 border-t border-[#2a2520]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
 
         {/* Brand */}
         <div className="sm:col-span-2 md:col-span-4 lg:col-span-2">
-          <h2 className="text-2xl font-bold text-white mb-4">Graduates <span className="text-blue-400">Hub</span></h2>
+          <h2 className="text-2xl font-bold text-white mb-4">Graduates <span className="text-[#FFDF9C]">Hub</span></h2>
           <p className="text-sm leading-relaxed max-w-sm">
             Your free learning resource centre: career guides, study articles, and hundreds of free certified courses to help you grow your skills and advance your career.
           </p>
@@ -15,12 +15,12 @@ export default function Footer() {
             href="https://facebook.com/Graduateshub"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-5 text-sm text-slate-400 hover:text-blue-400 transition-colors group"
+            className="inline-flex items-center gap-2 mt-5 text-sm text-[#7C7061] hover:text-[#FFDF9C] transition-colors group"
           >
-            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-600 text-white shrink-0">
+            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#7A5900] text-white shrink-0">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
             </span>
-            <span><strong className="text-slate-300 group-hover:text-blue-400 transition-colors">189K+ followers</strong> on Facebook</span>
+            <span><strong className="text-[#D1C5B4] group-hover:text-[#FFDF9C] transition-colors">189K+ followers</strong> on Facebook</span>
           </a>
         </div>
 
@@ -28,15 +28,15 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-white mb-4">Popular Guides</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/free-courses-for-beginners" className="hover:text-blue-400 transition-colors">Free Courses for Beginners</Link></li>
-            <li><Link href="/free-courses-with-certificates" className="hover:text-blue-400 transition-colors">Free Courses with Certificates</Link></li>
-            <li><Link href="/best-alison-courses-with-certificates" className="hover:text-blue-400 transition-colors">Best Alison Courses</Link></li>
-            <li><Link href="/free-courses-for-data-analysts" className="hover:text-blue-400 transition-colors">Free Courses for Data Analysts</Link></li>
-            <li><Link href="/free-ai-courses-for-beginners" className="hover:text-blue-400 transition-colors">Free AI Courses for Beginners</Link></li>
-            <li><Link href="/free-courses-for-accounting-and-finance" className="hover:text-blue-400 transition-colors">Free Courses for Accounting & Finance</Link></li>
-            <li><Link href="/free-courses-for-software-developers" className="hover:text-blue-400 transition-colors">Free Courses for Software Developers</Link></li>
-            <li><Link href="/free-business-courses" className="hover:text-blue-400 transition-colors">Free Business Courses</Link></li>
-            <li><Link href="/guides" className="hover:text-blue-400 transition-colors font-medium">View All Guides →</Link></li>
+            <li><Link href="/free-courses-for-beginners" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Beginners</Link></li>
+            <li><Link href="/free-courses-with-certificates" className="hover:text-[#FFDF9C] transition-colors">Free Courses with Certificates</Link></li>
+            <li><Link href="/best-alison-courses-with-certificates" className="hover:text-[#FFDF9C] transition-colors">Best Alison Courses</Link></li>
+            <li><Link href="/free-courses-for-data-analysts" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Data Analysts</Link></li>
+            <li><Link href="/free-ai-courses-for-beginners" className="hover:text-[#FFDF9C] transition-colors">Free AI Courses for Beginners</Link></li>
+            <li><Link href="/free-courses-for-accounting-and-finance" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Accounting & Finance</Link></li>
+            <li><Link href="/free-courses-for-software-developers" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Software Developers</Link></li>
+            <li><Link href="/free-business-courses" className="hover:text-[#FFDF9C] transition-colors">Free Business Courses</Link></li>
+            <li><Link href="/guides" className="hover:text-[#FFDF9C] transition-colors font-medium">View All Guides →</Link></li>
           </ul>
         </div>
 
@@ -44,17 +44,17 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-white mb-4">Career Resources</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/tools" className="hover:text-blue-400 transition-colors font-medium text-blue-300">AI Career Tools →</Link></li>
-            <li><Link href="/portfolio" className="hover:text-blue-400 transition-colors font-medium text-amber-300">Proof of Work Portfolio →</Link></li>
-            <li><Link href="/cv-builder" className="hover:text-blue-400 transition-colors font-medium">Free CV Builder →</Link></li>
-            <li><Link href="/career-roadmaps" className="hover:text-blue-400 transition-colors font-medium">Career Roadmaps →</Link></li>
-            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst Roadmap</Link></li>
-            <li><Link href="/career-roadmaps/web-developer" className="hover:text-blue-400 transition-colors">Web Developer Roadmap</Link></li>
-            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-blue-400 transition-colors">Business Analyst Roadmap</Link></li>
-            <li className="pt-1"><Link href="/interview-prep" className="hover:text-blue-400 transition-colors font-medium">CV & Interview Prep →</Link></li>
-            <li><Link href="/interview-prep/data-analyst" className="hover:text-blue-400 transition-colors">Data Analyst Prep</Link></li>
-            <li><Link href="/interview-prep/web-developer" className="hover:text-blue-400 transition-colors">Web Developer Prep</Link></li>
-            <li><Link href="/interview-prep/junior-accountant" className="hover:text-blue-400 transition-colors">Junior Accountant Prep</Link></li>
+            <li><Link href="/tools" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">AI Career Tools →</Link></li>
+            <li><Link href="/portfolio" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#CCECC8]">Proof of Work Portfolio →</Link></li>
+            <li><Link href="/cv-builder" className="hover:text-[#FFDF9C] transition-colors font-medium">Free CV Builder →</Link></li>
+            <li><Link href="/career-roadmaps" className="hover:text-[#FFDF9C] transition-colors font-medium">Career Roadmaps →</Link></li>
+            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-[#FFDF9C] transition-colors">Data Analyst Roadmap</Link></li>
+            <li><Link href="/career-roadmaps/web-developer" className="hover:text-[#FFDF9C] transition-colors">Web Developer Roadmap</Link></li>
+            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-[#FFDF9C] transition-colors">Business Analyst Roadmap</Link></li>
+            <li className="pt-1"><Link href="/interview-prep" className="hover:text-[#FFDF9C] transition-colors font-medium">CV & Interview Prep →</Link></li>
+            <li><Link href="/interview-prep/data-analyst" className="hover:text-[#FFDF9C] transition-colors">Data Analyst Prep</Link></li>
+            <li><Link href="/interview-prep/web-developer" className="hover:text-[#FFDF9C] transition-colors">Web Developer Prep</Link></li>
+            <li><Link href="/interview-prep/junior-accountant" className="hover:text-[#FFDF9C] transition-colors">Junior Accountant Prep</Link></li>
           </ul>
         </div>
 
@@ -62,12 +62,12 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-white mb-4">Categories</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/category/it" className="hover:text-blue-400 transition-colors">IT & Technology</Link></li>
-            <li><Link href="/category/software-engineering" className="hover:text-blue-400 transition-colors">Software Development</Link></li>
-            <li><Link href="/category/business" className="hover:text-blue-400 transition-colors">Business & Management</Link></li>
-            <li><Link href="/category/marketing" className="hover:text-blue-400 transition-colors">Digital Marketing</Link></li>
-            <li><Link href="/category/accounting" className="hover:text-blue-400 transition-colors">Accounting & Finance</Link></li>
-            <li><Link href="/categories" className="hover:text-blue-400 transition-colors">All Categories →</Link></li>
+            <li><Link href="/category/it" className="hover:text-[#FFDF9C] transition-colors">IT & Technology</Link></li>
+            <li><Link href="/category/software-engineering" className="hover:text-[#FFDF9C] transition-colors">Software Development</Link></li>
+            <li><Link href="/category/business" className="hover:text-[#FFDF9C] transition-colors">Business & Management</Link></li>
+            <li><Link href="/category/marketing" className="hover:text-[#FFDF9C] transition-colors">Digital Marketing</Link></li>
+            <li><Link href="/category/accounting" className="hover:text-[#FFDF9C] transition-colors">Accounting & Finance</Link></li>
+            <li><Link href="/categories" className="hover:text-[#FFDF9C] transition-colors">All Categories →</Link></li>
           </ul>
         </div>
 
@@ -75,26 +75,26 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-white mb-4">Legal</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</Link></li>
-            <li><Link href="/feedback" className="hover:text-blue-400 transition-colors">Give Feedback</Link></li>
-            <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
-            <li><Link href="/curation-policy" className="hover:text-blue-400 transition-colors">Curation Policy</Link></li>
-            <li><Link href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
-            <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-            <li><Link href="/disclosure" className="hover:text-blue-400 transition-colors">Affiliate Disclosure</Link></li>
+            <li><Link href="/contact" className="hover:text-[#FFDF9C] transition-colors">Contact Us</Link></li>
+            <li><Link href="/feedback" className="hover:text-[#FFDF9C] transition-colors">Give Feedback</Link></li>
+            <li><Link href="/about" className="hover:text-[#FFDF9C] transition-colors">About Us</Link></li>
+            <li><Link href="/curation-policy" className="hover:text-[#FFDF9C] transition-colors">Curation Policy</Link></li>
+            <li><Link href="/terms" className="hover:text-[#FFDF9C] transition-colors">Terms of Service</Link></li>
+            <li><Link href="/privacy" className="hover:text-[#FFDF9C] transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/disclosure" className="hover:text-[#FFDF9C] transition-colors">Affiliate Disclosure</Link></li>
           </ul>
         </div>
 
       </div>
-      <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-slate-800 text-sm text-center space-y-2">
+      <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-[#2a2520] text-sm text-center space-y-2">
         <p>&copy; {new Date().getFullYear()} Graduates Hub. All rights reserved.</p>
-        <p className="text-slate-500">
+        <p className="text-[#7C7061]">
           Founded and built by{' '}
           <a
             href="https://www.linkedin.com/in/jasonsadiki/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-400 transition-colors font-medium"
+            className="text-[#D1C5B4] hover:text-[#FFDF9C] transition-colors font-medium"
           >
             Jason Sadiki
           </a>
