@@ -1,0 +1,54 @@
+{
+  "id": "auth-jwt-global-state",
+  "categoryId": "web-development",
+  "topicId": "auth-flow-implementation",
+  "level": "intermediate",
+  "title": "Connect a Mock JWT API & Manage State",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Wire up a login form to an API and manage the user session globally.",
+  "scenario": "The backend team has just deployed the `/api/login` endpoint. It accepts an email and password and returns a mock JWT (JSON Web Token) along with the user profile data. You need to connect the login form, store the token securely, and make the user data available to the entire React app.",
+  "brief": "Write the logic to submit credentials to a mock API endpoint. If successful, parse the response, store the JWT (explain where and why), and set the global user state using the React Context API (or a lightweight store like Zustand) so that a \"Navbar\" component can display \"Welcome, [Name]\".",
+  "deliverables": [
+    "The API fetch call and error handling logic (e.g., handling 401 Unauthorized)",
+    "The React Context provider (or Zustand store) managing the global `user` state",
+    "A paragraph defending your choice of where to store the JWT (LocalStorage vs. HttpOnly Cookie) for this specific scenario"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You can mock the API call using a `setTimeout` that resolves with a fake token. Focus on how the global state is updated and consumed.",
+  "rubric": [
+    {
+      "key": "api",
+      "label": "API Integration",
+      "description": "Are loading and error states handled gracefully during the request?",
+      "weight": 25
+    },
+    {
+      "key": "state",
+      "label": "Global State",
+      "description": "Is the Context/Store implemented cleanly without causing unnecessary re-renders?",
+      "weight": 35
+    },
+    {
+      "key": "security",
+      "label": "Security Awareness",
+      "description": "Does the candidate understand the risks of LocalStorage vs Cookies?",
+      "weight": 25
+    },
+    {
+      "key": "craft",
+      "label": "Code Craft",
+      "description": "Is the business logic separated from the UI components?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "React Context / Global State",
+    "API Integration",
+    "JWT Basics",
+    "Security Principles"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

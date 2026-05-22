@@ -1,0 +1,55 @@
+{
+  "id": "pricing-card-rebuild",
+  "categoryId": "web-development",
+  "topicId": "landing-page-rebuild",
+  "level": "beginner",
+  "title": "Build a Responsive Pricing Card",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write the HTML and CSS for a single pricing card from a short spec.",
+  "scenario": "A SaaS startup is refreshing its pricing page. Before trusting a junior with the whole page, the lead developer asks applicants to build a single pricing card in isolation. It is a small, self-contained component, but the details matter.",
+  "brief": "Build one pricing card for the \"Pro\" plan. The card should contain: a plan name, a one-line description, a price with a \"/ month\" suffix, a list of four features each with a small check icon, and a primary call-to-action button that says \"Start free trial\". The card should look clean on both a 360px mobile screen and a 1280px desktop screen. Pick sensible padding, font sizes, and a single accent colour.",
+  "deliverables": [
+    "A complete HTML snippet for one pricing card",
+    "A complete CSS (or Tailwind class) implementation",
+    "A one-line note on the font size and spacing scale you chose and why",
+    "One accessibility detail you deliberately got right (focus ring, contrast, semantic list, aria-label, etc.)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Paste the code in fenced code blocks. Plain HTML and CSS (or Tailwind classes) only, no frameworks. Do not overbuild: one card, not three.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "HTML Structure",
+      "description": "Is the markup semantic (ul for features, button for CTA, heading hierarchy)?",
+      "weight": 30
+    },
+    {
+      "key": "visual",
+      "label": "Visual Polish",
+      "description": "Are spacing, type scale, and the accent colour used with restraint and consistency?",
+      "weight": 25
+    },
+    {
+      "key": "responsive",
+      "label": "Responsive Behaviour",
+      "description": "Does the card hold up at 360px and 1280px without awkward wrapping or overflow?",
+      "weight": 25
+    },
+    {
+      "key": "a11y",
+      "label": "Accessibility Detail",
+      "description": "Is the accessibility choice real, specific, and correctly implemented?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "HTML",
+    "CSS / Tailwind",
+    "Responsive design",
+    "Accessibility"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

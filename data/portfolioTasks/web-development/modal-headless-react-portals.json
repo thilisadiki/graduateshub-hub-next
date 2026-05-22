@@ -1,0 +1,56 @@
+{
+  "id": "modal-headless-react-portals",
+  "categoryId": "web-development",
+  "topicId": "accessible-modal-dialog",
+  "level": "advanced",
+  "title": "Headless UI & React Portals",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Build a reusable, headless modal system for a large-scale React application.",
+  "scenario": "The application now has 40 different modals. Developers are copying and pasting the accessibility logic everywhere, leading to bugs. The lead engineer wants you to build a single, highly reusable \"Headless\" Modal component system that handles the accessibility and positioning, while letting developers inject any design they want.",
+  "brief": "Design a Compound Component API for the modal (e.g., `<Modal>`, `<Modal.Trigger>`, `<Modal.Content>`). Use React Portals to render the modal at the root of the DOM to avoid CSS overflow clipping issues. Manage the shared state between these sub-components using React Context.",
+  "deliverables": [
+    "The complete React code for the Compound Component system (Modal, Trigger, Content, CloseButton)",
+    "The React Context implementation linking them together",
+    "The React Portal implementation",
+    "A short example of how a developer would consume/use this API in a view"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Your goal is developer experience (DX). The API should be intuitive. Make sure to explain why React Portals are necessary for modals in complex DOM trees.",
+  "rubric": [
+    {
+      "key": "api",
+      "label": "Compound Component API",
+      "description": "Is the API intuitive and highly flexible for consuming developers?",
+      "weight": 30
+    },
+    {
+      "key": "context",
+      "label": "React Context",
+      "description": "Is the shared open/close state managed elegantly across the sub-components?",
+      "weight": 25
+    },
+    {
+      "key": "portals",
+      "label": "React Portals",
+      "description": "Is the modal successfully ported to the document body to escape stacking contexts?",
+      "weight": 25
+    },
+    {
+      "key": "dx",
+      "label": "Developer Experience",
+      "description": "Is the implementation abstracted cleanly, hiding the complex accessibility logic from the consumer?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Compound Components",
+    "React Portals",
+    "React Context",
+    "Headless UI Design",
+    "Developer Experience (DX)"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

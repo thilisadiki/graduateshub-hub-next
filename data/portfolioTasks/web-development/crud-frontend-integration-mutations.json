@@ -1,0 +1,54 @@
+{
+  "id": "crud-frontend-integration-mutations",
+  "categoryId": "web-development",
+  "topicId": "fullstack-crud-app",
+  "level": "advanced",
+  "title": "Frontend Integration & Mutations",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Connect the React frontend to the API and manage asynchronous server state.",
+  "scenario": "The database is live, and the API is solid. Now you need to build the librarian dashboard. The librarians are fast typists, and they expect the UI to update instantly when they add or delete a book, even if the database is on a slow connection.",
+  "brief": "Build the React frontend to consume the API. You must implement a data-fetching library (like React Query or SWR) or use Next.js Server Actions. Build the UI to List, Add, and Delete books. Crucially, you must implement Optimistic UI Updates so the interface feels instantaneous, and gracefully roll back the UI if the API request fails.",
+  "deliverables": [
+    "The React component(s) rendering the list and the add/delete buttons",
+    "The data-fetching and mutation logic (e.g., the `useMutation` hook)",
+    "The specific code handling the Optimistic Update and the error rollback"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This task brings the whole stack together. The focus is on the \"seam\" between the frontend and the backend. How do you handle loading states, success toasts, and network failures?",
+  "rubric": [
+    {
+      "key": "integration",
+      "label": "Full-Stack Integration",
+      "description": "Does the frontend correctly communicate with the REST API / Server Actions?",
+      "weight": 30
+    },
+    {
+      "key": "optimistic",
+      "label": "Optimistic Updates",
+      "description": "Does the UI update immediately before the network confirms the success?",
+      "weight": 35
+    },
+    {
+      "key": "rollback",
+      "label": "Error Rollbacks",
+      "description": "Is the UI state correctly reverted if the network request fails?",
+      "weight": 20
+    },
+    {
+      "key": "ux",
+      "label": "Loading & Error States",
+      "description": "Are loading spinners and error toast notifications implemented well?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Full-Stack Integration",
+    "React Query / SWR",
+    "Optimistic UI",
+    "Asynchronous Error Handling"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

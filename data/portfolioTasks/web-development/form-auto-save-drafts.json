@@ -1,0 +1,54 @@
+{
+  "id": "form-auto-save-drafts",
+  "categoryId": "web-development",
+  "topicId": "complex-multistep-form",
+  "level": "advanced",
+  "title": "Auto-Save & Draft Recovery",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Build a bulletproof form that saves progress automatically.",
+  "scenario": "Users are complaining that their browser crashed on Step 3 and they lost all their work. The product manager wants the form to automatically save progress to the backend every time a field is blurred (loses focus), and to restore that draft if the user comes back later.",
+  "brief": "Implement an Auto-Save feature. 1) Write a `useDebounce` or `onBlur` logic to trigger an API save request without spamming the server. 2) Implement an initialization sequence that checks the server for a \"draft\" upon load and hydrates the form state. 3) Provide visual feedback to the user (e.g., \"Saving...\" -> \"Saved at 10:42 AM\").",
+  "deliverables": [
+    "The React code managing the auto-save trigger (debounced or onBlur)",
+    "The initialization logic (fetching the draft and hydrating the form library)",
+    "The visual indicator logic (handling saving/error states gracefully without blocking the user)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The biggest risk here is a race condition: what if the user types fast and the save requests arrive out of order? Explain how you mitigate this.",
+  "rubric": [
+    {
+      "key": "trigger",
+      "label": "Save Triggering",
+      "description": "Is the save logic efficient (debounced or strictly on blur)?",
+      "weight": 30
+    },
+    {
+      "key": "hydration",
+      "label": "Draft Hydration",
+      "description": "Does the form reliably initialize with the saved draft data?",
+      "weight": 25
+    },
+    {
+      "key": "race",
+      "label": "Race Conditions",
+      "description": "Does the candidate address out-of-order save requests?",
+      "weight": 25
+    },
+    {
+      "key": "feedback",
+      "label": "UX Feedback",
+      "description": "Is the auto-save process transparent but non-blocking to the user?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Debouncing",
+    "Form Hydration",
+    "Asynchronous State Sync",
+    "Race Condition Mitigation"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

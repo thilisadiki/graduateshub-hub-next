@@ -1,0 +1,62 @@
+{
+  "id": "technical-seo-performance-audit",
+  "categoryId": "web-development",
+  "topicId": "technical-seo-core-web-vitals",
+  "level": "advanced",
+  "title": "Conduct a Full-Scale Technical SEO & Core Web Vitals Audit",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 8 hours",
+  "tagline": "Perform a comprehensive technical audit for a large SPA and propose code-level fixes.",
+  "scenario": "A media publishing site with over 100,000 pages has suffered a 30% drop in organic traffic after a recent Google core update. The VP of Growth needs a comprehensive technical audit report detailing server response times, JavaScript rendering issues (hydration lag), Core Web Vitals (INP optimization), and crawl architecture.",
+  "brief": "Provide a technical SEO and performance audit for a large-scale single-page application (SPA) with slow initial load times, high Interaction to Next Paint (INP), and broken internal link equity. Draft a complete, developer-friendly audit report with concrete code fixes and architectural recommendations.",
+  "deliverables": [
+    "Full Technical Audit report (markdown) covering: Indexability & Crawling, Core Web Vitals (LCP, INP, CLS) bottlenecks, and Information Architecture/Internal Linking.",
+    "Code snippets showing how to fix a hydration/INP bottleneck in a React/Next.js client-side interactive component (e.g. debouncing/deferring non-critical render blocks, using requestIdleCallback or CSS content-visibility).",
+    "Dynamic rendering or SSR recommendation with clear trade-offs.",
+    "Implementation plan for monitoring Core Web Vitals in production using Real User Monitoring (RUM)."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Submit a detailed, publication-ready markdown report. Break down your analysis systematically and defend your code-level and architectural decisions.",
+  "rubric": [
+    {
+      "key": "audit_depth",
+      "label": "Audit Depth",
+      "description": "Thoroughness of the crawlability, indexing, and architecture analysis.",
+      "weight": 30
+    },
+    {
+      "key": "inp_lcp_fixes",
+      "label": "INP & LCP Fixes",
+      "description": "Technical code-level solutions for INP, hydration lag, and render blocking.",
+      "weight": 25
+    },
+    {
+      "key": "rendering_strategy",
+      "label": "Rendering Strategy",
+      "description": "Defensible architecture comparison (SSR, ISR, CSR) with trade-offs.",
+      "weight": 20
+    },
+    {
+      "key": "rum_monitoring",
+      "label": "RUM Monitoring Plan",
+      "description": "Sound implementation plan for RUM data collection in production.",
+      "weight": 15
+    },
+    {
+      "key": "communication",
+      "label": "Communication & Impact",
+      "description": "Is the audit report professional, action-oriented, and ready for engineering/executive stakeholders?",
+      "weight": 10
+    }
+  ],
+  "skillsProven": [
+    "Core Web Vitals",
+    "INP optimization",
+    "Technical SEO auditing",
+    "Real User Monitoring (RUM)",
+    "React rendering performance"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

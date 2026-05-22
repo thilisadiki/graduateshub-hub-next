@@ -1,0 +1,48 @@
+{
+  "id": "perf-react-code-splitting",
+  "categoryId": "web-development",
+  "topicId": "performance-optimization",
+  "level": "intermediate",
+  "title": "Code-Split a Bloated React App",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Reduce the initial JavaScript bundle size by lazily loading non-critical components.",
+  "scenario": "The companys React dashboard takes forever to become interactive (poor Time to Interactive). A bundle analysis reveals that a massive charting library (Chart.js) and a heavy PDF-generation library are being downloaded immediately when the user hits the login screen, even though they are only used deep inside the app.",
+  "brief": "Refactor the provided React routing setup. You need to implement route-level code splitting using `React.lazy` and `Suspense`. Ensure that the Dashboard and Settings routes (which contain the heavy libraries) are separated into their own chunks and only downloaded when the user navigates to them.",
+  "deliverables": [
+    "The refactored `App.jsx` showing the `React.lazy` imports and `Suspense` boundary",
+    "A fallback UI component (e.g., a skeleton loader) to show while the chunk is downloading",
+    "An explanation of how this improves the First Input Delay (FID) and Time to Interactive (TTI)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Assume a standard React app using React Router. Show exactly where the Suspense boundary goes to ensure a smooth user experience without flashing loading screens excessively.",
+  "rubric": [
+    {
+      "key": "lazy",
+      "label": "React.lazy Implementation",
+      "description": "Are the heavy routes correctly imported using React.lazy?",
+      "weight": 35
+    },
+    {
+      "key": "suspense",
+      "label": "Suspense & Fallbacks",
+      "description": "Is the Suspense boundary placed correctly with a sensible fallback UI?",
+      "weight": 35
+    },
+    {
+      "key": "metrics",
+      "label": "Performance Knowledge",
+      "description": "Does the candidate correctly explain the impact on FID and TTI?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "React Code Splitting",
+    "React.lazy & Suspense",
+    "Bundle Optimization",
+    "Web Performance Metrics"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "state-custom-audio-player",
+  "categoryId": "web-development",
+  "topicId": "state-machine-logic",
+  "level": "beginner",
+  "title": "Build a Custom Audio Player",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Manage the intersecting states of HTML5 media elements.",
+  "scenario": "A podcaster wants a custom audio player on their blog that matches their brand. The native browser `<audio>` tag controls are ugly and inconsistent across browsers. You need to build custom UI controls that tie into the underlying audio element.",
+  "brief": "Create a React component that wraps an `<audio>` tag. Build custom buttons for Play/Pause, a progress bar that updates as the audio plays, and a volume slider. You must manage React state (isPlaying, currentTime, duration) and sync it with the native HTMLMediaElement events.",
+  "deliverables": [
+    "The React component code with the `useRef` pointing to the audio element",
+    "The event listeners (`onTimeUpdate`, `onLoadedMetadata`) that sync the native API with React state",
+    "The UI elements that trigger changes (e.g., clicking Play calls `audioRef.current.play()`)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The challenge here is two-way binding: The UI must update when the audio plays natively, and the audio must change when the user interacts with the UI (like dragging the progress bar).",
+  "rubric": [
+    {
+      "key": "sync",
+      "label": "State Synchronization",
+      "description": "Is React state kept cleanly in sync with the native DOM element?",
+      "weight": 35
+    },
+    {
+      "key": "controls",
+      "label": "Playback Controls",
+      "description": "Do the Play/Pause buttons work and toggle correctly?",
+      "weight": 30
+    },
+    {
+      "key": "progress",
+      "label": "Progress Tracking",
+      "description": "Does the progress bar update accurately based on `currentTime`?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "HTML5 Media API",
+    "React `useRef`",
+    "Two-way State Binding",
+    "Event Listeners"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

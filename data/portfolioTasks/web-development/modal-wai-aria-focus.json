@@ -1,0 +1,54 @@
+{
+  "id": "modal-wai-aria-focus",
+  "categoryId": "web-development",
+  "topicId": "accessible-modal-dialog",
+  "level": "intermediate",
+  "title": "WAI-ARIA & Keyboard Accessibility",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Make the modal fully usable for screen readers and keyboard-only users.",
+  "scenario": "The company has just failed an accessibility audit. The modal you built looks great to sighted mouse-users, but screen readers do not know it is open, and keyboard users can accidentally tab to hidden elements behind the modal.",
+  "brief": "Upgrade the modal to meet WAI-ARIA standards. You must: 1) Add the correct `role` and `aria-*` attributes. 2) Implement \"Focus Trapping\" so that pressing the Tab key cycles only through the modals interactive elements. 3) Ensure the Escape key closes the modal. 4) Return focus to the original trigger button when the modal closes.",
+  "deliverables": [
+    "The updated modal code including all ARIA attributes",
+    "The JavaScript logic for the focus trap",
+    "The keyboard event listeners (Escape key handling)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus trapping is difficult. Do not use an external library like focus-trap for this exercise - write the logic yourself to prove you understand how the DOM handles focus.",
+  "rubric": [
+    {
+      "key": "aria",
+      "label": "ARIA Attributes",
+      "description": "Are role=\"dialog\", aria-modal=\"true\", and aria-labelledby used correctly?",
+      "weight": 25
+    },
+    {
+      "key": "trap",
+      "label": "Focus Trapping",
+      "description": "Does the Tab key correctly loop inside the modal without escaping to the background?",
+      "weight": 35
+    },
+    {
+      "key": "keyboard",
+      "label": "Keyboard Navigation",
+      "description": "Does the Escape key work? Is focus restored to the trigger on close?",
+      "weight": 25
+    },
+    {
+      "key": "craft",
+      "label": "Code Craft",
+      "description": "Are the event listeners cleaned up properly (e.g., removing the keydown listener when unmounted)?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "WAI-ARIA Standards",
+    "Keyboard Navigation",
+    "Focus Trapping",
+    "DOM Event Listeners"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

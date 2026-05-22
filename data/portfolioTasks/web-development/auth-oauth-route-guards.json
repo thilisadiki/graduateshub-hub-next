@@ -1,0 +1,55 @@
+{
+  "id": "auth-oauth-route-guards",
+  "categoryId": "web-development",
+  "topicId": "auth-flow-implementation",
+  "level": "advanced",
+  "title": "OAuth, Route Guards, & Token Refresh",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Build a robust authentication architecture that survives edge cases.",
+  "scenario": "You are the lead frontend engineer for a financial dashboard. Security is paramount. Users log in via an external OAuth provider. The access token expires every 15 minutes, and a silent refresh token must be used to keep them logged in. Furthermore, unauthenticated users must be redirected away from `/dashboard`.",
+  "brief": "Design the authentication architecture. You do not need to build the UI. Write the logic for three critical pieces: 1) A Higher-Order Component (HOC) or wrapper that protects private routes. 2) An Axios interceptor (or fetch wrapper) that automatically catches 401 errors, uses a refresh token to get a new access token, and retries the failed request. 3) The initialization logic that checks if a user is already logged in when they refresh the page.",
+  "deliverables": [
+    "The Route Guard implementation (e.g., `ProtectedRoute.tsx`)",
+    "The Axios interceptor or custom fetch wrapper handling the token refresh logic",
+    "A short architecture note explaining how you prevent multiple failed requests from triggering multiple refresh calls simultaneously"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This task tests your ability to handle complex asynchronous control flows. The interceptor logic is notoriously tricky - walk through your solution carefully.",
+  "rubric": [
+    {
+      "key": "guards",
+      "label": "Route Guards",
+      "description": "Is the routing logic secure and does it prevent flash-of-unauthenticated-content?",
+      "weight": 25
+    },
+    {
+      "key": "interceptor",
+      "label": "Token Refresh Logic",
+      "description": "Does the interceptor correctly pause, refresh, and retry failed requests?",
+      "weight": 35
+    },
+    {
+      "key": "race",
+      "label": "Race Condition Handling",
+      "description": "Does the architecture address the multiple-request refresh problem?",
+      "weight": 25
+    },
+    {
+      "key": "init",
+      "label": "App Initialization",
+      "description": "Is the initial session check robust on hard reloads?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "OAuth Flows",
+    "Axios Interceptors",
+    "Route Protection",
+    "Race Condition Management",
+    "Advanced Authentication"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

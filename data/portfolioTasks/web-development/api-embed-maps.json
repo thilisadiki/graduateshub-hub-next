@@ -1,0 +1,46 @@
+{
+  "id": "api-embed-maps",
+  "categoryId": "web-development",
+  "topicId": "third-party-api-integration",
+  "level": "beginner",
+  "title": "Embed an Interactive Map",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Read external documentation to embed a third-party widget safely.",
+  "scenario": "A local coffee shop needs a \"Find Us\" page. They want an interactive map showing their three locations, rather than just a static image. You need to use the Google Maps (or Mapbox) API to render this.",
+  "brief": "Use a mapping API to render an interactive map centered on a specific city. Place three custom markers on the map representing the coffee shop locations. When a user clicks a marker, a small info window should pop up showing the address.",
+  "deliverables": [
+    "The React component initializing the map and markers",
+    "A brief explanation of how you secured your API key (e.g., using environment variables and HTTP referrer restrictions)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The hardest part of this task for beginners is often just getting the API key and reading the docs. Prove you can follow external documentation.",
+  "rubric": [
+    {
+      "key": "integration",
+      "label": "API Integration",
+      "description": "Is the map rendered and are the markers correctly placed using the SDK?",
+      "weight": 40
+    },
+    {
+      "key": "interaction",
+      "label": "Interactivity",
+      "description": "Do the info windows open when markers are clicked?",
+      "weight": 30
+    },
+    {
+      "key": "security",
+      "label": "API Key Security",
+      "description": "Does the candidate understand how to prevent API key theft?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "External SDKs",
+    "Documentation Parsing",
+    "API Key Security"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "optimize-core-web-vitals-static",
+  "categoryId": "web-development",
+  "topicId": "technical-seo-core-web-vitals",
+  "level": "beginner",
+  "title": "Optimize Core Web Vitals for a Static Page",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Optimize a basic landing page to achieve sub-second load times and eliminate layout shifts.",
+  "scenario": "A local bakery is losing mobile search rankings because their site takes over 5 seconds to become interactive. The owner wants a quick audit and performance optimization.",
+  "brief": "Analyze a basic HTML/CSS page setup with some large unoptimized images, layout shifts, and blocking scripts. Identify the Core Web Vitals bottlenecks (LCP, CLS, INP) and fix them by optimizing images (modern formats, sizing), adding dimensions to avoid layout shifts, and making scripts async/defer.",
+  "deliverables": [
+    "Optimized HTML/CSS snippet implementing the performance fixes.",
+    "A short audit report (in markdown) listing the 3 main performance bottlenecks identified and how they were solved.",
+    "The specific Core Web Vitals metrics target expected after changes (LCP, CLS)."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Format your submission in Markdown. Provide code snippets using fenced blocks and write clear, concise explanations for your audit and metrics target.",
+  "rubric": [
+    {
+      "key": "bottlenecks",
+      "label": "Bottleneck Identification",
+      "description": "Did the candidate correctly identify LCP, CLS, and script blocking bottlenecks?",
+      "weight": 30
+    },
+    {
+      "key": "optimization",
+      "label": "Image & Resource Optimization",
+      "description": "Did the candidate properly apply image sizing, responsive attributes, modern formats, and defer scripts?",
+      "weight": 30
+    },
+    {
+      "key": "a11y_seo",
+      "label": "SEO & Layout Shift Prevention",
+      "description": "Are layout shifts eliminated (CLS) and are basic SEO/a11y practices followed?",
+      "weight": 25
+    },
+    {
+      "key": "reasoning",
+      "label": "Performance Reasoning",
+      "description": "Is the reasoning sound and grounded in how browsers parse and render pages?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Core Web Vitals",
+    "LCP/INP/CLS optimization",
+    "Resource Prioritization",
+    "Responsive Images"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

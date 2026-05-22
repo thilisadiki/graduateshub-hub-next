@@ -1,0 +1,54 @@
+{
+  "id": "dashboard-charts-theme",
+  "categoryId": "web-development",
+  "topicId": "interactive-dashboard-layout",
+  "level": "intermediate",
+  "title": "Integrate Charts & Dark Mode",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Bring the dashboard to life with data visualization and theming.",
+  "scenario": "The dashboard layout is approved, but the merchants want to visualize their sales data. They also requested a dark mode because many of them check their stats late at night. You need to integrate a charting library and implement a global theme toggle.",
+  "brief": "1) Integrate a charting library (like Recharts or Chart.js) to display a \"Revenue Over Time\" line chart and a \"Sales by Category\" pie chart. 2) Implement a robust Dark Mode toggle that saves the user preference to LocalStorage and respects their system OS preference by default.",
+  "deliverables": [
+    "The React component code integrating the two charts with mock data",
+    "The Dark Mode state logic and `useEffect` for system preference checking",
+    "The CSS variables or Tailwind configuration used to support the dual themes"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The dark mode implementation is the primary test here. Do not just toggle a class on the body; show how you structured your CSS variables or Tailwind config to make theming scalable across the app.",
+  "rubric": [
+    {
+      "key": "charts",
+      "label": "Chart Integration",
+      "description": "Are the charts rendered correctly and do they resize responsively?",
+      "weight": 25
+    },
+    {
+      "key": "theme-logic",
+      "label": "Dark Mode Logic",
+      "description": "Does the theme toggle work, save to storage, and check system preferences?",
+      "weight": 35
+    },
+    {
+      "key": "theme-css",
+      "label": "Scalable Theming",
+      "description": "Are CSS variables or Tailwind classes used cleanly for the theme swap?",
+      "weight": 30
+    },
+    {
+      "key": "ux",
+      "label": "Flash of Unstyled Content",
+      "description": "Does the candidate mention or handle the \"flash of light mode\" on reload?",
+      "weight": 10
+    }
+  ],
+  "skillsProven": [
+    "Data Visualization (Charts)",
+    "Theme Toggling (Dark Mode)",
+    "CSS Variables",
+    "System Preferences API"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

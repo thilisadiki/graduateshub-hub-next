@@ -1,0 +1,48 @@
+{
+  "id": "api-stripe-webhooks",
+  "categoryId": "web-development",
+  "topicId": "third-party-api-integration",
+  "level": "advanced",
+  "title": "Handle Stripe Webhooks securely",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Process asynchronous events securely to fulfill digital orders.",
+  "scenario": "The store is now selling a digital e-book. When a user pays via Stripe, you cannot just fulfill the order on the \"Success\" page, because users can bookmark that page and visit it without paying. You must listen for Stripe to securely ping your server (a webhook) to confirm the payment before emailing the e-book.",
+  "brief": "Write a Node.js/Next.js backend webhook handler. It must receive the POST request from Stripe, verify the cryptographic signature to ensure the request is actually from Stripe, parse the `checkout.session.completed` event, and run the mock fulfillment logic.",
+  "deliverables": [
+    "The webhook route code, including the raw body parsing and `stripe.webhooks.constructEvent` verification logic",
+    "The switch statement handling the specific event type",
+    "A short explanation of why webhooks require raw bodies instead of JSON parsed bodies"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Webhook signature verification is notoriously tricky because it requires the raw, unparsed HTTP request body. Show that you know how to configure your server to extract this.",
+  "rubric": [
+    {
+      "key": "verification",
+      "label": "Signature Verification",
+      "description": "Is the `constructEvent` method used correctly to prevent spoofing?",
+      "weight": 40
+    },
+    {
+      "key": "raw-body",
+      "label": "Raw Body Parsing",
+      "description": "Does the candidate understand how to capture the raw request body?",
+      "weight": 30
+    },
+    {
+      "key": "fulfillment",
+      "label": "Event Handling",
+      "description": "Is the specific success event parsed and handled correctly?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Webhooks",
+    "Cryptographic Signatures",
+    "Asynchronous Fulfillment",
+    "Server Configuration"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

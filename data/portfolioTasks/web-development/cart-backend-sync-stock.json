@@ -1,0 +1,54 @@
+{
+  "id": "cart-backend-sync-stock",
+  "categoryId": "web-development",
+  "topicId": "ecommerce-shopping-cart",
+  "level": "advanced",
+  "title": "Backend Sync & Stock Validation",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Build a production-grade cart that handles server validation and race conditions.",
+  "scenario": "The store is booming, but a new problem has emerged. Users are adding limited-edition items to their cart, keeping them there for days, and trying to check out after the items are actually sold out. You need to sync the local cart with the backend to validate stock in real-time.",
+  "brief": "Design the logic for a cart that syncs with a backend API. When a user opens the cart, it must ping the server to verify that the items are still in stock and the prices have not changed. If an item is out of stock, the UI must alert the user and adjust the total. Write the logic for the validation check and the mock checkout submission.",
+  "deliverables": [
+    "The API fetching logic that validates the cart against the server database",
+    "The state reconciliation logic (updating the local cart if the server says an item is out of stock)",
+    "The error handling UI states (e.g., \"Only 2 left in stock\" or \"Price updated\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You are not building the backend, just the frontend consumer of it. Focus on how you handle the asynchronous mismatch between what the user thinks they have and what the server knows is available.",
+  "rubric": [
+    {
+      "key": "validation",
+      "label": "Server Validation",
+      "description": "Does the code successfully ping the server to validate stock and prices?",
+      "weight": 30
+    },
+    {
+      "key": "reconciliation",
+      "label": "State Reconciliation",
+      "description": "Does the local state update gracefully when the server returns bad news?",
+      "weight": 30
+    },
+    {
+      "key": "ux",
+      "label": "Error UX",
+      "description": "Are the stock errors communicated clearly to the user without breaking the app?",
+      "weight": 25
+    },
+    {
+      "key": "race",
+      "label": "Race Conditions",
+      "description": "Is the checkout button disabled while stock validation is happening?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Data Synchronization",
+    "Asynchronous Validation",
+    "Race Condition Handling",
+    "Advanced UX Error States"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "form-dynamic-validation",
+  "categoryId": "web-development",
+  "topicId": "complex-multistep-form",
+  "level": "intermediate",
+  "title": "Dynamic Fields & Zod Validation",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Handle dynamic form fields and complex validation schemas.",
+  "scenario": "The basic wizard was a success, but the business logic has become much more complex. If the user selects \"Married\", a whole new section for \"Spouse Details\" must appear. Furthermore, the validation rules are getting out of hand (e.g., age must be > 18 but < 100, zip code must match the selected state).",
+  "brief": "Upgrade the form to use a dedicated validation library (like Zod or Yup) and a form state manager (like React Hook Form or Formik). Implement conditional rendering: fields should appear or disappear based on the answers to previous questions. Ensure the validation schema updates dynamically based on these conditions.",
+  "deliverables": [
+    "The validation schema definition (e.g., the Zod object)",
+    "The React component showing the conditional rendering logic",
+    "A brief explanation of why integrating a library like React Hook Form improves performance over raw `useState`"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This task tests your ability to use industry-standard tools. Do not write custom validation logic for complex rules; rely on the schema library to do the heavy lifting safely.",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Schema Design",
+      "description": "Is the Zod/Yup schema robust and correctly structured?",
+      "weight": 35
+    },
+    {
+      "key": "dynamic",
+      "label": "Conditional Logic",
+      "description": "Do the dynamic fields render correctly without breaking the unified state?",
+      "weight": 30
+    },
+    {
+      "key": "perf",
+      "label": "Form Performance",
+      "description": "Does the candidate understand how React Hook Form prevents excessive re-renders?",
+      "weight": 20
+    },
+    {
+      "key": "errors",
+      "label": "Error Handling",
+      "description": "Are validation errors mapped cleanly to the UI?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Zod / Yup",
+    "React Hook Form",
+    "Dynamic Validation Schemas",
+    "Conditional Rendering"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

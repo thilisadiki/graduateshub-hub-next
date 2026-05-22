@@ -1,0 +1,54 @@
+{
+  "id": "crud-database-integration",
+  "categoryId": "web-development",
+  "topicId": "fullstack-crud-app",
+  "level": "intermediate",
+  "title": "Integrate a Database & ORM",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Connect the backend to a real database and write relational queries.",
+  "scenario": "The library approved your API, but now they need real data persistence. They also want to track \"Authors\" separately from \"Books\". You need to connect a database, define the schema, and update the API to perform relational queries.",
+  "brief": "Integrate a PostgreSQL or SQLite database using an ORM like Prisma or Drizzle (or raw SQL). 1) Define the schema for `Author` (1-to-many) `Book`. 2) Write the logic to fetch a list of all books, including the author name in the response (a JOIN operation). 3) Write the logic to create a new book associated with an existing author.",
+  "deliverables": [
+    "The schema definition file (e.g., `schema.prisma` or SQL migration file)",
+    "The updated GET route containing the relational query (JOIN)",
+    "The updated POST route demonstrating how to insert relational data safely"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You do not need to host the database. Submit the code for the schema and the specific ORM/SQL queries you use to satisfy the relational requirements.",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Database Schema",
+      "description": "Is the 1-to-many relationship correctly defined with foreign keys?",
+      "weight": 30
+    },
+    {
+      "key": "queries",
+      "label": "Relational Queries",
+      "description": "Is the JOIN operation (or ORM equivalent) implemented efficiently?",
+      "weight": 35
+    },
+    {
+      "key": "safety",
+      "label": "SQL Injection Prevention",
+      "description": "If using raw SQL, are parameterized queries used? If ORM, is data validated?",
+      "weight": 20
+    },
+    {
+      "key": "craft",
+      "label": "Error Handling",
+      "description": "Does the API handle database connection errors gracefully?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Database Schema Design",
+    "Relational Databases (SQL)",
+    "ORMs (Prisma / Drizzle)",
+    "Data Integrity"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}
