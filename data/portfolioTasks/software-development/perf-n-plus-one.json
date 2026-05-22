@@ -1,0 +1,48 @@
+{
+  "id": "perf-n-plus-one",
+  "categoryId": "software-development",
+  "topicId": "backend-performance",
+  "level": "beginner",
+  "title": "Fix an N+1 Query Problem",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Optimize a hidden loop that is crushing your database.",
+  "scenario": "An API endpoint `GET /articles` fetches the latest 50 articles. For each article, the ORM runs a separate query to fetch the author's name. This results in 51 database queries for a single API request.",
+  "brief": "Identify the N+1 query in the provided code snippet. Rewrite the database logic to use a SQL `JOIN` or your ORM's \"eager loading\" feature so that it only takes a maximum of 2 queries to fetch all the data.",
+  "deliverables": [
+    "The optimized code snippet",
+    "An explanation of why the N+1 problem causes severe performance degradation as traffic scales"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "If using Prisma, look into `include`. If using TypeORM, look into `relations`. If using raw SQL, write a `LEFT JOIN`.",
+  "rubric": [
+    {
+      "key": "solution",
+      "label": "Eager Loading",
+      "description": "Is the N+1 query successfully reduced to 1 or 2 queries?",
+      "weight": 40
+    },
+    {
+      "key": "theory",
+      "label": "Performance Theory",
+      "description": "Does the candidate understand the latency cost of network round-trips to the DB?",
+      "weight": 35
+    },
+    {
+      "key": "readability",
+      "label": "Code Cleanliness",
+      "description": "Is the optimized code still easy to read?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "N+1 Query Resolution",
+    "Database Joins",
+    "ORM Eager Loading",
+    "Latency Optimization"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

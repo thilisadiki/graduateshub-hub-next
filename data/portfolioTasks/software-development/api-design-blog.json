@@ -1,0 +1,48 @@
+{
+  "id": "api-design-blog",
+  "categoryId": "software-development",
+  "topicId": "api-design",
+  "level": "beginner",
+  "title": "Design a Simple REST API for a Blog",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Define basic CRUD endpoints for a standard blog application.",
+  "scenario": "A client wants a basic headless CMS for their new tech blog. The system needs to support managing `Posts` and user `Comments` on those posts.",
+  "brief": "Write a minimal REST API specification for managing Posts and Comments. Focus heavily on using the correct HTTP verbs (GET, POST, PUT, DELETE) and standard URL routing conventions.",
+  "deliverables": [
+    "A list of the necessary endpoints including the HTTP method and route path (e.g., `GET /posts`)",
+    "A brief description of what each endpoint does",
+    "A JSON payload example of what a successful `POST /posts` request body would look like"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "We are looking for standard REST conventions. Pay attention to how you nest routes (e.g., how do you fetch comments for a specific post?).",
+  "rubric": [
+    {
+      "key": "routing",
+      "label": "REST Routing",
+      "description": "Are the route paths semantic and correctly pluralized?",
+      "weight": 35
+    },
+    {
+      "key": "verbs",
+      "label": "HTTP Verbs",
+      "description": "Are the correct HTTP verbs used for CRUD operations?",
+      "weight": 35
+    },
+    {
+      "key": "payload",
+      "label": "JSON Payload",
+      "description": "Is the POST payload example realistic and properly formatted?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "REST conventions",
+    "HTTP verbs",
+    "API routing"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "web-developer"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "cicd-basic-github-actions",
+  "categoryId": "software-development",
+  "topicId": "cicd-pipeline-setup",
+  "level": "beginner",
+  "title": "Create a Basic CI Workflow",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a GitHub Actions YAML file to automate testing and linting.",
+  "scenario": "A startup team is pushing broken code to the `main` branch because developers forget to run tests locally. They need a Continuous Integration (CI) pipeline that automatically checks every Pull Request.",
+  "brief": "Write a GitHub Actions workflow YAML file for a Node.js project. It should trigger on Pull Requests to `main`. It must install dependencies, run a linter, and run the test suite. If any step fails, the workflow must fail.",
+  "deliverables": [
+    "The complete `.yml` workflow file",
+    "An explanation of the difference between `npm install` and `npm ci` in a pipeline"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ensure you are caching Node modules to speed up the workflow execution time. Speed matters in CI.",
+  "rubric": [
+    {
+      "key": "yaml",
+      "label": "YAML Syntax",
+      "description": "Is the workflow file correctly structured with triggers and steps?",
+      "weight": 40
+    },
+    {
+      "key": "npm-ci",
+      "label": "Dependency Management",
+      "description": "Does the candidate understand why `npm ci` is strictly better for CI environments?",
+      "weight": 30
+    },
+    {
+      "key": "caching",
+      "label": "Pipeline Optimization",
+      "description": "Is a dependency caching strategy implemented?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "GitHub Actions",
+    "Continuous Integration",
+    "YAML",
+    "Build Optimization"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

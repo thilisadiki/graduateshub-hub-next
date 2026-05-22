@@ -1,0 +1,49 @@
+{
+  "id": "api-design-pagination",
+  "categoryId": "software-development",
+  "topicId": "api-design",
+  "level": "advanced",
+  "title": "Design a Scalable Pagination API",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Solve a performance bottleneck by migrating from OFFSET to Cursor pagination.",
+  "scenario": "An internal API endpoint (`GET /transactions`) returns millions of financial records. The current implementation uses standard OFFSET/LIMIT pagination, but queries for page 50,000 are timing out because the database has to scan and discard hundreds of thousands of rows.",
+  "brief": "Design a cursor-based pagination strategy for the `/transactions` endpoint. Explain the API request/response schema changes required, how the client will interact with the cursor, and the database index implications.",
+  "deliverables": [
+    "The updated API response schema showing the cursor meta-data (next_cursor, has_more, etc.)",
+    "The SQL query structure (or ORM equivalent) demonstrating how the cursor is used in the `WHERE` clause",
+    "An explanation of the performance benefits over OFFSET/LIMIT"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on the architectural shift. How do you handle sorting when using cursors? What happens if the cursor column (like timestamp) is not unique?",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "API Schema",
+      "description": "Is the cursor token clearly defined in the API response?",
+      "weight": 35
+    },
+    {
+      "key": "database",
+      "label": "Database Logic",
+      "description": "Is the SQL logic utilizing the cursor correctly to avoid full table scans?",
+      "weight": 35
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Trade-off Analysis",
+      "description": "Does the candidate understand the complexities of cursor pagination (e.g., sorting non-unique fields)?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "API Performance",
+    "Cursor-based Pagination",
+    "Database Indexing",
+    "System Design"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 
 import { digitalMarketingTasks } from './digitalMarketing';
-import { softwareDevelopmentTasks } from './softwareDevelopment';
 import { dataAnalysisTasks } from './dataAnalysis';
 import { financeAccountingTasks } from './financeAccounting';
 import { designUxTasks } from './designUx';
@@ -27,6 +26,7 @@ import { itVoipTelephonyTasks } from './itVoipTelephony';
 import { itDatabaseAdminTasks } from './itDatabaseAdmin';
 
 const WEB_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/web-development');
+const SOFT_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/software-development');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -47,9 +47,28 @@ function loadWebDevTasks(): PortfolioTask[] {
   }
 }
 
+function loadSoftDevTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(SOFT_DEV_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(SOFT_DEV_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(SOFT_DEV_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load software development tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
   ...digitalMarketingTasks,
-  ...softwareDevelopmentTasks,
+  ...loadSoftDevTasks(),
   ...dataAnalysisTasks,
   ...financeAccountingTasks,
   ...designUxTasks,

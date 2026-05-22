@@ -1,0 +1,49 @@
+{
+  "id": "cicd-multi-environment",
+  "categoryId": "software-development",
+  "topicId": "cicd-pipeline-setup",
+  "level": "intermediate",
+  "title": "Multi-Environment Deployment Pipeline",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Design a pipeline that deploys to Staging, then requires manual approval for Production.",
+  "scenario": "The company is maturing. They now have a `staging` environment and a `production` environment. Pushes to `main` should automatically deploy to staging, but deploying to production must require a manual click from the QA manager.",
+  "brief": "Design a multi-stage Continuous Deployment (CD) pipeline. Write the GitHub Actions (or GitLab CI) YAML that defines two deployment jobs. Explain how you manage environment-specific secrets (like database URLs).",
+  "deliverables": [
+    "The multi-stage YAML file",
+    "An explanation of how manual approval gates are configured in your chosen CI provider",
+    "A description of how environment variables are securely injected into the build"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not hardcode secrets in your YAML. Show how you reference repository secrets based on the current environment.",
+  "rubric": [
+    {
+      "key": "stages",
+      "label": "Multi-Stage YAML",
+      "description": "Are the staging and production jobs correctly chained?",
+      "weight": 40
+    },
+    {
+      "key": "gates",
+      "label": "Approval Gates",
+      "description": "Is the manual approval process correctly implemented?",
+      "weight": 30
+    },
+    {
+      "key": "secrets",
+      "label": "Secret Management",
+      "description": "Are environment variables referenced securely?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Continuous Deployment (CD)",
+    "Environment Management",
+    "Secret Handling",
+    "Release Gates"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

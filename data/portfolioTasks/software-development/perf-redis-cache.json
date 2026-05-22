@@ -1,0 +1,49 @@
+{
+  "id": "perf-redis-cache",
+  "categoryId": "software-development",
+  "topicId": "backend-performance",
+  "level": "intermediate",
+  "title": "Implement Redis Caching",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Speed up a slow 3rd-party API response using an in-memory cache.",
+  "scenario": "Your app displays live stock prices fetched from an external API. The external API takes 2 seconds to respond and limits you to 100 requests per minute. Your app receives 500 requests per minute.",
+  "brief": "Implement a caching layer using Redis. If a stock price was fetched in the last 15 seconds, serve it from Redis. Otherwise, fetch it from the external API, save it to Redis with an expiration (TTL), and return it.",
+  "deliverables": [
+    "The caching middleware/service code using a Redis client",
+    "An explanation of how TTL (Time To Live) prevents stale data",
+    "What happens if the Redis server crashes? Explain your fallback strategy."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good cache implementation should be invisible to the end user (except that it is much faster). Make sure you handle cache misses correctly.",
+  "rubric": [
+    {
+      "key": "implementation",
+      "label": "Cache Logic",
+      "description": "Is the Check -> Miss -> Fetch -> Save flow implemented correctly?",
+      "weight": 40
+    },
+    {
+      "key": "ttl",
+      "label": "Cache Invalidation",
+      "description": "Is a TTL correctly set to ensure data freshness?",
+      "weight": 30
+    },
+    {
+      "key": "fallback",
+      "label": "Resilience",
+      "description": "Does the app gracefully fall back to the slow API if Redis is down?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Redis",
+    "Caching Strategies",
+    "API Rate Limit Mitigation",
+    "Fault Tolerance"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

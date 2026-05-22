@@ -1,0 +1,55 @@
+{
+  "id": "rest-api-spec-library",
+  "categoryId": "software-development",
+  "topicId": "api-design",
+  "level": "intermediate",
+  "title": "Design a REST API for a Local Library",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write a concise API spec for a library borrowing system.",
+  "scenario": "A public library wants a small internal system so staff can look up members, check out books, and see who currently holds which book. There are about 3,000 members and 12,000 books. The backend will be built by a single junior developer.",
+  "brief": "Produce a clear, minimal REST API spec. You do not need to write any implementation code. The goal is to demonstrate that you can scope an API, choose the right resources, and think about edge cases.",
+  "deliverables": [
+    "A list of resources and the endpoints for each (method, path, one-line purpose)",
+    "Request and response examples (JSON) for at least 3 key endpoints",
+    "Two edge cases you deliberately designed around (for example, what happens if someone tries to check out a book that is already out)",
+    "One thing you intentionally left out of v1 and why"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Over-specification is a failure mode here. Aim for crisp and minimal, not exhaustive.",
+  "rubric": [
+    {
+      "key": "modeling",
+      "label": "Resource Modeling",
+      "description": "Are the resources and endpoints well-chosen and minimal?",
+      "weight": 30
+    },
+    {
+      "key": "examples",
+      "label": "Payload Examples",
+      "description": "Are the JSON examples realistic and complete?",
+      "weight": 20
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Case Thinking",
+      "description": "Are the edge cases meaningful and handled thoughtfully?",
+      "weight": 25
+    },
+    {
+      "key": "scoping",
+      "label": "Scoping Judgment",
+      "description": "Does the \"left out of v1\" item show good product judgment?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "API design",
+    "System thinking",
+    "Technical writing",
+    "Product scoping"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

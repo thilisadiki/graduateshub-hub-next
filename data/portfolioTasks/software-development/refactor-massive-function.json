@@ -1,0 +1,49 @@
+{
+  "id": "refactor-massive-function",
+  "categoryId": "software-development",
+  "topicId": "code-refactoring",
+  "level": "beginner",
+  "title": "Refactor a Massive Function",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Break down a 500-line monster function into clean, testable pieces.",
+  "scenario": "You have inherited an `exportUserData()` function. It fetches data, formats dates, applies business logic, generates a CSV, and emails it. It is impossible to test the date formatting without actually sending an email.",
+  "brief": "Refactor the provided conceptual function. Apply the Single Responsibility Principle (SRP) to break it out into several pure helper functions. Show how the main function orchestrates these helpers.",
+  "deliverables": [
+    "The refactored code (main orchestrator function + helper functions)",
+    "A brief explanation of how this refactor makes unit testing easier"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You do not need an actual running environment. Focus on the logical boundaries. A pure function (data in, data out) is much easier to test than a function with side effects.",
+  "rubric": [
+    {
+      "key": "srp",
+      "label": "Single Responsibility",
+      "description": "Are the helper functions strictly separated by concern?",
+      "weight": 40
+    },
+    {
+      "key": "pure",
+      "label": "Pure Functions",
+      "description": "Are the data-transformation functions free of side effects (like emailing)?",
+      "weight": 35
+    },
+    {
+      "key": "orchestration",
+      "label": "Orchestration",
+      "description": "Is the main function clean and easy to read?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Single Responsibility Principle (SRP)",
+    "Pure Functions",
+    "Code Readability",
+    "Testing preparation"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer",
+    "web-developer"
+  ]
+}

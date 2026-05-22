@@ -1,0 +1,48 @@
+{
+  "id": "refactor-composition",
+  "categoryId": "software-development",
+  "topicId": "code-refactoring",
+  "level": "intermediate",
+  "title": "Replace Inheritance with Composition",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Fix a fragile class hierarchy that has grown out of control.",
+  "scenario": "A game backend uses deep Object-Oriented inheritance: `class FlyingSwimmingEnemy extends SwimmingEnemy extends Enemy`. Now, the designers want a `FlyingSwimmingShootingEnemy`. The inheritance tree is breaking down.",
+  "brief": "Refactor the class hierarchy to use Composition over Inheritance. Create separate behaviors (e.g., `canFly`, `canSwim`, `canShoot`) and compose them into the final entity.",
+  "deliverables": [
+    "The refactored code showing the behaviors (traits/mixins/interfaces) and the composed entity",
+    "An explanation of why the \"Gorilla Banana\" problem (fragile base class) makes deep inheritance dangerous"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Use modern syntax (e.g., JavaScript factory functions, or TypeScript interfaces/mixins). The goal is flat architecture, not deep trees.",
+  "rubric": [
+    {
+      "key": "composition",
+      "label": "Composition Implementation",
+      "description": "Is the code correctly using composition instead of `extends`?",
+      "weight": 40
+    },
+    {
+      "key": "flexibility",
+      "label": "Code Flexibility",
+      "description": "Is it easy to add a new behavior without rewriting base classes?",
+      "weight": 35
+    },
+    {
+      "key": "theory",
+      "label": "Theory Comprehension",
+      "description": "Does the candidate clearly explain the pitfalls of deep inheritance?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Composition over Inheritance",
+    "Design Patterns",
+    "Object-Oriented Programming (OOP)",
+    "Code Architecture"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

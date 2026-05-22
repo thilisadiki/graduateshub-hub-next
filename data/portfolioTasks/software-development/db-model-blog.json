@@ -1,0 +1,48 @@
+{
+  "id": "db-model-blog",
+  "categoryId": "software-development",
+  "topicId": "database-modeling",
+  "level": "beginner",
+  "title": "Model a Simple Blog Schema",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Design a standard relational schema with basic foreign keys.",
+  "scenario": "A publisher needs a database to power their new multi-author blog. They need to track Users, Posts, and Tags. A post can have multiple tags, and a tag can belong to multiple posts.",
+  "brief": "Design the SQL schema (tables, columns, and foreign keys) for the blog. You must correctly implement the many-to-many relationship between Posts and Tags.",
+  "deliverables": [
+    "An Entity-Relationship Diagram (ERD) or a set of `CREATE TABLE` SQL statements",
+    "The definition of the junction/join table connecting Posts and Tags"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not forget foreign key constraints. Ensure you define primary keys for all tables.",
+  "rubric": [
+    {
+      "key": "tables",
+      "label": "Table Structure",
+      "description": "Are the Users, Posts, and Tags tables defined with appropriate columns?",
+      "weight": 35
+    },
+    {
+      "key": "relations",
+      "label": "Foreign Keys",
+      "description": "Is the User-to-Post 1-to-many relationship correct?",
+      "weight": 30
+    },
+    {
+      "key": "manytomany",
+      "label": "Many-to-Many",
+      "description": "Is the junction table for Posts-Tags correctly defined with composite keys?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "SQL DDL",
+    "Foreign Keys",
+    "Many-to-Many Relationships",
+    "Entity-Relationship Modeling"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

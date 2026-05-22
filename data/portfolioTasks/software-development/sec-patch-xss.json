@@ -1,0 +1,49 @@
+{
+  "id": "sec-patch-xss",
+  "categoryId": "software-development",
+  "topicId": "security-vulnerability-patching",
+  "level": "beginner",
+  "title": "Patch a Cross-Site Scripting (XSS) Vulnerability",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Fix a dangerous form that allows users to inject malicious scripts.",
+  "scenario": "A user profile page allows users to enter a \"Bio\". Currently, if a user enters `<script>alert(\"Hacked\")</script>`, the browser executes it when anyone views their profile. This is a Stored XSS vulnerability.",
+  "brief": "You are provided with a vulnerable React component and an Express endpoint. Show how to patch this vulnerability on both the frontend (escaping HTML) and the backend (sanitizing input).",
+  "deliverables": [
+    "The corrected React component code",
+    "The corrected Express route code utilizing a sanitization library (like `dompurify` or `xss`)",
+    "A brief explanation of why relying only on frontend validation is insecure"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Remember that React automatically escapes strings by default. To make this vulnerable, the original code used `dangerouslySetInnerHTML`. Explain why that was a bad idea and how to fix it.",
+  "rubric": [
+    {
+      "key": "frontend",
+      "label": "Frontend Fix",
+      "description": "Is `dangerouslySetInnerHTML` removed or safely handled?",
+      "weight": 35
+    },
+    {
+      "key": "backend",
+      "label": "Backend Sanitization",
+      "description": "Is the data sanitized before it is saved to the database?",
+      "weight": 35
+    },
+    {
+      "key": "theory",
+      "label": "Security Theory",
+      "description": "Does the candidate understand that the backend cannot trust the client?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Cross-Site Scripting (XSS)",
+    "React Security",
+    "Backend Sanitization",
+    "OWASP"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "web-developer"
+  ]
+}

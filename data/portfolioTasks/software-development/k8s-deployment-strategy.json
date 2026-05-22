@@ -1,0 +1,48 @@
+{
+  "id": "k8s-deployment-strategy",
+  "categoryId": "software-development",
+  "topicId": "container-orchestration",
+  "level": "advanced",
+  "title": "Design a Kubernetes Deployment",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Write the manifests to deploy a highly available service to a Kubernetes cluster.",
+  "scenario": "The company is moving to Kubernetes (K8s). They need to deploy the main `billing-api` container. It needs to have 3 replicas running at all times across different nodes, scale up if CPU usage hits 80%, and safely recover if a pod crashes.",
+  "brief": "Write the Kubernetes YAML manifests for the `billing-api`. You will need a `Deployment`, a `Service` (ClusterIP), and an `HorizontalPodAutoscaler` (HPA). Define Liveness and Readiness probes to handle crashes.",
+  "deliverables": [
+    "The K8s YAML manifests (`deployment.yaml`, `service.yaml`, `hpa.yaml`)",
+    "An explanation of the difference between a Liveness Probe and a Readiness Probe"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You don't need a running K8s cluster; focus on the declarative syntax. Ensure your deployment specifies CPU/Memory limits so the HPA can function.",
+  "rubric": [
+    {
+      "key": "manifests",
+      "label": "K8s Syntax",
+      "description": "Are the Deployment, Service, and HPA YAML files valid and correctly linked via labels/selectors?",
+      "weight": 35
+    },
+    {
+      "key": "probes",
+      "label": "Health Checks",
+      "description": "Are Liveness (restart) and Readiness (traffic routing) probes correctly distinguished?",
+      "weight": 35
+    },
+    {
+      "key": "limits",
+      "label": "Resource Management",
+      "description": "Are resource requests and limits defined for the container?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Kubernetes (K8s)",
+    "Pod Scaling (HPA)",
+    "Health Probes",
+    "Infrastructure as Code (IaC)"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

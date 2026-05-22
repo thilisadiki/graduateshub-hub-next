@@ -1,0 +1,48 @@
+{
+  "id": "perf-memory-leak",
+  "categoryId": "software-development",
+  "topicId": "backend-performance",
+  "level": "advanced",
+  "title": "Profile and Fix a Memory Leak",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Stop a Node.js server from continuously crashing out of memory.",
+  "scenario": "A Node.js worker process processes CSV files. Every time a 100MB CSV file is processed, the server's RAM usage increases by 100MB and never goes down. Eventually, the container hits its 1GB limit and is killed by Kubernetes (OOMKilled).",
+  "brief": "Diagnose the conceptual memory leak. You are given a code snippet that reads the entire file into an array using `fs.readFileSync`. Rewrite the logic to use Node.js Streams so it can process a 10GB file using only 50MB of RAM.",
+  "deliverables": [
+    "The refactored code using `fs.createReadStream` and a streaming CSV parser",
+    "An explanation of how Garbage Collection in V8 works, and why the original code prevented it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Streams are one of the most powerful but misunderstood features of Node.js. Your goal is to process the file chunk by chunk, without holding the whole thing in memory.",
+  "rubric": [
+    {
+      "key": "streams",
+      "label": "Stream Implementation",
+      "description": "Is the code correctly piping the read stream to a parser?",
+      "weight": 40
+    },
+    {
+      "key": "memory",
+      "label": "Memory Complexity",
+      "description": "Does the candidate prove the new solution has O(1) memory complexity?",
+      "weight": 35
+    },
+    {
+      "key": "gc",
+      "label": "Garbage Collection",
+      "description": "Is the explanation of V8 memory management accurate?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Node.js Streams",
+    "Memory Profiling",
+    "Garbage Collection",
+    "Large Data Processing"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}
