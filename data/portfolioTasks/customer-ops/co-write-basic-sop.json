@@ -1,0 +1,47 @@
+{
+  "id": "co-write-basic-sop",
+  "categoryId": "customer-ops",
+  "topicId": "standard-operating-procedures",
+  "level": "beginner",
+  "title": "Write a Basic SOP",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Document the process for handling a customer address change request.",
+  "scenario": "Your company recently switched CRM systems. The new agents don't know how to properly update a customer's billing and shipping address, leading to packages going to the wrong province. You need to write a foolproof SOP.",
+  "brief": "Write a step-by-step Standard Operating Procedure (SOP) for updating a customer's address in the CRM, including security verification.",
+  "deliverables": [
+    "A title, objective, and scope for the SOP",
+    "Pre-requisites (e.g., security questions to verify identity before changing the address)",
+    "Step-by-step instructions (numbered, clear, action-oriented)",
+    "A \"What to do if...\" section covering at least 2 common edge cases"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Start steps with verbs (\"Click the gear icon\", \"Verify the ID number\"). Do not write paragraphs. A stressed agent reading this while on the phone needs scannability.",
+  "rubric": [
+    {
+      "key": "clarity",
+      "label": "Instruction Clarity",
+      "description": "Are the steps actionable, numbered, and easy to scan?",
+      "weight": 40
+    },
+    {
+      "key": "security",
+      "label": "Security & Verification",
+      "description": "Does the SOP mandate identity verification before the change?",
+      "weight": 30
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Case Handling",
+      "description": "Are the edge cases realistic and helpful?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "SOP writing",
+    "Process documentation",
+    "Clarity",
+    "Security compliance"
+  ],
+  "relatedRoadmapIds": []
+}

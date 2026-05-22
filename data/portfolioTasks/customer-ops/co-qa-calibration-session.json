@@ -1,0 +1,47 @@
+{
+  "id": "co-qa-calibration-session",
+  "categoryId": "customer-ops",
+  "topicId": "qa-ticket-review",
+  "level": "advanced",
+  "title": "Lead a QA Calibration Session",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Resolve a dispute where two team leads graded the same ticket differently.",
+  "scenario": "During a QA calibration session, Team Lead A gave a ticket 100%. Team Lead B gave the exact same ticket 40% because the agent bent a company policy to help a distressed customer. The room is arguing. You need to mediate and establish a standard.",
+  "brief": "Document the disputed ticket, analyse the conflicting grades, and write a policy clarification memo that resolves the ambiguity for the future.",
+  "deliverables": [
+    "The simulated ticket and the conflicting reviews from Lead A (pro-customer) and Lead B (pro-policy)",
+    "Your analysis of the root cause of the misalignment (why the rubric allowed this discrepancy)",
+    "A decision on the final grade with justification",
+    "A \"Policy vs. Empathy\" guideline memo for the support team on when agents are allowed to bend rules"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Calibration isn't about who is right; it's about fixing the rubric or training so it doesn't happen again. Address the systemic issue.",
+  "rubric": [
+    {
+      "key": "analysis",
+      "label": "Dispute Analysis",
+      "description": "Does the analysis identify the ambiguity in the current system?",
+      "weight": 30
+    },
+    {
+      "key": "decision",
+      "label": "Fair Decision",
+      "description": "Is the final grade justified logically without alienating either lead?",
+      "weight": 30
+    },
+    {
+      "key": "memo",
+      "label": "Guideline Memo",
+      "description": "Does the memo provide clear boundaries for agent empowerment?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "QA calibration",
+    "Conflict mediation",
+    "Policy clarification",
+    "Agent empowerment"
+  ],
+  "relatedRoadmapIds": []
+}

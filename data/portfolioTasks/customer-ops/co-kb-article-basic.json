@@ -1,0 +1,47 @@
+{
+  "id": "co-kb-article-basic",
+  "categoryId": "customer-ops",
+  "topicId": "knowledge-base-management",
+  "level": "beginner",
+  "title": "Write a Help Article",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a self-serve article for a common setup issue.",
+  "scenario": "Customers of a new meal-kit delivery service keep emailing to ask how to pause their subscription for the December holidays. The team wants to deflect these tickets by adding an article to the Help Centre.",
+  "brief": "Write the complete Help Centre article explaining how to pause a subscription.",
+  "deliverables": [
+    "Article Title (optimised for search)",
+    "A short intro explaining when/why you might use this feature",
+    "Step-by-step instructions with placeholder tags for screenshots [Screenshot: XYZ]",
+    "Important notes (e.g., cutoff times for pausing before the next delivery)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Titles should match how people search (e.g., \"How to pause my box\" not \"Subscription Vacation State Modification\"). Formatting (bolding, lists) is critical for readability.",
+  "rubric": [
+    {
+      "key": "searchability",
+      "label": "Searchable Title",
+      "description": "Is the title phrased how a user would search?",
+      "weight": 30
+    },
+    {
+      "key": "formatting",
+      "label": "Readability",
+      "description": "Are steps numbered, bolded correctly, and easy to skim?",
+      "weight": 40
+    },
+    {
+      "key": "completeness",
+      "label": "Completeness",
+      "description": "Does it include the crucial cutoff time warning?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Knowledge base writing",
+    "Information architecture",
+    "Ticket deflection",
+    "Formatting"
+  ],
+  "relatedRoadmapIds": []
+}

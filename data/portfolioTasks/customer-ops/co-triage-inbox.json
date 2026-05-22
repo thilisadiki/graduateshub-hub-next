@@ -1,0 +1,46 @@
+{
+  "id": "co-triage-inbox",
+  "categoryId": "customer-ops",
+  "topicId": "support-triage-deescalation",
+  "level": "beginner",
+  "title": "Triage a Monday Morning Inbox",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Prioritise 10 support tickets from an e-commerce backlog.",
+  "scenario": "You are a junior support agent at a South African online retailer (similar to Takealot). It is Monday morning after a busy Black Friday weekend. You have a backlog of 1,000 tickets. Your team lead gives you a sample of 10 tickets and asks you to triage them.",
+  "brief": "Review the 10 tickets. Categorise each by issue type (e.g., Delivery, Payment, Return) and assign a priority (Low, Medium, High, Urgent). Write a 1-sentence rationale for each priority assignment.",
+  "deliverables": [
+    "A triage log for 10 simulated tickets (provided in the prompt context) showing Category, Priority, and Rationale",
+    "Identification of the 2 tickets that require immediate escalation to a manager",
+    "A brief explanation of your overall triage strategy"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Urgent means business impact or severe customer distress (e.g., a payment went through 3 times). A late delivery is frustrating, but usually Medium or High, not Urgent. Note: Invent 10 realistic ticket scenarios to triage.",
+  "rubric": [
+    {
+      "key": "categorisation",
+      "label": "Ticket Categorisation",
+      "description": "Are the tickets correctly categorised by issue type?",
+      "weight": 30
+    },
+    {
+      "key": "prioritisation",
+      "label": "Prioritisation Judgment",
+      "description": "Is the priority level appropriate for the business impact?",
+      "weight": 40
+    },
+    {
+      "key": "rationale",
+      "label": "Clear Rationale",
+      "description": "Is the reasoning for each priority clear and logical?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Ticket triage",
+    "Prioritisation",
+    "Business impact awareness",
+    "Decision making"
+  ],
+  "relatedRoadmapIds": []
+}

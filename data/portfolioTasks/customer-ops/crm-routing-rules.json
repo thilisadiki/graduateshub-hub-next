@@ -1,0 +1,47 @@
+{
+  "id": "crm-routing-rules",
+  "categoryId": "customer-ops",
+  "topicId": "crm-ticketing-setup",
+  "level": "intermediate",
+  "title": "Ticket Routing Architecture for a Local Fiber Provider",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Design a multi-brand CRM ticket routing system using logic gates and tags.",
+  "scenario": "A South African ISP, \"VumaLink\", serves both residential customers and business clients. Residential tickets are high volume and low complexity (like router resets), while business clients pay for a premium SLA. Currently, all emails land in a single support inbox, causing business tickets to get lost in the noise.",
+  "brief": "Design a routing logic blueprint that automatically tags and assigns tickets to the correct support tier. Map out how routing rules handle priority, customer tier, and language.",
+  "deliverables": [
+    "A list of 5 routing rules detailing trigger conditions, action tags, and agent assignment groups",
+    "A logical flow diagram or pseudo-code representation of the routing path for incoming tickets",
+    "An SLA override rule for high-value business accounts (ZAR monthly spend threshold)",
+    "Two test case walkthroughs proving the routing logic works as intended"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Specify conditions precisely (e.g. `Subject contains [RESET] AND Domain NOT EQUAL to business.com`).",
+  "rubric": [
+    {
+      "key": "routing-rules",
+      "label": "Routing Rules Design",
+      "description": "Are the triggers, conditions, and actions logical and complete?",
+      "weight": 35
+    },
+    {
+      "key": "sla-rules",
+      "label": "SLA Priority Logic",
+      "description": "Is the logic robust enough to separate premium business from residential tickets?",
+      "weight": 35
+    },
+    {
+      "key": "walkthroughs",
+      "label": "Test Cases & Edge Cases",
+      "description": "Do the walkthrough test cases validate that the routing logic holds up?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "CRM routing rules",
+    "Logic flow design",
+    "SLA configuration",
+    "Ticket tag taxonomies"
+  ],
+  "relatedRoadmapIds": []
+}

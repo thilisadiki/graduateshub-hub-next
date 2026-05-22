@@ -2,7 +2,6 @@ import type { PortfolioTask, PortfolioLevel } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
-import { customerOpsTasks } from './customerOps';
 import { aiPromptingTasks } from './aiPrompting';
 import { qaTestingTasks } from './qaTesting';
 import { projectCoordinationTasks } from './projectCoordination';
@@ -27,6 +26,7 @@ const DIGITAL_MARKETING_DIR = path.join(process.cwd(), 'data/portfolioTasks/digi
 const FINANCE_ACCOUNTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/finance-accounting');
 const DESIGN_UX_DIR = path.join(process.cwd(), 'data/portfolioTasks/design-ux');
 const BUSINESS_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/business-analysis');
+const CUSTOMER_OPS_DIR = path.join(process.cwd(), 'data/portfolioTasks/customer-ops');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -161,6 +161,25 @@ function loadBusinessAnalysisTasks(): PortfolioTask[] {
   }
 }
 
+function loadCustomerOpsTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(CUSTOMER_OPS_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(CUSTOMER_OPS_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(CUSTOMER_OPS_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load customer ops tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
   ...loadDigitalMarketingTasks(),
   ...loadSoftDevTasks(),
@@ -169,7 +188,7 @@ export const portfolioTasks: PortfolioTask[] = [
   ...loadDesignUxTasks(),
   ...loadWebDevTasks(),
   ...loadBusinessAnalysisTasks(),
-  ...customerOpsTasks,
+  ...loadCustomerOpsTasks(),
   ...aiPromptingTasks,
   ...qaTestingTasks,
   ...projectCoordinationTasks,

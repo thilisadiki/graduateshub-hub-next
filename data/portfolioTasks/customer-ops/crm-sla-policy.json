@@ -1,0 +1,53 @@
+{
+  "id": "crm-sla-policy",
+  "categoryId": "customer-ops",
+  "topicId": "crm-ticketing-setup",
+  "level": "advanced",
+  "title": "SLA and Business Hours Policy Configuration for a Fintech",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 hours",
+  "tagline": "Formulate a multi-channel SLA policy considering public holidays and load-shedding shifts.",
+  "scenario": "\"PayUnion\", a Cape Town-based merchant aggregator, supports retailers across SA. Support is offered over email, chat, and voice. The CEO wants to implement formal Service Level Agreements (SLAs) for merchants. However, the model must handle South African business hours, public holidays, and operational shifts caused by stage-based power grids.",
+  "brief": "Design a comprehensive SLA policy. Specify response and resolution target times by channel, ticket priority, and tier. Include operational protocols for handling timezone and business hour calculations.",
+  "deliverables": [
+    "SLA matrix table mapping priority levels (Urgent, High, Medium, Low) to target first-response and resolution times by channel",
+    "A business hours configuration plan that accounts for public holidays and timezone schedules",
+    "An automated SLA breach warning system specification (when and who to alert before a breach occurs)",
+    "A continuity plan details block explaining how SLAs are adjusted or paused during major infrastructure outages"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Make sure the SLA goals are realistically achievable for a small-to-medium business while maintaining customer trust.",
+  "rubric": [
+    {
+      "key": "sla-matrix",
+      "label": "SLA Matrix Design",
+      "description": "Is the matrix structured, realistic, and complete across channels?",
+      "weight": 35
+    },
+    {
+      "key": "warning-systems",
+      "label": "Escalation Alert Logic",
+      "description": "Are the automated triggers for pre-breach alerts well-designed?",
+      "weight": 25
+    },
+    {
+      "key": "continuity-plan",
+      "label": "Business Hour & Outage Rules",
+      "description": "Are public holidays and load-shedding realities handled systematically?",
+      "weight": 25
+    },
+    {
+      "key": "clarity",
+      "label": "Handoff Quality",
+      "description": "Is the document clear and ready for a systems administrator to configure?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "SLA policy design",
+    "Business hours configuration",
+    "Outage contingency planning",
+    "Escalation alert logic"
+  ],
+  "relatedRoadmapIds": []
+}

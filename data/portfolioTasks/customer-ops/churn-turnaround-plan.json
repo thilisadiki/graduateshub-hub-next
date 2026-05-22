@@ -1,0 +1,53 @@
+{
+  "id": "churn-turnaround-plan",
+  "categoryId": "customer-ops",
+  "topicId": "churn-recovery-retention",
+  "level": "advanced",
+  "title": "Churn Prevention & Account Turnaround Plan",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 hours",
+  "tagline": "Draft a turnaround playbook for an enterprise customer showing signs of churn.",
+  "scenario": "A South African fleet logistics company, \"CargoTrack\", has a client (\"KZN Transport\") paying R30,000/month. KZN Transport has recently stopped tracking fuel usage through the portal, and their support tickets have gone silent. A competitor, \"LogiFleet\", is actively pitching to them. The CS director needs a turnaround plan.",
+  "brief": "Produce a step-by-step turnaround plan to re-engage the customer, identify their frustrations, demonstrate the ROI of CargoTrack, and secure a renewal.",
+  "deliverables": [
+    "An account audit analyzing historical tickets, login drops, and feature usage anomalies",
+    "A 14-day re-engagement communication schedule including executive and operations-level touchpoints",
+    "A customized value realization deck outline showing specific ZAR fuel savings calculations",
+    "A concession framework: what parameters (discounts, training, features) CS is allowed to negotiate to keep the contract"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Turnaround plans require understanding both the executive decision-maker and the daily system users. Address both groups.",
+  "rubric": [
+    {
+      "key": "audit",
+      "label": "Usage & Friction Audit",
+      "description": "Did the candidate trace the drop in usage back to a business cause?",
+      "weight": 30
+    },
+    {
+      "key": "schedule",
+      "label": "Communication Cadence",
+      "description": "Is the outreach schedule professional, multi-tier, and timely?",
+      "weight": 25
+    },
+    {
+      "key": "value-deck",
+      "label": "ZAR ROI Calculations",
+      "description": "Are the calculations of cost savings and ROI clear and tailored?",
+      "weight": 25
+    },
+    {
+      "key": "negotiation",
+      "label": "Concession Framework",
+      "description": "Are the concessions realistic, protecting company margin while solving customer pain?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Account management",
+    "Turnaround strategy",
+    "ROI presentations",
+    "Negotiation and retention"
+  ],
+  "relatedRoadmapIds": []
+}

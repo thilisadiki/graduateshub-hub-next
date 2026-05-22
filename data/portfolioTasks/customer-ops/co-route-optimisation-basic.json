@@ -1,0 +1,46 @@
+{
+  "id": "co-route-optimisation-basic",
+  "categoryId": "customer-ops",
+  "topicId": "logistics-dispatch",
+  "level": "beginner",
+  "title": "Optimise a Delivery Route",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Sequence 5 deliveries for a driver to minimise time and mileage.",
+  "scenario": "A florist in Cape Town has one driver and 5 deliveries to make this morning. The system broke, and the deliveries are just listed in the order they were purchased. The driver needs a logical sequence to follow.",
+  "brief": "Review the 5 delivery addresses and their required delivery windows (provided in the prompt context). Create an optimised delivery sequence.",
+  "deliverables": [
+    "The optimized delivery sequence (1 through 5)",
+    "A short rationale explaining why you chose this route (e.g., geographic clustering vs. time window priority)",
+    "A template SMS message to send to the 5th customer explaining their estimated time of arrival"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Assume standard geographic knowledge or use Google Maps. Priority is hitting the promised time windows; secondary priority is saving fuel.",
+  "rubric": [
+    {
+      "key": "sequencing",
+      "label": "Logical Sequencing",
+      "description": "Is the route geographically logical?",
+      "weight": 40
+    },
+    {
+      "key": "time-windows",
+      "label": "Time Window Adherence",
+      "description": "Are the time windows respected in the sequence?",
+      "weight": 30
+    },
+    {
+      "key": "comms",
+      "label": "Customer Communication",
+      "description": "Is the ETA SMS clear and professional?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Route planning",
+    "Logistics coordination",
+    "Time management",
+    "Proactive communication"
+  ],
+  "relatedRoadmapIds": []
+}

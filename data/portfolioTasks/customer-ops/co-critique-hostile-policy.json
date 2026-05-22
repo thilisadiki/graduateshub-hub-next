@@ -1,0 +1,46 @@
+{
+  "id": "co-critique-hostile-policy",
+  "categoryId": "customer-ops",
+  "topicId": "policy-writing",
+  "level": "intermediate",
+  "title": "Critique a Hostile Policy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Rewrite a gym cancellation policy that is causing PR backlash.",
+  "scenario": "A South African gym chain requires customers to come in person, fill out a paper form, and give 3 months' notice to cancel a month-to-month contract. Twitter/X is furious. Management has finally agreed to change it, but needs you to rewrite the terms.",
+  "brief": "Analyse the provided \"hostile\" policy snippet, list why it is bad for the brand (and potentially violates the CPA - Consumer Protection Act), and write the modern, updated version.",
+  "deliverables": [
+    "The \"Hostile Policy\" (invent a short, aggressive cancellation clause)",
+    "A critique listing 3 reasons the policy is toxic/illegal",
+    "The rewritten \"Fair Cancellation Policy\" that allows online cancellation but still protects the gym from sudden revenue drops (e.g., 1 full calendar month notice)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The Consumer Protection Act in SA requires reasonable cancellation terms. Your new policy must balance the business need for predictable revenue with the customer's right to leave easily.",
+  "rubric": [
+    {
+      "key": "critique",
+      "label": "Policy Critique",
+      "description": "Does the critique correctly identify the friction points?",
+      "weight": 30
+    },
+    {
+      "key": "rewrite",
+      "label": "Balanced Rewrite",
+      "description": "Does the new policy balance business needs with customer friction?",
+      "weight": 40
+    },
+    {
+      "key": "cpa",
+      "label": "CPA Awareness",
+      "description": "Is the new notice period reasonable under consumer law principles?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Policy critique",
+    "Consumer protection",
+    "Brand tone",
+    "Friction reduction"
+  ],
+  "relatedRoadmapIds": []
+}

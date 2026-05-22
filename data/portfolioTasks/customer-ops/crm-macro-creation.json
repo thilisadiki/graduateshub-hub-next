@@ -1,0 +1,46 @@
+{
+  "id": "crm-macro-creation",
+  "categoryId": "customer-ops",
+  "topicId": "crm-ticketing-setup",
+  "level": "beginner",
+  "title": "WhatsApp Support Macro Suite for a Local Courier Service",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Design a suite of 4 WhatsApp support macros for a local delivery business.",
+  "scenario": "\"SupaDelivery\" is a fast-growing Durban-based courier service operating in KwaZulu-Natal. The support team is flooded with WhatsApp inquiries about delayed packages, delivery driver coordinates, delivery address corrections, and cash-on-delivery queries. The support desk has no standardized quick-replies (macros).",
+  "brief": "Draft a suite of 4 WhatsApp support macros. Keep the tone warm, clear, and highly focused on the South African WhatsApp channel context, utilizing emojis, bolding, and bullet points where appropriate.",
+  "deliverables": [
+    "A set of 4 templates (Delayed Delivery, Address Correction, Driver Location, Cash on Delivery policy)",
+    "A guideline table detailing variable fields (e.g., `{customer_first_name}`, `{tracking_number}`) and how they map to CRM placeholder attributes",
+    "A one-paragraph explanation of how WhatsApp communication style differs from traditional email communication"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Keep WhatsApp replies short and structured. A customer waiting on their phone does not want a wall of text.",
+  "rubric": [
+    {
+      "key": "templates",
+      "label": "Macro Text Quality",
+      "description": "Are the templates clear, concise, and structured for WhatsApp (emojis, lists)?",
+      "weight": 40
+    },
+    {
+      "key": "variables",
+      "label": "Variable Mapping",
+      "description": "Are context placeholders mapped correctly to common database keys?",
+      "weight": 30
+    },
+    {
+      "key": "channel-style",
+      "label": "Channel Awareness",
+      "description": "Does the candidate understand WhatsApp versus email tone differences?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Customer support writing",
+    "WhatsApp support channels",
+    "CRM configuration",
+    "Macro design"
+  ],
+  "relatedRoadmapIds": []
+}

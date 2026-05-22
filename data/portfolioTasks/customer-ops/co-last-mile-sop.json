@@ -1,0 +1,47 @@
+{
+  "id": "co-last-mile-sop",
+  "categoryId": "customer-ops",
+  "topicId": "logistics-dispatch",
+  "level": "advanced",
+  "title": "Design a Last-Mile SOP",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Write the protocol for handling \"Customer Not Home\" scenarios.",
+  "scenario": "A new grocery delivery app is losing money because drivers are waiting 15 minutes outside apartments when customers don't answer the intercom. They return the groceries, the cold chain breaks, and the food is written off. You need a strict \"Customer Not Home\" protocol.",
+  "brief": "Design a Last-Mile SOP that balances customer service with driver efficiency and cold-chain compliance.",
+  "deliverables": [
+    "The step-by-step protocol for the driver when a customer does not answer",
+    "The exact time limit the driver is allowed to wait",
+    "The script the driver must use when calling the customer",
+    "The policy on what to do with the groceries if the delivery fails (e.g., leave at gate vs. return to dark store)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Drivers need binary rules. \"Wait a reasonable amount of time\" is bad ops. \"Wait exactly 5 minutes, call twice, then swipe Failed\" is good ops.",
+  "rubric": [
+    {
+      "key": "binary-rules",
+      "label": "Binary Rules",
+      "description": "Are the time limits and steps strict and unambiguous?",
+      "weight": 35
+    },
+    {
+      "key": "efficiency",
+      "label": "Driver Efficiency",
+      "description": "Does the SOP protect the driver's time?",
+      "weight": 35
+    },
+    {
+      "key": "policy",
+      "label": "Cold-Chain Protection",
+      "description": "Is the return/abandon policy clear regarding perishable goods?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Last-mile logistics",
+    "SOP design",
+    "Driver management",
+    "Loss prevention"
+  ],
+  "relatedRoadmapIds": []
+}

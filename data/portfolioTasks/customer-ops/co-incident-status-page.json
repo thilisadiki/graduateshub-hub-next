@@ -1,0 +1,46 @@
+{
+  "id": "co-incident-status-page",
+  "categoryId": "customer-ops",
+  "topicId": "incident-management-comms",
+  "level": "beginner",
+  "title": "Write Status Page Updates",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Draft the public communications during a live payment gateway outage.",
+  "scenario": "It is month-end payday. Your payment gateway goes down. Customers cannot checkout. Engineering says they are \"looking into it\" but don't have an ETA. You need to update the public Status Page immediately.",
+  "brief": "Write the sequence of 3 status page updates spanning the lifecycle of the incident.",
+  "deliverables": [
+    "Update 1 (Investigating): The initial acknowledgement of the issue",
+    "Update 2 (Identified): 45 mins later, engineering found the issue and is deploying a fix",
+    "Update 3 (Resolved): 2 hours later, systems are stable. What the customer should do if a payment got stuck."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Status page updates must be factual, calm, and void of jargon. Do not say \"Our Redis cluster segfaulted.\" Say \"We are experiencing degraded performance in our checkout flow.\"",
+  "rubric": [
+    {
+      "key": "clarity",
+      "label": "Clarity and Calmness",
+      "description": "Are the updates professional, calm, and easy to understand?",
+      "weight": 35
+    },
+    {
+      "key": "transparency",
+      "label": "Transparency",
+      "description": "Do the updates acknowledge the issue without over-promising ETAs?",
+      "weight": 35
+    },
+    {
+      "key": "actionable",
+      "label": "Actionable Next Steps",
+      "description": "Does the resolution update tell affected customers exactly what to do?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Incident communication",
+    "Status page management",
+    "Crisis comms",
+    "Plain English writing"
+  ],
+  "relatedRoadmapIds": []
+}

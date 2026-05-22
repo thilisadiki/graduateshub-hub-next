@@ -1,0 +1,47 @@
+{
+  "id": "co-kb-audit-rewrite",
+  "categoryId": "customer-ops",
+  "topicId": "knowledge-base-management",
+  "level": "intermediate",
+  "title": "Audit & Restructure a Category",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Fix a messy \"Billing\" section in a Help Centre.",
+  "scenario": "A software company's \"Billing & Invoices\" Help Centre category is a mess. It has 15 articles with overlapping titles like \"Invoices\", \"Where is my invoice\", \"Billing issues\", and \"Credit card update\". Users can't find anything, so they just email support.",
+  "brief": "Audit the list of provided article titles, consolidate them, and propose a new, clean Information Architecture (IA) for the Billing category.",
+  "deliverables": [
+    "The \"Messy List\" (invent 12-15 confusing, overlapping billing article titles)",
+    "Your proposed restructuring: group them into logical sub-categories",
+    "Consolidation notes (e.g., \"Merge article 3 and 7 into one called How to Update Payment Details\")",
+    "The final, clean list of 5-7 optimized article titles"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Good KB management is more about deleting and merging than writing new content. Group by user intent (e.g., Setup, Troubleshooting, Admin).",
+  "rubric": [
+    {
+      "key": "consolidation",
+      "label": "Effective Consolidation",
+      "description": "Did you successfully merge redundant articles?",
+      "weight": 35
+    },
+    {
+      "key": "architecture",
+      "label": "Information Architecture",
+      "description": "Are the sub-categories logical and MECE (Mutually Exclusive, Collectively Exhaustive)?",
+      "weight": 35
+    },
+    {
+      "key": "naming",
+      "label": "Clear Naming",
+      "description": "Are the final article titles action-oriented and clear?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Information architecture",
+    "Content auditing",
+    "Knowledge base management",
+    "Taxonomy design"
+  ],
+  "relatedRoadmapIds": []
+}

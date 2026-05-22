@@ -1,0 +1,47 @@
+{
+  "id": "churn-health-score",
+  "categoryId": "customer-ops",
+  "topicId": "churn-recovery-retention",
+  "level": "intermediate",
+  "title": "Customer Health Score Modeling for a B2B SaaS",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Design a weighted customer health score model using usage metrics.",
+  "scenario": "A Durban-based school administration software company, \"EduPortal\", tracks user actions. They want to flag high-risk schools before they churn. The database records logins, report cards generated, messages sent to parents, and invoices issued. You must build a predictive health scoring model.",
+  "brief": "Develop a weighted scoring model that assigns a health score (0-100) to each school. Define the indicators of healthy usage, warning signs of low activity, and critical triggers for outreach.",
+  "deliverables": [
+    "A table of 5 health indicators with their definitions, formulas, and weights (totaling 100%)",
+    "A classification system defining Green (Healthy), Amber (At Risk), and Red (High Risk) scores",
+    "A playbook outline detailing automated triggers for the Customer Success team when an account drops to Amber or Red",
+    "A worked example calculating the score for a hypothetical healthy school and a struggling school"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ensure weights reflect actual value to the customer. For example, generating report cards is a higher-value task than simply logging in.",
+  "rubric": [
+    {
+      "key": "indicators",
+      "label": "Indicator Selection",
+      "description": "Are the chosen metrics active indicators of value, not just vanity login stats?",
+      "weight": 35
+    },
+    {
+      "key": "scoring-logic",
+      "label": "Health Score Logic",
+      "description": "Is the math correct, consistent, and well-weighted?",
+      "weight": 35
+    },
+    {
+      "key": "playbook",
+      "label": "Trigger Playbook",
+      "description": "Are the CS outreach recommendations practical and timely?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Customer health scoring",
+    "B2B customer success",
+    "Usage metrics analysis",
+    "CS playbook design"
+  ],
+  "relatedRoadmapIds": []
+}

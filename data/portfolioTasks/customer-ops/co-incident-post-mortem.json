@@ -1,0 +1,46 @@
+{
+  "id": "co-incident-post-mortem",
+  "categoryId": "customer-ops",
+  "topicId": "incident-management-comms",
+  "level": "advanced",
+  "title": "Write an External Post-Mortem",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Draft the public apology and technical explanation after a 6-hour outage.",
+  "scenario": "Your B2B software was completely offline for 6 hours on a Tuesday due to a botched database migration. Customers lost revenue. The CEO wants a public post-mortem published on the blog to rebuild trust.",
+  "brief": "Write the public post-mortem blog post. It must balance technical honesty with sincere apology and clear preventative measures.",
+  "deliverables": [
+    "A sincere apology section acknowledging the specific business impact on your customers",
+    "The \"What Happened\" section (a readable timeline of the technical failure)",
+    "The \"What We Are Doing About It\" section (3 concrete engineering/process changes to prevent recurrence)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good public post-mortem takes ownership. Never blame an individual engineer. Explain the systems failure clearly enough that technical users respect your honesty, but simple enough that a business owner understands it.",
+  "rubric": [
+    {
+      "key": "apology",
+      "label": "Sincere Apology",
+      "description": "Does the apology take full ownership without making excuses?",
+      "weight": 30
+    },
+    {
+      "key": "technical-clarity",
+      "label": "Technical Clarity",
+      "description": "Is the failure explained transparently but accessibly?",
+      "weight": 35
+    },
+    {
+      "key": "prevention",
+      "label": "Concrete Prevention",
+      "description": "Are the preventative measures specific and reassuring?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Public relations",
+    "Post-mortem writing",
+    "Technical communication",
+    "Trust rebuilding"
+  ],
+  "relatedRoadmapIds": []
+}
