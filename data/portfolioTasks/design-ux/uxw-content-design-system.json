@@ -1,0 +1,53 @@
+{
+  "id": "uxw-content-design-system",
+  "categoryId": "design-ux",
+  "topicId": "ux-writing-content-design",
+  "level": "advanced",
+  "title": "Content Design System",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a voice & tone guide plus UX writing pattern library for a fintech product.",
+  "scenario": "A fintech app has 4 content designers who all write differently. One is formal (\"Your transaction has been processed\"), another is casual (\"Done! Money sent 🎉\"). The product feels inconsistent. The team needs a content design system.",
+  "brief": "Build a voice and tone guide plus a UX writing pattern library. The system should ensure consistency without killing personality.",
+  "deliverables": [
+    "A voice definition: 3-5 voice attributes with a spectrum (e.g., \"Confident, not arrogant\")",
+    "A tone variation guide: how the voice adapts across contexts (success, error, neutral, celebration)",
+    "A pattern library with templates for: CTAs, confirmation dialogs, empty states, error messages, and loading states",
+    "A \"this, not that\" reference table with 10 before/after examples"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Voice is consistent (who we are). Tone varies by context (how we sound right now). A fintech can be friendly on a success screen and serious on a payment error. Show this range.",
+  "rubric": [
+    {
+      "key": "voice",
+      "label": "Voice Definition",
+      "description": "Are the voice attributes clear, distinctive, and bounded by \"not\" statements?",
+      "weight": 25
+    },
+    {
+      "key": "tone",
+      "label": "Tone Variation",
+      "description": "Does the tone guide show appropriate variation across contexts?",
+      "weight": 25
+    },
+    {
+      "key": "patterns",
+      "label": "Pattern Library",
+      "description": "Are the patterns comprehensive with enough flexibility for writers?",
+      "weight": 30
+    },
+    {
+      "key": "examples",
+      "label": "Before/After Examples",
+      "description": "Are the \"this, not that\" examples specific and illustrative?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Voice & tone",
+    "Content design systems",
+    "UX writing patterns",
+    "Design governance"
+  ],
+  "relatedRoadmapIds": []
+}

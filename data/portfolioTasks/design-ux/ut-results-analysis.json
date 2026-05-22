@@ -1,0 +1,53 @@
+{
+  "id": "ut-results-analysis",
+  "categoryId": "design-ux",
+  "topicId": "usability-testing",
+  "level": "intermediate",
+  "title": "Analyse Usability Test Results",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Identify patterns, severity ratings, and priorities from 5 test session summaries.",
+  "scenario": "Five usability test sessions have been completed for a food delivery app's checkout flow. You have the session summaries. The product team wants a clear report of what to fix, in what order.",
+  "brief": "Invent 5 plausible session summaries. Analyse them for patterns, assign severity ratings, and produce a prioritised recommendations report.",
+  "deliverables": [
+    "Five fictional session summaries (3-5 bullet points each) with mix of successes and failures",
+    "A pattern analysis: which issues were observed across multiple participants",
+    "A severity rating for each issue (Critical, Major, Minor) with justification",
+    "A prioritised fix list with the top 3 recommendations and expected impact"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "An issue observed by 1 out of 5 participants may be an outlier. An issue observed by 4 out of 5 is a pattern. Show how frequency affects your severity rating.",
+  "rubric": [
+    {
+      "key": "data",
+      "label": "Session Data Quality",
+      "description": "Are the 5 summaries plausible with varied outcomes?",
+      "weight": 20
+    },
+    {
+      "key": "patterns",
+      "label": "Pattern Identification",
+      "description": "Are recurring issues correctly identified across sessions?",
+      "weight": 30
+    },
+    {
+      "key": "severity",
+      "label": "Severity Ratings",
+      "description": "Are severity ratings justified by frequency and impact?",
+      "weight": 25
+    },
+    {
+      "key": "recommendations",
+      "label": "Prioritised Recommendations",
+      "description": "Are the top 3 fixes actionable with expected impact?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Test analysis",
+    "Pattern recognition",
+    "Severity rating",
+    "UX reporting"
+  ],
+  "relatedRoadmapIds": []
+}

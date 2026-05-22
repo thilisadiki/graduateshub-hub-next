@@ -1,0 +1,53 @@
+{
+  "id": "ixd-gesture-mobile",
+  "categoryId": "design-ux",
+  "topicId": "interaction-design",
+  "level": "advanced",
+  "title": "Gesture-Based Interaction for Mobile",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design gesture interactions for a photo management app with discoverability cues.",
+  "scenario": "A photo management app wants to add gesture-based interactions: swipe to delete, long-press to select multiple, pinch to zoom, and double-tap to favourite. The challenge: gestures are invisible — how do users discover them?",
+  "brief": "Design the complete gesture interaction system. Define each gesture, its visual feedback, discoverability mechanisms, and fallback for accessibility.",
+  "deliverables": [
+    "A gesture inventory: each gesture, what it does, and the visual feedback during and after the action",
+    "Discoverability design: how first-time users learn about gestures (onboarding, contextual hints, coaching marks)",
+    "Conflict resolution: what happens when gestures overlap (e.g., swipe to delete vs swipe to navigate)",
+    "Accessibility fallbacks: alternative interactions for users who cannot perform gestures"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Gestures are powerful but invisible. If a user does not know swipe-to-delete exists, it does not exist for them. Discoverability is the hardest problem here.",
+  "rubric": [
+    {
+      "key": "inventory",
+      "label": "Gesture Inventory",
+      "description": "Is each gesture clearly defined with appropriate visual feedback?",
+      "weight": 25
+    },
+    {
+      "key": "discoverability",
+      "label": "Discoverability",
+      "description": "Are the discovery mechanisms well-designed and not intrusive?",
+      "weight": 30
+    },
+    {
+      "key": "conflicts",
+      "label": "Conflict Resolution",
+      "description": "Are gesture conflicts identified and resolved consistently?",
+      "weight": 20
+    },
+    {
+      "key": "accessibility",
+      "label": "Accessibility Fallbacks",
+      "description": "Are alternative interactions available for all gesture-based actions?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Gesture design",
+    "Mobile interaction",
+    "Discoverability",
+    "Accessible interaction"
+  ],
+  "relatedRoadmapIds": []
+}

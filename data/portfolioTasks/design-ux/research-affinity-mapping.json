@@ -1,0 +1,46 @@
+{
+  "id": "research-affinity-mapping",
+  "categoryId": "design-ux",
+  "topicId": "user-research-interviews",
+  "level": "intermediate",
+  "title": "Affinity Mapping from Interview Notes",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Synthesise 6 fictional interview transcripts into an affinity map and 3 insights.",
+  "scenario": "The research team has completed 6 interviews with users of a fitness app. You have been given summarised notes from each session. Your job is to find the patterns.",
+  "brief": "Invent 6 plausible interview summaries (5-8 bullet points each). Then synthesise them into an affinity map — group related observations, label the clusters, and extract 3 actionable product insights.",
+  "deliverables": [
+    "Six fictional interview summaries with realistic observations (mix of positive, negative, and surprising)",
+    "An affinity map structure: at least 5 clusters with labels and the observations sorted into each",
+    "Three product insights derived from the clusters, each with a \"so what\" implication for the product team"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "An insight is not an observation. \"5 out of 6 users forgot to log workouts\" is an observation. \"Users treat logging as a chore, not a reward — the app should auto-detect activity\" is an insight.",
+  "rubric": [
+    {
+      "key": "data",
+      "label": "Interview Data Quality",
+      "description": "Are the 6 summaries plausible with varied and realistic observations?",
+      "weight": 20
+    },
+    {
+      "key": "clustering",
+      "label": "Affinity Clustering",
+      "description": "Are the clusters meaningful with appropriate labels?",
+      "weight": 35
+    },
+    {
+      "key": "insights",
+      "label": "Insight Quality",
+      "description": "Do the 3 insights go beyond observations to actionable product implications?",
+      "weight": 45
+    }
+  ],
+  "skillsProven": [
+    "Affinity mapping",
+    "Research synthesis",
+    "Pattern recognition",
+    "Insight generation"
+  ],
+  "relatedRoadmapIds": []
+}

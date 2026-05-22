@@ -1,0 +1,53 @@
+{
+  "id": "ut-test-plan",
+  "categoryId": "design-ux",
+  "topicId": "usability-testing",
+  "level": "beginner",
+  "title": "Write a Usability Test Plan",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a test plan for evaluating a mobile banking app's transfer flow.",
+  "scenario": "A mobile banking app has redesigned their money transfer flow. Before launching, the product team wants to test it with 5 users. You need to write the test plan.",
+  "brief": "Write a complete usability test plan covering objectives, participant criteria, tasks, metrics, and the session script.",
+  "deliverables": [
+    "Test objectives: the 3 specific questions this test will answer",
+    "Participant criteria: who to recruit, screening questions, and incentive",
+    "Task scenarios: 3 realistic tasks with success criteria for each",
+    "A session script: introduction, task instructions, and post-task questions"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "\"Test the transfer flow\" is not a task. \"You need to send R500 to your friend Sipho. Using this app, show me how you would do that\" is a task. Be this specific.",
+  "rubric": [
+    {
+      "key": "objectives",
+      "label": "Test Objectives",
+      "description": "Are the objectives specific and answerable by this test?",
+      "weight": 25
+    },
+    {
+      "key": "participants",
+      "label": "Participant Criteria",
+      "description": "Are the screening criteria well-targeted?",
+      "weight": 20
+    },
+    {
+      "key": "tasks",
+      "label": "Task Design",
+      "description": "Are the tasks realistic with clear success criteria?",
+      "weight": 30
+    },
+    {
+      "key": "script",
+      "label": "Session Script",
+      "description": "Is the script professional with proper introduction and non-leading prompts?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Usability test planning",
+    "Task design",
+    "Participant screening",
+    "Test methodology"
+  ],
+  "relatedRoadmapIds": []
+}

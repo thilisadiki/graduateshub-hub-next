@@ -1,0 +1,53 @@
+{
+  "id": "handoff-design-tokens",
+  "categoryId": "design-ux",
+  "topicId": "design-handoff-spec",
+  "level": "advanced",
+  "title": "Multi-Theme Design Token System Architecture",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 5 hours",
+  "tagline": "Architect a JSON-structured design token format to support light, dark, and high-contrast accessibility themes.",
+  "scenario": "A South African educational platform, \"EduSouth\", is standardizing its design system across web and mobile. To comply with accessibility guidelines and support white-labelling for corporate clients, the design team must establish a formal token structure. They need a system that translates Figma variables into developer-friendly JSON structures.",
+  "brief": "Architect a scalable 3-tier design token structure (Global/Primitive -> Alias/Semantic -> Component) in JSON format. Provide documentation on how colors, spacing, and typography resolve across themes.",
+  "deliverables": [
+    "A JSON representation of the Primitive color and spacing palettes",
+    "A JSON representation of the Semantic tokens showing references to Primitive tokens",
+    "A table demonstrating theme mapping: how variables change when switching between light, dark, and high-contrast modes",
+    "Handoff workflow guidelines explaining how designers and engineers sync token updates"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Use standard JSON structure. Verify that token reference variables follow a strict naming convention (e.g., `{color.brand.primary}`).",
+  "rubric": [
+    {
+      "key": "architecture",
+      "label": "Token Architecture",
+      "description": "Is the 3-tier hierarchy correctly applied with valid reference variables?",
+      "weight": 35
+    },
+    {
+      "key": "json",
+      "label": "JSON Syntactical Quality",
+      "description": "Are the JSON files well-formed and structured according to industry standards?",
+      "weight": 25
+    },
+    {
+      "key": "theming",
+      "label": "Theme Resolution",
+      "description": "Is the multi-theme translation logic clear, addressing light, dark, and high-contrast states?",
+      "weight": 25
+    },
+    {
+      "key": "workflow",
+      "label": "Sync & Handoff Process",
+      "description": "Is the team coordination model practical and realistic?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Design token architecture",
+    "JSON structure",
+    "Theming systems",
+    "Design-to-developer workflow"
+  ],
+  "relatedRoadmapIds": []
+}

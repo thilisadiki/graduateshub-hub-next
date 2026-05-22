@@ -1,0 +1,53 @@
+{
+  "id": "ui-dashboard-design",
+  "categoryId": "design-ux",
+  "topicId": "ui-visual-design",
+  "level": "intermediate",
+  "title": "Design a Dashboard UI",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a high-fidelity analytics dashboard with data visualisation and filters.",
+  "scenario": "A logistics company needs an operations dashboard showing delivery volumes, on-time rates, driver performance, and regional breakdowns. The ops manager checks it every morning.",
+  "brief": "Design the dashboard specification. Choose the right chart types for each metric, design the filter system, and plan the responsive layout for desktop and tablet.",
+  "deliverables": [
+    "A dashboard layout specification with at least 6 widgets: chart type, data it shows, and placement",
+    "A filter system design: which dimensions are filterable (date range, region, driver) and where filters live",
+    "A responsive strategy: how the dashboard adapts from desktop (1440px) to tablet (768px)",
+    "One data visualisation anti-pattern you avoided and why (e.g., \"no pie charts for comparing 8 categories\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A dashboard is not a data dump. Every widget should answer a specific question. If you cannot state the question, the widget should not exist.",
+  "rubric": [
+    {
+      "key": "widgets",
+      "label": "Widget Design",
+      "description": "Are the chart types appropriate for the data they display?",
+      "weight": 30
+    },
+    {
+      "key": "filters",
+      "label": "Filter System",
+      "description": "Is the filter system practical and non-destructive?",
+      "weight": 25
+    },
+    {
+      "key": "responsive",
+      "label": "Responsive Strategy",
+      "description": "Does the responsive adaptation preserve information hierarchy?",
+      "weight": 25
+    },
+    {
+      "key": "anti-pattern",
+      "label": "Anti-Pattern Awareness",
+      "description": "Is the avoided anti-pattern genuine with sound reasoning?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Dashboard design",
+    "Data visualisation",
+    "Responsive design",
+    "UI layout"
+  ],
+  "relatedRoadmapIds": []
+}

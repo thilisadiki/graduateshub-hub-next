@@ -1,0 +1,53 @@
+{
+  "id": "ux-teardown-sa-site",
+  "categoryId": "design-ux",
+  "topicId": "ux-teardown",
+  "level": "beginner",
+  "title": "UX Teardown of a South African Website",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Critique a real SA site's booking flow and propose three fixes.",
+  "scenario": "You have been asked to review the booking or checkout flow of any well-known South African website of your choice (examples: Takealot, Checkers Sixty60, Uber Eats, Discovery, SARS eFiling, Computicket). Pick one, complete a realistic task on it, and report back.",
+  "brief": "Complete the task with a screen recorder or just detailed notes. You do not need to share the recording. Document what you noticed and what you would change.",
+  "deliverables": [
+    "The site and specific task you attempted (one line)",
+    "Three specific UX issues you encountered, each with a concrete proposed fix",
+    "One thing the site does well that you would keep",
+    "Your method for deciding priority if the product team could only ship one of your fixes"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Vague issues like \"confusing layout\" do not count. Be specific: which screen, which button, what you expected, what happened.",
+  "rubric": [
+    {
+      "key": "observation",
+      "label": "Observation Quality",
+      "description": "Are the three issues specific, real, and well-described?",
+      "weight": 35
+    },
+    {
+      "key": "proposals",
+      "label": "Proposed Fixes",
+      "description": "Are the fixes practical, proportionate, and targeted at the root issue?",
+      "weight": 30
+    },
+    {
+      "key": "balance",
+      "label": "Balanced View",
+      "description": "Is the \"keep\" item thoughtful, not filler?",
+      "weight": 15
+    },
+    {
+      "key": "prioritisation",
+      "label": "Prioritisation Logic",
+      "description": "Is the prioritisation method defensible?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "UX analysis",
+    "Heuristic evaluation",
+    "Design critique",
+    "Product prioritisation"
+  ],
+  "relatedRoadmapIds": []
+}

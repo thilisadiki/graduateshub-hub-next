@@ -1,0 +1,53 @@
+{
+  "id": "prototype-checkout-flow",
+  "categoryId": "design-ux",
+  "topicId": "wireframing-prototyping",
+  "level": "intermediate",
+  "title": "Interactive Prototype for a Checkout Flow",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a clickable prototype for a 4-step checkout with branching logic.",
+  "scenario": "An e-commerce site needs to test their new checkout flow before development. The flow has 4 steps: Cart Review → Shipping → Payment → Confirmation. But there is branching: if the user selects \"collect in store,\" the shipping step should be skipped.",
+  "brief": "Design the mid-fidelity prototype specification. Define every screen state, the branching logic, error states, and the loading/success transitions.",
+  "deliverables": [
+    "A screen-by-screen specification for all 4 steps plus the branch variant",
+    "The branching logic: which user actions trigger which paths (flowchart format)",
+    "Error states for each step (invalid card, out-of-stock item, address not found)",
+    "Loading and success state descriptions for the payment step"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A prototype without error states is not a prototype. Users will enter wrong card numbers, leave fields blank, and try to buy out-of-stock items. Design for these.",
+  "rubric": [
+    {
+      "key": "screens",
+      "label": "Screen Specifications",
+      "description": "Are all steps fully specified with content and interaction details?",
+      "weight": 25
+    },
+    {
+      "key": "branching",
+      "label": "Branching Logic",
+      "description": "Is the branching clearly documented with trigger conditions?",
+      "weight": 25
+    },
+    {
+      "key": "errors",
+      "label": "Error States",
+      "description": "Are error states comprehensive and user-friendly?",
+      "weight": 30
+    },
+    {
+      "key": "transitions",
+      "label": "State Transitions",
+      "description": "Are loading, success, and failure transitions described?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Prototyping",
+    "Interaction specification",
+    "Error state design",
+    "Flow logic"
+  ],
+  "relatedRoadmapIds": []
+}

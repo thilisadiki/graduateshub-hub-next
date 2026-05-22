@@ -1,0 +1,53 @@
+{
+  "id": "ux-full-audit-deck",
+  "categoryId": "design-ux",
+  "topicId": "ux-teardown",
+  "level": "advanced",
+  "title": "End-to-End UX Audit with Recommendations Deck",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Produce a stakeholder-ready audit with annotated screenshots and severity ratings.",
+  "scenario": "You have been hired as a UX consultant to audit a South African banking app's \"apply for a credit card\" flow. The product owner wants a structured report she can present to the executive team to justify a redesign budget.",
+  "brief": "Conduct a full UX audit of a multi-step application flow (invent the screens). Produce annotated wireframes showing each issue, assign severity ratings, and build a prioritised recommendations deck.",
+  "deliverables": [
+    "A flow map showing all screens in the application flow with decision points",
+    "At least 8 UX issues with severity ratings (Critical, Major, Minor, Cosmetic) and annotated descriptions",
+    "A prioritised recommendations table: Issue, Severity, Effort (S/M/L), Impact (S/M/L), Priority Rank",
+    "An executive summary (max 150 words) that a non-designer executive would understand and act on"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Severity is not the same as priority. A critical usability issue on a rarely used screen may be lower priority than a minor issue on the main conversion path. Show this thinking.",
+  "rubric": [
+    {
+      "key": "flow",
+      "label": "Flow Mapping",
+      "description": "Is the flow map comprehensive with decision points and edge cases?",
+      "weight": 20
+    },
+    {
+      "key": "issues",
+      "label": "Issue Quality",
+      "description": "Are the 8 issues specific, varied in severity, and well-annotated?",
+      "weight": 30
+    },
+    {
+      "key": "prioritisation",
+      "label": "Prioritisation Matrix",
+      "description": "Does the severity × effort × impact prioritisation make sense?",
+      "weight": 30
+    },
+    {
+      "key": "executive",
+      "label": "Executive Communication",
+      "description": "Would a non-designer understand and act on the summary?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "UX auditing",
+    "Severity rating",
+    "Stakeholder communication",
+    "Design prioritisation"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ds-button-component",
+  "categoryId": "design-ux",
+  "topicId": "design-systems",
+  "level": "beginner",
+  "title": "Build a Button Component Spec",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Define a button component with all states, sizes, and variants.",
+  "scenario": "A startup is building its first design system. The lead designer asks you to define the button component — the most-used element in the system. It needs to be comprehensive enough that any designer or developer can use it consistently.",
+  "brief": "Define a complete button component specification. Cover all visual states, sizes, variants, and usage guidelines.",
+  "deliverables": [
+    "A state matrix: Default, Hover, Active/Pressed, Focused, Disabled, Loading — for each of 3 variants (Primary, Secondary, Ghost)",
+    "Size specifications: Small, Medium, Large — with padding, font size, and min-width for each",
+    "Usage guidelines: when to use each variant, icon placement rules, and maximum label length"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A button spec without a disabled state or a loading state is incomplete. Developers will ask \"what does the button look like while the form is submitting?\" Be ready.",
+  "rubric": [
+    {
+      "key": "states",
+      "label": "State Coverage",
+      "description": "Are all interactive states defined for all variants?",
+      "weight": 35
+    },
+    {
+      "key": "sizing",
+      "label": "Size Specifications",
+      "description": "Are the size specifications detailed enough for implementation?",
+      "weight": 30
+    },
+    {
+      "key": "guidelines",
+      "label": "Usage Guidelines",
+      "description": "Do the guidelines prevent misuse without being overly restrictive?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Component design",
+    "State management",
+    "Design specifications",
+    "Design systems"
+  ],
+  "relatedRoadmapIds": []
+}

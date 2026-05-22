@@ -1,0 +1,53 @@
+{
+  "id": "ds-component-audit",
+  "categoryId": "design-ux",
+  "topicId": "design-systems",
+  "level": "advanced",
+  "title": "Component Library Audit",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Audit an existing component library for inconsistencies and accessibility gaps.",
+  "scenario": "A 2-year-old design system has 45 components. Over time, different designers added components with inconsistent patterns. Some components are missing states, others have accessibility issues, and 8 components are never used. Time for an audit.",
+  "brief": "Conduct a comprehensive component library audit. Evaluate consistency, completeness, accessibility, and usage. Produce a remediation plan.",
+  "deliverables": [
+    "An audit framework: the criteria you evaluate each component against (states, a11y, naming, responsiveness)",
+    "Audit findings for at least 6 components (invent them) — each with specific issues and severity",
+    "A deprecation recommendation: which components to remove, merge, or replace",
+    "A prioritised remediation plan with effort estimates (S/M/L) for the top 10 fixes"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A component that exists but nobody uses is worse than no component — it creates maintenance overhead and confusion. Be willing to recommend deletion.",
+  "rubric": [
+    {
+      "key": "framework",
+      "label": "Audit Framework",
+      "description": "Is the evaluation criteria comprehensive and systematic?",
+      "weight": 25
+    },
+    {
+      "key": "findings",
+      "label": "Audit Findings",
+      "description": "Are the issues specific, varied, and correctly severity-rated?",
+      "weight": 30
+    },
+    {
+      "key": "deprecation",
+      "label": "Deprecation Strategy",
+      "description": "Is the merge/delete/replace recommendation well-justified?",
+      "weight": 20
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Plan",
+      "description": "Is the plan prioritised by impact and realistically scoped?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Design system auditing",
+    "Component library",
+    "Quality assurance",
+    "Design governance"
+  ],
+  "relatedRoadmapIds": []
+}

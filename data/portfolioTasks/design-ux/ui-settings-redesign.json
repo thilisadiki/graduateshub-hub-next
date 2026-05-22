@@ -1,0 +1,46 @@
+{
+  "id": "ui-settings-redesign",
+  "categoryId": "design-ux",
+  "topicId": "ui-visual-design",
+  "level": "beginner",
+  "title": "Redesign a Settings Page",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Take a cluttered settings page and redesign it using visual hierarchy and whitespace.",
+  "scenario": "A SaaS product's settings page has 30+ options displayed in a single scrolling list with no grouping, inconsistent labels, and tiny toggle switches. Users frequently change the wrong setting.",
+  "brief": "Redesign the settings page. Group related settings, create a clear visual hierarchy, and ensure each setting is self-explanatory without help text.",
+  "deliverables": [
+    "A description of the current settings page problems (invent the page state)",
+    "A redesigned layout specification: groupings, section headers, spacing, and component choices",
+    "A before/after comparison for 3 specific settings showing how clarity improved"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Good settings pages use progressive disclosure — show common settings first, hide advanced ones behind an \"Advanced\" section. Do not dump everything on one page.",
+  "rubric": [
+    {
+      "key": "analysis",
+      "label": "Problem Analysis",
+      "description": "Are the current issues correctly identified?",
+      "weight": 25
+    },
+    {
+      "key": "grouping",
+      "label": "Information Grouping",
+      "description": "Are settings logically grouped with clear section headers?",
+      "weight": 35
+    },
+    {
+      "key": "hierarchy",
+      "label": "Visual Hierarchy",
+      "description": "Does the redesign use hierarchy and whitespace to reduce cognitive load?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Visual hierarchy",
+    "Information grouping",
+    "UI layout",
+    "Progressive disclosure"
+  ],
+  "relatedRoadmapIds": []
+}

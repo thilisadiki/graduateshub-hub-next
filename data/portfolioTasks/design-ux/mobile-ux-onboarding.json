@@ -1,0 +1,53 @@
+{
+  "id": "mobile-ux-onboarding",
+  "categoryId": "design-ux",
+  "topicId": "mobile-ux-design",
+  "level": "advanced",
+  "title": "Mobile App Onboarding Strategy for an InsurTech App",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 hours",
+  "tagline": "Design a privacy-aware, high-conversion mobile onboarding flow for a micro-insurance app.",
+  "scenario": "SureCover is a South African micro-insurance provider launching an app for informal workers. Because users are highly sensitive to mobile data costs (airtime/data) and wary of sharing personal details before seeing value, the onboarding must balance education, trust, permissions (location/camera), and POPIA compliance.",
+  "brief": "Design a complete mobile onboarding strategy that minimizes early friction. Decide when to ask for high-friction permissions, how to handle data-sensitive assets, and how to communicate value before registration.",
+  "deliverables": [
+    "A storyboard or interaction flow mapping the first-time user experience from app launch to completed setup",
+    "Permission-request strategy detailing when and how to ask for camera and location permissions with context screens",
+    "Copy deck and UX design recommendations for POPIA-compliant consent gates that remain user-friendly",
+    "A data-saving configuration proposal (e.g., optional image loading or offline capability alerts) for data-conscious users"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The focus is on user psychology and localized constraints (such as expensive data and high security awareness in SA). Vague descriptions will fail.",
+  "rubric": [
+    {
+      "key": "permissions",
+      "label": "Permission Strategy",
+      "description": "Is the contextual permission flow logical and designed to maximize opt-in rates?",
+      "weight": 30
+    },
+    {
+      "key": "psychology",
+      "label": "User Value Communication",
+      "description": "Is value demonstrated prior to demanding registration or high-friction info?",
+      "weight": 30
+    },
+    {
+      "key": "compliance",
+      "label": "POPIA & Data Considerations",
+      "description": "Are POPIA consent gates clear and is the interface optimized for low-bandwidth environments?",
+      "weight": 25
+    },
+    {
+      "key": "clarity",
+      "label": "Presentation & Rationale",
+      "description": "Is the overall submission highly professional and developer-ready?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Onboarding design",
+    "Mobile permission strategy",
+    "Data-sensitive UX",
+    "POPIA compliance in UI"
+  ],
+  "relatedRoadmapIds": []
+}

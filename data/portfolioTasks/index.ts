@@ -2,7 +2,6 @@ import type { PortfolioTask, PortfolioLevel } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
-import { designUxTasks } from './designUx';
 import { businessAnalysisTasks } from './businessAnalysis';
 import { customerOpsTasks } from './customerOps';
 import { aiPromptingTasks } from './aiPrompting';
@@ -27,6 +26,7 @@ const SOFT_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/software-deve
 const DATA_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/data-analysis');
 const DIGITAL_MARKETING_DIR = path.join(process.cwd(), 'data/portfolioTasks/digital-marketing');
 const FINANCE_ACCOUNTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/finance-accounting');
+const DESIGN_UX_DIR = path.join(process.cwd(), 'data/portfolioTasks/design-ux');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -123,12 +123,31 @@ function loadFinanceAccountingTasks(): PortfolioTask[] {
   }
 }
 
+function loadDesignUxTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(DESIGN_UX_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(DESIGN_UX_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(DESIGN_UX_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load design and UX tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
   ...loadDigitalMarketingTasks(),
   ...loadSoftDevTasks(),
   ...loadDataAnalysisTasks(),
   ...loadFinanceAccountingTasks(),
-  ...designUxTasks,
+  ...loadDesignUxTasks(),
   ...loadWebDevTasks(),
   ...businessAnalysisTasks,
   ...customerOpsTasks,

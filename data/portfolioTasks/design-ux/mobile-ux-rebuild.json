@@ -1,0 +1,46 @@
+{
+  "id": "mobile-ux-rebuild",
+  "categoryId": "design-ux",
+  "topicId": "mobile-ux-design",
+  "level": "intermediate",
+  "title": "Mobile-First Registration Redesign for a Local Retailer",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Redesign a complex desktop-centric signup form into an elegant mobile-first flow.",
+  "scenario": "A South African homeware boutique, \"Karoo Living\", has a desktop registration flow that requires ID number verification, physical address, and loyalty options. Mobile drop-offs are at 70% because typing on smartphones is frustrating and error-prone on their legacy web views.",
+  "brief": "Redesign the registration process into a mobile-first, multi-step flow. Leverage mobile input design patterns (like native date pickers, autofocus, specific keyboard types, and address autocomplete).",
+  "deliverables": [
+    "A before-and-after flow map outlining the step reduction",
+    "Detailed wireframe descriptions or mockups for the redesigned mobile registration screen states (showing keyboard states, inline validations, and step indicators)",
+    "A list of 4 optimized input configurations (e.g. inputmode=\"numeric\" for South African ID numbers) with rationale"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Provide clear, step-by-step logic for the mobile form. Emphasize reduction of typing effort (e.g., using SA ID parsing to prefill birthday/gender).",
+  "rubric": [
+    {
+      "key": "flow",
+      "label": "Flow Optimization",
+      "description": "Is the multi-step flow logical, minimizing cognitive load for mobile users?",
+      "weight": 35
+    },
+    {
+      "key": "inputs",
+      "label": "Mobile Input Best Practices",
+      "description": "Did the candidate specify native keyboard behaviors, autocomplete attributes, and input modes?",
+      "weight": 35
+    },
+    {
+      "key": "sa-context",
+      "label": "SA Context & Prefills",
+      "description": "Is there a clever use of SA-specific inputs like the 13-digit ID prefill logic?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Mobile form design",
+    "Input optimization",
+    "Interaction flow design",
+    "Information architecture"
+  ],
+  "relatedRoadmapIds": []
+}

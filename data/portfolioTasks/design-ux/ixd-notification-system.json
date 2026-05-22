@@ -1,0 +1,53 @@
+{
+  "id": "ixd-notification-system",
+  "categoryId": "design-ux",
+  "topicId": "interaction-design",
+  "level": "intermediate",
+  "title": "Notification System Design",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a notification system with in-app, push, and email channels.",
+  "scenario": "A project management app sends too many notifications. Users complain about notification fatigue — they get pinged for every comment, assignment, and status change. Some have turned off all notifications, missing critical updates.",
+  "brief": "Redesign the notification system. Define which events trigger which channels, how notifications group, priority levels, and user control over preferences.",
+  "deliverables": [
+    "A notification matrix: Event Type × Channel (in-app, push, email) with default on/off for each",
+    "A grouping strategy: how related notifications are batched (e.g., \"3 new comments on Task X\")",
+    "Priority levels: Critical (must interrupt), Important (show but do not interrupt), Informational (badge only)",
+    "A user preferences design: how users control notification settings without 50 individual toggles"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The goal is not fewer notifications — it is the right notifications at the right time. A deadline change is urgent. A comment on a resolved task is not.",
+  "rubric": [
+    {
+      "key": "matrix",
+      "label": "Notification Matrix",
+      "description": "Is the event-to-channel mapping thoughtful with sensible defaults?",
+      "weight": 30
+    },
+    {
+      "key": "grouping",
+      "label": "Grouping Strategy",
+      "description": "Does the grouping reduce noise without hiding important updates?",
+      "weight": 25
+    },
+    {
+      "key": "priority",
+      "label": "Priority System",
+      "description": "Are the priority levels clearly defined with correct event assignment?",
+      "weight": 25
+    },
+    {
+      "key": "preferences",
+      "label": "User Preferences",
+      "description": "Is the preferences UI simple enough that users will actually use it?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Notification design",
+    "System design",
+    "User preferences",
+    "Interaction design"
+  ],
+  "relatedRoadmapIds": []
+}

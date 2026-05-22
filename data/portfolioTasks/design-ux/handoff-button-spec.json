@@ -1,0 +1,46 @@
+{
+  "id": "handoff-button-spec",
+  "categoryId": "design-ux",
+  "topicId": "design-handoff-spec",
+  "level": "beginner",
+  "title": "Button Component Handoff Documentation",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Document a primary call-to-action button for developers, defining styling tokens and states.",
+  "scenario": "Your design agency is handing over a new website design for a Durban tourism booking agency. The frontend developer has received the Figma mockups but has asked for a formal specification of the primary button to avoid guess-work about hover states and padding.",
+  "brief": "Create a developer-ready handoff specification for a standard primary button. Use clear design tokens (spacing, typography, border-radius, background-color) and define every interaction state.",
+  "deliverables": [
+    "A specifications table detailing padding, borders, typography size/weight, and corner radius using rem or pixel values",
+    "Visual style descriptions for 5 states: Default, Hover, Active, Focus, and Disabled",
+    "A set of HTML/CSS code snippets representing the specified button styles"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ensure CSS class naming is logical and properties match standard web values.",
+  "rubric": [
+    {
+      "key": "anatomy",
+      "label": "Button Anatomy Spec",
+      "description": "Are the physical dimensions, margins, and padding values precise?",
+      "weight": 35
+    },
+    {
+      "key": "states",
+      "label": "Interactive States",
+      "description": "Are all 5 interactive states defined with visual changes like outline/shadow?",
+      "weight": 35
+    },
+    {
+      "key": "code",
+      "label": "Code Alignment",
+      "description": "Does the CSS match the specifications table exactly?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Design handoff",
+    "Component specifications",
+    "CSS layout",
+    "State documentation"
+  ],
+  "relatedRoadmapIds": []
+}
