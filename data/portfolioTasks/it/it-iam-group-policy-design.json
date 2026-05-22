@@ -1,0 +1,55 @@
+{
+  "id": "it-iam-group-policy-design",
+  "categoryId": "it",
+  "topicId": "it-identity-management",
+  "level": "intermediate",
+  "title": "Group Policy Design for a Small Office",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Design a clean Active Directory OU and Group Policy structure for a 50-user office.",
+  "scenario": "A 50-user SA professional services firm runs Windows Active Directory but has no formal Group Policy strategy. Every new GPO is created ad hoc and applied at the domain root. The IT manager wants a redesign so policies are scoped, layered, and auditable.",
+  "brief": "Design a Group Policy strategy: an OU structure, a GPO inheritance plan, and the specific policies to apply at each layer. Cover security, application configuration, and user experience.",
+  "deliverables": [
+    "An OU structure diagram or text representation showing how users and computers are organised by department, role, and location",
+    "A GPO matrix listing each GPO, the OU it links to, the settings it enforces, and the rationale",
+    "A short security baseline section covering at least: password policy, account lockout, screen lock, USB device restrictions, and PowerShell logging",
+    "A change management note describing how new GPOs get reviewed, tested, and rolled out without breaking production"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Stacking GPOs at the domain root is the lazy way; layered GPOs scoped to OUs are the professional way. Use loopback processing only when you can articulate why.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "OU Structure",
+      "description": "Does the OU hierarchy reflect real organisational logic and support delegation?",
+      "weight": 25
+    },
+    {
+      "key": "gpo-design",
+      "label": "GPO Layering",
+      "description": "Are GPOs scoped at the right levels, with sensible inheritance and clear rationale?",
+      "weight": 30
+    },
+    {
+      "key": "security",
+      "label": "Security Baseline",
+      "description": "Are the security settings appropriate for a 50-user SA office?",
+      "weight": 25
+    },
+    {
+      "key": "change",
+      "label": "Change Management",
+      "description": "Is the rollout process defensible against breaking change risk?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Active Directory",
+    "Group Policy",
+    "OU design",
+    "Security baselines"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

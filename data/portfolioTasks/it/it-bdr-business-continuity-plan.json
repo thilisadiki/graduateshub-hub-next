@@ -1,0 +1,55 @@
+{
+  "id": "it-bdr-business-continuity-plan",
+  "categoryId": "it",
+  "topicId": "it-backup-disaster-recovery",
+  "level": "advanced",
+  "title": "Business Continuity Plan with RTO and RPO Tiers",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Build a tiered business continuity plan that finance leaders will actually fund.",
+  "scenario": "A 350-person SA financial services firm needs a business continuity plan that satisfies its regulator (FSCA) and its insurers. The CIO wants tiered RTO and RPO targets per business function, a defended cost, and a clear difference between what the company recovers in 4 hours, 24 hours, and 72 hours.",
+  "brief": "Produce a complete business continuity plan. Tier business functions by recovery priority, define RTO and RPO per tier, design the technical solution per tier, and present the cost.",
+  "deliverables": [
+    "A business impact analysis (BIA) listing the top 15 business functions, their tier (1 to 3), and the rationale for placement",
+    "A tier definition table showing for each tier: RTO, RPO, technical solution (hot standby, warm replica, restore-from-backup), and the cost band",
+    "A recovery runbook outline showing the first 24 hours of recovery: who decides what is invoked, who communicates, and the parallel workstreams",
+    "A funding case summary suitable for an exco audience showing the cost of the plan versus the cost of an unplanned outage"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The mistake junior IT people make is putting everything in Tier 1. Real BIA work forces uncomfortable trade-offs: not every system is hot-standby-worthy. Show that you can have the conversation with a CFO about the cost difference between 4-hour RTO and 24-hour RTO.",
+  "rubric": [
+    {
+      "key": "bia",
+      "label": "BIA Discipline",
+      "description": "Are functions tiered honestly, with defensible reasoning for placement?",
+      "weight": 25
+    },
+    {
+      "key": "tiers",
+      "label": "Tier Coherence",
+      "description": "Do the RTO, RPO, technical solution, and cost actually align per tier?",
+      "weight": 30
+    },
+    {
+      "key": "runbook",
+      "label": "Runbook Clarity",
+      "description": "Is the first-24-hour runbook actionable under pressure?",
+      "weight": 20
+    },
+    {
+      "key": "funding",
+      "label": "Funding Case",
+      "description": "Could a CFO sign off the plan from the funding case alone?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Business continuity",
+    "RTO and RPO design",
+    "BIA execution",
+    "Recovery runbook design"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

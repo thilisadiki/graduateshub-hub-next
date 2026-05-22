@@ -1,0 +1,55 @@
+{
+  "id": "it-m365-sharepoint-permission-audit",
+  "categoryId": "it",
+  "topicId": "it-microsoft-365",
+  "level": "intermediate",
+  "title": "SharePoint Permission Audit and Cleanup",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Audit a sprawling SharePoint tenant and design the cleanup plan.",
+  "scenario": "A SA professional services firm has been using SharePoint for five years. Every team site was created without governance. There are sites shared with \"Everyone except external users\", broken inheritance everywhere, files with anyone-with-the-link sharing, and ex-employees still listed in some site groups. The CIO wants a controlled cleanup.",
+  "brief": "Produce an audit and cleanup plan for the SharePoint estate. Cover discovery, classification, remediation, and the ongoing governance to keep the tenant clean.",
+  "deliverables": [
+    "A discovery plan describing the queries and reports to run (PowerShell, Microsoft 365 admin centre, Purview) to surface the highest-risk findings",
+    "A classification framework grouping sites into Tier A (sensitive, must be locked down), Tier B (internal collaboration), and Tier C (open / lifecycle ended)",
+    "A remediation playbook covering: broken inheritance fixes, anyone-with-the-link revocation, orphaned site reassignment, and stale site retirement",
+    "An ongoing governance section listing the controls (sensitivity labels, sharing policies, periodic reviews) and the KPIs the CIO sees monthly"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Mass-revoking sharing links breaks workflows. The cleanup must balance hygiene with not paralysing the business. Sequence Tier A (security urgency) before Tier C (lifecycle), and communicate before each remediation wave.",
+  "rubric": [
+    {
+      "key": "discovery",
+      "label": "Discovery Logic",
+      "description": "Are the discovery queries credible and sufficient to surface real risk?",
+      "weight": 25
+    },
+    {
+      "key": "classification",
+      "label": "Classification",
+      "description": "Does the tier framework reflect realistic SA SharePoint reality?",
+      "weight": 25
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Sequencing",
+      "description": "Is the cleanup sequenced to minimise business disruption?",
+      "weight": 25
+    },
+    {
+      "key": "governance",
+      "label": "Ongoing Governance",
+      "description": "Will the controls and KPIs actually keep the tenant clean over time?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "SharePoint governance",
+    "Permission audit",
+    "Sensitivity labels",
+    "M365 cleanup"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

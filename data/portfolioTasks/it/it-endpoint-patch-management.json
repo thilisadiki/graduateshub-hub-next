@@ -1,0 +1,55 @@
+{
+  "id": "it-endpoint-patch-management",
+  "categoryId": "it",
+  "topicId": "it-endpoint-management",
+  "level": "intermediate",
+  "title": "Patch Management Schedule and Policy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Design a patch management schedule that balances security urgency with operational risk.",
+  "scenario": "A SA financial services firm has been deploying Windows updates manually and inconsistently. Some endpoints are months behind on critical patches; other patches were rolled out and broke a key line-of-business application. The CIO wants a documented patch management policy and schedule.",
+  "brief": "Produce a patch management policy and operational schedule. Cover OS patches, application patches, and firmware. Address the trade-off between speed (security) and stability (avoiding breakage).",
+  "deliverables": [
+    "A patch policy document covering: severity tiers (Emergency, Critical, Standard, Optional), the SLA for each tier, the testing requirement, and the rollback criteria",
+    "An operational schedule showing the monthly cycle: patch release day, test ring, pilot ring, production rings, and the exception process",
+    "A communications template covering pre-patch user notifications and post-patch confirmation messaging",
+    "A short risk-and-exception section listing the criteria for delaying a patch and who must approve the exception"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "No patch policy survives the first time a patch breaks the ERP. Build the policy with that day in mind: a defensible rollback path, a fast exception route, and a clear test ring before production.",
+  "rubric": [
+    {
+      "key": "tiers",
+      "label": "Severity Tier Design",
+      "description": "Are tiers and SLAs balanced for security urgency and operational risk?",
+      "weight": 30
+    },
+    {
+      "key": "schedule",
+      "label": "Schedule Realism",
+      "description": "Is the operational cycle realistic for a small IT team to execute every month?",
+      "weight": 25
+    },
+    {
+      "key": "rings",
+      "label": "Ring Strategy",
+      "description": "Does the ring deployment genuinely catch breaking patches before production?",
+      "weight": 25
+    },
+    {
+      "key": "exceptions",
+      "label": "Exception Discipline",
+      "description": "Is the exception process tight enough to prevent abuse but flexible enough to use?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Patch management",
+    "Risk-tiered SLAs",
+    "Ring deployment",
+    "IT change management"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "itsm-acceptable-use-policy",
+  "categoryId": "it",
+  "topicId": "it-service-management",
+  "level": "advanced",
+  "title": "Acceptable Use Policy for an SME",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Draft a one-page acceptable use policy the way a SA SME would actually adopt and enforce one.",
+  "scenario": "An SME owner approaches your IT support firm and asks for an acceptable use policy (AUP) for their 30 staff. They have no policy at all today and have just had a near-miss with a phishing attack. They want a single page that staff will actually read and that the firm could enforce in an HR conversation.",
+  "brief": "Produce a complete AUP suitable for a SA SME, plus a short briefing note explaining the trade-offs you made. The policy must be enforceable, POPIA-aware, and credible to both technical and non-technical readers.",
+  "deliverables": [
+    "A one-page AUP covering: scope, acceptable and unacceptable use, password policy, BYOD position, email and web monitoring disclosure, data handling, social media use, and consequences for breach",
+    "A short briefing note (under 400 words) explaining: which clauses you kept tight and why, which you deliberately left flexible and why, and how the policy aligns with POPIA and the BCEA",
+    "A staff-facing summary: a half-page version a manager could send to staff alongside the full policy, written in plain language",
+    "An implementation checklist: how the SME would roll out the policy (training, sign-off, monitoring) in their first month"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good AUP balances clarity with enforceability. Vague phrases (\"appropriate use of company assets\") are unenforceable; over-specific lists (\"no Facebook between 9 and 5\") are out of date the day they ship. Aim for principles plus examples, not exhaustive rules.",
+  "rubric": [
+    {
+      "key": "enforceability",
+      "label": "Enforceability",
+      "description": "Are the rules clear enough that a manager could enforce them in an HR conversation?",
+      "weight": 30
+    },
+    {
+      "key": "popia",
+      "label": "POPIA Awareness",
+      "description": "Does the policy address POPIA-relevant clauses, particularly around monitoring and personal data?",
+      "weight": 25
+    },
+    {
+      "key": "usability",
+      "label": "Staff Usability",
+      "description": "Would real staff actually read and understand this, or would it be ignored on day one?",
+      "weight": 25
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Trade-off Awareness",
+      "description": "Does the briefing note show genuine awareness of where flexibility was retained and why?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "IT policy writing",
+    "POPIA compliance",
+    "AUP design",
+    "Enforcement design"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

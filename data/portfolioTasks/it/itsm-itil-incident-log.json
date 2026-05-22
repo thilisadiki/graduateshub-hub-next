@@ -1,0 +1,55 @@
+{
+  "id": "itsm-itil-incident-log",
+  "categoryId": "it",
+  "topicId": "it-service-management",
+  "level": "intermediate",
+  "title": "ITIL-Compliant Incident Log",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Build a log of 10 realistic IT support tickets the way an ITIL-aligned helpdesk records them.",
+  "scenario": "Almost every SA corporate IT environment runs on ITIL processes: incidents, problems, changes, and service requests. Junior IT support roles spend a large part of every day inside an ITIL-aligned ticketing system. Hiring managers test whether you know the difference between an incident, a problem, and a service request.",
+  "brief": "Produce a sample incident log with 10 realistic tickets covering varied issue types and severities. Include the categorisation, prioritisation, resolution path, and SLA tracking the way ServiceNow, Freshservice, or Jira Service Management would.",
+  "deliverables": [
+    "A ticket log table with columns: ticket ID, category (incident/problem/service request/change), title, reporter, environment, priority (P1-P4), severity, SLA target, current status, assignee, resolution summary, and resolution time",
+    "10 tickets covering at least: account lockout, no internet, printer offline, software install, security incident, mailbox full, slow PC, application error, password reset, and a hardware failure",
+    "A short narrative section explaining the difference between an incident, a problem, and a service request, with one example of each from your log",
+    "A simple SLA table showing the response and resolution targets per priority level, and a comment on which of your tickets met SLA and which did not"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A ticket like \"user cannot print\" is an incident. The recurring root cause behind multiple \"cannot print\" incidents is a problem. The user requesting a brand new printer is a service request. Mixing these up signals you have not actually used an ITIL system, regardless of what your CV claims.",
+  "rubric": [
+    {
+      "key": "classification",
+      "label": "ITIL Classification",
+      "description": "Are tickets correctly categorised as incidents, problems, service requests, or changes?",
+      "weight": 30
+    },
+    {
+      "key": "realism",
+      "label": "Ticket Realism",
+      "description": "Do the tickets read like genuine SA helpdesk tickets, with realistic resolutions?",
+      "weight": 25
+    },
+    {
+      "key": "sla",
+      "label": "SLA Tracking",
+      "description": "Is SLA tracking applied consistently and the breach analysis honest?",
+      "weight": 25
+    },
+    {
+      "key": "narrative",
+      "label": "Conceptual Clarity",
+      "description": "Does the narrative correctly distinguish incident, problem, and service request with credible examples?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "ITIL incident management",
+    "Ticket categorisation",
+    "SLA tracking",
+    "Helpdesk operations"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

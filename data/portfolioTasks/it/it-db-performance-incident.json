@@ -1,0 +1,55 @@
+{
+  "id": "it-db-performance-incident",
+  "categoryId": "it",
+  "topicId": "it-database-admin",
+  "level": "advanced",
+  "title": "Database Performance Diagnosis & Slow Query Optimization",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Audit database performance, diagnose a slow-query CPU spike, and optimize SQL execution paths.",
+  "scenario": "A Pretoria financial services firm has an internal CRM database. Every morning at 09:00, when staff generate reporting dashboards, database CPU spikes to 100%, causing app-wide timeouts. The IT manager needs a senior DBA to diagnose the cause, optimize the bottleneck query, and establish an index and maintenance strategy to keep the server running smoothly.",
+  "brief": "Produce a database performance diagnostic playbook, document the optimization of a complex slow-query scenario using SQL indices, and design a database maintenance policy.",
+  "deliverables": [
+    "A diagnostic playbook detailing commands (e.g. EXPLAIN ANALYZE, pg_stat_activity, or process monitoring) to isolate the CPU-heavy queries and table locks",
+    "A query optimization case study showing a before-and-after SQL rewrite (e.g., optimizing subqueries to JOINs, removing wildcard SELECT *, or correcting data type mismatches) and the exact CREATE INDEX statements needed",
+    "A database maintenance policy document outlining routine operations like statistics updates (ANALYZE), table vacuuming/defragmentation, and index rebuild schedules",
+    "A database monitoring dashboard specification defining 5 key metrics (e.g. buffer cache hit ratio, index scan vs sequential scan ratio, lock wait times) to watch"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ensure the query optimization is technically sound. Use realistic SQL syntax. Explain exactly how the query optimizer's execution plan changes (from a sequential scan to an index scan) once the index is applied.",
+  "rubric": [
+    {
+      "key": "diagnosis",
+      "label": "Diagnostic Playbook",
+      "description": "Does the playbook show deep technical expertise in tracing lock contention, high CPU, and slow logs?",
+      "weight": 25
+    },
+    {
+      "key": "optimization",
+      "label": "Query & Index Tuning",
+      "description": "Is the SQL query optimization logically sound, and does the index explanation show understanding of execution plans (EXPLAIN)?",
+      "weight": 30
+    },
+    {
+      "key": "maintenance",
+      "label": "Maintenance Governance",
+      "description": "Are the routine database maintenance schedules realistic and prevent index fragmentation and table bloat?",
+      "weight": 25
+    },
+    {
+      "key": "monitoring",
+      "label": "Dashboard & Telemetry",
+      "description": "Are the chosen database telemetry metrics correct and useful for alerting on early degradation?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Database performance tuning",
+    "SQL query optimization (EXPLAIN)",
+    "Index administration & maintenance",
+    "Database diagnostic utilities"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

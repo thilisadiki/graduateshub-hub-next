@@ -1,0 +1,55 @@
+{
+  "id": "it-net-subnet-vlan-plan",
+  "categoryId": "it",
+  "topicId": "it-networking-fundamentals",
+  "level": "beginner",
+  "title": "Subnet and VLAN Plan for an SME",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a clean IP scheme and VLAN layout for a 30-person office.",
+  "scenario": "A 30-person SA accounting firm is moving offices and the new landlord has installed a flat /24 network. Your IT contractor needs a clean subnet and VLAN plan that separates staff devices, the partner laptops, the guest Wi-Fi, voice handsets, and the print and finance servers.",
+  "brief": "Produce a complete IP and VLAN design for the new office. The plan must be implementable by a junior technician with the existing /24 split into appropriately sized subnets and VLANs.",
+  "deliverables": [
+    "A VLAN table listing each VLAN ID, name, purpose, IP subnet, gateway, DHCP range, and inter-VLAN routing rules",
+    "A short rationale paragraph explaining how you sized each subnet and which VLANs you deliberately kept isolated from each other",
+    "A guest Wi-Fi statement covering captive portal, bandwidth limits, and isolation from internal traffic",
+    "A handover note listing three things a technician should verify after rolling the design out"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Real corporate IT does not put VoIP, printers, and finance servers on the same broadcast domain. Show that you understand why segmentation matters, not just how to do CIDR maths.",
+  "rubric": [
+    {
+      "key": "sizing",
+      "label": "Subnet Sizing",
+      "description": "Are subnets correctly sized with sensible headroom, and is the CIDR maths correct?",
+      "weight": 30
+    },
+    {
+      "key": "segmentation",
+      "label": "Segmentation Logic",
+      "description": "Are VLANs separated for the right reasons, with clear inter-VLAN rules?",
+      "weight": 30
+    },
+    {
+      "key": "guest",
+      "label": "Guest Wi-Fi Discipline",
+      "description": "Does the guest network stay isolated, throttled, and free of internal access?",
+      "weight": 20
+    },
+    {
+      "key": "handover",
+      "label": "Handover Quality",
+      "description": "Could a junior technician roll this out from the document alone?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Subnetting",
+    "VLAN design",
+    "Network segmentation",
+    "IP addressing"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "it-iam-joiner-mover-leaver",
+  "categoryId": "it",
+  "topicId": "it-identity-management",
+  "level": "beginner",
+  "title": "Joiner, Mover, Leaver Checklist",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Document the user lifecycle the way an SA corporate IAM team would on day one.",
+  "scenario": "A SA fintech with 80 employees has been creating user accounts manually with no checklist. New starters miss systems they need, leavers retain access for weeks, and internal moves leave permissions sprawling. The IT manager asks you to standardise the process.",
+  "brief": "Produce a complete joiner, mover, and leaver process pack. Each scenario must list every system to update, who is accountable, the SLA, and the audit evidence captured.",
+  "deliverables": [
+    "A joiner checklist covering: AD account, email, group memberships, MFA enrolment, laptop assignment, software licences, and induction tasks",
+    "A mover checklist covering: revoking old group memberships, granting new ones, rotating shared mailbox access, and asset reallocation",
+    "A leaver checklist covering: account disable timing, mailbox forwarding, OneDrive content handling, MFA token revocation, and asset return",
+    "A short policy paragraph stating the SLA for each scenario and the audit evidence retained for compliance"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Most security incidents in SA SMEs stem from leaver accounts that were never disabled. Senior auditors look for clear timing rules: a leaver account should be disabled (not deleted) within 24 hours, with a defined retention period before deletion.",
+  "rubric": [
+    {
+      "key": "completeness",
+      "label": "Coverage Completeness",
+      "description": "Do the checklists cover every realistic system and step in the lifecycle?",
+      "weight": 30
+    },
+    {
+      "key": "accountability",
+      "label": "Accountability Mapping",
+      "description": "Is each step assigned to a clear owner with an SLA?",
+      "weight": 25
+    },
+    {
+      "key": "security",
+      "label": "Security Discipline",
+      "description": "Are the timing rules defensible, especially for leavers and movers?",
+      "weight": 25
+    },
+    {
+      "key": "audit",
+      "label": "Audit Evidence",
+      "description": "Is the audit evidence captured useful for an external reviewer?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Identity lifecycle",
+    "Joiner-mover-leaver",
+    "Audit evidence",
+    "IAM policy"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

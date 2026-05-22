@@ -1,0 +1,55 @@
+{
+  "id": "it-m365-tenant-hardening",
+  "categoryId": "it",
+  "topicId": "it-microsoft-365",
+  "level": "advanced",
+  "title": "M365 Tenant Hardening and Compliance Configuration",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Configure an M365 tenant to a defensible security and compliance posture.",
+  "scenario": "A 400-person SA mining company is consolidating to Microsoft 365 from a hybrid Exchange. The CIO wants a tenant that survives a Big Four audit and aligns with the company's POPIA obligations. The tenant currently runs at default settings.",
+  "brief": "Design a complete M365 tenant hardening configuration covering identity, conditional access, data protection, and audit. Each control must be justified and traceable to a risk or compliance requirement.",
+  "deliverables": [
+    "A conditional access matrix listing each policy (block legacy auth, require MFA, require compliant device, geo-block high-risk countries, session lifetime), the user scope, and the rationale",
+    "A data protection baseline covering: sensitivity labels, DLP policies (POPIA personal data, banking details, ID numbers), retention labels, and encryption defaults",
+    "An audit and monitoring plan covering: unified audit log retention, alerts for high-risk activity, the SOC integration point, and the reporting cadence",
+    "A change rollout sequence ordering the controls (least-disruptive first), with communications and a rollback option per change"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Tenant hardening fails when controls get rolled out at once and break legitimate workflows. Sequence conditional access carefully, validate exclusions for break-glass accounts, and pilot DLP in audit mode before enforcement.",
+  "rubric": [
+    {
+      "key": "conditional-access",
+      "label": "Conditional Access Quality",
+      "description": "Are policies layered correctly, with thoughtful scoping and exclusions?",
+      "weight": 30
+    },
+    {
+      "key": "data-protection",
+      "label": "Data Protection",
+      "description": "Are sensitivity, DLP, and retention applied to the right data classes for SA POPIA context?",
+      "weight": 25
+    },
+    {
+      "key": "audit",
+      "label": "Audit Posture",
+      "description": "Is monitoring and reporting strong enough for an external audit?",
+      "weight": 20
+    },
+    {
+      "key": "rollout",
+      "label": "Rollout Sequencing",
+      "description": "Will the staged rollout avoid breaking the business?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Conditional access",
+    "M365 DLP",
+    "Sensitivity labels",
+    "Tenant audit posture"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

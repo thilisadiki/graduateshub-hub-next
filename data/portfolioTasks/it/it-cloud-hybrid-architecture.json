@@ -1,0 +1,55 @@
+{
+  "id": "it-cloud-hybrid-architecture",
+  "categoryId": "it",
+  "topicId": "it-cloud-fundamentals",
+  "level": "advanced",
+  "title": "Hybrid Cloud Architecture for a Mid-Size SA Company",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Design a defensible hybrid cloud architecture for a 250-person SA business.",
+  "scenario": "A 250-person SA mining services company has cloud-friendly workloads (email, collaboration, sales CRM) and workloads that must stay on-site (process control systems, video monitoring of sites with poor connectivity). The CIO wants a hybrid architecture that survives audit, supports growth, and does not create disaster recovery gaps.",
+  "brief": "Design a target hybrid architecture covering compute, identity, networking, data, and security. Justify which workloads stay on-premise and which move to the cloud, and how the two halves are connected and governed.",
+  "deliverables": [
+    "An architecture diagram or text representation showing on-premise versus cloud workloads, identity flow, network connectivity (ExpressRoute, VPN, SD-WAN), and data flows",
+    "A workload classification table listing each major workload, its destination (on-premise / Azure / M365 / SaaS), the rationale, and the key risks of placement",
+    "A security and identity section covering: hybrid identity (AD Connect or Entra Connect), conditional access, network segmentation between cloud and on-premise, and key management",
+    "A disaster recovery overlay describing how the hybrid architecture supports recovery for both halves, with stated RTO and RPO tiers"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Hybrid is harder than full cloud or full on-premise. Most failure modes happen at the boundary: identity sync failures, expired ExpressRoute peering, conflicting backup tools. Show that you have thought about the seams, not just the halves.",
+  "rubric": [
+    {
+      "key": "classification",
+      "label": "Workload Placement",
+      "description": "Are placement decisions defensible and grounded in workload realities?",
+      "weight": 25
+    },
+    {
+      "key": "connectivity",
+      "label": "Connectivity Design",
+      "description": "Is the network and identity bridge realistic and resilient?",
+      "weight": 25
+    },
+    {
+      "key": "security",
+      "label": "Security Posture",
+      "description": "Are conditional access, segmentation, and key management addressed coherently?",
+      "weight": 25
+    },
+    {
+      "key": "dr",
+      "label": "DR Coherence",
+      "description": "Does the DR overlay actually protect both halves, with stated and credible RTO and RPO?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Hybrid architecture",
+    "Workload classification",
+    "Hybrid identity",
+    "DR design"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

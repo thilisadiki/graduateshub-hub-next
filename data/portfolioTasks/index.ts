@@ -5,19 +5,6 @@ import path from 'path';
 import { aiPromptingTasks } from './aiPrompting';
 import { qaTestingTasks } from './qaTesting';
 import { projectCoordinationTasks } from './projectCoordination';
-import { itServiceManagementTasks } from './itServiceManagement';
-import { itNetworkingTasks } from './itNetworking';
-import { itIdentityManagementTasks } from './itIdentityManagement';
-import { itCloudFundamentalsTasks } from './itCloudFundamentals';
-import { itCybersecurityTasks } from './itCybersecurity';
-import { itEndpointManagementTasks } from './itEndpointManagement';
-import { itBackupRecoveryTasks } from './itBackupRecovery';
-import { itMicrosoft365Tasks } from './itMicrosoft365';
-import { itComplianceGovernanceTasks } from './itComplianceGovernance';
-import { itServerAdministrationTasks } from './itServerAdministration';
-import { itAssetManagementTasks } from './itAssetManagement';
-import { itVoipTelephonyTasks } from './itVoipTelephony';
-import { itDatabaseAdminTasks } from './itDatabaseAdmin';
 
 const WEB_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/web-development');
 const SOFT_DEV_DIR = path.join(process.cwd(), 'data/portfolioTasks/software-development');
@@ -27,6 +14,7 @@ const FINANCE_ACCOUNTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/fin
 const DESIGN_UX_DIR = path.join(process.cwd(), 'data/portfolioTasks/design-ux');
 const BUSINESS_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/business-analysis');
 const CUSTOMER_OPS_DIR = path.join(process.cwd(), 'data/portfolioTasks/customer-ops');
+const IT_DIR = path.join(process.cwd(), 'data/portfolioTasks/it');
 
 function loadWebDevTasks(): PortfolioTask[] {
   try {
@@ -180,6 +168,25 @@ function loadCustomerOpsTasks(): PortfolioTask[] {
   }
 }
 
+function loadItTasks(): PortfolioTask[] {
+  try {
+    if (!fs.existsSync(IT_DIR)) {
+      return [];
+    }
+    const files = fs.readdirSync(IT_DIR);
+    return files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const filePath = path.join(IT_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content) as PortfolioTask;
+      });
+  } catch (error) {
+    console.error('Failed to load IT tasks:', error);
+    return [];
+  }
+}
+
 export const portfolioTasks: PortfolioTask[] = [
   ...loadDigitalMarketingTasks(),
   ...loadSoftDevTasks(),
@@ -189,22 +196,10 @@ export const portfolioTasks: PortfolioTask[] = [
   ...loadWebDevTasks(),
   ...loadBusinessAnalysisTasks(),
   ...loadCustomerOpsTasks(),
+  ...loadItTasks(),
   ...aiPromptingTasks,
   ...qaTestingTasks,
   ...projectCoordinationTasks,
-  ...itServiceManagementTasks,
-  ...itNetworkingTasks,
-  ...itIdentityManagementTasks,
-  ...itCloudFundamentalsTasks,
-  ...itCybersecurityTasks,
-  ...itEndpointManagementTasks,
-  ...itBackupRecoveryTasks,
-  ...itMicrosoft365Tasks,
-  ...itComplianceGovernanceTasks,
-  ...itServerAdministrationTasks,
-  ...itAssetManagementTasks,
-  ...itVoipTelephonyTasks,
-  ...itDatabaseAdminTasks,
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {

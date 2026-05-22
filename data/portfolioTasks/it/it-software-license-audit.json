@@ -1,0 +1,48 @@
+{
+  "id": "it-software-license-audit",
+  "categoryId": "it",
+  "topicId": "it-asset-management",
+  "level": "intermediate",
+  "title": "Software License Compliance & Cost Optimization Audit",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Audit a logistics firm's software usage against paid licenses to root out waste and shadow IT.",
+  "scenario": "A Cape Town logistics firm has recently scaled up, but the IT manager suspects they are wasting money on unused Microsoft 365 E3 and Adobe Creative Cloud licenses. Additionally, some staff have installed unauthorized SaaS tools using company credit cards (shadow IT). They need an audit checklist and a remediation plan.",
+  "brief": "Create a comprehensive software license audit protocol, design an optimization proposal showing cost savings in Rands (ZAR), and draft an acceptable use policy.",
+  "deliverables": [
+    "A Software Discovery & Reconciliation Checklist explaining how to compare installed software (via Active Directory / endpoint scans) against procurement invoices",
+    "An optimization report outline with a hypothetical scenario showing how reallocating or downgrading 15 unused M365 accounts saves money in ZAR",
+    "A draft Software Acceptable Use Policy to restrict unauthorized software installations and shadow IT SaaS sign-ups"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ensure your cost savings calculations reflect realistic local corporate pricing in South African Rands (ZAR) for software licensing.",
+  "rubric": [
+    {
+      "key": "checklist",
+      "label": "Audit Methodology",
+      "description": "Does the audit check details systematically and capture shadow IT applications?",
+      "weight": 35
+    },
+    {
+      "key": "reconciliation",
+      "label": "License Optimization & Savings",
+      "description": "Are the optimization recommendations logical and does the ZAR calculation show concrete savings?",
+      "weight": 35
+    },
+    {
+      "key": "policy",
+      "label": "Policy Enforcement",
+      "description": "Is the software policy realistic and legally binding for local employment contexts?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Software asset management (SAM)",
+    "License compliance",
+    "Shadow IT discovery",
+    "IT cost optimization"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

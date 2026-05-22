@@ -1,0 +1,55 @@
+{
+  "id": "it-sec-phishing-awareness-pack",
+  "categoryId": "it",
+  "topicId": "it-cybersecurity-fundamentals",
+  "level": "beginner",
+  "title": "Phishing Awareness Training Pack",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Build a phishing awareness pack that real SA staff would actually engage with.",
+  "scenario": "A 150-person SA medical scheme has had three near-miss phishing incidents in the last six months, including one where a finance team member nearly paid an invoice rerouted via business email compromise. The IT manager wants a simple awareness pack to roll out to all staff.",
+  "brief": "Produce a complete phishing awareness training pack: a one-page staff guide, a five-question quiz, three sample phishing emails for analysis, and a reporting workflow.",
+  "deliverables": [
+    "A one-page staff guide covering: how to spot phishing, the four common SA attack patterns (BEC, fake SARS, fake banking, fake DHL), and what to do if you clicked something",
+    "Three annotated sample phishing emails (BEC, banking lookalike, fake delivery), each with the red flags called out and a teaching paragraph",
+    "A five-question multiple-choice quiz suitable for the company learning management system",
+    "A reporting workflow describing how staff escalate suspected phishing, who triages it, and what feedback they get back"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Generic phishing training fails because the examples feel American. The strongest SA phishing awareness uses local context: SARS letterhead, Capitec login pages, Takealot order confirmations. Pick local examples that staff will actually recognise.",
+  "rubric": [
+    {
+      "key": "realism",
+      "label": "Local Realism",
+      "description": "Are the examples grounded in SA threats real staff would encounter?",
+      "weight": 30
+    },
+    {
+      "key": "usability",
+      "label": "Staff Usability",
+      "description": "Could a real staff member read the guide once and remember the key signals?",
+      "weight": 25
+    },
+    {
+      "key": "workflow",
+      "label": "Reporting Workflow",
+      "description": "Is the reporting path simple enough that staff will actually use it?",
+      "weight": 25
+    },
+    {
+      "key": "quiz",
+      "label": "Quiz Quality",
+      "description": "Does the quiz reinforce the right behaviours without being trivially easy?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Phishing awareness",
+    "Security training design",
+    "Threat realism",
+    "Incident reporting workflow"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

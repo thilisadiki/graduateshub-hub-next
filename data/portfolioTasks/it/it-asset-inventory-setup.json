@@ -1,0 +1,48 @@
+{
+  "id": "it-asset-inventory-setup",
+  "categoryId": "it",
+  "topicId": "it-asset-management",
+  "level": "beginner",
+  "title": "IT Hardware Asset Inventory & Tagging System",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a cataloging and physical asset tagging system for a growing South African company.",
+  "scenario": "A Durban-based digital design agency has grown rapidly to 40 employees. They currently have no central record of hardware assets. Laptops are handed out dynamically, monitors disappear from the office, and the office manager cannot track which remote worker has what equipment, leading to loss and audit confusion.",
+  "brief": "Develop a comprehensive asset tracking database schema and physical tagging workflow to bring the agency's hardware under strict control.",
+  "deliverables": [
+    "A hardware asset tracking spreadsheet schema (represented as a detailed markdown table) showing the exact columns needed (e.g., Asset ID, Serial Number, Specs, Custodian, Physical Location, Purchase Value, Status)",
+    "A step-by-step physical labeling and inventory cataloging procedure, explaining the placement of tamper-evident tags, scan checks, and frequency of audits",
+    "An assignment checklist template to be completed and signed by both the IT representative and the employee whenever hardware is issued or returned"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Keep the cataloging process realistic for a small firm. Avoid proposing heavy, expensive enterprise software when a clean, structured Google Sheets approach with physical QR/barcode stickers is more appropriate.",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Database Schema & Design",
+      "description": "Is the schema comprehensive and properly structured to track lifecycle states and user assignment?",
+      "weight": 35
+    },
+    {
+      "key": "procedure",
+      "label": "Inventory Verification Procedure",
+      "description": "Is the physical tagging and auditing protocol clear, repeatable, and practical?",
+      "weight": 35
+    },
+    {
+      "key": "checklist",
+      "label": "Assignment Checklist",
+      "description": "Is the assignment checklist robust enough to hold employees legally accountable for company hardware?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Hardware asset tracking",
+    "Inventory management",
+    "IT lifecycle compliance",
+    "Asset tagging protocols"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}
