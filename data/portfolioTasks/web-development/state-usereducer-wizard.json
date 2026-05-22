@@ -1,0 +1,48 @@
+{
+  "id": "state-usereducer-wizard",
+  "categoryId": "web-development",
+  "topicId": "state-machine-logic",
+  "level": "intermediate",
+  "title": "Complex State with useReducer",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Upgrade a messy cluster of `useState` hooks into a clean reducer.",
+  "scenario": "You inherited a data-table component that has 8 different `useState` hooks (`data`, `isLoading`, `error`, `sortBy`, `sortDirection`, `filterText`, `page`, `selectedRows`). Updating one often requires updating three others, causing rendering bugs and impossible states (like `isLoading: true` but `error: \"Failed\"`).",
+  "brief": "Refactor the provided component state logic. Replace the multiple `useState` calls with a single `useReducer` (or Redux slice). Define clear action types (e.g., `FETCH_START`, `FETCH_SUCCESS`, `SET_SORT`) that update the state in a predictable, transactional way.",
+  "deliverables": [
+    "The initial state object and the reducer function handling the actions",
+    "A code snippet showing how the component dispatches these actions",
+    "An explanation of how this approach prevents \"impossible states\""
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus heavily on the reducer function. Make sure that when `FETCH_START` is dispatched, previous errors are cleared and data is handled appropriately.",
+  "rubric": [
+    {
+      "key": "reducer",
+      "label": "Reducer Logic",
+      "description": "Is the reducer function pure and does it handle state transitions correctly?",
+      "weight": 40
+    },
+    {
+      "key": "actions",
+      "label": "Action Design",
+      "description": "Are the action types semantic and well-structured?",
+      "weight": 30
+    },
+    {
+      "key": "impossible",
+      "label": "Preventing Impossible States",
+      "description": "Does the refactor successfully prevent conflicting states?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "React `useReducer`",
+    "State Architecture",
+    "Action Dispatching",
+    "Bug Prevention"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

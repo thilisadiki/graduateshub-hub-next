@@ -1,0 +1,46 @@
+{
+  "id": "co-incident-internal-comms",
+  "categoryId": "customer-ops",
+  "topicId": "incident-management-comms",
+  "level": "intermediate",
+  "title": "Manage Internal Incident Comms",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write the internal Slack updates and executive summary during a data breach.",
+  "scenario": "A third-party marketing tool was compromised, and 5,000 of your customers' email addresses were leaked. It's an active Sev1 incident. The CEO is panicking, the support team is confused, and engineering is trying to lock down the system.",
+  "brief": "Act as the Incident Commander for communications. Draft the internal updates to keep the company aligned without distracting the engineers.",
+  "deliverables": [
+    "An initial `@channel` Slack blast to the whole company explaining the situation and declaring a code red",
+    "A strict instruction to the Support Team on exactly what to tell customers right now (an interim macro)",
+    "A 3-bullet executive summary to be sent to the CEO and Legal team detailing the known scope of the breach"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Internal incident comms are about control. You must stop sales reps from tweeting, stop support agents from guessing, and give executives just enough info so they don't barge into the war room.",
+  "rubric": [
+    {
+      "key": "control",
+      "label": "Command and Control",
+      "description": "Does the Slack blast establish clear authority and instructions?",
+      "weight": 35
+    },
+    {
+      "key": "support-alignment",
+      "label": "Support Alignment",
+      "description": "Is the interim macro safe, legal, and clear for agents to use?",
+      "weight": 35
+    },
+    {
+      "key": "exec-summary",
+      "label": "Executive Summarisation",
+      "description": "Is the update to the CEO concise and focused on risk/scope?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Incident command",
+    "Internal comms",
+    "Crisis management",
+    "Cross-functional alignment"
+  ],
+  "relatedRoadmapIds": []
+}

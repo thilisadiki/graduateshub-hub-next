@@ -1,0 +1,55 @@
+{
+  "id": "payroll-system-migration",
+  "categoryId": "finance-accounting",
+  "topicId": "payroll-statutory-returns",
+  "level": "advanced",
+  "title": "Payroll System Migration Plan",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a migration from manual payroll to an automated system.",
+  "scenario": "A 50-person company has been running payroll on Excel spreadsheets. Errors are increasing, compliance is at risk, and the CFO wants to migrate to a cloud-based payroll system (e.g., SimplePay, Sage, PaySpace). The migration must happen without missing a single payroll run.",
+  "brief": "Design the complete migration plan. Cover system selection criteria, data migration, parallel running, testing, and the cutover strategy.",
+  "deliverables": [
+    "System selection criteria: the 8-10 requirements the new system must meet (SA tax tables, medical aid integration, leave management, etc.)",
+    "A data migration checklist: what employee data needs to be moved and validated",
+    "A parallel running plan: how many months to run both systems side by side and the reconciliation process",
+    "A cutover checklist: the specific steps for the final switch, including rollback procedures"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The biggest risk in payroll migration is paying employees incorrectly. Parallel running for 2-3 months with penny-for-penny reconciliation is essential. Show this.",
+  "rubric": [
+    {
+      "key": "criteria",
+      "label": "Selection Criteria",
+      "description": "Are the system requirements comprehensive and SA-specific?",
+      "weight": 25
+    },
+    {
+      "key": "migration",
+      "label": "Data Migration",
+      "description": "Is the data migration plan thorough with validation steps?",
+      "weight": 25
+    },
+    {
+      "key": "parallel",
+      "label": "Parallel Running",
+      "description": "Is the parallel running strategy practical with clear reconciliation rules?",
+      "weight": 30
+    },
+    {
+      "key": "cutover",
+      "label": "Cutover Strategy",
+      "description": "Does the cutover plan include rollback procedures?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Payroll system migration",
+    "Change management",
+    "Risk management",
+    "System implementation"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

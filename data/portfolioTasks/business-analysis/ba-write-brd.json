@@ -1,0 +1,52 @@
+{
+  "id": "ba-write-brd",
+  "categoryId": "business-analysis",
+  "topicId": "requirements-engineering",
+  "level": "beginner",
+  "title": "Write a Requirements Document",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write a BRD for adding a loyalty programme to a retail POS system.",
+  "scenario": "A mid-size South African retailer (40 stores) wants to add a loyalty programme to their existing POS system. Customers earn points on purchases and redeem them for discounts. The operations director has described the idea verbally — now it needs to be documented.",
+  "brief": "Write a Business Requirements Document (BRD) that captures the business need, scope, functional requirements, non-functional requirements, and assumptions.",
+  "deliverables": [
+    "A BRD covering: business objectives, scope (in/out), at least 10 functional requirements, and 5 non-functional requirements",
+    "An assumptions and constraints section with at least 5 items",
+    "A RACI matrix for key stakeholders (Operations, IT, Marketing, Finance)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Requirements must be testable. \"The system should be fast\" is not a requirement. \"The loyalty balance must display within 2 seconds of scanning the card\" is.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "BRD Structure",
+      "description": "Does the document follow a professional BRD structure?",
+      "weight": 20
+    },
+    {
+      "key": "requirements",
+      "label": "Requirements Quality",
+      "description": "Are the requirements specific, measurable, and testable?",
+      "weight": 40
+    },
+    {
+      "key": "scope",
+      "label": "Scope Clarity",
+      "description": "Is the in-scope/out-of-scope boundary clear and realistic?",
+      "weight": 20
+    },
+    {
+      "key": "raci",
+      "label": "RACI Matrix",
+      "description": "Is the RACI complete with no shared accountabilities?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "BRD writing",
+    "Requirements elicitation",
+    "Scope definition",
+    "RACI"
+  ],
+  "relatedRoadmapIds": []
+}

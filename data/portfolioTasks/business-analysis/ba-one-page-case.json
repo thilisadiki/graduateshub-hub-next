@@ -1,0 +1,46 @@
+{
+  "id": "ba-one-page-case",
+  "categoryId": "business-analysis",
+  "topicId": "business-case-development",
+  "level": "beginner",
+  "title": "One-Page Business Case",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a concise business case for purchasing a project management tool.",
+  "scenario": "A 20-person agency manages projects using email, WhatsApp, and shared Google Sheets. Deadlines are missed weekly. The operations manager wants to buy a project management tool (Asana, Monday.com, or similar) but needs approval from the managing director.",
+  "brief": "Write a one-page business case that convinces the MD to approve the purchase. Be concise — one page means every sentence must earn its place.",
+  "deliverables": [
+    "A one-page business case with: Problem Statement, Proposed Solution, Benefits (quantified where possible), Costs, and Recommendation",
+    "At least 2 quantified benefits (e.g., \"reduce missed deadlines by 60%, saving estimated 15 hours/week of rework\")",
+    "A simple ROI calculation showing payback period"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A one-page business case is not a summary of a longer document. It is a standalone argument. The MD should be able to say yes or no after reading it.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Business Case Structure",
+      "description": "Does the one-pager cover all essential elements concisely?",
+      "weight": 25
+    },
+    {
+      "key": "benefits",
+      "label": "Quantified Benefits",
+      "description": "Are the benefits specific and credibly quantified?",
+      "weight": 35
+    },
+    {
+      "key": "persuasion",
+      "label": "Persuasive Writing",
+      "description": "Would a busy MD read this and make a decision?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Business case writing",
+    "ROI calculation",
+    "Executive communication",
+    "Persuasive writing"
+  ],
+  "relatedRoadmapIds": []
+}

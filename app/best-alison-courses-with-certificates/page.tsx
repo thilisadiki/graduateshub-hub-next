@@ -138,7 +138,7 @@ export default function BestAlisonCoursesPage() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Certificate or Diploma, Which Should You Choose?</h2>
           <p className="text-gray-500 mb-8 text-lg">Alison offers two types of qualifications. Picking the right one depends on how much time you have and how deeply you want to go.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-xl border-2 border-blue-100 bg-blue-50 p-6">
+            <div className="rounded-xl border-2 border-[#D1C5B4] bg-[#FFDF9C]/20 p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">Cert</div>
                 <h3 className="font-bold text-gray-900 text-xl">Certificate Courses</h3>
@@ -150,9 +150,9 @@ export default function BestAlisonCoursesPage() {
                 <li className="flex items-start gap-2"><CheckCircle2 size={15} className="text-green-500 mt-0.5 shrink-0" /> Great alongside an existing job or study schedule</li>
               </ul>
             </div>
-            <div className="rounded-xl border-2 border-indigo-100 bg-indigo-50 p-6">
+            <div className="rounded-xl border-2 border-[#D1C5B4] bg-[#FFDF9C]/20 p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">Dip</div>
+                <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">Dip</div>
                 <h3 className="font-bold text-gray-900 text-xl">Diploma Courses</h3>
               </div>
               <ul className="text-gray-700 text-sm space-y-3">
@@ -172,9 +172,9 @@ export default function BestAlisonCoursesPage() {
       postCarouselSection={
         <>
           <section className="mb-20">
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Are Alison Certificates Free?</h2>
-              <p className="text-blue-100 text-lg mb-8 max-w-2xl leading-relaxed">The short answer: the learning is completely free. All courses, assessments, and completion recognition are free to access. Alison does offer optional paid certificates, but the skills and the qualification are yours regardless.</p>
+              <p className="text-[#FFDF9C] text-lg mb-8 max-w-2xl leading-relaxed">The short answer: the learning is completely free. All courses, assessments, and completion recognition are free to access. Alison does offer optional paid certificates, but the skills and the qualification are yours regardless.</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {[
                   { stat: 'Free to study', body: 'All course content and assessments are 100% free. No subscription, no credit card needed.' },
@@ -183,7 +183,7 @@ export default function BestAlisonCoursesPage() {
                 ].map(({ stat, body }) => (
                   <div key={stat} className="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
                     <p className="font-bold text-white mb-2">{stat}</p>
-                    <p className="text-blue-100 text-sm leading-relaxed">{body}</p>
+                    <p className="text-[#FFDF9C] text-sm leading-relaxed">{body}</p>
                   </div>
                 ))}
               </div>

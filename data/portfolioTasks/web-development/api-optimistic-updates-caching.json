@@ -1,0 +1,55 @@
+{
+  "id": "api-optimistic-updates-caching",
+  "categoryId": "web-development",
+  "topicId": "api-data-fetching",
+  "level": "advanced",
+  "title": "Optimistic Updates & Local Caching",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Make an app feel instantly responsive by mastering client-side caching.",
+  "scenario": "You are building a real-time task management app (like Trello). Users are complaining that clicking \"Complete Task\" feels sluggish because it waits for the server response before updating the UI. The engineering lead wants you to implement optimistic UI updates and local caching to make the app feel instant.",
+  "brief": "Design the data fetching layer for a \"Task Dashboard\". You do not need to build the full UI. Write the logic (using React Query, SWR, or custom hooks) to: 1) Cache the initial fetch. 2) Optimistically update the cache when a user toggles a task. 3) Roll back the UI if the API request fails.",
+  "deliverables": [
+    "The data fetching and mutation code (e.g., React Query hooks)",
+    "The optimistic update and rollback logic",
+    "A short architecture note explaining the trade-offs of optimistic updates (e.g., when NOT to use them)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You may use tools like TanStack Query (React Query) or SWR in your code snippet, as they are industry standard for this problem. Focus on the mutation logic.",
+  "rubric": [
+    {
+      "key": "caching",
+      "label": "Caching Strategy",
+      "description": "Is the data cached effectively to prevent redundant background fetches?",
+      "weight": 25
+    },
+    {
+      "key": "optimistic",
+      "label": "Optimistic Update Logic",
+      "description": "Does the UI update immediately before the network request finishes?",
+      "weight": 30
+    },
+    {
+      "key": "rollback",
+      "label": "Error Handling & Rollback",
+      "description": "Is the previous state correctly restored if the mutation fails?",
+      "weight": 25
+    },
+    {
+      "key": "trade-offs",
+      "label": "Architectural Judgment",
+      "description": "Does the candidate understand the risks of optimistic updates (e.g., payment processing)?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Optimistic UI",
+    "Client-side Caching",
+    "Data Mutation",
+    "React Query / SWR",
+    "Error Recovery"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

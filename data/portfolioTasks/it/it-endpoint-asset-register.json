@@ -1,0 +1,55 @@
+{
+  "id": "it-endpoint-asset-register",
+  "categoryId": "it",
+  "topicId": "it-endpoint-management",
+  "level": "beginner",
+  "title": "Asset Register and Standard Build",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Document the laptop fleet and the standard image the way a working IT team operates.",
+  "scenario": "A 70-person SA NGO has a sprawling laptop fleet acquired over five years: a mix of Windows and Mac, no asset register, and no standard configuration. The IT manager wants a clean asset register and a documented standard build for new devices.",
+  "brief": "Produce a complete asset register template and a standard build document. Make defensible assumptions about the fleet size and mix; document them.",
+  "deliverables": [
+    "An asset register template covering: asset tag, serial, model, OS, assigned user, location, purchase date, warranty end, status, and notes",
+    "A standard build document specifying: OS version, patch level, antivirus, browser, productivity suite, VPN client, password manager, encryption status, and any required GPOs or profiles",
+    "A device naming convention with rationale (department prefix, region code, sequence number)",
+    "A short paragraph on the asset lifecycle: how new devices are registered, how disposals are recorded, and the audit cadence"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good asset register is one that gets updated. Rather than designing 30 columns nobody fills in, focus on the 10 that actually matter operationally and audit a sample monthly to keep them honest.",
+  "rubric": [
+    {
+      "key": "register",
+      "label": "Register Design",
+      "description": "Is the register usable, complete enough for audit, and free of unnecessary fields?",
+      "weight": 30
+    },
+    {
+      "key": "build",
+      "label": "Standard Build Realism",
+      "description": "Is the standard build complete and credible for an SA SME context?",
+      "weight": 30
+    },
+    {
+      "key": "naming",
+      "label": "Naming Convention",
+      "description": "Is the convention scalable, machine-readable, and human-friendly?",
+      "weight": 20
+    },
+    {
+      "key": "lifecycle",
+      "label": "Lifecycle Discipline",
+      "description": "Are the registration, disposal, and audit cadence practical?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Asset management",
+    "Standard builds",
+    "Device lifecycle",
+    "IT operations documentation"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

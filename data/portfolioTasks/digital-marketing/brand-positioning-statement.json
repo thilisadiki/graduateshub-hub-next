@@ -1,0 +1,48 @@
+{
+  "id": "brand-positioning-statement",
+  "categoryId": "digital-marketing",
+  "topicId": "brand-strategy-positioning",
+  "level": "beginner",
+  "title": "Write a Brand Positioning Statement",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Define target audience, category, key benefit, and reason to believe.",
+  "scenario": "A new South African meal-kit delivery startup is about to launch. They deliver pre-portioned ingredients and recipes to working professionals in Johannesburg and Cape Town. They need to articulate who they are, who they serve, and why they are different.",
+  "brief": "Write a brand positioning statement using the classic framework: \"For [target audience] who [need], [brand] is the [category] that [key benefit] because [reason to believe].\" Then defend each element.",
+  "deliverables": [
+    "The positioning statement in one sentence",
+    "A defense of each element: why this target audience, why this category framing, why this benefit over alternatives",
+    "One alternative positioning you considered and rejected, with your reasoning"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A positioning statement is not a tagline. It is an internal strategic document. It should be precise, not catchy.",
+  "rubric": [
+    {
+      "key": "statement",
+      "label": "Positioning Statement",
+      "description": "Is the statement clear, specific, and following the classic framework?",
+      "weight": 35
+    },
+    {
+      "key": "defense",
+      "label": "Element Defense",
+      "description": "Is each element justified with market or customer insight?",
+      "weight": 35
+    },
+    {
+      "key": "alternative",
+      "label": "Alternative Analysis",
+      "description": "Does the rejected alternative show genuine strategic thinking?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Brand positioning",
+    "Strategic thinking",
+    "Market analysis",
+    "Brand strategy"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

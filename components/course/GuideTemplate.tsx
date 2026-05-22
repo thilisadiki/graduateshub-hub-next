@@ -249,7 +249,7 @@ export default function GuideTemplate({
       </div>
 
       {/* Hero */}
-      <div className="bg-blue-50 border-b border-blue-100 py-14 px-6">
+      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-14 px-6">
         <div className="max-w-6xl mx-auto">
           <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Updated for 2026</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight max-w-3xl leading-tight">
@@ -260,7 +260,7 @@ export default function GuideTemplate({
             {heroBadges.map(({ icon: Icon, label, iconClassName }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 bg-white border border-blue-100 rounded-full px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm"
+                className="flex items-center gap-2 bg-white border border-[#D1C5B4] rounded-full px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm"
               >
                 <Icon size={16} className={iconClassName ?? 'text-gray-500'} />
                 {label}
@@ -282,7 +282,7 @@ export default function GuideTemplate({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(({ icon: Icon, title, body }) => (
               <div key={title} className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4">
-                <div className="shrink-0 w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                <div className="shrink-0 w-10 h-10 bg-[#FFDF9C]/20 rounded-lg flex items-center justify-center">
                   <Icon size={20} className="text-primary" strokeWidth={1.5} />
                 </div>
                 <div>
@@ -317,7 +317,7 @@ export default function GuideTemplate({
                 {allHref && (
                   <Link
                     href={allHref}
-                    className="text-primary font-bold hover:text-blue-800 transition-colors flex items-center gap-1 whitespace-nowrap text-sm"
+                    className="text-primary font-bold hover:text-[#261A00] transition-colors flex items-center gap-1 whitespace-nowrap text-sm"
                   >
                     See all {allLabel} courses <ChevronRight size={16} />
                   </Link>
@@ -393,7 +393,7 @@ export default function GuideTemplate({
           {careerPathsBrowseHref && careerPathsBrowseLabel && (
             <Link
               href={careerPathsBrowseHref}
-              className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors"
+              className="inline-flex items-center gap-2 text-primary font-bold hover:text-[#261A00] transition-colors"
             >
               {careerPathsBrowseLabel} <ChevronRight size={16} />
             </Link>
@@ -455,11 +455,11 @@ export default function GuideTemplate({
         </section>
 
         {/* CTA */}
-        <section className="mb-8 bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-12 text-center">
+        <section className="mb-8 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">{ctaHeading}</h2>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">{ctaBody}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={ctaPrimaryHref} className="bg-primary hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-bold transition-colors">
+            <Link href={ctaPrimaryHref} className="bg-primary hover:bg-[#5a4000] text-white px-8 py-3 rounded-lg font-bold transition-colors">
               {ctaPrimaryLabel}
             </Link>
             <Link href={ctaSecondaryHref} className="bg-white border-2 border-gray-200 text-gray-700 px-8 py-3 rounded-lg font-bold hover:border-gray-300 transition-colors">

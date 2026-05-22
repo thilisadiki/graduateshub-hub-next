@@ -1,0 +1,46 @@
+{
+  "id": "co-vendor-sla-audit",
+  "categoryId": "customer-ops",
+  "topicId": "vendor-supplier-management",
+  "level": "beginner",
+  "title": "Audit a Vendor SLA",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Review a courier partner's monthly performance against their contract.",
+  "scenario": "You manage the relationship with an outsourced courier. Their contract (SLA) states they must deliver 95% of parcels within 48 hours, and reply to support queries within 4 hours. You have their monthly data report.",
+  "brief": "Audit the provided data snippet. Identify if they missed their SLA, calculate the gap, and draft an email requesting an explanation.",
+  "deliverables": [
+    "The calculation of their On-Time Delivery % and Average Support Reply Time based on the provided data",
+    "A clear statement of whether they Pass or Fail the SLA",
+    "A professional email to the vendor's Account Manager highlighting the misses and asking for a remediation plan"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Be professional but firm. Vendors are partners, but they must be held accountable. Focus on the data, not emotion.",
+  "rubric": [
+    {
+      "key": "analysis",
+      "label": "Data Analysis",
+      "description": "Did you correctly identify the SLA breaches?",
+      "weight": 35
+    },
+    {
+      "key": "tone",
+      "label": "Professional Tone",
+      "description": "Is the email firm but respectful of the partnership?",
+      "weight": 35
+    },
+    {
+      "key": "action",
+      "label": "Remediation Request",
+      "description": "Did you clearly ask for a plan to fix the issue?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "SLA monitoring",
+    "Vendor management",
+    "Data analysis",
+    "Professional communication"
+  ],
+  "relatedRoadmapIds": []
+}

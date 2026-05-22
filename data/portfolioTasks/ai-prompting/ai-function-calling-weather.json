@@ -1,0 +1,46 @@
+{
+  "id": "ai-function-calling-weather",
+  "categoryId": "ai-prompting",
+  "topicId": "workflow-integration",
+  "level": "intermediate",
+  "title": "Write a Function Calling Schema",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Define the JSON schema that allows an LLM to call an external weather API.",
+  "scenario": "Modern LLMs can \"call functions\" by outputting a JSON object that your backend uses to query an API. You are building a bot for a farming co-op. When a user asks \"Will it rain in Stellenbosch tomorrow?\", the LLM must realize it needs real-time data and trigger the `get_weather` function.",
+  "brief": "Define the `get_weather` tool schema (the instructions given to the LLM on how and when to use the tool) and the system prompt guiding the bot.",
+  "deliverables": [
+    "The JSON Schema for the `get_weather` function (defining parameters like `location` and `date`)",
+    "The description property of the function (crucial, as this tells the LLM *when* to use it)",
+    "The System Prompt instructing the bot to rely on the tool for farming queries rather than guessing"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Function calling relies entirely on the `description` fields. If you don't explain what `location` means, the AI might pass \"my farm\" instead of \"Stellenbosch\". Be explicit with types and examples.",
+  "rubric": [
+    {
+      "key": "schema-validity",
+      "label": "Schema Validity",
+      "description": "Is the JSON schema structurally correct for OpenAI/Anthropic function calling?",
+      "weight": 35
+    },
+    {
+      "key": "descriptions",
+      "label": "Parameter Descriptions",
+      "description": "Are the descriptions clear enough that the LLM knows exactly what data to extract?",
+      "weight": 35
+    },
+    {
+      "key": "prompting",
+      "label": "System Integration",
+      "description": "Does the system prompt correctly frame the bot's reliance on the tool?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Function calling",
+    "API integration",
+    "JSON Schema definition",
+    "Tool use"
+  ],
+  "relatedRoadmapIds": []
+}

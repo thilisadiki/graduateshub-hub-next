@@ -1,0 +1,53 @@
+{
+  "id": "ba-uat-multi-phase",
+  "categoryId": "business-analysis",
+  "topicId": "uat-planning",
+  "level": "advanced",
+  "title": "UAT Strategy for a Multi-Phase Rollout",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design the UAT strategy for a phased ERP rollout across 5 branches.",
+  "scenario": "A South African retail chain is rolling out a new ERP system across 5 branches over 10 months. Each branch has different product mixes, staff sizes, and legacy systems. The CTO wants a UAT strategy that ensures each branch is tested without delaying the next.",
+  "brief": "Design the complete UAT strategy covering regression testing, data migration validation, branch-specific testing, and go/no-go criteria.",
+  "deliverables": [
+    "A UAT strategy document: scope per phase, test types (functional, regression, data migration, integration)",
+    "A regression testing approach: what to re-test when Branch 3 goes live and Branches 1-2 are already in production",
+    "Data migration validation: how to verify that each branch's historical data migrated correctly",
+    "Go/no-go criteria for each branch with the decision-making authority clearly defined"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "In a phased rollout, Branch 3's UAT must include regression testing for Branches 1-2. Otherwise you fix Branch 3 and break Branch 1. Show this compounding complexity.",
+  "rubric": [
+    {
+      "key": "strategy",
+      "label": "UAT Strategy",
+      "description": "Is the strategy comprehensive and phasing-aware?",
+      "weight": 25
+    },
+    {
+      "key": "regression",
+      "label": "Regression Approach",
+      "description": "Does the regression strategy handle the compounding complexity?",
+      "weight": 25
+    },
+    {
+      "key": "migration",
+      "label": "Data Migration Validation",
+      "description": "Is the data validation thorough and branch-specific?",
+      "weight": 25
+    },
+    {
+      "key": "go-no-go",
+      "label": "Go/No-Go Criteria",
+      "description": "Are the criteria clear with defined decision authority?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "UAT strategy",
+    "Phased rollout",
+    "Regression testing",
+    "Data migration validation"
+  ],
+  "relatedRoadmapIds": []
+}

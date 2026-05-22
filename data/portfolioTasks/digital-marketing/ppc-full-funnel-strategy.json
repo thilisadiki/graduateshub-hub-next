@@ -1,0 +1,55 @@
+{
+  "id": "ppc-full-funnel-strategy",
+  "categoryId": "digital-marketing",
+  "topicId": "paid-media-ppc",
+  "level": "advanced",
+  "title": "Full-Funnel Paid Media Strategy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a paid media plan across Google, Meta, and LinkedIn for a B2B SaaS launch.",
+  "scenario": "A B2B SaaS company is launching a new HR software product. They have R500K/month for paid media. The target audience is HR managers at mid-size South African companies. The sales cycle is 45 days.",
+  "brief": "Design a full-funnel paid media strategy across Google Search, Meta, and LinkedIn. Allocate budget by channel and funnel stage (awareness, consideration, conversion), define the audience targeting for each, and set the KPIs.",
+  "deliverables": [
+    "Budget allocation table: Channel × Funnel Stage × Monthly Spend × Primary KPI",
+    "Audience targeting for each channel (LinkedIn job titles, Meta lookalikes, Google keywords)",
+    "The retargeting strategy: how you move users from awareness to conversion across channels",
+    "A measurement plan: how you attribute a R500K/month spend to actual pipeline and closed deals"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "B2B has a long sales cycle. You cannot optimise for immediate purchases. Show how you use micro-conversions (whitepaper downloads, demo requests) as proxy metrics.",
+  "rubric": [
+    {
+      "key": "allocation",
+      "label": "Budget Allocation",
+      "description": "Is the budget split defensible across channels and funnel stages?",
+      "weight": 25
+    },
+    {
+      "key": "targeting",
+      "label": "Audience Targeting",
+      "description": "Are the targeting strategies channel-appropriate and specific?",
+      "weight": 25
+    },
+    {
+      "key": "retargeting",
+      "label": "Retargeting Strategy",
+      "description": "Is the cross-channel retargeting flow logical and privacy-compliant?",
+      "weight": 25
+    },
+    {
+      "key": "measurement",
+      "label": "Measurement Plan",
+      "description": "Can the team actually attribute spend to revenue with this plan?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Full-funnel marketing",
+    "B2B paid media",
+    "Budget allocation",
+    "Cross-channel strategy"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

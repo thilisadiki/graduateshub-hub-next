@@ -1,0 +1,49 @@
+{
+  "id": "async-promise-all",
+  "categoryId": "software-development",
+  "topicId": "async-processing",
+  "level": "beginner",
+  "title": "Optimize Sequential API Calls",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Fix a dashboard that takes 10 seconds to load because it fetches data one by one.",
+  "scenario": "A dashboard needs data from 3 different microservices: User Profile, Recent Orders, and Support Tickets. Currently, the code uses `await fetchProfile()`, then `await fetchOrders()`, then `await fetchTickets()`. Each takes 1 second, so the page takes 3 seconds to load.",
+  "brief": "Rewrite the code to fetch all 3 endpoints concurrently. Ensure that if the Support Tickets API fails, the User Profile and Recent Orders data are still returned to the frontend (with an error state for tickets).",
+  "deliverables": [
+    "The optimized data-fetching code snippet",
+    "An explanation of why `Promise.allSettled` is safer than `Promise.all` in this specific scenario"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The goal is to reduce the total network time from 3 seconds to roughly 1 second. Pay close attention to error handling.",
+  "rubric": [
+    {
+      "key": "concurrency",
+      "label": "Concurrent Execution",
+      "description": "Are the promises executed in parallel rather than sequentially?",
+      "weight": 40
+    },
+    {
+      "key": "resilience",
+      "label": "Fault Tolerance",
+      "description": "Does the code use `Promise.allSettled` (or catch blocks) to prevent total failure?",
+      "weight": 35
+    },
+    {
+      "key": "theory",
+      "label": "Event Loop Knowledge",
+      "description": "Can the candidate explain the difference between `all` and `allSettled`?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Promises",
+    "Concurrency",
+    "Error Handling",
+    "API Orchestration"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer",
+    "web-developer"
+  ]
+}

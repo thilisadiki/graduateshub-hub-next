@@ -1,0 +1,47 @@
+{
+  "id": "co-metrics-capacity-planning",
+  "categoryId": "customer-ops",
+  "topicId": "operational-metrics",
+  "level": "advanced",
+  "title": "Build a Capacity Model",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Calculate how many agents you need to hire for the upcoming Black Friday peak.",
+  "scenario": "It is September. Black Friday is in November. Marketing forecasts a 300% increase in orders. Currently, you have 10 agents handling 1,000 tickets a week. Each agent handles roughly 100 tickets a week. You need to present a hiring plan to Finance.",
+  "brief": "Build a simple capacity model to determine how many temp agents to hire, factoring in training time and a lower efficiency rate for temps.",
+  "deliverables": [
+    "The forecasted ticket volume for Black Friday week",
+    "The assumption list (e.g., \"Temps will only be 70% as efficient as full-time agents\")",
+    "The final calculation of how many heads you need to hire",
+    "A short memo to Finance defending the budget request"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not just multiply by 3. New hires are not instantly 100% productive. Your model must show that you understand ramp-up time and shrinkage (breaks, sick leave).",
+  "rubric": [
+    {
+      "key": "model",
+      "label": "Mathematical Logic",
+      "description": "Is the capacity math correct based on the stated assumptions?",
+      "weight": 40
+    },
+    {
+      "key": "assumptions",
+      "label": "Realistic Assumptions",
+      "description": "Did the model account for temp inefficiency and shrinkage?",
+      "weight": 30
+    },
+    {
+      "key": "memo",
+      "label": "Finance Memo",
+      "description": "Does the memo clearly explain the ROI of hiring the temps?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Capacity planning",
+    "Forecasting",
+    "Budgeting",
+    "Data modeling"
+  ],
+  "relatedRoadmapIds": []
+}

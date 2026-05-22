@@ -1,0 +1,49 @@
+{
+  "id": "governance-data-dictionary",
+  "categoryId": "data",
+  "topicId": "data-governance-quality",
+  "level": "beginner",
+  "title": "Write a Data Dictionary",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Document 15 columns in a messy database table with clear definitions and business rules.",
+  "scenario": "A new analyst joins the team and asks: \"What does the column `status_cd` mean? What are the valid values?\" Nobody knows. The original developer left 3 years ago. You have been asked to write the data dictionary for the most important table.",
+  "brief": "Invent a plausible 15-column customer orders table. Write a comprehensive data dictionary that a new team member could use to understand every column without asking anyone.",
+  "deliverables": [
+    "A table with columns: Column Name, Data Type, Description, Valid Values / Range, Nullable?, Business Rule",
+    "At least 3 columns with non-obvious business rules (e.g., \"status_cd can only transition from P → A → C, never backwards\")",
+    "One column that is commonly misunderstood and your note explaining the correct interpretation"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A data dictionary is not a schema dump. It is documentation that prevents incorrect analysis. Every description should answer: \"What does this mean for the business?\"",
+  "rubric": [
+    {
+      "key": "completeness",
+      "label": "Completeness",
+      "description": "Are all 15 columns documented with all required fields?",
+      "weight": 30
+    },
+    {
+      "key": "business-rules",
+      "label": "Business Rules",
+      "description": "Are the business rules realistic, specific, and analytically useful?",
+      "weight": 35
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity",
+      "description": "Could a new analyst use this dictionary without any additional context?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Data documentation",
+    "Data dictionaries",
+    "Business rules",
+    "Knowledge management"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

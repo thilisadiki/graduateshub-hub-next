@@ -165,7 +165,7 @@ export default function SearchContent() {
                   <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg">
                     Browse our full catalog of free courses across all subject areas.
                   </p>
-                  <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
+                  <Link href="/categories" className="bg-primary hover:bg-[#5a4000] text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
                     Browse All Categories
                   </Link>
                 </div>
@@ -178,7 +178,7 @@ export default function SearchContent() {
                   <p className="text-gray-600 mb-8 max-w-md mx-auto text-lg">
                     Let our AI tools help you find something great, or browse our subject areas below.
                   </p>
-                  <Link href="/categories" className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-md">
+                  <Link href="/categories" className="bg-primary hover:bg-[#5a4000] text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-md">
                     Browse All Categories
                   </Link>
                 </div>
@@ -189,7 +189,7 @@ export default function SearchContent() {
                         <h3 className="text-2xl font-bold text-gray-900">You Might Also Like</h3>
                         <p className="text-gray-500 mt-2">Popular top-rated courses from our Hub.</p>
                       </div>
-                      <Link href="/categories" className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:block">View All →</Link>
+                      <Link href="/categories" className="text-primary font-bold hover:text-[#261A00] transition-colors hidden sm:block">View All →</Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {relatedCourses.map(course => <CourseCard key={course.id} course={course} />)}
@@ -214,9 +214,9 @@ export default function SearchContent() {
               </div>
             ))}
           </div>
-          <div className="mt-8 bg-blue-50 border border-blue-100 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-8 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-gray-700 font-medium">Looking for more guidance? Visit our free learning resource blog for career tips and study advice.</p>
-            <Link href="/blog" className="shrink-0 text-primary font-bold hover:text-blue-800 transition-colors whitespace-nowrap">
+            <Link href="/blog" className="shrink-0 text-primary font-bold hover:text-[#261A00] transition-colors whitespace-nowrap">
               Read our articles →
             </Link>
           </div>

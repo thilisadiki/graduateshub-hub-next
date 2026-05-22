@@ -1,0 +1,53 @@
+{
+  "id": "a11y-keyboard-navigation",
+  "categoryId": "design-ux",
+  "topicId": "accessibility-a11y",
+  "level": "intermediate",
+  "title": "Keyboard Navigation Design",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design the keyboard navigation flow for a complex component.",
+  "scenario": "A data table component has sortable columns, row selection, inline editing, and a context menu. Mouse users can do everything easily. Keyboard users are stuck — there is no focus management, no arrow key navigation, and Escape does not close the context menu.",
+  "brief": "Design the complete keyboard navigation specification for this data table. Cover focus order, key bindings, focus trapping for the context menu, and screen reader announcements.",
+  "deliverables": [
+    "A focus order specification: Tab sequence through the table, including column headers, rows, and action buttons",
+    "Key bindings: Arrow keys for cell navigation, Enter for editing, Escape for cancelling, Space for row selection",
+    "Focus management for the context menu: how it opens, traps focus, and returns focus on close",
+    "Screen reader announcements: what is announced when sorting, selecting, and editing"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A data table with 100 rows and 8 columns has 800 cells. Tab-bing through every cell is unusable. Use arrow keys for cell navigation and Tab for structural navigation. Show this distinction.",
+  "rubric": [
+    {
+      "key": "focus-order",
+      "label": "Focus Order",
+      "description": "Is the tab order logical and does it avoid the 800-cell trap?",
+      "weight": 25
+    },
+    {
+      "key": "key-bindings",
+      "label": "Key Bindings",
+      "description": "Are the key bindings consistent with platform conventions?",
+      "weight": 30
+    },
+    {
+      "key": "focus-trap",
+      "label": "Focus Management",
+      "description": "Is the context menu focus trapping correctly specified?",
+      "weight": 25
+    },
+    {
+      "key": "announcements",
+      "label": "Screen Reader Support",
+      "description": "Are the live region announcements appropriate and not excessive?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Keyboard navigation",
+    "Focus management",
+    "ARIA patterns",
+    "Screen reader support"
+  ],
+  "relatedRoadmapIds": []
+}

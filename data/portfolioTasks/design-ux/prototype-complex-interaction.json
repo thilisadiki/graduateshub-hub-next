@@ -1,0 +1,53 @@
+{
+  "id": "prototype-complex-interaction",
+  "categoryId": "design-ux",
+  "topicId": "wireframing-prototyping",
+  "level": "advanced",
+  "title": "Prototype a Complex Interaction",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Prototype a drag-and-drop kanban board with state changes and edge cases.",
+  "scenario": "A project management tool needs a kanban board feature. Cards can be dragged between columns (To Do, In Progress, Review, Done). Some transitions have rules: a card cannot move to \"Done\" without an assignee, and moving to \"Review\" triggers a notification.",
+  "brief": "Design the complete interaction specification for this kanban board. Cover drag behaviour, drop targets, transition rules, empty states, and edge cases.",
+  "deliverables": [
+    "The drag-and-drop interaction specification: grab, drag, hover target highlighting, and drop animation",
+    "Transition rules: which moves are allowed, which are blocked, and how blocked moves are communicated",
+    "Empty states: what each column looks like when empty and how to add the first card",
+    "Edge cases: what happens when dragging between columns during a sync error, or when two users drag the same card"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The happy path is easy. The value is in edge cases — what happens when the drop fails? What does the user see during a network error? Design for failure.",
+  "rubric": [
+    {
+      "key": "drag-drop",
+      "label": "Drag & Drop Design",
+      "description": "Is the interaction specification detailed enough for a developer to implement?",
+      "weight": 25
+    },
+    {
+      "key": "rules",
+      "label": "Transition Rules",
+      "description": "Are the business rules clearly defined with appropriate error messaging?",
+      "weight": 25
+    },
+    {
+      "key": "empty",
+      "label": "Empty States",
+      "description": "Are empty states helpful and encouraging (not just blank)?",
+      "weight": 20
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Case Coverage",
+      "description": "Are failure modes and multi-user conflicts addressed?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Complex interaction design",
+    "Drag & drop UX",
+    "Edge case thinking",
+    "Developer handoff"
+  ],
+  "relatedRoadmapIds": []
+}

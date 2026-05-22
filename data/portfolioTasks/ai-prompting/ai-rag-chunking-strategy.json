@@ -1,0 +1,46 @@
+{
+  "id": "ai-rag-chunking-strategy",
+  "categoryId": "ai-prompting",
+  "topicId": "rag-prep",
+  "level": "beginner",
+  "title": "Design a Chunking Strategy",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Decide how to split an employee handbook for a vector database.",
+  "scenario": "You are building an AI HR bot using RAG. You have a 200-page PDF of the company handbook. If you embed whole pages, the AI will get confused. If you embed single sentences, the AI loses context.",
+  "brief": "Write a strategy document detailing exactly how you will chunk the handbook text before sending it to the embedding model.",
+  "deliverables": [
+    "The Chunk Size (e.g., 500 tokens) and Overlap size (e.g., 50 tokens)",
+    "The Chunking Method (e.g., Fixed-size, Sentence-aware, or Header-based) and why you chose it",
+    "One example of a \"bad\" chunk (where context is lost) and how your strategy prevents it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "For structured documents like handbooks, semantic chunking (splitting by Markdown headers like `### Leave Policy`) is usually vastly superior to dumb character-count chunking.",
+  "rubric": [
+    {
+      "key": "chunk-size",
+      "label": "Sizing Logic",
+      "description": "Are the chunk and overlap sizes appropriate for an LLM context window?",
+      "weight": 30
+    },
+    {
+      "key": "methodology",
+      "label": "Semantic Strategy",
+      "description": "Does the strategy account for document structure (headers, paragraphs) rather than just blind character counts?",
+      "weight": 40
+    },
+    {
+      "key": "context-preservation",
+      "label": "Context Preservation",
+      "description": "Does the strategy successfully prevent the \"lost context\" example?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Text chunking",
+    "RAG basics",
+    "Data prep",
+    "Vector database strategy"
+  ],
+  "relatedRoadmapIds": []
+}

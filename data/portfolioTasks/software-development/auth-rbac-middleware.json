@@ -1,0 +1,47 @@
+{
+  "id": "auth-rbac-middleware",
+  "categoryId": "software-development",
+  "topicId": "auth-authorization",
+  "level": "intermediate",
+  "title": "Build Role-Based Access Control (RBAC)",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write Express middleware to protect routes based on user roles.",
+  "scenario": "Your platform has 3 user roles: `USER`, `EDITOR`, and `ADMIN`. You need to ensure that only `EDITOR`s and `ADMIN`s can access the `POST /articles` route, but only an `ADMIN` can access the `DELETE /users` route.",
+  "brief": "Write a reusable authorization middleware function in Node.js/Express. It should accept an array of allowed roles and check it against the `req.user.role` property (which is populated by your authentication middleware).",
+  "deliverables": [
+    "The `requireRoles` middleware code",
+    "The Express router configuration showing how the middleware is applied to the protected routes"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The middleware must be generic. Do not hardcode the logic inside the route handler itself. Think about how you would scale this if a new `SUPER_ADMIN` role was added tomorrow.",
+  "rubric": [
+    {
+      "key": "middleware",
+      "label": "Middleware Logic",
+      "description": "Is the middleware correctly intercepting the request and returning a 403 Forbidden if unauthorized?",
+      "weight": 40
+    },
+    {
+      "key": "reusability",
+      "label": "Reusability",
+      "description": "Is the function generic enough to accept dynamic role arrays?",
+      "weight": 35
+    },
+    {
+      "key": "routing",
+      "label": "Route Application",
+      "description": "Is the middleware correctly chained in the Express route definition?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Role-Based Access Control (RBAC)",
+    "Express Middleware",
+    "Authorization Logic"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

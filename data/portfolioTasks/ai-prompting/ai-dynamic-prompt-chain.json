@@ -1,0 +1,46 @@
+{
+  "id": "ai-dynamic-prompt-chain",
+  "categoryId": "ai-prompting",
+  "topicId": "prompt-engineering-basics",
+  "level": "advanced",
+  "title": "Design a Dynamic Prompt Chain",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Break a complex writing task into a multi-step LLM pipeline.",
+  "scenario": "A law firm wants to use AI to draft initial responses to client intake emails. A single massive prompt fails because the AI either misses details or writes terrible legal advice. You need to break the task into a \"Chain of Prompts\" where the output of Prompt 1 feeds into Prompt 2.",
+  "brief": "Design a 3-step prompt chain. Step 1 extracts facts. Step 2 identifies missing information. Step 3 drafts the email requesting the missing info without giving legal advice.",
+  "deliverables": [
+    "Prompt 1: The Fact Extractor (Input: Client Email. Output: Bulleted list of facts)",
+    "Prompt 2: The Gap Analyzer (Input: Facts from Prompt 1. Output: List of missing critical details required to open a case)",
+    "Prompt 3: The Drafter (Input: Gaps from Prompt 2. Output: A polite email to the client asking for those specific details)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Chaining is how production AI apps actually work. Each prompt must be laser-focused on one task. Ensure Prompt 3 has strict guardrails preventing it from accidentally offering legal counsel.",
+  "rubric": [
+    {
+      "key": "modularity",
+      "label": "Prompt Modularity",
+      "description": "Are the three prompts distinct, single-purpose, and logically chained?",
+      "weight": 40
+    },
+    {
+      "key": "guardrails",
+      "label": "Legal Guardrails",
+      "description": "Does the drafting prompt strictly forbid generating legal advice?",
+      "weight": 30
+    },
+    {
+      "key": "data-passing",
+      "label": "Data Passing Logic",
+      "description": "Is it clear how the output of one step safely becomes the input of the next?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Prompt chaining",
+    "Pipeline design",
+    "LLM orchestration",
+    "Safety guardrails"
+  ],
+  "relatedRoadmapIds": []
+}

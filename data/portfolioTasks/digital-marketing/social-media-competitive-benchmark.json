@@ -1,0 +1,48 @@
+{
+  "id": "social-media-competitive-benchmark",
+  "categoryId": "digital-marketing",
+  "topicId": "social-media-audit",
+  "level": "intermediate",
+  "title": "Competitive Benchmarking Report",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Audit 3 competing brands on the same platform and identify gaps to exploit.",
+  "scenario": "A mid-size South African athleisure brand wants to grow on TikTok. They have 8,000 followers. Three local competitors have between 25,000 and 90,000 followers. The marketing director wants to understand what the competitors are doing differently.",
+  "brief": "Audit 3 competing brands (you can invent them with plausible follower counts and content styles). Compare posting frequency, content formats, engagement rates, and audience interaction patterns. Identify gaps the client can exploit.",
+  "deliverables": [
+    "A comparison table: Brand, Followers, Avg Posts/Week, Top Content Format, Avg Engagement Rate, Tone of Voice",
+    "Three specific gaps or opportunities the competitors are missing (e.g., \"none of them use user-generated content\")",
+    "A 3-point action plan for the client, prioritised by effort vs impact"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Invent plausible competitor data. The value is in the analysis pattern, not the specific numbers. Generic advice like \"post more\" will score poorly.",
+  "rubric": [
+    {
+      "key": "benchmarking",
+      "label": "Benchmarking Rigour",
+      "description": "Is the comparison structured with consistent metrics across all 3 competitors?",
+      "weight": 30
+    },
+    {
+      "key": "gaps",
+      "label": "Gap Identification",
+      "description": "Are the identified gaps specific, credible, and exploitable?",
+      "weight": 35
+    },
+    {
+      "key": "action",
+      "label": "Action Plan",
+      "description": "Is the action plan prioritised and realistic for a mid-size brand?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Competitive analysis",
+    "Social media benchmarking",
+    "Strategic thinking",
+    "Marketing analytics"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

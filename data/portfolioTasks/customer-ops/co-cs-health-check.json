@@ -1,0 +1,47 @@
+{
+  "id": "co-cs-health-check",
+  "categoryId": "customer-ops",
+  "topicId": "customer-success-onboarding",
+  "level": "intermediate",
+  "title": "Conduct an Account Health Check",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Analyse an enterprise client's usage data and prep for a QBR.",
+  "scenario": "You are a CS Manager. You have a Quarterly Business Review (QBR) with a key client tomorrow. Their renewal is up in 60 days. Looking at the data, their daily active users have dropped by 30%, but they are using a new premium feature heavily.",
+  "brief": "Prepare the agenda and talking points for the QBR to address the churn risk while highlighting the value they are getting.",
+  "deliverables": [
+    "A 4-point agenda for the 45-minute QBR meeting",
+    "The \"Value Realised\" talking points (focusing on the premium feature)",
+    "The \"Churn Risk\" talking points (how you will tactfully address the drop in active users)",
+    "One proposed solution/campaign to re-engage their dormant users"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not hide the bad news. Good CS managers bring up usage drops proactively before the client uses it as an excuse to cancel. Frame it as \"How can we help your team get more value?\"",
+  "rubric": [
+    {
+      "key": "agenda",
+      "label": "Meeting Structure",
+      "description": "Is the agenda professional and appropriately timed?",
+      "weight": 20
+    },
+    {
+      "key": "tact",
+      "label": "Addressing Risk Tactfully",
+      "description": "Is the drop in usage addressed proactively but not defensively?",
+      "weight": 40
+    },
+    {
+      "key": "solution",
+      "label": "Proactive Solution",
+      "description": "Is the proposed re-engagement strategy realistic and helpful?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Quarterly Business Reviews (QBRs)",
+    "Account health analysis",
+    "Churn prevention",
+    "Client management"
+  ],
+  "relatedRoadmapIds": []
+}

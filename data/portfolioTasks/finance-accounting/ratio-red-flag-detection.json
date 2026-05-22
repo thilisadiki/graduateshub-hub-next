@@ -1,0 +1,55 @@
+{
+  "id": "ratio-red-flag-detection",
+  "categoryId": "finance-accounting",
+  "topicId": "ratio-analysis",
+  "level": "advanced",
+  "title": "Red Flag Detection in Financial Statements",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Spot creative accounting and earnings manipulation in suspicious financials.",
+  "scenario": "A company's revenue has grown 30% per year for 3 years, but operating cash flow has been flat. Accounts receivable has doubled. The auditors signed off, but something does not smell right.",
+  "brief": "Analyse the hypothetical financial statements and identify the red flags. Explain the manipulation techniques that could produce these patterns and design 3 forensic checks an auditor should have performed.",
+  "deliverables": [
+    "A list of at least 5 red flags with specific ratios or trends that support each",
+    "An explanation of the most likely manipulation technique (channel stuffing, premature revenue recognition, etc.)",
+    "Three forensic checks with the specific data or documents you would request",
+    "A one-paragraph opinion on whether these financials should be trusted"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Revenue growing while cash flow stagnates is the classic red flag. But what specifically could cause it? Be precise about the mechanism.",
+  "rubric": [
+    {
+      "key": "flags",
+      "label": "Red Flag Identification",
+      "description": "Are the red flags specific and supported by ratio analysis?",
+      "weight": 30
+    },
+    {
+      "key": "mechanism",
+      "label": "Manipulation Mechanism",
+      "description": "Is the proposed manipulation technique credible and specific?",
+      "weight": 30
+    },
+    {
+      "key": "forensics",
+      "label": "Forensic Checks",
+      "description": "Would the proposed checks actually uncover the manipulation?",
+      "weight": 25
+    },
+    {
+      "key": "judgment",
+      "label": "Professional Judgment",
+      "description": "Is the opinion appropriately cautious and well-supported?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Forensic accounting",
+    "Red flag analysis",
+    "Earnings quality",
+    "Professional skepticism"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

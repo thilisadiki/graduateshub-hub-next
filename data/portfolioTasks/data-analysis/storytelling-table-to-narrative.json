@@ -1,0 +1,55 @@
+{
+  "id": "storytelling-table-to-narrative",
+  "categoryId": "data",
+  "topicId": "data-storytelling",
+  "level": "beginner",
+  "title": "Turn a Table into a Story",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Transform a raw data table into a 3-paragraph executive summary.",
+  "scenario": "Your manager drops a table on your desk showing quarterly sales by region for the last 2 years. She says: \"I need to present this to the board in 30 minutes. Give me something I can read aloud.\"",
+  "brief": "Invent a plausible 8-quarter × 4-region sales table. Then write a 3-paragraph executive summary that tells a story: what happened, why it matters, and what the board should do about it.",
+  "deliverables": [
+    "The raw data table (8 quarters × 4 regions)",
+    "A 3-paragraph executive summary: (1) the headline insight, (2) the supporting evidence, (3) the recommended action",
+    "One number you would highlight in bold if this were a slide, and why"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The board does not want to read a table. They want to hear a story. Your summary must be speakable — read it aloud before submitting.",
+  "rubric": [
+    {
+      "key": "data",
+      "label": "Data Plausibility",
+      "description": "Is the invented data internally consistent and realistic?",
+      "weight": 20
+    },
+    {
+      "key": "narrative",
+      "label": "Narrative Quality",
+      "description": "Does the summary tell a story with a clear beginning, middle, and end?",
+      "weight": 40
+    },
+    {
+      "key": "action",
+      "label": "Actionable Recommendation",
+      "description": "Is the recommended action specific and tied to the data?",
+      "weight": 25
+    },
+    {
+      "key": "highlight",
+      "label": "Key Number Selection",
+      "description": "Is the highlighted number the right one to anchor the story?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Data storytelling",
+    "Executive communication",
+    "Business writing",
+    "Analytical judgment"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

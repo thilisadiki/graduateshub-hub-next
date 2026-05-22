@@ -1,0 +1,46 @@
+{
+  "id": "ai-zapier-triage-flow",
+  "categoryId": "ai-prompting",
+  "topicId": "workflow-integration",
+  "level": "beginner",
+  "title": "Design a Zapier Triage Flow",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Map out a workflow that uses an LLM to read emails and route them via Zapier.",
+  "scenario": "A small real estate agency gets all inquiries at `info@agency.co.za`. They want to use Zapier to send the email to OpenAI. If it's a buyer, send a Slack message to Sales. If it's a tenant complaining about a leak, log a ticket in Trello for Maintenance. If it's spam, delete it.",
+  "brief": "Design the Zapier/Make workflow and write the specific LLM prompt that will power the routing step.",
+  "deliverables": [
+    "A bulleted list of the Zapier steps (Trigger -> AI Action -> Conditional Paths)",
+    "The LLM Prompt that outputs the routing decision (Buyer, Maintenance, Spam)",
+    "The exact JSON or text structure the LLM must output so Zapier's \"Path\" logic can parse it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Zapier relies on predictable text. If your LLM outputs \"I think this is a Buyer\", the Zapier filter for \"Equals: Buyer\" will fail. The prompt must force absolute structural rigidity.",
+  "rubric": [
+    {
+      "key": "workflow-logic",
+      "label": "Workflow Logic",
+      "description": "Are the Zapier steps logically ordered?",
+      "weight": 30
+    },
+    {
+      "key": "prompt-strictness",
+      "label": "Prompt Strictness",
+      "description": "Does the prompt guarantee an output that Zapier can reliably filter?",
+      "weight": 40
+    },
+    {
+      "key": "categories",
+      "label": "Category Definitions",
+      "description": "Are the rules for classifying an email into the 3 buckets clear?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Workflow automation",
+    "Zapier/Make logic",
+    "Deterministic AI outputs",
+    "Triage"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ia-card-sort-sitemap",
+  "categoryId": "design-ux",
+  "topicId": "information-architecture",
+  "level": "beginner",
+  "title": "Card Sort and Sitemap",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Run a hypothetical card sort for a university website and produce a sitemap.",
+  "scenario": "A South African university is redesigning its website. The current navigation has 8 top-level items and 60+ sub-pages, but students cannot find basic things like exam timetables, fee structures, or application deadlines.",
+  "brief": "Design a card sort exercise to determine how students would group the content. Invent plausible card sort results and use them to produce a new sitemap.",
+  "deliverables": [
+    "A list of 25-30 content cards (pages/sections) that need to be organised",
+    "Hypothetical card sort results: how 10 fictional participants grouped the cards (show at least 2 grouping patterns)",
+    "A new sitemap derived from the card sort results with no more than 6 top-level categories"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Card sorts reveal mental models. If 8 out of 10 participants group \"Exam Timetable\" under \"Academics\" but the current site puts it under \"Student Services,\" that is a findability failure. Show this analysis.",
+  "rubric": [
+    {
+      "key": "cards",
+      "label": "Card Selection",
+      "description": "Are the 25-30 cards representative of real university website content?",
+      "weight": 25
+    },
+    {
+      "key": "results",
+      "label": "Card Sort Analysis",
+      "description": "Are the grouping patterns plausible and the conflicts identified?",
+      "weight": 35
+    },
+    {
+      "key": "sitemap",
+      "label": "Sitemap Design",
+      "description": "Does the new sitemap reflect card sort findings with ≤6 top-level categories?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Card sorting",
+    "Sitemap design",
+    "Information architecture",
+    "User mental models"
+  ],
+  "relatedRoadmapIds": []
+}

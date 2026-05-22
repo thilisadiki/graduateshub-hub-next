@@ -71,7 +71,7 @@ const CATEGORY_META: Record<string, {
     ],
     guideHref: '/free-ai-courses-for-beginners',
     guideLabel: 'Free AI Courses Guide',
-    accentClass: 'bg-blue-50 border-blue-200',
+    accentClass: 'bg-[#FFDF9C]/20 border-[#D1C5B4]',
   },
   'software-engineering': {
     topSkill: 'Build web apps, write code, and ship software using modern engineering practices',
@@ -172,7 +172,7 @@ export default function CategoriesPage() {
       </div>
 
       {/* Hero */}
-      <div className="bg-blue-50 border-b border-blue-100 py-14 px-6">
+      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-14 px-6">
         <div className="max-w-6xl mx-auto">
           <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Updated for 2026</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight max-w-3xl leading-tight">
@@ -185,7 +185,7 @@ export default function CategoriesPage() {
           <p className="text-gray-500 max-w-2xl leading-relaxed">
             We cover five fields: IT, Software Engineering, Business, Accounting, and Marketing.
             These are the areas where we have practitioners who can verify course quality.{' '}
-            <Link href="/curation-policy" className="text-primary font-medium hover:text-blue-800 transition-colors">
+            <Link href="/curation-policy" className="text-primary font-medium hover:text-[#261A00] transition-colors">
               Read how we select courses
             </Link>
           </p>
@@ -281,14 +281,14 @@ export default function CategoriesPage() {
                   <div className="flex items-center gap-3 flex-wrap">
                     <Link
                       href={`/category/${item.id}`}
-                      className="inline-flex items-center gap-1 bg-primary hover:bg-blue-800 text-white font-bold text-xs px-4 py-2 rounded-lg transition-colors"
+                      className="inline-flex items-center gap-1 bg-primary hover:bg-[#5a4000] text-white font-bold text-xs px-4 py-2 rounded-lg transition-colors"
                     >
                       Browse Courses <ChevronRight size={13} />
                     </Link>
                     {meta?.guideHref && (
                       <Link
                         href={meta.guideHref}
-                        className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-blue-800 transition-colors"
+                        className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors"
                       >
                         <BookOpen size={13} /> {meta.guideLabel}
                       </Link>
@@ -319,7 +319,7 @@ export default function CategoriesPage() {
               If a course does not meet those standards, it is not listed, regardless of how popular the platform is.
             </p>
             <div className="pt-2">
-              <Link href="/curation-policy" className="inline-flex items-center gap-1.5 text-primary font-bold hover:text-blue-800 transition-colors text-sm">
+              <Link href="/curation-policy" className="inline-flex items-center gap-1.5 text-primary font-bold hover:text-[#261A00] transition-colors text-sm">
                 Read the full curation policy <ChevronRight size={14} />
               </Link>
             </div>
@@ -352,16 +352,16 @@ export default function CategoriesPage() {
         <section className="bg-primary rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl font-extrabold text-white mb-2">Not sure where to start?</h2>
-            <p className="text-blue-100 text-sm leading-relaxed max-w-lg">
+            <p className="text-[#FFDF9C] text-sm leading-relaxed max-w-lg">
               Our learning guides walk you through the best courses in each field, structured by experience level and career goal.
               Each guide is written by a specialist, not a content team.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <Link href="/guides" className="bg-white text-primary font-bold text-sm px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors whitespace-nowrap">
+            <Link href="/guides" className="bg-white text-primary font-bold text-sm px-6 py-3 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors whitespace-nowrap">
               Browse All Guides
             </Link>
-            <Link href="/search" className="bg-blue-700 hover:bg-blue-900 text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap">
+            <Link href="/search" className="bg-[#5a4000] hover:bg-[#261A00] text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap">
               Search Courses
             </Link>
           </div>

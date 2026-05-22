@@ -1,0 +1,56 @@
+{
+  "id": "stats-correlation-causation",
+  "categoryId": "data",
+  "topicId": "statistical-thinking",
+  "level": "advanced",
+  "title": "Correlation vs. Causation Case Study",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Tear apart a misleading business report that confuses correlation with causation.",
+  "scenario": "A consulting firm presents a report to a retail CEO claiming: \"Stores that play jazz music see 23% higher average basket size. Recommendation: play jazz in all stores.\" The data is real, but the conclusion is dangerously wrong.",
+  "brief": "Write a critique of this report. Identify the logical flaw, propose at least 3 confounding variables, and design a study that could actually establish (or disprove) a causal relationship between music genre and basket size.",
+  "deliverables": [
+    "A clear explanation of why correlation ≠ causation, using this specific example",
+    "At least 3 plausible confounding variables that could explain the 23% difference",
+    "A proposed experimental design (randomised controlled trial) that could test the causal claim",
+    "One paragraph written as if you were advising the CEO directly"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The CEO is not a statistician. Your critique must be rigorous but your advice must be plain English.",
+  "rubric": [
+    {
+      "key": "flaw",
+      "label": "Logical Flaw Identification",
+      "description": "Is the correlation-causation fallacy clearly and correctly identified?",
+      "weight": 25
+    },
+    {
+      "key": "confounders",
+      "label": "Confounding Variables",
+      "description": "Are the proposed confounders plausible and specific to this scenario?",
+      "weight": 25
+    },
+    {
+      "key": "experiment",
+      "label": "Experimental Design",
+      "description": "Would the proposed RCT actually test the causal claim?",
+      "weight": 30
+    },
+    {
+      "key": "communication",
+      "label": "Executive Communication",
+      "description": "Is the CEO advice clear, respectful, and actionable?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Causal inference",
+    "Experimental design",
+    "Critical thinking",
+    "Executive communication"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

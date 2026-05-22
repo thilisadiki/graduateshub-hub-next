@@ -1,0 +1,48 @@
+{
+  "id": "influencer-outreach-brief",
+  "categoryId": "digital-marketing",
+  "topicId": "influencer-community",
+  "level": "beginner",
+  "title": "Influencer Outreach Brief",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Identify 5 micro-influencers for a SA skincare brand and draft an outreach message.",
+  "scenario": "A South African natural skincare brand wants to work with micro-influencers (5K-50K followers) on Instagram. They have a R30,000 budget for influencer collaborations this quarter.",
+  "brief": "Identify 5 micro-influencer profiles (invent them with plausible names, follower counts, niches, and engagement rates). Justify each selection and draft a personalised outreach DM or email.",
+  "deliverables": [
+    "A table of 5 influencers: Name, Platform, Follower Count, Niche, Avg Engagement Rate, Why They Fit",
+    "A drafted outreach message that is personalised (not a template blast) and includes the value proposition for the influencer",
+    "A proposed collaboration format for each (gifted product, paid post, affiliate code, etc.) with estimated cost"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Micro-influencers care about authenticity. A generic \"Dear Influencer\" message will get ignored. Show that you would research their content before reaching out.",
+  "rubric": [
+    {
+      "key": "selection",
+      "label": "Influencer Selection",
+      "description": "Are the 5 influencers plausible, diverse, and aligned with the brand?",
+      "weight": 30
+    },
+    {
+      "key": "outreach",
+      "label": "Outreach Quality",
+      "description": "Is the message personalised, professional, and value-focused?",
+      "weight": 35
+    },
+    {
+      "key": "collaboration",
+      "label": "Collaboration Design",
+      "description": "Are the proposed formats realistic for the budget and influencer size?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Influencer marketing",
+    "Outreach writing",
+    "Partnership strategy",
+    "Budget allocation"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

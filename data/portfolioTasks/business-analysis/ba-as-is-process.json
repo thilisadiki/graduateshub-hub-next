@@ -1,0 +1,46 @@
+{
+  "id": "ba-as-is-process",
+  "categoryId": "business-analysis",
+  "topicId": "process-mapping",
+  "level": "beginner",
+  "title": "Map an As-Is Process",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Document the current leave-request process using BPMN notation.",
+  "scenario": "A company with 200 employees processes leave requests manually: employees email their manager, the manager forwards to HR, HR checks the leave balance in a spreadsheet, then emails approval or rejection. It takes 3-5 days.",
+  "brief": "Document this as-is process using BPMN notation. Identify the actors, decision points, and pain points.",
+  "deliverables": [
+    "A BPMN process diagram (described in text or drawn) with swim lanes for Employee, Manager, and HR",
+    "A list of at least 4 pain points in the current process with evidence",
+    "Process metrics: estimated cycle time, number of handoffs, and manual steps"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "BPMN has specific symbols: rectangles for tasks, diamonds for gateways, circles for start/end events. Use them correctly even in a text description.",
+  "rubric": [
+    {
+      "key": "bpmn",
+      "label": "BPMN Accuracy",
+      "description": "Are the BPMN elements used correctly with proper swim lanes?",
+      "weight": 35
+    },
+    {
+      "key": "pain-points",
+      "label": "Pain Point Identification",
+      "description": "Are the pain points specific and evidence-based?",
+      "weight": 35
+    },
+    {
+      "key": "metrics",
+      "label": "Process Metrics",
+      "description": "Are the cycle time and handoff counts realistic?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "BPMN",
+    "Process documentation",
+    "As-is analysis",
+    "Pain point identification"
+  ],
+  "relatedRoadmapIds": []
+}

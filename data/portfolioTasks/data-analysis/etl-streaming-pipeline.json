@@ -1,0 +1,48 @@
+{
+  "id": "etl-streaming-pipeline",
+  "categoryId": "data",
+  "topicId": "etl-data-pipelines",
+  "level": "advanced",
+  "title": "Design a Real-Time Streaming Pipeline",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Architect a pipeline using Kafka/Spark Streaming for processing clickstream events.",
+  "scenario": "An e-commerce company wants real-time analytics on user behaviour. Currently, clickstream data is batch-loaded every 4 hours. Marketing wants to see what users are doing right now so they can trigger personalised push notifications within 60 seconds of a key event.",
+  "brief": "Design a real-time streaming pipeline. Choose the message broker (Kafka, Kinesis, Pub/Sub), the processing framework (Spark Streaming, Flink, or a simpler consumer), and the output sink (real-time dashboard, notification trigger, or both).",
+  "deliverables": [
+    "An architecture diagram showing producers, broker, consumers, and output sinks",
+    "Your technology choices with a defense of each (why Kafka over SQS, why Flink over Spark, etc.)",
+    "How you handle late-arriving events, duplicate events, and consumer failures"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is a senior data engineering task. Focus on exactly-once vs at-least-once semantics and how your architecture handles each.",
+  "rubric": [
+    {
+      "key": "architecture",
+      "label": "Architecture Design",
+      "description": "Is the pipeline logically sound with clear data flow from source to sink?",
+      "weight": 30
+    },
+    {
+      "key": "technology",
+      "label": "Technology Choices",
+      "description": "Are the chosen tools appropriate and the trade-offs well-articulated?",
+      "weight": 30
+    },
+    {
+      "key": "reliability",
+      "label": "Reliability Guarantees",
+      "description": "Are late events, duplicates, and failures handled with explicit strategies?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Streaming architecture",
+    "Kafka",
+    "Event processing",
+    "Real-time analytics"
+  ],
+  "relatedRoadmapIds": [
+    "data-engineer"
+  ]
+}

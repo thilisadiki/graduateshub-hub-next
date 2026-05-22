@@ -140,9 +140,9 @@ export default function FreeAICoursesForBeginnersPage() {
             </div>
           </section>
 
-          <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">How to Choose the Right AI Course</h2>
-            <p className="text-blue-100 mb-10">If you are new to AI, your starting point matters. Here is how to choose.</p>
+            <p className="text-[#FFDF9C] mb-10">If you are new to AI, your starting point matters. Here is how to choose.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { step: '1', title: 'Start with Fundamentals', body: 'Pick a course that explains concepts before tools. Understanding what AI is and why it works prepares you to learn faster later.' },
@@ -152,7 +152,7 @@ export default function FreeAICoursesForBeginnersPage() {
                 <div key={step} className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
                   <div className="w-9 h-9 bg-white text-primary rounded-full flex items-center justify-center font-extrabold text-lg mb-4">{step}</div>
                   <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                  <p className="text-blue-100 text-sm leading-relaxed">{body}</p>
+                  <p className="text-[#FFDF9C] text-sm leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>

@@ -17,14 +17,14 @@ export default function CVBuilderClient() {
         <button
           type="button"
           onClick={() => setMobileTab('form')}
-          className={`flex-1 py-3 text-sm font-semibold transition ${mobileTab === 'form' ? 'text-blue-700 border-b-2 border-blue-600' : 'text-gray-500'}`}
+          className={`flex-1 py-3 text-sm font-semibold transition ${mobileTab === 'form' ? 'text-[#5a4000] border-b-2 border-primary' : 'text-gray-500'}`}
         >
           Edit CV
         </button>
         <button
           type="button"
           onClick={() => setMobileTab('preview')}
-          className={`flex-1 py-3 text-sm font-semibold transition ${mobileTab === 'preview' ? 'text-blue-700 border-b-2 border-blue-600' : 'text-gray-500'}`}
+          className={`flex-1 py-3 text-sm font-semibold transition ${mobileTab === 'preview' ? 'text-[#5a4000] border-b-2 border-primary' : 'text-gray-500'}`}
         >
           Preview
         </button>

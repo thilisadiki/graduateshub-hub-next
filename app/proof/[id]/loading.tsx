@@ -2,7 +2,7 @@ import Skeleton from '@/components/ui/Skeleton';
 
 export default function ProofLoading() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#FFF8F1] via-white to-[#FBF3EB] py-12 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Badge card */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-6">

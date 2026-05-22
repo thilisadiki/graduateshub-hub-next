@@ -111,7 +111,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                   key={item}
                   onClick={() => handleNavClick(item)}
                   className={`text-left px-4 py-3 rounded-xl transition-all duration-200 border-l-4 ${openSection === item
-                    ? 'bg-blue-50/50 text-primary border-primary font-bold shadow-sm'
+                    ? 'bg-[#FFDF9C]/20/50 text-primary border-primary font-bold shadow-sm'
                     : 'border-transparent text-gray-600 hover:bg-white hover:border-gray-300'}`}
                 >
                   {item}
@@ -128,7 +128,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
               </div>
               <div className="p-6 sm:p-8 lg:p-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-primary font-bold tracking-wider text-xs uppercase bg-blue-50 px-3 py-1 rounded-md border border-blue-100">
+                  <span className="text-primary font-bold tracking-wider text-xs uppercase bg-[#FFDF9C]/20 px-3 py-1 rounded-md border border-[#D1C5B4]">
                     {course.subCategory || course.category}
                   </span>
                 </div>
@@ -148,7 +148,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                           <Link href={curator.aboutAnchor} className="font-semibold text-gray-800 hover:text-primary transition-colors text-sm">
                             {curator.name}
                           </Link>
-                          <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 text-xs text-blue-500 hover:text-blue-700 transition-colors">
+                          <a href={curator.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 text-xs text-primary hover:text-[#5a4000] transition-colors">
                             <ExternalLink size={10} /> LinkedIn
                           </a>
                         </div>
@@ -182,7 +182,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
             </div>
 
             {/* Summary Box */}
-            <div className="bg-[#EBF5FF] rounded-2xl p-6 sm:p-8 border border-blue-100 relative overflow-hidden">
+            <div className="bg-[#EBF5FF] rounded-2xl p-6 sm:p-8 border border-[#D1C5B4] relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4 opacity-5"><BookOpen size={120} /></div>
               <div className="relative z-10">
                 <h2 className="text-lg font-bold text-[#1e3a8a] flex items-center gap-2 mb-3">
@@ -268,7 +268,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
                 <div className="bg-[#F8FAFC] p-6 sm:p-8 rounded-xl border border-[#E2E8F0] mt-2 text-center">
                   <h4 className="font-bold text-gray-900 mb-3 text-lg">Questions about {course.title}?</h4>
                   <p className="text-gray-600 text-[15px] mb-6">Our support team is here to help you make the right choice for your career development.</p>
-                  <Link href="/contact" className="inline-block bg-white border-2 border-primary text-primary font-bold px-8 py-2.5 rounded-lg hover:bg-blue-50 transition-colors shadow-sm">Contact Support</Link>
+                  <Link href="/contact" className="inline-block bg-white border-2 border-primary text-primary font-bold px-8 py-2.5 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors shadow-sm">Contact Support</Link>
                 </div>
               </AccordionItem>
             </div>
@@ -277,7 +277,7 @@ export default function CourseDetailsContent({ course, relatedCourses }: { cours
           {/* Right Sidebar */}
           <div className="w-full lg:w-80 shrink-0 sticky top-28">
             <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 sm:p-8 overflow-hidden relative">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary to-blue-400"></div>
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary to-[#FFDF9C]"></div>
               <h3 className="text-center font-extrabold text-[#111827] text-2xl mb-2 mt-2">Enquire / Apply</h3>
               <p className="text-center text-gray-500 text-[15px] mb-8">Takes less than a minute.</p>
               <div className="space-y-3 mb-8">

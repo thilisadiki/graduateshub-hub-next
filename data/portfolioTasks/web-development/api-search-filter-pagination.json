@@ -1,0 +1,54 @@
+{
+  "id": "api-search-filter-pagination",
+  "categoryId": "web-development",
+  "topicId": "api-data-fetching",
+  "level": "intermediate",
+  "title": "Search, Filter, and Paginate API Data",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Add complex user interactions to a data-heavy dashboard.",
+  "scenario": "An internal tool for an e-commerce company displays thousands of customer orders. The basic list works, but customer support agents are complaining that they cannot find specific orders easily. You need to implement search, status filtering, and pagination without crashing the browser.",
+  "brief": "Extend a basic data fetching component. Add a text input for searching by ID, a dropdown to filter by status (Pending, Shipped, Delivered), and basic next/previous pagination buttons. You must debounce the search input to prevent spamming the API.",
+  "deliverables": [
+    "The React component code managing the search, filter, and pagination state",
+    "The debounced search implementation",
+    "An explanation of how URL search parameters could be used to make the filters shareable"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Assume the API supports query parameters like `?search=xyz&status=shipped&page=2`. Show how you construct this URL dynamically based on state.",
+  "rubric": [
+    {
+      "key": "state",
+      "label": "Complex State Management",
+      "description": "Are the multiple filter states managed cleanly without conflicting?",
+      "weight": 30
+    },
+    {
+      "key": "debounce",
+      "label": "Debouncing",
+      "description": "Is the search input debounced correctly to limit API calls?",
+      "weight": 25
+    },
+    {
+      "key": "url",
+      "label": "URL Sync Concept",
+      "description": "Does the candidate understand how to sync state to the URL?",
+      "weight": 20
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Cases",
+      "description": "Does the code handle empty states (e.g., \"No results found\") gracefully?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Advanced React State",
+    "Debouncing",
+    "API Query Parameters",
+    "UX Edge Cases"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

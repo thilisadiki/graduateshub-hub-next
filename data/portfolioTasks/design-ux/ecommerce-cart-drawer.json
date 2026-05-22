@@ -1,0 +1,46 @@
+{
+  "id": "ecommerce-cart-drawer",
+  "categoryId": "design-ux",
+  "topicId": "ecommerce-ux",
+  "level": "beginner",
+  "title": "Slide-Out Cart Drawer UX Audit & Redesign",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Optimise a slide-out cart drawer for a local fashion e-commerce store.",
+  "scenario": "\"SlayStyle\", a local fashion retailer based in Cape Town, has a sliding cart drawer. Analytics show customers add items to the cart but drop off immediately without clicking checkout. The cart drawer currently displays only item names and prices, with a tiny checkout button.",
+  "brief": "Audit the cart drawer and design a higher-converting alternative. Incorporate UX best practices like visible delivery estimates, ZAR currency formatting, clear quantity selectors, shipping thresholds (e.g., \"Spend R150 more for free delivery\"), and payment trust badges.",
+  "deliverables": [
+    "A list of 4 UX issues in the current cart drawer layout",
+    "A proposed wireframe layout description of the optimized cart drawer",
+    "Copy and placement strategy for trust badges and South African payment options (like PayFast, Ozow, or Capitec Pay)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Make sure all ZAR prices and delivery policies align with realistic South African ecommerce settings.",
+  "rubric": [
+    {
+      "key": "audit",
+      "label": "UX Friction Audit",
+      "description": "Are the identified issues concrete and based on established checkout UX principles?",
+      "weight": 30
+    },
+    {
+      "key": "layout",
+      "label": "Redesign Layout",
+      "description": "Does the proposed layout incorporate high-conversion tactics like shipping progress and trust badges?",
+      "weight": 40
+    },
+    {
+      "key": "localization",
+      "label": "Local Payments & Copy",
+      "description": "Is the copy localized with correct ZAR currency and relevant payment providers?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "E-commerce UX",
+    "Conversion rate optimization",
+    "Cart design",
+    "Localized trust design"
+  ],
+  "relatedRoadmapIds": []
+}

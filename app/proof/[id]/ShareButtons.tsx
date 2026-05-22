@@ -66,7 +66,7 @@ export default function ShareButtons({ shareUrl, graduateName, taskTitle }: Shar
       <button
         type="button"
         onClick={handleCopy}
-        className="bg-white border border-gray-200 hover:border-indigo-300 text-gray-700 hover:text-indigo-700 px-4 py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors"
+        className="bg-white border border-[#D1C5B4] hover:border-[#7A5900] text-[#4F4639] hover:text-[#7A5900] px-4 py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors"
       >
         {copied ? (
           <>

@@ -1,0 +1,55 @@
+{
+  "id": "itsm-home-lab-documentation",
+  "categoryId": "it",
+  "topicId": "it-service-management",
+  "level": "beginner",
+  "title": "Home Lab Setup and Documentation",
+  "difficulty": "Beginner",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Configure a small LAN at home and document it the way an IT professional documents production infrastructure.",
+  "scenario": "You have no IT work experience, but you have a router, a couple of devices, and access to free virtualisation software. SA IT support hiring managers consistently say a documented home lab is the single strongest proof an entry-level candidate can show.",
+  "brief": "Set up a small home network. Configure at minimum: a static IP on one device, port forwarding on the router, and a virtual machine. Then document the entire setup as if you were handing it over to a new IT support technician.",
+  "deliverables": [
+    "A network topology diagram showing devices, IP scheme, subnet, gateway, and DNS configuration",
+    "An asset register listing every device, its role, OS, IP, MAC, and purpose",
+    "A configuration document explaining the router settings, the VM setup, and any firewall rules",
+    "A simulated incident: pick one realistic failure (e.g., DHCP exhaustion, port conflict, DNS misconfiguration), describe the symptoms, and walk through how you would diagnose and resolve it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Hiring managers do not need exotic hardware. A laptop, a phone, a router, and a free hypervisor (VirtualBox, Hyper-V) is enough. The quality of the documentation matters more than the complexity of the setup.",
+  "rubric": [
+    {
+      "key": "topology",
+      "label": "Topology Clarity",
+      "description": "Is the diagram clear, with consistent IP scheme and complete addressing information?",
+      "weight": 25
+    },
+    {
+      "key": "documentation",
+      "label": "Documentation Discipline",
+      "description": "Could a new technician operate this lab with only your documents? Is anything ambiguous?",
+      "weight": 30
+    },
+    {
+      "key": "incident",
+      "label": "Troubleshooting Logic",
+      "description": "Does the simulated incident reflect realistic symptoms, and is the diagnostic flow methodical?",
+      "weight": 25
+    },
+    {
+      "key": "fundamentals",
+      "label": "IT Fundamentals",
+      "description": "Are IP addressing, subnetting, and basic networking concepts used correctly?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Network configuration",
+    "Topology documentation",
+    "IP addressing",
+    "Troubleshooting flows"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

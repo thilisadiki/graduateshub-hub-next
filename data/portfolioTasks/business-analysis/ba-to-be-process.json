@@ -1,0 +1,46 @@
+{
+  "id": "ba-to-be-process",
+  "categoryId": "business-analysis",
+  "topicId": "process-mapping",
+  "level": "intermediate",
+  "title": "Design a To-Be Process",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Redesign the leave process to remove bottlenecks with measurable targets.",
+  "scenario": "Using the as-is leave process (manual emails, spreadsheet checks, 3-5 day turnaround), the HR director wants a redesigned process that reduces approval time to under 24 hours and eliminates the spreadsheet dependency.",
+  "brief": "Design the to-be process. Show the before/after comparison with measurable improvement targets for each pain point.",
+  "deliverables": [
+    "A to-be BPMN process diagram showing the redesigned flow",
+    "A before/after comparison table: Pain Point → Current State → Future State → Improvement Target",
+    "Technology recommendations: what system or tool enables the new process (with justification, not just \"use software\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A to-be process that just says \"automate everything\" is not a design. Show which steps are automated, which remain manual, and why.",
+  "rubric": [
+    {
+      "key": "design",
+      "label": "To-Be Design",
+      "description": "Is the redesigned process realistic and genuinely improved?",
+      "weight": 35
+    },
+    {
+      "key": "comparison",
+      "label": "Before/After Comparison",
+      "description": "Are the improvement targets measurable and realistic?",
+      "weight": 30
+    },
+    {
+      "key": "technology",
+      "label": "Technology Fit",
+      "description": "Is the technology recommendation justified and proportionate?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Process redesign",
+    "BPMN",
+    "Improvement targeting",
+    "Technology assessment"
+  ],
+  "relatedRoadmapIds": []
+}

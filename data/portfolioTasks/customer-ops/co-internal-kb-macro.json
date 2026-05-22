@@ -1,0 +1,46 @@
+{
+  "id": "co-internal-kb-macro",
+  "categoryId": "customer-ops",
+  "topicId": "knowledge-base-management",
+  "level": "advanced",
+  "title": "Design an Internal Troubleshooting Tree",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Create an internal decision tree for agents handling hardware faults.",
+  "scenario": "You work for a company that sells smart home security cameras. When a camera goes offline, agents waste 20 minutes asking random questions. You need to create an internal troubleshooting tree (a macro flow) so agents follow a strict, logical diagnostic process before approving a hardware replacement.",
+  "brief": "Design the internal troubleshooting flow for an \"Offline Camera\" ticket.",
+  "deliverables": [
+    "The decision tree logic (If X, ask Y; If Z, escalate to Tier 2)",
+    "The exact scripts/macros the agent should use to ask the customer questions at each step",
+    "The strict criteria required before an agent is allowed to click \"Approve RMA (Replacement)\""
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Start with the most common, easiest-to-fix issues (e.g., power, wifi changed) before asking the customer to climb a ladder to reset the device. Be logical and progressive.",
+  "rubric": [
+    {
+      "key": "logic",
+      "label": "Diagnostic Logic",
+      "description": "Does the tree follow a logical path from simple checks to complex ones?",
+      "weight": 40
+    },
+    {
+      "key": "macros",
+      "label": "Agent Macros",
+      "description": "Are the provided scripts for the agents clear and customer-friendly?",
+      "weight": 30
+    },
+    {
+      "key": "criteria",
+      "label": "Replacement Criteria",
+      "description": "Are the rules for approving a hardware replacement strict and clear?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Diagnostic logic",
+    "Internal tooling",
+    "Process mapping",
+    "Hardware support ops"
+  ],
+  "relatedRoadmapIds": []
+}

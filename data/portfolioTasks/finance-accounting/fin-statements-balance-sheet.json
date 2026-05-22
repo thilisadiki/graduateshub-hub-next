@@ -1,0 +1,48 @@
+{
+  "id": "fin-statements-balance-sheet",
+  "categoryId": "finance-accounting",
+  "topicId": "financial-statements-reporting",
+  "level": "intermediate",
+  "title": "Prepare a Balance Sheet from Trial Balance",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Convert a trial balance into a properly classified balance sheet.",
+  "scenario": "The bookkeeper has produced a trial balance for year-end. The auditors need a properly classified balance sheet separating current vs non-current assets and liabilities. The bookkeeper does not know how to do the classification.",
+  "brief": "Invent a 20-line trial balance for a small manufacturing company. Then convert it into a classified balance sheet with proper groupings.",
+  "deliverables": [
+    "A 20-line trial balance with debits and credits that balance",
+    "A classified balance sheet: Current Assets, Non-Current Assets, Current Liabilities, Non-Current Liabilities, Equity",
+    "Three journal entries for common year-end adjustments (depreciation, accruals, prepayments) and their impact on the balance sheet"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The trial balance must balance. The balance sheet must balance. If they do not, you have made an error. Check your work.",
+  "rubric": [
+    {
+      "key": "trial-balance",
+      "label": "Trial Balance",
+      "description": "Does the trial balance balance with plausible account names and amounts?",
+      "weight": 25
+    },
+    {
+      "key": "classification",
+      "label": "Balance Sheet Classification",
+      "description": "Are all items correctly classified as current/non-current?",
+      "weight": 35
+    },
+    {
+      "key": "adjustments",
+      "label": "Year-End Adjustments",
+      "description": "Are the 3 journal entries correct with proper double-entry?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Balance sheet preparation",
+    "Trial balance",
+    "Year-end adjustments",
+    "Double-entry bookkeeping"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

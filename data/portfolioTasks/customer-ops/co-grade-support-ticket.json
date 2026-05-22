@@ -1,0 +1,46 @@
+{
+  "id": "co-grade-support-ticket",
+  "categoryId": "customer-ops",
+  "topicId": "qa-ticket-review",
+  "level": "beginner",
+  "title": "Grade a Support Interaction",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Evaluate an agent's email response using a standard QA rubric.",
+  "scenario": "You are doing weekly QA (Quality Assurance). You are reviewing an email where an agent replied to a customer asking how to change their password. The agent gave the correct technical answer but sounded robotic and forgot to link to the Help Centre.",
+  "brief": "Grade the provided interaction (invent the agent's email) using a 5-point rubric. Provide constructive feedback for the agent.",
+  "deliverables": [
+    "The simulated customer query and the agent's response",
+    "Completed QA Rubric scoring: Accuracy, Tone/Empathy, Efficiency, Spelling/Grammar, Next Issue Avoidance",
+    "A short, constructive feedback message to the agent (how to improve next time)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Feedback should be actionable. \"Do better on tone\" is bad feedback. \"Try adding a greeting and acknowledging their frustration before giving the steps\" is good feedback.",
+  "rubric": [
+    {
+      "key": "rubric-use",
+      "label": "Rubric Application",
+      "description": "Are the scores justified by the content of the email?",
+      "weight": 30
+    },
+    {
+      "key": "feedback",
+      "label": "Constructive Feedback",
+      "description": "Is the feedback actionable, specific, and encouraging?",
+      "weight": 40
+    },
+    {
+      "key": "accuracy",
+      "label": "QA Accuracy",
+      "description": "Did the review catch the missing Help Centre link and robotic tone?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Quality assurance",
+    "Rubric grading",
+    "Constructive feedback",
+    "Tone analysis"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -95,7 +95,7 @@ export default function CurationPolicyPage() {
 
       <div className="bg-slate-900 text-white py-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">Editorial Standards</p>
+          <p className="text-[#7C7061] font-bold text-sm uppercase tracking-widest mb-3">Editorial Standards</p>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">How We Curate Courses</h1>
           <p className="text-gray-300 text-lg leading-relaxed">
             Every course on Graduates Hub is selected by someone with direct, professional experience in that field. Here is exactly how we decide what makes the cut - and what doesn&apos;t.
@@ -117,7 +117,7 @@ export default function CurationPolicyPage() {
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <p className="font-extrabold text-gray-900">Jason Sadiki</p>
-                  <span className="text-xs bg-blue-50 text-blue-700 border border-blue-100 px-2 py-0.5 rounded-full font-bold">Founder</span>
+                  <span className="text-xs bg-[#FFDF9C]/20 text-[#5a4000] border border-[#D1C5B4] px-2 py-0.5 rounded-full font-bold">Founder</span>
                 </div>
                 <p className="text-primary text-sm font-semibold mb-2">Technical SEO Specialist &amp; Web Developer · 7+ years</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -143,7 +143,7 @@ export default function CurationPolicyPage() {
                   ))}
                 </div>
                 <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-3 transition-colors">
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] mt-3 transition-colors">
                   <ExternalLink size={12} /> LinkedIn
                 </a>
               </div>
@@ -163,7 +163,7 @@ export default function CurationPolicyPage() {
                   Co-founder of Graduates Hub. Ndulamiso curates all accounting, finance, and business courses. Her practitioner-level experience at the South African Revenue Service (SARS) ensures that recommended courses reflect real compliance, tax, and financial management requirements - not just textbook theory.
                 </p>
                 <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 mt-2 transition-colors">
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] mt-2 transition-colors">
                   <ExternalLink size={12} /> LinkedIn
                 </a>
               </div>
@@ -228,10 +228,10 @@ export default function CurationPolicyPage() {
         </section>
 
         {/* Questions */}
-        <section className="bg-blue-50 rounded-2xl border border-blue-100 p-8 text-center">
+        <section className="bg-[#FFDF9C]/20 rounded-2xl border border-[#D1C5B4] p-8 text-center">
           <h2 className="text-xl font-extrabold text-gray-900 mb-2">Questions about a specific course?</h2>
           <p className="text-gray-500 text-sm mb-5">If you believe a listed course no longer meets our criteria, let us know and we will review it.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">
             Contact Us
           </Link>
         </section>

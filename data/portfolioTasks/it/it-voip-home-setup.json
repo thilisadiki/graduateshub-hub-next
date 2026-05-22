@@ -1,0 +1,48 @@
+{
+  "id": "it-voip-home-setup",
+  "categoryId": "it",
+  "topicId": "it-voip-telephony",
+  "level": "beginner",
+  "title": "Remote Worker VoIP softphone Setup Guide",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Write a foolproof setup and troubleshooting guide for call center agents using SIP clients from home.",
+  "scenario": "A customer support center in Cape Town is transitioning its agents to a hybrid work-from-home model to maintain operations during load-shedding. The agents must connect softphone software to the company's hosted cloud PBX. Many agents are non-technical and struggle with SIP configurations, mic routing, and home ISP routers.",
+  "brief": "Write an easy-to-follow, step-by-step setup guide and home network requirements check sheet to get agents online and troubleshooting their own voice connection issues.",
+  "deliverables": [
+    "A step-by-step softphone configuration manual (written in markdown) for a standard softphone (e.g. MicroSIP or Zoiper) using placeholder SIP credentials",
+    "A voice readiness home network checklist specifying minimum upload/download speeds, maximum latency, and jitter thresholds for stable VoIP calls",
+    "A basic diagnostic guide explaining how to troubleshoot common softphone issues: one-way audio, registration failure, or robotic sound"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Keep your guide extremely clear and user-friendly. Avoid overly dense jargon where simple terms work, but ensure the technical parameters (like SIP registration ports, STUN servers, and codecs) are correct.",
+  "rubric": [
+    {
+      "key": "guide",
+      "label": "Setup Guide Quality",
+      "description": "Is the configuration manual easy to follow for a non-technical worker while retaining technical accuracy?",
+      "weight": 35
+    },
+    {
+      "key": "checklist",
+      "label": "Network Checklist",
+      "description": "Are the bandwidth, latency, and packet loss metrics mathematically correct and realistic for VoIP traffic?",
+      "weight": 30
+    },
+    {
+      "key": "diagnostic",
+      "label": "Diagnostic Framework",
+      "description": "Does the troubleshooting steps accurately address common SIP issues like SIP ALG or firewall blocking?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "VoIP Softphone configuration",
+    "SIP signaling basics",
+    "Home network diagnostics",
+    "Technical writing"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "api-stripe-checkout",
+  "categoryId": "web-development",
+  "topicId": "third-party-api-integration",
+  "level": "intermediate",
+  "title": "Implement Stripe Checkout",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a secure payment flow using the industry standard Stripe API.",
+  "scenario": "The coffee shop wants to sell bags of beans online. You need to build the checkout button. When clicked, it should redirect the user to a secure Stripe Checkout session, and then return them to a \"Success\" or \"Cancel\" page on your site.",
+  "brief": "Build a Next.js (or Express) backend route that creates a Stripe Checkout Session using the Stripe Node.js SDK. Then, build the frontend React button that calls this route and redirects the user to the Stripe hosted payment page. Handle the redirect back to your app.",
+  "deliverables": [
+    "The Backend route code that initializes the `stripe.checkout.sessions.create` call",
+    "The Frontend code handling the button click and the redirect",
+    "An explanation of why prices should be calculated on the backend, not the frontend"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Security is paramount. Never pass the final price from the client to the server; the server must look up the price based on the product ID to prevent tampering.",
+  "rubric": [
+    {
+      "key": "backend",
+      "label": "Backend Session Creation",
+      "description": "Is the Stripe session created correctly with success/cancel URLs?",
+      "weight": 40
+    },
+    {
+      "key": "frontend",
+      "label": "Frontend Redirect",
+      "description": "Does the client successfully redirect to the Stripe URL?",
+      "weight": 30
+    },
+    {
+      "key": "security",
+      "label": "Price Tampering Security",
+      "description": "Is the candidate aware of the risks of client-side pricing?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Stripe API",
+    "Payment Gateways",
+    "Backend/Frontend Handoff",
+    "E-commerce Security"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

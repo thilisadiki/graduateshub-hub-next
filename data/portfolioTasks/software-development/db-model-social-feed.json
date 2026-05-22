@@ -1,0 +1,49 @@
+{
+  "id": "db-model-social-feed",
+  "categoryId": "software-development",
+  "topicId": "database-modeling",
+  "level": "advanced",
+  "title": "Model a High-Traffic Social Media Feed",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 5 hours",
+  "tagline": "Design a database schema optimized for massive, read-heavy fan-out operations.",
+  "scenario": "You are the database architect for a new Twitter clone. When a celebrity with 5 million followers posts a new message, those 5 million users need to see it in their timeline immediately. A standard SQL `JOIN` on the followers table is taking 30 seconds to run.",
+  "brief": "Design the schema and architectural strategy for the social feed. You must decide whether to use a Push model (Fan-out on write), a Pull model (Fan-out on read), or a hybrid approach. Explain your database choice (e.g., PostgreSQL, Cassandra, or a Graph DB).",
+  "deliverables": [
+    "The schema design for Users, Follows, and Posts",
+    "An architectural diagram or explanation of the \"Feed Generation\" process (Push vs. Pull)",
+    "A defense of the chosen indexing strategy to make reads as fast as possible"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "There is no single correct answer here. The test is on your ability to articulate the trade-offs of Fan-out on Read versus Fan-out on Write.",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Relational Graph",
+      "description": "Is the Follows (adjacency list) schema correctly designed?",
+      "weight": 30
+    },
+    {
+      "key": "fanout",
+      "label": "Fan-out Strategy",
+      "description": "Does the candidate understand the performance trade-offs of Push vs Pull feeds?",
+      "weight": 40
+    },
+    {
+      "key": "indexing",
+      "label": "Indexing & Performance",
+      "description": "Are appropriate indexes suggested for the read-heavy timeline queries?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "High-Performance Databases",
+    "Fan-out Patterns",
+    "Graph Modeling",
+    "Query Optimization"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

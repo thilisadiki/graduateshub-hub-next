@@ -1,0 +1,48 @@
+{
+  "id": "payroll-gross-to-net",
+  "categoryId": "finance-accounting",
+  "topicId": "payroll-statutory-returns",
+  "level": "beginner",
+  "title": "Process a Monthly Payroll",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Calculate gross-to-net pay for 5 employees including all SA deductions.",
+  "scenario": "You are the bookkeeper for a small business with 5 employees. It is month-end and you need to process payroll. Each employee has different salary levels and benefit structures (pension, medical aid).",
+  "brief": "Calculate the gross-to-net pay for each employee. Include PAYE, UIF, pension fund contributions, and medical aid deductions. Show the total cost to the employer.",
+  "deliverables": [
+    "A payslip summary for each employee: Gross Pay, PAYE, UIF, Pension, Medical Aid, Net Pay",
+    "The total employer cost per employee (gross + employer UIF + employer pension)",
+    "The total amounts payable to SARS, the pension fund, and the medical aid scheme"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Pension contributions reduce taxable income. If an employee contributes R2,000 to pension, their taxable income is lower. Show this deduction-before-PAYE logic.",
+  "rubric": [
+    {
+      "key": "calculations",
+      "label": "Payroll Calculations",
+      "description": "Are gross-to-net calculations correct for all 5 employees?",
+      "weight": 40
+    },
+    {
+      "key": "employer-cost",
+      "label": "Employer Cost",
+      "description": "Is the total employer cost correctly calculated (including employer contributions)?",
+      "weight": 30
+    },
+    {
+      "key": "third-party",
+      "label": "Third-Party Payments",
+      "description": "Are the amounts payable to SARS, pension, and medical aid correctly totalled?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Payroll processing",
+    "Gross-to-net calculations",
+    "Statutory deductions",
+    "Employee benefits"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

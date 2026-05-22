@@ -1,0 +1,53 @@
+{
+  "id": "ba-value-stream-map",
+  "categoryId": "business-analysis",
+  "topicId": "process-mapping",
+  "level": "advanced",
+  "title": "Value Stream Mapping",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Map the end-to-end value stream for a loan application at an SA bank.",
+  "scenario": "A South African retail bank takes an average of 14 days to process a personal loan application. The CEO has mandated a reduction to 5 days. The process involves the branch, credit scoring, compliance (FICA/FAIS), underwriting, and disbursement.",
+  "brief": "Map the end-to-end value stream. Identify value-adding vs non-value-adding steps, calculate process efficiency, and propose improvements to hit the 5-day target.",
+  "deliverables": [
+    "A value stream map showing all steps with cycle time and wait time for each",
+    "Process efficiency calculation: total value-adding time vs total lead time",
+    "At least 5 specific waste items (using Lean waste categories) with evidence",
+    "An improvement roadmap: quick wins (0-30 days) vs structural changes (30-90 days) to reach the 5-day target"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "In most service processes, less than 10% of total lead time is value-adding. The rest is waiting, rework, and handoffs. Show this ratio.",
+  "rubric": [
+    {
+      "key": "vsm",
+      "label": "Value Stream Map",
+      "description": "Is the VSM complete with cycle times and wait times?",
+      "weight": 25
+    },
+    {
+      "key": "efficiency",
+      "label": "Process Efficiency",
+      "description": "Is the efficiency calculation correct and revealing?",
+      "weight": 25
+    },
+    {
+      "key": "waste",
+      "label": "Waste Identification",
+      "description": "Are the waste items correctly categorised using Lean taxonomy?",
+      "weight": 25
+    },
+    {
+      "key": "roadmap",
+      "label": "Improvement Roadmap",
+      "description": "Is the quick-win vs structural split realistic?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Value stream mapping",
+    "Lean analysis",
+    "Process efficiency",
+    "Improvement planning"
+  ],
+  "relatedRoadmapIds": []
+}

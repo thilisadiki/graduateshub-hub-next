@@ -1,0 +1,49 @@
+{
+  "id": "excel-pivot-tables",
+  "categoryId": "data",
+  "topicId": "spreadsheet-modelling",
+  "level": "beginner",
+  "title": "Build a Sales Summary with Pivot Tables",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Create pivot tables and basic formulas from raw transaction data.",
+  "scenario": "A small clothing retailer has 6 months of transaction data in a single spreadsheet tab. The store manager wants a summary showing total revenue by product category, average order value by month, and the top 10 best-selling items.",
+  "brief": "Describe (step by step) how you would build three pivot tables and one summary formula section from this raw data. You do not need the actual spreadsheet — describe the row/column/value configuration for each pivot table.",
+  "deliverables": [
+    "Pivot Table 1 config: Total revenue by product category (rows, values, any filters)",
+    "Pivot Table 2 config: Average order value by month",
+    "Pivot Table 3 config: Top 10 items by quantity sold",
+    "Three SUMIFS or AVERAGEIFS formulas you would place in a summary section, with the formula written out"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Write the pivot table configurations as if teaching a colleague. Include the exact field names you would drag into Rows, Columns, and Values.",
+  "rubric": [
+    {
+      "key": "pivots",
+      "label": "Pivot Table Design",
+      "description": "Are the three pivot tables correctly configured with appropriate aggregations?",
+      "weight": 40
+    },
+    {
+      "key": "formulas",
+      "label": "Formula Accuracy",
+      "description": "Are the SUMIFS/AVERAGEIFS formulas syntactically correct?",
+      "weight": 30
+    },
+    {
+      "key": "communication",
+      "label": "Instructional Clarity",
+      "description": "Could a spreadsheet beginner follow these instructions?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Pivot tables",
+    "Excel formulas",
+    "Data summarisation",
+    "Spreadsheet design"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

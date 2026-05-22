@@ -1,0 +1,48 @@
+{
+  "id": "sql-basic-aggregation",
+  "categoryId": "data",
+  "topicId": "sql-querying",
+  "level": "beginner",
+  "title": "Write Basic Aggregation Queries",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "GROUP BY, HAVING, and ORDER BY on a sales table.",
+  "scenario": "An online retailer has a `sales` table with columns: `order_id`, `product_category`, `sale_amount`, `sale_date`, and `region`. The marketing team wants three quick answers before their Monday meeting.",
+  "brief": "Write three SQL queries against the sales table. You do not need a live database — write the SQL in code blocks and explain what each query returns.",
+  "deliverables": [
+    "Query 1: Total revenue by product category, sorted highest to lowest",
+    "Query 2: All regions where total revenue exceeds R500,000, using HAVING",
+    "Query 3: The top 5 highest-revenue days in the last 90 days"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Write standard SQL (PostgreSQL or MySQL syntax). Include column aliases for readability.",
+  "rubric": [
+    {
+      "key": "syntax",
+      "label": "SQL Syntax",
+      "description": "Are the queries syntactically correct and executable?",
+      "weight": 35
+    },
+    {
+      "key": "logic",
+      "label": "Query Logic",
+      "description": "Do the queries produce the correct results for the stated questions?",
+      "weight": 35
+    },
+    {
+      "key": "readability",
+      "label": "Readability",
+      "description": "Are aliases, formatting, and comments used to make the SQL clear?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "SQL",
+    "GROUP BY",
+    "HAVING",
+    "Data aggregation"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "co-cs-churn-autopsy",
+  "categoryId": "customer-ops",
+  "topicId": "customer-success-onboarding",
+  "level": "advanced",
+  "title": "Perform a Churn Autopsy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Investigate why a top client left and present the findings to leadership.",
+  "scenario": "Your biggest client just cancelled their R50k/month contract. The sales team blames the product being buggy. The product team blames CS for poor training. The CEO wants a blameless post-mortem (Churn Autopsy) by tomorrow.",
+  "brief": "Create a Churn Autopsy report. Invent the timeline of failure (from onboarding issues, to support tickets, to the final cancellation call) and identify the true root causes.",
+  "deliverables": [
+    "A timeline of the client lifecycle highlighting 3 major \"failure points\" over the last year",
+    "An analysis of the Root Cause (e.g., misalignment during sales, a critical bug, or lack of adoption)",
+    "3 Actionable Recommendations for the broader business to prevent this specific churn reason in the future (one for Sales, one for Product, one for CS)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A blameless post-mortem focuses on systems, not people. Do not write \"John in sales lied.\" Write \"The sales qualification checklist does not mandate verifying API compatibility, leading to a mismatched expectation.\"",
+  "rubric": [
+    {
+      "key": "timeline",
+      "label": "Timeline Logic",
+      "description": "Does the timeline tell a realistic story of a deteriorating client relationship?",
+      "weight": 30
+    },
+    {
+      "key": "root-cause",
+      "label": "Root Cause Analysis",
+      "description": "Does the analysis dig past surface-level excuses to find the systemic flaw?",
+      "weight": 35
+    },
+    {
+      "key": "actionable",
+      "label": "Actionable Recommendations",
+      "description": "Are the recommendations specific, cross-functional, and systemic?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Churn analysis",
+    "Blameless post-mortems",
+    "Cross-functional leadership",
+    "Root cause analysis"
+  ],
+  "relatedRoadmapIds": []
+}

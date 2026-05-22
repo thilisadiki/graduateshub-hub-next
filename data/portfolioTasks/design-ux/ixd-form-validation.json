@@ -1,0 +1,53 @@
+{
+  "id": "ixd-form-validation",
+  "categoryId": "design-ux",
+  "topicId": "interaction-design",
+  "level": "beginner",
+  "title": "Design a Form Validation Flow",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Design the interaction pattern for a sign-up form with inline validation.",
+  "scenario": "A SaaS product's sign-up form has 6 fields (name, email, password, confirm password, company, phone). Currently, all validation happens on submit — users fill in the entire form, click \"Create Account,\" and get a wall of red errors at the top.",
+  "brief": "Redesign the form validation to be inline and progressive. Define when validation fires, how errors are displayed, and what the success states look like.",
+  "deliverables": [
+    "Validation timing for each field: on blur, on change, or on submit — with justification for each choice",
+    "Error message design: placement, styling, and tone for each field's error state",
+    "Success states: what the user sees when a field passes validation (checkmark, green border, etc.)",
+    "The submit button behaviour: disabled vs enabled, loading state, and error summary after failed submission"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Validating on every keystroke is annoying (the email field shows \"invalid\" before you finish typing). Validating only on submit is too late. On blur is usually the sweet spot. Show your reasoning.",
+  "rubric": [
+    {
+      "key": "timing",
+      "label": "Validation Timing",
+      "description": "Is the timing appropriate for each field type?",
+      "weight": 30
+    },
+    {
+      "key": "errors",
+      "label": "Error Display",
+      "description": "Are error messages clear, well-placed, and actionable?",
+      "weight": 30
+    },
+    {
+      "key": "success",
+      "label": "Success States",
+      "description": "Do success states provide positive reinforcement?",
+      "weight": 20
+    },
+    {
+      "key": "submit",
+      "label": "Submit Behaviour",
+      "description": "Is the submit flow well-designed for both success and failure?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Form design",
+    "Inline validation",
+    "Error handling",
+    "Interaction design"
+  ],
+  "relatedRoadmapIds": []
+}

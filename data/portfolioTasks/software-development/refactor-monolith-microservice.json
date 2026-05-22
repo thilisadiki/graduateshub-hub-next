@@ -1,0 +1,49 @@
+{
+  "id": "refactor-monolith-microservice",
+  "categoryId": "software-development",
+  "topicId": "code-refactoring",
+  "level": "advanced",
+  "title": "Refactor a Legacy Monolith (Strangler Fig)",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a plan to safely extract a microservice from a running monolith.",
+  "scenario": "Your company has a massive 10-year-old Ruby on Rails monolith. The `Billing` module is slowing down the entire app. Management wants to extract `Billing` into its own Go microservice without taking the site offline.",
+  "brief": "Design a migration plan using the Strangler Fig pattern. Explain how you will route traffic, migrate the database safely, and handle the transition period where both systems must remain in sync.",
+  "deliverables": [
+    "An architectural diagram showing the routing layer (API Gateway) intercepting traffic",
+    "A step-by-step phased migration plan (Dark launch, Shadow traffic, Cut-over)",
+    "A strategy for untangling the shared database (dual writes vs. eventual consistency)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The hardest part of microservice extraction is the data layer. You cannot just cut a table out of a shared database overnight. Focus on the database synchronization strategy.",
+  "rubric": [
+    {
+      "key": "pattern",
+      "label": "Strangler Fig Pattern",
+      "description": "Is the routing layer correctly designed to slowly siphon traffic?",
+      "weight": 35
+    },
+    {
+      "key": "database",
+      "label": "Data Migration",
+      "description": "Is the database untangling strategy safe and realistic?",
+      "weight": 40
+    },
+    {
+      "key": "safety",
+      "label": "Rollback & Safety",
+      "description": "Are shadow reads/writes used to verify the new service before cut-over?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Strangler Fig Pattern",
+    "Microservices Extraction",
+    "Database Migration",
+    "Legacy System Modernization"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

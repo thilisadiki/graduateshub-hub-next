@@ -25,7 +25,7 @@ function IntroScreen({ onStart }: { onStart: () => void }) {
   return (
     <div className="flex flex-col items-center justify-center text-center px-6 py-12 gap-6 flex-1">
       <div className="w-20 h-20 rounded-2xl bg-rose-100 flex items-center justify-center">
-        <Brain size={40} className="text-rose-600" />
+        <Brain size={40} className="text-primary" />
       </div>
       <div>
         <h3 className="text-2xl font-black text-gray-900 mb-3">Discover Your Career Match</h3>
@@ -36,14 +36,14 @@ function IntroScreen({ onStart }: { onStart: () => void }) {
       <ul className="flex flex-col gap-2 text-sm text-left max-w-xs w-full">
         {['Takes under 2 minutes', 'No signup required', 'Personalised course recommendations'].map(item => (
           <li key={item} className="flex items-center gap-2 text-gray-600">
-            <span className="w-5 h-5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0">✓</span>
+            <span className="w-5 h-5 rounded-full bg-rose-100 text-primary flex items-center justify-center text-xs font-bold shrink-0">✓</span>
             {item}
           </li>
         ))}
       </ul>
       <button
         onClick={onStart}
-        className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-md text-lg"
+        className="bg-primary hover:bg-[#5a4000] text-white px-8 py-3 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-md text-lg"
       >
         Start the Quiz <ArrowRight size={20} />
       </button>
@@ -74,7 +74,7 @@ function QuestionScreen({
       <div>
         <div className="flex justify-between items-center mb-2">
           <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Question {questionIndex + 1} of {total}</span>
-          <span className="text-xs font-bold text-rose-600">{Math.round(progress)}% done</span>
+          <span className="text-xs font-bold text-primary">{Math.round(progress)}% done</span>
         </div>
         <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
           <div
@@ -100,8 +100,8 @@ function QuestionScreen({
               onClick={() => onAnswer(option)}
               className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl border-2 text-left font-semibold text-sm transition-all duration-150
                 ${isSelected
-                  ? 'border-rose-500 bg-rose-50 text-rose-900 scale-[1.01] shadow-sm'
-                  : 'border-gray-200 bg-white text-gray-700 hover:border-rose-300 hover:bg-rose-50/50'
+                  ? 'border-rose-500 bg-[#FFDF9C/20] text-rose-900 scale-[1.01] shadow-sm'
+                  : 'border-gray-200 bg-white text-gray-700 hover:border-rose-300 hover:bg-[#FFDF9C/20]/50'
                 }`}
             >
               <span className="text-xl shrink-0">{option.emoji}</span>

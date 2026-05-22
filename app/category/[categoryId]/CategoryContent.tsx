@@ -68,7 +68,7 @@ export default function CategoryContent({
         </div>
       </div>
 
-      <div className="bg-blue-50 border-b border-blue-100 py-12 px-6">
+      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold capitalize text-gray-900 mb-4 tracking-tight">{categoryName} Courses</h1>
           <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
@@ -82,7 +82,7 @@ export default function CategoryContent({
                 ...(topRating ? [{ value: `${topRating}`, label: 'Top Rating' }] : []),
                 { value: 'CPD', label: 'Accredited' },
               ].map(({ value, label }) => (
-                <div key={label} className="bg-white/80 border border-blue-200 rounded-xl px-5 py-3 text-center min-w-[90px]">
+                <div key={label} className="bg-white/80 border border-[#D1C5B4] rounded-xl px-5 py-3 text-center min-w-[90px]">
                   <p className="text-2xl font-extrabold text-primary">{value}</p>
                   <p className="text-xs text-gray-500 font-medium">{label}</p>
                 </div>
@@ -108,13 +108,13 @@ export default function CategoryContent({
                       className={`text-left rounded-xl p-5 border transition-all group ${selectedGroup === track.subCategory ? 'bg-primary border-primary text-white shadow-md' : 'bg-white border-gray-100 hover:border-primary hover:shadow-md'}`}
                     >
                       <div className="flex items-center justify-between mb-3">
-                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${selectedGroup === track.subCategory ? 'bg-white/20 border-white/30 text-white' : 'bg-blue-50 border-blue-100 text-primary'}`}>
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${selectedGroup === track.subCategory ? 'bg-white/20 border-white/30 text-white' : 'bg-[#FFDF9C]/20 border-[#D1C5B4] text-primary'}`}>
                           {track.count} courses
                         </span>
                         <ChevronRight size={14} className={`transition-colors ${selectedGroup === track.subCategory ? 'text-white' : 'text-gray-300 group-hover:text-primary'}`} />
                       </div>
                       <p className={`font-bold mb-1 text-sm ${selectedGroup === track.subCategory ? 'text-white' : 'text-gray-900 group-hover:text-primary'}`}>{track.label}</p>
-                      <p className={`text-xs leading-relaxed ${selectedGroup === track.subCategory ? 'text-blue-100' : 'text-gray-500'}`}>{track.goal}</p>
+                      <p className={`text-xs leading-relaxed ${selectedGroup === track.subCategory ? 'text-[#FFDF9C]' : 'text-gray-500'}`}>{track.goal}</p>
                     </button>
                   ))}
                   {/* Reset to All */}
@@ -187,7 +187,7 @@ export default function CategoryContent({
                       href={guide.href}
                       className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all flex flex-col gap-2"
                     >
-                      <span className="self-start text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">
+                      <span className="self-start text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full">
                         {guide.badge}
                       </span>
                       <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm">{guide.title}</p>
@@ -274,7 +274,7 @@ export default function CategoryContent({
           <div className="text-center py-20 bg-white rounded-xl shadow-sm border border-gray-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">More courses coming soon!</h2>
             <p className="text-gray-500 mb-8">We are actively adding new courses to the {categoryName} category.</p>
-            <Link href="/" className="bg-primary hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-bold transition-colors">Browse All Courses</Link>
+            <Link href="/" className="bg-primary hover:bg-[#5a4000] text-white px-6 py-3 rounded-lg font-bold transition-colors">Browse All Courses</Link>
           </div>
         )}
       </main>

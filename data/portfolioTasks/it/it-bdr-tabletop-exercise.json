@@ -1,0 +1,55 @@
+{
+  "id": "it-bdr-tabletop-exercise",
+  "categoryId": "it",
+  "topicId": "it-backup-disaster-recovery",
+  "level": "intermediate",
+  "title": "Disaster Recovery Tabletop Exercise",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Design a tabletop exercise that surfaces the gaps in a SA SME's disaster recovery plan.",
+  "scenario": "A SA logistics company has a written DR plan but has never rehearsed it. The IT manager wants you to design and document a tabletop exercise: a simulated disaster scenario, the team that runs it, and the format for capturing findings.",
+  "brief": "Design a complete tabletop exercise. Pick a disaster scenario, write the injects, document the participant roles, and design the after-action review template.",
+  "deliverables": [
+    "A scenario brief describing the simulated disaster (e.g., \"Saturday 02:00 the primary server room is flooded\"), the timeline, and the assumed business impact",
+    "A series of at least 6 injects (events that get introduced during the exercise), each with timing, the team it targets, and the response expected",
+    "Participant role cards for at least 5 roles (IT lead, Comms lead, Exec sponsor, Operations, External vendor) with each role's objectives and constraints",
+    "An after-action review template covering: what worked, what failed, gaps in the plan, action items with owners and dates"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A tabletop is not a fire drill. The point is not to \"win\" but to find the gaps in the plan. Inject real frustrations: people on leave, vendors not answering, a misplaced offsite tape, a missed comms channel. The harder the exercise, the more it teaches.",
+  "rubric": [
+    {
+      "key": "scenario",
+      "label": "Scenario Realism",
+      "description": "Is the disaster plausible and does it stress real parts of the business?",
+      "weight": 25
+    },
+    {
+      "key": "injects",
+      "label": "Inject Quality",
+      "description": "Do the injects pressure-test the plan rather than just narrate the disaster?",
+      "weight": 30
+    },
+    {
+      "key": "roles",
+      "label": "Role Design",
+      "description": "Are roles distinct, with realistic constraints and decision authority?",
+      "weight": 20
+    },
+    {
+      "key": "review",
+      "label": "After-Action Quality",
+      "description": "Will the review template surface concrete improvements rather than vague feel-good notes?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "DR exercise design",
+    "Tabletop facilitation",
+    "Inject design",
+    "After-action review"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

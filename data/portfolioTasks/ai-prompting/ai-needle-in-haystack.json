@@ -1,0 +1,46 @@
+{
+  "id": "ai-needle-in-haystack",
+  "categoryId": "ai-prompting",
+  "topicId": "context-window-management",
+  "level": "advanced",
+  "title": "Pass the Needle-in-a-Haystack Test",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Force an LLM to find one specific clause hidden in a 100-page contract.",
+  "scenario": "LLMs suffer from \"Lost in the Middle\" syndrome. If you put 100 pages of text in the context window, they often forget information located in the middle of the document. You need to extract the \"Force Majeure\" clause from a massive PDF.",
+  "brief": "Write a prompt strategy designed specifically to overcome \"Lost in the Middle\" syndrome when searching for a specific fact in a massive context window.",
+  "deliverables": [
+    "The \"Needle\" Prompt (instructing the AI what to look for)",
+    "Two techniques used in the prompt to improve recall (e.g., \"Scratchpad/CoT\", \"Repeating the question at the end\", \"Role-playing as an auditor\")",
+    "An explanation of why the \"Lost in the Middle\" phenomenon occurs in Transformer models."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Repeating the primary instruction at the very end of the prompt (closest to where the AI starts generating) is a proven technique for long-context recall.",
+  "rubric": [
+    {
+      "key": "recall-techniques",
+      "label": "Recall Techniques",
+      "description": "Are valid, advanced techniques used to mitigate middle-blindness?",
+      "weight": 45
+    },
+    {
+      "key": "instruction-placement",
+      "label": "Instruction Placement",
+      "description": "Is the prompt structured to keep the core task top-of-mind (or bottom-of-prompt)?",
+      "weight": 30
+    },
+    {
+      "key": "technical-knowledge",
+      "label": "Technical Explanation",
+      "description": "Is the explanation of attention mechanisms and context limits accurate?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Long-context prompting",
+    "Recall optimization",
+    "Attention mechanism awareness",
+    "Legal extraction"
+  ],
+  "relatedRoadmapIds": []
+}

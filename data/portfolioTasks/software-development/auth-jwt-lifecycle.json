@@ -1,0 +1,49 @@
+{
+  "id": "auth-jwt-lifecycle",
+  "categoryId": "software-development",
+  "topicId": "auth-authorization",
+  "level": "beginner",
+  "title": "Implement a Secure JWT Lifecycle",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Design a stateless authentication flow using Access and Refresh tokens.",
+  "scenario": "You are building the auth system for a Single Page Application (SPA). You have decided to use JSON Web Tokens (JWT). A common mistake is storing a long-lived JWT in `localStorage`, which is vulnerable to XSS attacks.",
+  "brief": "Design a secure token lifecycle. Explain the difference between an Access Token and a Refresh Token. Describe exactly where the frontend should store each token, and how the backend should validate them.",
+  "deliverables": [
+    "An architectural explanation of the Access/Refresh token flow",
+    "Code snippets for setting the Refresh Token as an `HttpOnly` cookie in Express/Node.js"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on the storage mechanisms. Why is `HttpOnly` critical for the Refresh Token, and why is it acceptable to keep a short-lived Access Token in JavaScript memory?",
+  "rubric": [
+    {
+      "key": "lifecycle",
+      "label": "Token Lifecycle",
+      "description": "Does the candidate correctly explain how Refresh Tokens generate new Access Tokens?",
+      "weight": 40
+    },
+    {
+      "key": "storage",
+      "label": "Secure Storage",
+      "description": "Is the `HttpOnly` cookie strategy correctly implemented for the Refresh Token?",
+      "weight": 35
+    },
+    {
+      "key": "xss",
+      "label": "XSS Mitigation",
+      "description": "Does the candidate understand why `localStorage` is dangerous for long-lived tokens?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "JWT (JSON Web Tokens)",
+    "Stateless Authentication",
+    "Cookie Security",
+    "XSS Mitigation"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer",
+    "web-developer"
+  ]
+}

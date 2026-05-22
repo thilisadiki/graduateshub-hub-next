@@ -1,0 +1,46 @@
+{
+  "id": "mobile-ux-navigation-audit",
+  "categoryId": "design-ux",
+  "topicId": "mobile-ux-design",
+  "level": "beginner",
+  "title": "Mobile Navigation Audit for a South African FinTech App",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Audit a local peer-to-peer payment app's mobile navigation against best practices.",
+  "scenario": "PayEasy is a hypothetical South African peer-to-peer mobile payments startup competing with EFTs and cash. Users report difficulty finding the \"Scan to Pay\" and \"Request Cash\" features on small screens (like older entry-level Android devices common in SA).",
+  "brief": "Conduct a mobile navigation audit of PayEasy. Evaluate the tab bar, menu structure, and touch targets specifically for smaller viewport sizes, recommending 3 mobile-first adjustments.",
+  "deliverables": [
+    "An audit of the current navigation menu (identifying 3 distinct issues under 48x48px touch target guidelines or thumb-zone constraints)",
+    "A paper prototype sketch or structured wireframe description of a revised tab-bar navigation flow",
+    "Two specific mobile-first recommendation bullet points with WCAG 2.1 AA target sizes"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Keep suggestions highly actionable. Cite specific screen real estate dimensions and thumb zone maps in your rationale.",
+  "rubric": [
+    {
+      "key": "audit",
+      "label": "Audit Quality",
+      "description": "Did the audit cover thumb-zone usability and touch target sizing?",
+      "weight": 30
+    },
+    {
+      "key": "proposals",
+      "label": "Revised Flow Proposals",
+      "description": "Are the recommendations practical and optimized for typical South African viewports?",
+      "weight": 40
+    },
+    {
+      "key": "standards",
+      "label": "Standards Compliance",
+      "description": "Are touch targets and contrast targets referenced against WCAG standards?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Mobile UX analysis",
+    "Thumb-zone mapping",
+    "Touch target optimization",
+    "Heuristic evaluation"
+  ],
+  "relatedRoadmapIds": []
+}

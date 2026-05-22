@@ -1,0 +1,53 @@
+{
+  "id": "handoff-card-layout",
+  "categoryId": "design-ux",
+  "topicId": "design-handoff-spec",
+  "level": "intermediate",
+  "title": "Responsive E-Commerce Product Card Specification",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Write a detailed spec sheet for a responsive product card grid.",
+  "scenario": "A Johannesburg-based online grocer, \"FreshFetch\", needs a responsive product card grid for their store. The product cards display price in ZAR, discounts, product image, badge, rating, and an \"Add to Cart\" button. The layout must adapt from mobile screens to large desktop monitors.",
+  "brief": "Document the layout rules, spacing tokens, responsive behaviors, and text-truncation logic for the product card. Ensure developer handoff is unambiguous regarding grid behavior.",
+  "deliverables": [
+    "Card layout blueprint detailing exact internal spacing (padding, gaps) and absolute dimensions (or flexible bounds)",
+    "Text-wrapping and truncation rules for long product titles (e.g. \"Organic Free-Range Extra Large Eggs 12 Pack\")",
+    "Responsive layout rules: grid columns and gaps at 3 standard breakpoints (320px, 768px, 1200px)",
+    "Interactive behaviors for the cart button (e.g., hover, loading, added state)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Write this as if it were a direct ticket for a frontend engineer. Address edge cases like slow-loading images and extremely long titles.",
+  "rubric": [
+    {
+      "key": "spacing",
+      "label": "Spacing & Typography Specs",
+      "description": "Are internal alignments and font hierarchies clearly defined?",
+      "weight": 30
+    },
+    {
+      "key": "responsive",
+      "label": "Responsive Grid Behavior",
+      "description": "Are the media query rules and grid behaviors clearly detailed for developers?",
+      "weight": 30
+    },
+    {
+      "key": "edge-cases",
+      "label": "Edge Case Handling",
+      "description": "Did the spec address text wrapping, placeholder images, and load states?",
+      "weight": 25
+    },
+    {
+      "key": "clarity",
+      "label": "Handoff Professionalism",
+      "description": "Is the document clear, logical, and structured for developers?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Developer specs",
+    "Responsive design systems",
+    "Grid layouts",
+    "UI edge cases"
+  ],
+  "relatedRoadmapIds": []
+}

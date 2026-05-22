@@ -1,0 +1,46 @@
+{
+  "id": "a11y-landing-page-audit",
+  "categoryId": "design-ux",
+  "topicId": "accessibility-a11y",
+  "level": "beginner",
+  "title": "Accessibility Audit of a Landing Page",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Audit a landing page against WCAG 2.1 AA and identify 5 failures with fixes.",
+  "scenario": "A startup's landing page has never been tested for accessibility. The marketing team says \"it looks fine\" but has never checked colour contrast, alt text, or keyboard navigation. You run a basic audit.",
+  "brief": "Audit a hypothetical landing page against WCAG 2.1 Level AA success criteria. Identify at least 5 failures and propose a fix for each.",
+  "deliverables": [
+    "A description of the hypothetical landing page (hero section, features, testimonials, CTA, footer)",
+    "At least 5 WCAG 2.1 AA failures with the specific success criterion violated (e.g., 1.4.3 Contrast)",
+    "A proposed fix for each failure with effort estimate (quick fix vs redesign)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The most common WCAG failures are: missing alt text, insufficient colour contrast, no keyboard focus indicators, and missing form labels. Start there.",
+  "rubric": [
+    {
+      "key": "page",
+      "label": "Page Description",
+      "description": "Is the hypothetical page plausible with enough detail to audit?",
+      "weight": 15
+    },
+    {
+      "key": "failures",
+      "label": "Failure Identification",
+      "description": "Are the 5 failures real WCAG violations with correct criterion references?",
+      "weight": 45
+    },
+    {
+      "key": "fixes",
+      "label": "Proposed Fixes",
+      "description": "Are the fixes correct, specific, and effort-estimated?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "WCAG auditing",
+    "Accessibility testing",
+    "Colour contrast",
+    "Semantic HTML"
+  ],
+  "relatedRoadmapIds": []
+}

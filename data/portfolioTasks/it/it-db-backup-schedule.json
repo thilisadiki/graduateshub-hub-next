@@ -1,0 +1,48 @@
+{
+  "id": "it-db-backup-schedule",
+  "categoryId": "it",
+  "topicId": "it-database-admin",
+  "level": "beginner",
+  "title": "Database Backup Schedule & Restore Validation Plan",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a professional database backup routine and restore validation workflow for an e-commerce database.",
+  "scenario": "A Durban-based online retail website runs its shop on a PostgreSQL database. Currently, the developer runs manual backups only before launching new features, storing them on their own laptop. If the database crashes, gets corrupted, or hit by ransomware, the company could lose weeks of customer orders and billing history.",
+  "brief": "Create a systematic backup schedule, draft a bash/batch backup script using standard CLI tools, and write a restore testing procedure to verify backup integrity.",
+  "deliverables": [
+    "A backup schedule matrix detailing frequency (Full, Incremental, and transaction/WAL logs), retention rules, and secure storage locations (applying offsite/cloud separation)",
+    "A robust backup shell script or command set using standard utilities (e.g. pg_dump for PostgreSQL or mysqldump for MySQL) that incorporates timestamping and basic logging",
+    "A step-by-step restore validation guide detailing how an administrator tests restoring the backup onto a staging environment, including table/data checking queries"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A backup is only as good as its restore. Focus heavily on the validation guide. Explain how to verify that the restored database is structurally sound and data is uncorrupted.",
+  "rubric": [
+    {
+      "key": "schedule",
+      "label": "Backup Routine Architecture",
+      "description": "Is the backup strategy (Full/Incremental/Logs) robust, secure, and appropriate for transaction-heavy e-commerce?",
+      "weight": 35
+    },
+    {
+      "key": "script",
+      "label": "Automation & Script Quality",
+      "description": "Is the backup script functional, parameterized, and includes file naming conventions with timestamps?",
+      "weight": 35
+    },
+    {
+      "key": "validation",
+      "label": "Restore Verification",
+      "description": "Is the validation process comprehensive, with clear checks for database consistency, record counts, and connection testing?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Database backup strategies",
+    "SQL backup utilities",
+    "Bash/shell scripting for DBs",
+    "Restore validation protocols"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

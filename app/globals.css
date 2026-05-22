@@ -1,8 +1,46 @@
 @import "tailwindcss";
 
+/* ── Citrus Material 3 tokens ──────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary — dark mustard */
+  --primary:                  #7A5900;
+  --on-primary:               #FFFFFF;
+  --primary-container:        #FFDF9C;
+  --on-primary-container:     #261A00;
+
+  /* Secondary — warm brown */
+  --secondary:                #6C5D3F;
+  --secondary-container:      #F5E0BB;
+  --on-secondary-container:   #251A04;
+
+  /* Tertiary — deep forest green */
+  --tertiary:                 #4B6649;
+  --tertiary-container:       #CCECC8;
+  --on-tertiary-container:    #08210B;
+
+  /* Surfaces — warm cream scale */
+  --surface:                  #FFF8F1;
+  --surface-dim:              #DDD3C8;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low:    #FBF3EB;
+  --surface-container:        #F5EDE5;
+  --surface-container-high:   #EFE7DF;
+
+  /* Typography ink */
+  --on-surface:               #1F1B13;
+  --on-surface-variant:       #4F4639;
+
+  /* Hairlines */
+  --outline:                  #7C7061;
+  --outline-variant:          #D1C5B4;
+
+  /* Elevation */
+  --elev-1: 0 1px 2px rgba(0,0,0,0.10), 0 1px 3px 1px rgba(0,0,0,0.06);
+  --elev-2: 0 1px 2px rgba(0,0,0,0.10), 0 2px 6px 2px rgba(0,0,0,0.10);
+
+  /* Page background / foreground mapped from tokens */
+  --background: var(--surface);         /* #FFF8F1 warm cream */
+  --foreground: var(--on-surface);      /* #1F1B13 warm dark ink */
 }
 
 @theme inline {
@@ -11,14 +49,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-alison-green: #2d9e6e;
-  --color-primary: #0056D2;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Primary maps to the Citrus mustard */
+  --color-primary: #7A5900;
 }
 
 body {

@@ -1,0 +1,55 @@
+{
+  "id": "dashboard-realtime-websockets",
+  "categoryId": "web-development",
+  "topicId": "interactive-dashboard-layout",
+  "level": "advanced",
+  "title": "Real-Time Updates via WebSockets",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Transform a static dashboard into a live, real-time monitoring tool.",
+  "scenario": "The SaaS product is pivoting to high-frequency trading analytics. The dashboard must now display a live feed of stock prices and recent transactions. Polling the API every 5 seconds is crashing the server. The backend team has exposed a WebSocket endpoint for a live data stream.",
+  "brief": "Write the frontend architecture to consume a WebSocket data stream. 1) Establish and manage the WebSocket connection securely. 2) Listen for incoming \"transaction\" events and update the chart data in real-time. 3) Implement a reconnection strategy (exponential backoff) if the socket drops. 4) Ensure you are not causing severe performance issues by re-rendering the entire dashboard 10 times a second.",
+  "deliverables": [
+    "The custom hook (e.g., `useWebSocket`) managing the connection and exponential backoff retry logic",
+    "The state management code that appends new data points to the chart without freezing the UI",
+    "A short note on how you would throttle or batch incoming messages if they arrive too fast"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on connection stability and render performance. Appending to an array in React state 50 times a second will kill the browser - explain your mitigation strategy.",
+  "rubric": [
+    {
+      "key": "socket",
+      "label": "WebSocket Management",
+      "description": "Is the connection opened, closed, and cleaned up properly on unmount?",
+      "weight": 30
+    },
+    {
+      "key": "retry",
+      "label": "Reconnection Strategy",
+      "description": "Is there a robust exponential backoff retry mechanism?",
+      "weight": 30
+    },
+    {
+      "key": "perf",
+      "label": "Render Performance",
+      "description": "Is the state updated efficiently (e.g., using functional state updates or batching)?",
+      "weight": 25
+    },
+    {
+      "key": "throttle",
+      "label": "Data Throttling",
+      "description": "Does the candidate understand how to handle high-frequency event bursts?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "WebSockets",
+    "Real-time Data",
+    "Exponential Backoff",
+    "React Render Performance",
+    "Data Throttling"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

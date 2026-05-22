@@ -1,0 +1,55 @@
+{
+  "id": "storytelling-slide-deck",
+  "categoryId": "data",
+  "topicId": "data-storytelling",
+  "level": "intermediate",
+  "title": "Build a Slide Deck from Data",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a 5-slide presentation for a non-technical audience from a dataset.",
+  "scenario": "A non-profit helping unemployed graduates wants to present their impact data to corporate sponsors. They have 3 years of data on graduates placed, salaries achieved, and retention rates. The audience is CEOs who will decide whether to continue funding.",
+  "brief": "Design a 5-slide presentation outline. For each slide, specify the headline, the visual (chart or key number), and the talking point. You do not need to build the slides — a detailed outline in Markdown is sufficient.",
+  "deliverables": [
+    "Slide 1: The opening hook (what grabs the sponsor's attention)",
+    "Slides 2-4: The evidence (each slide makes one point with one visual)",
+    "Slide 5: The ask (what the non-profit wants and why the data supports it)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Each slide should have exactly one point. If you need a second chart on a slide, you have two points — split it.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Narrative Structure",
+      "description": "Do the 5 slides tell a coherent story with a logical arc?",
+      "weight": 30
+    },
+    {
+      "key": "visuals",
+      "label": "Visual Choices",
+      "description": "Is each chart type appropriate for the data and audience?",
+      "weight": 25
+    },
+    {
+      "key": "audience",
+      "label": "Audience Awareness",
+      "description": "Is the language and framing appropriate for corporate CEOs?",
+      "weight": 25
+    },
+    {
+      "key": "ask",
+      "label": "The Ask",
+      "description": "Is the final ask specific, justified by the data, and compelling?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Presentation design",
+    "Data storytelling",
+    "Stakeholder communication",
+    "Visual design"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

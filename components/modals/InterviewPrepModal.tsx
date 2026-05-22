@@ -28,9 +28,9 @@ interface PrepResult {
 }
 
 const CATEGORY_STYLES: Record<string, { bg: string; text: string; border: string }> = {
-  Behavioural: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
-  Technical:   { bg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-200' },
-  Situational: { bg: 'bg-violet-50', text: 'text-violet-700', border: 'border-violet-200' },
+  Behavioural: { bg: 'bg-[#FFDF9C]/20', text: 'text-[#5a4000]', border: 'border-[#D1C5B4]' },
+  Technical:   { bg: 'bg-[#F5E0BB/20]', text: 'text-orange-700', border: 'border-orange-200' },
+  Situational: { bg: 'bg-[#F5E0BB/20]', text: 'text-violet-700', border: 'border-violet-200' },
 };
 
 function QuestionCard({ q, index }: { q: InterviewQuestion; index: number }) {
@@ -44,7 +44,7 @@ function QuestionCard({ q, index }: { q: InterviewQuestion; index: number }) {
         onClick={() => setOpen(o => !o)}
       >
         <div className="flex items-start gap-3 min-w-0">
-          <span className="shrink-0 w-7 h-7 rounded-full bg-orange-100 text-orange-700 text-sm font-black flex items-center justify-center mt-0.5">
+          <span className="shrink-0 w-7 h-7 rounded-full bg-[#F5E0BB/40] text-orange-700 text-sm font-black flex items-center justify-center mt-0.5">
             {index + 1}
           </span>
           <div className="min-w-0">
@@ -62,9 +62,9 @@ function QuestionCard({ q, index }: { q: InterviewQuestion; index: number }) {
       {open && (
         <div className="px-5 pb-5 flex flex-col gap-3 border-t border-gray-50">
           {/* Why they ask */}
-          <div className="flex items-start gap-2 bg-blue-50 rounded-lg p-3 mt-3">
-            <Lightbulb size={14} className="text-blue-500 shrink-0 mt-0.5" />
-            <p className="text-sm text-blue-900"><span className="font-semibold">Why they ask:</span> {q.why}</p>
+          <div className="flex items-start gap-2 bg-[#FFDF9C]/20 rounded-lg p-3 mt-3">
+            <Lightbulb size={14} className="text-primary shrink-0 mt-0.5" />
+            <p className="text-sm text-[#261A00]"><span className="font-semibold">Why they ask:</span> {q.why}</p>
           </div>
 
           {/* Sample answer */}
@@ -201,7 +201,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
               <button
                 type="submit"
                 disabled={isLoading || !jobTitle.trim() || turnstileToken === null}
-                className="self-end bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
+                className="self-end bg-[#6C5D3F] hover:bg-[#524633] disabled:bg-orange-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading
                   ? <><Loader2 size={18} className="animate-spin" /> Generating...</>
@@ -219,7 +219,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                       key={r}
                       type="button"
                       onClick={() => setJobTitle(r)}
-                      className="text-sm bg-orange-50 hover:bg-orange-100 text-orange-700 px-3 py-1.5 rounded-full transition-colors border border-orange-100"
+                      className="text-sm bg-[#F5E0BB/20] hover:bg-[#F5E0BB/40] text-orange-700 px-3 py-1.5 rounded-full transition-colors border border-orange-100"
                     >
                       {r}
                     </button>
@@ -252,10 +252,10 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                 <div className="flex flex-col gap-6 pb-8">
 
                   {/* Summary */}
-                  <div className="bg-orange-50 border border-orange-100 rounded-xl p-5">
+                  <div className="bg-[#F5E0BB/20] border border-orange-100 rounded-xl p-5">
                     <p className="font-bold text-orange-900 text-lg mb-1">
                       {result.jobTitle}
-                      <span className="ml-2 text-sm font-semibold text-orange-600 bg-orange-100 px-2 py-0.5 rounded-full">{result.experienceLevel}</span>
+                      <span className="ml-2 text-sm font-semibold text-[#6C5D3F] bg-[#F5E0BB/40] px-2 py-0.5 rounded-full">{result.experienceLevel}</span>
                     </p>
                     <p className="text-orange-800 text-sm leading-relaxed">{result.summary}</p>
                   </div>
@@ -280,7 +280,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                   {result.prepTips.length > 0 && (
                     <div className="bg-white rounded-xl border border-gray-100 p-5">
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <Lightbulb size={16} className="text-blue-500" /> Preparation Tips
+                        <Lightbulb size={16} className="text-primary" /> Preparation Tips
                       </h4>
                       <ul className="flex flex-col gap-2">
                         {result.prepTips.map((tip, i) => (
@@ -318,7 +318,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                         {result.courses.map(course => (
                           <div key={course.id} className="flex flex-col gap-1">
                             {course.targetSkill && (
-                              <span className="text-xs font-bold text-orange-700 bg-orange-50 border border-orange-100 px-2.5 py-1 rounded-full self-start">
+                              <span className="text-xs font-bold text-orange-700 bg-[#F5E0BB/20] border border-orange-100 px-2.5 py-1 rounded-full self-start">
                                 Builds: {course.targetSkill}
                               </span>
                             )}

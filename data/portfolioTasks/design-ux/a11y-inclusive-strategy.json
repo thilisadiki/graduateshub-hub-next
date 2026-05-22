@@ -1,0 +1,53 @@
+{
+  "id": "a11y-inclusive-strategy",
+  "categoryId": "design-ux",
+  "topicId": "accessibility-a11y",
+  "level": "advanced",
+  "title": "Inclusive Design Strategy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Write an accessibility strategy for a product team: standards, tooling, and workflow.",
+  "scenario": "A 40-person product team (PMs, designers, developers, QA) has been ignoring accessibility for 3 years. The CEO just received a complaint from a visually impaired user. She wants an accessibility strategy — not just a checklist, but a cultural shift.",
+  "brief": "Write a comprehensive accessibility strategy that embeds a11y into every phase of the product development lifecycle. Cover standards, tooling, testing, and team education.",
+  "deliverables": [
+    "Standards adoption: which WCAG level to target (AA vs AAA) and which success criteria to prioritise",
+    "Tooling integration: automated tools (axe, Lighthouse), design plugins (Stark), and CI/CD integration",
+    "Testing cadence: when to test (design review, dev PR, QA, post-deploy) and who is responsible at each stage",
+    "Team education plan: how to train designers, developers, and QA on accessibility fundamentals"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Accessibility is not a QA gate at the end. It starts in design (colour contrast, focus states) and continues through development (semantic HTML, ARIA) and testing (screen reader, keyboard).",
+  "rubric": [
+    {
+      "key": "standards",
+      "label": "Standards Adoption",
+      "description": "Is the WCAG level appropriate with smart prioritisation?",
+      "weight": 25
+    },
+    {
+      "key": "tooling",
+      "label": "Tooling Integration",
+      "description": "Are the tools well-chosen and integrated into existing workflows?",
+      "weight": 25
+    },
+    {
+      "key": "testing",
+      "label": "Testing Cadence",
+      "description": "Is accessibility testing embedded at every stage (not just QA)?",
+      "weight": 25
+    },
+    {
+      "key": "education",
+      "label": "Team Education",
+      "description": "Is the education plan practical and role-specific?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Accessibility strategy",
+    "Inclusive design",
+    "Process design",
+    "Team education"
+  ],
+  "relatedRoadmapIds": []
+}

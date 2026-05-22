@@ -1,0 +1,47 @@
+{
+  "id": "ai-ab-test-analysis",
+  "categoryId": "ai-prompting",
+  "topicId": "ai-evaluation-benchmarking",
+  "level": "advanced",
+  "title": "Design an A/B Testing Framework",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Compare two different prompts in production and determine the winner statistically.",
+  "scenario": "Prompt A is short and uses zero-shot. Prompt B is long and uses few-shot. Both are live in your app, routing 50% of traffic to each. You need to design the framework to decide which one is actually better for the business.",
+  "brief": "Write an evaluation strategy document. How will you measure success beyond just \"the text looks nice\"?",
+  "deliverables": [
+    "The core business metric you will track (e.g., thumbs up/down, copy-paste events, latency)",
+    "The automated evaluation metrics (e.g., JSON parse failure rate)",
+    "A strategy for handling latency vs. quality trade-offs (Prompt B is better but takes 3 seconds longer to generate)",
+    "The threshold for declaring a \"winner\""
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Prompt engineering in production is an engineering discipline, not creative writing. Latency, token cost, and API failure rates matter just as much as prose quality.",
+  "rubric": [
+    {
+      "key": "business-metrics",
+      "label": "Business Metrics",
+      "description": "Are the chosen metrics tied to user behaviour or system health?",
+      "weight": 35
+    },
+    {
+      "key": "trade-offs",
+      "label": "Trade-off Analysis",
+      "description": "Is the analysis of latency vs quality realistic for a production app?",
+      "weight": 35
+    },
+    {
+      "key": "rigor",
+      "label": "Testing Rigor",
+      "description": "Is the criteria for declaring a winner statistically/logically sound?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "A/B testing",
+    "Production LLMOps",
+    "Metrics definition",
+    "Trade-off analysis"
+  ],
+  "relatedRoadmapIds": []
+}

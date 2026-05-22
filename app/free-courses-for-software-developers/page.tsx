@@ -83,9 +83,9 @@ const coreSkills = [
   { skill: 'JavaScript', level: 'Foundation', color: 'bg-green-100 text-green-700 border-green-200' },
   { skill: 'Python or Java', level: 'Foundation', color: 'bg-green-100 text-green-700 border-green-200' },
   { skill: 'Git & Version Control', level: 'Foundation', color: 'bg-green-100 text-green-700 border-green-200' },
-  { skill: 'Agile & Scrum', level: 'Intermediate', color: 'bg-blue-100 text-blue-700 border-blue-200' },
-  { skill: 'APIs & Backend Development', level: 'Intermediate', color: 'bg-blue-100 text-blue-700 border-blue-200' },
-  { skill: 'Databases (SQL / NoSQL)', level: 'Intermediate', color: 'bg-blue-100 text-blue-700 border-blue-200' },
+  { skill: 'Agile & Scrum', level: 'Intermediate', color: 'bg-[#FFDF9C]/40 text-[#5a4000] border-[#D1C5B4]' },
+  { skill: 'APIs & Backend Development', level: 'Intermediate', color: 'bg-[#FFDF9C]/40 text-[#5a4000] border-[#D1C5B4]' },
+  { skill: 'Databases (SQL / NoSQL)', level: 'Intermediate', color: 'bg-[#FFDF9C]/40 text-[#5a4000] border-[#D1C5B4]' },
   { skill: 'DevOps & CI/CD', level: 'Advanced', color: 'bg-purple-100 text-purple-700 border-purple-200' },
   { skill: 'System Design & Architecture', level: 'Advanced', color: 'bg-purple-100 text-purple-700 border-purple-200' },
   { skill: 'Microservices & Cloud', level: 'Advanced', color: 'bg-purple-100 text-purple-700 border-purple-200' },
@@ -154,7 +154,7 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
           <p className="text-gray-500 mb-8">Before choosing courses, understand which skills to build, and in which order.</p>
           <div className="flex flex-wrap gap-3 mb-6">
             <span className="flex items-center gap-1.5 text-xs font-bold text-green-700 bg-green-100 border border-green-200 px-3 py-1 rounded-full">Foundation</span>
-            <span className="flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-100 border border-blue-200 px-3 py-1 rounded-full">Intermediate</span>
+            <span className="flex items-center gap-1.5 text-xs font-bold text-[#5a4000] bg-[#FFDF9C]/40 border border-[#D1C5B4] px-3 py-1 rounded-full">Intermediate</span>
             <span className="flex items-center gap-1.5 text-xs font-bold text-purple-700 bg-purple-100 border border-purple-200 px-3 py-1 rounded-full">Advanced</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -173,9 +173,9 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
       carouselSubtitle="Explore further with highly rated courses in engineering and development"
       postCarouselSection={
         <>
-          <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Best Learning Path for Software Developers</h2>
-            <p className="text-blue-100 mb-10">If you are starting from scratch, follow this roadmap to go from beginner to job-ready.</p>
+            <p className="text-[#FFDF9C] mb-10">If you are starting from scratch, follow this roadmap to go from beginner to job-ready.</p>
             <div className="flex flex-col md:flex-row items-start gap-0 md:gap-0">
               {[
                 { step: '1', title: 'Learn the Basics', detail: 'HTML, CSS, and a programming language (Python or JavaScript). Build your first simple project.' },
@@ -187,10 +187,10 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
                   <div className="flex flex-col items-start md:items-center w-full md:flex-1">
                     <div className="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center font-extrabold text-lg mb-4 shrink-0">{step}</div>
                     <h3 className="font-bold text-white text-base mb-2">{title}</h3>
-                    <p className="text-blue-100 text-sm leading-relaxed">{detail}</p>
+                    <p className="text-[#FFDF9C] text-sm leading-relaxed">{detail}</p>
                   </div>
                   {idx < arr.length - 1 && (
-                    <ArrowRight size={24} className="text-blue-300 shrink-0 my-6 md:my-0 md:mx-4 rotate-90 md:rotate-0 self-center" />
+                    <ArrowRight size={24} className="text-[#FFDF9C] shrink-0 my-6 md:my-0 md:mx-4 rotate-90 md:rotate-0 self-center" />
                   )}
                 </div>
               ))}

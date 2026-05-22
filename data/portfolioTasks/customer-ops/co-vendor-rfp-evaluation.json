@@ -1,0 +1,46 @@
+{
+  "id": "co-vendor-rfp-evaluation",
+  "categoryId": "customer-ops",
+  "topicId": "vendor-supplier-management",
+  "level": "advanced",
+  "title": "Evaluate an RFP (Request for Proposal)",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Score three BPO (call centre) vendors and recommend a winner.",
+  "scenario": "Your startup is scaling and needs to outsource weekend customer support. You issued an RFP. You have received three proposals: Vendor A (Cheapest, based offshore), Vendor B (Mid-price, local but new), Vendor C (Expensive, highly experienced local).",
+  "brief": "Create a scoring matrix to evaluate the three vendors objectively, score them based on the provided profiles, and write a recommendation memo to the CEO.",
+  "deliverables": [
+    "An evaluation matrix with 4 to 5 weighted criteria (e.g., Cost, Language/Accent, Tech Stack, SLA Guarantee)",
+    "The completed scoring for Vendors A, B, and C",
+    "A 1-page recommendation memo to the CEO defending your choice"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not just pick the cheapest. Think about the brand impact. The CEO will look at your matrix to see if your recommendation is based on logic or gut feel.",
+  "rubric": [
+    {
+      "key": "matrix",
+      "label": "Matrix Design",
+      "description": "Are the criteria and weights aligned with a customer support rollout?",
+      "weight": 35
+    },
+    {
+      "key": "scoring",
+      "label": "Objective Scoring",
+      "description": "Are the scores logically applied based on the vendor profiles?",
+      "weight": 30
+    },
+    {
+      "key": "memo",
+      "label": "Executive Memo",
+      "description": "Does the memo confidently defend the ROI of the chosen vendor?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "RFP evaluation",
+    "Vendor selection",
+    "Executive communication",
+    "Cost-benefit analysis"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,45 @@
+{
+  "id": "ai-summarise-long-doc",
+  "categoryId": "ai-prompting",
+  "topicId": "context-window-management",
+  "level": "beginner",
+  "title": "Summarise a Massive Document",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a prompt to distil a 50-page PDF into a 1-page executive summary.",
+  "scenario": "You have a 50-page local government gazette outlining new compliance regulations. You need to feed this to an LLM, but if you just say \"summarise this\", it will give you a generic, useless paragraph.",
+  "brief": "Write a highly structured summarisation prompt that extracts the key dates, penalties, and action items from a massive input text.",
+  "deliverables": [
+    "The Summarisation Prompt",
+    "The required output structure (e.g., \"1. TL;DR, 2. Key Deadlines, 3. Penalties, 4. Required Actions\")",
+    "Instructions to the AI on what to ignore (e.g., \"Ignore preamble, background history, and table of contents\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The quality of a summary is defined by its structure. Tell the AI exactly what \"lenses\" to look through when reading the document.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Output Structure",
+      "description": "Is the requested summary format highly structured and business-focused?",
+      "weight": 40
+    },
+    {
+      "key": "extraction-focus",
+      "label": "Extraction Directives",
+      "description": "Does the prompt specifically ask for dates, numbers, and action items?",
+      "weight": 30
+    },
+    {
+      "key": "noise-reduction",
+      "label": "Noise Reduction",
+      "description": "Are there clear instructions on what sections of the document to ignore?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Document summarisation",
+    "Information extraction",
+    "Context management"
+  ],
+  "relatedRoadmapIds": []
+}

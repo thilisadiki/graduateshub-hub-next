@@ -1,0 +1,55 @@
+{
+  "id": "social-media-crisis-playbook",
+  "categoryId": "digital-marketing",
+  "topicId": "social-media-audit",
+  "level": "advanced",
+  "title": "Crisis Communication Playbook",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "A brand faces a viral complaint. Design the response strategy and 48-hour action plan.",
+  "scenario": "A popular South African fast-food chain served a customer a meal with a foreign object inside. The customer posted a video on X (Twitter) that has gone viral with 50,000 views in 4 hours. Journalists are starting to pick it up. The brand has not responded yet.",
+  "brief": "Design a complete crisis communication playbook. Cover the immediate response (first 2 hours), the next 48 hours, and the longer-term reputation recovery. You must draft the actual social media response.",
+  "deliverables": [
+    "A triage decision tree: how severe is this? (cosmetic issue vs health risk vs legal exposure)",
+    "The drafted social media response (tone, content, what NOT to say)",
+    "A 48-hour action plan with specific steps, owners, and channels (social, PR, internal comms)",
+    "A post-crisis review framework: what to measure 30 days later to assess reputational recovery"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The first response sets the tone for everything. A defensive or legalistic reply will make it worse. Show empathy first, accountability second, action third.",
+  "rubric": [
+    {
+      "key": "triage",
+      "label": "Crisis Triage",
+      "description": "Is the severity assessment structured and the escalation path clear?",
+      "weight": 25
+    },
+    {
+      "key": "response",
+      "label": "Drafted Response",
+      "description": "Is the response empathetic, specific, and free of corporate jargon?",
+      "weight": 30
+    },
+    {
+      "key": "plan",
+      "label": "48-Hour Plan",
+      "description": "Is the action plan comprehensive with clear ownership across channels?",
+      "weight": 25
+    },
+    {
+      "key": "recovery",
+      "label": "Recovery Framework",
+      "description": "Are the 30-day metrics meaningful indicators of reputational recovery?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Crisis communication",
+    "Reputation management",
+    "Social media strategy",
+    "Stakeholder management"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

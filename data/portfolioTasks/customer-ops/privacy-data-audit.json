@@ -1,0 +1,47 @@
+{
+  "id": "privacy-data-audit",
+  "categoryId": "customer-ops",
+  "topicId": "data-privacy-gdpr-popia",
+  "level": "intermediate",
+  "title": "Data Mapping and Privacy Audit for a Local Insurtech",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Map personal information flows and audit compliance against POPIA principles.",
+  "scenario": "\"PayGuard\", a Johannesburg-based digital insurance broker, collects user names, IDs, banking details, and location data. They store this in Firebase, send emails via Mailchimp, and use WhatsApp for support. They have never mapped their data flows or registered an Information Officer.",
+  "brief": "Conduct a data mapping audit. Map how personal information enters the system, where it is stored, who has access, and identify 3 critical security risks under POPIA.",
+  "deliverables": [
+    "A data inventory table detailing data types, collection points, storage locations, and third-party tools used",
+    "A visual data flow map description showing transfer paths of Personally Identifiable Information (PII)",
+    "Identification of 3 POPIA compliance gaps (e.g. cross-border transfers, lack of consent check boxes) with concrete remediation steps",
+    "A list of duties and registration requirements for the company's designated Information Officer"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Address cross-border data transfer regulations (POPIA Section 72) since Mailchimp and Firebase host data outside South Africa.",
+  "rubric": [
+    {
+      "key": "data-mapping",
+      "label": "Data Mapping Accuracy",
+      "description": "Is the data inventory comprehensive and are the data flows mapped clearly?",
+      "weight": 35
+    },
+    {
+      "key": "gap-analysis",
+      "label": "POPIA Compliance Gaps",
+      "description": "Are the 3 identified risks legally valid under POPIA (e.g. cross-border transfer laws)?",
+      "weight": 35
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Steps",
+      "description": "Are the remediation recommendations practical for a small technology firm?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Data privacy audit",
+    "POPIA Section 72",
+    "Data flow mapping",
+    "Compliance management"
+  ],
+  "relatedRoadmapIds": []
+}

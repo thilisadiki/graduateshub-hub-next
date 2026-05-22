@@ -245,7 +245,7 @@ export default async function BlogPostPage({
         {/* Back link */}
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors text-sm mb-8"
+          className="inline-flex items-center gap-2 text-primary font-bold hover:text-[#261A00] transition-colors text-sm mb-8"
         >
           <ArrowLeft size={16} /> Back to Blog
         </Link>
@@ -267,7 +267,7 @@ export default async function BlogPostPage({
             {categories.map((cat: any) => (
               <span
                 key={cat.id}
-                className="text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full"
+                className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full"
               >
                 {cat.name}
               </span>
@@ -295,7 +295,7 @@ export default async function BlogPostPage({
                 className="rounded-full shrink-0"
               />
             ) : (
-              <div className="w-16 h-16 rounded-full bg-blue-100 text-primary flex items-center justify-center shrink-0">
+              <div className="w-16 h-16 rounded-full bg-[#FFDF9C]/40 text-primary flex items-center justify-center shrink-0">
                 <UserRound size={28} />
               </div>
             )}
@@ -347,13 +347,13 @@ export default async function BlogPostPage({
         <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors text-sm"
+            className="inline-flex items-center gap-2 text-primary font-bold hover:text-[#261A00] transition-colors text-sm"
           >
             <ArrowLeft size={16} /> All Articles
           </Link>
           <Link
             href="/search"
-            className="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm"
+            className="bg-primary hover:bg-[#5a4000] text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm"
           >
             Find a Free Course →
           </Link>

@@ -1,0 +1,46 @@
+{
+  "id": "ai-research-writer-pipeline",
+  "categoryId": "ai-prompting",
+  "topicId": "agent-flow-design",
+  "level": "intermediate",
+  "title": "Map a Researcher-Writer Flow",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a two-agent system where one AI researches and the other writes.",
+  "scenario": "A marketing team wants an automated blog pipeline. They want to give a topic (\"The Future of SA Retail\"). Agent 1 (The Researcher) must search the web and compile facts. Agent 2 (The Writer) takes those facts and writes the blog post.",
+  "brief": "Design the interaction protocol between these two agents. Write the System Prompts for both, and define the data structure that Agent 1 passes to Agent 2.",
+  "deliverables": [
+    "The System Prompt for Agent 1 (The Researcher)",
+    "The System Prompt for Agent 2 (The Writer)",
+    "The intermediate JSON schema (The \"Brief\" that Agent 1 outputs for Agent 2 to read)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Decoupling tasks makes AI much more reliable. The Researcher should only care about facts and links. The Writer should only care about prose and tone. If the Researcher writes paragraphs, it is doing the Writer's job.",
+  "rubric": [
+    {
+      "key": "role-separation",
+      "label": "Separation of Concerns",
+      "description": "Are the roles of Researcher and Writer strictly distinct?",
+      "weight": 40
+    },
+    {
+      "key": "data-handoff",
+      "label": "Data Handoff Schema",
+      "description": "Is the JSON schema from Researcher to Writer well-structured and comprehensive?",
+      "weight": 30
+    },
+    {
+      "key": "writer-constraints",
+      "label": "Writer Constraints",
+      "description": "Is the Writer forced to *only* use facts provided by the Researcher?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Multi-agent pipelines",
+    "Data schemas",
+    "Role prompting",
+    "Separation of concerns"
+  ],
+  "relatedRoadmapIds": []
+}

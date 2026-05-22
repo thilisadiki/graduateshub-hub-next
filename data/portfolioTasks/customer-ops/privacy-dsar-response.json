@@ -1,0 +1,46 @@
+{
+  "id": "privacy-dsar-response",
+  "categoryId": "customer-ops",
+  "topicId": "data-privacy-gdpr-popia",
+  "level": "beginner",
+  "title": "POPIA Data Subject Access Request (DSAR) Response Flow",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Handle a POPIA Section 23 request from a customer asking to delete their personal data.",
+  "scenario": "A customer contact center for \"SA-Gifts\" (an online portal) receives an email requesting access to and deletion of all personal data under the Protection of Personal Information Act (POPIA). The customer support agent has never handled a POPIA request before and is unsure what data can be deleted and what must be kept for tax purposes.",
+  "brief": "Write a standard response protocol for handling a POPIA Section 23 request, including identity verification and a response template.",
+  "deliverables": [
+    "A checklist for verifying the identity of the requester securely before disclosing information",
+    "A standard draft response email informing the user what data is being deleted and what must legally be retained (SARS compliance)",
+    "An internal action checklist for the database administrator indicating where customer records must be anonymised"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Acknowledge that under SA tax law (SARS), transaction and invoicing history must be kept for 5 years, even if a user requests deletion under POPIA.",
+  "rubric": [
+    {
+      "key": "verification",
+      "label": "Identity Verification",
+      "description": "Is the verification process secure without creating excessive user friction?",
+      "weight": 35
+    },
+    {
+      "key": "template",
+      "label": "Response Draft Quality",
+      "description": "Is the email polite, legal-compliant (POPIA vs. SARS), and free of confusing jargon?",
+      "weight": 35
+    },
+    {
+      "key": "internal",
+      "label": "Internal Workflow",
+      "description": "Are the database anonymisation steps clear and compliant?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "POPIA compliance",
+    "Customer data privacy",
+    "DSAR workflows",
+    "Email templates"
+  ],
+  "relatedRoadmapIds": []
+}

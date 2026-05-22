@@ -1,0 +1,45 @@
+{
+  "id": "ai-agent-handoff-logic",
+  "categoryId": "ai-prompting",
+  "topicId": "agent-flow-design",
+  "level": "beginner",
+  "title": "Design an Agent Handoff",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write the rules for when a basic chatbot should escalate to a specialized AI.",
+  "scenario": "You are building a multi-agent system for a travel agency. The \"Greeter Agent\" talks to the user first. If the user asks about flights, the Greeter must pass the conversation to the \"Flight Booking Agent\". If the user asks about hotels, it passes to the \"Hotel Agent\".",
+  "brief": "Write the System Prompt for the Greeter Agent defining exactly how and when it should hand off the conversation to the specialist agents.",
+  "deliverables": [
+    "The Greeter Agent System Prompt",
+    "The exact trigger commands the Greeter must output to initiate a handoff (e.g., `[TRANSFER: FLIGHTS]`)",
+    "Rules for handling ambiguous requests (e.g., \"I need a flight and a hotel for next week\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Routing is the hardest part of basic multi-agent systems. The Greeter must not try to book the flight itself. It must be strictly constrained to gathering intent and routing.",
+  "rubric": [
+    {
+      "key": "routing-logic",
+      "label": "Routing Strictness",
+      "description": "Is the Greeter strictly forbidden from answering domain-specific questions?",
+      "weight": 40
+    },
+    {
+      "key": "trigger-format",
+      "label": "Trigger Formatting",
+      "description": "Are the handoff triggers easily parsable by a backend system?",
+      "weight": 30
+    },
+    {
+      "key": "ambiguity",
+      "label": "Ambiguity Handling",
+      "description": "Does the prompt handle compound requests logically?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Agent routing",
+    "Multi-agent systems",
+    "Constraint setting"
+  ],
+  "relatedRoadmapIds": []
+}

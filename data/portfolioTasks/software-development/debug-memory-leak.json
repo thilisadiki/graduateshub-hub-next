@@ -1,0 +1,49 @@
+{
+  "id": "debug-memory-leak",
+  "categoryId": "software-development",
+  "topicId": "debug-fix",
+  "level": "intermediate",
+  "title": "Memory Leak in an Event Listener",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Diagnose and fix a React memory leak caused by un-garbage-collected DOM nodes.",
+  "scenario": "A single-page application is slowing down heavily after users navigate back and forth between a specific dashboard view. The browser profiler shows a massive spike in detached DOM nodes and event listeners that are never garbage collected.",
+  "brief": "You are provided with a React component snippet containing a custom window event listener inside a `useEffect`. The cleanup function is missing. Write the corrected component, explain exactly why the memory leak occurred, and describe how to verify the fix using Chrome DevTools.",
+  "deliverables": [
+    "The corrected React component snippet with proper cleanup",
+    "A technical explanation of why detached event listeners cause memory leaks in SPAs",
+    "A step-by-step guide on how to verify the leak is fixed using the Memory tab in Chrome DevTools"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on the `useEffect` lifecycle. A perfect fix ensures the listener is removed when the component unmounts.",
+  "rubric": [
+    {
+      "key": "correctness",
+      "label": "Correct Fix",
+      "description": "Is the `useEffect` cleanup function implemented correctly?",
+      "weight": 35
+    },
+    {
+      "key": "explanation",
+      "label": "Root Cause Explanation",
+      "description": "Is the explanation of the memory leak technically accurate?",
+      "weight": 35
+    },
+    {
+      "key": "devtools",
+      "label": "DevTools Knowledge",
+      "description": "Are the instructions for using the Chrome Profiler accurate and clear?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "React lifecycle",
+    "Memory management",
+    "Chrome DevTools",
+    "Performance debugging"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "web-developer"
+  ]
+}

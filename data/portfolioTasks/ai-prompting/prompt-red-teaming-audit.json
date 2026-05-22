@@ -1,0 +1,48 @@
+{
+  "id": "prompt-red-teaming-audit",
+  "categoryId": "ai-prompting",
+  "topicId": "prompt-security-jailbreak",
+  "level": "advanced",
+  "title": "Enterprise Red-Teaming & Layered Defense System Prompt",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 hours",
+  "tagline": "Perform a comprehensive red-teaming audit and design a production-grade layered defense system prompt.",
+  "scenario": "A global financial services firm is deploying a wealth-advisor agent. A security breach could lead to severe regulatory fines and financial liability. You are hired to conduct an extensive \"red-teaming\" security audit of the proposed system instructions, find advanced exploits (such as role-play, reverse psychology, base64 encoding, virtual sandboxes), and design a multi-layered defense prompt structure that withstands sophisticated attacks.",
+  "brief": "Perform a mock red-teaming security audit on a financial advisor prompt, outline five advanced exploits, and develop a comprehensive system prompt employing layered defenses (XML tagging, LLM-level sandboxing, instruction priority, post-generation checks).",
+  "deliverables": [
+    "A red-teaming audit report detailing five advanced jailbreak methodologies and how they would bypass a basic system prompt.",
+    "A production-grade wealth-advisor system prompt that incorporates XML delimiters, strict input containment wrappers, instruction hierarchy, and output sanitization instructions.",
+    "Five test cases demonstrating how the advanced exploits are successfully blocked by the layered defense prompt.",
+    "A policy recommendation for continuous security monitoring, automated adversarial training, and incident response guidelines."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Provide the red-teaming report and layered prompt design in a detailed, professional Markdown document. Use clear headings and structured code blocks for all prompt templates and test cases.",
+  "rubric": [
+    {
+      "key": "threat_modeling",
+      "label": "Threat Modeling & Exploit Paths",
+      "description": "Are the advanced exploit vectors explained clearly with realistic, sophisticated examples?",
+      "weight": 35
+    },
+    {
+      "key": "layered_defense_design",
+      "label": "Layered Defense Architecture",
+      "description": "Does the system prompt utilize advanced techniques (like XML schemas, input wrapping, instructions priority) effectively?",
+      "weight": 35
+    },
+    {
+      "key": "policy_safeguards",
+      "label": "Continuous Monitoring & Policy",
+      "description": "Are the security policies and continuous monitoring suggestions practical, scalable, and secure?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Red-teaming",
+    "Threat modeling",
+    "XML delimiters and data isolation",
+    "Layered prompt defense",
+    "AI security policy design"
+  ],
+  "relatedRoadmapIds": []
+}

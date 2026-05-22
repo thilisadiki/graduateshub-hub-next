@@ -1,0 +1,48 @@
+{
+  "id": "docker-optimize-image",
+  "categoryId": "software-development",
+  "topicId": "container-orchestration",
+  "level": "beginner",
+  "title": "Optimize a Node.js Dockerfile",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Shrink a bloated 1GB Docker image down to under 150MB.",
+  "scenario": "A junior developer wrote a `Dockerfile` for a simple Node.js Express API. The resulting image is 1.2GB because they used the `node:latest` base image, copied the `node_modules` folder from their local machine, and ran as the `root` user.",
+  "brief": "Rewrite the Dockerfile. Use a smaller base image (e.g., Alpine), utilize multi-stage builds to exclude development dependencies (`devDependencies`), and ensure the container runs as a non-root user for security.",
+  "deliverables": [
+    "The optimized `Dockerfile`",
+    "An explanation of why multi-stage builds are critical for compiled languages (or for trimming `devDependencies` in Node)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good Dockerfile should cache the `package.json` install step separately from the source code copy step to speed up rebuilds.",
+  "rubric": [
+    {
+      "key": "base-image",
+      "label": "Base Image Selection",
+      "description": "Is a lightweight base image (like Alpine or Slim) used?",
+      "weight": 35
+    },
+    {
+      "key": "security",
+      "label": "Least Privilege",
+      "description": "Is the container running as a non-root `node` user?",
+      "weight": 35
+    },
+    {
+      "key": "caching",
+      "label": "Layer Caching",
+      "description": "Are the `COPY package.json` and `RUN npm ci` steps placed before copying the rest of the source code?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Docker",
+    "Container Optimization",
+    "Security (Non-Root)",
+    "Layer Caching"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

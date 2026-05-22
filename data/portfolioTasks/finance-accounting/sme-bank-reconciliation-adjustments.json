@@ -1,0 +1,54 @@
+{
+  "id": "sme-bank-reconciliation-adjustments",
+  "categoryId": "finance-accounting",
+  "topicId": "sme-bookkeeping-cloud-accounting",
+  "level": "intermediate",
+  "title": "Reconcile a Bank Statement and Post Adjusting Journals",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Resolve complex unreconciled bank items and post month-end adjusting journals.",
+  "scenario": "A retail startup has linked its bank account to cloud accounting software. However, the automated bank feed has left 15 complex transactions unreconciled (including merchant fee deductions, cash withdrawals, customer overpayments, and prepayments).",
+  "brief": "Resolve the unreconciled transactions. Perform the bank reconciliation, create adjusting journal entries (for accrued expenses, prepayments, and depreciation), and draft the month-end bank reconciliation statement.",
+  "deliverables": [
+    "Completed bank reconciliation ledger showing matching balance per bank vs balance per books.",
+    "General journal entries for the adjusting transactions (depreciation, prepayments, accruals).",
+    "Explanation of how to handle unallocated customer deposits and bank charges in cloud software (Xero or QuickBooks)."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Provide your reconciliations and adjusting journals in Markdown tables. Include clear, step-by-step descriptions of the reconciliation steps.",
+  "rubric": [
+    {
+      "key": "reconciliation_accuracy",
+      "label": "Reconciliation Accuracy",
+      "description": "Were unreconciled transactions resolved correctly and does the bank reconciliation balance?",
+      "weight": 35
+    },
+    {
+      "key": "adjusting_journals",
+      "label": "Adjusting Journal Entries",
+      "description": "Are month-end adjustments (depreciation, prepayments, accruals) computed and posted correctly?",
+      "weight": 30
+    },
+    {
+      "key": "cloud_best_practices",
+      "label": "Cloud Matching Logic",
+      "description": "Does the candidate show correct knowledge of Xero/QuickBooks matching and feed rules?",
+      "weight": 20
+    },
+    {
+      "key": "reporting",
+      "label": "Reconciliation Statement",
+      "description": "Is the final reconciliation statement clear, structured, and audit-ready?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Bank reconciliation",
+    "Adjusting journal entries",
+    "Accruals & Prepayments",
+    "Xero/QuickBooks matching"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

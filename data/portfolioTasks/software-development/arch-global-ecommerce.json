@@ -1,0 +1,49 @@
+{
+  "id": "arch-global-ecommerce",
+  "categoryId": "software-development",
+  "topicId": "system-architecture-design",
+  "level": "advanced",
+  "title": "Architect a Global E-commerce Platform",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Design a high-availability microservices architecture for Black Friday traffic.",
+  "scenario": "A global fashion retailer is preparing for Black Friday. Last year, their monolithic application crashed under the load. They have asked you to redesign the system using microservices to ensure the site stays up, even if the payment provider is temporarily slow.",
+  "brief": "Design a resilient microservices architecture. Focus on decoupling the Order Service from the Inventory Service and Payment Service. Explain how you will handle high-traffic spikes, eventual consistency, and graceful degradation.",
+  "deliverables": [
+    "A comprehensive system diagram showing the API Gateway, microservices, databases, and message queues",
+    "An explanation of how an order is processed asynchronously (e.g., using the Saga pattern or an event bus)",
+    "A strategy for gracefully degrading the UI (e.g., disabling the recommendation engine) if under extreme load"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on fault tolerance. What happens if the Inventory service goes down right as a user clicks \"Buy\"? Your architecture must not drop the order.",
+  "rubric": [
+    {
+      "key": "decoupling",
+      "label": "Service Decoupling",
+      "description": "Are the microservices logically separated with their own databases?",
+      "weight": 30
+    },
+    {
+      "key": "async",
+      "label": "Asynchronous Processing",
+      "description": "Is a message queue used correctly to handle order fulfillment?",
+      "weight": 35
+    },
+    {
+      "key": "resilience",
+      "label": "Fault Tolerance",
+      "description": "Are strategies like retries, circuit breakers, or graceful degradation present?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Microservices",
+    "Event-Driven Architecture",
+    "Fault Tolerance",
+    "System Resilience"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

@@ -287,7 +287,7 @@ export default function GuidesPage() {
 
         {/* Page Hero */}
         <div className="max-w-3xl mb-14">
-          <span className="inline-block text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-4">
+          <span className="inline-block text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-3 py-1 rounded-full mb-4">
             {ALL_GUIDES.length} Guides · Updated 2026
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
@@ -299,7 +299,7 @@ export default function GuidesPage() {
           </p>
           <p className="text-gray-500 text-base leading-relaxed">
             We do not publish guides outside our areas of expertise. That is why you will not find health, Food or language guides here. Only fields where we have practitioners we trust.{' '}
-            <Link href="/curation-policy" className="text-primary font-medium hover:text-blue-800 transition-colors">
+            <Link href="/curation-policy" className="text-primary font-medium hover:text-[#261A00] transition-colors">
               Read our curation policy →
             </Link>
           </p>
@@ -342,7 +342,7 @@ export default function GuidesPage() {
                   className="group bg-white border border-gray-100 rounded-xl p-6 hover:border-primary hover:shadow-md transition-all flex flex-col gap-4"
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <span className="text-xs font-bold text-primary bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full shrink-0">
+                    <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full shrink-0">
                       {guide.badge}
                     </span>
                     <span className="text-xs text-gray-400 shrink-0 mt-1">Updated {guide.lastUpdated}</span>
@@ -366,18 +366,18 @@ export default function GuidesPage() {
         ))}
 
         {/* Career Roadmaps CTA */}
-        <section className="mb-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white">
+        <section className="mb-14 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 lg:p-10 text-white">
           <div className="flex flex-col lg:flex-row lg:items-center gap-6 justify-between">
             <div>
               <span className="text-xs font-bold bg-white/20 text-white px-2.5 py-1 rounded-full mb-3 inline-block">New</span>
               <h2 className="text-2xl font-extrabold mb-2">Not sure which courses to take?</h2>
-              <p className="text-blue-100 text-sm max-w-xl leading-relaxed">
+              <p className="text-[#FFDF9C] text-sm max-w-xl leading-relaxed">
                 Our Career Roadmaps go further than guides. Each one maps the full path from zero experience to job-ready, with specific stages, free courses at every step, certifications worth getting, and portfolio project ideas.
               </p>
             </div>
             <Link
               href="/career-roadmaps"
-              className="shrink-0 bg-white text-primary hover:bg-blue-50 font-bold px-7 py-3.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+              className="shrink-0 bg-white text-primary hover:bg-[#FFDF9C]/20 font-bold px-7 py-3.5 rounded-xl transition-colors text-sm whitespace-nowrap"
             >
               Explore Career Roadmaps →
             </Link>
@@ -395,7 +395,7 @@ export default function GuidesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#FFDF9C]/20 flex items-center justify-center shrink-0">
                 <Users size={20} className="text-primary" />
               </div>
               <h3 className="font-bold text-gray-900">Specialist-curated</h3>
@@ -404,19 +404,19 @@ export default function GuidesPage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#FFDF9C]/20 flex items-center justify-center shrink-0">
                 <CheckCircle2 size={20} className="text-primary" />
               </div>
               <h3 className="font-bold text-gray-900">No filler courses</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Every course on every list is manually reviewed against five criteria: provider credibility, curriculum depth, certificate value, accessibility, and learner outcome data.{' '}
-                <Link href="/curation-policy" className="text-primary font-medium hover:text-blue-800 transition-colors">
+                <Link href="/curation-policy" className="text-primary font-medium hover:text-[#261A00] transition-colors">
                   See our standards
                 </Link>
               </p>
             </div>
             <div className="flex flex-col items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#FFDF9C]/20 flex items-center justify-center shrink-0">
                 <RefreshCw size={20} className="text-primary" />
               </div>
               <h3 className="font-bold text-gray-900">Updated regularly</h3>
@@ -472,7 +472,7 @@ export default function GuidesPage() {
           </div>
           <div className="mt-6 pt-5 border-t border-gray-100 flex items-center justify-between flex-wrap gap-3">
             <p className="text-xs text-gray-400">Want to understand exactly how courses are selected?</p>
-            <Link href="/curation-policy" className="text-xs font-bold text-primary hover:text-blue-800 transition-colors">
+            <Link href="/curation-policy" className="text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
               Read the Curation Policy →
             </Link>
           </div>
@@ -481,14 +481,14 @@ export default function GuidesPage() {
         {/* Closing CTA */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-primary rounded-2xl p-8 flex flex-col gap-3">
-            <BookOpen size={28} className="text-blue-200" strokeWidth={1.5} />
+            <BookOpen size={28} className="text-[#FFDF9C]" strokeWidth={1.5} />
             <h3 className="font-extrabold text-white text-lg">Looking for a specific course?</h3>
-            <p className="text-blue-100 text-sm leading-relaxed">
+            <p className="text-[#FFDF9C] text-sm leading-relaxed">
               Search across hundreds of free certified courses by topic, platform, or skill level.
             </p>
             <Link
               href="/search"
-              className="mt-2 self-start bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-blue-50 transition-colors"
+              className="mt-2 self-start bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors"
             >
               Search Free Courses →
             </Link>

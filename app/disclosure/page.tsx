@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 
 export default function DisclosurePage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <div className="bg-slate-900 text-white py-12 px-6">
+    <div className="min-h-screen bg-[#FFF8F1] flex flex-col">
+      <div className="bg-[#1F1B13] text-white py-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-extrabold">Affiliate <span className="text-primary">Disclosure</span></h1>
-          <p className="text-gray-400 mt-4">Transparency is important to us.</p>
+          <p className="text-[#D1C5B4] mt-4">Transparency is important to us.</p>
         </div>
       </div>
 
@@ -37,8 +37,8 @@ export default function DisclosurePage() {
         <h2>Our Commitment</h2>
         <p>Our primary goal is to curate and organize the best free educational resources to help you achieve your learning and career goals. We only promote courses and materials that we believe offer genuine value to our users.</p>
 
-        <div className="bg-blue-50 border-l-4 border-primary p-6 mt-8 rounded-r-lg not-prose">
-          <p className="m-0 text-blue-800 font-medium">By using Graduates Hub, you acknowledge and agree to this affiliate relationship. Thank you for your support!</p>
+        <div className="bg-[#FFDF9C]/30 border-l-4 border-primary p-6 mt-8 rounded-r-lg not-prose">
+          <p className="m-0 text-[#261A00] font-medium">By using Graduates Hub, you acknowledge and agree to this affiliate relationship. Thank you for your support!</p>
         </div>
       </main>
     </div>

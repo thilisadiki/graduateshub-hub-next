@@ -1,0 +1,55 @@
+{
+  "id": "it-compliance-popia-checklist",
+  "categoryId": "it",
+  "topicId": "it-compliance-governance",
+  "level": "beginner",
+  "title": "POPIA-Ready Data Handling Checklist",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Translate POPIA obligations into a practical IT data handling checklist for an SA SME.",
+  "scenario": "A 35-person SA recruitment agency has never formally documented how it handles personal information. Candidates submit ID numbers, qualifications, and references via email; data sits on shared drives indefinitely. The director wants a checklist that brings the agency into POPIA-acceptable practice without enterprise tooling.",
+  "brief": "Produce a POPIA-aligned data handling checklist for the agency. Cover collection, storage, access, retention, and disposal. Stay practical: this is for a 35-person SME, not a JSE-listed bank.",
+  "deliverables": [
+    "A data inventory template listing the personal information categories the agency handles (CV data, ID copies, qualification copies, reference notes), the systems where each lives, and the lawful basis for processing",
+    "A handling checklist covering: secure transfer (no email of ID numbers), storage location, access restriction, retention period, and disposal procedure for each category",
+    "A staff guidance one-pager translating the POPIA principles into 10 day-to-day rules a recruitment consultant must follow",
+    "A breach response section listing the steps to take if personal information is exposed: containment, internal reporting, Information Regulator notification timing, and data subject communication"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "POPIA compliance for an SME does not require expensive tooling. It requires habits: where data lives, who can see it, when it gets deleted. Aim for habits a real recruitment consultant can follow on a busy Friday.",
+  "rubric": [
+    {
+      "key": "inventory",
+      "label": "Data Inventory",
+      "description": "Is the inventory realistic for a recruitment agency, with correct lawful basis?",
+      "weight": 25
+    },
+    {
+      "key": "practical",
+      "label": "Practical Discipline",
+      "description": "Are the handling rules genuinely usable by a non-technical consultant?",
+      "weight": 30
+    },
+    {
+      "key": "staff",
+      "label": "Staff Guidance",
+      "description": "Could a new joiner read the one-pager and behave compliantly from day one?",
+      "weight": 25
+    },
+    {
+      "key": "breach",
+      "label": "Breach Response",
+      "description": "Is the breach workflow accurate to POPIA, with correct timing for Information Regulator notice?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "POPIA fundamentals",
+    "Data inventory",
+    "Retention policy",
+    "Breach response basics"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

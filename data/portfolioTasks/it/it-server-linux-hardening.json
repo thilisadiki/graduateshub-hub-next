@@ -1,0 +1,55 @@
+{
+  "id": "it-server-linux-hardening",
+  "categoryId": "it",
+  "topicId": "it-server-administration",
+  "level": "intermediate",
+  "title": "Linux Server Hardening Checklist",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Harden an Ubuntu LTS server against the threats SA-hosted servers actually face.",
+  "scenario": "A SA tech consultancy maintains a fleet of Ubuntu LTS servers (web, application, database) hosted with a local provider. After a competitor was compromised via a default SSH configuration and an exposed admin port, the CTO asks for a hardening checklist that every server must meet before going live.",
+  "brief": "Produce a hardening checklist for Ubuntu Server LTS (24.04). Cover OS, network, application, and operational hardening with specific commands or configuration snippets.",
+  "deliverables": [
+    "An OS hardening section covering: user accounts (no root SSH, sudoers discipline), SSH (key-only, port, MaxAuthTries, allowed users), unattended-upgrades, fail2ban, auditd, and firewall (UFW) rules",
+    "A network hardening section covering: which ports are open by default and why, internal-only versus public services, IP whitelisting for admin paths, and reverse proxy posture",
+    "An application hardening section covering: nginx/apache headers, TLS configuration, file permissions, and the principle of running services as non-root",
+    "A monitoring and operational section covering: log shipping, integrity checks (AIDE), patch cadence, and the runbook for a suspected compromise"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Hardening checklists are weak when they cite controls without the actual config. Include concrete snippets (sshd_config lines, UFW commands, nginx headers) so a junior engineer can apply them without searching.",
+  "rubric": [
+    {
+      "key": "os",
+      "label": "OS Hardening",
+      "description": "Are the OS controls correct, current, and aligned to LTS reality?",
+      "weight": 30
+    },
+    {
+      "key": "network",
+      "label": "Network Hardening",
+      "description": "Is the firewall and exposure posture defensible for a small public-facing fleet?",
+      "weight": 25
+    },
+    {
+      "key": "app",
+      "label": "Application Hardening",
+      "description": "Are application-layer controls (TLS, headers, permissions) credible?",
+      "weight": 25
+    },
+    {
+      "key": "ops",
+      "label": "Operational Discipline",
+      "description": "Will monitoring and patching keep the hardening current after the first deploy?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Linux hardening",
+    "SSH configuration",
+    "UFW and firewalls",
+    "Server monitoring"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

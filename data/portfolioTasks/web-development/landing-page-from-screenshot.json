@@ -1,0 +1,56 @@
+{
+  "id": "landing-page-from-screenshot",
+  "categoryId": "web-development",
+  "topicId": "landing-page-rebuild",
+  "level": "intermediate",
+  "title": "Rebuild a Landing Page Section from a Screenshot",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write HTML and CSS that matches a screenshot pixel-close.",
+  "scenario": "A design agency gives junior front-end applicants a screenshot and asks them to rebuild the hero section. You will describe the screenshot in your own words and then produce the code.",
+  "brief": "Imagine a hero section with: a dark navy background, a white headline reading \"Ship faster with fewer bugs\", a shorter grey subheadline, a primary blue button and a secondary outlined button, and a product screenshot to the right that overlaps slightly outside the right edge of the content container. It is responsive: on mobile the image stacks below the text.",
+  "deliverables": [
+    "A complete HTML snippet for the hero section",
+    "A complete CSS (or Tailwind class) implementation",
+    "Notes on any accessibility choices you made (focus states, colour contrast, alt text)",
+    "One thing you would push back on the designer about and why"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Paste the code in fenced code blocks. Do not use any framework beyond plain HTML and CSS (or Tailwind classes).",
+  "rubric": [
+    {
+      "key": "accuracy",
+      "label": "Visual Accuracy",
+      "description": "Does the code plausibly render to match the described screenshot?",
+      "weight": 30
+    },
+    {
+      "key": "responsive",
+      "label": "Responsive Behaviour",
+      "description": "Is the responsive stacking handled cleanly?",
+      "weight": 20
+    },
+    {
+      "key": "a11y",
+      "label": "Accessibility",
+      "description": "Are the accessibility choices deliberate and correct?",
+      "weight": 25
+    },
+    {
+      "key": "pushback",
+      "label": "Design Collaboration",
+      "description": "Is the designer-pushback item substantive, not performative?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "HTML",
+    "CSS / Tailwind",
+    "Responsive design",
+    "Accessibility",
+    "Design collaboration"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

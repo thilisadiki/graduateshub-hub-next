@@ -8,6 +8,7 @@ import { getTasksByTopic } from '@/data/portfolioTasks';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import Pagination from '@/components/shared/Pagination';
 
 export async function generateStaticParams() {
   return portfolioCategories.map((c) => ({ category: c.id }));
@@ -15,27 +16,37 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ page?: string }>;
 }): Promise<Metadata> {
   const { category } = await params;
+  const { page } = await searchParams;
+  const pageNum = Math.max(1, parseInt(page ?? '1'));
   const cat = getCategoryById(category);
   if (!cat) return {};
   const topics = getTopicsByCategory(cat.id);
   const topicTitles = topics.slice(0, 5).map((t) => t.title).join(', ');
   const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
+  const url = pageNum === 1 ? `${SITE_URL}/portfolio/${cat.id}` : `${SITE_URL}/portfolio/${cat.id}?page=${pageNum}`;
+  const title = pageNum === 1 
+    ? `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates`
+    : `${cat.name} Portfolio Tasks — Page ${pageNum} — Graded Briefs`;
+  
   return {
-    title: `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates`,
+    title,
     description,
-    alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}` },
+    alternates: { canonical: url },
     openGraph: {
       siteName: SITE_NAME,
-      title: `${cat.name} Portfolio Tasks | Graduates Hub`,
+      title: `${title} | Graduates Hub`,
       description,
-      url: `${SITE_URL}/portfolio/${cat.id}`,
+      url,
       type: 'website',
       images: [OG_IMAGE],
     },
+    ...(pageNum > 1 && { robots: { index: false, follow: true } }),
   };
 }
 
@@ -61,14 +72,21 @@ const LEVEL_STYLES: Record<PortfolioLevel, { label: string; available: string; m
 
 export default async function CategoryPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ page?: string }>;
 }) {
   const { category } = await params;
+  const resolvedParams = await searchParams;
   const cat = getCategoryById(category);
   if (!cat) notFound();
 
-  const topics = getTopicsByCategory(cat.id);
+  const allTopics = getTopicsByCategory(cat.id);
+  const PER_PAGE = 10;
+  const totalPages = Math.ceil(allTopics.length / PER_PAGE);
+  const page = Math.max(1, Math.min(totalPages || 1, parseInt(resolvedParams.page ?? '1')));
+  const topics = allTopics.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
@@ -88,7 +106,7 @@ export default async function CategoryPage({
     numberOfItems: topics.length,
     itemListElement: topics.map((t, i) => ({
       '@type': 'ListItem',
-      position: i + 1,
+      position: (page - 1) * PER_PAGE + i + 1,
       url: `${SITE_URL}/portfolio/${cat.id}/${t.id}`,
       name: t.title,
     })),
@@ -99,7 +117,7 @@ export default async function CategoryPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400">
             <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
@@ -112,11 +130,11 @@ export default async function CategoryPage({
       </div>
 
       <main className="max-w-5xl mx-auto px-6 py-10">
-        {topics.length === 0 ? (
+        {allTopics.length === 0 ? (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 text-center">
             <h2 className="text-xl font-extrabold text-gray-900 mb-2">Topics coming soon</h2>
             <p className="text-gray-500">We are still writing the first briefs for this category. Check back soon or explore another category.</p>
-            <Link href="/portfolio" className="inline-flex items-center gap-1.5 mt-5 text-indigo-600 font-bold text-sm">
+            <Link href="/portfolio" className="inline-flex items-center gap-1.5 mt-5 text-primary font-bold text-sm">
               Back to all categories <ArrowRight size={14} />
             </Link>
           </div>
@@ -132,8 +150,8 @@ export default async function CategoryPage({
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-2">
-                      <Award size={16} className="text-indigo-500 shrink-0" />
-                      <h2 className="text-lg md:text-xl font-black text-gray-900 group-hover:text-indigo-600 transition-colors">
+                      <Award size={16} className="text-primary shrink-0" />
+                      <h2 className="text-lg md:text-xl font-black text-gray-900 group-hover:text-primary transition-colors">
                         {topic.title}
                       </h2>
                     </div>
@@ -155,12 +173,18 @@ export default async function CategoryPage({
                       })}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-sm font-bold text-indigo-600 shrink-0">
+                  <div className="flex items-center gap-2 text-sm font-bold text-primary shrink-0">
                     Open topic <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>
               );
             })}
+
+            <Pagination 
+              currentPage={page} 
+              totalPages={totalPages} 
+              baseUrl={`/portfolio/${cat.id}`} 
+            />
           </div>
         )}
       </main>

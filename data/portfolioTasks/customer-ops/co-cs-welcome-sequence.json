@@ -1,0 +1,46 @@
+{
+  "id": "co-cs-welcome-sequence",
+  "categoryId": "customer-ops",
+  "topicId": "customer-success-onboarding",
+  "level": "beginner",
+  "title": "Write a Welcome Sequence",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Draft a 3-part email onboarding sequence for a new B2B user.",
+  "scenario": "A local accounting software startup just signed up a new small business. They currently just send one automated receipt. The founders want a Customer Success welcome sequence to get the user to actually set up their account and run their first payroll.",
+  "brief": "Write a 3-part automated email sequence (Day 1, Day 3, Day 7) designed to drive product adoption.",
+  "deliverables": [
+    "Email 1 (Day 1): Welcome and the Single Most Important Task (e.g., connect bank account)",
+    "Email 2 (Day 3): A quick win / feature highlight (e.g., send your first invoice)",
+    "Email 3 (Day 7): The check-in and offer for a 15-min setup call if they are stuck"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not overwhelm them in Email 1. One clear Call to Action (CTA) per email. Keep it short, punchy, and helpful.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Pacing & Sequence",
+      "description": "Do the emails logically progress from setup to usage?",
+      "weight": 35
+    },
+    {
+      "key": "cta",
+      "label": "Clear CTAs",
+      "description": "Does each email have exactly one clear Call to Action?",
+      "weight": 35
+    },
+    {
+      "key": "tone",
+      "label": "Tone",
+      "description": "Is the tone helpful, professional, and encouraging?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Customer onboarding",
+    "Email sequencing",
+    "Product adoption",
+    "Customer success"
+  ],
+  "relatedRoadmapIds": []
+}

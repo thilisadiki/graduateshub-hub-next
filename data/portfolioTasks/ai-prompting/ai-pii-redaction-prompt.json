@@ -1,0 +1,46 @@
+{
+  "id": "ai-pii-redaction-prompt",
+  "categoryId": "ai-prompting",
+  "topicId": "guardrails-safety",
+  "level": "beginner",
+  "title": "Build a PII Redaction Prompt",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a prompt that removes ID numbers and phone numbers from support tickets.",
+  "scenario": "Before feeding customer support emails into a data analytics tool, you must scrub all Personally Identifiable Information (PII) to comply with the POPI Act. You want an LLM to do this scrubbing.",
+  "brief": "Write a strict prompt that reads a messy email and outputs the exact same email, but with all names, ID numbers, phone numbers, and addresses replaced with `[REDACTED]`.",
+  "deliverables": [
+    "The Redaction Prompt",
+    "Explicit instructions on what constitutes PII (e.g., SA ID numbers, +27 phone numbers)",
+    "A test input email containing South African PII, and the expected redacted output"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The model must not summarise or change the meaning of the email. It must act strictly as a find-and-replace engine for sensitive data.",
+  "rubric": [
+    {
+      "key": "redaction-rules",
+      "label": "PII Definitions",
+      "description": "Are the definitions of PII comprehensive and locally relevant (SA ID formats)?",
+      "weight": 40
+    },
+    {
+      "key": "fidelity",
+      "label": "Text Fidelity",
+      "description": "Does the prompt strictly forbid summarisation or alteration of non-PII text?",
+      "weight": 30
+    },
+    {
+      "key": "test-case",
+      "label": "Test Case Accuracy",
+      "description": "Does the test case prove the prompt works without stripping useful context?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Data redaction",
+    "POPIA compliance",
+    "Regex-like prompting",
+    "Format preservation"
+  ],
+  "relatedRoadmapIds": []
+}

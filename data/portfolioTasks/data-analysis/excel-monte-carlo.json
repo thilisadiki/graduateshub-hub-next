@@ -1,0 +1,56 @@
+{
+  "id": "excel-monte-carlo",
+  "categoryId": "data",
+  "topicId": "spreadsheet-modelling",
+  "level": "advanced",
+  "title": "Monte Carlo Simulation in a Spreadsheet",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Simulate 1,000 outcomes for a product launch decision using RAND() and data tables.",
+  "scenario": "A startup is deciding whether to launch a new product. The fixed cost is R2M. Unit price, unit cost, and demand are all uncertain. The CEO wants to know: \"What is the probability we lose money?\"",
+  "brief": "Design a Monte Carlo simulation in a spreadsheet. Use RAND() to generate random draws from assumed distributions for price, cost, and demand. Run 1,000 iterations using a data table and calculate the probability of a loss.",
+  "deliverables": [
+    "The model structure: input assumptions (distributions for price, cost, demand), the profit formula, and the simulation output area",
+    "The exact formulas using RAND(), NORMINV (or equivalent) for generating random variables",
+    "How you would use a one-variable Data Table to run 1,000 iterations",
+    "The final output: probability of loss, expected profit, and a histogram description of the profit distribution"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is advanced spreadsheet work. Show that you understand why a single-point estimate is dangerous for a high-stakes decision.",
+  "rubric": [
+    {
+      "key": "simulation",
+      "label": "Simulation Design",
+      "description": "Is the Monte Carlo framework correctly structured with random inputs and deterministic calculations?",
+      "weight": 30
+    },
+    {
+      "key": "distributions",
+      "label": "Distribution Choice",
+      "description": "Are the chosen distributions reasonable for each uncertain variable?",
+      "weight": 25
+    },
+    {
+      "key": "execution",
+      "label": "Data Table Technique",
+      "description": "Is the Data Table approach correctly explained for generating 1,000 iterations?",
+      "weight": 25
+    },
+    {
+      "key": "interpretation",
+      "label": "Decision Support",
+      "description": "Does the output actually help the CEO make a go/no-go decision?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Monte Carlo simulation",
+    "Risk analysis",
+    "Advanced Excel",
+    "Decision modelling"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

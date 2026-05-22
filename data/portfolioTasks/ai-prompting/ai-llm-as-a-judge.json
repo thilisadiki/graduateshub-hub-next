@@ -1,0 +1,46 @@
+{
+  "id": "ai-llm-as-a-judge",
+  "categoryId": "ai-prompting",
+  "topicId": "ai-evaluation-benchmarking",
+  "level": "intermediate",
+  "title": "Write an LLM-as-a-Judge Prompt",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Use GPT-4 to grade the outputs of a smaller, cheaper model.",
+  "scenario": "You are trying to switch from an expensive model to a cheaper, faster model for summarising articles. You have 100 summaries from the cheap model. You don't have time to read them all. You want to write a prompt for the expensive model to act as an automated \"Judge\" and score the cheap model's work.",
+  "brief": "Write the LLM-as-a-Judge prompt. It must take the Source Text and the Generated Summary, and output a score out of 5 based on strict criteria.",
+  "deliverables": [
+    "The Judge Prompt",
+    "The Grading Rubric embedded in the prompt (What defines a 1, 3, or 5?)",
+    "Chain of Thought formatting (forcing the Judge to write its rationale *before* outputting the final score)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "LLM judges suffer from biases (e.g., they prefer longer answers). Your prompt must explicitly tell the judge to ignore length and focus only on factual accuracy and conciseness. Forcing rationale before the score is non-negotiable for accuracy.",
+  "rubric": [
+    {
+      "key": "rubric-clarity",
+      "label": "Rubric Clarity",
+      "description": "Are the scoring definitions (1-5) objective and distinct?",
+      "weight": 35
+    },
+    {
+      "key": "cot-enforcement",
+      "label": "Rationale First",
+      "description": "Does the prompt force the AI to justify the grade before giving the number?",
+      "weight": 40
+    },
+    {
+      "key": "bias-mitigation",
+      "label": "Bias Mitigation",
+      "description": "Are there instructions to ignore common LLM biases like verbosity?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "LLM-as-a-Judge",
+    "Automated evaluation",
+    "Prompt rubrics",
+    "Bias mitigation"
+  ],
+  "relatedRoadmapIds": []
+}

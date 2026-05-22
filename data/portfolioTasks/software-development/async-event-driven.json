@@ -1,0 +1,49 @@
+{
+  "id": "async-event-driven",
+  "categoryId": "software-development",
+  "topicId": "async-processing",
+  "level": "advanced",
+  "title": "Design an Event-Driven Checkout Workflow",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Architect a distributed transaction using the Saga pattern.",
+  "scenario": "When a user clicks \"Buy\", 4 things must happen: 1. Deduct Inventory, 2. Charge Credit Card, 3. Generate Shipping Label, 4. Send Confirmation Email. If step 2 fails, step 1 must be reversed.",
+  "brief": "Design an Event-Driven Architecture (EDA) to handle this checkout flow across 4 independent microservices. Explain how you will handle failures and rollbacks using the Saga pattern (Choreography or Orchestration).",
+  "deliverables": [
+    "An architectural diagram showing the event broker (e.g., Kafka or RabbitMQ) and the message topics",
+    "A detailed explanation of the \"Compensating Transaction\" if the credit card is declined after inventory was deducted",
+    "A defense of your choice between Event Choreography (decentralized) vs. Orchestration (central controller)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is an advanced distributed systems problem. You cannot use a standard SQL database transaction (`BEGIN...COMMIT`) because the data lives in different microservices.",
+  "rubric": [
+    {
+      "key": "eda",
+      "label": "Event-Driven Design",
+      "description": "Are the microservices communicating asynchronously via events?",
+      "weight": 35
+    },
+    {
+      "key": "saga",
+      "label": "Saga Pattern",
+      "description": "Are compensating transactions clearly defined for failure states?",
+      "weight": 40
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Architecture Trade-offs",
+      "description": "Is the defense of Choreography vs Orchestration sound?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Event-Driven Architecture",
+    "Saga Pattern",
+    "Distributed Transactions",
+    "Kafka / RabbitMQ"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "cash-flow-sme",
+  "categoryId": "finance-accounting",
+  "topicId": "cash-flow-forecasting",
+  "level": "intermediate",
+  "title": "12-Month Cash Flow for a Fictional SME",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Build a defensible 12-month cash flow forecast for a small business.",
+  "scenario": "A Cape Town-based graphic design studio with three staff has been profitable on paper for two years but keeps running out of cash at month end. The owner needs a 12-month cash flow forecast she can actually use, not a generic template.",
+  "brief": "Build the forecast. You do not need a spreadsheet file, a Markdown table is fine. You do need to think carefully about timing: when cash actually comes in and goes out, not when invoices are raised.",
+  "deliverables": [
+    "A month-by-month cash flow table (opening balance, inflows, outflows, closing balance) for 12 months",
+    "Your assumptions (client payment terms, seasonality, tax timings) listed explicitly",
+    "The months with the tightest cash position and one concrete action the owner could take in each",
+    "One scenario variation (for example: what if the biggest client pays 30 days late) and its impact"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You can invent the numbers. They just need to be internally consistent and plausible for a 3-person design studio in South Africa.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Model Structure",
+      "description": "Does the forecast distinguish cash from accrual correctly?",
+      "weight": 25
+    },
+    {
+      "key": "assumptions",
+      "label": "Assumption Quality",
+      "description": "Are the assumptions explicit, realistic, and South-Africa appropriate?",
+      "weight": 25
+    },
+    {
+      "key": "insights",
+      "label": "Actionable Output",
+      "description": "Does the forecast actually help the owner spot and prevent a cash crunch?",
+      "weight": 30
+    },
+    {
+      "key": "scenario",
+      "label": "Scenario Thinking",
+      "description": "Is the stress scenario meaningful and its impact calculated properly?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Cash flow modelling",
+    "Financial forecasting",
+    "SME finance",
+    "Financial storytelling"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "co-metrics-dashboard-design",
+  "categoryId": "customer-ops",
+  "topicId": "operational-metrics",
+  "level": "intermediate",
+  "title": "Design an Ops Dashboard",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Choose the 5 critical metrics the Head of Ops should look at every morning.",
+  "scenario": "The Head of Ops is overwhelmed by a dashboard with 40 different charts. She has asked you to design a new \"Morning Coffee Dashboard\" — just the 5 most important metrics she needs to know if the business is healthy today.",
+  "brief": "Select the 5 most critical metrics for a high-volume e-commerce business. Define exactly what they measure and why they matter.",
+  "deliverables": [
+    "A list of the 5 chosen metrics (e.g., First Reply Time, Order Defect Rate)",
+    "The exact formula or definition for each metric",
+    "A 1-sentence justification for why this made the top 5 list over other vanity metrics",
+    "The \"Red Flag\" threshold for each (at what number should she panic?)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Avoid vanity metrics like \"Total Emails Received\". Focus on health and efficiency. Think: speed, quality, backlog, and errors.",
+  "rubric": [
+    {
+      "key": "selection",
+      "label": "Metric Selection",
+      "description": "Are the 5 metrics actionable indicators of operational health?",
+      "weight": 40
+    },
+    {
+      "key": "definitions",
+      "label": "Clear Definitions",
+      "description": "Are the formulas/definitions accurate?",
+      "weight": 30
+    },
+    {
+      "key": "thresholds",
+      "label": "Actionable Thresholds",
+      "description": "Are the \"Red Flag\" thresholds realistic?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Dashboard design",
+    "KPI selection",
+    "Operational health monitoring"
+  ],
+  "relatedRoadmapIds": []
+}

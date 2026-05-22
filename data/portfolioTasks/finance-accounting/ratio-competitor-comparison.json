@@ -1,0 +1,48 @@
+{
+  "id": "ratio-competitor-comparison",
+  "categoryId": "finance-accounting",
+  "topicId": "ratio-analysis",
+  "level": "intermediate",
+  "title": "Competitor Ratio Comparison",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Compare 3 SA-listed retailers using financial ratios and write an investment note.",
+  "scenario": "An investment analyst is comparing three South African listed retailers (invent plausible companies). She needs a quick ratio comparison to decide which one to investigate further for a potential buy recommendation.",
+  "brief": "Calculate and compare at least 6 ratios across 3 companies. Invent plausible financial data that tells a story — one company should be clearly stronger, one weaker, and one interesting.",
+  "deliverables": [
+    "A comparison table: 3 companies × 6 ratios (profitability, liquidity, leverage, efficiency)",
+    "A one-page investment note identifying the strongest company and why",
+    "One ratio where the \"obvious winner\" actually looks weak, and what it might mean"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ratios mean nothing in isolation. The value is in comparison — across companies and across time. Show this comparative thinking.",
+  "rubric": [
+    {
+      "key": "ratios",
+      "label": "Ratio Selection",
+      "description": "Are the 6 ratios well-chosen to cover profitability, liquidity, leverage, and efficiency?",
+      "weight": 25
+    },
+    {
+      "key": "comparison",
+      "label": "Comparative Analysis",
+      "description": "Does the comparison tell a story rather than just listing numbers?",
+      "weight": 35
+    },
+    {
+      "key": "nuance",
+      "label": "Analytical Nuance",
+      "description": "Does the candidate spot the contradiction and explore it?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Comparative ratio analysis",
+    "Investment analysis",
+    "Financial storytelling",
+    "Critical thinking"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

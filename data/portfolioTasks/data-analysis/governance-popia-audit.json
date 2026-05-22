@@ -1,0 +1,56 @@
+{
+  "id": "governance-popia-audit",
+  "categoryId": "data",
+  "topicId": "data-governance-quality",
+  "level": "advanced",
+  "title": "POPIA/GDPR Compliance Audit",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Audit a fictional company's data practices and write a compliance gap report.",
+  "scenario": "A South African fintech startup has grown rapidly but has never done a formal data privacy audit. They store customer ID numbers, bank account details, and location data. A new enterprise client requires POPIA compliance certification before signing the contract.",
+  "brief": "Conduct a POPIA compliance audit of the fictional company. Identify gaps, classify them by risk level, and write a remediation plan that the CTO can execute in 90 days.",
+  "deliverables": [
+    "A summary of POPIA's 8 conditions for lawful processing and how each applies to this fintech",
+    "A gap analysis table: at least 5 specific gaps (e.g., \"no consent mechanism for location tracking\")",
+    "A risk classification for each gap: Critical (legal exposure), High (reputational), Medium (operational)",
+    "A 90-day remediation roadmap with specific actions, responsible parties, and milestones"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "POPIA is South African law, not a suggestion. Show that you understand the legal requirements, not just the IT implementation. Reference specific POPIA sections where relevant.",
+  "rubric": [
+    {
+      "key": "popia",
+      "label": "POPIA Knowledge",
+      "description": "Are the 8 conditions correctly summarised and applied to the fintech context?",
+      "weight": 25
+    },
+    {
+      "key": "gaps",
+      "label": "Gap Identification",
+      "description": "Are the gaps specific, realistic, and correctly classified by risk?",
+      "weight": 30
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Plan",
+      "description": "Is the 90-day roadmap actionable with clear ownership and milestones?",
+      "weight": 30
+    },
+    {
+      "key": "judgment",
+      "label": "Legal Judgment",
+      "description": "Does the candidate distinguish between technical compliance and genuine data protection?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "POPIA compliance",
+    "Data privacy",
+    "Risk assessment",
+    "Compliance auditing"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

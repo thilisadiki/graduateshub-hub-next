@@ -1,0 +1,46 @@
+{
+  "id": "churn-exit-survey",
+  "categoryId": "customer-ops",
+  "topicId": "churn-recovery-retention",
+  "level": "beginner",
+  "title": "SaaS Exit Survey & Automated Retention Campaign",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Create an exit survey and recovery template for a local SaaS product.",
+  "scenario": "\"TaxSimple\" is a South African digital accounting assistant used by sole proprietors. Subscription cancellations increase after tax filing season in August/September. The product manager wants a short exit survey to find out why users cancel, and a retention screen to encourage pauses instead.",
+  "brief": "Design a 3-question exit survey that captures the root cause of churn and write a contextual recovery email based on the survey selections.",
+  "deliverables": [
+    "A 3-question exit survey with multiple-choice options (covering pricing, usability, seasonal needs)",
+    "A retention screen layout description offering alternative actions (e.g. \"Pause account for R50/mo instead of cancel\")",
+    "A recovery email draft targeting users who selected \"too expensive\" or \"only needed it temporarily\""
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Survey options should be mutually exclusive and collectively exhaustive (MECE) to make reporting useful.",
+  "rubric": [
+    {
+      "key": "survey",
+      "label": "Survey Design",
+      "description": "Are the exit questions clear, unbiased, and structured for analysis?",
+      "weight": 35
+    },
+    {
+      "key": "retention-screen",
+      "label": "Retention Strategy",
+      "description": "Is the alternate offer (pause/downgrade) persuasive?",
+      "weight": 35
+    },
+    {
+      "key": "recovery-copy",
+      "label": "Recovery Email Copy",
+      "description": "Is the email copy friendly, localized, and clearly valuable?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Churn analysis",
+    "Survey methodology",
+    "Copywriting for retention",
+    "SaaS operations"
+  ],
+  "relatedRoadmapIds": []
+}

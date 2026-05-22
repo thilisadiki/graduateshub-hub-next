@@ -1,0 +1,46 @@
+{
+  "id": "ba-stakeholder-map",
+  "categoryId": "business-analysis",
+  "topicId": "stakeholder-analysis",
+  "level": "beginner",
+  "title": "Stakeholder Map",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Create a power/interest stakeholder map for a system rollout.",
+  "scenario": "A mid-size insurance company (300 employees) is rolling out a new claims management system. It affects claims processors, team leads, IT, the CFO, external assessors, and the call centre. You need to map who matters and how to engage them.",
+  "brief": "Create a stakeholder map using the power/interest grid. Identify at least 8 stakeholders, place them on the grid, and define an engagement strategy for each quadrant.",
+  "deliverables": [
+    "A power/interest grid with at least 8 stakeholders placed and justified",
+    "An engagement strategy for each quadrant (Manage Closely, Keep Satisfied, Keep Informed, Monitor)",
+    "One stakeholder who is likely to be misclassified and why (e.g., a call centre agent with low formal power but high informal influence)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Power is not just seniority. A union representative may have more power to block a project than a director. Think beyond the org chart.",
+  "rubric": [
+    {
+      "key": "identification",
+      "label": "Stakeholder Identification",
+      "description": "Are the 8 stakeholders varied and realistic?",
+      "weight": 25
+    },
+    {
+      "key": "placement",
+      "label": "Grid Placement",
+      "description": "Is each stakeholder placed with clear justification?",
+      "weight": 35
+    },
+    {
+      "key": "strategy",
+      "label": "Engagement Strategy",
+      "description": "Are the quadrant strategies actionable?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Stakeholder mapping",
+    "Power/interest analysis",
+    "Engagement planning",
+    "Organisational awareness"
+  ],
+  "relatedRoadmapIds": []
+}

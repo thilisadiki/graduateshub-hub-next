@@ -108,7 +108,7 @@ export default function AboutPage() {
       {/* Hero */}
       <div className="bg-slate-900 text-white py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">The people behind the platform</p>
+          <p className="text-[#7C7061] font-bold text-sm uppercase tracking-widest mb-3">The people behind the platform</p>
           <h1 className="text-3xl md:text-5xl font-extrabold">
             Built and curated by <span className="text-primary">real specialists</span>
           </h1>
@@ -128,7 +128,7 @@ export default function AboutPage() {
             {/* Jason */}
             <div id="jason-sadiki" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-28">
               <div className="flex flex-col md:flex-row gap-0">
-                <div className="md:w-48 shrink-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
+                <div className="md:w-48 shrink-0 bg-gradient-to-br from-[#FFF8F1] to-[#FFDF9C]/20 flex items-center justify-center p-8">
                   <div className="w-32 h-32 rounded-full overflow-hidden bg-slate-200 relative shadow-md ring-4 ring-white">
                     <Image src="/jason-sadiki.jpg" alt="Jason Sadiki, Founder of Graduates Hub" fill sizes="128px" className="object-cover" />
                   </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="text-2xl font-extrabold text-gray-900">Jason Sadiki</h3>
-                    <span className="text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100 px-2.5 py-1 rounded-full">Founder</span>
+                    <span className="text-xs font-bold bg-[#FFDF9C]/20 text-[#5a4000] border border-[#D1C5B4] px-2.5 py-1 rounded-full">Founder</span>
                   </div>
                   <p className="text-primary font-semibold text-sm mb-2">Technical SEO Specialist &amp; Web Developer</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
@@ -174,7 +174,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
                     <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-[#261A00] transition-colors">
                       <ExternalLink size={14} /> LinkedIn
                     </a>
                     <span className="text-gray-200">|</span>
@@ -214,7 +214,7 @@ export default function AboutPage() {
                   </p>
                   <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
                     <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-[#261A00] transition-colors">
                       <ExternalLink size={14} /> LinkedIn
                     </a>
                   </div>
@@ -236,13 +236,13 @@ export default function AboutPage() {
               Whether you are a recent graduate entering the job market, a professional looking to upskill, or a lifelong learner exploring something new, Graduates Hub gives you the tools, guides, and courses to get there without financial barriers.
             </p>
             <div className="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
-              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-blue-600 text-white shrink-0">
+              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-primary text-white shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
               </span>
               <p className="text-gray-600 text-sm">
                 Join our community of{' '}
                 <a href="https://facebook.com/Graduateshub" target="_blank" rel="noopener noreferrer"
-                  className="font-bold text-blue-600 hover:underline">189,000+ followers on Facebook</a>
+                  className="font-bold text-primary hover:underline">189,000+ followers on Facebook</a>
                 {' '} - learners sharing opportunities, resources, and wins every day.
               </p>
             </div>
@@ -254,7 +254,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-6">What You Get</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { icon: BookOpen, color: 'bg-blue-100 text-primary', title: 'Free Learning Resources', desc: 'From IT and Software Engineering to Business, Accounting, and Marketing. Every resource is hand-picked for relevance, quality, and real-world applicability.' },
+              { icon: BookOpen, color: 'bg-[#FFDF9C]/40 text-primary', title: 'Free Learning Resources', desc: 'From IT and Software Engineering to Business, Accounting, and Marketing. Every resource is hand-picked for relevance, quality, and real-world applicability.' },
               { icon: Award, color: 'bg-green-100 text-green-600', title: 'Certificates & Diplomas', desc: 'Earn verifiable certificates and diplomas from internationally recognised providers to strengthen your CV and professional profile.' },
               { icon: Users, color: 'bg-purple-100 text-purple-600', title: 'AI-Powered Course Matching', desc: 'Our AI recommendation engine finds the right learning path based on your goals and experience level.' },
               { icon: Heart, color: 'bg-red-100 text-red-500', title: '100% Free, Always', desc: 'No hidden fees, no paywalls, no credit card required. Every resource on Graduates Hub is and will always be completely free.' },
@@ -294,14 +294,14 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-10 text-white">
+          <div className="bg-gradient-to-r from-[#7A5900] to-[#5a4000] rounded-2xl p-10 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Ready to start learning?</h2>
-            <p className="text-blue-100 max-w-lg mx-auto mb-8">Browse free learning resources across IT, Business, Accounting, Marketing, and more.</p>
+            <p className="text-[#FFDF9C] max-w-lg mx-auto mb-8">Browse free learning resources across IT, Business, Accounting, Marketing, and more.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/categories" className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold transition-all shadow-md text-lg">
+              <Link href="/categories" className="inline-flex items-center justify-center gap-2 bg-white text-[#5a4000] hover:bg-[#FFDF9C]/20 px-8 py-4 rounded-lg font-bold transition-all shadow-md text-lg">
                 Explore Resources <ArrowRight size={20} />
               </Link>
-              <Link href="/blog" className="inline-flex items-center justify-center gap-2 bg-blue-500/20 hover:bg-blue-500/30 text-white px-8 py-4 rounded-lg font-bold transition-all text-lg border border-white/20">
+              <Link href="/blog" className="inline-flex items-center justify-center gap-2 bg-[#FFDF9C]/200/20 hover:bg-[#FFDF9C]/200/30 text-white px-8 py-4 rounded-lg font-bold transition-all text-lg border border-white/20">
                 Read Our Guides <ArrowRight size={20} />
               </Link>
             </div>

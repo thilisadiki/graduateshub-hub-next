@@ -1,0 +1,53 @@
+{
+  "id": "ia-taxonomy-ecommerce",
+  "categoryId": "design-ux",
+  "topicId": "information-architecture",
+  "level": "advanced",
+  "title": "Taxonomy Design for a Large E-Commerce Site",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design the product taxonomy for a 5,000-SKU e-commerce store.",
+  "scenario": "A South African home goods retailer is moving from 3 physical stores to an online store with 5,000 products. Products range from furniture to kitchenware to garden tools. Many products belong to multiple categories (a garden bench is both \"Garden\" and \"Furniture\").",
+  "brief": "Design the complete product taxonomy. Handle hierarchical categories, cross-category products, faceted navigation, and the naming conventions that make browsing intuitive.",
+  "deliverables": [
+    "A 3-level category hierarchy with at least 8 top-level categories",
+    "A cross-category strategy: how products that belong to multiple categories are handled",
+    "A faceted navigation design: which attributes become filters (size, colour, price, material, etc.)",
+    "Naming conventions: rules for consistent category and product naming"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A taxonomy is not a folder structure. Products should be findable through multiple paths. Show how a user looking for a \"wooden garden bench\" could find it via Garden, Furniture, or Material: Wood.",
+  "rubric": [
+    {
+      "key": "hierarchy",
+      "label": "Category Hierarchy",
+      "description": "Is the 3-level hierarchy logical with balanced depth?",
+      "weight": 25
+    },
+    {
+      "key": "cross-category",
+      "label": "Cross-Category Handling",
+      "description": "Is the solution for multi-category products practical?",
+      "weight": 30
+    },
+    {
+      "key": "facets",
+      "label": "Faceted Navigation",
+      "description": "Are the filter attributes well-chosen for the product types?",
+      "weight": 25
+    },
+    {
+      "key": "naming",
+      "label": "Naming Conventions",
+      "description": "Are the naming rules consistent and user-friendly?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Taxonomy design",
+    "E-commerce IA",
+    "Faceted navigation",
+    "Content modelling"
+  ],
+  "relatedRoadmapIds": []
+}

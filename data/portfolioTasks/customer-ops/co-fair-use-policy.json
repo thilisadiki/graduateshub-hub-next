@@ -1,0 +1,46 @@
+{
+  "id": "co-fair-use-policy",
+  "categoryId": "customer-ops",
+  "topicId": "policy-writing",
+  "level": "advanced",
+  "title": "Draft a SaaS Fair Use Policy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Write the Acceptable Use Policy for an AI tool being abused by bots.",
+  "scenario": "A B2B SaaS startup offers \"Unlimited AI Summaries\" on its $20/mo plan. Three users have set up API scripts to summarise 10,000 documents a day, costing the startup thousands in OpenAI API fees. The startup needs to implement an Acceptable Use Policy (AUP) immediately to ban these users without angering normal customers.",
+  "brief": "Draft the Fair/Acceptable Use Policy section specifically addressing API abuse and \"unlimited\" tier boundaries, and draft the email that will be sent to the abusive users.",
+  "deliverables": [
+    "The Fair Use Policy clause defining what constitutes \"unreasonable or abusive usage\" of the unlimited tier",
+    "The specific actions the company reserves the right to take (throttling, suspension, billing)",
+    "An email template to be sent to the 3 abusive users, giving them 24 hours to upgrade to an Enterprise plan or be suspended"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Writing an AUP requires precision. \"Too much usage\" is too vague. \"Automated script scraping\" or \"usage 50x the median user\" is precise.",
+  "rubric": [
+    {
+      "key": "precision",
+      "label": "Definitional Precision",
+      "description": "Is abuse clearly defined without restricting normal heavy users?",
+      "weight": 40
+    },
+    {
+      "key": "enforcement",
+      "label": "Enforcement Rights",
+      "description": "Does the policy give the business clear rights to act?",
+      "weight": 30
+    },
+    {
+      "key": "communication",
+      "label": "Tough Communication",
+      "description": "Is the warning email firm, professional, and clear on consequences?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Acceptable Use Policies",
+    "Risk mitigation",
+    "Tough communication",
+    "SaaS operations"
+  ],
+  "relatedRoadmapIds": []
+}

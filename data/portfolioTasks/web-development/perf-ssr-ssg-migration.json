@@ -1,0 +1,55 @@
+{
+  "id": "perf-ssr-ssg-migration",
+  "categoryId": "web-development",
+  "topicId": "performance-optimization",
+  "level": "advanced",
+  "title": "Migrate to SSR / SSG for LCP",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Architect a transition from a slow Single Page App to Next.js for maximum performance.",
+  "scenario": "A high-traffic e-commerce storefront was built as a traditional React Single Page Application (SPA). The marketing team is furious because SEO rankings are dropping, and the Largest Contentful Paint (LCP) is over 5 seconds because the browser has to download a massive JS bundle before it can even request the product data from the API.",
+  "brief": "Write a technical migration plan to move the critical pages (Home, Product Listing, Product Details) to a framework like Next.js. You must decide and justify the rendering strategy (Static Site Generation, Server-Side Rendering, or Incremental Static Regeneration) for each specific page type based on data freshness requirements vs. performance.",
+  "deliverables": [
+    "The chosen rendering strategy for the 1) Home Page, 2) Product Details Page, and 3) User Cart/Checkout, with strong technical justifications",
+    "A code snippet showing how the Product Details page would fetch its data (e.g., `getStaticProps` vs `getServerSideProps` or React Server Components)",
+    "A strategy for handling the transition without breaking existing URLs (redirects/routing)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is an architectural task. There is no single \"right\" answer for the Product Details page - your justification of the trade-offs between SSG/ISR (speed but stale data) and SSR (fresh data but slower TTFB) is what earns points.",
+  "rubric": [
+    {
+      "key": "strategy",
+      "label": "Rendering Strategies",
+      "description": "Are the chosen rendering methods appropriate for the specific needs of each page type?",
+      "weight": 35
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Architectural Trade-offs",
+      "description": "Does the candidate deeply understand the trade-offs between TTFB, LCP, and data freshness?",
+      "weight": 35
+    },
+    {
+      "key": "code",
+      "label": "Data Fetching Code",
+      "description": "Is the Next.js data fetching syntax correctly applied to support the chosen strategy?",
+      "weight": 20
+    },
+    {
+      "key": "seo",
+      "label": "SEO Awareness",
+      "description": "Is the migration plan considerate of SEO impact and URL routing?",
+      "weight": 10
+    }
+  ],
+  "skillsProven": [
+    "Next.js Architecture",
+    "Server-Side Rendering (SSR)",
+    "Static Site Generation (SSG)",
+    "Largest Contentful Paint (LCP)",
+    "Technical Leadership"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

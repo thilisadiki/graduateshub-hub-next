@@ -1,0 +1,55 @@
+{
+  "id": "schema-markup-structured-data",
+  "categoryId": "web-development",
+  "topicId": "technical-seo-core-web-vitals",
+  "level": "intermediate",
+  "title": "Implement Structured Data & Schema Markup",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Add nested JSON-LD schema markup and design a crawl budget optimization strategy.",
+  "scenario": "An e-commerce site selling handmade leather goods has plenty of products but doesn't show up in search results with product prices, reviews, or stock status. The marketing director wants you to implement rich results schema.",
+  "brief": "Write a JSON-LD structured data script for a complex product page that includes nesting (Product, Offer, AggregateRating, Review, and Organization). Test the schema validity and ensure it conforms strictly to Schema.org standards. Write a robots.txt configuration and a canonicalization strategy for dynamic query parameters.",
+  "deliverables": [
+    "JSON-LD script containing the full product schema.",
+    "Robots.txt file content with crawl directives.",
+    "A canonical URL and query-param handling documentation.",
+    "Explanation of how structured data helps search crawlers index content."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Paste your JSON-LD script and robots.txt in fenced code blocks. Keep the documentation clear, well-structured, and written in plain English.",
+  "rubric": [
+    {
+      "key": "schema_accuracy",
+      "label": "Schema Accuracy",
+      "description": "Is the JSON-LD script valid, syntactically correct, and compliant with Schema.org?",
+      "weight": 35
+    },
+    {
+      "key": "nesting",
+      "label": "Nesting Structure",
+      "description": "Are the Product, Offer, AggregateRating, and Review objects nested correctly?",
+      "weight": 25
+    },
+    {
+      "key": "crawling",
+      "label": "Crawling & Indexing Strategy",
+      "description": "Are the robots.txt directives and canonicalization rules mathematically/conceptually sound?",
+      "weight": 20
+    },
+    {
+      "key": "documentation",
+      "label": "Explanatory Clarity",
+      "description": "Is the explanation of search engine rendering and indexing of metadata clear and accurate?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Schema markup",
+    "JSON-LD",
+    "Canonicalization",
+    "Crawl budget optimization"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

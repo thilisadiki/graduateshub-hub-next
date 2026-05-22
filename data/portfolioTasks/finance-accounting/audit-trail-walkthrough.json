@@ -1,0 +1,48 @@
+{
+  "id": "audit-trail-walkthrough",
+  "categoryId": "finance-accounting",
+  "topicId": "audit-internal-controls",
+  "level": "intermediate",
+  "title": "Audit Trail Walkthrough",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Trace a transaction from source document to financial statement.",
+  "scenario": "An auditor asks you to demonstrate that a R125,000 payment to a supplier can be traced from the bank statement back to the original purchase order. You need to map the entire audit trail.",
+  "brief": "Map the complete audit trail for a purchase transaction: Purchase Requisition → Purchase Order → Goods Received Note → Supplier Invoice → Payment Authorisation → Bank Payment → General Ledger Entry → Financial Statement.",
+  "deliverables": [
+    "A step-by-step audit trail showing each document, who creates it, and what it proves",
+    "The control points at each stage (who approves, what limits apply, what matching checks occur)",
+    "One missing document scenario and how it would show up as an exception in an audit"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Three-way matching (PO, GRN, Invoice) is the core control for purchases. If any of the three do not match, the payment should be held. Show this.",
+  "rubric": [
+    {
+      "key": "trail",
+      "label": "Audit Trail Completeness",
+      "description": "Are all documents in the purchase-to-pay cycle correctly mapped?",
+      "weight": 30
+    },
+    {
+      "key": "controls",
+      "label": "Control Points",
+      "description": "Are the control points at each stage correctly identified?",
+      "weight": 35
+    },
+    {
+      "key": "exception",
+      "label": "Exception Handling",
+      "description": "Is the missing document scenario realistic and the audit impact correctly described?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Audit trails",
+    "Purchase-to-pay cycle",
+    "Three-way matching",
+    "Internal controls"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

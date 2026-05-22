@@ -1,0 +1,55 @@
+{
+  "id": "ratio-analysis-memo",
+  "categoryId": "finance-accounting",
+  "topicId": "ratio-analysis",
+  "level": "beginner",
+  "title": "Ratio Analysis from Sample Statements",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Turn two years of financials into a one-page investment memo.",
+  "scenario": "A small retail company has posted its financial statements for the last two years. A mentor asks you to write a one-page memo summarising what the numbers say about the business and whether you would lend it working capital.",
+  "brief": "You can invent plausible numbers for the two years as long as they are internally consistent. Calculate at least four ratios and interpret them in plain English.",
+  "deliverables": [
+    "A table of at least 4 ratios for both years, with the formulas visible",
+    "One paragraph interpreting the trends across the two years",
+    "A clear yes, no, or conditional recommendation on lending working capital, with your reasoning",
+    "One number you would want to see before finalising your recommendation"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Interpretation beats calculation. A correctly calculated ratio with no insight earns fewer marks than a rough estimate with sharp analysis.",
+  "rubric": [
+    {
+      "key": "ratios",
+      "label": "Ratio Selection & Calc",
+      "description": "Are the chosen ratios appropriate and the formulas correct?",
+      "weight": 30
+    },
+    {
+      "key": "interpretation",
+      "label": "Interpretation",
+      "description": "Does the memo explain what the ratios mean for this specific business?",
+      "weight": 35
+    },
+    {
+      "key": "decision",
+      "label": "Recommendation",
+      "description": "Is the recommendation clear and well supported by the analysis?",
+      "weight": 25
+    },
+    {
+      "key": "gap",
+      "label": "Gap Awareness",
+      "description": "Is the \"what I still want to know\" question a good one?",
+      "weight": 10
+    }
+  ],
+  "skillsProven": [
+    "Financial ratio analysis",
+    "Credit thinking",
+    "Business writing",
+    "Financial judgment"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

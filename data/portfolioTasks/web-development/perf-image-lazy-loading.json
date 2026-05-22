@@ -1,0 +1,48 @@
+{
+  "id": "perf-image-lazy-loading",
+  "categoryId": "web-development",
+  "topicId": "performance-optimization",
+  "level": "beginner",
+  "title": "Optimize Images & Fix Layout Shifts",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Improve page load time and stop the page from jumping around as it loads.",
+  "scenario": "A photography portfolio website looks beautiful, but it takes 8 seconds to load on a 3G connection and the text jumps around as the massive image files finally render. The client is losing visitors. You need to fix the images without degrading their visual quality.",
+  "brief": "You are provided with a basic HTML page containing 20 high-resolution `<img>` tags. Your task is to refactor the HTML and CSS to: 1) Lazy load the images so only the visible ones load initially. 2) Set explicit dimensions or aspect ratios so the browser can reserve space before the images download (fixing Cumulative Layout Shift). 3) Briefly explain how you would compress and serve modern image formats (like WebP or AVIF).",
+  "deliverables": [
+    "The refactored HTML code with `loading=\"lazy\"` and proper width/height attributes",
+    "The CSS (or Tailwind) used to maintain the aspect ratio",
+    "A short paragraph explaining your strategy for image formats and compression"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not use any heavy JavaScript libraries for lazy loading; modern browsers support this natively. Focus on preventing Cumulative Layout Shift (CLS).",
+  "rubric": [
+    {
+      "key": "lazy",
+      "label": "Native Lazy Loading",
+      "description": "Is the loading=\"lazy\" attribute used correctly on below-the-fold images?",
+      "weight": 30
+    },
+    {
+      "key": "cls",
+      "label": "Preventing CLS",
+      "description": "Are explicit dimensions or aspect-ratio CSS used to reserve space?",
+      "weight": 40
+    },
+    {
+      "key": "formats",
+      "label": "Image Formats",
+      "description": "Does the candidate understand modern formats like WebP or AVIF?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "HTML Optimization",
+    "Cumulative Layout Shift (CLS)",
+    "Native Lazy Loading",
+    "Responsive Images"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

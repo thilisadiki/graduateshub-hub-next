@@ -1,0 +1,47 @@
+{
+  "id": "co-design-qa-rubric",
+  "categoryId": "customer-ops",
+  "topicId": "qa-ticket-review",
+  "level": "intermediate",
+  "title": "Design a QA Rubric",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Create a QA scorecard for a newly launched WhatsApp support channel.",
+  "scenario": "Your company (a local ISP) just launched WhatsApp support. The current email QA rubric doesn't work because WhatsApp requires shorter, faster, more conversational replies. Management wants a new QA scorecard specifically for chat.",
+  "brief": "Design a QA rubric for the WhatsApp channel. Define the criteria, the weighting, and what constitutes a \"Fail\", \"Pass\", and \"Excellent\" for each criterion.",
+  "deliverables": [
+    "A QA scorecard with 4 to 6 criteria specific to live chat/WhatsApp",
+    "Weighting for each criterion (totaling 100%)",
+    "A definition guide: exactly what an agent must do to score \"Excellent\" vs \"Fail\" on the heaviest weighted criterion",
+    "One \"Auto-Fail\" condition (a mistake so bad the whole ticket scores zero)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Email values thoroughness; chat values speed and conciseness. Your rubric should reflect this shift in channel dynamics.",
+  "rubric": [
+    {
+      "key": "criteria",
+      "label": "Channel-Specific Criteria",
+      "description": "Are the criteria tailored to WhatsApp/Chat rather than email?",
+      "weight": 35
+    },
+    {
+      "key": "weighting",
+      "label": "Logical Weighting",
+      "description": "Do the weights reflect business priorities (e.g., accuracy vs speed)?",
+      "weight": 30
+    },
+    {
+      "key": "definitions",
+      "label": "Clear Definitions",
+      "description": "Is the definition guide objective and measurable?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "QA design",
+    "Channel strategy",
+    "Performance measurement",
+    "Process design"
+  ],
+  "relatedRoadmapIds": []
+}

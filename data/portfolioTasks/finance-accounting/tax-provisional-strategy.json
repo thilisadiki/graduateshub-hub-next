@@ -1,0 +1,55 @@
+{
+  "id": "tax-provisional-strategy",
+  "categoryId": "finance-accounting",
+  "topicId": "tax-compliance-sa",
+  "level": "advanced",
+  "title": "Provisional Tax Strategy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Advise a business owner on provisional tax timing, penalties, and cash flow.",
+  "scenario": "A successful freelance consultant earns R1.8M annually. She has been paying provisional tax but consistently underestimates, resulting in penalties. She wants to understand the system properly and plan her cash flow around tax payments.",
+  "brief": "Write a comprehensive provisional tax advisory memo. Cover the IRP6 submission dates, the penalty regime for underestimation, and a cash flow strategy for setting aside tax monthly.",
+  "deliverables": [
+    "A summary of the provisional tax system: who must register, the two payment periods, and the IRP6 deadlines",
+    "A calculation of her estimated provisional tax payments (P1 and P2) based on R1.8M taxable income",
+    "The penalty regime: what happens if she underestimates by more than the SARS tolerance",
+    "A monthly cash flow set-aside plan showing how much to save each month to cover tax comfortably"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "SARS penalises underestimation if the estimate is less than 80% of actual taxable income (for income above a threshold). Show you know this rule.",
+  "rubric": [
+    {
+      "key": "system",
+      "label": "System Knowledge",
+      "description": "Are the provisional tax rules, deadlines, and thresholds correct?",
+      "weight": 25
+    },
+    {
+      "key": "calculation",
+      "label": "Tax Calculation",
+      "description": "Are the P1 and P2 payments correctly calculated?",
+      "weight": 30
+    },
+    {
+      "key": "penalties",
+      "label": "Penalty Awareness",
+      "description": "Is the penalty regime correctly explained with the 80% rule?",
+      "weight": 25
+    },
+    {
+      "key": "cashflow",
+      "label": "Cash Flow Strategy",
+      "description": "Is the monthly set-aside plan practical and conservative enough?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Provisional tax",
+    "Tax planning",
+    "Cash flow management",
+    "SARS compliance"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

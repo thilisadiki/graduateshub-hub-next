@@ -1,0 +1,53 @@
+{
+  "id": "ui-dark-mode-conversion",
+  "categoryId": "design-ux",
+  "topicId": "ui-visual-design",
+  "level": "advanced",
+  "title": "Dark Mode Conversion",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Convert a light-mode design to dark mode, handling contrast, elevation, and states.",
+  "scenario": "A productivity app has a polished light-mode design. Users have been requesting dark mode for months. The design team needs a comprehensive dark mode specification — not just \"invert the colours.\"",
+  "brief": "Design the dark mode conversion specification. Cover colour mapping, contrast ratios, elevation representation, component state changes, and image/icon handling.",
+  "deliverables": [
+    "A colour mapping table: each light-mode colour and its dark-mode equivalent with WCAG contrast ratios",
+    "An elevation strategy: how shadows, borders, and surface colours represent depth in dark mode",
+    "Component state changes: how hover, active, disabled, and focus states adapt for dark backgrounds",
+    "Image and icon handling: when to invert, when to add backgrounds, when to swap assets"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Dark mode is not \"white background → #121212.\" It is a complete rethinking of elevation, contrast, and visual weight. Shadows do not work on dark backgrounds — you need lighter surfaces instead.",
+  "rubric": [
+    {
+      "key": "colours",
+      "label": "Colour Mapping",
+      "description": "Are the colour conversions systematic with WCAG-compliant contrast ratios?",
+      "weight": 30
+    },
+    {
+      "key": "elevation",
+      "label": "Elevation Strategy",
+      "description": "Does the candidate understand that dark mode replaces shadows with surface elevation?",
+      "weight": 25
+    },
+    {
+      "key": "states",
+      "label": "Component States",
+      "description": "Are all interactive states properly adapted for dark backgrounds?",
+      "weight": 25
+    },
+    {
+      "key": "assets",
+      "label": "Asset Handling",
+      "description": "Is the image/icon strategy practical and comprehensive?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Dark mode design",
+    "Colour theory",
+    "WCAG contrast",
+    "Design systems"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ba-conflicting-requirements",
+  "categoryId": "business-analysis",
+  "topicId": "requirements-engineering",
+  "level": "intermediate",
+  "title": "Resolve Conflicting Requirements",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Triage 4 stakeholders with contradictory requirements into a prioritised set.",
+  "scenario": "A company is building a new customer portal. The CEO wants it live in 6 weeks. The compliance officer insists on full POPIA consent flows. Marketing wants personalised dashboards. IT says the legacy API cannot support real-time data. All four stakeholders believe their requirement is non-negotiable.",
+  "brief": "Document all four stakeholder positions, identify the conflicts, and produce a prioritised requirements set using MoSCoW. Write a one-page stakeholder alignment memo.",
+  "deliverables": [
+    "A conflict matrix showing which requirements conflict and why",
+    "A MoSCoW-prioritised requirements list with justification for each classification",
+    "A stakeholder alignment memo (max 300 words) proposing the recommended path forward"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The BA does not decide — the BA facilitates a decision. Your memo should present options and a recommendation, not dictate.",
+  "rubric": [
+    {
+      "key": "conflicts",
+      "label": "Conflict Identification",
+      "description": "Are the conflicts correctly identified with root causes?",
+      "weight": 30
+    },
+    {
+      "key": "moscow",
+      "label": "MoSCoW Prioritisation",
+      "description": "Is the prioritisation defensible with clear reasoning?",
+      "weight": 35
+    },
+    {
+      "key": "memo",
+      "label": "Alignment Memo",
+      "description": "Is the memo diplomatic, clear, and actionable?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Conflict resolution",
+    "MoSCoW prioritisation",
+    "Stakeholder alignment",
+    "Requirements triage"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ut-remote-unmoderated",
+  "categoryId": "design-ux",
+  "topicId": "usability-testing",
+  "level": "advanced",
+  "title": "Remote Unmoderated Testing Strategy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a remote unmoderated testing programme with task design and metrics.",
+  "scenario": "A product team wants to run continuous usability testing but cannot afford moderated sessions for every feature release. They want a remote unmoderated testing programme they can run monthly with minimal facilitator time.",
+  "brief": "Design the complete remote unmoderated testing programme. Cover tool selection, task design, quantitative metrics, qualitative analysis, and sample size planning.",
+  "deliverables": [
+    "Tool comparison: evaluate 3 remote unmoderated testing tools (Maze, UserTesting, Lookback) with pros/cons",
+    "Task design principles: how to write tasks that work without a moderator (no ambiguity, clear success criteria)",
+    "A metrics framework: task completion rate, time-on-task, error rate, and SUS/CSAT scores",
+    "A monthly cadence plan: how many tests per month, sample size per test, and how results feed into sprint planning"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Unmoderated testing trades depth for scale. You get more participants but cannot ask follow-up questions. Design tasks that work without probing.",
+  "rubric": [
+    {
+      "key": "tools",
+      "label": "Tool Evaluation",
+      "description": "Is the tool comparison specific and criteria-based?",
+      "weight": 20
+    },
+    {
+      "key": "tasks",
+      "label": "Task Design Principles",
+      "description": "Are the principles sound for unmoderated context?",
+      "weight": 30
+    },
+    {
+      "key": "metrics",
+      "label": "Metrics Framework",
+      "description": "Are the quantitative and qualitative metrics well-chosen?",
+      "weight": 25
+    },
+    {
+      "key": "cadence",
+      "label": "Cadence Plan",
+      "description": "Is the monthly plan realistic and integrated with sprint workflow?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Remote testing",
+    "Unmoderated testing",
+    "Test metrics",
+    "Research operations"
+  ],
+  "relatedRoadmapIds": []
+}

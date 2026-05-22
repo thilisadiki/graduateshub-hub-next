@@ -1,0 +1,49 @@
+{
+  "id": "mobile-push-campaign",
+  "categoryId": "digital-marketing",
+  "topicId": "mobile-app-marketing",
+  "level": "intermediate",
+  "title": "Mobile Push Notification Strategy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a 7-day push notification sequence to reactivate dormant users.",
+  "scenario": "An e-commerce mobile app in South Africa notices that 40% of users who download the app make one purchase in the first week, but never open the app again. The mobile marketer needs to design a 7-day push campaign that triggers on day 7 of inactivity to bring them back.",
+  "brief": "Design a 7-day automated push notification flow. Write the actual copy, select trigger timings, set target screens (deep-linking rules), and define control groups for testing.",
+  "deliverables": [
+    "The flow schedule (days and times) and segment specifications (e.g., users inactive for 7-14 days with historical purchase)",
+    "Copy for 4 push notifications (Title, Body, Emoji) optimized for lock screen readability",
+    "The deep-link mapping for each push notification (where in the app the user lands when they tap)",
+    "The experiment design: how you would measure lift against a holdout control group"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Push notifications are highly intrusive. Too many will lead to app uninstalls. Keep the copy short (under 90 characters), hyper-personalized, and value-focused.",
+  "rubric": [
+    {
+      "key": "push-copy",
+      "label": "Push Notification Copy",
+      "description": "Is the copy engaging, concise, and direct about the incentive?",
+      "weight": 35
+    },
+    {
+      "key": "trigger-logic",
+      "label": "Timing & Deep Links",
+      "description": "Are the trigger timings logical and do deep links drop the user in the correct high-value screens?",
+      "weight": 35
+    },
+    {
+      "key": "experimentation",
+      "label": "Experimentation Design",
+      "description": "Is the control group methodology sound to prove incremental lift?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Mobile push strategy",
+    "Mobile analytics",
+    "Customer reactivation",
+    "Deep linking rules"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

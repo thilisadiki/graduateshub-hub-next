@@ -1,0 +1,55 @@
+{
+  "id": "it-sec-incident-response-playbook",
+  "categoryId": "it",
+  "topicId": "it-cybersecurity-fundamentals",
+  "level": "advanced",
+  "title": "Incident Response Playbook for Ransomware",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Design an end-to-end ransomware response playbook a small IT team could actually execute.",
+  "scenario": "A SA manufacturer of 180 staff has watched two competitors get hit by ransomware in the last year. The CIO has a small IT team (4 people) and asks for a credible incident response playbook. The playbook must work without retainer-level external support, while being clear about when to escalate.",
+  "brief": "Produce a complete ransomware incident response playbook covering preparation, detection, containment, eradication, recovery, and post-incident review. The playbook must be executable by 4-person team in a real incident.",
+  "deliverables": [
+    "A preparation section: what controls, backups, and contact lists must be in place before an incident",
+    "A detection and triage workflow showing the signals that trigger the playbook and the first 60 minutes of response",
+    "A containment and eradication section covering: network isolation steps, endpoint quarantine, credential rotation, and the criteria for escalating to external responders",
+    "A recovery section covering: restore decisions, ransom payment policy, communications to staff and customers, and the formal post-incident review checklist"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Real ransomware response is messy. The playbook must address questions teams actually face under pressure: do we shut down everything, do we pay, do we tell SAPS, do we tell the regulator under POPIA. State a position even if you disagree with it later, so the team has something to follow.",
+  "rubric": [
+    {
+      "key": "preparation",
+      "label": "Preparation Discipline",
+      "description": "Are the prep controls realistic for a 4-person team in an SA SME?",
+      "weight": 25
+    },
+    {
+      "key": "first-hour",
+      "label": "First-Hour Response",
+      "description": "Does the triage flow guide the team through the chaotic opening hour?",
+      "weight": 25
+    },
+    {
+      "key": "containment",
+      "label": "Containment Realism",
+      "description": "Are containment steps detailed enough to execute, with clear escalation thresholds?",
+      "weight": 25
+    },
+    {
+      "key": "aftermath",
+      "label": "Recovery and Comms",
+      "description": "Does the recovery section address ransom, regulators, and stakeholders honestly?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Incident response",
+    "Ransomware containment",
+    "Crisis communication",
+    "POPIA breach response"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

@@ -90,4 +90,13 @@ export const webDevelopmentTopics: PortfolioTopic[] = [
       'Build applications with many intersecting states, like a custom video player or a browser game. Tests reducer logic, XState, and avoiding impossible states.',
     skillsProven: ['useReducer / XState', 'Complex state logic', 'Media APIs', 'Event handling'],
   },
+  {
+    id: 'technical-seo-core-web-vitals',
+    categoryId: 'web-development',
+    title: 'Technical SEO & Core Web Vitals',
+    description:
+      'Audit and optimize websites for search engines and user experience. Tests Core Web Vitals, schema markup, crawlability, and performance optimization.',
+    skillsProven: ['Core Web Vitals', 'LCP/INP/CLS optimization', 'Schema markup', 'Technical SEO auditing', 'Crawl budget optimization'],
+  },
 ];
+

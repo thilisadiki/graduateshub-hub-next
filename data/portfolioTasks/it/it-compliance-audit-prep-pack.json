@@ -1,0 +1,55 @@
+{
+  "id": "it-compliance-audit-prep-pack",
+  "categoryId": "it",
+  "topicId": "it-compliance-governance",
+  "level": "advanced",
+  "title": "External IT Audit Preparation Pack",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Prepare a SA company for its first external IT audit without surprises.",
+  "scenario": "A SA medical scheme is about to undergo its first external IT audit by a Big Four firm. The CIO wants a preparation pack: the artefacts the audit team will request, the evidence the company already has, the gaps to close in the next 60 days, and the rehearsal walkthrough.",
+  "brief": "Produce an audit preparation pack covering evidence inventory, gap closure plan, walkthrough rehearsal, and the audit-day operating model.",
+  "deliverables": [
+    "An evidence inventory mapping at least 25 expected audit requests (sample list: access reviews, change tickets, backup test logs, incident records, policy approvals) to the system or repository where the evidence lives, plus the named owner",
+    "A gap closure plan listing the requests where evidence is missing or weak, with a 60-day remediation schedule",
+    "A walkthrough rehearsal pack: a list of the 8 to 12 walkthrough conversations the audit team will run, the company representative for each, and a one-page briefing covering the questions likely asked",
+    "An audit-day operating model: the war room setup, the request triage process, the response SLA, and the escalation path for difficult requests"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Audit teams hate two things: waiting for evidence, and inconsistent answers from different people. The preparation pack must produce fast evidence retrieval and ensure walkthrough representatives tell the same story.",
+  "rubric": [
+    {
+      "key": "inventory",
+      "label": "Evidence Inventory",
+      "description": "Is the inventory comprehensive, owner-mapped, and aligned to typical audit asks?",
+      "weight": 30
+    },
+    {
+      "key": "gaps",
+      "label": "Gap Closure Realism",
+      "description": "Are gaps prioritised by audit risk, not internal preference, and closeable in 60 days?",
+      "weight": 25
+    },
+    {
+      "key": "walkthrough",
+      "label": "Walkthrough Discipline",
+      "description": "Will representatives give consistent and credible answers?",
+      "weight": 25
+    },
+    {
+      "key": "operating-model",
+      "label": "Audit-Day Operating Model",
+      "description": "Will the war room actually deliver fast and consistent responses under pressure?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Audit preparation",
+    "Evidence management",
+    "Walkthrough rehearsal",
+    "IT audit operating model"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

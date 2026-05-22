@@ -1,0 +1,47 @@
+{
+  "id": "co-audit-rewrite-sop",
+  "categoryId": "customer-ops",
+  "topicId": "standard-operating-procedures",
+  "level": "advanced",
+  "title": "Audit and Rewrite a Failing SOP",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Identify why an existing SOP is causing a 15% error rate and fix it.",
+  "scenario": "A subscription box company has a 15% error rate on subscription cancellations. Customers are still being billed after cancelling. The current SOP is a 3-page wall of text with outdated screenshots. Agents are skipping steps to save time.",
+  "brief": "Analyse a simulated \"bad\" SOP (provided by you in the output), identify the root causes of the errors, and rewrite the SOP to be error-proof and efficient.",
+  "deliverables": [
+    "The \"Bad SOP\" (invent a realistic, bloated, confusing 3-paragraph SOP)",
+    "An audit report detailing at least 3 reasons the old SOP caused billing errors",
+    "The Rewritten SOP: streamlined, formatted, and incorporating a final \"check\" to prevent the billing error",
+    "A proposal for a product/tech change that would make this SOP unnecessary"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The best ops professionals try to eliminate processes, not just document them. The final deliverable (suggesting a tech fix) is what separates a senior ops person from a junior one.",
+  "rubric": [
+    {
+      "key": "audit",
+      "label": "Audit Quality",
+      "description": "Does the audit correctly identify why the bad SOP fails in practice?",
+      "weight": 25
+    },
+    {
+      "key": "rewrite",
+      "label": "SOP Rewrite",
+      "description": "Is the new SOP significantly more usable and error-proof?",
+      "weight": 40
+    },
+    {
+      "key": "tech-fix",
+      "label": "Tech Fix Proposal",
+      "description": "Is the proposed system improvement logical and impactful?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Process optimization",
+    "Root cause analysis",
+    "SOP auditing",
+    "Systems thinking"
+  ],
+  "relatedRoadmapIds": []
+}

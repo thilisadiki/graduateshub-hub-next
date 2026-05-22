@@ -42,7 +42,7 @@ const jobSearchSteps = [
     body: 'Most graduate CVs fail at the screening stage. Build a clean, targeted CV before sending a single application.',
     href: '/cv-builder',
     cta: 'Use CV Builder →',
-    color: 'bg-blue-50 border-blue-100',
+    color: 'bg-[#FFDF9C]/20 border-[#D1C5B4]',
     accent: 'text-primary',
   },
   {
@@ -51,8 +51,8 @@ const jobSearchSteps = [
     body: 'Apply to roles that match your qualification and skills, not every job posting you find.',
     href: '/career-roadmaps',
     cta: 'Browse Career Roadmaps →',
-    color: 'bg-indigo-50 border-indigo-100',
-    accent: 'text-indigo-700',
+    color: 'bg-[#FFDF9C]/20 border-[#D1C5B4]',
+    accent: 'text-[#5a4000]',
   },
   {
     step: '3',
@@ -294,9 +294,9 @@ export default function FirstGraduateJobSAPage() {
           </section>
 
           {/* Internal tools CTA */}
-          <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Use Our Free Job Search Tools</h2>
-            <p className="text-blue-100 text-lg mb-10 max-w-2xl leading-relaxed">
+            <p className="text-[#FFDF9C] text-lg mb-10 max-w-2xl leading-relaxed">
               Everything you need to prepare your application and walk into interviews confidently. All free, no account required.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
@@ -324,12 +324,12 @@ export default function FirstGraduateJobSAPage() {
                 },
               ].map(({ icon: Icon, title, body, href, cta }) => (
                 <div key={title} className="bg-white/10 rounded-xl p-6 backdrop-blur-sm flex flex-col">
-                  <Icon size={24} className="text-blue-200 mb-3" strokeWidth={1.5} />
+                  <Icon size={24} className="text-[#FFDF9C] mb-3" strokeWidth={1.5} />
                   <h3 className="font-bold text-white mb-2">{title}</h3>
-                  <p className="text-blue-100 text-sm leading-relaxed flex-grow">{body}</p>
+                  <p className="text-[#FFDF9C] text-sm leading-relaxed flex-grow">{body}</p>
                   <Link
                     href={href}
-                    className="mt-5 inline-flex items-center gap-2 bg-white text-primary font-bold text-sm px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors w-fit"
+                    className="mt-5 inline-flex items-center gap-2 bg-white text-primary font-bold text-sm px-4 py-2 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors w-fit"
                   >
                     {cta} <ArrowRight size={14} />
                   </Link>
@@ -339,11 +339,11 @@ export default function FirstGraduateJobSAPage() {
             <div className="bg-white/10 rounded-xl p-5 backdrop-blur-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <p className="font-bold text-white mb-1">See all 7 free career tools</p>
-                <p className="text-blue-100 text-sm">CV reviewer, job description decoder, career quiz, and more.</p>
+                <p className="text-[#FFDF9C] text-sm">CV reviewer, job description decoder, career quiz, and more.</p>
               </div>
               <Link
                 href="/tools"
-                className="shrink-0 bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-blue-50 transition-colors whitespace-nowrap flex items-center gap-2"
+                className="shrink-0 bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors whitespace-nowrap flex items-center gap-2"
               >
                 Browse All Tools <ArrowRight size={14} />
               </Link>

@@ -1,0 +1,47 @@
+{
+  "id": "co-vendor-dispute-resolution",
+  "categoryId": "customer-ops",
+  "topicId": "vendor-supplier-management",
+  "level": "intermediate",
+  "title": "Resolve a Supplier Dispute",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Handle a situation where a packaging supplier delivered defective boxes.",
+  "scenario": "Your e-commerce company ordered 10,000 custom-branded boxes. They arrived, but the glue is weak and the boxes pop open during transit, causing customer damages. The supplier claims you didn't specify the glue strength in the PO and refuses a free reprint.",
+  "brief": "Draft a negotiation strategy and the formal email response to the supplier to resolve the dispute without going to court.",
+  "deliverables": [
+    "Your internal negotiation strategy (What is your ideal outcome? What is your walk-away point?)",
+    "The formal response email to the supplier",
+    "A proposed compromise (e.g., they reprint at cost, or you split the difference)",
+    "A new checklist item for future Purchase Orders (POs) to prevent this"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ops is about keeping the business moving. Suing a supplier takes 2 years. You need boxes now. Find a pragmatic compromise that shares the pain.",
+  "rubric": [
+    {
+      "key": "strategy",
+      "label": "Negotiation Strategy",
+      "description": "Is the strategy pragmatic and focused on getting usable boxes?",
+      "weight": 30
+    },
+    {
+      "key": "communication",
+      "label": "Formal Response",
+      "description": "Is the email assertive without burning the relationship completely?",
+      "weight": 40
+    },
+    {
+      "key": "prevention",
+      "label": "Process Improvement",
+      "description": "Is the PO checklist addition logical?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Dispute resolution",
+    "Vendor negotiation",
+    "Supply chain ops",
+    "Pragmatism"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,48 @@
+{
+  "id": "it-db-access-audit",
+  "categoryId": "it",
+  "topicId": "it-database-admin",
+  "level": "intermediate",
+  "title": "Database Access Control & Privilege Remediation Audit",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Audit user privileges on a production database and design a least-privilege SQL role structure under POPIA.",
+  "scenario": "An e-commerce firm in Johannesburg has grown quickly and experienced team changes. An internal scan reveals dozens of active database accounts: several junior developers have superuser (DBA) access to the production server, customer service staff have raw SELECT privileges on the user table containing plain-text passwords and banking data, and old employee accounts remain active.",
+  "brief": "Perform an access audit. Create a role-based access control matrix, design a remediation plan to clean up old accounts, and write a SQL script to establish least-privilege roles.",
+  "deliverables": [
+    "A Database Privilege Matrix (markdown table) defining logical roles (DBA, Developer, CS Agent, Report Reader) and their allowed operations (SELECT, INSERT, UPDATE, etc.) on specific schemas",
+    "An account cleanup and audit playbook outlining how to discover stale users, rotate credentials, and restrict direct database access under POPIA requirements",
+    "A SQL code template containing DDL commands (CREATE ROLE, GRANT, REVOKE) to implement the role segregation, including schema isolation and password complexity constraints"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Under POPIA Principle 7 (Security Safeguards), you must restrict access to sensitive PII (banking/ID numbers) to only those who strictly need it. Make sure your role design prevents customer support agents from viewing sensitive data or exporting raw client lists.",
+  "rubric": [
+    {
+      "key": "matrix",
+      "label": "Privilege Matrix Design",
+      "description": "Is the role-based access control (RBAC) model secure, logical, and appropriate for safeguarding sensitive data?",
+      "weight": 35
+    },
+    {
+      "key": "remediation",
+      "label": "Cleanup Playbook & POPIA",
+      "description": "Is the account remediation workflow thorough, address credential rotation, and align with POPIA Principles?",
+      "weight": 35
+    },
+    {
+      "key": "sql",
+      "label": "SQL Role Implementation",
+      "description": "Are the DDL SQL statements syntax-valid, properly structure roles, and use appropriate GRANT/REVOKE commands?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Database access governance",
+    "Role-based access control (RBAC)",
+    "POPIA database compliance",
+    "SQL privilege administration"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

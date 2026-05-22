@@ -1,0 +1,55 @@
+{
+  "id": "analytics-mmm-brief",
+  "categoryId": "digital-marketing",
+  "topicId": "marketing-analytics-attribution",
+  "level": "advanced",
+  "title": "Marketing Mix Modelling (MMM) Brief",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design the requirements for a Marketing Mix Model that guides budget allocation.",
+  "scenario": "A large South African retailer spends R5M/month across TV, radio, digital, outdoor, and in-store promotions. The CMO wants to know which channels are over- and under-invested. An analytics consultancy will build the MMM, but they need a clear brief from the marketing team.",
+  "brief": "Write the requirements brief for the MMM project. Specify the data inputs needed, the expected outputs, the business questions it must answer, and how the team will use the results.",
+  "deliverables": [
+    "Data requirements: which datasets are needed (media spend by channel × week, sales data, pricing, weather, competitor activity, etc.)",
+    "Business questions: the 3-5 specific questions the MMM must answer",
+    "Expected outputs: what the model should produce (channel ROI curves, optimal budget allocation, saturation points)",
+    "An implementation plan: how the marketing team will use MMM outputs in quarterly budget planning"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "An MMM is only as good as its inputs. If you do not include external factors (seasonality, competitor promotions, economic conditions), the model will attribute their effects to your media spend.",
+  "rubric": [
+    {
+      "key": "data",
+      "label": "Data Requirements",
+      "description": "Are the data inputs comprehensive, including external factors?",
+      "weight": 30
+    },
+    {
+      "key": "questions",
+      "label": "Business Questions",
+      "description": "Are the questions specific enough to guide model design?",
+      "weight": 25
+    },
+    {
+      "key": "outputs",
+      "label": "Expected Outputs",
+      "description": "Are the outputs actionable (ROI curves, not just coefficients)?",
+      "weight": 25
+    },
+    {
+      "key": "implementation",
+      "label": "Implementation Plan",
+      "description": "Is there a credible plan for turning model outputs into budget decisions?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Marketing mix modelling",
+    "Budget optimisation",
+    "Marketing analytics",
+    "Strategic planning"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

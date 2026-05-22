@@ -1,0 +1,49 @@
+{
+  "id": "python-merge-reshape",
+  "categoryId": "data",
+  "topicId": "python-data-analysis",
+  "level": "intermediate",
+  "title": "Merge, Reshape, and Aggregate Multi-Source Data",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Combine 3 CSVs with different schemas into one clean analysis-ready DataFrame.",
+  "scenario": "A retail chain stores its data across three separate systems: `customers.csv` (customer demographics), `orders.csv` (order headers), and `order_items.csv` (line items with product and price). Your analyst needs a single, denormalized DataFrame to work from.",
+  "brief": "Write the pandas code to load, merge, reshape, and aggregate these three files into one clean DataFrame. Handle schema mismatches (different column names, date formats, missing keys).",
+  "deliverables": [
+    "The complete Python script showing the merge strategy (inner, left, etc.) and join keys",
+    "How you handled schema mismatches (column renames, type casting, date parsing)",
+    "The final aggregated output: revenue per customer, with at least 2 derived columns"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Show that you understand the difference between inner, left, and outer joins. A wrong join type silently drops data.",
+  "rubric": [
+    {
+      "key": "merging",
+      "label": "Merge Strategy",
+      "description": "Are the join types and keys chosen correctly to avoid data loss?",
+      "weight": 35
+    },
+    {
+      "key": "cleaning",
+      "label": "Schema Handling",
+      "description": "Are column renames, type casts, and null handling done correctly?",
+      "weight": 30
+    },
+    {
+      "key": "aggregation",
+      "label": "Aggregation Quality",
+      "description": "Are the derived columns meaningful and the groupby operations correct?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "pandas merge",
+    "Data reshaping",
+    "Schema reconciliation",
+    "Data pipeline scripting"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

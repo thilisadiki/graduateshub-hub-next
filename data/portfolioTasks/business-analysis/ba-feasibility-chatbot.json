@@ -1,0 +1,46 @@
+{
+  "id": "ba-feasibility-chatbot",
+  "categoryId": "business-analysis",
+  "topicId": "feasibility-studies",
+  "level": "beginner",
+  "title": "Feasibility Assessment Template",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Create a feasibility assessment for introducing a chatbot to customer service.",
+  "scenario": "A South African insurance company receives 2,000 customer calls per day. 40% are simple queries (claim status, policy details). The CTO suggests a chatbot. The COO wants to know if it is feasible before committing budget.",
+  "brief": "Create a feasibility assessment covering technical, operational, financial, and schedule feasibility. Make a clear recommendation.",
+  "deliverables": [
+    "A feasibility assessment with 4 dimensions: Technical, Operational, Financial, Schedule — each rated Green/Amber/Red",
+    "Key assumptions and risks for each dimension",
+    "A one-paragraph recommendation: proceed, proceed with conditions, or do not proceed"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A feasibility assessment is not a business case. It answers \"can we do this?\" not \"should we do this?\" Keep the scope tight.",
+  "rubric": [
+    {
+      "key": "dimensions",
+      "label": "Four Dimensions",
+      "description": "Are all 4 feasibility dimensions assessed with honest ratings?",
+      "weight": 35
+    },
+    {
+      "key": "risks",
+      "label": "Risks & Assumptions",
+      "description": "Are the risks realistic and the assumptions stated?",
+      "weight": 30
+    },
+    {
+      "key": "recommendation",
+      "label": "Recommendation",
+      "description": "Is the recommendation consistent with the assessment?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Feasibility assessment",
+    "Risk identification",
+    "Structured analysis",
+    "Decision support"
+  ],
+  "relatedRoadmapIds": []
+}

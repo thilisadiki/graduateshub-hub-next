@@ -1,0 +1,53 @@
+{
+  "id": "ecommerce-checkout-form",
+  "categoryId": "design-ux",
+  "topicId": "ecommerce-ux",
+  "level": "intermediate",
+  "title": "One-Page E-Commerce Checkout Form Redesign",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Redesign a multi-step checkout form into a single-page layout, reducing friction for mobile users.",
+  "scenario": "An online boutique nursery in Pretoria has a legacy 5-step checkout: Shipping → Billing → Coupon → Delivery Method → Payment. Customer surveys indicate they drop out due to the form length and confusing postal code requirements (since SA doesn't use rigid US-style ZIP codes).",
+  "brief": "Redesign the checkout flow into an optimized one-page layout. Focus on address search autocomplete, flexible postal code input, inline validation, and order summary visibility.",
+  "deliverables": [
+    "A detailed layout plan for the one-page checkout, including column grouping and field ordering",
+    "A specification of form fields showing autocomplete attributes and error handling logic",
+    "A localized postal code and shipping cost selector interaction flow (addressing SA suburban naming complexities)",
+    "An order summary sidebar/header sticky block design detailing item cost, VAT, delivery fee, and discount calculations"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Make sure the calculation breakdown is mathematically correct (e.g. VAT at 15% in South Africa).",
+  "rubric": [
+    {
+      "key": "layout",
+      "label": "Checkout Layout Strategy",
+      "description": "Does the layout minimize steps and visually separate sections?",
+      "weight": 30
+    },
+    {
+      "key": "form-design",
+      "label": "Form Usability Spec",
+      "description": "Are fields optimized for autocomplete, focus, error states, and inline validation?",
+      "weight": 35
+    },
+    {
+      "key": "localization",
+      "label": "SA Shipping & VAT",
+      "description": "Are South African postal rules and 15% VAT calculations handled correctly?",
+      "weight": 20
+    },
+    {
+      "key": "clarity",
+      "label": "Submission Structure",
+      "description": "Is the text clear and professional?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Form design",
+    "Checkout optimization",
+    "VAT & checkout calculations",
+    "Information architecture"
+  ],
+  "relatedRoadmapIds": []
+}

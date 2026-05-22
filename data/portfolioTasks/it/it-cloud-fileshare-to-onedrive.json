@@ -1,0 +1,55 @@
+{
+  "id": "it-cloud-fileshare-to-onedrive",
+  "categoryId": "it",
+  "topicId": "it-cloud-fundamentals",
+  "level": "intermediate",
+  "title": "File Server to OneDrive and SharePoint Migration Plan",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Migrate a 2 TB on-premise file share to OneDrive and SharePoint without losing permissions.",
+  "scenario": "A SA professional services firm of 60 staff has a 2 TB on-premise file share with deeply nested folders, NTFS permissions, and a directory structure that nobody fully understands. The CIO has approved a move to OneDrive (personal) and SharePoint (team) inside Microsoft 365.",
+  "brief": "Produce a complete migration plan: discovery, mapping, tooling choice, cutover, and post-migration support. The plan must address the permission translation problem and the inevitable user resistance.",
+  "deliverables": [
+    "A discovery plan covering: data classification, owner identification, permission audit, and \"rot\" identification (stale folders to leave behind)",
+    "A mapping document showing how on-premise folders map to OneDrive personal libraries versus SharePoint team sites, and how NTFS permissions translate to M365 sharing",
+    "A tooling recommendation comparing native (Migration Manager) versus third-party (ShareGate, Mover) options with cost and complexity trade-offs",
+    "A 30-60-90 day adoption plan covering training, support, and the timeline to decommission the old file server"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The technical migration is the easy part. The hard part is permission translation, which folders go where, and getting users to stop dragging files back to the old server. Show that you understand the change management dimension.",
+  "rubric": [
+    {
+      "key": "discovery",
+      "label": "Discovery Quality",
+      "description": "Does the discovery surface real risks (rot, dependencies, permission tangles)?",
+      "weight": 25
+    },
+    {
+      "key": "mapping",
+      "label": "Mapping Logic",
+      "description": "Are personal versus team boundaries drawn correctly and permission translation handled?",
+      "weight": 30
+    },
+    {
+      "key": "tooling",
+      "label": "Tooling Trade-offs",
+      "description": "Are migration tools compared honestly, with cost and complexity?",
+      "weight": 20
+    },
+    {
+      "key": "adoption",
+      "label": "Adoption Plan",
+      "description": "Does the plan acknowledge the change management challenge, not just the technical lift?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "M365 migration",
+    "Permission translation",
+    "Change management",
+    "Cloud tooling selection"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

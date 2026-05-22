@@ -1,0 +1,53 @@
+{
+  "id": "ia-navigation-redesign",
+  "categoryId": "design-ux",
+  "topicId": "information-architecture",
+  "level": "intermediate",
+  "title": "Navigation Redesign",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Redesign the navigation of a complex government website to improve task completion.",
+  "scenario": "The South African government services portal has hundreds of pages covering everything from ID applications to tax filing. Users frequently give up and phone the call centre because they cannot find the right page online.",
+  "brief": "Redesign the navigation architecture. Focus on the top 10 user tasks (invent them), and design a navigation that gets users to the right page in 3 clicks or fewer.",
+  "deliverables": [
+    "A list of the top 10 user tasks ranked by frequency (invented but plausible)",
+    "The current navigation structure (invented) with click-paths for each top task",
+    "The redesigned navigation with click-paths showing improvement for each task",
+    "One mega-menu or search-driven pattern you would use for edge-case content"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Government websites serve diverse audiences (citizens, businesses, immigrants). Do not optimise for one audience at the expense of others.",
+  "rubric": [
+    {
+      "key": "tasks",
+      "label": "Task Identification",
+      "description": "Are the top 10 tasks realistic and well-prioritised?",
+      "weight": 20
+    },
+    {
+      "key": "current",
+      "label": "Current State Analysis",
+      "description": "Is the current navigation analysis specific about failure points?",
+      "weight": 25
+    },
+    {
+      "key": "redesign",
+      "label": "Navigation Redesign",
+      "description": "Does the redesign achieve ≤3 clicks for the top tasks?",
+      "weight": 35
+    },
+    {
+      "key": "edge-case",
+      "label": "Edge Case Handling",
+      "description": "Is the solution for long-tail content practical?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Navigation design",
+    "Information architecture",
+    "Task analysis",
+    "Government UX"
+  ],
+  "relatedRoadmapIds": []
+}

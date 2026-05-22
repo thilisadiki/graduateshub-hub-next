@@ -1,0 +1,63 @@
+{
+  "id": "sars-notice-of-appeal-bad-debts",
+  "categoryId": "finance-accounting",
+  "topicId": "sars-dispute-resolution",
+  "level": "advanced",
+  "title": "Manage a SARS Audit & Draft a Notice of Appeal (NOA)",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 8 hours",
+  "tagline": "Act as a tax consultant to prepare a formal Notice of Appeal (NOA) with case law analysis and ADR strategy.",
+  "scenario": "A corporate client's Notice of Objection against disallowed R2,000,000 bad debt deductions under section 11(i) has been disallowed by SARS. The client wants to appeal the decision and prepare for Tax Board or Tax Court proceedings.",
+  "brief": "Act as the tax consultant to prepare the appeal. Draft the grounds of appeal (Notice of Appeal / ADR1), analyze the legal precedents (case law), design an Alternative Dispute Resolution (ADR) strategy, and compile the final appeal bundle layout.",
+  "deliverables": [
+    "Detailed Notice of Appeal (ADR1 statement) articulating the legal arguments, focusing on section 11(i) of the Income Tax Act.",
+    "Case law analysis citing at least one relevant South African tax court judgment supporting the deductibility of bad debts.",
+    "Alternative Dispute Resolution (ADR) strategy outlining the client's position, potential concessions, and settlement boundaries.",
+    "Table of contents for the appeal bundle (exhibits, correspondence, financial records).",
+    "Risk assessment report outlining the potential costs, interest (section 89quat), and penalties (understatement penalties) of proceeding to court."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Provide a formal, comprehensive tax appeal memorandum. Ground your analysis in South African tax law and judicial precedents.",
+  "rubric": [
+    {
+      "key": "legal_argumentation",
+      "label": "Legal Argumentation",
+      "description": "Depth and legal validity of the grounds of appeal and accurate interpretation of section 11(i).",
+      "weight": 30
+    },
+    {
+      "key": "adr_strategy",
+      "label": "ADR & Settlement Strategy",
+      "description": "Is the ADR strategy commercially sound, offering pragmatic negotiation limits?",
+      "weight": 25
+    },
+    {
+      "key": "audit_bundle",
+      "label": "Audit Bundle Structure",
+      "description": "Is the appeal bundle layout logical, structured, and complete?",
+      "weight": 15
+    },
+    {
+      "key": "risk_assessment",
+      "label": "Financial Risk Assessment",
+      "description": "Are potential costs, section 89quat interest, and understatement penalties modeled accurately?",
+      "weight": 15
+    },
+    {
+      "key": "professional_craft",
+      "label": "Professional Opinion Format",
+      "description": "Does the submission follow standard tax practice opinion formatting and professional tone?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Tax litigation & appeals",
+    "Section 11(i) deductions",
+    "ADR negotiation",
+    "Case law analysis",
+    "Financial risk modeling"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

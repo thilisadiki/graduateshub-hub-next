@@ -1,0 +1,54 @@
+{
+  "id": "cart-basic-state",
+  "categoryId": "web-development",
+  "topicId": "ecommerce-shopping-cart",
+  "level": "beginner",
+  "title": "Build a Basic Shopping Cart UI",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Create a static shopping cart that calculates totals using React state.",
+  "scenario": "A small boutique clothing brand is launching their first online store. The designer has created the cart slide-out UI, but it currently has hardcoded values. You need to bring it to life so users can see their items, update quantities, and see the correct total price.",
+  "brief": "Build a React cart component. It should accept an array of product objects (id, name, price, quantity, image). Render the list of items, allow the user to increase or decrease the quantity of each item, and automatically calculate the subtotal, a flat shipping fee, and the grand total.",
+  "deliverables": [
+    "The React component code for the Cart and CartItem",
+    "The state management logic for updating item quantities and removing items",
+    "The math logic for calculating the grand total securely"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on clean, predictable state updates. Never mutate the state array directly - always return a new array when updating quantities.",
+  "rubric": [
+    {
+      "key": "state",
+      "label": "State Updates",
+      "description": "Are the quantity updates immutable and bug-free?",
+      "weight": 35
+    },
+    {
+      "key": "math",
+      "label": "Calculations",
+      "description": "Is the total calculated correctly based on the current state?",
+      "weight": 30
+    },
+    {
+      "key": "edge",
+      "label": "Edge Cases",
+      "description": "Does the quantity prevent going below 1 (or does it remove the item at 0)?",
+      "weight": 20
+    },
+    {
+      "key": "ui",
+      "label": "Component Structure",
+      "description": "Is the UI broken down into sensible sub-components?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "React State",
+    "Array Methods",
+    "Basic Math Logic",
+    "Component Design"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

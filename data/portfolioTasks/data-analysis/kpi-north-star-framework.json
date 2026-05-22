@@ -1,0 +1,56 @@
+{
+  "id": "kpi-north-star-framework",
+  "categoryId": "data",
+  "topicId": "business-metrics-kpis",
+  "level": "advanced",
+  "title": "Design a Metrics Framework (North Star)",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a full metrics tree from a North Star metric down to team-level leading indicators.",
+  "scenario": "A fintech company processing R500M/month in transactions wants to align all 8 teams around a single North Star metric. Currently, each team tracks different things and nobody agrees on what \"growth\" means.",
+  "brief": "Design a complete metrics framework. Choose the North Star metric, decompose it into team-level input metrics, define leading vs lagging indicators, and explain how each team's weekly actions connect to the company goal.",
+  "deliverables": [
+    "The North Star metric with a clear definition and why you chose it over alternatives",
+    "A metrics tree diagram showing how the North Star decomposes into 3-4 team-level input metrics",
+    "For each team metric: whether it is leading or lagging, the responsible team, and the cadence of review",
+    "One example of how a team could game their metric and how the framework prevents it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good North Star is not revenue. It is the value-creating action that drives revenue. Think carefully about what action, done repeatedly, creates compounding value for this fintech.",
+  "rubric": [
+    {
+      "key": "north-star",
+      "label": "North Star Selection",
+      "description": "Is the chosen metric a genuine value-creating action, not just a revenue proxy?",
+      "weight": 25
+    },
+    {
+      "key": "decomposition",
+      "label": "Metrics Tree",
+      "description": "Does the tree logically connect team actions to the North Star?",
+      "weight": 30
+    },
+    {
+      "key": "leading-lagging",
+      "label": "Leading vs Lagging",
+      "description": "Are leading and lagging indicators correctly classified?",
+      "weight": 25
+    },
+    {
+      "key": "gaming",
+      "label": "Anti-Gaming Design",
+      "description": "Is the gaming example realistic and the mitigation thoughtful?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "North Star metrics",
+    "Metrics frameworks",
+    "Organisational alignment",
+    "Strategic thinking"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

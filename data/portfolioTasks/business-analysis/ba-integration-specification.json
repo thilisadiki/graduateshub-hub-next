@@ -1,0 +1,48 @@
+{
+  "id": "ba-integration-specification",
+  "categoryId": "business-analysis",
+  "topicId": "interface-specs-api-mapping",
+  "level": "advanced",
+  "title": "Enterprise ERP to Courier API Integration Specification",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 hours",
+  "tagline": "Write a systems integration specification linking an ERP inventory system to a global courier API (DHL/FedEx).",
+  "scenario": "A global electronics distributor needs to automate its shipping dispatch. Currently, warehouse staff copy shipment details from their SAP ERP system into a DHL/FedEx shipping portal manually. The company wants to integrate the ERP directly with the courier REST API, automating the generation of shipping labels, tracking numbers, and international customs documents when an order is packed.",
+  "brief": "Write a comprehensive Systems Integration Specification Document. Design the interface data flows, specify the REST API request/response mappings, detail the customs declaration data payload, and design a robust exception-handling strategy for address validation failures and API downtime.",
+  "deliverables": [
+    "A systems integration architecture diagram (sequence flow showing ERP, Integration Middleware, and Courier API).",
+    "API field-level mapping tables for the shipment creation request (mapping ERP order data to Courier API fields).",
+    "Customs declaration JSON payload template (including HTS codes, weight in kilograms, declared value in USD, and country of origin).",
+    "A comprehensive exception handling playbook: retry policies with exponential backoff, handling address validation errors (e.g. Zip/Postal code mismatch), and a manual fallback queue."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Write a formal Systems Integration Document in Markdown. Structure the data mappings and schemas as tables and code blocks, and model the integration flows using a Mermaid sequence diagram.",
+  "rubric": [
+    {
+      "key": "sequence_flow",
+      "label": "Interface Sequence Flow",
+      "description": "Is the integration sequence logically designed, showing clear synchronous/asynchronous boundaries?",
+      "weight": 35
+    },
+    {
+      "key": "payload_mappings",
+      "label": "Data Payload Mapping",
+      "description": "Are fields (weights, currencies, HTS codes) mapped accurately with correct schemas and validation guidelines?",
+      "weight": 35
+    },
+    {
+      "key": "exception_handling",
+      "label": "Exception Handling Workflows",
+      "description": "Are network failures, authentication expired, validation issues, and back-office review queues detailed comprehensively?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Systems integration specification",
+    "Mermaid sequence diagrams",
+    "API request/response mapping",
+    "Customs compliance documentation",
+    "Exception handling frameworks"
+  ],
+  "relatedRoadmapIds": []
+}

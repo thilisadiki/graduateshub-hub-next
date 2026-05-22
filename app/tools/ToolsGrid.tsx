@@ -9,15 +9,18 @@ import InterviewPrepModal from '@/components/modals/InterviewPrepModal';
 import JDDecoderModal from '@/components/modals/JDDecoderModal';
 import CareerQuizModal from '@/components/modals/CareerQuizModal';
 
+// Citrus MD3 palette — primary / secondary / tertiary
+const P = {
+  primary:   { accent: 'from-[#7A5900] to-[#FFDF9C]', iconBg: 'bg-[#FFDF9C]/50', iconColor: 'text-[#7A5900]', badgeBg: 'bg-[#FFDF9C] text-[#261A00]', btn: 'bg-primary hover:bg-[#5a4000]' },
+  secondary: { accent: 'from-[#6C5D3F] to-[#F5E0BB]', iconBg: 'bg-[#F5E0BB]/50', iconColor: 'text-[#6C5D3F]', badgeBg: 'bg-[#F5E0BB] text-[#251A04]', btn: 'bg-[#6C5D3F] hover:bg-[#524633]' },
+  tertiary:  { accent: 'from-[#4B6649] to-[#CCECC8]', iconBg: 'bg-[#CCECC8]/50', iconColor: 'text-[#4B6649]', badgeBg: 'bg-[#CCECC8] text-[#08210B]', btn: 'bg-[#4B6649] hover:bg-[#3a5038]' },
+};
+
 const tools = [
   {
     key: 'recommend',
     icon: Sparkles,
-    gradient: 'from-indigo-500 to-blue-500',
-    iconBg: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
-    badgeBg: 'bg-indigo-100 text-indigo-700',
-    btnClass: 'bg-indigo-600 hover:bg-indigo-700',
+    palette: P.primary,
     label: 'Course Recommender',
     badge: 'AI-Powered',
     description: 'Not sure which course to take? Describe your goals in plain English and get a personalised shortlist of free courses matched to you in seconds.',
@@ -27,11 +30,7 @@ const tools = [
   {
     key: 'path',
     icon: Map,
-    gradient: 'from-blue-500 to-cyan-500',
-    iconBg: 'bg-blue-50',
-    iconColor: 'text-blue-600',
-    badgeBg: 'bg-blue-100 text-blue-700',
-    btnClass: 'bg-blue-600 hover:bg-blue-700',
+    palette: P.primary,
     label: 'Learning Path Generator',
     badge: 'AI-Powered',
     description: 'Enter your career goal and get a structured, phase-by-phase learning roadmap - Foundation through to Specialisation - with course recommendations for each step.',
@@ -41,11 +40,7 @@ const tools = [
   {
     key: 'skills',
     icon: TrendingUp,
-    gradient: 'from-emerald-500 to-teal-500',
-    iconBg: 'bg-emerald-50',
-    iconColor: 'text-emerald-600',
-    badgeBg: 'bg-emerald-100 text-emerald-700',
-    btnClass: 'bg-emerald-600 hover:bg-emerald-700',
+    palette: P.tertiary,
     label: 'Skills Gap Analyser',
     badge: 'AI-Powered',
     description: 'Enter your target job title and current skills. We identify exactly which skills you already have, which are missing, and recommend courses to close the gap.',
@@ -55,25 +50,17 @@ const tools = [
   {
     key: 'cv',
     icon: FileText,
-    gradient: 'from-violet-500 to-purple-600',
-    iconBg: 'bg-violet-50',
-    iconColor: 'text-violet-600',
-    badgeBg: 'bg-violet-100 text-violet-700',
-    btnClass: 'bg-violet-600 hover:bg-violet-700',
+    palette: P.secondary,
     label: 'CV Reviewer',
     badge: 'AI-Powered',
-    description: 'Paste your CV and get an instant, honest review. We score it out of 100, highlight what\'s working, flag missing sections, and give you specific fixes.',
+    description: "Paste your CV and get an instant, honest review. We score it out of 100, highlight what's working, flag missing sections, and give you specific fixes.",
     bullets: ['Score out of 100 with label', 'Per-section improvement suggestions', 'Courses to strengthen your CV'],
     cta: 'Review My CV',
   },
   {
     key: 'interview',
     icon: MessageSquare,
-    gradient: 'from-orange-500 to-amber-500',
-    iconBg: 'bg-orange-50',
-    iconColor: 'text-orange-600',
-    badgeBg: 'bg-orange-100 text-orange-700',
-    btnClass: 'bg-orange-500 hover:bg-orange-600',
+    palette: P.secondary,
     label: 'Interview Prep',
     badge: 'AI-Powered',
     description: 'Enter a job title and experience level. Get 6–8 real interview questions - behavioural, technical, and situational - each with a model answer and red flags to avoid.',
@@ -83,11 +70,7 @@ const tools = [
   {
     key: 'jd',
     icon: ScanText,
-    gradient: 'from-cyan-500 to-teal-500',
-    iconBg: 'bg-cyan-50',
-    iconColor: 'text-cyan-600',
-    badgeBg: 'bg-cyan-100 text-cyan-700',
-    btnClass: 'bg-cyan-600 hover:bg-cyan-700',
+    palette: P.tertiary,
     label: 'JD Decoder',
     badge: 'AI-Powered',
     description: 'Paste any job posting and we decode it for you - required vs. nice-to-have skills, plain-English responsibilities, red flags, and courses to meet the requirements.',
@@ -97,11 +80,7 @@ const tools = [
   {
     key: 'quiz',
     icon: Brain,
-    gradient: 'from-rose-500 to-pink-500',
-    iconBg: 'bg-rose-50',
-    iconColor: 'text-rose-600',
-    badgeBg: 'bg-rose-100 text-rose-700',
-    btnClass: 'bg-rose-600 hover:bg-rose-700',
+    palette: P.primary,
     label: 'Career Quiz',
     badge: 'No AI - Instant',
     description: 'Answer 6 quick questions about your interests and strengths. We match you to one of 6 career paths and show you exactly which free courses to start with.',
@@ -116,34 +95,34 @@ export default function ToolsGrid() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {tools.map(({ key, icon: Icon, gradient, iconBg, iconColor, badgeBg, btnClass, label, badge, description, bullets, cta }) => (
+        {tools.map(({ key, icon: Icon, palette, label, badge, description, bullets, cta }) => (
           <div
             key={key}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-200 flex flex-col overflow-hidden group"
+            className="bg-white rounded-2xl border border-[#D1C5B4] shadow-sm hover:shadow-md hover:border-[#7C7061] transition-all duration-200 flex flex-col overflow-hidden group"
           >
             {/* Card top accent */}
-            <div className={`h-1.5 bg-gradient-to-r ${gradient}`} />
+            <div className={`h-1.5 bg-gradient-to-r ${palette.accent}`} />
 
             <div className="p-6 flex flex-col flex-1 gap-4">
               {/* Icon + badge */}
               <div className="flex items-start justify-between">
-                <div className={`${iconBg} p-3 rounded-xl`}>
-                  <Icon size={24} className={iconColor} />
+                <div className={`${palette.iconBg} p-3 rounded-xl`}>
+                  <Icon size={24} className={palette.iconColor} />
                 </div>
-                <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${badgeBg}`}>{badge}</span>
+                <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${palette.badgeBg}`}>{badge}</span>
               </div>
 
               {/* Label + description */}
               <div>
-                <h2 className="text-lg font-black text-gray-900 mb-2">{label}</h2>
-                <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
+                <h2 className="text-lg font-black text-[#1F1B13] mb-2">{label}</h2>
+                <p className="text-sm text-[#4F4639] leading-relaxed">{description}</p>
               </div>
 
               {/* Bullets */}
               <ul className="flex flex-col gap-1.5 flex-1">
                 {bullets.map(b => (
-                  <li key={b} className="flex items-center gap-2 text-sm text-gray-600">
-                    <span className={`w-4 h-4 rounded-full ${iconBg} ${iconColor} flex items-center justify-center text-[10px] font-black shrink-0`}>✓</span>
+                  <li key={b} className="flex items-center gap-2 text-sm text-[#4F4639]">
+                    <span className={`w-4 h-4 rounded-full ${palette.iconBg} ${palette.iconColor} flex items-center justify-center text-[10px] font-black shrink-0`}>✓</span>
                     {b}
                   </li>
                 ))}
@@ -152,7 +131,7 @@ export default function ToolsGrid() {
               {/* CTA */}
               <button
                 onClick={() => setOpen(key)}
-                className={`mt-2 w-full ${btnClass} text-white py-2.5 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 text-sm shadow-sm`}
+                className={`mt-2 w-full ${palette.btn} text-white py-2.5 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 text-sm shadow-sm`}
               >
                 {cta} <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </button>

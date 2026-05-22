@@ -1,0 +1,55 @@
+{
+  "id": "qa-exploratory-test-charter",
+  "categoryId": "software-development",
+  "topicId": "quality-assurance-testing",
+  "level": "intermediate",
+  "title": "Exploratory Test Charter & Session Report",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Run a 90-minute exploratory test session on a real app and document it like a working tester.",
+  "scenario": "Most SA QA teams now use a mix of scripted and exploratory testing. Hiring managers want testers who can find bugs that pre-written test cases miss. The deliverable here is the structured session note that proves you can do that.",
+  "brief": "Pick a SA web app or mobile app you have access to. Write a charter (a one-paragraph mission for the session), then run an actual 90-minute exploratory test session, then write up a session report.",
+  "deliverables": [
+    "A test charter: a one-paragraph mission statement (what you are exploring, why, and what you are not exploring)",
+    "A session report including: areas covered, areas skipped and why, test ideas you explored, defects found (with full bug report format), and questions raised for the team",
+    "A timesheet breakdown: setup time, test design, execution, bug investigation, reporting (the standard \"session-based test management\" breakdown)",
+    "A reflection paragraph: what surprised you, what you would charter next, and what you learned about the product"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Exploratory does not mean unstructured. The charter constrains what you focus on. The session report proves the work. If you cannot remember what you did 90 minutes after the session, it is not a useful artefact.",
+  "rubric": [
+    {
+      "key": "charter",
+      "label": "Charter Discipline",
+      "description": "Is the charter focused, specific, and an actual constraint on your testing?",
+      "weight": 25
+    },
+    {
+      "key": "session",
+      "label": "Session Quality",
+      "description": "Does the session report document real test ideas explored and not just bugs found?",
+      "weight": 30
+    },
+    {
+      "key": "defects",
+      "label": "Defect Reporting",
+      "description": "Are defects logged in proper bug report format, not vague observations?",
+      "weight": 25
+    },
+    {
+      "key": "reflection",
+      "label": "Reflection",
+      "description": "Does the reflection show genuine learning about the product and the testing approach?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Exploratory testing",
+    "Session-based test management",
+    "Test charters",
+    "Investigative testing"
+  ],
+  "relatedRoadmapIds": [
+    "junior-qa-tester"
+  ]
+}

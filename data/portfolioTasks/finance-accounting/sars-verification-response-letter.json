@@ -1,0 +1,49 @@
+{
+  "id": "sars-verification-response-letter",
+  "categoryId": "finance-accounting",
+  "topicId": "sars-dispute-resolution",
+  "level": "beginner",
+  "title": "Draft a Response to a SARS Verification of Documents Request",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Draft a professional verification response letter and compile a home office expense checklist.",
+  "scenario": "A sole proprietor has filed their personal income tax return (ITR12). SARS has selected the return for verification and requested supporting documents for claimed home office expenses. The client is anxious and doesn't know what to submit.",
+  "brief": "Assist the client by drafting a professional response letter to SARS and creating a checklist of the required supporting documents to support the home office deduction under section 11(a) read with section 23(b) of the Income Tax Act.",
+  "deliverables": [
+    "A draft response letter addressed to SARS explaining the nature of the claimed expenses and confirming the attached documents.",
+    "A clear checklist of the necessary supporting documents that the client must provide to substantiate the claim.",
+    "A brief explanation of the timeline the client must adhere to to avoid auto-assessments or default penalties."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Submit your response in Markdown. Ensure the letter is written in a formal, respectful, and professional tone suitable for tax authorities. Detail the checklists clearly.",
+  "rubric": [
+    {
+      "key": "letter_professionalism",
+      "label": "Letter Professionalism",
+      "description": "Is the draft letter professional, well-structured, clear, and formal?",
+      "weight": 35
+    },
+    {
+      "key": "checklist_completeness",
+      "label": "Checklist Completeness",
+      "description": "Does the checklist accurately list all required documents for home office deductions under SA tax law?",
+      "weight": 35
+    },
+    {
+      "key": "regulatory_accuracy",
+      "label": "Regulatory Accuracy",
+      "description": "Does the candidate demonstrate a correct understanding of SARS eFiling submission channels and timelines?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "SARS dispute process",
+    "Tax administration act",
+    "Home office deduction",
+    "Supporting document compilation",
+    "Legal/tax writing"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

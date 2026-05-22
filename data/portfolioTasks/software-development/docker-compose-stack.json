@@ -1,0 +1,48 @@
+{
+  "id": "docker-compose-stack",
+  "categoryId": "software-development",
+  "topicId": "container-orchestration",
+  "level": "intermediate",
+  "title": "Define a Multi-Container Architecture",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write a `docker-compose.yml` to spin up a Node API, Postgres database, and Redis cache.",
+  "scenario": "A new developer joins your team. Currently, they have to manually install Node, PostgreSQL, and Redis on their laptop just to run the app locally. It takes them 2 days to set up their environment.",
+  "brief": "Write a `docker-compose.yml` file that defines three services: `api`, `db` (PostgreSQL), and `cache` (Redis). Ensure the `api` service waits for the `db` to be ready before starting, and define persistent volumes for the database so data isn't lost on restart.",
+  "deliverables": [
+    "The complete `docker-compose.yml` file",
+    "An explanation of how Docker Compose networks allow the `api` service to connect to the database using the hostname `db`"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Make sure to map the API port to the host machine so you can hit `localhost:3000` in your browser. Do not hardcode passwords in the compose file; use environment variables.",
+  "rubric": [
+    {
+      "key": "services",
+      "label": "Service Definition",
+      "description": "Are the API, DB, and Cache services defined correctly?",
+      "weight": 35
+    },
+    {
+      "key": "volumes",
+      "label": "Data Persistence",
+      "description": "Is a named volume attached to the PostgreSQL data directory?",
+      "weight": 35
+    },
+    {
+      "key": "depends",
+      "label": "Startup Order",
+      "description": "Does the API service use `depends_on` (or a wait script) for the DB?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Docker Compose",
+    "Local Environment Setup",
+    "Container Networking",
+    "Persistent Volumes"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

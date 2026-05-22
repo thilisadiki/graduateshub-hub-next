@@ -1,0 +1,46 @@
+{
+  "id": "co-deescalate-angry-customer",
+  "categoryId": "customer-ops",
+  "topicId": "support-triage-deescalation",
+  "level": "intermediate",
+  "title": "De-escalate an Angry Customer",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write a response to a furious customer whose wedding dress delivery was delayed.",
+  "scenario": "A customer ordered a bridesmaid dress for a wedding happening this Saturday. It was promised by Wednesday, but due to courier loadshedding delays, tracking shows it will only arrive on Monday. The customer has sent a furious, all-caps email threatening to ruin your brand on HelloPeter.",
+  "brief": "Write a response email to de-escalate the situation. You cannot magically make the dress arrive on time. You must deliver the bad news while maintaining empathy and offering a realistic, policy-compliant resolution.",
+  "deliverables": [
+    "The response email to the customer",
+    "An internal note on the ticket explaining your decision and any requested concessions (e.g., refunding delivery fees)",
+    "A short analysis of why telling the customer \"it's the courier's fault\" is a bad strategy"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not make promises you cannot keep. Empathy is not just saying \"I apologise for the inconvenience\" — it is acknowledging the specific impact (the wedding).",
+  "rubric": [
+    {
+      "key": "empathy",
+      "label": "Demonstrated Empathy",
+      "description": "Does the response acknowledge the specific distress without sounding robotic?",
+      "weight": 40
+    },
+    {
+      "key": "resolution",
+      "label": "Realistic Resolution",
+      "description": "Is the offered solution realistic and policy-compliant?",
+      "weight": 35
+    },
+    {
+      "key": "internal-comms",
+      "label": "Internal Communication",
+      "description": "Is the internal note clear and actionable for the next agent/manager?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "De-escalation",
+    "Empathy",
+    "Conflict resolution",
+    "Customer communication"
+  ],
+  "relatedRoadmapIds": []
+}

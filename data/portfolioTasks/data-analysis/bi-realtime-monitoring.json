@@ -1,0 +1,56 @@
+{
+  "id": "bi-realtime-monitoring",
+  "categoryId": "data",
+  "topicId": "dashboard-design-bi",
+  "level": "advanced",
+  "title": "Real-Time Monitoring Dashboard",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a live operations dashboard with alert thresholds and anomaly detection.",
+  "scenario": "A logistics company operates 200 delivery vehicles across Gauteng. The operations centre needs a real-time dashboard showing vehicle locations, delivery progress, and automatic alerts when something goes wrong (late delivery, vehicle breakdown, route deviation).",
+  "brief": "Design a real-time monitoring dashboard for the operations centre. It will be displayed on a large wall-mounted screen and must be readable from 3 metres away. Focus on what triggers alerts, how alerts are escalated, and how the dashboard distinguishes \"normal\" from \"needs attention\".",
+  "deliverables": [
+    "The dashboard layout for a wall-mounted 65-inch display: what is always visible vs what appears on alert",
+    "At least 3 alert rules with thresholds (e.g., \"delivery running >30 minutes late → amber alert\")",
+    "An escalation model: who gets notified at each severity level and via what channel (screen, SMS, call)",
+    "How the dashboard detects anomalies: simple threshold rules vs statistical anomaly detection"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A dashboard that is always red is as useless as one that is always green. Design your thresholds so the normal state is visually calm.",
+  "rubric": [
+    {
+      "key": "layout",
+      "label": "Wall Display Design",
+      "description": "Is the layout optimised for a large screen viewed from 3 metres?",
+      "weight": 25
+    },
+    {
+      "key": "alerts",
+      "label": "Alert Design",
+      "description": "Are the alert rules specific, threshold-based, and actionable?",
+      "weight": 30
+    },
+    {
+      "key": "escalation",
+      "label": "Escalation Model",
+      "description": "Is the escalation hierarchy clear and proportionate?",
+      "weight": 25
+    },
+    {
+      "key": "anomaly",
+      "label": "Anomaly Detection",
+      "description": "Does the candidate understand the difference between simple thresholds and statistical anomaly detection?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Real-time dashboards",
+    "Alert design",
+    "Operations analytics",
+    "Anomaly detection"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "model-dcf-valuation",
+  "categoryId": "finance-accounting",
+  "topicId": "financial-modelling-valuation",
+  "level": "advanced",
+  "title": "DCF Valuation of a Small Business",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Value a fictional SA business using a discounted cash flow model.",
+  "scenario": "The owner of a successful Johannesburg-based logistics company (R40M annual revenue, R6M net profit) wants to sell and retire. A potential buyer asks: \"What is this business worth?\" A broker has quoted R30M. The buyer wants an independent valuation.",
+  "brief": "Build a DCF valuation model. Project free cash flows for 5 years, calculate a terminal value, and discount everything back to arrive at an enterprise value. Then bridge to equity value.",
+  "deliverables": [
+    "A 5-year free cash flow projection with revenue growth, margins, capex, and working capital assumptions",
+    "The terminal value calculation using the perpetuity growth method (with a justified growth rate)",
+    "The WACC calculation with each component explained (cost of equity, cost of debt, capital structure)",
+    "The enterprise value, net debt adjustment, and final equity value with a comparison to the R30M asking price"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A DCF is only as good as its assumptions. State every assumption explicitly. Terminal value typically represents 60-80% of total value — if yours does not, check your growth rate and discount rate.",
+  "rubric": [
+    {
+      "key": "projections",
+      "label": "Cash Flow Projections",
+      "description": "Are the 5-year projections realistic with defensible assumptions?",
+      "weight": 25
+    },
+    {
+      "key": "terminal",
+      "label": "Terminal Value",
+      "description": "Is the terminal value correctly calculated with a reasonable growth rate?",
+      "weight": 25
+    },
+    {
+      "key": "wacc",
+      "label": "WACC Calculation",
+      "description": "Is the WACC correctly computed with appropriate inputs for an SA SME?",
+      "weight": 25
+    },
+    {
+      "key": "conclusion",
+      "label": "Valuation Conclusion",
+      "description": "Is the final equity value reasonable and well-compared to the asking price?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "DCF valuation",
+    "WACC",
+    "Terminal value",
+    "Business valuation"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "arch-url-shortener",
+  "categoryId": "software-development",
+  "topicId": "system-architecture-design",
+  "level": "beginner",
+  "title": "Architect a Simple URL Shortener",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a system that converts long URLs into short, shareable links.",
+  "scenario": "A marketing team needs a branded URL shortener. They expect about 10,000 new links to be created per day, but those links might be clicked millions of times.",
+  "brief": "Design the architecture for a URL shortener (like bit.ly). Focus on the database schema, the hashing algorithm used to generate the short code, and the read vs. write scaling strategy.",
+  "deliverables": [
+    "A system architecture diagram (e.g., using Mermaid.js or a simple drawn diagram)",
+    "The database schema definition for the `Link` table",
+    "A brief explanation of why this system is read-heavy and how you would cache the redirects"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You do not need to write the application code. Focus on the data flow: what happens when a user creates a link, and what happens when someone clicks it?",
+  "rubric": [
+    {
+      "key": "hashing",
+      "label": "Hashing Logic",
+      "description": "Is the short-code generation logic mathematically sound (e.g., base62)?",
+      "weight": 35
+    },
+    {
+      "key": "schema",
+      "label": "Database Schema",
+      "description": "Are the database tables properly indexed for fast lookups?",
+      "weight": 35
+    },
+    {
+      "key": "caching",
+      "label": "Caching Strategy",
+      "description": "Does the candidate correctly identify the need for a read cache (e.g., Redis)?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "System Design",
+    "Hashing Algorithms",
+    "Database Indexing",
+    "Caching Strategy"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

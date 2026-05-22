@@ -1,0 +1,46 @@
+{
+  "id": "ai-rewrite-vague-prompt",
+  "categoryId": "ai-prompting",
+  "topicId": "prompt-engineering-basics",
+  "level": "intermediate",
+  "title": "Debug & Rewrite a Vague Prompt",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Fix a failing marketing prompt that generates generic, unusable copy.",
+  "scenario": "A marketing junior wrote this prompt: \"Write a nice email for our new summer shoe sale. Make it sound exciting and not too long.\" The AI is spitting out cringeworthy, overly enthusiastic emails full of emojis and American spelling (\"sneakers\", \"fall\").",
+  "brief": "Analyse why the junior's prompt failed, and rewrite it into a professional, constrained, \"mega-prompt\" that generates usable copy for a South African audience.",
+  "deliverables": [
+    "A short critique of the original prompt (why \"nice\" and \"not too long\" are bad instructions)",
+    "The new, rewritten prompt using clear constraints (e.g., word count, specific tone words, British/SA English mandate)",
+    "A section in the prompt that forces the AI to use specific product details (which you should define as variables)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "LLMs default to a specific \"AI Voice\" (overly enthusiastic, robotic, American). Your prompt must actively suppress this voice. Use explicit negative constraints (\"Do NOT use emojis\", \"Do NOT use the word 'delve' or 'testament'\").",
+  "rubric": [
+    {
+      "key": "critique",
+      "label": "Prompt Critique",
+      "description": "Does the critique correctly identify the ambiguity in the original prompt?",
+      "weight": 30
+    },
+    {
+      "key": "negative-constraints",
+      "label": "Negative Constraints",
+      "description": "Does the new prompt explicitly ban the default \"AI Voice\" and Americanisms?",
+      "weight": 35
+    },
+    {
+      "key": "formatting",
+      "label": "Variable Use",
+      "description": "Is the prompt structured to cleanly accept dynamic variables (like product names)?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Prompt debugging",
+    "Tone control",
+    "Negative constraints",
+    "Localisation"
+  ],
+  "relatedRoadmapIds": []
+}

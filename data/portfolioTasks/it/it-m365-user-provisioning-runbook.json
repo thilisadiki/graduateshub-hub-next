@@ -1,0 +1,55 @@
+{
+  "id": "it-m365-user-provisioning-runbook",
+  "categoryId": "it",
+  "topicId": "it-microsoft-365",
+  "level": "beginner",
+  "title": "M365 User Provisioning Runbook",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Document the joiner provisioning workflow inside Microsoft 365 the way an SA helpdesk would.",
+  "scenario": "A 90-person SA SME runs everything on Microsoft 365 (mail, Teams, SharePoint, OneDrive). New starter onboarding is inconsistent: licences are over-assigned, group memberships are missed, MFA is not enforced from day one. The IT manager wants a runbook the helpdesk can follow every time.",
+  "brief": "Produce a complete M365 provisioning runbook covering the steps from HR notification through to first-day-ready handover. Cover licensing, identity, mailbox, MFA, group membership, and Teams onboarding.",
+  "deliverables": [
+    "A provisioning checklist covering: account creation, licence assignment, group memberships (security and distribution), mailbox configuration, MFA enforcement, OneDrive setup, and Teams onboarding",
+    "A licence assignment matrix listing the standard licence bundles by role (e.g., Knowledge Worker, Frontline, Executive) and what each bundle includes",
+    "A short security baseline section covering MFA, conditional access posture for new accounts, and the password reset experience",
+    "A Day 1 handover note: what the new starter receives in their inbox, what they must complete in their first hour, and the support contact"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Most SA M365 tenants drift over time because nobody enforced the licence bundles. Document the assignment logic so a new helpdesk technician does not over-licence by reflex.",
+  "rubric": [
+    {
+      "key": "completeness",
+      "label": "Coverage",
+      "description": "Does the runbook cover every step from HR notification to first-day-ready?",
+      "weight": 30
+    },
+    {
+      "key": "licensing",
+      "label": "Licence Discipline",
+      "description": "Is the licence matrix sensible, with defensible bundle definitions?",
+      "weight": 25
+    },
+    {
+      "key": "security",
+      "label": "Security Baseline",
+      "description": "Are MFA and conditional access enforced from day one?",
+      "weight": 25
+    },
+    {
+      "key": "handover",
+      "label": "Day-1 Handover",
+      "description": "Could a new starter actually be productive on hour one with this handover?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "M365 provisioning",
+    "Licence governance",
+    "MFA enforcement",
+    "Onboarding runbooks"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

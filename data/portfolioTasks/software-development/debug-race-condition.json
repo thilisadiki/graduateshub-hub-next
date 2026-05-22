@@ -1,0 +1,49 @@
+{
+  "id": "debug-race-condition",
+  "categoryId": "software-development",
+  "topicId": "debug-fix",
+  "level": "advanced",
+  "title": "Race Condition in Async Data Fetching",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Fix a tricky race condition where stale network responses overwrite fresh data.",
+  "scenario": "A search input fetches autocomplete results as the user types. However, sometimes the results of an older, slower query overwrite the results of a newer, faster query, resulting in the UI showing the wrong suggestions.",
+  "brief": "Diagnose the async race condition in the provided autocomplete component. Fix it by implementing request cancellation using the `AbortController` API. Explain why boolean flags (like `isMounted`) are inferior to true request cancellation.",
+  "deliverables": [
+    "The corrected component utilizing `AbortController`",
+    "An explanation of the race condition mechanism (how slower requests overtake faster ones)",
+    "A brief defense of `AbortController` versus simple boolean flag checks"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This tests your understanding of asynchronous JavaScript behavior. Simply debouncing the input is not a complete fix; the race condition must be fundamentally solved.",
+  "rubric": [
+    {
+      "key": "correctness",
+      "label": "Implementation",
+      "description": "Is `AbortController` implemented and wired to the `fetch` call correctly?",
+      "weight": 40
+    },
+    {
+      "key": "explanation",
+      "label": "Root Cause",
+      "description": "Is the sequence of async events causing the bug clearly explained?",
+      "weight": 30
+    },
+    {
+      "key": "architecture",
+      "label": "Cancellation vs Boolean",
+      "description": "Does the candidate understand the network benefits of actual request abortion?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Asynchronous JavaScript",
+    "AbortController API",
+    "Race condition debugging",
+    "Network performance"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "web-developer"
+  ]
+}

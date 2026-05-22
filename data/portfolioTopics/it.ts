@@ -81,4 +81,28 @@ export const itTopics: PortfolioTopic[] = [
       'Build, harden, and troubleshoot the servers that run business applications. Tests Windows Server documentation, Linux hardening, and performance investigation.',
     skillsProven: ['Windows Server', 'Linux hardening', 'Performance analysis', 'System documentation'],
   },
+  {
+    id: 'it-asset-management',
+    categoryId: 'it',
+    title: 'IT Asset Management',
+    description:
+      'Manage the lifecycle of hardware, software, and cloud assets. Tests asset discovery, license optimization, and retirement planning.',
+    skillsProven: ['ITAM principles', 'License compliance', 'Asset lifecycle', 'Inventory management'],
+  },
+  {
+    id: 'it-voip-telephony',
+    categoryId: 'it',
+    title: 'VoIP & Unified Communications',
+    description:
+      'Design and manage voice-over-IP and unified communication networks. Tests SIP trunks, call routing, and network QoS prioritization.',
+    skillsProven: ['VoIP architecture', 'SIP trunking', 'Call routing design', 'Quality of Service (QoS)'],
+  },
+  {
+    id: 'it-database-admin',
+    categoryId: 'it',
+    title: 'Database Administration & Maintenance',
+    description:
+      'Ensure databases are secure, backed up, and operating efficiently. Tests database backup design, user access control, and query performance audit.',
+    skillsProven: ['Database administration', 'SQL security', 'Backup configurations', 'Performance tuning'],
+  },
 ];

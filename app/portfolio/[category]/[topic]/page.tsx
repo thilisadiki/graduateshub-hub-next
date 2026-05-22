@@ -106,7 +106,7 @@ export default async function TopicPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+      <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400 flex-wrap">
             <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
@@ -153,7 +153,7 @@ export default async function TopicPage({
                       {copy.label}
                     </span>
                   </div>
-                  <h3 className="font-black text-gray-900 text-lg mb-2 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="font-black text-gray-900 text-lg mb-2 group-hover:text-primary transition-colors">
                     {task.title}
                   </h3>
                   <p className="text-sm text-gray-500 leading-relaxed mb-4">{task.tagline}</p>
@@ -161,7 +161,7 @@ export default async function TopicPage({
                     <span className="flex items-center gap-1.5"><Clock size={13} /> {task.estimatedHours}</span>
                     <span className="flex items-center gap-1.5"><Award size={13} /> {task.rubric.length} criteria</span>
                   </div>
-                  <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600">
+                  <div className="mt-auto flex items-center gap-2 text-sm font-bold text-primary">
                     Start this level <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>

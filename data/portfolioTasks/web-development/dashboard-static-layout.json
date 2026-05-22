@@ -1,0 +1,54 @@
+{
+  "id": "dashboard-static-layout",
+  "categoryId": "web-development",
+  "topicId": "interactive-dashboard-layout",
+  "level": "beginner",
+  "title": "Build a Responsive Dashboard Layout",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Use CSS Grid and Flexbox to build a clean, responsive admin layout.",
+  "scenario": "A local SaaS company is building a new admin portal for their merchants. The designer has provided a layout with a persistent sidebar on desktop, a top navigation bar, and a main content area containing a grid of summary cards and a recent orders table. You need to build the structure.",
+  "brief": "Write the HTML and CSS (or Tailwind) for the dashboard skeleton. On desktop, the sidebar should be fixed to the left. On mobile, the sidebar should disappear behind a hamburger menu toggle, and the summary cards should stack vertically instead of displaying side-by-side.",
+  "deliverables": [
+    "The HTML/JSX structure for the layout (Sidebar, Header, Main Content)",
+    "The CSS or Tailwind classes used for the responsive grid and flexbox alignment",
+    "The mobile menu toggle logic"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not worry about making the data real or adding charts yet. Focus purely on the CSS layout. The table must scroll horizontally on mobile without breaking the page layout.",
+  "rubric": [
+    {
+      "key": "layout",
+      "label": "CSS Grid/Flexbox",
+      "description": "Are Grid and Flexbox used appropriately for the macro layout?",
+      "weight": 35
+    },
+    {
+      "key": "responsive",
+      "label": "Mobile Responsiveness",
+      "description": "Does the sidebar collapse cleanly and the grid stack on mobile?",
+      "weight": 30
+    },
+    {
+      "key": "table",
+      "label": "Table Overflow",
+      "description": "Is horizontal scrolling handled gracefully for the data table on small screens?",
+      "weight": 20
+    },
+    {
+      "key": "craft",
+      "label": "Clean Code",
+      "description": "Is the HTML semantic (e.g., `<aside>`, `<main>`, `<nav>`)?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "CSS Grid",
+    "CSS Flexbox",
+    "Responsive Design",
+    "Semantic HTML"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "sql-optimize-slow-query",
+  "categoryId": "data",
+  "topicId": "sql-querying",
+  "level": "advanced",
+  "title": "Optimize a Slow Query on a 50M-Row Table",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Rewrite a query, add indexes, and explain the EXPLAIN plan.",
+  "scenario": "A 50-million-row `transactions` table powers a financial dashboard. A query that joins `transactions` with `accounts` and filters by date range is taking 45 seconds. The DBA has asked you to fix it.",
+  "brief": "You are given the slow query and the current table schema (no indexes beyond the primary key). Rewrite the query for performance, propose the indexes you would add, and walk through what an EXPLAIN ANALYZE output would look like before and after your changes.",
+  "deliverables": [
+    "The original slow query and your rewritten version with an explanation of each change",
+    "The indexes you would create and why each one helps this specific query",
+    "A walkthrough of a hypothetical EXPLAIN plan: what \"Seq Scan\" means vs \"Index Scan\" and how you would read the cost estimates"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Assume PostgreSQL. Focus on covering indexes, composite index column order, and the impact of WHERE clause selectivity.",
+  "rubric": [
+    {
+      "key": "rewrite",
+      "label": "Query Rewrite",
+      "description": "Does the rewritten query avoid unnecessary work (subqueries, functions on indexed columns)?",
+      "weight": 35
+    },
+    {
+      "key": "indexes",
+      "label": "Index Strategy",
+      "description": "Are the proposed indexes well-chosen with correct column order?",
+      "weight": 35
+    },
+    {
+      "key": "explain",
+      "label": "EXPLAIN Literacy",
+      "description": "Can the candidate read and interpret a query execution plan?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Query optimisation",
+    "Database indexing",
+    "EXPLAIN plans",
+    "PostgreSQL performance"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-engineer"
+  ]
+}

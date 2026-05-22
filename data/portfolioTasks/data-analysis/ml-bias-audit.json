@@ -1,0 +1,55 @@
+{
+  "id": "ml-bias-audit",
+  "categoryId": "data",
+  "topicId": "ml-fundamentals",
+  "level": "advanced",
+  "title": "Detect and Mitigate Model Bias",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Audit a hiring algorithm for demographic bias and propose mitigation strategies.",
+  "scenario": "A recruitment platform uses a machine learning model to score CVs and rank candidates. An internal audit reveals that the model consistently scores male candidates 12% higher than female candidates with identical qualifications. The board wants a full audit and remediation plan.",
+  "brief": "Conduct a bias audit of the hypothetical model. Identify how bias could have entered the system, propose detection methods, and design mitigation strategies that do not simply remove protected attributes.",
+  "deliverables": [
+    "A taxonomy of how bias enters ML systems (training data, feature selection, label bias, feedback loops)",
+    "Detection methods: statistical tests and metrics you would use to measure demographic parity and equal opportunity",
+    "Mitigation strategies: at least 3 approaches (pre-processing, in-processing, post-processing) with trade-offs",
+    "An ethical framework for deciding how much accuracy you are willing to sacrifice for fairness"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Simply removing the gender column does not fix bias — proxy features (name, school, hobbies) still leak. Show you understand this.",
+  "rubric": [
+    {
+      "key": "sources",
+      "label": "Bias Sources",
+      "description": "Does the candidate identify multiple realistic sources of bias beyond just training data?",
+      "weight": 25
+    },
+    {
+      "key": "detection",
+      "label": "Detection Methods",
+      "description": "Are the proposed fairness metrics appropriate and correctly defined?",
+      "weight": 25
+    },
+    {
+      "key": "mitigation",
+      "label": "Mitigation Strategies",
+      "description": "Are the mitigation approaches technically sound with honest trade-offs?",
+      "weight": 30
+    },
+    {
+      "key": "ethics",
+      "label": "Ethical Reasoning",
+      "description": "Does the candidate engage seriously with the accuracy-fairness trade-off?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "AI ethics",
+    "Bias detection",
+    "Fairness metrics",
+    "Responsible AI"
+  ],
+  "relatedRoadmapIds": [
+    "data-scientist"
+  ]
+}

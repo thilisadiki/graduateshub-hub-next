@@ -1,0 +1,47 @@
+{
+  "id": "co-escalation-matrix",
+  "categoryId": "customer-ops",
+  "topicId": "support-triage-deescalation",
+  "level": "advanced",
+  "title": "Design an Escalation Matrix",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build a multi-tier escalation matrix for a fintech startup.",
+  "scenario": "A South African fintech startup is growing fast. Currently, support agents just ping engineers on Slack when something goes wrong, causing chaos. The Head of Ops wants a formal escalation matrix to handle everything from forgotten passwords to suspected fraud and API outages.",
+  "brief": "Design a comprehensive escalation matrix. Define severity levels, response times (SLAs), and routing paths (who gets pinged when).",
+  "deliverables": [
+    "An escalation matrix covering at least 4 severity levels (e.g., Sev1 to Sev4)",
+    "Clear criteria for each severity level (e.g., financial loss, data breach, single-user bug)",
+    "SLAs for First Response and Resolution for each level",
+    "Routing rules: Tier 1 (Support) → Tier 2 (Specialist) → Tier 3 (Engineering/Management)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "If everything is Sev1, nothing is. Be strict about what actually requires waking an engineer up at 2 AM versus what can wait for business hours.",
+  "rubric": [
+    {
+      "key": "severity",
+      "label": "Severity Definitions",
+      "description": "Are the severity criteria distinct and business-focused?",
+      "weight": 30
+    },
+    {
+      "key": "slas",
+      "label": "Realistic SLAs",
+      "description": "Are the response and resolution times realistic for a startup?",
+      "weight": 30
+    },
+    {
+      "key": "routing",
+      "label": "Routing Logic",
+      "description": "Is the escalation path logical and protective of engineering time?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Escalation management",
+    "SLA design",
+    "Process engineering",
+    "Incident routing"
+  ],
+  "relatedRoadmapIds": []
+}

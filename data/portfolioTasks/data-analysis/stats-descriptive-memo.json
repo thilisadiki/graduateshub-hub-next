@@ -1,0 +1,48 @@
+{
+  "id": "stats-descriptive-memo",
+  "categoryId": "data",
+  "topicId": "statistical-thinking",
+  "level": "beginner",
+  "title": "Descriptive Statistics Memo",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Calculate and interpret mean, median, mode, and standard deviation for a salary dataset.",
+  "scenario": "An HR manager asks you to summarise the salary distribution for 200 employees. She does not want formulas — she wants to understand what the numbers mean for her hiring budget.",
+  "brief": "Invent a plausible salary dataset (you may describe it rather than list 200 rows). Calculate the four descriptive statistics, then write a short memo interpreting them for a non-technical HR manager.",
+  "deliverables": [
+    "The four statistics (mean, median, mode, standard deviation) with your calculations shown",
+    "A 150-word memo interpreting what these numbers tell the HR manager about salary distribution and equity",
+    "One visualization you would recommend to accompany the memo and why"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "If the mean is much higher than the median, that tells a story. Make sure your memo tells it.",
+  "rubric": [
+    {
+      "key": "calculation",
+      "label": "Calculation Accuracy",
+      "description": "Are the four statistics correctly calculated and internally consistent?",
+      "weight": 30
+    },
+    {
+      "key": "interpretation",
+      "label": "Interpretation",
+      "description": "Does the memo explain what the numbers mean in business terms, not just math terms?",
+      "weight": 40
+    },
+    {
+      "key": "visualization",
+      "label": "Visualization Choice",
+      "description": "Is the recommended chart appropriate for showing distribution?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Descriptive statistics",
+    "Business communication",
+    "Data interpretation",
+    "HR analytics"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

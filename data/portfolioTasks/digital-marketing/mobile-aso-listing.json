@@ -1,0 +1,49 @@
+{
+  "id": "mobile-aso-listing",
+  "categoryId": "digital-marketing",
+  "topicId": "mobile-app-marketing",
+  "level": "beginner",
+  "title": "App Store Optimisation (ASO) Plan",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Optimise metadata and app listings for a South African personal finance app.",
+  "scenario": "SpendSmart is a South African budgeting app. They are preparing to launch on iOS and Android. They face competition from established apps and need their listing optimized to show up for keywords like \"budget app SA\" and \"expense tracker\".",
+  "brief": "Create an App Store Optimization (ASO) listing and strategy plan. Draft the metadata for the Apple App Store and Google Play Store, find target keywords, and suggest a screenshot style.",
+  "deliverables": [
+    "Keyword research list of 10 primary and secondary keywords for the South African market",
+    "Optimised listing fields for iOS: App Name, Subtitle, and Keywords field (100 characters)",
+    "Optimised listing fields for Android: App Title, Short Description, and Long Description (first 500 characters optimized)",
+    "A brief screenshot brief describing the layout and main text overlays for the first 3 app screenshots"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Store algorithms have character limits and prioritize keyword placement. The App Name and Title are the most valuable fields—put high-volume keywords there.",
+  "rubric": [
+    {
+      "key": "keywords",
+      "label": "ASO Keyword Search",
+      "description": "Are the keywords highly relevant to budgeting in South Africa and selected by search volume likelihood?",
+      "weight": 35
+    },
+    {
+      "key": "metadata",
+      "label": "ASO Writing Quality",
+      "description": "Are character limits strictly respected and keywords naturally integrated without stuffing?",
+      "weight": 40
+    },
+    {
+      "key": "screenshots",
+      "label": "Visual Brief",
+      "description": "Are the screenshot briefs clear, benefit-driven, and engaging?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "ASO",
+    "App marketing",
+    "Keyword optimization",
+    "Mobile copy"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

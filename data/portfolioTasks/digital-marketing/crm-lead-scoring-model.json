@@ -1,0 +1,49 @@
+{
+  "id": "crm-lead-scoring-model",
+  "categoryId": "digital-marketing",
+  "topicId": "marketing-automation-crm",
+  "level": "intermediate",
+  "title": "B2B Lead Scoring Matrix",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a dual-axis lead scoring matrix for an enterprise security software vendor.",
+  "scenario": "An enterprise cybersecurity company is getting 1,000 downloads a month of their free whitepapers, but sales reps are wasting time calling low-quality leads (like students or freelancers). They need a lead scoring model in HubSpot to prioritize hot prospects.",
+  "brief": "Build a lead scoring matrix that grades leads on two dimensions: Fit (demographics, firmographics) and Behavior (engagement, interest level). Specify points, thresholds, and routing actions.",
+  "deliverables": [
+    "Fit criteria table (Company size, Job title, Location) with positive/negative points allocated to each",
+    "Behavioral criteria table (Web visits, Email opens, Form fills, Demo requests) with points for each action",
+    "A threshold definition: when a lead becomes an MQL (Marketing Qualified Lead) and is automatically routed to Sales",
+    "An explanation of how you handle score decay (leads who go inactive)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not just add points; remember to subtract points for bad fits (e.g., email address contains \".edu\" or \"gmail.com\"). Keep it simple enough for a team to implement in HubSpot or Marketo.",
+  "rubric": [
+    {
+      "key": "fit-criteria",
+      "label": "Fit Scoring Quality",
+      "description": "Are demographical and firmographical points aligned with realistic enterprise buying personas?",
+      "weight": 35
+    },
+    {
+      "key": "behavior-criteria",
+      "label": "Behavioral Scoring Quality",
+      "description": "Are behavioral points weighted appropriately (e.g., downloading a PDF vs requesting a pricing page)?",
+      "weight": 35
+    },
+    {
+      "key": "routing",
+      "label": "Decay & Routing rules",
+      "description": "Are the MQL handover thresholds and score decay rules practical and well-defined?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Lead scoring models",
+    "HubSpot administration",
+    "B2B sales routing",
+    "Database governance"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "fin-statements-consolidation",
+  "categoryId": "finance-accounting",
+  "topicId": "financial-statements-reporting",
+  "level": "advanced",
+  "title": "Simplified Group Consolidation",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Prepare a consolidated income statement for a parent with two subsidiaries.",
+  "scenario": "A holding company owns 100% of Subsidiary A and 80% of Subsidiary B. All three entities have submitted their individual income statements. The CFO needs a consolidated view that eliminates inter-company transactions.",
+  "brief": "Prepare a simplified consolidated income statement. Identify and eliminate inter-company revenue (Subsidiary A sells to Parent), calculate minority interest for Subsidiary B, and present the group result.",
+  "deliverables": [
+    "Individual income statements for all 3 entities (invented but internally consistent)",
+    "A consolidation worksheet showing: line-by-line addition, inter-company eliminations, and minority interest",
+    "The final consolidated income statement with a note explaining the minority interest calculation"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Inter-company transactions inflate group revenue if not eliminated. Subsidiary A selling R500K to Parent means group revenue is overstated by R500K. Show the elimination.",
+  "rubric": [
+    {
+      "key": "individual",
+      "label": "Individual Statements",
+      "description": "Are the 3 income statements plausible with clear inter-company transactions?",
+      "weight": 20
+    },
+    {
+      "key": "elimination",
+      "label": "Inter-Company Elimination",
+      "description": "Are inter-company revenues and costs correctly identified and eliminated?",
+      "weight": 35
+    },
+    {
+      "key": "minority",
+      "label": "Minority Interest",
+      "description": "Is the 20% minority interest correctly calculated and presented?",
+      "weight": 30
+    },
+    {
+      "key": "presentation",
+      "label": "Consolidated Presentation",
+      "description": "Is the final statement properly formatted and reconcilable?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Group consolidation",
+    "Inter-company eliminations",
+    "Minority interest",
+    "Financial reporting"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

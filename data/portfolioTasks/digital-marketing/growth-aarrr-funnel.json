@@ -1,0 +1,48 @@
+{
+  "id": "growth-aarrr-funnel",
+  "categoryId": "digital-marketing",
+  "topicId": "growth-strategy-gtm",
+  "level": "beginner",
+  "title": "Map the AARRR Funnel",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Define the Pirate Metrics for a fictional food delivery app.",
+  "scenario": "A food delivery app in Durban has 50,000 downloads but only 8,000 monthly active users. The founder knows about the \"pirate metrics\" framework (AARRR) but has never applied it. She wants you to map her funnel.",
+  "brief": "Map the complete AARRR funnel (Acquisition, Activation, Retention, Referral, Revenue) for this food delivery app. For each stage, define the key metric, the current hypothetical rate, and one tactic to improve it.",
+  "deliverables": [
+    "A table: Funnel Stage, Definition for this app, Key Metric, Current Rate (hypothetical), Target Rate",
+    "One growth tactic per stage, specific to food delivery (not generic advice)",
+    "The one stage you would prioritise first and why (hint: it is probably not Acquisition)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Most startups over-invest in Acquisition and under-invest in Activation and Retention. If 50,000 people downloaded but only 8,000 are active, the problem is not awareness.",
+  "rubric": [
+    {
+      "key": "mapping",
+      "label": "Funnel Mapping",
+      "description": "Is each AARRR stage correctly defined with an appropriate metric?",
+      "weight": 30
+    },
+    {
+      "key": "tactics",
+      "label": "Growth Tactics",
+      "description": "Are the tactics specific to food delivery and actionable?",
+      "weight": 35
+    },
+    {
+      "key": "prioritisation",
+      "label": "Stage Prioritisation",
+      "description": "Does the candidate correctly identify the leakiest funnel stage?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "AARRR framework",
+    "Growth marketing",
+    "Funnel analysis",
+    "Startup strategy"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

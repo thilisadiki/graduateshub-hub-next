@@ -1,0 +1,55 @@
+{
+  "id": "it-server-windows-build-doc",
+  "categoryId": "it",
+  "topicId": "it-server-administration",
+  "level": "beginner",
+  "title": "Windows Server Build Documentation",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Document a standard Windows Server build the way an SA IT operations team would on day one.",
+  "scenario": "A 100-person SA SME runs three on-premise Windows Servers (file, print, application). Each was built differently, and only one technician remembers how. You are asked to document a \"gold\" Windows Server build that any new technician could replicate exactly.",
+  "brief": "Produce a complete Windows Server build documentation pack. Cover OS configuration, security baseline, patching, monitoring agents, backup agent, and post-build validation.",
+  "deliverables": [
+    "A pre-build checklist covering: hardware/VM specs, IP plan, naming, storage layout, license keys, joining the domain, and required pre-installed roles",
+    "A configuration document covering: time sync, regional settings, firewall rules, services hardening (disable SMBv1, disable Telnet), antivirus install, and remote management posture",
+    "A post-build validation checklist showing exactly how a peer reviewer confirms the build matches standard (ports, services, agents, security baseline, AD integration)",
+    "A short change-control note describing how updates to the build standard are reviewed and rolled out"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A good build document is the one where two technicians produce identical servers without talking to each other. Test that hypothesis as you write: every step should be deterministic, not \"configure as appropriate\".",
+  "rubric": [
+    {
+      "key": "completeness",
+      "label": "Completeness",
+      "description": "Does the documentation cover every step a new technician needs?",
+      "weight": 30
+    },
+    {
+      "key": "security",
+      "label": "Security Baseline",
+      "description": "Is the security baseline credible and applied consistently?",
+      "weight": 25
+    },
+    {
+      "key": "validation",
+      "label": "Validation Discipline",
+      "description": "Could a peer reviewer reliably catch a misconfigured server using the validation checklist?",
+      "weight": 25
+    },
+    {
+      "key": "change",
+      "label": "Change Control",
+      "description": "Is the build standard maintained over time rather than allowed to rot?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Windows Server administration",
+    "Build standardisation",
+    "Security baseline",
+    "Configuration management"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

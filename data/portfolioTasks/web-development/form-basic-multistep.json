@@ -1,0 +1,54 @@
+{
+  "id": "form-basic-multistep",
+  "categoryId": "web-development",
+  "topicId": "complex-multistep-form",
+  "level": "beginner",
+  "title": "Build a Basic 3-Step Wizard",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Split a long form into digestible steps with simple validation.",
+  "scenario": "An insurance company has a massive 20-field quote request form on a single page, and nobody is filling it out. They want you to break it down into a friendly 3-step wizard: 1) Personal Info, 2) Vehicle Details, 3) Review & Submit.",
+  "brief": "Build a React (or vanilla JS) multi-step form. You must manage the state to track which step the user is currently on. Do not allow the user to click \"Next\" until all required fields on the current step are filled out. Provide a \"Back\" button to return to previous steps without losing data.",
+  "deliverables": [
+    "The component structure managing the steps (e.g., a switch statement or an array of components)",
+    "The state management object holding the unified form data across all steps",
+    "The simple validation logic preventing the user from advancing prematurely"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on state preservation. If a user goes from Step 2 back to Step 1, their data in Step 1 must still be there.",
+  "rubric": [
+    {
+      "key": "state",
+      "label": "State Preservation",
+      "description": "Does data persist when navigating backwards and forwards?",
+      "weight": 35
+    },
+    {
+      "key": "routing",
+      "label": "Step Logic",
+      "description": "Is the logic for moving between steps clean and bug-free?",
+      "weight": 30
+    },
+    {
+      "key": "validation",
+      "label": "Basic Validation",
+      "description": "Are required fields enforced before allowing progression?",
+      "weight": 20
+    },
+    {
+      "key": "ux",
+      "label": "UX",
+      "description": "Is there a clear indication of progress (e.g., \"Step 1 of 3\")?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "React State (Unified)",
+    "Conditional Rendering",
+    "Basic Form Validation",
+    "Wizard UX Patterns"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

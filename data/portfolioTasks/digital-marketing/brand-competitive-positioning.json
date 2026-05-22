@@ -1,0 +1,48 @@
+{
+  "id": "brand-competitive-positioning",
+  "categoryId": "digital-marketing",
+  "topicId": "brand-strategy-positioning",
+  "level": "intermediate",
+  "title": "Competitive Positioning Map",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Map 6 competitors on a 2×2 matrix and find the white space.",
+  "scenario": "A new South African online investment platform is entering a crowded market. Competitors include EasyEquities, Satrix, Allan Gray, Old Mutual, FNB Shares, and Franc. The founder needs to understand the competitive landscape and find a positioning that is not already taken.",
+  "brief": "Create a 2×2 competitive positioning map. Choose the two axes that best differentiate the market. Plot all 6 competitors and identify the white space where the new platform should position itself.",
+  "deliverables": [
+    "Your chosen axes (e.g., \"Simple ↔ Complex\" and \"Low Cost ↔ Premium\") with a justification for why these two dimensions matter most",
+    "A positioning map description showing where each competitor sits and why",
+    "The identified white space and a positioning recommendation for the new platform"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The axes you choose define the strategic conversation. \"Good ↔ Bad\" is not a useful axis. Choose dimensions that represent genuine trade-offs.",
+  "rubric": [
+    {
+      "key": "axes",
+      "label": "Axis Selection",
+      "description": "Are the two axes strategically meaningful and genuinely differentiated?",
+      "weight": 30
+    },
+    {
+      "key": "mapping",
+      "label": "Competitor Mapping",
+      "description": "Are the competitors plausibly placed based on real market knowledge?",
+      "weight": 35
+    },
+    {
+      "key": "whitespace",
+      "label": "White Space Identification",
+      "description": "Is the identified opportunity credible and commercially viable?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Competitive analysis",
+    "Positioning strategy",
+    "Market mapping",
+    "Strategic thinking"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

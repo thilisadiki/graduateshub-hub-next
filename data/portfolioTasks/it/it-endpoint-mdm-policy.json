@@ -1,0 +1,55 @@
+{
+  "id": "it-endpoint-mdm-policy",
+  "categoryId": "it",
+  "topicId": "it-endpoint-management",
+  "level": "advanced",
+  "title": "Mobile Device Management Policy and Rollout",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Roll out an MDM platform across a mixed BYOD and corporate fleet without staff revolting.",
+  "scenario": "A 200-person SA professional services firm has decided to roll out Microsoft Intune across its mobile fleet (corporate iPhones, BYOD Android, and corporate laptops). The CFO wants security and remote wipe capability; staff are nervous about company access to personal data on BYOD devices.",
+  "brief": "Design the policy, the rollout, and the staff communication for an Intune MDM deployment. Address the corporate-versus-BYOD distinction explicitly and the privacy concerns of BYOD users.",
+  "deliverables": [
+    "An MDM policy covering: enrolment requirements (corporate owned, BYOD), allowed device classes, mandatory configuration (passcode, encryption, MFA, app management), and the conditions for selective wipe",
+    "A privacy boundary statement explaining what the company can and cannot see on BYOD devices, supported by Intune's actual data access boundaries",
+    "A 90-day rollout plan with phased onboarding, a champion programme, and the support model for the first month",
+    "A staff-facing FAQ (10 questions) addressing the concerns staff actually raise: \"can you read my WhatsApp\", \"can you wipe my photos\", \"what happens when I leave\""
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "BYOD MDM rollouts fail when staff feel surveilled. The most successful SA rollouts publish the privacy boundaries upfront, demonstrate them in a town hall, and offer an opt-out for staff who can use a corporate device. Lead with trust, not enforcement.",
+  "rubric": [
+    {
+      "key": "policy",
+      "label": "Policy Coherence",
+      "description": "Does the policy distinguish corporate and BYOD with sensible controls for each?",
+      "weight": 30
+    },
+    {
+      "key": "privacy",
+      "label": "Privacy Boundary",
+      "description": "Is the privacy statement accurate, transparent, and reassuring without overpromising?",
+      "weight": 25
+    },
+    {
+      "key": "rollout",
+      "label": "Rollout Realism",
+      "description": "Is the 90-day plan realistic, with champions, support, and contingency for resistance?",
+      "weight": 25
+    },
+    {
+      "key": "comms",
+      "label": "Staff Communication",
+      "description": "Does the FAQ address the questions staff genuinely worry about, in plain language?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Mobile device management",
+    "BYOD policy design",
+    "Intune deployment",
+    "Staff change communication"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

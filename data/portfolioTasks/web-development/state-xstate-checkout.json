@@ -1,0 +1,48 @@
+{
+  "id": "state-xstate-checkout",
+  "categoryId": "web-development",
+  "topicId": "state-machine-logic",
+  "level": "advanced",
+  "title": "Finite State Machines (XState)",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Use mathematical state machines to build bulletproof logic flows.",
+  "scenario": "An enterprise e-commerce company is losing millions of dollars because their custom checkout flow has hidden bugs. Users are somehow clicking \"Submit Payment\" twice, or navigating to the \"Success\" page while the payment is still processing. You need to rewrite the checkout logic using a strict Finite State Machine.",
+  "brief": "Design a Finite State Machine for a checkout flow. It must have states like `idle`, `validating_cart`, `processing_payment`, `success`, and `error`. You must define the exact events (transitions) that allow movement between these states. You can use a library like XState, or write a strict custom implementation.",
+  "deliverables": [
+    "The state machine configuration (the states, events, and transitions)",
+    "The logic that explicitly rejects invalid transitions (e.g., ignoring a \"SUBMIT\" event if currently in `processing_payment`)",
+    "A short architectural defense of why Finite State Machines are better than boolean flags for critical flows"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "You do not need to build the UI, just the logic layer. Using XState syntax is highly recommended as it is the industry standard for this pattern.",
+  "rubric": [
+    {
+      "key": "machine",
+      "label": "State Machine Design",
+      "description": "Are the states and transitions logically sound and complete?",
+      "weight": 35
+    },
+    {
+      "key": "guards",
+      "label": "Transition Guards",
+      "description": "Does the machine successfully prevent invalid actions based on current state?",
+      "weight": 35
+    },
+    {
+      "key": "architecture",
+      "label": "Architectural Judgment",
+      "description": "Does the candidate articulate the value of FSMs over boolean flags?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Finite State Machines (FSM)",
+    "XState",
+    "Enterprise Architecture",
+    "Deterministic Logic"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

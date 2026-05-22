@@ -83,4 +83,28 @@ export const digitalMarketingTopics: PortfolioTopic[] = [
       'Think like a growth marketer — acquisition, activation, retention. Tests AARRR funnels, referral design, and market expansion planning.',
     skillsProven: ['Growth marketing', 'AARRR framework', 'Referral programmes', 'Go-to-market strategy'],
   },
+  {
+    id: 'copywriting-content-creation',
+    categoryId: 'digital-marketing',
+    title: 'Direct Response Copywriting & Ad Creative',
+    description:
+      'Write high-converting ad copy and direct response landing page copy. Tests persuasion principles, AIDA framework, and copywriting style.',
+    skillsProven: ['Direct response copywriting', 'AIDA framework', 'Ad copy testing', 'Persuasive writing'],
+  },
+  {
+    id: 'marketing-automation-crm',
+    categoryId: 'digital-marketing',
+    title: 'Marketing Automation & CRM',
+    description:
+      'Design automated customer nurturing sequences and routing paths. Tests lead scoring, CRM triggers, and automated workflows.',
+    skillsProven: ['HubSpot / ActiveCampaign', 'Lead scoring', 'Workflow design', 'CRM administration'],
+  },
+  {
+    id: 'mobile-app-marketing',
+    categoryId: 'digital-marketing',
+    title: 'App Store Optimisation & Mobile Growth',
+    description:
+      'Optimise app store presence and design mobile growth loops. Tests ASO, push notifications, and in-app referral strategies.',
+    skillsProven: ['ASO', 'Mobile push strategy', 'In-app referrals', 'Mobile analytics'],
+  },
 ];

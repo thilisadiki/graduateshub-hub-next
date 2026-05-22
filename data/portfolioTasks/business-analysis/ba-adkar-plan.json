@@ -1,0 +1,53 @@
+{
+  "id": "ba-adkar-plan",
+  "categoryId": "business-analysis",
+  "topicId": "change-management",
+  "level": "intermediate",
+  "title": "Change Management Plan",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write an ADKAR-based change plan for migrating a sales team to a CRM.",
+  "scenario": "A 25-person sales team has used spreadsheets for 5 years. The company is implementing Salesforce. The sales director supports the change, but the team is sceptical — they see it as \"management spying on their pipeline.\"",
+  "brief": "Write a change management plan using the ADKAR model (Awareness, Desire, Knowledge, Ability, Reinforcement). Address the scepticism directly.",
+  "deliverables": [
+    "An ADKAR assessment: current state of the sales team across all 5 ADKAR elements",
+    "Specific activities for each ADKAR element: what you will do to move the team through each stage",
+    "A timeline: which ADKAR activities happen before, during, and after go-live",
+    "A measurement plan: how you will know each ADKAR element has been achieved"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "ADKAR is sequential. You cannot build Knowledge (training) before Desire (motivation). If the team does not want the CRM, training is wasted. Show this sequencing.",
+  "rubric": [
+    {
+      "key": "assessment",
+      "label": "ADKAR Assessment",
+      "description": "Is the current-state assessment honest and specific?",
+      "weight": 25
+    },
+    {
+      "key": "activities",
+      "label": "ADKAR Activities",
+      "description": "Are the activities specific to each element and the team context?",
+      "weight": 30
+    },
+    {
+      "key": "timeline",
+      "label": "Timeline",
+      "description": "Does the timeline respect ADKAR sequencing?",
+      "weight": 20
+    },
+    {
+      "key": "measurement",
+      "label": "Measurement Plan",
+      "description": "Are the success measures observable and not just surveys?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "ADKAR methodology",
+    "Change management",
+    "Adoption planning",
+    "Measurement design"
+  ],
+  "relatedRoadmapIds": []
+}

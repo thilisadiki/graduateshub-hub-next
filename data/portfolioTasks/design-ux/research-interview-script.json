@@ -1,0 +1,46 @@
+{
+  "id": "research-interview-script",
+  "categoryId": "design-ux",
+  "topicId": "user-research-interviews",
+  "level": "beginner",
+  "title": "Write a User Interview Script",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a 20-minute interview script to understand how students choose online courses.",
+  "scenario": "An edtech startup wants to understand why university students choose certain online courses over others. The product team needs to interview 8 students. You have been asked to write the interview script.",
+  "brief": "Write a structured interview script for a 20-minute session. Include an introduction, warm-up questions, core questions, and a wrap-up. The script should avoid leading questions.",
+  "deliverables": [
+    "An interview script with: intro/consent (2 min), warm-up (3 min), core questions (12 min), wrap-up (3 min)",
+    "At least 8 core questions, none of which are leading or closed-ended",
+    "Two follow-up prompts per core question (how to dig deeper if the answer is vague)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "\"Do you find it hard to choose courses?\" is a leading question. \"Tell me about the last time you signed up for an online course\" is not. Show you know the difference.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Script Structure",
+      "description": "Is the script structured with proper timing and flow?",
+      "weight": 25
+    },
+    {
+      "key": "questions",
+      "label": "Question Quality",
+      "description": "Are the questions open-ended, non-leading, and exploratory?",
+      "weight": 40
+    },
+    {
+      "key": "prompts",
+      "label": "Follow-Up Prompts",
+      "description": "Do the follow-up prompts help dig deeper without biasing?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "User interviews",
+    "Research methodology",
+    "Question design",
+    "Qualitative research"
+  ],
+  "relatedRoadmapIds": []
+}

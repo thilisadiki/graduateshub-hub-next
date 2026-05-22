@@ -1,0 +1,46 @@
+{
+  "id": "ba-traceability-matrix",
+  "categoryId": "business-analysis",
+  "topicId": "requirements-engineering",
+  "level": "advanced",
+  "title": "Requirements Traceability Matrix",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Build an RTM linking business → functional → test cases for a payroll migration.",
+  "scenario": "A South African company is migrating from a legacy payroll system to a cloud-based solution. There are 25 business requirements. The project sponsor wants confidence that every requirement will be tested and nothing will be lost in migration.",
+  "brief": "Build a Requirements Traceability Matrix (RTM) that links business requirements to functional requirements to test cases. Include coverage analysis and gap identification.",
+  "deliverables": [
+    "An RTM table: Business Req ID → Functional Req ID(s) → Test Case ID(s) → Status (for at least 15 business requirements)",
+    "A coverage analysis: which requirements have full traceability, partial, or none",
+    "A gap report: requirements without test coverage and test cases without linked requirements"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "An RTM is only valuable if it is maintained. Include a note on how the matrix should be updated during the project lifecycle.",
+  "rubric": [
+    {
+      "key": "rtm",
+      "label": "RTM Completeness",
+      "description": "Does the matrix cover at least 15 requirements with full traceability?",
+      "weight": 35
+    },
+    {
+      "key": "coverage",
+      "label": "Coverage Analysis",
+      "description": "Is the coverage analysis honest about gaps?",
+      "weight": 30
+    },
+    {
+      "key": "maintenance",
+      "label": "Maintenance Plan",
+      "description": "Is there a credible plan for keeping the RTM current?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Requirements traceability",
+    "RTM design",
+    "Coverage analysis",
+    "Quality assurance"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ds-token-architecture",
+  "categoryId": "design-ux",
+  "topicId": "design-systems",
+  "level": "intermediate",
+  "title": "Design Token Architecture",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Define a design token system that supports theming.",
+  "scenario": "A SaaS product is launching a white-label version that clients can brand with their own colours. The current design uses hardcoded hex values throughout. The team needs a token system that separates raw values from semantic meaning.",
+  "brief": "Design a design token architecture with three levels: primitive tokens (raw values), semantic tokens (purpose-based), and component tokens (specific to components). Show how theming works.",
+  "deliverables": [
+    "Primitive tokens: colour palette (at least 10 colours with shades), spacing scale (4px base), typography scale",
+    "Semantic tokens: surface, text, border, interactive, feedback colours mapped to primitives",
+    "A theming example: show how 2 different brand themes use the same semantic tokens with different primitive values",
+    "A naming convention with clear rules (e.g., color.surface.primary, not color.white)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "color.blue-500 is a primitive token. color.interactive.primary is a semantic token. The semantic token REFERENCES the primitive. Theming swaps primitives; semantics stay the same.",
+  "rubric": [
+    {
+      "key": "primitives",
+      "label": "Primitive Tokens",
+      "description": "Are the primitive tokens comprehensive with consistent naming?",
+      "weight": 25
+    },
+    {
+      "key": "semantics",
+      "label": "Semantic Tokens",
+      "description": "Do the semantic tokens correctly abstract purpose from value?",
+      "weight": 30
+    },
+    {
+      "key": "theming",
+      "label": "Theming Demo",
+      "description": "Does the theming example clearly show how token swapping works?",
+      "weight": 25
+    },
+    {
+      "key": "naming",
+      "label": "Naming Convention",
+      "description": "Is the naming convention consistent, scalable, and developer-friendly?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Design tokens",
+    "Theming architecture",
+    "Design systems",
+    "Developer collaboration"
+  ],
+  "relatedRoadmapIds": []
+}

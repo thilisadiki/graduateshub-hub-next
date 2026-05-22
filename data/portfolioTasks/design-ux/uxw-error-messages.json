@@ -1,0 +1,46 @@
+{
+  "id": "uxw-error-messages",
+  "categoryId": "design-ux",
+  "topicId": "ux-writing-content-design",
+  "level": "beginner",
+  "title": "Rewrite Error Messages",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Rewrite 10 technical error messages into user-friendly, actionable copy.",
+  "scenario": "A banking app shows error messages like \"Error 403: Unauthorized,\" \"Transaction failed: timeout exception,\" and \"Invalid input: field cannot be null.\" Users call the support centre in a panic.",
+  "brief": "Rewrite 10 technical error messages into plain language that tells users (1) what happened, (2) why it happened, and (3) what to do next.",
+  "deliverables": [
+    "A table of 10 errors: Original Technical Message → Rewritten User-Friendly Message → Rationale",
+    "Three tone principles for error messages at this company (e.g., \"be honest, not alarming\")",
+    "One error where the best UX is to prevent it entirely rather than show a message, with your prevention design"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "\"Something went wrong\" is not a good error message either. It tells the user nothing. Good errors are specific: \"Your payment could not be processed. Your card was not charged. Try again or use a different card.\"",
+  "rubric": [
+    {
+      "key": "rewrites",
+      "label": "Error Rewrites",
+      "description": "Are the rewrites clear, specific, and actionable?",
+      "weight": 40
+    },
+    {
+      "key": "tone",
+      "label": "Tone Principles",
+      "description": "Are the 3 principles consistent and appropriate for a banking app?",
+      "weight": 30
+    },
+    {
+      "key": "prevention",
+      "label": "Error Prevention",
+      "description": "Is the prevention design practical and truly better than a message?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "UX writing",
+    "Error messaging",
+    "Microcopy",
+    "User empathy"
+  ],
+  "relatedRoadmapIds": []
+}

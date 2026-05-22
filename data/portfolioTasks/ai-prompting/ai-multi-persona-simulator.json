@@ -1,0 +1,47 @@
+{
+  "id": "ai-multi-persona-simulator",
+  "categoryId": "ai-prompting",
+  "topicId": "system-prompts-persona",
+  "level": "advanced",
+  "title": "Design a Multi-Persona Simulator",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Write a meta-prompt that generates different customer personas for sales training.",
+  "scenario": "A B2B SaaS sales team wants to practice pitching. They want an AI prompt they can drop into ChatGPT that turns the AI into a simulated buyer. However, they want the AI to randomly adopt different difficulty levels (e.g., The Skeptic, The Budget-Constrained, The Eager Champion).",
+  "brief": "Write a highly complex \"Simulator\" System Prompt that instructs the AI to run a roleplay session, dynamically adopting a persona, reacting to the user's pitch, and providing a score at the end.",
+  "deliverables": [
+    "The Simulator setup instructions (telling the AI it is a roleplay engine)",
+    "The definitions of 3 distinct Buyer Personas the AI can choose from",
+    "The \"Rules of Engagement\" (e.g., \"Do not agree easily\", \"Ask about implementation time\")",
+    "The Evaluation Rubric the AI must use to grade the human at the end of the simulation"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is a state-machine prompt. The AI needs to know when it is \"in character\" (talking to the rep) and when it is \"out of character\" (giving feedback at the end). Use clear markdown formatting in the prompt to separate instructions from persona data.",
+  "rubric": [
+    {
+      "key": "simulation-logic",
+      "label": "Simulation Logic",
+      "description": "Does the prompt clearly separate the roleplay phase from the feedback phase?",
+      "weight": 40
+    },
+    {
+      "key": "persona-depth",
+      "label": "Persona Depth",
+      "description": "Are the 3 buyer personas distinct and challenging for a salesperson?",
+      "weight": 30
+    },
+    {
+      "key": "evaluation",
+      "label": "Evaluation Instructions",
+      "description": "Are the instructions for how the AI should grade the human clear and actionable?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Meta-prompting",
+    "Simulation design",
+    "State-based prompting",
+    "Evaluation rubrics"
+  ],
+  "relatedRoadmapIds": []
+}

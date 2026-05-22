@@ -1,0 +1,47 @@
+{
+  "id": "co-metrics-csat-analysis",
+  "categoryId": "customer-ops",
+  "topicId": "operational-metrics",
+  "level": "beginner",
+  "title": "Analyse a Drop in CSAT",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Figure out why Customer Satisfaction dropped from 92% to 78% this week.",
+  "scenario": "You are reviewing the weekly ops dashboard. Customer Satisfaction (CSAT) plummeted this week. You dig into the raw feedback comments and see a trend: customers are angry because their promo codes for a new marketing campaign didn't work at checkout.",
+  "brief": "Write a brief incident report explaining the drop in CSAT to the marketing team, who ran the campaign.",
+  "deliverables": [
+    "A summary of the metric drop (92% to 78%)",
+    "The root cause analysis based on the feedback comments",
+    "The operational impact (e.g., \"This caused 400 extra support tickets\")",
+    "A request for process change from Marketing (e.g., testing codes before launch)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Ops often has to tell other departments when their mistakes impact the customer. Be factual, use data, and avoid sounding accusatory. Focus on the impact on the support queue.",
+  "rubric": [
+    {
+      "key": "data",
+      "label": "Data Summary",
+      "description": "Is the metric drop clearly communicated?",
+      "weight": 30
+    },
+    {
+      "key": "root-cause",
+      "label": "Root Cause Connection",
+      "description": "Is the connection between the promo code bug and the CSAT drop clear?",
+      "weight": 35
+    },
+    {
+      "key": "collaboration",
+      "label": "Cross-functional Ask",
+      "description": "Is the request to Marketing professional and process-focused?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Metrics analysis",
+    "CSAT",
+    "Cross-functional feedback",
+    "Reporting"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "kpi-diagnose-metric-drop",
+  "categoryId": "data",
+  "topicId": "business-metrics-kpis",
+  "level": "intermediate",
+  "title": "Diagnose a Metric Drop",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Revenue dropped 15% month-over-month. Write a structured root-cause analysis.",
+  "scenario": "An online subscription box company saw revenue drop from R3.2M in March to R2.72M in April. The CEO is panicking. Your job is to calmly and systematically figure out why.",
+  "brief": "Write a structured root-cause analysis. Decompose revenue into its component parts, identify which lever moved, propose hypotheses, and describe what data you would pull to confirm each one.",
+  "deliverables": [
+    "A revenue decomposition tree: Revenue = Subscribers × ARPU, broken down further",
+    "At least 4 hypotheses for the drop, ordered by likelihood",
+    "For each hypothesis: the data you would pull and the query or analysis that would confirm or reject it",
+    "A one-paragraph summary you would present to the CEO before the deep-dive is complete"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not jump to a conclusion. The value of this task is the systematic decomposition, not the answer.",
+  "rubric": [
+    {
+      "key": "decomposition",
+      "label": "Revenue Decomposition",
+      "description": "Is the metric tree logically sound and mutually exclusive?",
+      "weight": 30
+    },
+    {
+      "key": "hypotheses",
+      "label": "Hypothesis Quality",
+      "description": "Are the hypotheses specific, testable, and ordered by likelihood?",
+      "weight": 30
+    },
+    {
+      "key": "investigation",
+      "label": "Investigation Plan",
+      "description": "Would the proposed queries actually confirm or reject each hypothesis?",
+      "weight": 25
+    },
+    {
+      "key": "communication",
+      "label": "CEO Communication",
+      "description": "Is the interim summary calm, honest, and actionable?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Root-cause analysis",
+    "Metric decomposition",
+    "Hypothesis-driven analysis",
+    "Executive communication"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

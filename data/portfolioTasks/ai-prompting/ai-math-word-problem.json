@@ -1,0 +1,47 @@
+{
+  "id": "ai-math-word-problem",
+  "categoryId": "ai-prompting",
+  "topicId": "chain-of-thought-reasoning",
+  "level": "beginner",
+  "title": "Prompt for Math Accuracy",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Force an LLM to solve a tricky logic puzzle without jumping to the wrong conclusion.",
+  "scenario": "LLMs are notoriously bad at math and logic if they try to answer immediately (e.g., the classic \"A bat and ball cost R110...\" puzzle). You need to write a prompt that forces the AI to slow down and calculate correctly.",
+  "brief": "Take a classic trick math/logic question (provide your own) that LLMs often fail. Write a \"Chain of Thought\" prompt that successfully guides the model to the correct answer.",
+  "deliverables": [
+    "The trick logic/math question",
+    "A baseline prompt (that usually causes the LLM to fail)",
+    "The Chain of Thought prompt (e.g., using \"Let's think step by step\" or a structured reasoning template)",
+    "An explanation of why CoT improves accuracy in Transformer models"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "LLMs predict the next token. If the first token of their answer is a number, they are guessing. If the first 100 tokens are their working-out, the final number is much more likely to be accurate. Force the working-out.",
+  "rubric": [
+    {
+      "key": "cot-implementation",
+      "label": "CoT Implementation",
+      "description": "Does the prompt explicitly force step-by-step reasoning before the final answer?",
+      "weight": 40
+    },
+    {
+      "key": "puzzle-choice",
+      "label": "Puzzle Choice",
+      "description": "Is the chosen puzzle one that genuinely requires logic/math to solve?",
+      "weight": 30
+    },
+    {
+      "key": "explanation",
+      "label": "Technical Explanation",
+      "description": "Is the explanation of why CoT works technically accurate?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Chain of Thought",
+    "Logic prompting",
+    "Math accuracy",
+    "Prompt structuring"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -1,0 +1,54 @@
+{
+  "id": "crud-basic-api-routes",
+  "categoryId": "web-development",
+  "topicId": "fullstack-crud-app",
+  "level": "beginner",
+  "title": "Build a Basic Express/Next.js API",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Create the backend routes to Create, Read, Update, and Delete data.",
+  "scenario": "A local library wants to digitize their book inventory. They need a simple backend API to manage the catalog. For now, they just want to store the data in memory (an array) while they figure out their database strategy.",
+  "brief": "Build a basic REST API using Express.js or Next.js API Routes. Implement four endpoints for a \"Book\" resource: GET (list all books), POST (add a new book), PUT (update an existing book by ID), and DELETE (remove a book by ID). Keep the data in a simple JavaScript array.",
+  "deliverables": [
+    "The API route files handling the GET, POST, PUT, and DELETE requests",
+    "The basic validation logic (e.g., ensuring a POST request has a \"title\" and \"author\")",
+    "A README snippet explaining how to test the endpoints using a tool like Postman or curl"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on returning the correct HTTP status codes (e.g., 201 Created, 400 Bad Request, 404 Not Found, 500 Internal Server Error).",
+  "rubric": [
+    {
+      "key": "routes",
+      "label": "HTTP Methods",
+      "description": "Are the GET, POST, PUT, and DELETE methods implemented correctly?",
+      "weight": 35
+    },
+    {
+      "key": "status",
+      "label": "Status Codes",
+      "description": "Does the API return semantically correct HTTP status codes?",
+      "weight": 30
+    },
+    {
+      "key": "validation",
+      "label": "Basic Validation",
+      "description": "Does the API reject invalid or malformed requests?",
+      "weight": 20
+    },
+    {
+      "key": "postman",
+      "label": "Testing Guidance",
+      "description": "Are the testing instructions clear and reproducible?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "RESTful API Design",
+    "HTTP Status Codes",
+    "Basic Routing",
+    "Server-side Validation"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

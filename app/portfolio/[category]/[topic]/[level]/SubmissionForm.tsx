@@ -187,7 +187,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
           <button
             type="submit"
             disabled={submitting || belowMin || aboveMax || turnstileToken === null}
-            className="bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-5 py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors whitespace-nowrap shrink-0"
+            className="bg-primary hover:bg-[#5a4000] disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-5 py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors whitespace-nowrap shrink-0"
           >
             {submitting ? (
               <>

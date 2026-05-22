@@ -1,0 +1,55 @@
+{
+  "id": "community-launch-strategy",
+  "categoryId": "digital-marketing",
+  "topicId": "influencer-community",
+  "level": "intermediate",
+  "title": "Community Launch Strategy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Build a plan to grow an online community from 0 to 500 engaged members.",
+  "scenario": "A South African fitness brand wants to launch a WhatsApp Community (or Discord server) for their customers. The goal is 500 engaged members in 90 days. They currently have an email list of 8,000 and Instagram following of 15,000.",
+  "brief": "Design a community launch strategy. Cover the platform choice, the seed member recruitment, the engagement model, and the moderation plan.",
+  "deliverables": [
+    "Platform recommendation (WhatsApp, Discord, Facebook Group, etc.) with pros/cons for this specific brand",
+    "A 90-day launch plan in 3 phases: Seed (Day 1-14), Grow (Day 15-45), Sustain (Day 46-90)",
+    "An engagement model: what content the community produces, who posts, and how often",
+    "A moderation framework: rules, moderator roles, and how to handle toxic behaviour"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A community is not a broadcast channel. If only the brand posts, it is a newsletter. Show how you get members to talk to each other.",
+  "rubric": [
+    {
+      "key": "platform",
+      "label": "Platform Choice",
+      "description": "Is the platform justified for this audience and use case?",
+      "weight": 20
+    },
+    {
+      "key": "launch",
+      "label": "Launch Plan",
+      "description": "Are the 3 phases realistic with specific tactics for each?",
+      "weight": 35
+    },
+    {
+      "key": "engagement",
+      "label": "Engagement Model",
+      "description": "Does the model create genuine member-to-member interaction?",
+      "weight": 25
+    },
+    {
+      "key": "moderation",
+      "label": "Moderation Plan",
+      "description": "Is the moderation framework practical and proportionate?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Community building",
+    "Launch strategy",
+    "Engagement design",
+    "Community management"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

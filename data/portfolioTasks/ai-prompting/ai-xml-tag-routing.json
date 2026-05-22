@@ -1,0 +1,46 @@
+{
+  "id": "ai-xml-tag-routing",
+  "categoryId": "ai-prompting",
+  "topicId": "output-formatting-extraction",
+  "level": "advanced",
+  "title": "Implement XML Tag Routing",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Use XML tags to force an LLM to separate its \"thinking\" from its final output.",
+  "scenario": "You are building an AI agent that writes code. If the AI just outputs the code immediately, it often makes logic errors. You want the AI to write out its \"plan\" first, but you don't want the plan to be sent to the user—you only want the final code. You must use XML tags to separate the output streams.",
+  "brief": "Design an advanced prompt that forces the LLM to output its reasoning inside `<scratchpad>` tags, and its final answer inside `<final_code>` tags, so your backend system can parse them separately.",
+  "deliverables": [
+    "The System Prompt instructing the use of XML tags for structural separation",
+    "An explanation of why separating the reasoning step improves LLM logic (Chain of Thought)",
+    "A regex (Regular Expression) or simple pseudo-code snippet showing how your backend would extract just the text inside the `<final_code>` tags."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Using `<tags>` is a fundamental technique in advanced prompt engineering (especially for Claude/Anthropic models). It allows you to give the model space to \"think\" without polluting the final JSON or user-facing text.",
+  "rubric": [
+    {
+      "key": "xml-structure",
+      "label": "XML Tag Usage",
+      "description": "Does the prompt clearly instruct the model to use the specific XML tags?",
+      "weight": 40
+    },
+    {
+      "key": "cot-reasoning",
+      "label": "Chain of Thought Logic",
+      "description": "Is the explanation of why the scratchpad improves logic accurate?",
+      "weight": 30
+    },
+    {
+      "key": "parsing",
+      "label": "Backend Parsing",
+      "description": "Is the pseudo-code/regex for extracting the final tag realistic?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "XML tagging",
+    "Chain of Thought",
+    "Output stream separation",
+    "LLM parsing"
+  ],
+  "relatedRoadmapIds": []
+}

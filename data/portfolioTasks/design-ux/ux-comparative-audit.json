@@ -1,0 +1,46 @@
+{
+  "id": "ux-comparative-audit",
+  "categoryId": "design-ux",
+  "topicId": "ux-teardown",
+  "level": "intermediate",
+  "title": "Comparative UX Audit",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Compare the same flow across 3 competing products using Nielsen's heuristics.",
+  "scenario": "A product team is redesigning their sign-up flow. Before starting, they want to understand how competitors handle the same task. Your job is to audit 3 competitors and extract the best patterns.",
+  "brief": "Pick a common user flow (sign-up, checkout, or onboarding). Audit 3 competing products that all have this flow. Score each against Nielsen's 10 heuristics and recommend which patterns to adopt.",
+  "deliverables": [
+    "A comparison table: Product × Heuristic score (1-5) for at least 6 of Nielsen's 10 heuristics",
+    "Three specific UX patterns worth stealing, with annotated descriptions of how each competitor implements them",
+    "Two anti-patterns to avoid, with explanation of why they fail"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not just list heuristic violations. The value is in the comparative lens — what does Product A do better than B, and why? Be specific about screens and interactions.",
+  "rubric": [
+    {
+      "key": "heuristics",
+      "label": "Heuristic Application",
+      "description": "Are the heuristics correctly applied and scored consistently across products?",
+      "weight": 30
+    },
+    {
+      "key": "patterns",
+      "label": "Pattern Extraction",
+      "description": "Are the recommended patterns specific and well-described?",
+      "weight": 35
+    },
+    {
+      "key": "anti-patterns",
+      "label": "Anti-Pattern Analysis",
+      "description": "Are the anti-patterns genuine failures (not just preferences)?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Heuristic evaluation",
+    "Competitive UX analysis",
+    "Pattern recognition",
+    "Design critique"
+  ],
+  "relatedRoadmapIds": []
+}

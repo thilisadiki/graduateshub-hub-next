@@ -1,0 +1,55 @@
+{
+  "id": "influencer-measurement-framework",
+  "categoryId": "digital-marketing",
+  "topicId": "influencer-community",
+  "level": "advanced",
+  "title": "Influencer Campaign Measurement Framework",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a system that tracks influencer ROI beyond vanity metrics.",
+  "scenario": "A fashion e-commerce brand spent R200,000 on influencer marketing last quarter. The campaign generated 500,000 impressions and 12,000 likes. The CFO asks: \"How many sales did this actually drive?\" Nobody knows.",
+  "brief": "Design a measurement framework that tracks influencer marketing from awareness to conversion. Go beyond reach and likes to actual sales attribution, customer acquisition cost, and lifetime value impact.",
+  "deliverables": [
+    "A metrics framework across the funnel: Awareness (reach, impressions), Consideration (clicks, saves, shares), Conversion (sales, discount code usage, UTM tracking)",
+    "The tracking infrastructure: how you set up UTMs, unique discount codes, and landing pages per influencer",
+    "An ROI calculation template: total investment vs attributed revenue, CAC per influencer, and comparison to other channels",
+    "One limitation of influencer attribution (e.g., dark social, screenshot sharing) and your workaround"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Most influencer impact is unmeasurable (people see a post, remember the brand, and Google it later). Acknowledge this but show how you measure what you can.",
+  "rubric": [
+    {
+      "key": "framework",
+      "label": "Metrics Framework",
+      "description": "Does the framework go beyond vanity metrics to business outcomes?",
+      "weight": 30
+    },
+    {
+      "key": "tracking",
+      "label": "Tracking Infrastructure",
+      "description": "Is the tracking setup practical and comprehensive?",
+      "weight": 25
+    },
+    {
+      "key": "roi",
+      "label": "ROI Calculation",
+      "description": "Is the ROI methodology sound and comparable to other channels?",
+      "weight": 25
+    },
+    {
+      "key": "limitations",
+      "label": "Attribution Honesty",
+      "description": "Does the candidate acknowledge measurement gaps honestly?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Influencer ROI",
+    "Campaign measurement",
+    "Attribution",
+    "Marketing analytics"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "api-fetch-movie-list",
+  "categoryId": "web-development",
+  "topicId": "api-data-fetching",
+  "level": "beginner",
+  "title": "Fetch and Display a Movie List",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Fetch data from a public API and render it as a responsive grid.",
+  "scenario": "A streaming startup wants to build a simple web client to display their top movies. Before building the full app, they want a prototype that fetches the top 20 movies from a public API and renders them nicely on the page.",
+  "brief": "Using React (or vanilla JS), make a GET request to a public movie API (e.g., TMDB or a mock JSON endpoint). Display the title, release year, and poster image for each movie in a responsive grid. Handle the loading state and display a simple error message if the fetch fails.",
+  "deliverables": [
+    "A code snippet of the data fetching logic (e.g., a custom hook or useEffect block)",
+    "The component code that renders the grid and handles loading/error states",
+    "A brief explanation of how you handle the loading state while waiting for the API"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on clean async/await syntax and proper React state management. Do not over-engineer the CSS, but ensure it does not break on mobile.",
+  "rubric": [
+    {
+      "key": "fetching",
+      "label": "Data Fetching",
+      "description": "Is the API call correctly implemented using fetch or axios?",
+      "weight": 30
+    },
+    {
+      "key": "state",
+      "label": "State Management",
+      "description": "Are loading, error, and data states handled correctly?",
+      "weight": 30
+    },
+    {
+      "key": "ui",
+      "label": "UI Rendering",
+      "description": "Is the data mapped correctly into a responsive grid?",
+      "weight": 20
+    },
+    {
+      "key": "cleanliness",
+      "label": "Code Cleanliness",
+      "description": "Is the code readable and free of obvious memory leaks (e.g., missing dependency arrays)?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "REST APIs",
+    "Async/Await",
+    "React State",
+    "Basic CSS Grid"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

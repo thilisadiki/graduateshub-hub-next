@@ -1,0 +1,55 @@
+{
+  "id": "it-voip-qos-design",
+  "categoryId": "it",
+  "topicId": "it-voip-telephony",
+  "level": "advanced",
+  "title": "Voice Network Architecture & Quality of Service (QoS) Design",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 to 7 hours",
+  "tagline": "Architect a voice network and switch configuration plan to prioritize real-time SIP/RTP packets.",
+  "scenario": "A retail head office in Durban has 120 IP desk phones sharing a single 200Mbps fiber internet connection with normal web browsing, YouTube streaming, and SQL replication. Users report choppy voice calls, dropped connections, and delay during busy periods. The switches are unmanaged or poorly configured.",
+  "brief": "Design a modern, segregated voice network layout with specific switch/router QoS configurations to guarantee crystal-clear calls even under high network load.",
+  "deliverables": [
+    "A network segregation plan specifying Voice VLANs, IP subnetting ranges, and DHCP configurations supporting LLDP-MED for auto-provisioning",
+    "A switch-level and router-level QoS configuration blueprint, outlining exactly how 802.1p (CoS) and DSCP markings are trusted, rewritten, and prioritized",
+    "A bandwidth and codec mathematical analysis comparing G.711 and G.729 bandwidth requirements for 120 concurrent call scenarios",
+    "A monitoring plan detailing metrics like packet loss, jitter limits, and Mean Opinion Score (MOS) targets to measure call quality"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not write vague statements like \"configure QoS\". Provide the actual CLI command concepts (e.g. Cisco MLS/MQC commands or generic firewall queuing configurations) showing how queue mappings are defined and priority queue is allocated.",
+  "rubric": [
+    {
+      "key": "vlan",
+      "label": "Network Segregation Design",
+      "description": "Is the VLAN, IP schema, and auto-discovery (LLDP-MED) architected professionally?",
+      "weight": 25
+    },
+    {
+      "key": "qos",
+      "label": "QoS & DSCP Marking Logic",
+      "description": "Are the QoS queues, DSCP markings (EF, CS3, AF31), and queuing policies correct for voice and video?",
+      "weight": 30
+    },
+    {
+      "key": "bandwidth",
+      "label": "Bandwidth & Codec Analysis",
+      "description": "Are the bandwidth calculations for G.711 (80Kbps per call) and G.729 (30Kbps per call) mathematically accurate?",
+      "weight": 25
+    },
+    {
+      "key": "monitoring",
+      "label": "Quality Assurance Plan",
+      "description": "Are the MOS goals, jitter tolerances, and diagnostic tooling (e.g., Wireshark RTP analysis) clearly explained?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "VLAN segregation",
+    "Class of Service (CoS) / DSCP mapping",
+    "LLDP-MED & voice provisioning",
+    "VoIP bandwidth calculations"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

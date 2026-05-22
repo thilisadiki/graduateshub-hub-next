@@ -1,0 +1,55 @@
+{
+  "id": "it-iam-access-audit-cleanup",
+  "categoryId": "it",
+  "topicId": "it-identity-management",
+  "level": "advanced",
+  "title": "Access Audit and Cleanup Plan",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 5 hours",
+  "tagline": "Plan a quarterly access review programme that survives an external audit.",
+  "scenario": "A SA insurer has just failed its first external IT audit on identity and access management. Findings include: 14 percent of accounts are stale, dozens of users hold permissions to systems they no longer need, and there is no documented quarterly access review. The CIO wants a plan to fix it inside one quarter.",
+  "brief": "Design a recurring access governance programme. Cover the discovery phase (finding stale accounts and over-permissioned users), the review process, the remediation steps, and the ongoing controls.",
+  "deliverables": [
+    "A discovery plan defining which queries and tools to run against AD, M365, and key business systems to find stale and over-permissioned accounts",
+    "A quarterly access review process: who reviews, what evidence they need, how dispute resolution works, and what the timeline looks like",
+    "A remediation playbook covering disable-then-delete timing, ownership transfer, and exception handling",
+    "A KPI dashboard sketch listing the metrics the CIO would see monthly to know the programme is working"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Auditors care about evidence, not intentions. Every step must produce an artefact (a query log, a manager attestation, a remediation ticket) that an external reviewer can sample. Aim for that bar.",
+  "rubric": [
+    {
+      "key": "discovery",
+      "label": "Discovery Logic",
+      "description": "Are the queries credible, and do they cover the systems where stale access typically lives?",
+      "weight": 25
+    },
+    {
+      "key": "process",
+      "label": "Review Process",
+      "description": "Is the quarterly review repeatable, fair, and audit-defensible?",
+      "weight": 30
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Realism",
+      "description": "Does the playbook account for production risk when removing access?",
+      "weight": 20
+    },
+    {
+      "key": "metrics",
+      "label": "KPI Quality",
+      "description": "Are the metrics ones a CIO would actually watch, with credible target levels?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Access governance",
+    "Audit response",
+    "Stale account remediation",
+    "KPI design"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

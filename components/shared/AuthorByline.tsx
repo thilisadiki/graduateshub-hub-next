@@ -43,7 +43,7 @@ function AuthorChip({ author }: { author: Author }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`${author.name} on LinkedIn`}
-        className="ml-1 text-gray-400 hover:text-blue-600 transition-colors shrink-0"
+        className="ml-1 text-gray-400 hover:text-primary transition-colors shrink-0"
       >
         <ExternalLink size={13} />
       </a>
@@ -59,7 +59,7 @@ export default function AuthorByline({
   lastUpdated: string;
 }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-6 pt-5 border-t border-blue-100/60">
+    <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-6 pt-5 border-t border-[#D1C5B4]/60">
       <div className="flex flex-wrap gap-4">
         {authors.map((key) => (
           <AuthorChip key={key} author={AUTHORS[key]} />

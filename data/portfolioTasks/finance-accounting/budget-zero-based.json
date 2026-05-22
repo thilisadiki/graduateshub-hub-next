@@ -1,0 +1,55 @@
+{
+  "id": "budget-zero-based",
+  "categoryId": "finance-accounting",
+  "topicId": "budgeting-variance",
+  "level": "advanced",
+  "title": "Zero-Based Budgeting Exercise",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Rebuild a department budget from scratch, justifying every line from zero.",
+  "scenario": "The CEO has mandated zero-based budgeting (ZBB) for all departments. Instead of starting from last year's budget and adjusting, every team must justify every rand from zero. The IT department (R8M annual spend) must go through this exercise.",
+  "brief": "Conduct a ZBB exercise for the IT department. List every expense, rank them by business criticality, and identify which items you would cut if forced to reduce the budget by 20%.",
+  "deliverables": [
+    "A complete expense inventory with each item justified from zero (not \"we spent this last year\")",
+    "A priority ranking: Critical (business stops without it), Important (degraded service), Nice-to-Have (efficiency gains)",
+    "A 20% cut scenario showing which items you would eliminate and the business impact of each cut",
+    "One expense that looks like a cut candidate but should actually be increased, with justification"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "ZBB is not about cutting costs. It is about justifying costs. Some line items will be higher than last year if the justification is strong enough.",
+  "rubric": [
+    {
+      "key": "inventory",
+      "label": "Expense Inventory",
+      "description": "Is every expense justified with a business reason (not \"historical spend\")?",
+      "weight": 25
+    },
+    {
+      "key": "ranking",
+      "label": "Priority Ranking",
+      "description": "Is the critical/important/nice-to-have classification well-reasoned?",
+      "weight": 25
+    },
+    {
+      "key": "cut",
+      "label": "Cut Scenario",
+      "description": "Is the 20% cut achievable and are the impacts honestly assessed?",
+      "weight": 30
+    },
+    {
+      "key": "increase",
+      "label": "Strategic Increase",
+      "description": "Does the candidate identify a counter-intuitive investment opportunity?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Zero-based budgeting",
+    "Cost justification",
+    "Strategic prioritisation",
+    "Financial discipline"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

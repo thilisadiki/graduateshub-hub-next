@@ -45,7 +45,7 @@ export default function InstallPrompt() {
       </div>
       <button
         onClick={handleInstall}
-        className="shrink-0 bg-primary hover:bg-blue-800 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors"
+        className="shrink-0 bg-primary hover:bg-[#5a4000] text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors"
       >
         Install
       </button>

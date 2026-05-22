@@ -1,0 +1,48 @@
+{
+  "id": "etl-schema-evolution",
+  "categoryId": "data",
+  "topicId": "etl-data-pipelines",
+  "level": "intermediate",
+  "title": "Handle Schema Changes Gracefully",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a pipeline that does not break when a source API adds or removes a field.",
+  "scenario": "Your company ingests data from a third-party API every hour. Last week, the API provider added 3 new fields and renamed one existing field without warning. Your pipeline crashed, and the data warehouse was missing 6 hours of data before anyone noticed.",
+  "brief": "Redesign the pipeline to handle schema evolution gracefully. The pipeline must detect changes, adapt where possible, alert on breaking changes, and never silently drop data.",
+  "deliverables": [
+    "A schema detection strategy: how the pipeline discovers new, renamed, or removed fields",
+    "Handling rules for each type of change: new fields (add column), removed fields (nullable/default), renamed fields (mapping table)",
+    "An alerting mechanism that notifies the team of breaking changes without stopping the pipeline"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The worst outcome is silent data loss. The second worst is a pipeline that crashes at 2am and nobody knows until Monday. Design for both.",
+  "rubric": [
+    {
+      "key": "detection",
+      "label": "Schema Detection",
+      "description": "Is the schema comparison mechanism robust (hash, diff, versioning)?",
+      "weight": 35
+    },
+    {
+      "key": "adaptation",
+      "label": "Adaptation Rules",
+      "description": "Are the handling rules for each change type sensible and safe?",
+      "weight": 35
+    },
+    {
+      "key": "alerting",
+      "label": "Alerting & Recovery",
+      "description": "Does the alerting strategy prevent both silent failures and unnecessary noise?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Schema evolution",
+    "Pipeline resilience",
+    "Data engineering",
+    "Alerting design"
+  ],
+  "relatedRoadmapIds": [
+    "data-engineer"
+  ]
+}

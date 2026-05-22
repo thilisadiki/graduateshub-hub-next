@@ -1,0 +1,55 @@
+{
+  "id": "tax-vat-return",
+  "categoryId": "finance-accounting",
+  "topicId": "tax-compliance-sa",
+  "level": "beginner",
+  "title": "VAT Calculation and Return",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Calculate VAT output, input, and net payable for a small business monthly return.",
+  "scenario": "A small IT consulting company is registered for VAT (standard rate 15%). In March, they invoiced R460,000 (incl. VAT) to clients and received R172,500 (incl. VAT) in supplier invoices. The owner needs to know how much to pay SARS.",
+  "brief": "Calculate the VAT output tax, VAT input tax, and net VAT payable. Show your working clearly.",
+  "deliverables": [
+    "VAT output calculation: extracting VAT from the inclusive client invoices",
+    "VAT input calculation: extracting VAT from the inclusive supplier invoices",
+    "Net VAT payable to SARS with the formula clearly shown",
+    "One common VAT error small businesses make and how to avoid it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "R460,000 inclusive of VAT is not R460,000 × 15%. The VAT fraction is 15/115. Show that you understand this.",
+  "rubric": [
+    {
+      "key": "output",
+      "label": "Output Tax",
+      "description": "Is the VAT output correctly extracted from VAT-inclusive amounts?",
+      "weight": 30
+    },
+    {
+      "key": "input",
+      "label": "Input Tax",
+      "description": "Is the VAT input correctly calculated?",
+      "weight": 25
+    },
+    {
+      "key": "net",
+      "label": "Net Payable",
+      "description": "Is the net VAT payable correct?",
+      "weight": 25
+    },
+    {
+      "key": "error",
+      "label": "Common Error",
+      "description": "Is the identified error realistic and the prevention advice practical?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "VAT calculations",
+    "SARS compliance",
+    "Tax basics",
+    "Small business tax"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

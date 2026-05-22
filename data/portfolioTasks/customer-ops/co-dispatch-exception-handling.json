@@ -1,0 +1,47 @@
+{
+  "id": "co-dispatch-exception-handling",
+  "categoryId": "customer-ops",
+  "topicId": "logistics-dispatch",
+  "level": "intermediate",
+  "title": "Handle a Dispatch Exception",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Resolve a situation where a driver's van broke down halfway through their route.",
+  "scenario": "You are the Dispatch Manager for a courier company. Driver A's van has broken down on the N1 highway. They have 15 parcels left on board, 3 of which are medical supplies with a strict 4 PM delivery deadline. It is currently 1 PM.",
+  "brief": "Formulate a recovery plan. You have one backup driver (Driver B) currently 30 minutes away, but pulling them off their route will delay 10 non-urgent residential deliveries.",
+  "deliverables": [
+    "Your immediate action plan (who is doing what right now)",
+    "The communication sent to Driver A and Driver B",
+    "The triage decision: which parcels get rescued by Driver B, and which stay in the broken van for the tow truck",
+    "The SMS sent to the 10 customers whose residential deliveries are now delayed"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Exception handling is about triage. You cannot save every SLA. Protect the medical supplies, sacrifice the residential deliveries, and over-communicate.",
+  "rubric": [
+    {
+      "key": "triage",
+      "label": "Triage Decision",
+      "description": "Did you correctly prioritise the medical supplies over residential?",
+      "weight": 40
+    },
+    {
+      "key": "logistics",
+      "label": "Action Plan",
+      "description": "Is the physical logistics plan (Driver B rescue) realistic?",
+      "weight": 30
+    },
+    {
+      "key": "comms",
+      "label": "Delay Communication",
+      "description": "Is the delay message to the impacted customers apologetic but firm?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Exception handling",
+    "Triage",
+    "Crisis management",
+    "Logistics operations"
+  ],
+  "relatedRoadmapIds": []
+}

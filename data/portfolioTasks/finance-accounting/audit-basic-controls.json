@@ -1,0 +1,48 @@
+{
+  "id": "audit-basic-controls",
+  "categoryId": "finance-accounting",
+  "topicId": "audit-internal-controls",
+  "level": "beginner",
+  "title": "Design Basic Internal Controls",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Identify control weaknesses in a small business and propose segregation of duties.",
+  "scenario": "A small retail business has one person who receives inventory, records it in the system, approves supplier payments, and reconciles the bank account. The owner suspects stock losses but cannot prove it.",
+  "brief": "Identify the control weaknesses in this setup. Propose a redesigned process with proper segregation of duties, even with a small team (you can propose splitting tasks, not necessarily hiring).",
+  "deliverables": [
+    "A list of at least 5 control weaknesses with the risk each one creates",
+    "A redesigned process showing which tasks should be separated and who should do what",
+    "One compensating control for a situation where full segregation is not possible with a small team"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Segregation of duties means no single person should authorise, record, AND have custody of an asset. In small businesses, compensating controls (spot checks, management review) fill the gap.",
+  "rubric": [
+    {
+      "key": "weaknesses",
+      "label": "Weakness Identification",
+      "description": "Are the control weaknesses specific and the associated risks correctly stated?",
+      "weight": 35
+    },
+    {
+      "key": "redesign",
+      "label": "Process Redesign",
+      "description": "Is the proposed segregation practical for a small business?",
+      "weight": 35
+    },
+    {
+      "key": "compensating",
+      "label": "Compensating Controls",
+      "description": "Is the compensating control realistic and effective?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Internal controls",
+    "Segregation of duties",
+    "Risk identification",
+    "Process design"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

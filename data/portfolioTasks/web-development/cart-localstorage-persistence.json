@@ -1,0 +1,54 @@
+{
+  "id": "cart-localstorage-persistence",
+  "categoryId": "web-development",
+  "topicId": "ecommerce-shopping-cart",
+  "level": "intermediate",
+  "title": "Persist Cart to LocalStorage",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Ensure users do not lose their cart when they refresh the page.",
+  "scenario": "The boutique store is live, but analytics show a huge drop-off. Users are adding items to their cart on their phone, getting distracted, and when they come back later or refresh the page, their cart is empty. You need to persist the cart data locally.",
+  "brief": "Extend a basic React shopping cart to sync with the browser localStorage. When the app loads, it should check for an existing cart and initialize the state. Whenever the cart changes (item added, removed, quantity updated), it must save the new state back to localStorage.",
+  "deliverables": [
+    "The custom hook (e.g., `useCartStorage`) or Context provider managing the persistence logic",
+    "The useEffect logic handling the synchronization",
+    "A brief explanation of how you handle the Next.js/SSR hydration mismatch error (if applicable)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "If using Next.js or SSR, remember that localStorage is not available on the server. Show how you prevent hydration errors when the server renders an empty cart but the client has items saved.",
+  "rubric": [
+    {
+      "key": "persistence",
+      "label": "Data Persistence",
+      "description": "Does the cart accurately save and restore from LocalStorage?",
+      "weight": 35
+    },
+    {
+      "key": "hydration",
+      "label": "SSR Hydration",
+      "description": "Is the candidate aware of and handling SSR hydration mismatches?",
+      "weight": 25
+    },
+    {
+      "key": "performance",
+      "label": "Performance",
+      "description": "Is the stringification to LocalStorage optimized (not causing unnecessary lag)?",
+      "weight": 20
+    },
+    {
+      "key": "craft",
+      "label": "Hook Design",
+      "description": "Is the logic extracted cleanly into a reusable hook or context?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "LocalStorage",
+    "Custom Hooks",
+    "SSR Hydration Mismatch",
+    "State Synchronization"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

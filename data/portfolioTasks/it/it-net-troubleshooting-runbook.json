@@ -1,0 +1,55 @@
+{
+  "id": "it-net-troubleshooting-runbook",
+  "categoryId": "it",
+  "topicId": "it-networking-fundamentals",
+  "level": "intermediate",
+  "title": "Network Troubleshooting Runbook",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Build a methodical diagnostic runbook for the network issues that fill an SA helpdesk queue.",
+  "scenario": "A new junior IT support technician at a 200-person SA insurer keeps escalating to seniors for issues like \"the office Wi-Fi is slow\" or \"VPN keeps dropping\". The IT manager asks you to write a runbook that lets a junior diagnose 80 percent of network issues without escalation.",
+  "brief": "Write a runbook covering five common network issues: slow Wi-Fi, no internet on a single PC, VPN disconnecting, DNS resolution failure, and intermittent packet loss. Each section must show the diagnostic flow from cheapest checks to deeper analysis.",
+  "deliverables": [
+    "Five runbook sections, each with: symptoms, prerequisites (what info to gather), tools to use (ping, traceroute, ipconfig, nslookup, Wireshark, vendor portals), step-by-step diagnostic flow, and escalation criteria",
+    "A short reference table of the five most useful command-line tools for network diagnostics with one-line descriptions",
+    "A diagnostic decision tree (text-based) for at least one of the five issues showing branching logic with three or more decision points",
+    "A maintenance plan: what to update in the runbook quarterly and how to harvest new findings from senior engineers"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Network troubleshooting follows the OSI model. Start at layer 1 (cable, link light), move up through IP, transport, application. Runbooks that jump straight to \"open Wireshark\" before checking the cable are amateur hour.",
+  "rubric": [
+    {
+      "key": "flow",
+      "label": "Diagnostic Flow",
+      "description": "Do the runbook sections move from cheap checks to deeper diagnostics in OSI-aware order?",
+      "weight": 30
+    },
+    {
+      "key": "tools",
+      "label": "Tool Selection",
+      "description": "Are the right tools recommended for each issue, with correct usage?",
+      "weight": 25
+    },
+    {
+      "key": "usability",
+      "label": "Usability",
+      "description": "Could a junior actually use this runbook on day one?",
+      "weight": 25
+    },
+    {
+      "key": "maintenance",
+      "label": "Maintenance Plan",
+      "description": "Is the runbook designed to stay current rather than rot?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Network troubleshooting",
+    "Diagnostic flow design",
+    "CLI tool fluency",
+    "OSI model"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

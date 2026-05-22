@@ -1,0 +1,48 @@
+{
+  "id": "invest-compare-three-projects",
+  "categoryId": "finance-accounting",
+  "topicId": "investment-appraisal",
+  "level": "intermediate",
+  "title": "Compare Three Capital Projects",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Rank 3 mutually exclusive projects and explain when NPV and IRR disagree.",
+  "scenario": "A manufacturing company has R2M to invest and three mutually exclusive options: (A) automate a production line, (B) open a second warehouse, (C) acquire a competitor's client book. Each has different investment sizes, cash flow profiles, and risk levels.",
+  "brief": "Evaluate all three projects using NPV, IRR, and payback period. Rank them. Then explain why the rankings might differ depending on which method you use.",
+  "deliverables": [
+    "A comparison table: Project, Investment, NPV, IRR, Payback, Ranking by each method",
+    "An explanation of why NPV and IRR can give different rankings (scale differences, timing differences)",
+    "Your recommended project with a justification that goes beyond the numbers (risk, strategic fit)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "NPV and IRR often disagree when projects have different scales or cash flow timing. A small project can have a high IRR but low NPV. Show you understand this.",
+  "rubric": [
+    {
+      "key": "calculations",
+      "label": "Appraisal Calculations",
+      "description": "Are NPV, IRR, and payback correctly calculated for all 3 projects?",
+      "weight": 30
+    },
+    {
+      "key": "conflict",
+      "label": "Method Conflict",
+      "description": "Does the candidate correctly explain why methods can disagree?",
+      "weight": 35
+    },
+    {
+      "key": "recommendation",
+      "label": "Strategic Recommendation",
+      "description": "Does the recommendation consider qualitative factors beyond the numbers?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Capital budgeting",
+    "NPV vs IRR",
+    "Investment ranking",
+    "Strategic thinking"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

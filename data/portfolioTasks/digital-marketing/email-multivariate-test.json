@@ -1,0 +1,55 @@
+{
+  "id": "email-multivariate-test",
+  "categoryId": "digital-marketing",
+  "topicId": "email-experimentation",
+  "level": "intermediate",
+  "title": "Full Email Campaign Optimisation",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Design a multivariate test across subject line, preview text, CTA, and send time.",
+  "scenario": "An online fashion retailer is launching a new summer collection. The email team wants to optimise not just the subject line, but the entire email — preview text, hero image, CTA button copy, and send time. They have a list of 120,000 subscribers.",
+  "brief": "Design a multivariate testing plan that goes beyond simple A/B. Decide which variables to test simultaneously vs sequentially, calculate the traffic allocation, and define the success criteria.",
+  "deliverables": [
+    "A testing matrix showing which variables you are testing and which combinations you are comparing",
+    "The traffic allocation plan: how many subscribers per cell, and why",
+    "The testing sequence: what you test first, second, third (and why you cannot test everything at once)",
+    "The decision framework: how you pick the winner when results are mixed (e.g., higher open rate but lower click rate)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A full factorial design with 4 variables × 2 variants = 16 cells. With 120K subscribers, each cell gets 7,500 — is that enough? Show your reasoning.",
+  "rubric": [
+    {
+      "key": "design",
+      "label": "Test Design",
+      "description": "Is the multivariate plan statistically sound with realistic cell sizes?",
+      "weight": 35
+    },
+    {
+      "key": "sequencing",
+      "label": "Test Sequencing",
+      "description": "Is the sequential vs simultaneous decision well-reasoned?",
+      "weight": 25
+    },
+    {
+      "key": "decision",
+      "label": "Decision Framework",
+      "description": "Does the framework handle conflicting metrics (open rate vs CTR vs conversion)?",
+      "weight": 25
+    },
+    {
+      "key": "practicality",
+      "label": "Practical Execution",
+      "description": "Could an email team actually execute this plan?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Multivariate testing",
+    "Email marketing",
+    "Experimental design",
+    "Statistical reasoning"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

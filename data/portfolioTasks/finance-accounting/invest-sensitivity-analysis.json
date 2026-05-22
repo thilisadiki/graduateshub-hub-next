@@ -1,0 +1,55 @@
+{
+  "id": "invest-sensitivity-analysis",
+  "categoryId": "finance-accounting",
+  "topicId": "investment-appraisal",
+  "level": "advanced",
+  "title": "Sensitivity Analysis on a Major Investment",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Model NPV sensitivity to revenue, cost, and discount rate for a R10M expansion.",
+  "scenario": "A South African food manufacturer is considering a R10M factory expansion. Base case projections show NPV of R2.4M over 8 years. The board wants to know: \"How wrong can we be before this investment destroys value?\"",
+  "brief": "Conduct a sensitivity analysis on the base case NPV. Vary revenue (±20%), operating costs (±15%), and the discount rate (10%-16%). Identify the break-even value for each variable.",
+  "deliverables": [
+    "The base case NPV calculation with all assumptions stated",
+    "A sensitivity table: Variable, Base Case, -20%/-15%, +20%/+15%, NPV at each, Break-Even Value",
+    "A tornado chart description ranking variables by impact on NPV (which variable matters most?)",
+    "A scenario analysis: best case (all variables favourable) vs worst case (all variables adverse)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The break-even value tells the board \"revenue can drop by X% before the NPV hits zero.\" This is far more useful than a single-point NPV estimate.",
+  "rubric": [
+    {
+      "key": "base-case",
+      "label": "Base Case Model",
+      "description": "Is the base case NPV correctly calculated with clear assumptions?",
+      "weight": 20
+    },
+    {
+      "key": "sensitivity",
+      "label": "Sensitivity Table",
+      "description": "Are the sensitivity calculations correct with meaningful break-even values?",
+      "weight": 30
+    },
+    {
+      "key": "tornado",
+      "label": "Variable Ranking",
+      "description": "Is the tornado chart correctly identifying the most impactful variable?",
+      "weight": 25
+    },
+    {
+      "key": "scenarios",
+      "label": "Scenario Analysis",
+      "description": "Are best/worst cases internally consistent and honestly presented?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Sensitivity analysis",
+    "Financial modelling",
+    "Risk assessment",
+    "Investment appraisal"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

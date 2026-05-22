@@ -1,0 +1,56 @@
+{
+  "id": "one-chart-dashboard",
+  "categoryId": "data",
+  "topicId": "data-visualisation",
+  "level": "intermediate",
+  "title": "The One-Chart Dashboard",
+  "difficulty": "Intermediate",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Design the single chart you would put on a CEO's weekly email.",
+  "scenario": "A food delivery startup's CEO gets a Monday morning email with the company's key metric. The data team has been arguing about what that metric and chart should be. Your job is to settle it.",
+  "brief": "Choose the single most useful chart for this role and weekly cadence. Defend the choice. You cannot add a \"second chart for context\" and call it one chart.",
+  "deliverables": [
+    "The chart type and exact metric (for example: \"Weekly active restaurants, line chart, last 12 weeks\")",
+    "Three decisions you made (axis choice, what to exclude, comparison baseline) and why",
+    "The one thing you would say out loud when showing this chart to the CEO",
+    "One alternative you considered and rejected, with your reasoning"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Sketches are welcome as Markdown descriptions or links to an external image. The reasoning matters more than the visual.",
+  "rubric": [
+    {
+      "key": "choice",
+      "label": "Metric Choice",
+      "description": "Is the chosen metric the right one for a CEO's weekly view?",
+      "weight": 35
+    },
+    {
+      "key": "design",
+      "label": "Chart Design",
+      "description": "Are the design decisions (baseline, scale, exclusions) defensible?",
+      "weight": 30
+    },
+    {
+      "key": "narrative",
+      "label": "Narrative",
+      "description": "Does the one-line summary genuinely help the CEO act?",
+      "weight": 20
+    },
+    {
+      "key": "tradeoff",
+      "label": "Trade-off Thinking",
+      "description": "Is the rejected alternative real, and is the rejection well reasoned?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Data visualisation",
+    "Metric selection",
+    "Executive communication",
+    "Analytical judgment"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "business-analyst"
+  ]
+}

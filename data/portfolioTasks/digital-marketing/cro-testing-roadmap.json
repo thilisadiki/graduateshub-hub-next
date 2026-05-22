@@ -1,0 +1,48 @@
+{
+  "id": "cro-testing-roadmap",
+  "categoryId": "digital-marketing",
+  "topicId": "conversion-rate-optimisation",
+  "level": "intermediate",
+  "title": "Design a CRO Testing Roadmap",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Prioritise 10 test ideas using ICE and design the top 3 experiments.",
+  "scenario": "An e-commerce site generates R8M/month in revenue. The CRO team has brainstormed 10 test ideas but cannot decide what to test first. They need a prioritisation framework and detailed experiment plans.",
+  "brief": "Invent 10 plausible CRO test ideas. Score each using the ICE framework (Impact, Confidence, Ease). Then design the top 3 experiments in detail with hypothesis, control, variant, sample size, and success criteria.",
+  "deliverables": [
+    "A table of 10 test ideas scored by ICE (1-10 each) with a total score and priority rank",
+    "For each of the top 3: the hypothesis, what changes in the variant, the primary metric, and the minimum detectable effect",
+    "The testing sequence: why you run test #1 before #2 (dependencies, traffic requirements, etc.)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "ICE scoring is subjective. The value is not the exact scores but whether your reasoning is transparent and consistent.",
+  "rubric": [
+    {
+      "key": "prioritisation",
+      "label": "ICE Prioritisation",
+      "description": "Is the ICE scoring consistent and the reasoning transparent?",
+      "weight": 30
+    },
+    {
+      "key": "experiments",
+      "label": "Experiment Design",
+      "description": "Are the top 3 experiments well-designed with clear hypotheses and metrics?",
+      "weight": 40
+    },
+    {
+      "key": "sequencing",
+      "label": "Test Sequencing",
+      "description": "Is the testing order justified by dependencies and resource constraints?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "CRO strategy",
+    "ICE framework",
+    "Experiment design",
+    "Prioritisation"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

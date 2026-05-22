@@ -1,0 +1,53 @@
+{
+  "id": "uxw-onboarding-copy",
+  "categoryId": "design-ux",
+  "topicId": "ux-writing-content-design",
+  "level": "intermediate",
+  "title": "Onboarding Flow Copy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write all the copy for a 5-step onboarding flow including empty states and tooltips.",
+  "scenario": "A project management tool has a 5-step onboarding flow: Welcome → Create Workspace → Invite Team → Create First Project → Tour Complete. The current copy is generic (\"Welcome! Let's get started.\"). Users drop off at step 3.",
+  "brief": "Write all the copy for the 5-step onboarding flow. Include headlines, body text, button labels, progress indicators, tooltips, and the empty state for a workspace with no projects.",
+  "deliverables": [
+    "Complete copy for all 5 screens: headline, body text (max 2 sentences), primary CTA, secondary CTA",
+    "A progress indicator design with copy (e.g., \"Step 2 of 5 — almost there\" vs \"2/5\")",
+    "Tooltips for 3 non-obvious features encountered during onboarding",
+    "An empty state for the dashboard after onboarding (no projects yet) that motivates the first action"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Users drop off at \"Invite Team\" because it feels like a chore, not a benefit. The copy should reframe it: \"Projects go faster with teammates. Who should join you?\"",
+  "rubric": [
+    {
+      "key": "screen-copy",
+      "label": "Screen Copy",
+      "description": "Is the copy concise, motivating, and progressive across 5 steps?",
+      "weight": 35
+    },
+    {
+      "key": "progress",
+      "label": "Progress Indicator",
+      "description": "Does the progress copy reduce perceived effort?",
+      "weight": 15
+    },
+    {
+      "key": "tooltips",
+      "label": "Tooltip Copy",
+      "description": "Are the tooltips contextual, brief, and genuinely helpful?",
+      "weight": 25
+    },
+    {
+      "key": "empty-state",
+      "label": "Empty State",
+      "description": "Does the empty state motivate action without feeling pushy?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Onboarding copy",
+    "UX writing",
+    "Empty states",
+    "User motivation"
+  ],
+  "relatedRoadmapIds": []
+}

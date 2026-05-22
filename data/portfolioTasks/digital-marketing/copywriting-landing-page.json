@@ -1,0 +1,48 @@
+{
+  "id": "copywriting-landing-page",
+  "categoryId": "digital-marketing",
+  "topicId": "copywriting-content-creation",
+  "level": "intermediate",
+  "title": "Long-Form Sales Page Copy",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write a persuasive long-form sales page for a premium career coaching bootcamp.",
+  "scenario": "A South African tech career coaching brand is launching an intensive 8-week bootcamp priced at R15,000. They need high-converting long-form landing page copy that overcomes price objections, builds trust, and drives conversions.",
+  "brief": "Draft the complete text for a long-form sales landing page. Structure it logically: Headline, Pain Identification, The Solution, Feature/Benefit breakdown, Testimonials/Social Proof, Pricing & Guarantees, FAQs, and multiple Call-to-Actions (CTAs).",
+  "deliverables": [
+    "A structural outline of the page indicating section-by-section layouts and copy goals",
+    "The complete written copy for each section, including headlines, body copy, bullet points, and CTA button texts",
+    "An objection-handling guide listing the top 3 customer doubts (e.g., cost, time, job guarantees) and how the copy addresses them"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Long copy out-converts short copy when selling premium offers, but it must be readable. Use formatting, bold text, bullet points, and subheadings. Avoid corporate speak.",
+  "rubric": [
+    {
+      "key": "structure",
+      "label": "Copy Structure & Flow",
+      "description": "Does the copy flow logically from hook to pain to solution to close?",
+      "weight": 30
+    },
+    {
+      "key": "objection-handling",
+      "label": "Objection Handling",
+      "description": "Are customer objections addressed directly and persuasively in the copy?",
+      "weight": 40
+    },
+    {
+      "key": "clarity",
+      "label": "Readability & Formatting",
+      "description": "Is the page copy formatted with scan-friendly visual hierarchy and compelling CTAs?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Sales page copywriting",
+    "Objection handling",
+    "Persuasion principles",
+    "Formatting & structure"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

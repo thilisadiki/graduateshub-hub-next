@@ -1,0 +1,55 @@
+{
+  "id": "sars-notice-of-objection-travel",
+  "categoryId": "finance-accounting",
+  "topicId": "sars-dispute-resolution",
+  "level": "intermediate",
+  "title": "Draft a Notice of Objection (NOO) for Disallowed Expenses",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Prepare a formal written representation and objection grounds for disallowed travel expenses.",
+  "scenario": "SARS has audited a small business (Pty) Ltd client and disallowed travel expense claims of R150,000, issuing an additional assessment. The audit report states that the logbook was insufficient. The client has a detailed logbook and wishes to object to the assessment.",
+  "brief": "Prepare a comprehensive written representation to support a Notice of Objection (NOO / LXP) to SARS. You must detail the grounds of objection, cite the relevant sections of the Income Tax Act, and organize the corroborating evidence.",
+  "deliverables": [
+    "A formal written statement of the grounds of objection, referencing the relevant provisions of the Income Tax Act (e.g., section 8(1)(b) for travel allowance).",
+    "An organized list of supporting evidence, including logbook analysis, employment contracts, and invoices.",
+    "A step-by-step guide explaining how to submit the objection via SARS eFiling and the statutory timelines involved."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Format your submission in Markdown. Cite relevant sections of the Income Tax Act correctly and describe the electronic submission steps clearly.",
+  "rubric": [
+    {
+      "key": "grounds_of_objection",
+      "label": "Grounds of Objection",
+      "description": "Are the grounds of objection legally sound, referencing correct tax provisions and logical arguments?",
+      "weight": 35
+    },
+    {
+      "key": "evidence_organization",
+      "label": "Evidence Organization",
+      "description": "Is the corroborating evidence list comprehensive, detailed, and audit-ready?",
+      "weight": 25
+    },
+    {
+      "key": "efiling_procedure",
+      "label": "eFiling & Timelines Guide",
+      "description": "Are the eFiling submission steps and statutory timelines (30 days from assessment) accurate?",
+      "weight": 20
+    },
+    {
+      "key": "tax_communication",
+      "label": "Tax Communication Craft",
+      "description": "Is the communication professional, clear, and persuasive for SARS auditors?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "SARS dispute process",
+    "Tax administration act",
+    "Drafting Notice of Objection (NOO)",
+    "Section 8(1)(b) compliance",
+    "Legal/tax writing"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

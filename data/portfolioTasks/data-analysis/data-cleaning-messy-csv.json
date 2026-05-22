@@ -1,0 +1,54 @@
+{
+  "id": "data-cleaning-messy-csv",
+  "categoryId": "data",
+  "topicId": "data-cleaning",
+  "level": "beginner",
+  "title": "Clean a Messy CSV and Write an Insights Memo",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Turn a realistic messy dataset into three insights a manager can act on.",
+  "scenario": "A retailer has exported 12 months of sales data to a CSV. The file has the usual real-world problems: inconsistent date formats, a few negative prices (returns), product names in different capitalisation, and some duplicate rows from a failed export retry.",
+  "brief": "You do not need the real file. Describe the cleaning steps you would take (in order, and why) and then write an insights memo as if you had already cleaned it and explored the data.",
+  "deliverables": [
+    "A numbered list of cleaning steps with a one-sentence justification for each",
+    "A short memo (under 300 words) with exactly 3 insights, each backed by a plausible number",
+    "One question the data cannot answer on its own, and what you would need to go further"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Insights should surprise or inform a retail manager. \"Sales went up in December\" is not an insight.",
+  "rubric": [
+    {
+      "key": "cleaning",
+      "label": "Cleaning Rigour",
+      "description": "Are the cleaning steps correct, in a sensible order, and justified?",
+      "weight": 30
+    },
+    {
+      "key": "insights",
+      "label": "Insight Quality",
+      "description": "Are the three insights non-obvious, specific, and actionable?",
+      "weight": 35
+    },
+    {
+      "key": "numeracy",
+      "label": "Numerical Plausibility",
+      "description": "Do the numbers cited pass a sanity check?",
+      "weight": 15
+    },
+    {
+      "key": "limits",
+      "label": "Awareness of Limits",
+      "description": "Does the candidate know what the data cannot tell them?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Data cleaning",
+    "Exploratory data analysis",
+    "Business communication",
+    "Analytical thinking"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

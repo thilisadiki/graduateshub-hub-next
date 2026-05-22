@@ -1,0 +1,48 @@
+{
+  "id": "prompt-defense-sandbox",
+  "categoryId": "ai-prompting",
+  "topicId": "prompt-security-jailbreak",
+  "level": "intermediate",
+  "title": "Input Pre-Filter and Guardrail System Prompt",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Design an application firewall prompt that screens and sanitizes user inputs before the main LLM step.",
+  "scenario": "An enterprise finance company wants to shield its core customer-facing LLM from malicious prompts, toxic inputs, and off-topic requests. Rather than making the core prompt overly complex and slow, they decide to use a dual-LLM architecture: a lightweight pre-filter LLM acts as an Application Firewall to analyze the user input, assign a risk score, and either pass the input or block it with a safe refusal response.",
+  "brief": "Write a system instruction for an input pre-filter LLM. It must read the user query, evaluate it for security risk (prompt injection, jailbreak attempts, toxic/sensitive topics), output a JSON score block, and provide an alert message if the threshold is crossed.",
+  "deliverables": [
+    "The pre-filter system prompt instructions, including safety policies, risk level scales, and formatting constraints.",
+    "A strict JSON schema output by the pre-filter containing fields for `safetyScore`, `riskCategories` array, `action` (allow/block), and `responseFallback`.",
+    "Ten test scenarios (5 benign, 5 adversarial inputs) with their expected pre-filter evaluation JSON payloads.",
+    "A mitigation plan for false positives (when a legitimate customer query is incorrectly flagged as a security risk)."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Deliver your solution in a single Markdown file. Ensure the pre-filter prompt uses precise criteria, and format the JSON outputs as code blocks.",
+  "rubric": [
+    {
+      "key": "filter_accuracy",
+      "label": "Filter Classification",
+      "description": "Does the prompt specify clear and distinct risk categories and evaluation logic?",
+      "weight": 35
+    },
+    {
+      "key": "payload_detection",
+      "label": "Security JSON Output",
+      "description": "Is the JSON output schema robust, parseable, and includes all necessary security parameters?",
+      "weight": 35
+    },
+    {
+      "key": "false_positive_mitigation",
+      "label": "False Positive Mitigation",
+      "description": "Does the solution provide a sensible strategy to handle false positives in client communications?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "API firewall design",
+    "Safety filter prompting",
+    "Adversarial risk classification",
+    "Structured JSON security logs",
+    "Dual-LLM architecture"
+  ],
+  "relatedRoadmapIds": []
+}

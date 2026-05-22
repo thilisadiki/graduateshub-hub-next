@@ -126,7 +126,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
               <button
                 type="submit"
                 disabled={isLoading || !jobTarget.trim() || turnstileToken === null}
-                className="self-end bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
+                className="self-end bg-[#4B6649] hover:bg-[#3a5038] disabled:bg-emerald-300 text-white px-6 py-2.5 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
               >
                 {isLoading ? <><Loader2 size={18} className="animate-spin" /> Analyzing...</> : <><TrendingUp size={18} /> Analyze My Gap</>}
               </button>
@@ -137,7 +137,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
                 <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Try one of these:</span>
                 <div className="flex flex-wrap gap-2">
                   {QUICK_PROMPTS.map(p => (
-                    <button key={p} onClick={() => setJobTarget(p)} className="text-sm bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-full transition-colors border border-emerald-100">
+                    <button key={p} onClick={() => setJobTarget(p)} className="text-sm bg-[#CCECC8/20] hover:bg-[#CCECC8/40] text-emerald-700 px-3 py-1.5 rounded-full transition-colors border border-emerald-100">
                       {p}
                     </button>
                   ))}
@@ -153,7 +153,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
 
               {isLoading && (
                 <div className="flex flex-col items-center justify-center py-16 text-gray-400">
-                  <Loader2 size={40} className="animate-spin text-emerald-600 mb-4" />
+                  <Loader2 size={40} className="animate-spin text-[#4B6649] mb-4" />
                   <p className="font-medium animate-pulse">Analyzing your skills against the role...</p>
                 </div>
               )}
@@ -168,7 +168,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
               {!isLoading && !error && result && (
                 <div className="flex flex-col gap-6 pb-8">
                   {/* Summary */}
-                  <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                  <div className="bg-[#CCECC8/20] border border-emerald-100 rounded-xl p-5">
                     <p className="font-bold text-emerald-900 text-lg mb-1">
                       Role: <span className="text-emerald-700">{result.jobTitle}</span>
                     </p>
@@ -222,7 +222,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
                         {result.courses.map(course => (
                           <div key={course.id} className="flex flex-col gap-1">
                             {course.targetSkill && (
-                              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full self-start">
+                              <span className="text-xs font-bold text-emerald-700 bg-[#CCECC8/20] border border-emerald-100 px-2.5 py-1 rounded-full self-start">
                                 Builds: {course.targetSkill}
                               </span>
                             )}

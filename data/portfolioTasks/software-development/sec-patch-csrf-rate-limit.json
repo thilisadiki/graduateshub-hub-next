@@ -1,0 +1,50 @@
+{
+  "id": "sec-patch-csrf-rate-limit",
+  "categoryId": "software-development",
+  "topicId": "security-vulnerability-patching",
+  "level": "advanced",
+  "title": "Secure an App against CSRF & Rate Limiting Attacks",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Defend a critical API from automated brute-force attacks and cross-site forgery.",
+  "scenario": "Your banking application has two major flaws. First, attackers are brute-forcing the `/login` endpoint with thousands of requests per second. Second, the `/transfer-funds` endpoint is vulnerable to Cross-Site Request Forgery (CSRF) because it relies solely on session cookies.",
+  "brief": "Design the security architecture to fix both issues. Implement a Rate Limiter for the login endpoint (e.g., using Redis) and explain how you would implement Anti-CSRF tokens (or SameSite cookie attributes) for the transfer endpoint.",
+  "deliverables": [
+    "A code snippet or pseudo-code showing a Redis-backed rate limiter middleware for the login route",
+    "An explanation of how an Anti-CSRF token lifecycle works (generation, delivery, validation)",
+    "A defense of using `SameSite=Strict` cookies versus traditional CSRF tokens"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is an advanced architectural security task. You need to understand how session cookies are sent by the browser implicitly, and how to stop attackers from abusing that.",
+  "rubric": [
+    {
+      "key": "rate-limiting",
+      "label": "Rate Limiting",
+      "description": "Is the rate limiting logic (e.g., IP tracking in Redis) sound?",
+      "weight": 35
+    },
+    {
+      "key": "csrf-tokens",
+      "label": "CSRF Protection",
+      "description": "Is the Anti-CSRF token or SameSite cookie logic correctly explained?",
+      "weight": 35
+    },
+    {
+      "key": "architecture",
+      "label": "Security Trade-offs",
+      "description": "Does the candidate understand the UX trade-offs of aggressive rate limiting?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "CSRF Protection",
+    "Rate Limiting",
+    "Redis",
+    "Session Security",
+    "OWASP"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

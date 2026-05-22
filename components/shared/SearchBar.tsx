@@ -7,7 +7,7 @@ import { courses } from '@/data/courses';
 export default function SearchBar({
   placeholder = 'What do you want to learn?',
   buttonText = 'Search',
-  buttonColor = 'bg-blue-600 hover:bg-blue-700',
+  buttonColor = 'bg-primary hover:bg-[#5a4000]',
   variant = 'default',
 }: {
   placeholder?: string;
@@ -79,7 +79,7 @@ export default function SearchBar({
           onChange={handleInputChange}
           onFocus={() => { if (searchQuery.trim().length > 0) setShowSuggestions(true); }}
           placeholder={placeholder}
-          className={`w-full focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm border border-gray-300 ${isHeader
+          className={`w-full focus:outline-none focus:ring-2 focus:ring-primary shadow-sm border border-gray-300 ${isHeader
             ? 'pl-5 pr-12 py-2.5 rounded-full text-sm'
             : 'pl-10 pr-4 py-3 rounded-lg text-gray-900'}`}
         />

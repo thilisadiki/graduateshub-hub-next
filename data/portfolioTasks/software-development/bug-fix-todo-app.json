@@ -1,0 +1,54 @@
+{
+  "id": "bug-fix-todo-app",
+  "categoryId": "software-development",
+  "topicId": "debug-fix",
+  "level": "beginner",
+  "title": "Fix a Bug in a Sample To-Do App",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Diagnose and fix a state management bug in a React to-do app.",
+  "scenario": "A small React to-do app has a bug: when a user deletes a task, the wrong task is sometimes removed. The root cause is that list items use array index as a React key instead of a stable ID. A real junior developer fix would not just swap the key, it would also reason about why this bug appeared.",
+  "brief": "You do not need a real repo to complete this task. Work from the following snippet and write a fixed version plus an explanation.",
+  "deliverables": [
+    "A corrected code snippet (paste as a Markdown code block)",
+    "A 3 to 5 sentence explanation of the root cause, written so a non-technical stakeholder could follow",
+    "One additional safeguard (a test, a lint rule, or a code review checklist item) that would prevent a similar bug in future"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Buggy code:\n```jsx\n{tasks.map((task, index) => (\n  <li key={index} onClick={() => deleteTask(index)}>{task.title}</li>\n))}\n```\nAssume `deleteTask(id)` exists and takes a task id.",
+  "rubric": [
+    {
+      "key": "correctness",
+      "label": "Correctness",
+      "description": "Does the fix actually resolve the bug, not just move it?",
+      "weight": 35
+    },
+    {
+      "key": "explanation",
+      "label": "Root Cause Explanation",
+      "description": "Is the explanation accurate and accessible to a non-technical reader?",
+      "weight": 30
+    },
+    {
+      "key": "safeguard",
+      "label": "Prevention",
+      "description": "Is the proposed safeguard practical and likely to catch the class of bug?",
+      "weight": 20
+    },
+    {
+      "key": "craft",
+      "label": "Code Craft",
+      "description": "Is the corrected code clean, idiomatic, and not over-engineered?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "React debugging",
+    "JavaScript fundamentals",
+    "Technical communication",
+    "Code quality"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

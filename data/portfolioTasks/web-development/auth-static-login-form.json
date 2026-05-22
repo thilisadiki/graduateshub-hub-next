@@ -1,0 +1,54 @@
+{
+  "id": "auth-static-login-form",
+  "categoryId": "web-development",
+  "topicId": "auth-flow-implementation",
+  "level": "beginner",
+  "title": "Build a Secure Login & Signup UI",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Build a pixel-perfect, accessible login and signup form with robust validation.",
+  "scenario": "A new SaaS product needs its entry gates built. The backend is not ready yet, but the design team has handed off the Figma files for the Login and Create Account screens. Your job is to build the frontend forms and make sure users cannot submit invalid data.",
+  "brief": "Build a React (or vanilla HTML/JS) login and signup form. Implement client-side validation: the email must be valid, the password must be at least 8 characters with a number, and the \"Confirm Password\" field must match. Show clear, accessible error messages inline when validation fails.",
+  "deliverables": [
+    "The component code for both the Login and Signup forms",
+    "The validation logic (custom or using a library like Zod / Yup)",
+    "A brief note on how you handled accessibility for screen readers (e.g., aria-invalid, aria-describedby)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not worry about submitting the data to a real API, just `console.log` the payload if validation passes. Focus heavily on UX: do errors show immediately or only on submit? Do they clear when the user starts typing?",
+  "rubric": [
+    {
+      "key": "validation",
+      "label": "Validation Logic",
+      "description": "Are the validation rules correct and secure?",
+      "weight": 30
+    },
+    {
+      "key": "ux",
+      "label": "User Experience",
+      "description": "Do errors appear and disappear at the right time (not too aggressively)?",
+      "weight": 30
+    },
+    {
+      "key": "a11y",
+      "label": "Accessibility",
+      "description": "Can a screen reader user easily understand what went wrong?",
+      "weight": 20
+    },
+    {
+      "key": "craft",
+      "label": "Code Craft",
+      "description": "Is the state managed cleanly without excessive boilerplate?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Form Validation",
+    "React State",
+    "Accessibility (a11y)",
+    "UX Design"
+  ],
+  "relatedRoadmapIds": [
+    "web-developer"
+  ]
+}

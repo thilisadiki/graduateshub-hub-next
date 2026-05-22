@@ -1,0 +1,55 @@
+{
+  "id": "cash-flow-distress-modelling",
+  "categoryId": "finance-accounting",
+  "topicId": "cash-flow-forecasting",
+  "level": "advanced",
+  "title": "Cash Flow Under Distress",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Model cash flow for a business facing a 40% revenue drop and design a survival plan.",
+  "scenario": "A Johannesburg-based events company with 20 staff generates R800K/month in revenue. A major client (40% of revenue) has just cancelled their contract with 30 days notice. The owner needs to know: when does the cash run out, and what can we do?",
+  "brief": "Model the next 6 months of cash flow under the distressed scenario. Identify the month the business runs out of cash, then design a survival plan that extends the runway.",
+  "deliverables": [
+    "A 6-month distressed cash flow showing the month-by-month burn and the \"zero cash\" month",
+    "A survival plan with at least 5 specific actions (cost cuts, payment term renegotiation, revenue recovery)",
+    "A revised cash flow showing the impact of your survival plan",
+    "The break-even revenue level the business needs to reach and by when"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Cutting staff is the obvious answer but has legal implications in SA (CCMA, section 189). Show that you understand the cost AND complexity of retrenchment.",
+  "rubric": [
+    {
+      "key": "model",
+      "label": "Distress Model",
+      "description": "Is the distressed cash flow internally consistent with realistic cost assumptions?",
+      "weight": 25
+    },
+    {
+      "key": "survival",
+      "label": "Survival Plan",
+      "description": "Are the actions specific, costed, and achievable within the timeline?",
+      "weight": 30
+    },
+    {
+      "key": "revised",
+      "label": "Revised Forecast",
+      "description": "Does the revised cash flow show a credible path to survival?",
+      "weight": 25
+    },
+    {
+      "key": "legal",
+      "label": "Legal Awareness",
+      "description": "Does the candidate acknowledge SA labour law implications?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Distressed cash flow",
+    "Business turnaround",
+    "Cost management",
+    "SA labour law awareness"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

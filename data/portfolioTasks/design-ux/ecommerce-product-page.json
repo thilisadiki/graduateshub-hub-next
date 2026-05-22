@@ -1,0 +1,53 @@
+{
+  "id": "ecommerce-product-page",
+  "categoryId": "design-ux",
+  "topicId": "ecommerce-ux",
+  "level": "advanced",
+  "title": "Product Details Page (PDP) Optimization Strategy",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 5 hours",
+  "tagline": "Design a high-conversion product details page layout for an online tech retailer.",
+  "scenario": "\"TechSA\", a major electronics e-commerce site, wants to redesign their product details page for high-value items (like R20,000+ laptops). The goal is to maximize immediate purchases while addressing customer concerns about warranties, delivery speeds, stock availability, and payment plans (like buy now pay later - BNPL).",
+  "brief": "Develop a complete PDP design strategy. Detail the layout hierarchy for both desktop and mobile, content priorities (above/below the fold), interactive widgets (spec comparison, color selectors), and local trust elements.",
+  "deliverables": [
+    "A layout wireframe specification mapping desktop (1440px) and mobile (375px) views",
+    "A detailed description of the product buy box components (price, stock status, shipping estimates, CTA button)",
+    "An integration plan for Buy Now Pay Later (BNPL) services (like PayFlex or Float) showing price breakdowns",
+    "A content plan for handling technical specifications, user reviews, and FAQs without creating cognitive overload"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on the visual and information hierarchy. Address how high-value pricing is contextualized for South African consumers.",
+  "rubric": [
+    {
+      "key": "hierarchy",
+      "label": "PDP Layout & Hierarchy",
+      "description": "Is the information prioritised correctly for buying psychology?",
+      "weight": 30
+    },
+    {
+      "key": "buy-box",
+      "label": "Buy Box & CTA Design",
+      "description": "Are stock, pricing, BNPL options, and CTAs tightly integrated and clear?",
+      "weight": 30
+    },
+    {
+      "key": "responsive",
+      "label": "Responsive PDP Execution",
+      "description": "Are desktop and mobile adaptations seamless and well-documented?",
+      "weight": 25
+    },
+    {
+      "key": "trust-elements",
+      "label": "Localized Trust & Info",
+      "description": "Are warranties, SA delivery rules, and local currency handled correctly?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Product page design",
+    "E-commerce conversion",
+    "Information architecture",
+    "BNPL integration UX"
+  ],
+  "relatedRoadmapIds": []
+}

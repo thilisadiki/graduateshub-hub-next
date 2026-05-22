@@ -1,0 +1,46 @@
+{
+  "id": "ba-change-impact",
+  "categoryId": "business-analysis",
+  "topicId": "change-management",
+  "level": "beginner",
+  "title": "Change Impact Assessment",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Assess the impact of a new time-tracking system on 3 departments.",
+  "scenario": "A company is replacing manual timesheets with a digital time-tracking system. It affects Sales (field-based, often offline), Operations (shift workers, shared devices), and Finance (payroll processing). Each department will experience different impacts.",
+  "brief": "Conduct a change impact assessment. For each department, identify what changes, who is affected, and the level of impact.",
+  "deliverables": [
+    "A change impact matrix: Department × What Changes × Who Is Affected × Impact Level (High/Med/Low) × Readiness",
+    "The top 3 risks across all departments with mitigation strategies",
+    "One \"quick win\" per department that would build early adoption"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Impact is not just about the technology. A field salesperson who now has to track time on their phone while driving has a different impact than an office worker with a desktop.",
+  "rubric": [
+    {
+      "key": "matrix",
+      "label": "Impact Matrix",
+      "description": "Is the matrix comprehensive with department-specific impacts?",
+      "weight": 35
+    },
+    {
+      "key": "risks",
+      "label": "Risk Identification",
+      "description": "Are the risks specific to each department context?",
+      "weight": 30
+    },
+    {
+      "key": "quick-wins",
+      "label": "Quick Wins",
+      "description": "Are the quick wins practical and likely to build momentum?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Change impact assessment",
+    "Risk analysis",
+    "Stakeholder empathy",
+    "Adoption planning"
+  ],
+  "relatedRoadmapIds": []
+}

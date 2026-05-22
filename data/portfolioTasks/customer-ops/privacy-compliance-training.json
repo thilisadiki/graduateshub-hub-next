@@ -1,0 +1,53 @@
+{
+  "id": "privacy-compliance-training",
+  "categoryId": "customer-ops",
+  "topicId": "data-privacy-gdpr-popia",
+  "level": "advanced",
+  "title": "POPIA & Data Privacy Compliance Training Program",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 hours",
+  "tagline": "Design a data privacy training program and policy deck for customer support teams.",
+  "scenario": "A South African BPO call center handles customer queries for a retail bank. A recent internal audit revealed agents are copying customer credit card details into Slack to resolve disputes, and sharing logins to the CRM. The Chief Risk Officer has ordered an immediate training program and strict policy enforcement.",
+  "brief": "Develop a complete data privacy compliance program and interactive slide deck outline for the customer support department to eliminate unsafe data practices.",
+  "deliverables": [
+    "A training module outline covering POPIA principles, card security (PCI-DSS), and secure credential management",
+    "Three interactive scenarios/quizzes to test agents on data sharing, phishing, and social engineering",
+    "A support team operational policy outlining strict boundaries for handling PII (e.g., zero-tolerance Slack rules)",
+    "A response workflow to be followed if an agent accidentally leaks customer PII (incident reporting procedure)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Focus on practical daily habits. A dry lecture on legislation won't stop agents from pasting passwords. Make the rules highly operational.",
+  "rubric": [
+    {
+      "key": "curriculum",
+      "label": "Training Curriculum",
+      "description": "Is the training outline comprehensive, covering POPIA, PCI-DSS, and credential hygiene?",
+      "weight": 30
+    },
+    {
+      "key": "interactive",
+      "label": "Scenarios & Quizzes",
+      "description": "Are the test scenarios realistic and effective at teaching compliance behavior?",
+      "weight": 30
+    },
+    {
+      "key": "policy",
+      "label": "PII Handling Policy",
+      "description": "Are the rules clear and enforceable for a call center team?",
+      "weight": 25
+    },
+    {
+      "key": "incident",
+      "label": "Leak Response Plan",
+      "description": "Is the incident containment workflow clear and compliant with regulatory reporting?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Compliance training design",
+    "PCI-DSS in support ops",
+    "Social engineering defense",
+    "Incident reporting protocols"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+    <nav className="bg-[#FFF8F1] border-b border-[#D1C5B4] shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4 md:gap-8 relative">
 
         {/* Logo & Explore */}
@@ -39,48 +39,48 @@ export default function Navbar() {
               aria-expanded={isCategoriesDropdownOpen}
               aria-haspopup="true"
               onClick={() => setIsCategoriesDropdownOpen(prev => !prev)}
-              className="flex items-center gap-1.5 hover:text-primary transition-colors py-2 text-sm font-semibold text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
+              className="flex items-center gap-1.5 hover:text-primary transition-colors py-2 text-sm font-semibold text-[#1F1B13] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
             >
               Explore <ChevronDown size={14} className={`transition-transform duration-200 ${isCategoriesDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
-            <div className={`absolute top-full left-0 mt-0 w-[580px] bg-white border border-gray-100 shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-              <div className="grid grid-cols-2 divide-x divide-gray-100">
+            <div className={`absolute top-full left-0 mt-0 w-[580px] bg-[#FFFFFF] border border-[#D1C5B4] shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+              <div className="grid grid-cols-2 divide-x divide-[#D1C5B4]">
 
                 {/* Left: Guides and Roadmaps */}
                 <div className="p-4 flex flex-col gap-1">
                   {featuredLinks.map(link => (
-                    <Link key={link.href} href={link.href} className={`flex items-center gap-2 px-3 py-2 rounded-lg ${link.colors.bg} ${link.colors.hover} transition-colors mb-1`}>
-                      <span className={`text-sm font-bold ${link.colors.text}`}>{link.label}</span>
-                      <span className={`text-xs ${link.colors.badge} text-white px-1.5 py-0.5 rounded-full font-bold leading-none`}>{link.badge}</span>
+                    <Link key={link.href} href={link.href} className={`flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#FBF3EB] transition-colors mb-1`}>
+                      <span className="text-sm font-bold text-[#1F1B13]">{link.label}</span>
+                      <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">{link.badge}</span>
                     </Link>
                   ))}
-                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Popular Guides</p>
+                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider">Popular Guides</p>
                   {popularGuides.slice(0, 6).map(guide => (
-                    <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-gray-50 hover:text-primary rounded-md transition-colors block text-sm text-gray-700">{guide.title}</Link>
+                    <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-[#FBF3EB] hover:text-primary rounded-md transition-colors block text-sm text-[#4F4639]">{guide.title}</Link>
                   ))}
-                  <div className="mt-auto pt-2 border-t border-gray-100">
-                    <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-blue-50 rounded-md transition-colors block text-sm">
+                  <div className="mt-auto pt-2 border-t border-[#D1C5B4]">
+                    <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-[#FFDF9C]/40 rounded-md transition-colors block text-sm">
                       View All Guides →
                     </Link>
                   </div>
                 </div>
 
                 {/* Right: Browse by Subject */}
-                <div className="p-4 flex flex-col gap-1 bg-gray-50/50">
-                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Browse by Subject</p>
+                <div className="p-4 flex flex-col gap-1 bg-[#FBF3EB]/50">
+                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider mb-1">Browse by Subject</p>
                   {categories.map(cat => (
                     <Link
                       key={cat.id}
                       href={`/category/${cat.id}`}
-                      className="flex items-center gap-3 px-3 py-2 hover:bg-white hover:text-primary rounded-lg transition-colors group"
+                      className="flex items-center gap-3 px-3 py-2 hover:bg-[#FFFFFF] hover:text-primary rounded-lg transition-colors group"
                     >
-                      <cat.icon size={16} className="text-gray-400 group-hover:text-primary transition-colors shrink-0" strokeWidth={1.75} />
-                      <span className="text-sm text-gray-700 group-hover:text-primary transition-colors">{cat.name}</span>
+                      <cat.icon size={16} className="text-[#7C7061] group-hover:text-primary transition-colors shrink-0" strokeWidth={1.75} />
+                      <span className="text-sm text-[#4F4639] group-hover:text-primary transition-colors">{cat.name}</span>
                     </Link>
                   ))}
-                  <div className="mt-auto pt-2 border-t border-gray-200">
-                    <Link href="/categories" className="px-3 py-1.5 text-primary font-semibold hover:bg-white rounded-md transition-colors block text-sm">
+                  <div className="mt-auto pt-2 border-t border-[#D1C5B4]">
+                    <Link href="/categories" className="px-3 py-1.5 text-primary font-semibold hover:bg-[#FFFFFF] rounded-md transition-colors block text-sm">
                       View All Subjects →
                     </Link>
                   </div>
@@ -93,24 +93,24 @@ export default function Navbar() {
 
         {/* Search Bar */}
         <div className="hidden sm:flex flex-grow w-full max-w-2xl">
-          <SearchBar variant="header" placeholder="What do you want to learn?" buttonColor="bg-primary hover:bg-blue-800" />
+          <SearchBar variant="header" placeholder="What do you want to learn?" buttonColor="bg-primary hover:bg-[#5a4000]" />
         </div>
 
         {/* Right Actions */}
         <div className="flex items-center gap-4 shrink-0">
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/blog" className="flex items-center text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">Blog<LinkPendingDot /></Link>
-            <Link href="/about" className="flex items-center text-sm font-semibold text-gray-700 hover:text-primary transition-colors px-2">About<LinkPendingDot /></Link>
+            <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Blog<LinkPendingDot /></Link>
+            <Link href="/about" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">About<LinkPendingDot /></Link>
             <Link
               href="/tools"
-              className="flex items-center gap-1.5 text-sm font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 hover:text-indigo-700 px-3 py-1.5 rounded-full transition-colors border border-indigo-100"
+              className="flex items-center gap-1.5 text-sm font-bold text-primary bg-[#FFDF9C]/50 hover:bg-[#FFDF9C] px-3 py-1.5 rounded-full transition-colors border border-[#D1C5B4]"
             >
-              <Sparkles size={14} className="text-yellow-500" />
+              <Sparkles size={14} className="text-primary" />
               AI Tools<LinkPendingDot />
             </Link>
             <Link
               href="/search"
-              className="flex items-center bg-white border-2 border-primary text-primary hover:bg-blue-50 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
+              className="flex items-center bg-[#FFF8F1] border-2 border-primary text-primary hover:bg-[#FFDF9C]/40 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
             >
               Find a Course<LinkPendingDot />
             </Link>
@@ -124,44 +124,44 @@ export default function Navbar() {
 
       {/* Mobile Search */}
       <div className="sm:hidden px-4 pb-3">
-        <SearchBar variant="header" placeholder="Search courses..." buttonColor="bg-primary hover:bg-blue-800" />
+        <SearchBar variant="header" placeholder="Search courses..." buttonColor="bg-primary hover:bg-[#5a4000]" />
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
-        <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-b border-gray-100">Home</Link>
+      <div className={`md:hidden absolute w-full bg-[#FFF8F1] border-b border-[#D1C5B4] shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
+        <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-b border-[#D1C5B4]">Home</Link>
         {featuredLinks.map(link => (
-          <Link key={link.href} href={link.href} onClick={toggleMobileMenu} className={`font-bold ${link.colors.mobileFocus} py-3 border-b border-gray-100 flex items-center gap-2`}>
-            {link.label} <span className={`text-xs ${link.colors.badge} text-white px-1.5 py-0.5 rounded-full`}>{link.badge}</span>
+          <Link key={link.href} href={link.href} onClick={toggleMobileMenu} className="font-bold text-primary hover:text-[#5a4000] py-3 border-b border-[#D1C5B4] flex items-center gap-2">
+            {link.label} <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full">{link.badge}</span>
           </Link>
         ))}
-        <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
-        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
+        <div className="py-3 text-[#7C7061] font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
+        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#FFDF9C] mb-4">
           {popularGuides.slice(0, 6).map(guide => (
-            <Link key={guide.href} href={guide.href} onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">{guide.title}</Link>
+            <Link key={guide.href} href={guide.href} onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">{guide.title}</Link>
           ))}
         </div>
-        <div className="py-3 text-gray-400 font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
-        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-blue-100 mb-4">
+        <div className="py-3 text-[#7C7061] font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
+        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#FFDF9C] mb-4">
           {categories.map(cat => (
-            <Link key={cat.id} href={`/category/${cat.id}`} onClick={toggleMobileMenu} className="font-medium text-sm text-gray-600 hover:text-primary py-2.5">
+            <Link key={cat.id} href={`/category/${cat.id}`} onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">
               {cat.name}
             </Link>
           ))}
           <Link href="/categories" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Categories →</Link>
         </div>
-        <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">Blog</Link>
-        <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-gray-800 hover:text-primary py-3 border-t border-gray-100">About Us</Link>
+        <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">Blog</Link>
+        <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">About Us</Link>
         <Link
           href="/tools"
           onClick={toggleMobileMenu}
-          className="flex items-center gap-2 font-bold text-indigo-700 bg-indigo-50 py-3 px-4 rounded-lg border border-indigo-100 transition-colors"
+          className="flex items-center gap-2 font-bold text-primary bg-[#FFDF9C]/50 py-3 px-4 rounded-lg border border-[#D1C5B4] transition-colors"
         >
-          <Sparkles size={16} className="text-yellow-500" /> AI Career Tools - 7 Free Tools
+          <Sparkles size={16} className="text-primary" /> AI Career Tools - 7 Free Tools
         </Link>
         <div className="flex flex-col gap-3 pt-6 pb-2">
           <Link href="/search" onClick={toggleMobileMenu}
-            className="flex items-center justify-center bg-primary hover:bg-blue-800 text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
+            className="flex items-center justify-center bg-primary hover:bg-[#5a4000] text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
             Find a Course<LinkPendingDot />
           </Link>
         </div>

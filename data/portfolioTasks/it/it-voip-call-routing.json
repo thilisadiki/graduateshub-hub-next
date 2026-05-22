@@ -1,0 +1,49 @@
+{
+  "id": "it-voip-call-routing",
+  "categoryId": "it",
+  "topicId": "it-voip-telephony",
+  "level": "intermediate",
+  "title": "Cloud PBX Call Routing & IVR Flow Design",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Design an interactive voice response (IVR) menu and multi-branch failover routing plan.",
+  "scenario": "A medical practice group with clinics in Johannesburg, Pretoria, and Midrand is consolidatng its voice services onto a single cloud PBX tenant. They need a customer-facing phone system with IVR menus, time-of-day schedules, ring groups, and voicemail-to-email. Crucially, they need a failover plan in case load-shedding knocks out power at a specific clinic.",
+  "brief": "Design the complete logical call routing diagram, write the voice prompt script with local language options, and establish a multi-branch failover escalation policy.",
+  "deliverables": [
+    "A detailed call flow diagram (described using a Mermaid diagram or formatted text map) from the initial SIP incoming trunk down to final queues or voicemail",
+    "An IVR script script showing exact voice menu options, greeting phrasing, and language selection (e.g. English, isiZulu, Afrikaans)",
+    "A routing table detailing Ring Groups, Queue parameters (waiting time, wrap-up time), and time-of-day schedules (Business hours, lunch, holidays)",
+    "A disaster failover protocol defining what happens to incoming clinic calls when a local clinic's network goes offline"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Think about the patient experience: avoid long wait times and infinite loops. Ensure the failover routing accounts for local load-shedding realities where clinics lose connectivity for hours.",
+  "rubric": [
+    {
+      "key": "diagram",
+      "label": "Call Flow Logic",
+      "description": "Is the call routing diagram comprehensive, logically sound, and free of dead-ends?",
+      "weight": 35
+    },
+    {
+      "key": "script",
+      "label": "IVR Prompting & Language",
+      "description": "Are the prompt scripts professional, culturally appropriate, and concise?",
+      "weight": 30
+    },
+    {
+      "key": "failover",
+      "label": "Disaster Recovery Routing",
+      "description": "Is the load-shedding/failover protocol robust, ensuring patient calls are redirected or sent to active queues?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Cloud PBX administration",
+    "IVR design",
+    "Call queue engineering",
+    "Unified communications DR"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "test-integration-api",
+  "categoryId": "software-development",
+  "topicId": "testing-strategies",
+  "level": "intermediate",
+  "title": "Integration Testing an API Endpoint",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write tests that verify the database and API routing layers work together.",
+  "scenario": "You are testing a `POST /users` endpoint. This endpoint receives JSON, hashes the password, saves the user to the database, and returns a 201 Created status.",
+  "brief": "Write the integration test suite for the `POST /users` endpoint using Supertest and Jest. You must demonstrate how you mock or spin up a test database so you are not writing to the production database during tests.",
+  "deliverables": [
+    "The integration test code snippet",
+    "An explanation of the setup and teardown process (`beforeAll`, `afterEach`, etc.) for managing the test database state"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Integration tests should test the whole request lifecycle. Make sure to test what happens when the database throws a duplicate email error (e.g., returning a 409 Conflict).",
+  "rubric": [
+    {
+      "key": "lifecycle",
+      "label": "Request Lifecycle",
+      "description": "Does the test verify the HTTP status code and response payload?",
+      "weight": 35
+    },
+    {
+      "key": "database",
+      "label": "Database State",
+      "description": "Is the test database properly seeded and cleaned up between tests?",
+      "weight": 35
+    },
+    {
+      "key": "errors",
+      "label": "Error Handling",
+      "description": "Are failure states (like 400 Bad Request or 409 Conflict) explicitly tested?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Integration Testing",
+    "Supertest",
+    "Database Mocking",
+    "API Validation"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

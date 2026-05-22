@@ -1,0 +1,55 @@
+{
+  "id": "email-lifecycle-architecture",
+  "categoryId": "digital-marketing",
+  "topicId": "email-experimentation",
+  "level": "advanced",
+  "title": "Lifecycle Email Architecture",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a complete automated email programme from welcome to win-back.",
+  "scenario": "A South African online education platform has 80,000 registered users but only sends a single weekly newsletter. Most users sign up, take one free course, and never return. The CEO wants a proper lifecycle email programme.",
+  "brief": "Design the complete automated email architecture: Welcome Series → Nurture → Conversion → Post-Purchase → Win-Back. For each stage, define the trigger, timing, segmentation rules, content theme, and KPI.",
+  "deliverables": [
+    "A lifecycle flow diagram showing all email stages, triggers, and branching logic",
+    "For each stage: the trigger event, number of emails, timing between sends, and content theme",
+    "Segmentation rules: how you split users (e.g., free vs paid, active vs dormant, course category interest)",
+    "KPIs for each stage with realistic benchmarks (e.g., Welcome Series: 50% open rate, 15% click rate)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A lifecycle programme is only as good as its triggers. \"Send email 3 days after signup\" is a time-based trigger. \"Send email when user completes 50% of a course\" is a behaviour-based trigger. Use both.",
+  "rubric": [
+    {
+      "key": "architecture",
+      "label": "Flow Architecture",
+      "description": "Is the lifecycle flow comprehensive with logical stages and branching?",
+      "weight": 30
+    },
+    {
+      "key": "triggers",
+      "label": "Trigger Design",
+      "description": "Are the triggers behaviour-based (not just time-based) where appropriate?",
+      "weight": 25
+    },
+    {
+      "key": "segmentation",
+      "label": "Segmentation",
+      "description": "Are the segmentation rules specific and tied to user behaviour?",
+      "weight": 25
+    },
+    {
+      "key": "kpis",
+      "label": "KPI Benchmarks",
+      "description": "Are the KPIs realistic and tied to business outcomes (not just open rates)?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Email automation",
+    "Lifecycle marketing",
+    "Segmentation",
+    "Marketing automation architecture"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

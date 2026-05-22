@@ -1,0 +1,47 @@
+{
+  "id": "co-complex-refund-sop",
+  "categoryId": "customer-ops",
+  "topicId": "standard-operating-procedures",
+  "level": "intermediate",
+  "title": "Design a Multi-Step Approval SOP",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Write the SOP for processing high-value refunds requiring manager sign-off.",
+  "scenario": "A hardware retailer allows agents to refund up to R500 immediately. Anything over R500 requires a manager's approval in Jira, and anything over R5,000 requires the item to be inspected by the warehouse first. The current process is undocumented and causing month-end accounting nightmares.",
+  "brief": "Write a comprehensive SOP for the high-value refund process, covering the agent, the manager, and the warehouse roles.",
+  "deliverables": [
+    "A flowchart description or step-by-step breakdown of the routing logic (R0-R500 vs R501-R5000 vs R5000+)",
+    "Specific instructions for what the agent must include in the Jira approval ticket",
+    "The SLA for manager approval and warehouse inspection",
+    "The exact final step required to close the loop with the customer"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This SOP spans multiple departments. It must be clear who owns the ticket at each stage so the customer doesn't fall into a black hole while waiting for the warehouse.",
+  "rubric": [
+    {
+      "key": "logic",
+      "label": "Routing Logic",
+      "description": "Is the threshold logic (amounts) clear and correctly applied?",
+      "weight": 30
+    },
+    {
+      "key": "handoffs",
+      "label": "Department Handoffs",
+      "description": "Are the handoffs between Agent, Manager, and Warehouse clear?",
+      "weight": 40
+    },
+    {
+      "key": "completeness",
+      "label": "Process Completeness",
+      "description": "Does the SOP close the loop with the customer and accounting?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Cross-functional processes",
+    "Approval workflows",
+    "SOP design",
+    "Exception handling"
+  ],
+  "relatedRoadmapIds": []
+}

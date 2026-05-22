@@ -1,0 +1,55 @@
+{
+  "id": "audit-fraud-risk-assessment",
+  "categoryId": "finance-accounting",
+  "topicId": "audit-internal-controls",
+  "level": "advanced",
+  "title": "Fraud Risk Assessment",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Conduct a fraud risk assessment using the fraud triangle framework.",
+  "scenario": "A growing logistics company has tripled in size over 3 years but its internal controls have not kept pace. The CFO is worried about fraud risk but does not know where to start. She hires you to conduct a fraud risk assessment.",
+  "brief": "Conduct a structured fraud risk assessment using the fraud triangle (Opportunity, Pressure, Rationalisation). Identify the top fraud risks, assess their likelihood and impact, and recommend preventive controls.",
+  "deliverables": [
+    "A fraud risk register: Risk Description, Fraud Triangle Element, Likelihood (L/M/H), Impact (L/M/H), Current Controls, Recommended Controls",
+    "At least 6 fraud risks covering asset misappropriation, financial statement fraud, and corruption",
+    "The top 3 risks ranked by residual risk (after current controls) with specific remediation actions",
+    "A tone-at-the-top recommendation: how leadership behaviour can reduce fraud risk"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Fraud is not just theft. Financial statement fraud (inflating revenue) and corruption (kickbacks from suppliers) are often higher impact. Cover all three categories.",
+  "rubric": [
+    {
+      "key": "register",
+      "label": "Risk Register",
+      "description": "Is the fraud risk register structured with the fraud triangle applied correctly?",
+      "weight": 25
+    },
+    {
+      "key": "coverage",
+      "label": "Risk Coverage",
+      "description": "Are all three fraud categories covered (misappropriation, FS fraud, corruption)?",
+      "weight": 25
+    },
+    {
+      "key": "remediation",
+      "label": "Remediation Quality",
+      "description": "Are the recommended controls specific and proportionate?",
+      "weight": 30
+    },
+    {
+      "key": "tone",
+      "label": "Tone at the Top",
+      "description": "Does the candidate understand how leadership culture affects fraud risk?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Fraud risk assessment",
+    "Fraud triangle",
+    "Internal controls",
+    "Risk management"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

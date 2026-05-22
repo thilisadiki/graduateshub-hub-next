@@ -1,0 +1,46 @@
+{
+  "id": "ai-few-shot-classifier",
+  "categoryId": "ai-prompting",
+  "topicId": "prompt-engineering-basics",
+  "level": "beginner",
+  "title": "Build a Few-Shot Classifier",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a prompt that classifies customer reviews into strict categories.",
+  "scenario": "A South African retail bank receives thousands of app reviews a day on the Google Play Store. The product team wants to use an LLM (like GPT-4 or Gemini) to classify these reviews into exactly three buckets: \"Bug Report\", \"Feature Request\", or \"Praise\". If a review is just complaining without actionable info, it should be marked \"Spam\".",
+  "brief": "Write a single prompt that will reliably classify any given review. You must use \"few-shot prompting\" (providing examples within the prompt) to show the model exactly how to handle edge cases.",
+  "deliverables": [
+    "The System Instructions (defining the AI's role and the categories)",
+    "3 to 5 Few-Shot Examples (Input: [Review], Output: [Category]) including at least one tricky edge case",
+    "The exact prompt template where the new review will be injected (e.g., \"Review to classify: {{review}}\")"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Zero-shot prompting (just giving instructions) often fails on edge cases. Few-shot prompting (giving examples) anchors the model. Make sure your examples cover South African slang (e.g., \"The app is eish, it keeps crashing\" -> Bug Report).",
+  "rubric": [
+    {
+      "key": "examples",
+      "label": "Few-Shot Quality",
+      "description": "Are the examples diverse and do they cover edge cases/slang?",
+      "weight": 40
+    },
+    {
+      "key": "constraints",
+      "label": "Constraint Setting",
+      "description": "Does the prompt explicitly forbid the AI from inventing new categories?",
+      "weight": 30
+    },
+    {
+      "key": "clarity",
+      "label": "Prompt Clarity",
+      "description": "Is the structure of the prompt clean and easy for an API to parse?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Few-shot prompting",
+    "Classification",
+    "Constraint setting",
+    "Prompt structuring"
+  ],
+  "relatedRoadmapIds": []
+}

@@ -81,4 +81,28 @@ export const customerOpsTopics: PortfolioTopic[] = [
       'Interpret CSAT, First Reply Time, and SLA breaches. Tests data interpretation, reporting, and operational insight.',
     skillsProven: ['Metrics interpretation', 'Reporting', 'CSAT analysis', 'SLA tracking'],
   },
+  {
+    id: 'crm-ticketing-setup',
+    categoryId: 'customer-ops',
+    title: 'Helpdesk & CRM Configuration',
+    description:
+      'Configure customer support ticketing systems for scale. Tests ticket routing, macro creation, status transitions, and tag structures.',
+    skillsProven: ['CRM administration', 'Zendesk / Jira Service Desk', 'Ticket workflows', 'Support automation'],
+  },
+  {
+    id: 'churn-recovery-retention',
+    categoryId: 'customer-ops',
+    title: 'Churn Recovery & Customer Retention',
+    description:
+      'Diagnose account health issues and proactively win back unhappy customers. Tests churn prediction, win-back flows, and relationship management.',
+    skillsProven: ['Churn analysis', 'Win-back campaigns', 'Customer health scoring', 'Account recovery'],
+  },
+  {
+    id: 'data-privacy-gdpr-popia',
+    categoryId: 'customer-ops',
+    title: 'Operational Compliance & Data Privacy',
+    description:
+      'Implement data privacy rules inside customer support operations. Tests POPIA/GDPR request response, data sanitisation, and support compliance rules.',
+    skillsProven: ['POPIA operations', 'GDPR compliance', 'Data sanitisation', 'Access request handling'],
+  },
 ];

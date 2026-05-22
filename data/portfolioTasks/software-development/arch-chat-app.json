@@ -1,0 +1,49 @@
+{
+  "id": "arch-chat-app",
+  "categoryId": "software-development",
+  "topicId": "system-architecture-design",
+  "level": "intermediate",
+  "title": "Architect a Scalable Chat Application",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a real-time messaging system using WebSockets and Pub/Sub.",
+  "scenario": "You are tasked with designing the backend for a new team collaboration tool (similar to Slack). Users need to send messages in real-time, see who is online, and view chat history.",
+  "brief": "Design the architecture for a real-time chat application. You must explain how WebSockets are managed across multiple load-balanced servers so that User A on Server 1 can message User B on Server 2.",
+  "deliverables": [
+    "A system architecture diagram highlighting the API servers, WebSocket servers, and the Pub/Sub broker",
+    "An explanation of how messages are routed between different WebSocket server instances",
+    "The database schema for storing users, channels, and messages"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "The core challenge here is horizontal scaling. A single WebSocket server cannot hold all connections. Show how you use a message broker (like Redis Pub/Sub or Kafka) to distribute messages.",
+  "rubric": [
+    {
+      "key": "websockets",
+      "label": "Connection Management",
+      "description": "Is the role of WebSocket servers clearly defined?",
+      "weight": 35
+    },
+    {
+      "key": "pubsub",
+      "label": "Pub/Sub Routing",
+      "description": "Does the architecture correctly route messages across server boundaries?",
+      "weight": 35
+    },
+    {
+      "key": "storage",
+      "label": "Message Storage",
+      "description": "Is the database schema optimized for retrieving chat history quickly?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Real-time Architecture",
+    "WebSockets",
+    "Pub/Sub Messaging",
+    "Horizontal Scaling"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

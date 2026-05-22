@@ -1,0 +1,49 @@
+{
+  "id": "test-unit-utility",
+  "categoryId": "software-development",
+  "topicId": "testing-strategies",
+  "level": "beginner",
+  "title": "Write Unit Tests for Utility Functions",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a comprehensive test suite for a complex date-formatting utility.",
+  "scenario": "A teammate wrote a `formatRelativeDate(dateString)` function that returns \"just now\", \"5 minutes ago\", \"yesterday\", etc. However, it sometimes breaks on leap years and cross-timezone inputs. You need to write the tests to prove it.",
+  "brief": "Write a comprehensive Jest or Mocha test suite for the `formatRelativeDate` function. Focus on testing the edge cases (leap years, different timezones, invalid inputs) rather than just the happy path.",
+  "deliverables": [
+    "The complete test suite code (e.g., `dateFormatter.test.js`)",
+    "A short explanation of why it is important to mock the system clock (`Date.now()`) when testing time-relative functions"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Assume the function exists and you are just writing the tests. A good test suite should act as documentation for the function’s expected behavior.",
+  "rubric": [
+    {
+      "key": "coverage",
+      "label": "Edge Case Coverage",
+      "description": "Are edge cases like invalid strings and boundary dates tested?",
+      "weight": 40
+    },
+    {
+      "key": "mocking",
+      "label": "Clock Mocking",
+      "description": "Does the candidate correctly identify the need to mock the system clock?",
+      "weight": 30
+    },
+    {
+      "key": "readability",
+      "label": "Test Readability",
+      "description": "Are the `describe` and `it` blocks clearly written?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Unit Testing",
+    "Jest / Mocha",
+    "Edge Case Analysis",
+    "Mocking"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer",
+    "web-developer"
+  ]
+}

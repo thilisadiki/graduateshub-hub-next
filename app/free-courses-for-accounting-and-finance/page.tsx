@@ -148,7 +148,7 @@ export default function FreeCoursesAccountingFinancePage() {
                   <div>
                     <h3 className="font-bold text-gray-900 text-lg mb-1">{title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-2">{detail}</p>
-                    <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-blue-800 transition-colors">
+                    <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
                       <ChevronRight size={12} /> {courseName}
                     </Link>
                   </div>
@@ -157,15 +157,15 @@ export default function FreeCoursesAccountingFinancePage() {
             </div>
           </section>
 
-          <section className="mb-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Do You Need a Degree to Work in Accounting or Finance?</h2>
-            <p className="text-blue-100 mb-10">Not always. The answer depends on the role you are targeting.</p>
+            <p className="text-[#FFDF9C] mb-10">Not always. The answer depends on the role you are targeting.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
                 <h3 className="font-bold text-white text-lg mb-4">You can start without a degree:</h3>
                 <ul className="space-y-3">
                   {['Entry-level bookkeeping and payroll roles', 'Accounts assistant and finance support positions', 'Practical certifications recognised by employers'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-blue-100 text-sm">
+                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
                       <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
                     </li>
                   ))}
@@ -175,7 +175,7 @@ export default function FreeCoursesAccountingFinancePage() {
                 <h3 className="font-bold text-white text-lg mb-4">For advanced roles, consider further study:</h3>
                 <ul className="space-y-3">
                   {['Chartered Accountant (CA) requires formal qualifications', 'Auditor roles typically require a recognised accounting degree', 'Financial management positions benefit from advanced credentials'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-blue-100 text-sm">
+                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
                       <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
                     </li>
                   ))}

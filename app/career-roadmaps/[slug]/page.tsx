@@ -45,7 +45,7 @@ export async function generateMetadata({
 
 const DEMAND_COLOURS: Record<CareerRoadmap['demandLevel'], string> = {
   'Very High': 'bg-emerald-50 text-emerald-700 border-emerald-100',
-  'High': 'bg-blue-50 text-blue-700 border-blue-100',
+  'High': 'bg-[#FFDF9C]/20 text-[#5a4000] border-[#D1C5B4]',
   'Moderate': 'bg-amber-50 text-amber-700 border-amber-100',
 };
 
@@ -232,7 +232,7 @@ export default async function CareerRoadmapPage({
               <ul className="space-y-2">
                 {roadmap.softSkills.map((skill) => (
                   <li key={skill} className="flex items-start gap-2 text-sm text-gray-600">
-                    <CheckCircle2 size={15} className="text-blue-400 mt-0.5 shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#7C7061] mt-0.5 shrink-0" />
                     {skill}
                   </li>
                 ))}
@@ -366,7 +366,7 @@ export default async function CareerRoadmapPage({
                 const difficultyColour = task.level === 'beginner'
                   ? 'bg-emerald-50 text-emerald-700 border-emerald-100'
                   : task.level === 'intermediate'
-                    ? 'bg-blue-50 text-blue-700 border-blue-100'
+                    ? 'bg-[#FFDF9C]/20 text-[#5a4000] border-[#D1C5B4]'
                     : 'bg-purple-50 text-purple-700 border-purple-100';
                 return (
                   <Link
@@ -411,7 +411,7 @@ export default async function CareerRoadmapPage({
               <ol className="space-y-4">
                 {roadmap.firstNinetyDays.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-blue-50 text-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-6 h-6 rounded-full bg-[#FFDF9C]/20 text-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
                     <p className="text-sm text-gray-700 leading-relaxed">{item}</p>
@@ -551,13 +551,13 @@ export default async function CareerRoadmapPage({
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/career-roadmaps"
-            className="flex-1 text-center bg-white border-2 border-primary text-primary hover:bg-blue-50 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+            className="flex-1 text-center bg-white border-2 border-primary text-primary hover:bg-[#FFDF9C]/20 font-bold px-6 py-3 rounded-lg transition-colors text-sm"
           >
             ← All Career Roadmaps
           </Link>
           <Link
             href="/search"
-            className="flex-1 text-center bg-primary hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
+            className="flex-1 text-center bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
           >
             Find a Course →
           </Link>

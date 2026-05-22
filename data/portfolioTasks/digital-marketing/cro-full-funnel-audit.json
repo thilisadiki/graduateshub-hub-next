@@ -1,0 +1,55 @@
+{
+  "id": "cro-full-funnel-audit",
+  "categoryId": "digital-marketing",
+  "topicId": "conversion-rate-optimisation",
+  "level": "advanced",
+  "title": "Full Funnel Conversion Audit",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Map a complete funnel, find the biggest drop-offs, and design experiments.",
+  "scenario": "An online insurance comparison site gets 200,000 visitors/month but only 400 completed quote requests (0.2% conversion). The funnel is: Landing Page → Quote Form Step 1 → Step 2 → Step 3 → Confirmation. The CEO wants to know where the biggest drop-off is and what to do about it.",
+  "brief": "Map the complete funnel with hypothetical but plausible drop-off rates at each stage. Identify the biggest leak, diagnose the likely cause, and design an experiment to fix it.",
+  "deliverables": [
+    "A funnel map with conversion rates at each stage (invented but internally consistent)",
+    "The biggest drop-off point identified with at least 3 hypotheses for why users abandon",
+    "A detailed experiment design for the highest-impact fix",
+    "A secondary optimisation opportunity at a different funnel stage"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A 50% drop-off from Step 1 to Step 2 is more impactful than a 20% drop-off from Step 2 to Step 3, even if the percentage is smaller. Show that you calculate absolute user loss, not just percentages.",
+  "rubric": [
+    {
+      "key": "funnel",
+      "label": "Funnel Mapping",
+      "description": "Are the drop-off rates plausible and internally consistent?",
+      "weight": 25
+    },
+    {
+      "key": "diagnosis",
+      "label": "Drop-Off Diagnosis",
+      "description": "Are the hypotheses for abandonment specific and testable?",
+      "weight": 30
+    },
+    {
+      "key": "experiment",
+      "label": "Experiment Design",
+      "description": "Is the proposed experiment well-designed with clear metrics?",
+      "weight": 30
+    },
+    {
+      "key": "impact",
+      "label": "Impact Calculation",
+      "description": "Does the candidate calculate the revenue impact of fixing the leak?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Funnel analysis",
+    "CRO strategy",
+    "Experiment design",
+    "Revenue optimisation"
+  ],
+  "relatedRoadmapIds": [
+    "digital-marketing-specialist"
+  ]
+}

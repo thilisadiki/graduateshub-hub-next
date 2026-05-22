@@ -1,0 +1,49 @@
+{
+  "id": "test-e2e-playwright",
+  "categoryId": "software-development",
+  "topicId": "testing-strategies",
+  "level": "advanced",
+  "title": "End-to-End Testing with Playwright",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Automate a complex user journey using a headless browser.",
+  "scenario": "Your company’s checkout flow has broken twice this month because frontend changes unexpectedly broke backend API calls. You need to write an automated End-to-End (E2E) test to prevent this.",
+  "brief": "Write a Playwright (or Cypress) test script that navigates to an e-commerce site, adds a specific item to the cart, proceeds to checkout, fills out the shipping form, and verifies the final confirmation screen.",
+  "deliverables": [
+    "The complete Playwright/Cypress test script",
+    "An explanation of how to handle asynchronous flakiness (e.g., waiting for network requests or animations to finish before clicking)",
+    "A brief strategy on how you would handle testing payment processing without charging real credit cards"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "E2E tests are notoriously flaky. Your test code should demonstrate best practices for waiting for elements to be actionable, rather than relying on arbitrary `sleep(5000)` commands.",
+  "rubric": [
+    {
+      "key": "script",
+      "label": "Test Script Flow",
+      "description": "Does the script logically progress through the checkout flow?",
+      "weight": 35
+    },
+    {
+      "key": "flakiness",
+      "label": "Handling Flakiness",
+      "description": "Are network/UI waits used correctly instead of arbitrary timeouts?",
+      "weight": 35
+    },
+    {
+      "key": "payments",
+      "label": "Payment Strategy",
+      "description": "Does the candidate understand how to use test/sandbox payment tokens?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "End-to-End (E2E) Testing",
+    "Playwright / Cypress",
+    "Automated QA",
+    "Flakiness Mitigation"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "web-developer"
+  ]
+}

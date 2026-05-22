@@ -52,13 +52,13 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm">
       <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 flex justify-between items-start text-white relative overflow-hidden shrink-0">
+        <div className="bg-gradient-to-r from-[#7A5900] to-[#5a4000] p-6 flex justify-between items-start text-white relative overflow-hidden shrink-0">
           <div className="absolute top-0 right-0 p-4 opacity-10"><Sparkles size={100} /></div>
           <div className="relative z-10 w-full">
             <h2 className="text-2xl font-black mb-2 flex items-center gap-2">
               <Sparkles size={24} className="text-yellow-300" /> AI Course Matcher
             </h2>
-            <p className="text-blue-100 font-medium">Tell us your goals, interests, or current skills, and our AI will find the perfect courses for you.</p>
+            <p className="text-[#FFDF9C] font-medium">Tell us your goals, interests, or current skills, and our AI will find the perfect courses for you.</p>
             <button onClick={onClose} className="absolute top-0 right-0 mt-1 mr-1 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors">
               <X size={20} />
             </button>
@@ -88,7 +88,7 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
                 <button
                   type="submit"
                   disabled={isLoading || !query.trim() || turnstileToken === null}
-                  className="absolute bottom-3 right-3 bg-primary hover:bg-blue-700 disabled:bg-blue-300 text-white px-6 py-2 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
+                  className="absolute bottom-3 right-3 bg-primary hover:bg-[#5a4000] disabled:bg-[#D1C5B4] text-white px-6 py-2 rounded-lg font-bold transition-colors flex items-center gap-2 shadow-md"
                 >
                   {isLoading ? <><Loader2 size={18} className="animate-spin" /> Analyzing...</> : <><Sparkles size={18} /> Match Courses</>}
                 </button>
@@ -108,9 +108,9 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
               <div className="mt-6">
                 <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Or try these examples:</span>
                 <div className="flex flex-wrap gap-2">
-                  <button onClick={() => handleQuickPrompt("I want a career in Artificial Intelligence but I'm a beginner.")} className="text-left text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full transition-colors border border-blue-100">"Career in Artificial Intelligence..."</button>
+                  <button onClick={() => handleQuickPrompt("I want a career in Artificial Intelligence but I'm a beginner.")} className="text-left text-sm bg-[#FFDF9C]/20 hover:bg-[#FFDF9C]/40 text-[#5a4000] px-3 py-1.5 rounded-full transition-colors border border-[#D1C5B4]">"Career in Artificial Intelligence..."</button>
                   <button onClick={() => handleQuickPrompt("How do I start a small business online?")} className="text-left text-sm bg-green-50 hover:bg-green-100 text-green-700 px-3 py-1.5 rounded-full transition-colors border border-green-100">"Start a small business..."</button>
-                  <button onClick={() => handleQuickPrompt("I work in a hospital and want to move into healthcare administration.")} className="text-left text-sm bg-purple-50 hover:bg-purple-100 text-purple-700 px-3 py-1.5 rounded-full transition-colors border border-purple-100">"Healthcare administration..."</button>
+                  <button onClick={() => handleQuickPrompt("I work in a hospital and want to move into healthcare administration.")} className="text-left text-sm bg-[#F5E0BB/20] hover:bg-[#F5E0BB/40] text-purple-700 px-3 py-1.5 rounded-full transition-colors border border-purple-100">"Healthcare administration..."</button>
                 </div>
               </div>
             )}

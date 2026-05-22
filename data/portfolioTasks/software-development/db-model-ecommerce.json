@@ -1,0 +1,47 @@
+{
+  "id": "db-model-ecommerce",
+  "categoryId": "software-development",
+  "topicId": "database-modeling",
+  "level": "intermediate",
+  "title": "Model an E-commerce Cart & Order System",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 4 hours",
+  "tagline": "Design a schema that safely handles immutable financial records.",
+  "scenario": "You are building the database for an online store. The business needs to track Products, Shopping Carts (active sessions), and Final Orders. The critical business rule: if a Product price changes tomorrow, historical Final Orders from yesterday must not change.",
+  "brief": "Design the SQL schema for Products, Carts, CartItems, Orders, and OrderLineItems. Explain how you structure the tables to preserve historical pricing integrity.",
+  "deliverables": [
+    "The schema definition (`CREATE TABLE` statements or an ERD) for the e-commerce entities",
+    "A short explanation of how the `OrderLineItem` table differs from the `CartItem` table regarding price tracking"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A common mistake is relating an Order directly to a Product ID to look up the price. If the product price updates, the past order total will incorrectly change. How do you prevent this?",
+  "rubric": [
+    {
+      "key": "schema",
+      "label": "Schema Design",
+      "description": "Are the tables logically separated (Carts vs Orders)?",
+      "weight": 30
+    },
+    {
+      "key": "integrity",
+      "label": "Historical Integrity",
+      "description": "Does the schema copy the price to the OrderLineItem at checkout?",
+      "weight": 40
+    },
+    {
+      "key": "normalization",
+      "label": "Normalization",
+      "description": "Are the tables normalized without unnecessary data duplication?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Data Integrity",
+    "Financial Modeling",
+    "Schema Normalization"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

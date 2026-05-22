@@ -1,0 +1,46 @@
+{
+  "id": "wireframe-mobile-screens",
+  "categoryId": "design-ux",
+  "topicId": "wireframing-prototyping",
+  "level": "beginner",
+  "title": "Lo-Fi Wireframes for a Mobile App",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Sketch 5 key screens for a food delivery app.",
+  "scenario": "A startup is building a food delivery app for campus students. Before any visual design, the product manager wants to see the core user flow in low-fidelity wireframes.",
+  "brief": "Sketch 5 key screens: Home/Browse, Restaurant Menu, Cart, Checkout, and Order Confirmation. Use boxes, lines, and placeholder text — no colour, no branding.",
+  "deliverables": [
+    "Descriptions of 5 lo-fi wireframe screens with layout notes (header, content areas, CTAs, navigation)",
+    "A flow diagram showing how users move between the 5 screens",
+    "Annotations explaining key design decisions (why the cart is always visible, why checkout is a single page, etc.)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Lo-fi wireframes are about structure, not aesthetics. If you spend time on colours and fonts, you are doing it wrong. Focus on layout, hierarchy, and flow.",
+  "rubric": [
+    {
+      "key": "screens",
+      "label": "Screen Coverage",
+      "description": "Do the 5 screens cover the core user journey from browse to confirmation?",
+      "weight": 30
+    },
+    {
+      "key": "flow",
+      "label": "Flow Logic",
+      "description": "Is the user flow between screens logical and complete?",
+      "weight": 30
+    },
+    {
+      "key": "annotations",
+      "label": "Design Rationale",
+      "description": "Do the annotations explain WHY, not just WHAT?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Wireframing",
+    "Information hierarchy",
+    "User flow design",
+    "Design rationale"
+  ],
+  "relatedRoadmapIds": []
+}

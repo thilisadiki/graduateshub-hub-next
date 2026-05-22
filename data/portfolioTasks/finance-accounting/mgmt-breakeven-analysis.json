@@ -1,0 +1,48 @@
+{
+  "id": "mgmt-breakeven-analysis",
+  "categoryId": "finance-accounting",
+  "topicId": "management-accounting",
+  "level": "beginner",
+  "title": "Break-Even Analysis",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Calculate the break-even point and interpret it for pricing decisions.",
+  "scenario": "A Durban-based bakery is launching a new line of artisanal breads. Fixed costs (rent, equipment, salary) are R45,000/month. Each loaf costs R18 to produce and sells for R42. The owner wants to know how many loaves she needs to sell per month to break even.",
+  "brief": "Calculate the break-even point in units and in revenue. Then explore what happens if the selling price drops by R5 or if fixed costs increase by 20%.",
+  "deliverables": [
+    "The break-even calculation: units and revenue, with the formula shown",
+    "A sensitivity table showing break-even at 3 different price points and 3 different fixed cost levels",
+    "A one-paragraph recommendation on pricing strategy based on the analysis"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Break-even = Fixed Costs / (Price - Variable Cost). But the insight is in the sensitivity — how fragile is this business model?",
+  "rubric": [
+    {
+      "key": "calculation",
+      "label": "Break-Even Calculation",
+      "description": "Is the break-even correctly calculated in both units and revenue?",
+      "weight": 30
+    },
+    {
+      "key": "sensitivity",
+      "label": "Sensitivity Analysis",
+      "description": "Does the sensitivity table explore meaningful price and cost variations?",
+      "weight": 35
+    },
+    {
+      "key": "recommendation",
+      "label": "Pricing Recommendation",
+      "description": "Is the recommendation grounded in the numbers, not guesswork?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "Break-even analysis",
+    "Cost-volume-profit",
+    "Pricing strategy",
+    "Financial decision-making"
+  ],
+  "relatedRoadmapIds": [
+    "junior-accountant"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ba-wsjf-model",
+  "categoryId": "business-analysis",
+  "topicId": "backlog-management-refinement",
+  "level": "advanced",
+  "title": "Weighted Shortest Job First (WSJF) Roadmapping",
+  "difficulty": "Advanced",
+  "estimatedHours": "5 hours",
+  "tagline": "Implement a WSJF prioritization model for a complex medical logistics roadmap.",
+  "scenario": "A global medical logistics company needs to prioritize 8 major development initiatives (e.g., vaccine cold-chain monitoring API, driver dispatch app optimization, ERP sync, GDPR data compliance portal). The engineering team is a bottleneck, and stakeholder conflict is high. You must implement the Weighted Shortest Job First (WSJF) prioritization model to maximize economic value delivery.",
+  "brief": "Build a WSJF scoring model. Rate each initiative across User-Business Value, Time Criticality, Risk Reduction/Opportunity Enablement, and Job Size/Duration. Calculate the WSJF scores and propose the final implementation sequence.",
+  "deliverables": [
+    "A complete WSJF matrix table showing scores for all 8 initiatives and the calculated WSJF score.",
+    "A detailed definition document establishing the scoring rubrics for each WSJF component (1 to 21 Fibonacci scale).",
+    "The Cost of Delay (CoD) explanation for the three highest-scoring initiatives.",
+    "A roadmap sequencing report (max 400 words) explaining the economic rationale for the resulting backlog priority."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Submit your scoring sheet and roadmap sequencing in a Markdown table. Justify the inputs with clear business and operational assumptions.",
+  "rubric": [
+    {
+      "key": "wsjf_scoring",
+      "label": "WSJF Score Calculation",
+      "description": "Are the WSJF mathematical equations correct, and is the scoring scale applied consistently?",
+      "weight": 35
+    },
+    {
+      "key": "cost_of_delay",
+      "label": "Cost of Delay Definition",
+      "description": "Are user value, time criticality, and risk reduction scored with sound business reasoning?",
+      "weight": 35
+    },
+    {
+      "key": "roadmap_sequencing",
+      "label": "Roadmap Sequencing Decisions",
+      "description": "Is the final initiative sequence economically justified, reflecting shortest job first principles?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "WSJF framework",
+    "Cost of Delay calculation",
+    "Economic prioritization",
+    "Roadmap sequencing",
+    "Stakeholder alignment"
+  ],
+  "relatedRoadmapIds": []
+}

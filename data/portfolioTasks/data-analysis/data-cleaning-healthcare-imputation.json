@@ -1,0 +1,54 @@
+{
+  "id": "data-cleaning-healthcare-imputation",
+  "categoryId": "data",
+  "topicId": "data-cleaning",
+  "level": "intermediate",
+  "title": "Handling Missing Data in a Healthcare Dataset",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Decide which imputation strategy to use for each column and defend every choice.",
+  "scenario": "A hospital exported 18 months of patient admission records. The dataset has missing values scattered across columns like Age (3%), Blood Pressure (12%), Diagnosis Code (8%), and Admission Date (0.5%). Each column demands a different imputation strategy because the data is missing for different reasons.",
+  "brief": "You do not have the real file. Describe the imputation strategy you would use for each column type, justify why, and explain the risks of getting it wrong in a healthcare context.",
+  "deliverables": [
+    "A table listing each column, its missing rate, your chosen strategy (mean, mode, forward-fill, drop, flag, or model-based), and a one-sentence justification",
+    "An explanation of the difference between MCAR, MAR, and MNAR and which category each column likely falls into",
+    "One risk specific to healthcare data where a bad imputation could lead to a dangerous clinical decision"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Do not default to \"drop all rows with nulls\". In healthcare, every row is a patient. Show that you understand the cost of discarding data versus the cost of inventing it.",
+  "rubric": [
+    {
+      "key": "strategy",
+      "label": "Strategy Selection",
+      "description": "Is the imputation strategy appropriate for each column type and missingness pattern?",
+      "weight": 35
+    },
+    {
+      "key": "theory",
+      "label": "Missing Data Theory",
+      "description": "Does the candidate correctly distinguish MCAR, MAR, and MNAR?",
+      "weight": 30
+    },
+    {
+      "key": "risk",
+      "label": "Domain Awareness",
+      "description": "Is the healthcare-specific risk credible and well-articulated?",
+      "weight": 20
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity",
+      "description": "Is the submission structured, jargon-free where possible, and defensible?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Data imputation",
+    "Missing data theory",
+    "Healthcare analytics",
+    "Analytical judgment"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

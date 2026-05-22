@@ -1,0 +1,47 @@
+{
+  "id": "ba-refinement-session-plan",
+  "categoryId": "business-analysis",
+  "topicId": "backlog-management-refinement",
+  "level": "intermediate",
+  "title": "Backlog Refinement Session Agenda & Plan",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 hours",
+  "tagline": "Design a backlog refinement session checklist and estimation agenda for a Stripe payment integration.",
+  "scenario": "A software development team is starting work on a Stripe-based global payment integration. The backlog items are high-level and lack clear acceptance criteria or estimates. The Business Analyst must design and facilitate a 1-hour backlog refinement session to ensure the user stories are \"Ready for Development\" (Definition of Ready).",
+  "brief": "Create a comprehensive facilitation plan for the backlog refinement session. Define the meeting agenda, select the appropriate estimation method (e.g. Planning Poker), and document the pre-refinement checklists, participant roles, and dependency tracking rules.",
+  "deliverables": [
+    "A detailed 60-minute facilitation agenda specifying time blocks, goals, and role responsibilities.",
+    "The Definition of Ready (DoR) checklist tailored for the Stripe integration stories.",
+    "An estimation methodology guide explaining how story points will be estimated (e.g. Fibonacci sequence rules).",
+    "A dependency register identifying external system and team dependencies (e.g. Stripe API sandbox availability, security review)."
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Format your session plan in Markdown using clear headings, time tables, and bulleted checklists.",
+  "rubric": [
+    {
+      "key": "agenda_facilitation",
+      "label": "Agenda & Facilitation Timeline",
+      "description": "Is the meeting schedule realistic, collaborative, and designed for maximum outcome in 60 minutes?",
+      "weight": 35
+    },
+    {
+      "key": "estimation_method",
+      "label": "Estimation Method & DoR",
+      "description": "Are the estimation guidelines clear, and does the DoR successfully prevent ambiguous tickets from entering development?",
+      "weight": 35
+    },
+    {
+      "key": "dependency_documentation",
+      "label": "Dependency Management",
+      "description": "Are system and team dependencies mapped out proactively with mitigation actions?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Backlog refinement facilitation",
+    "Definition of Ready design",
+    "Agile estimation techniques",
+    "Dependency mapping"
+  ],
+  "relatedRoadmapIds": []
+}

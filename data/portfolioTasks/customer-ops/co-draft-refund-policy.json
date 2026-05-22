@@ -1,0 +1,47 @@
+{
+  "id": "co-draft-refund-policy",
+  "categoryId": "customer-ops",
+  "topicId": "policy-writing",
+  "level": "beginner",
+  "title": "Draft a Simple Refund Policy",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write a customer-friendly return policy for a boutique clothing store.",
+  "scenario": "A local Instagram-based clothing brand is launching a Shopify store. They need a refund and exchange policy. They want to be friendly, but they cannot afford to take back clothes that have been worn to parties and returned the next day (wardrobing).",
+  "brief": "Draft a clear, firm, but friendly refund and exchange policy for the website.",
+  "deliverables": [
+    "The Refund Policy (max 300 words)",
+    "Clear conditions for return (time limits, condition of item, tags)",
+    "The process the customer must follow",
+    "Exceptions (what cannot be returned)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Avoid legalese (\"heretofore\", \"indemnify\"). Write in plain English so a 16-year-old can understand it. Be clear about who pays for return shipping.",
+  "rubric": [
+    {
+      "key": "clarity",
+      "label": "Plain Language",
+      "description": "Is the policy free of confusing legal jargon?",
+      "weight": 35
+    },
+    {
+      "key": "boundaries",
+      "label": "Firm Boundaries",
+      "description": "Does it explicitly protect the business against wardrobing?",
+      "weight": 35
+    },
+    {
+      "key": "process",
+      "label": "Clear Process",
+      "description": "Does the customer know exactly what step to take first?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Policy writing",
+    "Plain English",
+    "Boundary setting",
+    "E-commerce ops"
+  ],
+  "relatedRoadmapIds": []
+}

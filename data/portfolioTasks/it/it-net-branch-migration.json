@@ -1,0 +1,55 @@
+{
+  "id": "it-net-branch-migration",
+  "categoryId": "it",
+  "topicId": "it-networking-fundamentals",
+  "level": "advanced",
+  "title": "Branch Network Migration Plan",
+  "difficulty": "Advanced",
+  "estimatedHours": "4 to 6 hours",
+  "tagline": "Plan the network migration of a 50-person branch with zero unplanned downtime.",
+  "scenario": "A SA retailer is consolidating two branch offices into one new location. 50 staff, point-of-sale terminals, an in-branch CCTV system, and a credit card processing terminal must all be migrated within a weekend without disrupting Monday trading. The CIO wants a written migration plan before sign-off.",
+  "brief": "Produce a complete migration plan covering the cutover weekend, a rollback strategy, and the communications plan. Make defensible assumptions about the existing infrastructure and document them.",
+  "deliverables": [
+    "A migration runbook with hour-by-hour activities for the cutover weekend (Friday close to Monday open), assigned roles, dependencies, and decision points",
+    "A rollback plan defining the latest acceptable rollback time and the criteria that would trigger it",
+    "A risk register with at least 8 migration-specific risks, each scored and mitigated",
+    "A communications plan covering staff, suppliers, the bank for the credit card terminal, and the building landlord"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Real branch migrations fail because of the things nobody planned for: payment terminal certificates, courier deliveries on cutover Saturday, alarm system reconfiguration, and printer driver issues on Monday. Show that you have thought past the technical work to the operational reality.",
+  "rubric": [
+    {
+      "key": "runbook",
+      "label": "Runbook Realism",
+      "description": "Is the cutover sequence realistic, with sensible time allocations and dependency awareness?",
+      "weight": 30
+    },
+    {
+      "key": "rollback",
+      "label": "Rollback Discipline",
+      "description": "Is rollback genuinely possible from the plan, with a clear cut-off time and trigger criteria?",
+      "weight": 25
+    },
+    {
+      "key": "risk",
+      "label": "Risk Coverage",
+      "description": "Does the risk register cover non-obvious failure modes, not just generic ones?",
+      "weight": 25
+    },
+    {
+      "key": "comms",
+      "label": "Communications",
+      "description": "Are stakeholders identified accurately and is the messaging right for each audience?",
+      "weight": 20
+    }
+  ],
+  "skillsProven": [
+    "Migration planning",
+    "Cutover management",
+    "Rollback strategy",
+    "Cross-functional coordination"
+  ],
+  "relatedRoadmapIds": [
+    "it-support-specialist"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "cicd-zero-downtime",
+  "categoryId": "software-development",
+  "topicId": "cicd-pipeline-setup",
+  "level": "advanced",
+  "title": "Zero-Downtime Deployment Strategy",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Architect a deployment process where users never see a 502 Bad Gateway.",
+  "scenario": "The application serves hospitals 24/7. Currently, deploying a new version requires restarting the Node.js server, causing 10 seconds of downtime. This is unacceptable. The VP of Engineering wants a Zero-Downtime deployment strategy.",
+  "brief": "Architect a Zero-Downtime deployment process. You must choose between Blue-Green Deployment, Canary Releases, or Rolling Updates. Explain your choice, detail the infrastructure required (e.g., Load Balancers, container orchestration), and outline the rollback plan if the new version crashes immediately.",
+  "deliverables": [
+    "An architectural diagram of the deployment strategy (e.g., showing the Load Balancer routing traffic between Blue and Green clusters)",
+    "A defense of your chosen strategy over the alternatives",
+    "A step-by-step description of the automated rollback trigger"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "This is an architecture task. You do not need to write the specific bash scripts, but you must explain the conceptual flow of traffic during the switch-over.",
+  "rubric": [
+    {
+      "key": "strategy",
+      "label": "Deployment Strategy",
+      "description": "Is the chosen strategy (Blue-Green/Canary) logically sound for a high-availability app?",
+      "weight": 35
+    },
+    {
+      "key": "routing",
+      "label": "Traffic Routing",
+      "description": "Does the candidate understand how Load Balancers manage the switch-over?",
+      "weight": 35
+    },
+    {
+      "key": "rollback",
+      "label": "Automated Rollback",
+      "description": "Is there a clear mechanism for detecting failure and reverting traffic?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Zero-Downtime Deployment",
+    "Blue-Green / Canary",
+    "Load Balancing",
+    "Site Reliability Engineering (SRE)"
+  ],
+  "relatedRoadmapIds": [
+    "software-engineer",
+    "backend-developer"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "ml-churn-prediction",
+  "categoryId": "data",
+  "topicId": "ml-fundamentals",
+  "level": "intermediate",
+  "title": "Build and Evaluate a Predictive Model",
+  "difficulty": "Intermediate",
+  "estimatedHours": "3 to 4 hours",
+  "tagline": "Train a model to predict customer churn and explain the confusion matrix.",
+  "scenario": "A subscription company has 50,000 customers. 8% churned last quarter. The CEO wants a model that predicts who will churn next quarter so the retention team can intervene.",
+  "brief": "Describe (or code) how you would build a churn prediction model. Focus on feature selection, model choice, evaluation, and the business implications of false positives vs false negatives.",
+  "deliverables": [
+    "Feature selection: 5-7 features you would use and why each predicts churn",
+    "Model choice: the algorithm you would use and why (logistic regression, random forest, XGBoost, etc.)",
+    "Evaluation: explain precision, recall, and the confusion matrix in the context of churn prediction",
+    "Business impact: should the model optimize for precision or recall, and what is the cost of getting it wrong?"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A model with 92% accuracy sounds great until you realise 92% of customers do not churn anyway. Show you understand class imbalance.",
+  "rubric": [
+    {
+      "key": "features",
+      "label": "Feature Engineering",
+      "description": "Are the chosen features plausible predictors of churn?",
+      "weight": 25
+    },
+    {
+      "key": "model",
+      "label": "Model Selection",
+      "description": "Is the algorithm choice justified for a binary classification with imbalanced classes?",
+      "weight": 25
+    },
+    {
+      "key": "evaluation",
+      "label": "Evaluation Metrics",
+      "description": "Are precision, recall, and the confusion matrix correctly explained in context?",
+      "weight": 25
+    },
+    {
+      "key": "business",
+      "label": "Business Framing",
+      "description": "Does the candidate understand the cost trade-off between false positives and false negatives?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Predictive modelling",
+    "Classification",
+    "Model evaluation",
+    "Business analytics"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst",
+    "data-scientist"
+  ]
+}

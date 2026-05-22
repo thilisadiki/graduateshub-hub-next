@@ -1,0 +1,46 @@
+{
+  "id": "ba-uat-test-cases",
+  "categoryId": "business-analysis",
+  "topicId": "uat-planning",
+  "level": "beginner",
+  "title": "Write UAT Test Cases",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Write 10 UAT test cases for an online application form.",
+  "scenario": "A university has built an online admissions application form. Before go-live, business users need to test it. You have been asked to write the UAT test cases that the admissions team will execute.",
+  "brief": "Write 10 UAT test cases covering the happy path, edge cases, and error scenarios. Each test case should be executable by a non-technical user.",
+  "deliverables": [
+    "Ten test cases in format: Test ID, Description, Pre-conditions, Steps, Expected Result, Pass/Fail criteria",
+    "Coverage across: successful submission, required field validation, file upload, and duplicate detection",
+    "At least 2 negative test cases (what should NOT work)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "UAT test cases are not developer unit tests. They are written in business language: \"Submit an application with a Grade 12 certificate PDF attached\" not \"POST /api/applications with multipart form data.\"",
+  "rubric": [
+    {
+      "key": "format",
+      "label": "Test Case Format",
+      "description": "Are all 10 test cases properly structured and executable?",
+      "weight": 25
+    },
+    {
+      "key": "coverage",
+      "label": "Scenario Coverage",
+      "description": "Do the test cases cover happy path, edge cases, and errors?",
+      "weight": 40
+    },
+    {
+      "key": "language",
+      "label": "Business Language",
+      "description": "Are the test cases written for non-technical testers?",
+      "weight": 35
+    }
+  ],
+  "skillsProven": [
+    "UAT test cases",
+    "Test design",
+    "Business testing",
+    "Requirements validation"
+  ],
+  "relatedRoadmapIds": []
+}

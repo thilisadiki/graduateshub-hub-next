@@ -25,11 +25,11 @@ export default function GradingOverlay() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white/80 backdrop-blur-sm animate-in fade-in duration-300">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl border border-indigo-100 p-8 flex flex-col items-center text-center transform animate-in zoom-in-95 duration-300">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl border border-[#D1C5B4] p-8 flex flex-col items-center text-center transform animate-in zoom-in-95 duration-300">
         
-        <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 relative">
-          <div className="absolute inset-0 border-2 border-indigo-200 rounded-2xl animate-ping opacity-20"></div>
-          <Sparkles className="text-indigo-600 w-8 h-8 animate-pulse" />
+        <div className="w-16 h-16 bg-[#FFDF9C]/20 rounded-2xl flex items-center justify-center mb-6 relative">
+          <div className="absolute inset-0 border-2 border-[#D1C5B4] rounded-2xl animate-ping opacity-20"></div>
+          <Sparkles className="text-primary w-8 h-8 animate-pulse" />
         </div>
 
         <h3 className="text-xl font-bold text-gray-900 mb-2">Grading in Progress</h3>
@@ -41,7 +41,7 @@ export default function GradingOverlay() {
         {/* Animated Progress Bar */}
         <div className="w-full bg-gray-100 rounded-full h-1.5 mb-2 overflow-hidden">
           <div 
-            className="bg-indigo-600 h-1.5 rounded-full transition-all duration-[10000ms] ease-out"
+            className="bg-primary h-1.5 rounded-full transition-all duration-[10000ms] ease-out"
             style={{ width: '95%' }} // Simulates progress slowly approaching 100%
           />
         </div>

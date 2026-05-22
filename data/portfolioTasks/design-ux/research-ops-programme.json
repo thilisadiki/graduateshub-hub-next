@@ -1,0 +1,53 @@
+{
+  "id": "research-ops-programme",
+  "categoryId": "design-ux",
+  "topicId": "user-research-interviews",
+  "level": "advanced",
+  "title": "Research Ops: Design a Research Programme",
+  "difficulty": "Advanced",
+  "estimatedHours": "3 to 5 hours",
+  "tagline": "Design a quarterly research programme for a product team.",
+  "scenario": "A growing fintech product team has 3 designers and 12 engineers. They do ad hoc user research — sometimes a lot, sometimes none. The Head of Product wants a structured research programme that runs continuously.",
+  "brief": "Design a quarterly research programme. Cover recruitment, method selection per question type, tooling, research repository, and how findings get to engineers who do not attend sessions.",
+  "deliverables": [
+    "A quarterly research calendar with research type (discovery, evaluative, continuous) mapped to product milestones",
+    "A method-selection guide: which research method for which question type (table format)",
+    "A participant recruitment strategy: panel management, incentives, screening criteria, and diversity requirements",
+    "A knowledge management plan: how findings are stored, tagged, and surfaced to the team"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Research that sits in a slide deck nobody reads is wasted research. Show how you make findings findable and actionable for engineers who never attend sessions.",
+  "rubric": [
+    {
+      "key": "calendar",
+      "label": "Research Calendar",
+      "description": "Is the quarterly plan structured with clear research types?",
+      "weight": 25
+    },
+    {
+      "key": "methods",
+      "label": "Method Selection",
+      "description": "Is the method-to-question mapping correct and comprehensive?",
+      "weight": 25
+    },
+    {
+      "key": "recruitment",
+      "label": "Recruitment Strategy",
+      "description": "Is the recruitment plan practical with diversity considerations?",
+      "weight": 25
+    },
+    {
+      "key": "knowledge",
+      "label": "Knowledge Management",
+      "description": "Is there a credible plan for making research findings accessible?",
+      "weight": 25
+    }
+  ],
+  "skillsProven": [
+    "Research operations",
+    "Research programme design",
+    "Participant recruitment",
+    "Knowledge management"
+  ],
+  "relatedRoadmapIds": []
+}

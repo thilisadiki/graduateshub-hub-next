@@ -91,4 +91,20 @@ export const businessAnalysisTopics: PortfolioTopic[] = [
       'Run the operational machinery of a project. Tests project planning, risk register maintenance, RACI design, status reporting, and Agile ceremony facilitation.',
     skillsProven: ['Project planning', 'Risk management', 'RACI design', 'Status reporting', 'Agile facilitation'],
   },
+  {
+    id: 'backlog-management-refinement',
+    categoryId: 'business-analysis',
+    title: 'Agile Product Backlog Management & Refinement',
+    description:
+      'Manage, estimate, and refine a product backlog. Tests prioritization frameworks (WSJF, Kano), dependency mapping, and running backlog refinement sessions.',
+    skillsProven: ['Backlog prioritization', 'WSJF framework', 'Dependency mapping', 'Refinement facilitation'],
+  },
+  {
+    id: 'interface-specs-api-mapping',
+    categoryId: 'business-analysis',
+    title: 'Interface Specifications & API Mapping',
+    description:
+      'Define system interfaces, design data mapping documents, and document API integrations. Tests API request/response mapping, webhook specifications, and data translation requirements.',
+    skillsProven: ['API data mapping', 'Integration specifications', 'JSON schema design', 'System interface modeling'],
+  },
 ];

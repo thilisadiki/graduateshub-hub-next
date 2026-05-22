@@ -1,0 +1,46 @@
+{
+  "id": "ai-create-golden-dataset",
+  "categoryId": "ai-prompting",
+  "topicId": "ai-evaluation-benchmarking",
+  "level": "beginner",
+  "title": "Create a Golden Test Set",
+  "difficulty": "Beginner",
+  "estimatedHours": "1 to 2 hours",
+  "tagline": "Create 10 test cases to evaluate a new customer support prompt.",
+  "scenario": "Your team wrote a new prompt to answer customer FAQs. Before deploying it, you need to prove it works. You need a \"Golden Dataset\" — a spreadsheet of varied inputs and the exact expected outputs to test the prompt against.",
+  "brief": "Design a 10-row Golden Dataset for testing a retail e-commerce bot.",
+  "deliverables": [
+    "10 diverse test queries (Inputs)",
+    "The expected behaviour/answer for each (Expected Output)",
+    "Categorisation of the test cases (e.g., 3 standard questions, 3 edge cases, 2 adversarial attacks, 2 off-topic)"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "A test set of 10 easy questions is useless. You must include adversarial questions (\"Can I buy a gun?\"), ambiguous questions (\"Where is it?\"), and complex questions (\"I bought this yesterday but the price dropped today\").",
+  "rubric": [
+    {
+      "key": "diversity",
+      "label": "Test Case Diversity",
+      "description": "Does the dataset cover a wide range of user intents and edge cases?",
+      "weight": 40
+    },
+    {
+      "key": "adversarial",
+      "label": "Adversarial Inclusion",
+      "description": "Are there realistic attempts to break the bot included in the test set?",
+      "weight": 30
+    },
+    {
+      "key": "expected-output",
+      "label": "Clear Expectations",
+      "description": "Are the expected outputs/behaviours clear and objectively measurable?",
+      "weight": 30
+    }
+  ],
+  "skillsProven": [
+    "Dataset creation",
+    "Test engineering",
+    "Edge case identification",
+    "Quality assurance"
+  ],
+  "relatedRoadmapIds": []
+}

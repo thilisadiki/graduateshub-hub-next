@@ -106,20 +106,20 @@ export default function LatestArticles({
       <div className="w-full">
         <div className="flex justify-between items-end mb-8">
           <div>
-            <div className="h-8 w-64 bg-gray-200 rounded animate-pulse mb-2"></div>
-            <div className="h-4 w-96 bg-gray-200 rounded animate-pulse"></div>
+            <div className="h-8 w-64 bg-[#EFE7DF] rounded animate-pulse mb-2"></div>
+            <div className="h-4 w-96 bg-[#EFE7DF] rounded animate-pulse"></div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden h-96 animate-pulse">
-              <div className="h-48 bg-gray-200 w-full"></div>
+            <div key={i} className="bg-white rounded-xl shadow-sm border border-[#D1C5B4] overflow-hidden h-96 animate-pulse">
+              <div className="h-48 bg-[#EFE7DF] w-full"></div>
               <div className="p-6">
-                <div className="h-4 w-24 bg-gray-200 rounded mb-4"></div>
-                <div className="h-6 w-full bg-gray-200 rounded mb-2"></div>
-                <div className="h-6 w-3/4 bg-gray-200 rounded mb-4"></div>
-                <div className="h-4 w-full bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 w-2/3 bg-gray-200 rounded mb-4"></div>
+                <div className="h-4 w-24 bg-[#EFE7DF] rounded mb-4"></div>
+                <div className="h-6 w-full bg-[#EFE7DF] rounded mb-2"></div>
+                <div className="h-6 w-3/4 bg-[#EFE7DF] rounded mb-4"></div>
+                <div className="h-4 w-full bg-[#EFE7DF] rounded mb-2"></div>
+                <div className="h-4 w-2/3 bg-[#EFE7DF] rounded mb-4"></div>
               </div>
             </div>
           ))}
@@ -155,17 +155,17 @@ export default function LatestArticles({
         <div>
           <div className="flex items-center gap-3">
             <BookOpen className="text-primary" size={28} />
-            <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">
+            <h2 className="text-3xl font-extrabold text-[#1F1B13] tracking-tight">
               {customTitle || 'Latest Study Guides & Articles'}
             </h2>
           </div>
-          <p className="text-gray-500 mt-2">
+          <p className="text-[#4F4639] mt-2">
             {customSubtitle || 'Expert advice, industry news, and guides to help you navigate your career.'}
           </p>
         </div>
         <Link
           href="/blog"
-          className="text-primary font-bold hover:text-blue-800 transition-colors hidden sm:flex items-center gap-1 group"
+          className="text-primary font-bold hover:text-[#5a4000] transition-colors hidden sm:flex items-center gap-1 group"
         >
           View All Articles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
         </Link>
@@ -176,7 +176,7 @@ export default function LatestArticles({
           <Link
             key={article.id}
             href={`/blog/${article.slug}`}
-            className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
+            className="bg-white rounded-xl shadow-sm border border-[#D1C5B4] overflow-hidden hover:border-primary hover:shadow-md transition-all group flex flex-col h-full"
           >
             <div className="h-48 overflow-hidden relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -193,12 +193,12 @@ export default function LatestArticles({
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold text-gray-900 leading-tight mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold text-[#1F1B13] leading-tight mb-3 group-hover:text-primary transition-colors">
                 {article.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-6 flex-grow leading-relaxed">{article.excerpt}</p>
+              <p className="text-[#4F4639] text-sm mb-6 flex-grow leading-relaxed">{article.excerpt}</p>
 
-              <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-bold text-primary group-hover:text-blue-800 transition-colors">
+              <div className="mt-auto pt-4 border-t border-[#D1C5B4] flex items-center justify-between text-sm font-bold text-primary group-hover:text-[#5a4000] transition-colors">
                 <span>Read Article</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </div>
@@ -208,7 +208,7 @@ export default function LatestArticles({
       </div>
 
       <div className="mt-6 text-center sm:hidden">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition-colors">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-[#5a4000] transition-colors">
           View All Articles <ArrowRight size={18} />
         </Link>
       </div>

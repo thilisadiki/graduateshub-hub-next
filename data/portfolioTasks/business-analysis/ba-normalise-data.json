@@ -1,0 +1,46 @@
+{
+  "id": "ba-normalise-data",
+  "categoryId": "business-analysis",
+  "topicId": "data-modelling-erds",
+  "level": "intermediate",
+  "title": "Normalise a Flat Dataset",
+  "difficulty": "Intermediate",
+  "estimatedHours": "2 to 3 hours",
+  "tagline": "Take a denormalised spreadsheet and normalise it to 3NF.",
+  "scenario": "The sales team has been tracking customer orders in a single Excel spreadsheet with columns: OrderID, CustomerName, CustomerEmail, CustomerPhone, ProductName, ProductCategory, Quantity, Price, OrderDate, SalesRepName, SalesRepRegion. There are 5,000 rows with massive duplication.",
+  "brief": "Normalise this flat structure to Third Normal Form (3NF). Show each normalisation step with the reasoning for each decomposition.",
+  "deliverables": [
+    "The original flat structure with sample data (5 rows) showing the duplication problem",
+    "Step-by-step normalisation: 1NF → 2NF → 3NF with explanation of what violation each step removes",
+    "The final normalised schema with tables, columns, primary keys, and foreign keys"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "1NF removes repeating groups. 2NF removes partial dependencies. 3NF removes transitive dependencies. Show each violation before fixing it.",
+  "rubric": [
+    {
+      "key": "sample",
+      "label": "Sample Data",
+      "description": "Does the sample data clearly illustrate the duplication problem?",
+      "weight": 20
+    },
+    {
+      "key": "steps",
+      "label": "Normalisation Steps",
+      "description": "Is each step correctly explained with the violation identified?",
+      "weight": 40
+    },
+    {
+      "key": "schema",
+      "label": "Final Schema",
+      "description": "Is the 3NF schema correct with proper keys and relationships?",
+      "weight": 40
+    }
+  ],
+  "skillsProven": [
+    "Data normalisation",
+    "1NF/2NF/3NF",
+    "Database design",
+    "Data quality"
+  ],
+  "relatedRoadmapIds": []
+}
