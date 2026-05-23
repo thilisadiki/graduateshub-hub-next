@@ -1,0 +1,12 @@
+{
+  "id": "data-privacy-gdpr-popia",
+  "categoryId": "customer-ops",
+  "title": "Operational Compliance & Data Privacy",
+  "description": "Implement data privacy rules inside customer support operations. Tests POPIA/GDPR request response, data sanitisation, and support compliance rules.",
+  "skillsProven": [
+    "POPIA operations",
+    "GDPR compliance",
+    "Data sanitisation",
+    "Access request handling"
+  ]
+}

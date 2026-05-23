@@ -1,0 +1,12 @@
+{
+  "id": "audit-internal-controls",
+  "categoryId": "finance-accounting",
+  "title": "Audit & Internal Controls",
+  "description": "Ensure financial accuracy and prevent fraud. Tests control design, audit trail tracing, and fraud risk assessment.",
+  "skillsProven": [
+    "Internal controls",
+    "Segregation of duties",
+    "Audit trails",
+    "Fraud risk assessment"
+  ]
+}

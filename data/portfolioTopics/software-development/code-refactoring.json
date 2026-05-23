@@ -1,0 +1,12 @@
+{
+  "id": "code-refactoring",
+  "categoryId": "software-development",
+  "title": "Code Refactoring",
+  "description": "Modernize and clean up legacy codebases. Tests SOLID principles, identifying code smells, and safely migrating logic.",
+  "skillsProven": [
+    "Refactoring",
+    "Clean code",
+    "SOLID principles",
+    "Legacy migrations"
+  ]
+}

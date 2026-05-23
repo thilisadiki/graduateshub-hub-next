@@ -1,0 +1,12 @@
+{
+  "id": "etl-data-pipelines",
+  "categoryId": "data",
+  "title": "ETL & Data Pipelines",
+  "description": "Design reliable data flows from source to warehouse. Tests pipeline design, schema evolution, and real-time streaming architecture.",
+  "skillsProven": [
+    "ETL design",
+    "Schema management",
+    "Data engineering",
+    "Streaming architecture"
+  ]
+}

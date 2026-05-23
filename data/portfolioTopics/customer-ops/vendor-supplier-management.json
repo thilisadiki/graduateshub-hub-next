@@ -1,0 +1,12 @@
+{
+  "id": "vendor-supplier-management",
+  "categoryId": "customer-ops",
+  "title": "Vendor & Supplier Management",
+  "description": "Evaluate supplier SLAs, handle disputes, and track performance. Tests SLA monitoring, negotiation, and relationship management.",
+  "skillsProven": [
+    "Vendor management",
+    "SLA monitoring",
+    "Dispute resolution",
+    "Performance tracking"
+  ]
+}

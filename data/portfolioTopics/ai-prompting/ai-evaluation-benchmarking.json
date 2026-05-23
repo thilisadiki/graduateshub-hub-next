@@ -1,0 +1,12 @@
+{
+  "id": "ai-evaluation-benchmarking",
+  "categoryId": "ai-prompting",
+  "title": "AI Evaluation & Benchmarking",
+  "description": "Create datasets to test if an AI prompt actually works. Tests \"LLM-as-a-judge\" concepts, test-case creation, and scoring rubrics.",
+  "skillsProven": [
+    "Test set creation",
+    "LLM-as-a-judge",
+    "Benchmarking",
+    "Quality assurance"
+  ]
+}

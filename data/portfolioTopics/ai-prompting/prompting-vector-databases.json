@@ -1,0 +1,12 @@
+{
+  "id": "prompting-vector-databases",
+  "categoryId": "ai-prompting",
+  "title": "Prompting for Vector Databases & Semantic Search",
+  "description": "Optimize query formatting, hybrid search parameters, and metadata retrieval filtering through LLM prompting. Tests metadata extraction, embedding preparation, and retrieval ranking logic.",
+  "skillsProven": [
+    "Vector database querying",
+    "Metadata extraction",
+    "Semantic search optimization",
+    "Hybrid search prompting"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "change-management",
+  "categoryId": "business-analysis",
+  "title": "Change Management",
+  "description": "Plan and execute organisational change. Tests impact assessment, ADKAR methodology, and readiness assessment.",
+  "skillsProven": [
+    "Change management",
+    "ADKAR",
+    "Impact assessment",
+    "Organisational readiness"
+  ]
+}

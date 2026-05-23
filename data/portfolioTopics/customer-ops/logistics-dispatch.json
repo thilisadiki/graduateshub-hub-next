@@ -1,0 +1,12 @@
+{
+  "id": "logistics-dispatch",
+  "categoryId": "customer-ops",
+  "title": "Logistics & Dispatch Operations",
+  "description": "Manage routing, driver communication, and delivery exceptions. Tests route optimisation, problem-solving, and time management.",
+  "skillsProven": [
+    "Logistics coordination",
+    "Exception handling",
+    "Driver communication",
+    "Route planning"
+  ]
+}

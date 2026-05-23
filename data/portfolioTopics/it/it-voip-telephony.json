@@ -1,0 +1,12 @@
+{
+  "id": "it-voip-telephony",
+  "categoryId": "it",
+  "title": "VoIP & Unified Communications",
+  "description": "Design and manage voice-over-IP and unified communication networks. Tests SIP trunks, call routing, and network QoS prioritization.",
+  "skillsProven": [
+    "VoIP architecture",
+    "SIP trunking",
+    "Call routing design",
+    "Quality of Service (QoS)"
+  ]
+}

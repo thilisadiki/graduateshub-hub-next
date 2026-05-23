@@ -1,0 +1,12 @@
+{
+  "id": "churn-recovery-retention",
+  "categoryId": "customer-ops",
+  "title": "Churn Recovery & Customer Retention",
+  "description": "Diagnose account health issues and proactively win back unhappy customers. Tests churn prediction, win-back flows, and relationship management.",
+  "skillsProven": [
+    "Churn analysis",
+    "Win-back campaigns",
+    "Customer health scoring",
+    "Account recovery"
+  ]
+}

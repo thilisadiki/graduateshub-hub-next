@@ -1,0 +1,12 @@
+{
+  "id": "ux-teardown",
+  "categoryId": "design-ux",
+  "title": "UX Teardown",
+  "description": "Critique a real product flow and propose concrete fixes with priorities. Tests heuristic evaluation, design critique, and product prioritisation.",
+  "skillsProven": [
+    "UX analysis",
+    "Heuristic evaluation",
+    "Design critique",
+    "Product prioritisation"
+  ]
+}

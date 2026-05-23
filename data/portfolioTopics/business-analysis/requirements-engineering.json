@@ -1,0 +1,12 @@
+{
+  "id": "requirements-engineering",
+  "categoryId": "business-analysis",
+  "title": "Requirements Engineering",
+  "description": "Elicit, document, and manage requirements. Tests BRD writing, conflict resolution, and traceability.",
+  "skillsProven": [
+    "Requirements elicitation",
+    "BRD writing",
+    "Traceability",
+    "Prioritisation"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "data-modelling-erds",
+  "categoryId": "business-analysis",
+  "title": "Data Modelling & ERDs",
+  "description": "Structure data for systems and databases. Tests entity-relationship diagrams, normalisation, and data dictionaries.",
+  "skillsProven": [
+    "ERD design",
+    "Data normalisation",
+    "Data dictionaries",
+    "Logical modelling"
+  ]
+}

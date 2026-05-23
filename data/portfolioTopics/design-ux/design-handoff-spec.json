@@ -1,0 +1,12 @@
+{
+  "id": "design-handoff-spec",
+  "categoryId": "design-ux",
+  "title": "Design Handoff & Developer Specs",
+  "description": "Bridge the gap between design and development by writing precise design specifications. Tests design system mapping, redlining, and CSS layout coordination.",
+  "skillsProven": [
+    "Developer handoff",
+    "Redlining specs",
+    "Design system alignment",
+    "CSS layout collaboration"
+  ]
+}

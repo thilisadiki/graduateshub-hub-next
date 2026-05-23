@@ -1,0 +1,12 @@
+{
+  "id": "it-asset-management",
+  "categoryId": "it",
+  "title": "IT Asset Management",
+  "description": "Manage the lifecycle of hardware, software, and cloud assets. Tests asset discovery, license optimization, and retirement planning.",
+  "skillsProven": [
+    "ITAM principles",
+    "License compliance",
+    "Asset lifecycle",
+    "Inventory management"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "it-database-admin",
+  "categoryId": "it",
+  "title": "Database Administration & Maintenance",
+  "description": "Ensure databases are secure, backed up, and operating efficiently. Tests database backup design, user access control, and query performance audit.",
+  "skillsProven": [
+    "Database administration",
+    "SQL security",
+    "Backup configurations",
+    "Performance tuning"
+  ]
+}

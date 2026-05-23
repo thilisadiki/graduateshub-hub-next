@@ -1,0 +1,13 @@
+{
+  "id": "nocode-ai-automation",
+  "categoryId": "ai-prompting",
+  "title": "No-Code AI Automation & Workflow Design",
+  "description": "Build automated business workflows using no-code platforms combined with LLM prompting. Tests system integration, prompt chaining, error handling, and automation efficiency.",
+  "skillsProven": [
+    "No-code automation",
+    "Make.com / Zapier integration",
+    "LLM prompt chaining",
+    "API payload mapping",
+    "Error handling & fallbacks"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "debug-fix",
+  "categoryId": "software-development",
+  "title": "Debug & Fix",
+  "description": "Diagnose a real-looking bug, fix it, and explain the root cause in plain English. Tests debugging, code craft, and technical communication.",
+  "skillsProven": [
+    "Debugging",
+    "JavaScript fundamentals",
+    "Code quality",
+    "Technical communication"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "tax-compliance-sa",
+  "categoryId": "finance-accounting",
+  "title": "Tax Compliance (South Africa)",
+  "description": "Understand SARS obligations including VAT, PAYE, UIF, SDL, and provisional tax. Tests practical tax calculation and compliance awareness.",
+  "skillsProven": [
+    "VAT",
+    "PAYE",
+    "Provisional tax",
+    "SARS compliance"
+  ]
+}

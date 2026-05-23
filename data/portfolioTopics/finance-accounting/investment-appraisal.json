@@ -1,0 +1,12 @@
+{
+  "id": "investment-appraisal",
+  "categoryId": "finance-accounting",
+  "title": "Investment Appraisal",
+  "description": "Evaluate capital expenditure decisions using NPV, IRR, and payback period. Tests financial technique application and sensitivity analysis.",
+  "skillsProven": [
+    "NPV",
+    "IRR",
+    "Payback period",
+    "Capital budgeting"
+  ]
+}

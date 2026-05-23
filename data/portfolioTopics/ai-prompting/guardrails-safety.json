@@ -1,0 +1,12 @@
+{
+  "id": "guardrails-safety",
+  "categoryId": "ai-prompting",
+  "title": "Guardrails & Safety Prompting",
+  "description": "Write prompts that actively prevent prompt injection, jailbreaks, and off-topic responses. Tests adversarial thinking and AI safety.",
+  "skillsProven": [
+    "Adversarial testing",
+    "Prompt injection defence",
+    "Topic restriction",
+    "AI safety"
+  ]
+}

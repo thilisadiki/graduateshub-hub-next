@@ -1,0 +1,12 @@
+{
+  "id": "gap-analysis",
+  "categoryId": "business-analysis",
+  "title": "Gap Analysis",
+  "description": "Compare current state to desired future state and plan the bridge. Tests skills gaps, system gaps, and regulatory compliance.",
+  "skillsProven": [
+    "Gap analysis",
+    "Current-state assessment",
+    "Remediation planning",
+    "Compliance"
+  ]
+}

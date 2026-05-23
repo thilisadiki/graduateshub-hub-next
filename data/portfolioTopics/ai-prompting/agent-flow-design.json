@@ -1,0 +1,12 @@
+{
+  "id": "agent-flow-design",
+  "categoryId": "ai-prompting",
+  "title": "Agent Flow Design",
+  "description": "Map out how multiple AI agents (e.g., a Researcher, a Writer, and a Reviewer) pass data to each other. Tests systems thinking.",
+  "skillsProven": [
+    "Agent architecture",
+    "Systems thinking",
+    "State management",
+    "Workflow design"
+  ]
+}

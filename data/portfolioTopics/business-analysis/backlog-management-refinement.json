@@ -1,0 +1,12 @@
+{
+  "id": "backlog-management-refinement",
+  "categoryId": "business-analysis",
+  "title": "Agile Product Backlog Management & Refinement",
+  "description": "Manage, estimate, and refine a product backlog. Tests prioritization frameworks (WSJF, Kano), dependency mapping, and running backlog refinement sessions.",
+  "skillsProven": [
+    "Backlog prioritization",
+    "WSJF framework",
+    "Dependency mapping",
+    "Refinement facilitation"
+  ]
+}

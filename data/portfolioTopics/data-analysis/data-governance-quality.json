@@ -1,0 +1,12 @@
+{
+  "id": "data-governance-quality",
+  "categoryId": "data",
+  "title": "Data Governance & Quality",
+  "description": "Ensure data is trustworthy, compliant, and well-documented. Tests data dictionaries, quality checks, and privacy compliance.",
+  "skillsProven": [
+    "Data dictionaries",
+    "Data quality",
+    "POPIA/GDPR compliance",
+    "Data documentation"
+  ]
+}

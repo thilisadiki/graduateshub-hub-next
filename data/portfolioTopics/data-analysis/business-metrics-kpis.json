@@ -1,0 +1,12 @@
+{
+  "id": "business-metrics-kpis",
+  "categoryId": "data",
+  "title": "Business Metrics & KPIs",
+  "description": "Understand what to measure and why. Tests metric definition, root-cause analysis, and building metrics frameworks that drive decisions.",
+  "skillsProven": [
+    "KPI definition",
+    "Root-cause analysis",
+    "North Star metrics",
+    "Business acumen"
+  ]
+}

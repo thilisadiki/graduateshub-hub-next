@@ -1,0 +1,12 @@
+{
+  "id": "chain-of-thought-reasoning",
+  "categoryId": "ai-prompting",
+  "title": "Chain of Thought & Reasoning",
+  "description": "Design prompts that force the AI to \"think step-by-step\" before answering. Tests logic, math prompting, and hallucination reduction.",
+  "skillsProven": [
+    "Chain of Thought (CoT)",
+    "Logic prompting",
+    "Hallucination reduction",
+    "Complex reasoning"
+  ]
+}

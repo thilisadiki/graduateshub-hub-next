@@ -1,0 +1,12 @@
+{
+  "id": "output-formatting-extraction",
+  "categoryId": "ai-prompting",
+  "title": "Output Formatting & Extraction",
+  "description": "Force an LLM to return strict JSON, CSV, or specific Markdown structures. Tests data extraction and parsing reliability.",
+  "skillsProven": [
+    "JSON extraction",
+    "Format constraint",
+    "Data parsing",
+    "Reliability engineering"
+  ]
+}

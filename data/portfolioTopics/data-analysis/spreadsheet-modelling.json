@@ -1,0 +1,12 @@
+{
+  "id": "spreadsheet-modelling",
+  "categoryId": "data",
+  "title": "Excel / Spreadsheet Modelling",
+  "description": "Build robust models in the most-used analytics tool in business. Tests pivot tables, what-if analysis, and simulation techniques.",
+  "skillsProven": [
+    "Pivot tables",
+    "Excel formulas",
+    "What-if analysis",
+    "Data modelling"
+  ]
+}

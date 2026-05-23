@@ -1,0 +1,12 @@
+{
+  "id": "it-microsoft-365",
+  "categoryId": "it",
+  "title": "Microsoft 365 Administration",
+  "description": "Operate the productivity stack that powers most SA corporates. Tests user provisioning, SharePoint permissions, and tenant hardening.",
+  "skillsProven": [
+    "M365 administration",
+    "SharePoint governance",
+    "Tenant hardening",
+    "Conditional Access"
+  ]
+}

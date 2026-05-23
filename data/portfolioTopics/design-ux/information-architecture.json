@@ -1,0 +1,12 @@
+{
+  "id": "information-architecture",
+  "categoryId": "design-ux",
+  "title": "Information Architecture",
+  "description": "Organise and structure content so users can find what they need. Tests card sorting, sitemap design, navigation, and taxonomy.",
+  "skillsProven": [
+    "Card sorting",
+    "Sitemap design",
+    "Navigation design",
+    "Taxonomy"
+  ]
+}

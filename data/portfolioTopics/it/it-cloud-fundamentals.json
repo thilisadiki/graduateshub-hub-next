@@ -1,0 +1,12 @@
+{
+  "id": "it-cloud-fundamentals",
+  "categoryId": "it",
+  "title": "Cloud Fundamentals",
+  "description": "Reason about cloud cost, migration, and architecture for South African businesses. Tests TCO comparison, lift-and-shift planning, and hybrid cloud design.",
+  "skillsProven": [
+    "Cloud TCO",
+    "Migration planning",
+    "Hybrid architecture",
+    "IaaS / SaaS literacy"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "process-mapping",
+  "categoryId": "business-analysis",
+  "title": "Process Mapping & Improvement",
+  "description": "Document current-state processes and design improvements. Tests BPMN notation, bottleneck analysis, and value stream mapping.",
+  "skillsProven": [
+    "BPMN",
+    "Process analysis",
+    "Value stream mapping",
+    "Continuous improvement"
+  ]
+}

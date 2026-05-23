@@ -1,0 +1,12 @@
+{
+  "id": "it-identity-management",
+  "categoryId": "it",
+  "title": "Identity & Access Management",
+  "description": "Manage user identities, group policies, and access reviews. Tests Active Directory administration, joiner-mover-leaver processes, and least-privilege design.",
+  "skillsProven": [
+    "Active Directory",
+    "Group Policy",
+    "Access governance",
+    "Least-privilege design"
+  ]
+}

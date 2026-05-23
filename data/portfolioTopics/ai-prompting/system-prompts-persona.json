@@ -1,0 +1,12 @@
+{
+  "id": "system-prompts-persona",
+  "categoryId": "ai-prompting",
+  "title": "System Prompts & Persona Design",
+  "description": "Design robust system instructions that govern how an AI behaves across a whole conversation. Tests tone control and boundary setting.",
+  "skillsProven": [
+    "System prompts",
+    "Persona design",
+    "Boundary setting",
+    "Tone control"
+  ]
+}

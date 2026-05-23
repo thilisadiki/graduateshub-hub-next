@@ -1,0 +1,12 @@
+{
+  "id": "cicd-pipeline-setup",
+  "categoryId": "software-development",
+  "title": "CI/CD Pipeline Setup",
+  "description": "Design automated deployment workflows. Tests DevOps fundamentals, multi-environment setups, and zero-downtime deployment strategies.",
+  "skillsProven": [
+    "DevOps",
+    "GitHub Actions",
+    "Deployment pipelines",
+    "Automation"
+  ]
+}

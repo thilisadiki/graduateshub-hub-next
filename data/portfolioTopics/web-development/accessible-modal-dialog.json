@@ -1,0 +1,12 @@
+{
+  "id": "accessible-modal-dialog",
+  "categoryId": "web-development",
+  "title": "Accessible Modal Dialog",
+  "description": "Build a modal dialog system from scratch. Tests DOM manipulation, React Portals, WAI-ARIA accessibility standards, and reusable component design.",
+  "skillsProven": [
+    "DOM manipulation",
+    "React Portals",
+    "Accessibility (WAI-ARIA)",
+    "Component design"
+  ]
+}

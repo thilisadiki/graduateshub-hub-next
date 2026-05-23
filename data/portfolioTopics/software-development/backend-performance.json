@@ -1,0 +1,12 @@
+{
+  "id": "backend-performance",
+  "categoryId": "software-development",
+  "title": "Backend Performance Optimization",
+  "description": "Speed up slow applications. Tests profiling, caching strategies (Redis), and mitigating N+1 query problems.",
+  "skillsProven": [
+    "Performance Tuning",
+    "Caching",
+    "Database Profiling",
+    "Algorithmic Optimization"
+  ]
+}
