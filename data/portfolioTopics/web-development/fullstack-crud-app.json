@@ -1,0 +1,12 @@
+{
+  "id": "fullstack-crud-app",
+  "categoryId": "web-development",
+  "title": "Full-Stack CRUD Application",
+  "description": "Build a complete application from database to UI. Tests backend routing, database queries, API design, and frontend integration.",
+  "skillsProven": [
+    "REST/GraphQL APIs",
+    "Database operations",
+    "Full-stack integration",
+    "Server-side logic"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "it-backup-disaster-recovery",
+  "categoryId": "it",
+  "title": "Backup & Disaster Recovery",
+  "description": "Plan and rehearse the recovery of an IT environment after failure. Tests 3-2-1 backup design, tabletop DR exercises, and business continuity tiering.",
+  "skillsProven": [
+    "Backup strategy",
+    "Disaster recovery",
+    "RTO / RPO design",
+    "Business continuity"
+  ]
+}

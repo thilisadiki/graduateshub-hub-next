@@ -1,0 +1,12 @@
+{
+  "id": "workflow-integration",
+  "categoryId": "ai-prompting",
+  "title": "AI Workflow Integration",
+  "description": "Design the logic for connecting LLMs to tools like Zapier, Make, or internal APIs. Tests function calling logic and automation.",
+  "skillsProven": [
+    "Function calling logic",
+    "Automation design",
+    "API bridging",
+    "Workflow mapping"
+  ]
+}

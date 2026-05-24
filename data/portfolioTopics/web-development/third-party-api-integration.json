@@ -1,0 +1,12 @@
+{
+  "id": "third-party-api-integration",
+  "categoryId": "web-development",
+  "title": "Third-Party API Integration",
+  "description": "Integrate complex external services like Stripe or Google Maps. Tests SDK usage, webhook handling, and reading external documentation.",
+  "skillsProven": [
+    "API SDKs",
+    "Webhooks",
+    "Security (API Keys)",
+    "Documentation parsing"
+  ]
+}

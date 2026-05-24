@@ -1,0 +1,12 @@
+{
+  "id": "accessibility-a11y",
+  "categoryId": "design-ux",
+  "title": "Accessibility (a11y)",
+  "description": "Design for all users, including those with disabilities. Tests WCAG auditing, keyboard navigation, and inclusive design strategy.",
+  "skillsProven": [
+    "WCAG compliance",
+    "Keyboard navigation",
+    "Screen reader support",
+    "Inclusive design"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "context-window-management",
+  "categoryId": "ai-prompting",
+  "title": "Context Window Management",
+  "description": "Summarise and format massive documents to fit within token limits without losing critical information. Tests token efficiency.",
+  "skillsProven": [
+    "Token efficiency",
+    "Document summarisation",
+    "Information density",
+    "Context management"
+  ]
+}

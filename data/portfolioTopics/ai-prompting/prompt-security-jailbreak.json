@@ -1,0 +1,12 @@
+{
+  "id": "prompt-security-jailbreak",
+  "categoryId": "ai-prompting",
+  "title": "Prompt Security, Injection & Jailbreak Mitigation",
+  "description": "Audit security vulnerabilities in AI prompts, protect system guidelines from adversarial jailbreaks, and sanitize inputs to prevent prompt injection attacks.",
+  "skillsProven": [
+    "Jailbreak defense",
+    "Prompt injection mitigation",
+    "Security vulnerability audit",
+    "Adversarial evaluation"
+  ]
+}

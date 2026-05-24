@@ -1,0 +1,12 @@
+{
+  "id": "python-data-analysis",
+  "categoryId": "data",
+  "title": "Python for Data Analysis",
+  "description": "Use pandas, numpy, and the Python data ecosystem for analysis and automation. Tests data wrangling, merging, and report generation.",
+  "skillsProven": [
+    "pandas",
+    "numpy",
+    "Data wrangling",
+    "Report automation"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "sql-querying",
+  "categoryId": "data",
+  "title": "SQL Querying & Analysis",
+  "description": "Write, debug, and optimise SQL queries for real analytical work. Tests GROUP BY logic, window functions, joins, and query performance.",
+  "skillsProven": [
+    "SQL",
+    "Aggregations",
+    "Window functions",
+    "Query optimisation"
+  ]
+}

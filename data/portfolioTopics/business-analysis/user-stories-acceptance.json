@@ -1,0 +1,12 @@
+{
+  "id": "user-stories-acceptance",
+  "categoryId": "business-analysis",
+  "title": "User Stories & Acceptance Criteria",
+  "description": "Write clear, testable user stories and define done. Tests story writing, Given/When/Then criteria, and story mapping.",
+  "skillsProven": [
+    "User stories",
+    "Acceptance criteria",
+    "Story mapping",
+    "Agile requirements"
+  ]
+}

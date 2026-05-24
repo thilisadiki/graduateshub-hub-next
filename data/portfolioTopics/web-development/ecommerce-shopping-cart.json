@@ -1,0 +1,12 @@
+{
+  "id": "ecommerce-shopping-cart",
+  "categoryId": "web-development",
+  "title": "E-commerce Shopping Cart",
+  "description": "Build a functional shopping cart experience. Tests state management, data persistence, edge case handling, and complex UI interactions.",
+  "skillsProven": [
+    "State management",
+    "Data persistence",
+    "UI interactions",
+    "Edge cases"
+  ]
+}

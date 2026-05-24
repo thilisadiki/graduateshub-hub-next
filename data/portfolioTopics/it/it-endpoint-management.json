@@ -1,0 +1,12 @@
+{
+  "id": "it-endpoint-management",
+  "categoryId": "it",
+  "title": "Endpoint & Device Management",
+  "description": "Standardise, patch, and govern the laptops and phones that staff actually use. Tests asset management, patch scheduling, and BYOD/MDM policy design.",
+  "skillsProven": [
+    "Asset management",
+    "Patch management",
+    "Standard builds",
+    "MDM policy"
+  ]
+}

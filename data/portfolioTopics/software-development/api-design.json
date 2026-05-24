@@ -1,0 +1,12 @@
+{
+  "id": "api-design",
+  "categoryId": "software-development",
+  "title": "API Design",
+  "description": "Design a small, minimal REST API for a real scenario. Tests resource modelling, scope judgment, and how you handle edge cases.",
+  "skillsProven": [
+    "API design",
+    "System thinking",
+    "Technical writing",
+    "Product scoping"
+  ]
+}

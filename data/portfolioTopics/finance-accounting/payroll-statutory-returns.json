@@ -1,0 +1,12 @@
+{
+  "id": "payroll-statutory-returns",
+  "categoryId": "finance-accounting",
+  "title": "Payroll & Statutory Returns",
+  "description": "Process payroll and meet SARS filing obligations. Tests gross-to-net calculations, EMP201/501 preparation, and payroll system design.",
+  "skillsProven": [
+    "Payroll processing",
+    "EMP201",
+    "EMP501",
+    "Statutory deductions"
+  ]
+}

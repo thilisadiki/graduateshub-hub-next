@@ -6,6 +6,7 @@ import { getSupabase } from '@/utils/supabase';
 import { checkBotProtection } from '@/utils/security';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import type { PortfolioEvaluation, RubricScore } from '@/types';
+import { signEvaluation } from '@/utils/signing';
 
 const MIN_SUBMISSION_LENGTH = 200;
 const MAX_SUBMISSION_LENGTH = 20000;
@@ -215,11 +216,28 @@ ${submission}`;
     });
     if (error) throw error;
   } catch (error: any) {
-    console.error('Supabase insert failed:', error);
-    return NextResponse.json(
-      { error: 'We graded your work but could not save it. Please try again.' },
-      { status: 500 },
+    console.error('Supabase insert failed, falling back to client-signed mode:', error);
+    const signature = signEvaluation(
+      proofId,
+      task.id,
+      graduateName,
+      submission,
+      submissionLinks,
+      evaluation,
     );
+    return NextResponse.json({
+      proofId: `temp-${proofId}`,
+      proofUrl: `/proof/temp-${proofId}`,
+      evaluation,
+      databaseDown: true,
+      signature,
+      taskId: task.id,
+      taskTitle: task.title,
+      taskField: categoryName,
+      graduateName,
+      submission,
+      submissionLinks,
+    });
   }
 
   return NextResponse.json({

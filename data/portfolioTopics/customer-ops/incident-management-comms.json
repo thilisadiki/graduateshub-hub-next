@@ -1,0 +1,12 @@
+{
+  "id": "incident-management-comms",
+  "categoryId": "customer-ops",
+  "title": "Incident Management & Communication",
+  "description": "Communicate during outages and write post-mortems. Tests crisis communication, transparency, and root-cause analysis.",
+  "skillsProven": [
+    "Incident communication",
+    "Status page updates",
+    "Post-mortems",
+    "Crisis management"
+  ]
+}

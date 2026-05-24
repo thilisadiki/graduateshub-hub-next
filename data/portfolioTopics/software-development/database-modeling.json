@@ -1,0 +1,12 @@
+{
+  "id": "database-modeling",
+  "categoryId": "software-development",
+  "title": "Database Modeling",
+  "description": "Design robust relational schemas. Tests normalization, understanding of indexes, and planning for complex data relationships.",
+  "skillsProven": [
+    "Schema design",
+    "Normalization",
+    "Relational databases",
+    "Data integrity"
+  ]
+}

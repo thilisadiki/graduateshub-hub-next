@@ -1,0 +1,12 @@
+{
+  "id": "budgeting-variance",
+  "categoryId": "finance-accounting",
+  "title": "Budgeting & Variance Analysis",
+  "description": "Plan, track, and explain financial performance vs budget. Tests budget construction, variance decomposition, and zero-based thinking.",
+  "skillsProven": [
+    "Budget construction",
+    "Variance analysis",
+    "Zero-based budgeting",
+    "Financial planning"
+  ]
+}

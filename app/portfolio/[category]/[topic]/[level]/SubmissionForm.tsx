@@ -74,6 +74,26 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
         return;
       }
       if (data.proofUrl) {
+        if (data.databaseDown) {
+          try {
+            localStorage.setItem(
+              `portfolio-proof-${data.proofId}`,
+              JSON.stringify({
+                rawProofId: data.proofId.replace('temp-', ''),
+                taskId: data.taskId,
+                taskTitle: data.taskTitle,
+                taskField: data.taskField,
+                graduateName: data.graduateName,
+                submission: data.submission,
+                submissionLinks: data.submissionLinks,
+                evaluation: data.evaluation,
+                signature: data.signature,
+              })
+            );
+          } catch (storageErr) {
+            console.error('Failed to save proof locally:', storageErr);
+          }
+        }
         router.push(data.proofUrl);
         return;
       }

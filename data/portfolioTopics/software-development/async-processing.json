@@ -1,0 +1,12 @@
+{
+  "id": "async-processing",
+  "categoryId": "software-development",
+  "title": "Asynchronous Processing",
+  "description": "Manage long-running tasks and message queues. Tests event loops, worker threads, and distributed task queues (like RabbitMQ or BullMQ).",
+  "skillsProven": [
+    "Message Queues",
+    "Event Loop",
+    "Background Jobs",
+    "Distributed Systems"
+  ]
+}

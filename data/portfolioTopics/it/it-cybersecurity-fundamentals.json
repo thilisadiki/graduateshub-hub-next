@@ -1,0 +1,12 @@
+{
+  "id": "it-cybersecurity-fundamentals",
+  "categoryId": "it",
+  "title": "Cybersecurity Fundamentals",
+  "description": "Defend a small organisation from the threats it actually faces. Tests phishing awareness, vulnerability assessment, and incident response playbook design.",
+  "skillsProven": [
+    "Phishing defence",
+    "Vulnerability assessment",
+    "Incident response",
+    "Security awareness"
+  ]
+}

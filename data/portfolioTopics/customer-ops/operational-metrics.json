@@ -1,0 +1,12 @@
+{
+  "id": "operational-metrics",
+  "categoryId": "customer-ops",
+  "title": "Operational Metrics & Reporting",
+  "description": "Interpret CSAT, First Reply Time, and SLA breaches. Tests data interpretation, reporting, and operational insight.",
+  "skillsProven": [
+    "Metrics interpretation",
+    "Reporting",
+    "CSAT analysis",
+    "SLA tracking"
+  ]
+}

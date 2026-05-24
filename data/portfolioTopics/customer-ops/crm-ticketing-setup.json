@@ -1,0 +1,12 @@
+{
+  "id": "crm-ticketing-setup",
+  "categoryId": "customer-ops",
+  "title": "Helpdesk & CRM Configuration",
+  "description": "Configure customer support ticketing systems for scale. Tests ticket routing, macro creation, status transitions, and tag structures.",
+  "skillsProven": [
+    "CRM administration",
+    "Zendesk / Jira Service Desk",
+    "Ticket workflows",
+    "Support automation"
+  ]
+}

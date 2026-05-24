@@ -1,0 +1,12 @@
+{
+  "id": "api-data-fetching",
+  "categoryId": "web-development",
+  "title": "API Data Fetching",
+  "description": "Build a frontend that interacts with a REST API. Tests asynchronous JavaScript, React state management, error handling, and performance optimization.",
+  "skillsProven": [
+    "API integration",
+    "React state",
+    "Error handling",
+    "Performance optimization"
+  ]
+}

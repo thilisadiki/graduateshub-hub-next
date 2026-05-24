@@ -1,0 +1,13 @@
+{
+  "id": "sme-bookkeeping-cloud-accounting",
+  "categoryId": "finance-accounting",
+  "title": "Practical SME Bookkeeping & Cloud Accounting",
+  "description": "Manage day-to-day bookkeeping, reconcile bank statements, and configure cloud accounting software for SMEs. Tests double-entry principles, software setup, and financial reporting.",
+  "skillsProven": [
+    "Cloud accounting setup (Xero/QuickBooks)",
+    "Bank reconciliation",
+    "Double-entry bookkeeping",
+    "SME financial reporting",
+    "Journal adjustments"
+  ]
+}

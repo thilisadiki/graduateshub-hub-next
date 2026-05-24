@@ -1,0 +1,12 @@
+{
+  "id": "standard-operating-procedures",
+  "categoryId": "customer-ops",
+  "title": "Standard Operating Procedures (SOPs)",
+  "description": "Write clear, executable steps for repetitive operations tasks. Tests clarity, edge-case handling, and process design.",
+  "skillsProven": [
+    "SOP writing",
+    "Process documentation",
+    "Clarity",
+    "Edge-case handling"
+  ]
+}

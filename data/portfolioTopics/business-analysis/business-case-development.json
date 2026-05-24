@@ -1,0 +1,12 @@
+{
+  "id": "business-case-development",
+  "categoryId": "business-analysis",
+  "title": "Business Case Development",
+  "description": "Build the argument for investment in a solution. Tests one-pagers, cost-benefit analysis, and full investment cases.",
+  "skillsProven": [
+    "Business cases",
+    "Cost-benefit analysis",
+    "NPV",
+    "Executive communication"
+  ]
+}

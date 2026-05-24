@@ -1,0 +1,12 @@
+{
+  "id": "state-machine-logic",
+  "categoryId": "web-development",
+  "title": "Complex State Machines",
+  "description": "Build applications with many intersecting states, like a custom video player or a browser game. Tests reducer logic, XState, and avoiding impossible states.",
+  "skillsProven": [
+    "useReducer / XState",
+    "Complex state logic",
+    "Media APIs",
+    "Event handling"
+  ]
+}

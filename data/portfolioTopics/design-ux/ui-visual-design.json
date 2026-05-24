@@ -1,0 +1,12 @@
+{
+  "id": "ui-visual-design",
+  "categoryId": "design-ux",
+  "title": "UI Design & Visual Design",
+  "description": "Make interfaces beautiful, consistent, and functional. Tests visual hierarchy, layout, colour theory, and responsive design.",
+  "skillsProven": [
+    "Visual design",
+    "UI layout",
+    "Colour theory",
+    "Responsive design"
+  ]
+}

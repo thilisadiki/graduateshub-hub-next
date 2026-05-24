@@ -1,0 +1,12 @@
+{
+  "id": "it-server-administration",
+  "categoryId": "it",
+  "title": "Server & OS Administration",
+  "description": "Build, harden, and troubleshoot the servers that run business applications. Tests Windows Server documentation, Linux hardening, and performance investigation.",
+  "skillsProven": [
+    "Windows Server",
+    "Linux hardening",
+    "Performance analysis",
+    "System documentation"
+  ]
+}

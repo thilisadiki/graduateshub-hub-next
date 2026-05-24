@@ -1,0 +1,12 @@
+{
+  "id": "interaction-design",
+  "categoryId": "design-ux",
+  "title": "Interaction Design & Micro-interactions",
+  "description": "Design how interfaces respond to user input. Tests form validation, notification systems, and gesture-based interactions.",
+  "skillsProven": [
+    "Interaction design",
+    "Micro-interactions",
+    "Form design",
+    "Motion design"
+  ]
+}

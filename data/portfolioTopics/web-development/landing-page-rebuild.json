@@ -1,0 +1,13 @@
+{
+  "id": "landing-page-rebuild",
+  "categoryId": "web-development",
+  "title": "Landing Page Rebuild",
+  "description": "Rebuild a marketing page section from a screenshot or spec. Tests HTML, CSS, responsive behaviour, and design collaboration.",
+  "skillsProven": [
+    "HTML",
+    "CSS",
+    "Responsive design",
+    "Accessibility",
+    "Design collaboration"
+  ]
+}

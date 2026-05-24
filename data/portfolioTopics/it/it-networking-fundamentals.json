@@ -1,0 +1,12 @@
+{
+  "id": "it-networking-fundamentals",
+  "categoryId": "it",
+  "title": "Networking & Infrastructure",
+  "description": "Design, troubleshoot, and document networks the way a working IT technician does. Tests subnetting, VLAN planning, troubleshooting flows, and migration design.",
+  "skillsProven": [
+    "Subnetting",
+    "VLAN design",
+    "Network troubleshooting",
+    "Infrastructure migration"
+  ]
+}

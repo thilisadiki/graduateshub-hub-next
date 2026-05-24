@@ -1,0 +1,12 @@
+{
+  "id": "prompt-engineering-basics",
+  "categoryId": "ai-prompting",
+  "title": "Prompt Engineering Basics",
+  "description": "Master few-shot prompting, constraint setting, and clarity. Tests the ability to get predictable outputs from LLMs.",
+  "skillsProven": [
+    "Few-shot prompting",
+    "Constraint setting",
+    "Iterative refinement",
+    "Clarity"
+  ]
+}

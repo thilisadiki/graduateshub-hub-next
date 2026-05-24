@@ -1,0 +1,12 @@
+{
+  "id": "interactive-dashboard-layout",
+  "categoryId": "web-development",
+  "title": "Interactive Dashboard Layout",
+  "description": "Build a complex, data-rich interface. Tests modern CSS layouts, responsive design, charting libraries, and real-time data handling.",
+  "skillsProven": [
+    "CSS Grid/Flexbox",
+    "Responsive data tables",
+    "Data visualization",
+    "Real-time updates"
+  ]
+}

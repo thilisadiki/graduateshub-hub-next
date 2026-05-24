@@ -1,0 +1,12 @@
+{
+  "id": "rag-prep",
+  "categoryId": "ai-prompting",
+  "title": "RAG (Retrieval-Augmented Generation) Prep",
+  "description": "Clean and chunk raw text so it can be effectively embedded and retrieved by a vector database. Tests data structuring for AI.",
+  "skillsProven": [
+    "Text chunking",
+    "Data cleaning",
+    "Metadata extraction",
+    "RAG principles"
+  ]
+}

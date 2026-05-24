@@ -1,0 +1,12 @@
+{
+  "id": "mobile-ux-design",
+  "categoryId": "design-ux",
+  "title": "Mobile UX & Mobile-First Design",
+  "description": "Design responsive, mobile-first mobile app experiences that respect platform guidelines. Tests iOS/Android patterns, touch target sizing, and mobile gesture design.",
+  "skillsProven": [
+    "Mobile UX design",
+    "iOS/Android guidelines",
+    "Mobile patterns",
+    "Touch target optimisation"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "design-systems",
+  "categoryId": "design-ux",
+  "title": "Design Systems",
+  "description": "Build reusable component libraries and design tokens. Tests component specification, token architecture, and library auditing.",
+  "skillsProven": [
+    "Component design",
+    "Design tokens",
+    "Style guides",
+    "Consistency auditing"
+  ]
+}

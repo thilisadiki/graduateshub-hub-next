@@ -1,0 +1,12 @@
+{
+  "id": "uat-planning",
+  "categoryId": "business-analysis",
+  "title": "UAT Planning & Execution",
+  "description": "Plan and manage user acceptance testing. Tests test case writing, defect triage, and multi-phase UAT strategy.",
+  "skillsProven": [
+    "UAT planning",
+    "Test case design",
+    "Defect management",
+    "Go/no-go criteria"
+  ]
+}

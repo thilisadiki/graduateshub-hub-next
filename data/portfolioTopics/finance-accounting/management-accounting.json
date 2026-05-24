@@ -1,0 +1,12 @@
+{
+  "id": "management-accounting",
+  "categoryId": "finance-accounting",
+  "title": "Management Accounting",
+  "description": "Internal reporting that drives operational decisions. Tests break-even analysis, cost allocation, and make-vs-buy decision-making.",
+  "skillsProven": [
+    "Break-even analysis",
+    "Cost allocation",
+    "Activity-based costing",
+    "Decision analysis"
+  ]
+}
