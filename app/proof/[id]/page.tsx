@@ -8,6 +8,7 @@ import { getTaskById } from '@/data/portfolioTasks';
 import type { PortfolioProof } from '@/types';
 import ShareButtons from './ShareButtons';
 import { SITE_URL, SITE_NAME } from '@/lib/seo';
+import TempProofViewer from './TempProofViewer';
 
 const getProof = cache(async (id: string): Promise<PortfolioProof | null> => {
   try {
@@ -34,6 +35,13 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
+  if (id.startsWith('temp-')) {
+    return {
+      title: 'Local Badge Preview | Graduates Hub',
+      description: 'Review and synchronize your graded portfolio badge.',
+      robots: 'noindex, nofollow',
+    };
+  }
   const proof = await getProof(id);
   if (!proof) return { title: 'Badge not found' };
 
@@ -92,6 +100,9 @@ export default async function ProofPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  if (id.startsWith('temp-')) {
+    return <TempProofViewer id={id} />;
+  }
   const proof = await getProof(id);
   if (!proof) notFound();
 
