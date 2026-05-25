@@ -44,7 +44,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
     image: course.image,
     provider: { '@type': 'Organization', name: 'Graduates Hub', sameAs: SITE_URL },
     hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'Online', courseWorkload: course.duration },
-    offers: [{ '@type': 'Offer', category: 'Free', price: '0', priceCurrency: 'ZAR' }],
+    offers: [{ '@type': 'Offer', category: 'Free', price: '0', priceCurrency: 'USD' }],
   };
 
   const breadcrumbSchema = {
