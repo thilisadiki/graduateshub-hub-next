@@ -487,7 +487,7 @@ export default function GuidesPage() {
               Search across hundreds of free certified courses by topic, platform, or skill level.
             </p>
             <Link
-              href="/search"
+              href="/find-a-course"
               className="mt-2 self-start bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors"
             >
               Search Free Courses →

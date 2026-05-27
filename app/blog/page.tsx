@@ -269,7 +269,7 @@ export default async function BlogPage({
                 <p className="text-sm text-gray-500">Browse 100+ free certified courses across IT, Business, Marketing, Accounting, and more.</p>
               </div>
               <Link
-                href="/search"
+                href="/find-a-course"
                 className="shrink-0 bg-primary hover:bg-[#5a4000] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
               >
                 Browse Free Courses →

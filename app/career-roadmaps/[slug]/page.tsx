@@ -556,7 +556,7 @@ export default async function CareerRoadmapPage({
             ← All Career Roadmaps
           </Link>
           <Link
-            href="/search"
+            href="/find-a-course"
             className="flex-1 text-center bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
           >
             Find a Course →

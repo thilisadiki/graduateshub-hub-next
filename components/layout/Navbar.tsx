@@ -109,7 +109,7 @@ export default function Navbar() {
               AI Tools<LinkPendingDot />
             </Link>
             <Link
-              href="/search"
+              href="/find-a-course"
               className="flex items-center bg-[#FFF8F1] border-2 border-primary text-primary hover:bg-[#FFDF9C]/40 px-5 py-2 rounded-md font-bold text-sm transition-colors whitespace-nowrap"
             >
               Find a Course<LinkPendingDot />
@@ -160,7 +160,7 @@ export default function Navbar() {
           <Sparkles size={16} className="text-primary" /> AI Career Tools - 7 Free Tools
         </Link>
         <div className="flex flex-col gap-3 pt-6 pb-2">
-          <Link href="/search" onClick={toggleMobileMenu}
+          <Link href="/find-a-course" onClick={toggleMobileMenu}
             className="flex items-center justify-center bg-primary hover:bg-[#5a4000] text-white px-5 py-3 rounded-md font-bold transition-colors w-full">
             Find a Course<LinkPendingDot />
           </Link>

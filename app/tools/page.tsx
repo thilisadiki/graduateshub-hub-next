@@ -311,7 +311,7 @@ export default function ToolsPage() {
               { href: '/portfolio', label: 'Proof of Work Portfolio', desc: 'Complete practical tasks and earn a shareable Badge of Competence for LinkedIn' },
               { href: '/career-roadmaps', label: 'Career Roadmaps', desc: 'Step-by-step guides to getting job-ready in a specific field' },
               { href: '/interview-prep', label: 'CV and Interview Prep', desc: 'Expert-written guides for writing a strong CV and preparing for interviews' },
-              { href: '/search', label: 'Free Course Search', desc: 'Browse and filter 128+ free certified courses by topic and level' },
+              { href: '/find-a-course', label: 'Find a Course', desc: 'Browse and filter 128+ free certified courses by topic and level' },
             ].map(({ href, label, desc }) => (
               <Link
                 key={href}
@@ -334,7 +334,7 @@ export default function ToolsPage() {
           </div>
           <div className="flex gap-3 shrink-0">
             <Link
-              href="/search"
+              href="/find-a-course"
               className="bg-primary hover:bg-[#5a4000] text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm whitespace-nowrap"
             >
               Browse All Courses

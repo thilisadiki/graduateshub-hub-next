@@ -75,6 +75,11 @@ const nextConfig: NextConfig = {
         destination: '/categories',
         permanent: true,
       },
+      {
+        source: '/search',
+        destination: '/find-a-course',
+        permanent: true,
+      },
     ];
   },
   devIndicators: false,

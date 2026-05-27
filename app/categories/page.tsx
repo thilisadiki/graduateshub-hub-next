@@ -361,8 +361,8 @@ export default function CategoriesPage() {
             <Link href="/guides" className="bg-white text-primary font-bold text-sm px-6 py-3 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors whitespace-nowrap">
               Browse All Guides
             </Link>
-            <Link href="/search" className="bg-[#5a4000] hover:bg-[#261A00] text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap">
-              Search Courses
+            <Link href="/find-a-course" className="bg-[#5a4000] hover:bg-[#261A00] text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap">
+              Find a Course
             </Link>
           </div>
         </section>

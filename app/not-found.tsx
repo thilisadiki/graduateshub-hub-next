@@ -21,7 +21,7 @@ export default function NotFound() {
           <Link href="/" className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-white font-medium rounded-xl hover:bg-[#5a4000] focus:ring-4 focus:ring-[#FFDF9C]/50 transition-all shadow-md hover:shadow-lg">
             <Home size={20} />Return to Homepage
           </Link>
-          <Link href="/search" className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-[#4F4639] font-medium rounded-xl hover:bg-[#FBF3EB] border border-[#D1C5B4] focus:ring-4 focus:ring-[#D1C5B4]/50 transition-all shadow-sm">
+          <Link href="/find-a-course" className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-[#4F4639] font-medium rounded-xl hover:bg-[#FBF3EB] border border-[#D1C5B4] focus:ring-4 focus:ring-[#D1C5B4]/50 transition-all shadow-sm">
             <Search size={20} className="text-gray-500" />Browse Courses
           </Link>
         </div>

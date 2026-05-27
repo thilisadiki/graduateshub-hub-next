@@ -238,7 +238,7 @@ export default function FreeDigitalMarketingCoursesPage() {
       ctaPrimaryLabel="Browse Marketing Courses"
       ctaPrimaryHref="/category/marketing"
       ctaSecondaryLabel="Search a Specific Topic"
-      ctaSecondaryHref="/search"
+      ctaSecondaryHref="/find-a-course"
     />
   );
 }

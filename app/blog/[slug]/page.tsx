@@ -352,7 +352,7 @@ export default async function BlogPostPage({
             <ArrowLeft size={16} /> All Articles
           </Link>
           <Link
-            href="/search"
+            href="/find-a-course"
             className="bg-primary hover:bg-[#5a4000] text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm"
           >
             Find a Free Course →

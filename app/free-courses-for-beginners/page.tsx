@@ -276,7 +276,7 @@ export default function FreeCoursesForBeginnersPage() {
       ctaPrimaryLabel="Browse All Courses"
       ctaPrimaryHref="/categories"
       ctaSecondaryLabel="Search a Specific Topic"
-      ctaSecondaryHref="/search"
+      ctaSecondaryHref="/find-a-course"
     />
   );
 }

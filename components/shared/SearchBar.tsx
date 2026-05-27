@@ -52,14 +52,14 @@ export default function SearchBar({
   const handleSuggestionClick = (title: string) => {
     setSearchQuery(title);
     setShowSuggestions(false);
-    router.push(`/search?q=${encodeURIComponent(title)}`);
+    router.push(`/find-a-course?q=${encodeURIComponent(title)}`);
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setShowSuggestions(false);
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      router.push(`/find-a-course?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
 
