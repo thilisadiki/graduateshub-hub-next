@@ -79,7 +79,7 @@ export default function ContactPage() {
                 <h3 className="font-bold text-gray-900">Response time</h3>
               </div>
               <p className="text-sm text-gray-600">
-                We typically respond within <strong>24 to 48 hours</strong> on South African business days
+                We typically respond within <strong>4 to 12 hours</strong> on South African business days
                 (Monday to Friday, excluding public holidays).
               </p>
             </div>
