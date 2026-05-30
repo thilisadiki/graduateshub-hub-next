@@ -367,7 +367,7 @@
       
       <div class="card-grid">
         <div class="card">
-          <div class="card-title">Next.js 16.2.4 & React 19</div>
+          <div class="card-title">Next.js 16.2.6 & React 19</div>
           <div class="card-text">Framework with App Router structure, leveraging React Server Components (RSC) and server actions.</div>
         </div>
         <div class="card">
@@ -391,22 +391,46 @@
       <pre><code>graduateshub-hub-next/
 ├── app/                          # Next.js App Router (Pages & API endpoints)
 │   ├── api/                      # Serverless API routes (Gemini, Supabase, Resend)
+│   │   ├── cv-review/            #   Gemini-powered AI tool endpoints
+│   │   ├── interview-prep/       #   (cv-review, interview-prep, learning-path,
+│   │   ├── learning-path/        #    skills-gap, jd-decoder, recommendations)
+│   │   ├── skills-gap/
+│   │   ├── jd-decoder/
+│   │   ├── recommendations/
+│   │   ├── portfolio/submit/     #   Gemini code review + Supabase write
+│   │   ├── portfolio/sync/       #   HMAC-verified resync after DB downtime
+│   │   ├── articles/             #   WordPress blog proxy
+│   │   ├── contact/ · feedback/  #   Resend mailer endpoints
+│   │   └── cron/keepalive/       #   Supabase keep-alive ping
 │   ├── blog/                     # Blog dynamic routes & listing page
 │   ├── career-roadmaps/          # Career roadmaps static/dynamic pages
 │   ├── interview-prep/           # Interview preparation guides
-│   ├── portfolio/                # Portfolio builder and category listings
+│   ├── portfolio/[category]/...  # Proof-of-work tasks (category/topic/level)
 │   ├── proof/[id]/               # Public portfolio submission showcases
-│   └── tools/                    # Interactive career tools (Gemini-powered)
+│   ├── tools/                    # Interactive career tools landing (Gemini-powered)
+│   ├── cv-builder/               # Multi-step CV builder + printable templates
+│   ├── find-a-course/            # Browse-and-filter course finder (replaces /search)
+│   ├── course/[courseId]/        # Individual course detail pages
+│   ├── category/[categoryId]/    # Course category listings
+│   ├── categories/ · guides/     # Category & guide index pages
+│   ├── free-*-courses/           # SEO landing pages (per-topic free-course guides)
+│   └── about/ · contact/ · …     # Static marketing & legal pages
 ├── components/                   # Reusable React components
 │   ├── home/                     # Home page elements
-│   ├── course/                   # Course display templates
+│   ├── course/                   # Course display templates & filters
 │   ├── layout/                   # Global layout (Navbar, Footer, CookieConsent)
-│   └── shared/                   # Common elements (Newsletter, Promos)
+│   ├── modals/                   # Gemini AI tool modals (CV review, skills gap, etc.)
+│   ├── ui/                       # Low-level UI primitives (Skeleton, pending dots)
+│   └── shared/                   # Common elements (Newsletter, Pagination, Turnstile)
 ├── data/                         # Hardcoded site datasets (Fast static page builds)
-├── lib/                          # Site-wide constants and SEO configuration
+│   ├── roadmaps/ · interviewPrep/  # TypeScript datasets (index.ts registries)
+│   ├── categories/ · courses.ts    # Course catalog data
+│   └── portfolioTasks/             # Proof-of-work tasks as per-category JSON files
+├── lib/                          # Site-wide constants and SEO configuration (seo.ts)
 ├── supabase/                     # SQL database schema and initialization scripts
 ├── types/                        # Main TypeScript interfaces (types/index.ts)
-└── utils/                        # Utilities (rate limiter, safety guards, email escaping)</code></pre>
+└── utils/                        # Utilities (rate limiter, bot guards, HMAC signing,
+                                  #            Supabase client, email escaping)</code></pre>
     </section>
 
     <section id="patterns">
@@ -414,7 +438,12 @@
       
       <h3>A. Data-Driven Static Content (Zero Database Overhead)</h3>
       <p>Rather than pulling career data or course listings from a database dynamically on every request, all primary site content is stored inside <code>/data</code> as TypeScript datasets. This ensures high speed, low database billing, and robust static generation.</p>
-      
+
+      <div class="alert">
+        <div class="alert-title">Proof-of-work tasks are JSON, not TypeScript</div>
+        <p>Portfolio task definitions live under <code>data/portfolioTasks/&lt;category&gt;/*.json</code> (one file per task) and are read at build time by <code>data/portfolioTasks/index.ts</code> using <code>fs.readdirSync</code>. This keeps the large, frequently-edited task library modular and reviewable without bloating a single source file. Career roadmaps and interview-prep guides remain TypeScript modules exported through their respective <code>index.ts</code> registries.</p>
+      </div>
+
       <pre><code>import { roadmaps } from '@/data/roadmaps';
 
 export async function generateStaticParams() {
@@ -433,10 +462,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
       <h3>C. Component Separation</h3>
       <ul>
-        <li><strong>Layout components (<code>components/layout/</code>)</strong>: Global layouts (e.g. Navbar, Footer, CookieConsent).</li>
+        <li><strong>Layout components (<code>components/layout/</code>)</strong>: Global layouts (e.g. Navbar, Footer, CookieConsent, OneSignalInit).</li>
         <li><strong>Feature components (<code>components/home/</code>, <code>components/course/</code>)</strong>: Domain-specific files.</li>
-        <li><strong>Shared components (<code>components/shared/</code>)</strong>: Multi-page blocks like banners.</li>
+        <li><strong>Modal components (<code>components/modals/</code>)</strong>: Client-side dialogs that drive the Gemini AI tools (CV review, skills gap, learning path, JD decoder, interview prep, recommendations, career quiz).</li>
+        <li><strong>UI primitives (<code>components/ui/</code>)</strong>: Low-level building blocks (Skeleton loaders, pending-state dots).</li>
+        <li><strong>Shared components (<code>components/shared/</code>)</strong>: Multi-page blocks like the newsletter banner, pagination, search bar, and the Turnstile widget.</li>
       </ul>
+
+      <h3>D. Database Downtime Contingency (HMAC-Signed Stashing)</h3>
+      <p>Portfolio submissions are graded by Gemini even if Supabase is unavailable. When the write to <code>portfolio_proofs</code> fails, <code>/api/portfolio/submit</code> returns the evaluation together with an HMAC-SHA256 signature (<code>utils/signing.ts</code>) covering the proof payload. The client stashes the signed result locally and renders it via <code>proof/[id]/TempProofViewer</code>. Once the database recovers, the client POSTs the stashed payload to <code>/api/portfolio/sync</code>, which re-verifies the signature before persisting — so a score can never be forged or altered client-side.</p>
     </section>
 
     <section id="database">
@@ -463,7 +497,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <section id="integrations">
       <h2>5. Third-Party Integrations</h2>
       <ul>
-        <li><strong>Google Gemini API:</strong> Controlled server-side via the `@google/genai` SDK to evaluate student submissions, build learning paths, and audit CVs.</li>
+        <li><strong>Google Gemini API:</strong> Controlled server-side via the `@google/genai` SDK (currently the <code>gemini-3.1-flash-lite</code> model across all AI routes) to evaluate student submissions, build learning paths, and audit CVs.</li>
         <li><strong>Resend:</strong> Handles mail sending for feedback and contact pages.</li>
         <li><strong>OneSignal:</strong> Delivers browser-push notifications initialized through a lazy client script.</li>
         <li><strong>Cloudflare Turnstile:</strong> Secures form inputs by executing verification tokens before executing endpoints.</li>

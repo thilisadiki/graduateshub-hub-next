@@ -335,6 +335,9 @@
       <li class="nav-item">
         <a href="#supabase-guard">Supabase Guard</a>
       </li>
+      <li class="nav-item">
+        <a href="#evaluation-signing">Evaluation Signing</a>
+      </li>
     </ul>
 
     <div class="doc-links">
@@ -422,6 +425,11 @@
             <td>Gemini code review + Supabase write limit</td>
           </tr>
           <tr>
+            <td><code>/api/portfolio/sync</code></td>
+            <td>5 req/min</td>
+            <td>HMAC-verified resync of stashed proofs after DB downtime</td>
+          </tr>
+          <tr>
             <td><code>/api/contact</code></td>
             <td>3 req/min</td>
             <td>Prevents spamming the mailer (Resend)</td>
@@ -497,6 +505,21 @@
       <pre><code>if (typeof window !== 'undefined') {
   throw new Error('getSupabase must only be called server-side.');
 }</code></pre>
+    </section>
+
+    <section id="evaluation-signing">
+      <h2>8. Evaluation Signing (Anti-Tamper)</h2>
+      <p>The portfolio flow grades a submission with Gemini even when Supabase is temporarily unavailable. To stop a graduate from forging or editing their own score while it is stashed client-side, every evaluation is signed with an HMAC-SHA256 signature in <code>utils/signing.ts</code>, keyed by the <code>SUPABASE_SERVICE_ROLE_KEY</code>.</p>
+
+      <div class="alert caution">
+        <div class="alert-title">Server-side verification on resync</div>
+        <p>When <code>/api/portfolio/sync</code> later persists a stashed proof, it recomputes the HMAC over the same payload (<code>proofId</code>, <code>taskId</code>, <code>graduateName</code>, <code>submission</code>, <code>submissionLinks</code>, <code>evaluation</code>) and rejects the request with <code>400 Bad Request</code> if the signature does not match. The signing key never leaves the server.</p>
+      </div>
+
+      <pre><code>const signature = crypto
+  .createHmac('sha256', process.env.SUPABASE_SERVICE_ROLE_KEY)
+  .update(JSON.stringify(payload))
+  .digest('hex');</code></pre>
     </section>
   </main>
 
