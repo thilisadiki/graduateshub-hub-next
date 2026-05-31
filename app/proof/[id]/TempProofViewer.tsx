@@ -12,6 +12,7 @@ interface StashedProof {
   taskTitle: string;
   taskField: string;
   graduateName: string;
+  graduateEmail?: string;
   submission: string;
   submissionLinks: string[];
   evaluation: PortfolioEvaluation;
@@ -54,6 +55,7 @@ export default function TempProofViewer({ id }: { id: string }) {
           taskTitle: data.taskTitle,
           taskField: data.taskField,
           graduateName: data.graduateName,
+          graduateEmail: data.graduateEmail || '',
           submission: data.submission,
           submissionLinks: data.submissionLinks,
           evaluation: data.evaluation,

@@ -7,10 +7,12 @@ import { checkBotProtection } from '@/utils/security';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import type { PortfolioEvaluation, RubricScore } from '@/types';
 import { signEvaluation } from '@/utils/signing';
+import { sendProofEmail, isValidEmail } from '@/utils/email';
 
 const MIN_SUBMISSION_LENGTH = 200;
 const MAX_SUBMISSION_LENGTH = 20000;
 const MAX_NAME_LENGTH = 80;
+const MAX_EMAIL_LENGTH = 254;
 const MAX_LINKS = 5;
 
 function generateProofId(): string {
@@ -51,6 +53,7 @@ export async function POST(request: NextRequest) {
 
   let taskId: string;
   let graduateName: string;
+  let graduateEmail: string;
   let submission: string;
   let submissionLinks: string[];
   try {
@@ -60,10 +63,16 @@ export async function POST(request: NextRequest) {
 
     taskId = String(body.taskId || '').trim();
     graduateName = String(body.graduateName || '').trim().slice(0, MAX_NAME_LENGTH);
+    graduateEmail = String(body.graduateEmail || '').trim().slice(0, MAX_EMAIL_LENGTH);
     submission = String(body.submission || '').trim();
     submissionLinks = sanitiseLinks(body.submissionLinks);
   } catch {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });
+  }
+
+  // Email is optional; only reject if a value was provided but is malformed.
+  if (graduateEmail && !isValidEmail(graduateEmail)) {
+    return NextResponse.json({ error: 'Please enter a valid email address, or leave it blank.' }, { status: 400 });
   }
 
   if (!taskId) {
@@ -235,8 +244,22 @@ ${submission}`;
       taskTitle: task.title,
       taskField: categoryName,
       graduateName,
+      graduateEmail,
       submission,
       submissionLinks,
+    });
+  }
+
+  // The proof is live. Email the permanent link if the graduate asked for one.
+  // Best-effort: never block the response on email delivery.
+  if (graduateEmail) {
+    await sendProofEmail({
+      to: graduateEmail,
+      graduateName,
+      taskTitle: task.title,
+      verdict: evaluation.verdict,
+      overallScore: evaluation.overallScore,
+      proofPath: `/proof/${proofId}`,
     });
   }
 

@@ -7,6 +7,7 @@ import CookieConsent from '@/components/layout/CookieConsent';
 import InstallPrompt from '@/components/layout/InstallPrompt';
 import ScrollToTop from '@/components/layout/ScrollToTop';
 import OneSignalInit from '@/components/layout/OneSignalInit';
+import ProofAutoSync from '@/components/layout/ProofAutoSync';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <InstallPrompt />
         <ScrollToTop />
         <OneSignalInit />
+        <ProofAutoSync />
         <SpeedInsights />
         <Analytics />
         {/* Google Analytics */}

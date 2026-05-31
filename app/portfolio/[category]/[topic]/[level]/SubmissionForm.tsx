@@ -12,6 +12,7 @@ const MAX_CHARS = 20000;
 export default function SubmissionForm({ taskId }: { taskId: string }) {
   const router = useRouter();
   const [graduateName, setGraduateName] = useState('');
+  const [graduateEmail, setGraduateEmail] = useState('');
   const [submission, setSubmission] = useState('');
   const [linksRaw, setLinksRaw] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -33,6 +34,11 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
 
     if (!graduateName.trim()) {
       setError('Please enter the name you want on your badge.');
+      return;
+    }
+    const trimmedEmail = graduateEmail.trim();
+    if (trimmedEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
+      setError('Please enter a valid email address, or leave it blank.');
       return;
     }
     if (belowMin) {
@@ -57,6 +63,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
         body: JSON.stringify({
           taskId,
           graduateName: graduateName.trim(),
+          graduateEmail: trimmedEmail,
           submission: submission.trim(),
           submissionLinks,
           _hp: honeypot,
@@ -84,6 +91,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
                 taskTitle: data.taskTitle,
                 taskField: data.taskField,
                 graduateName: data.graduateName,
+                graduateEmail: data.graduateEmail || '',
                 submission: data.submission,
                 submissionLinks: data.submissionLinks,
                 evaluation: data.evaluation,
@@ -141,6 +149,23 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
             required
           />
           <p className="text-xs text-gray-500 mt-1">This appears on your public Badge.</p>
+        </div>
+
+        <div>
+          <label htmlFor="graduate-email" className="block text-sm font-bold text-gray-900 mb-1.5">
+            Email <span className="text-gray-400 font-normal">(optional)</span>
+          </label>
+          <input
+            id="graduate-email"
+            type="email"
+            value={graduateEmail}
+            onChange={(e) => setGraduateEmail(e.target.value)}
+            maxLength={254}
+            placeholder="you@example.com"
+            className="w-full bg-white text-gray-900 placeholder:text-gray-400 border border-gray-200 rounded-lg px-3 py-2.5 text-[15px] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            disabled={submitting}
+          />
+          <p className="text-xs text-gray-500 mt-1">We&apos;ll email you the permanent link to your Badge so you never lose it. Not shown publicly.</p>
         </div>
 
         <div>

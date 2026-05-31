@@ -1,0 +1,38 @@
+name: Supabase Keepalive
+
+# Redundant heartbeat for the Supabase free tier (pauses after ~7 days idle).
+# This backs up the Vercel cron in vercel.json: if Vercel skips or fails its run,
+# this independent scheduler keeps the database awake. Runs every 2 days,
+# staggered from the Vercel 03:00 UTC run so the two rarely miss the same window.
+
+on:
+  schedule:
+    - cron: '0 9 */2 * *' # 09:00 UTC, every 2nd day
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping keepalive endpoint
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          # Optional override; defaults to production. Set as a repo variable to point elsewhere.
+          KEEPALIVE_URL: ${{ vars.KEEPALIVE_URL }}
+        run: |
+          if [ -z "$CRON_SECRET" ]; then
+            echo "::error::CRON_SECRET secret is not set in this repository."
+            exit 1
+          fi
+          URL="${KEEPALIVE_URL:-https://www.graduateshub.org/api/cron/keepalive}"
+          echo "Pinging $URL"
+          STATUS=$(curl -sS -o /tmp/body.txt -w '%{http_code}' \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            "$URL")
+          echo "HTTP $STATUS"
+          cat /tmp/body.txt
+          echo
+          if [ "$STATUS" != "200" ]; then
+            echo "::error::Keepalive ping failed with HTTP $STATUS — Supabase may be paused or down."
+            exit 1
+          fi

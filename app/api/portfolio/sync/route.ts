@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabase } from '@/utils/supabase';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import { verifyEvaluation } from '@/utils/signing';
+import { sendProofEmail, isValidEmail } from '@/utils/email';
 
 const limiter = createRateLimiter({ max: 5, windowSeconds: 60 });
 
@@ -18,6 +19,7 @@ export async function POST(request: NextRequest) {
   let submissionLinks: string[];
   let evaluation: any;
   let signature: string;
+  let graduateEmail: string;
 
   try {
     const body = await request.json();
@@ -30,6 +32,7 @@ export async function POST(request: NextRequest) {
     submissionLinks = Array.isArray(body.submissionLinks) ? body.submissionLinks.map(String) : [];
     evaluation = body.evaluation;
     signature = String(body.signature || '').trim();
+    graduateEmail = String(body.graduateEmail || '').trim().slice(0, 254);
   } catch {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });
   }
@@ -72,6 +75,19 @@ export async function POST(request: NextRequest) {
       { error: 'Database is still down. Please try syncing again later.' },
       { status: 500 },
     );
+  }
+
+  // Now that the proof is live, email the permanent link if one was requested.
+  // This covers proofs that were stashed offline and couldn't be emailed at submit time.
+  if (graduateEmail && isValidEmail(graduateEmail)) {
+    await sendProofEmail({
+      to: graduateEmail,
+      graduateName,
+      taskTitle,
+      verdict: String(evaluation?.verdict || ''),
+      overallScore: Number(evaluation?.overallScore) || 0,
+      proofPath: `/proof/${proofId}`,
+    });
   }
 
   return NextResponse.json({ success: true, proofUrl: `/proof/${proofId}` });
