@@ -274,7 +274,7 @@ export default async function ProofPage({
             <div>
               <h3 className="font-bold text-[#1F1B13] mb-1">About this Badge</h3>
               <p className="text-sm text-[#4F4639] leading-relaxed">
-                This Badge was issued by Graduates Hub after {proof.graduate_name} completed the "{proof.task_title}" task. The submission was evaluated by Google Gemini against the published rubric on the task page. We disclose AI grading openly because honest verification matters more than the appearance of human review.
+                This Badge was issued by Graduates Hub after {proof.graduate_name} completed the "{proof.task_title}" task. The submission was evaluated by AI against the published rubric on the task page. We disclose AI grading openly because honest verification matters more than the appearance of human review.
               </p>
               {task && (
                 <Link

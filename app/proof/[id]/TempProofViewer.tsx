@@ -320,7 +320,7 @@ export default function TempProofViewer({ id }: { id: string }) {
             <div>
               <h3 className="font-bold text-[#1F1B13] mb-1">About Offline Mode</h3>
               <p className="text-sm text-[#4F4639] leading-relaxed">
-                This grade was generated using Google Gemini against the task rubric. However, because our database failed during submission, it is cached locally in your browser. Use the **Sync to Cloud** button at the top to save it permanently when the system is online so that recruiters can access it.
+                This grade was generated using AI against the task rubric. However, because our database failed during submission, it is cached locally in your browser. Use the **Sync to Cloud** button at the top to save it permanently when the system is online so that recruiters can access it.
               </p>
             </div>
           </div>
