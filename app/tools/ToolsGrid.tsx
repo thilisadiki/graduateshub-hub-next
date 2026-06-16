@@ -1,13 +1,17 @@
 'use client';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { Sparkles, Map, TrendingUp, FileText, MessageSquare, ScanText, Brain, ArrowRight } from 'lucide-react';
-import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
-import LearningPathModal from '@/components/modals/LearningPathModal';
-import SkillsGapModal from '@/components/modals/SkillsGapModal';
-import CVReviewModal from '@/components/modals/CVReviewModal';
-import InterviewPrepModal from '@/components/modals/InterviewPrepModal';
-import JDDecoderModal from '@/components/modals/JDDecoderModal';
-import CareerQuizModal from '@/components/modals/CareerQuizModal';
+
+// Lazy-loaded: each modal's code (and its data imports, e.g. the full course
+// catalog) only downloads when the user opens it, keeping it out of the initial bundle.
+const AIRecommendationModal = dynamic(() => import('@/components/modals/AIRecommendationModal'), { ssr: false });
+const LearningPathModal = dynamic(() => import('@/components/modals/LearningPathModal'), { ssr: false });
+const SkillsGapModal = dynamic(() => import('@/components/modals/SkillsGapModal'), { ssr: false });
+const CVReviewModal = dynamic(() => import('@/components/modals/CVReviewModal'), { ssr: false });
+const InterviewPrepModal = dynamic(() => import('@/components/modals/InterviewPrepModal'), { ssr: false });
+const JDDecoderModal = dynamic(() => import('@/components/modals/JDDecoderModal'), { ssr: false });
+const CareerQuizModal = dynamic(() => import('@/components/modals/CareerQuizModal'), { ssr: false });
 
 // Citrus MD3 palette — primary / secondary / tertiary
 const P = {
@@ -140,13 +144,13 @@ export default function ToolsGrid() {
         ))}
       </div>
 
-      <AIRecommendationModal isOpen={open === 'recommend'} onClose={() => setOpen(null)} />
-      <LearningPathModal     isOpen={open === 'path'}      onClose={() => setOpen(null)} />
-      <SkillsGapModal        isOpen={open === 'skills'}    onClose={() => setOpen(null)} />
-      <CVReviewModal         isOpen={open === 'cv'}        onClose={() => setOpen(null)} />
-      <InterviewPrepModal    isOpen={open === 'interview'} onClose={() => setOpen(null)} />
-      <JDDecoderModal        isOpen={open === 'jd'}        onClose={() => setOpen(null)} />
-      <CareerQuizModal       isOpen={open === 'quiz'}      onClose={() => setOpen(null)} />
+      {open === 'recommend' && <AIRecommendationModal isOpen onClose={() => setOpen(null)} />}
+      {open === 'path'      && <LearningPathModal     isOpen onClose={() => setOpen(null)} />}
+      {open === 'skills'    && <SkillsGapModal        isOpen onClose={() => setOpen(null)} />}
+      {open === 'cv'        && <CVReviewModal         isOpen onClose={() => setOpen(null)} />}
+      {open === 'interview' && <InterviewPrepModal    isOpen onClose={() => setOpen(null)} />}
+      {open === 'jd'        && <JDDecoderModal        isOpen onClose={() => setOpen(null)} />}
+      {open === 'quiz'      && <CareerQuizModal       isOpen onClose={() => setOpen(null)} />}
     </>
   );
 }

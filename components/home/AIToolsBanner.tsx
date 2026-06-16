@@ -1,10 +1,14 @@
 'use client';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, Brain, ArrowRight } from 'lucide-react';
-import AIRecommendationModal from '@/components/modals/AIRecommendationModal';
-import SkillsGapModal from '@/components/modals/SkillsGapModal';
-import CareerQuizModal from '@/components/modals/CareerQuizModal';
+
+// Lazy-loaded so the homepage bundle doesn't ship these modals (and the full
+// course catalog they import) up front — they download only when opened.
+const AIRecommendationModal = dynamic(() => import('@/components/modals/AIRecommendationModal'), { ssr: false });
+const SkillsGapModal = dynamic(() => import('@/components/modals/SkillsGapModal'), { ssr: false });
+const CareerQuizModal = dynamic(() => import('@/components/modals/CareerQuizModal'), { ssr: false });
 
 const tools = [
   {
@@ -112,9 +116,9 @@ export default function AIToolsBanner() {
         </div>
       </section>
 
-      <AIRecommendationModal isOpen={isRecommendOpen} onClose={() => setIsRecommendOpen(false)} />
-      <SkillsGapModal        isOpen={isSkillsOpen}    onClose={() => setIsSkillsOpen(false)} />
-      <CareerQuizModal       isOpen={isQuizOpen}      onClose={() => setIsQuizOpen(false)} />
+      {isRecommendOpen && <AIRecommendationModal isOpen onClose={() => setIsRecommendOpen(false)} />}
+      {isSkillsOpen    && <SkillsGapModal        isOpen onClose={() => setIsSkillsOpen(false)} />}
+      {isQuizOpen      && <CareerQuizModal       isOpen onClose={() => setIsQuizOpen(false)} />}
     </>
   );
 }
