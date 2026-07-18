@@ -37,8 +37,8 @@ function sanitizeText(html: string): string {
 function cleanContent(html: string): string {
   // Sanitize with DOMPurify to remove script tags, event handlers, and other XSS vectors
   const sanitized = DOMPurify.sanitize(html, {
-    ALLOWED_TAGS: ['p', 'br', 'span', 'strong', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'img', 'blockquote', 'code', 'pre', 'table', 'tr', 'td', 'th', 'thead', 'tbody', 'div', 'figure', 'figcaption'],
-    ALLOWED_ATTR: ['href', 'src', 'alt', 'title', 'width', 'height', 'class']
+    ALLOWED_TAGS: ['p', 'br', 'span', 'strong', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'img', 'blockquote', 'code', 'pre', 'table', 'tr', 'td', 'th', 'thead', 'tbody', 'div', 'figure', 'figcaption', 'nav'],
+    ALLOWED_ATTR: ['href', 'src', 'alt', 'title', 'width', 'height', 'class', 'id']
   });
 
   return sanitized
