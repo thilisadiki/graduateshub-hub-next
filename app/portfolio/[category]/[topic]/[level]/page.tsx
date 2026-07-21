@@ -7,6 +7,7 @@ import { getCategoryById } from '@/data/portfolioCategories';
 import { getTopicById } from '@/data/portfolioTopics';
 import type { PortfolioLevel } from '@/types';
 import SubmissionForm from './SubmissionForm';
+import RecentCompleters from '@/components/portfolio/RecentCompleters';
 import { BreadcrumbList, LearningResource, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
@@ -176,8 +177,8 @@ export default async function TaskSubmissionPage({
           <SubmissionForm taskId={task.id} />
         </div>
 
-        <aside className="lg:col-span-1">
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-24">
+        <aside className="lg:col-span-1 flex flex-col gap-6 sticky top-24 self-start">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
             <div className="flex items-center gap-2 mb-4">
               <Award size={18} className="text-primary" />
               <h2 className="font-extrabold text-gray-900">Grading Rubric</h2>
@@ -210,6 +211,8 @@ export default async function TaskSubmissionPage({
               </div>
             )}
           </div>
+
+          <RecentCompleters taskId={task.id} />
         </aside>
       </main>
     </div>

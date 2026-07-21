@@ -6,6 +6,7 @@ import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
 import { BreadcrumbList, ItemList, WebPage, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import RecentCompleters from '@/components/portfolio/RecentCompleters';
 
 export const metadata: Metadata = {
   title: 'Proof of Work Portfolio for SA Graduates — Graded Micro-Internship Tasks',
@@ -151,6 +152,9 @@ export default function PortfolioLandingPage() {
             })}
           </div>
         </section>
+
+        {/* Recent Completers Wall of Fame */}
+        <RecentCompleters variant="full" />
 
         {/* How it works */}
         <section id="how-it-works">
