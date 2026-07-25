@@ -133,7 +133,7 @@ function getCoursesByIds(ids: string[]): Course[] {
 export default function GuideTemplate({
   canonicalUrl,
   datePublished = '2025-01-01',
-  dateModified = '2026-01-01',
+  dateModified = new Date().toISOString().split('T')[0],
   breadcrumb,
   heading,
   heroDescription,

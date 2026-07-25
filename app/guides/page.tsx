@@ -39,7 +39,7 @@ interface Guide {
   href: string;
   desc: string;
   curators: CuratorKey[];
-  lastUpdated: string;
+  lastUpdated?: string;
 }
 
 interface GuideGroup {
@@ -59,7 +59,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-courses-for-data-analysts',
         desc: 'Excel, SQL, Python, and Power BI in one structured path. Everything you need to land your first analyst role without spending a cent.',
         curators: ['jason'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free AI Courses for Beginners',
@@ -67,7 +66,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-ai-courses-for-beginners',
         desc: 'Generative AI, prompt engineering, and machine learning fundamentals. No coding background required. Start with the tools reshaping every industry.',
         curators: ['jason'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free Courses for Software Developers',
@@ -75,7 +73,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-courses-for-software-developers',
         desc: 'Web development, programming languages, DevOps, and software architecture. Structured by experience level so you know exactly where to start.',
         curators: ['jason'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free Python Courses',
@@ -83,7 +80,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-python-courses-with-certificates',
         desc: 'Python programming syntax, CSV file handling automation, Flask API endpoints, and Docker containerization.',
         curators: ['jason'],
-        lastUpdated: 'May 2026',
       },
       {
         title: 'Free Cloud Computing Courses',
@@ -91,7 +87,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-cloud-computing-courses',
         desc: 'AWS, Azure, GCP serverless database scaling, infrastructure setup, and DevOps CI/CD pipelines.',
         curators: ['jason'],
-        lastUpdated: 'May 2026',
       },
       {
         title: 'Free Cybersecurity Courses',
@@ -99,7 +94,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-cybersecurity-courses',
         desc: 'Master secure network architecture, security requirement frameworks, DORA compliance, and risk governance.',
         curators: ['jason'],
-        lastUpdated: 'May 2026',
       },
       {
         title: 'Free UI/UX Design Courses',
@@ -107,7 +101,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-ui-ux-design-courses',
         desc: 'Figma wireframing, interactive prototyping, user research synthesis, and conversion-focused layout rules.',
         curators: ['jason'],
-        lastUpdated: 'May 2026',
       },
     ],
   },
@@ -121,7 +114,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-business-courses',
         desc: 'Project management, Lean Six Sigma, GDPR compliance, and economic strategy. Curated by a practising tax professional with real-world corporate experience.',
         curators: ['ndulamiso'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free Courses for Accounting & Finance',
@@ -129,7 +121,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-courses-for-accounting-and-finance',
         desc: 'Bookkeeping, financial statements, payroll, and auditing. Curated by an Accounting Science graduate who works at SARS. Not sourced from a generic list.',
         curators: ['ndulamiso'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free Digital Marketing Courses',
@@ -137,7 +128,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-digital-marketing-courses',
         desc: 'SEO, content strategy, growth hacking, and conversion optimisation. Build a complete, employer-ready marketing skillset from scratch.',
         curators: ['jason'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free Excel Courses',
@@ -145,7 +135,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-excel-courses-with-certificates',
         desc: 'VLOOKUP, Pivot Tables, logical formulas, macro automation, and business reporting spreadsheets.',
         curators: ['ndulamiso'],
-        lastUpdated: 'May 2026',
       },
     ],
   },
@@ -159,7 +148,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-courses-for-beginners',
         desc: 'Zero experience needed. The best starting point if you are new to online learning, switching careers, or unsure where to begin.',
         curators: ['jason', 'ndulamiso'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Free Courses with Certificates',
@@ -167,7 +155,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/free-courses-with-certificates',
         desc: 'Top-rated courses that issue a verifiable certificate on completion. Ranked by employer recognition across IT, business, and marketing.',
         curators: ['jason', 'ndulamiso'],
-        lastUpdated: 'Jan 2026',
       },
       {
         title: 'Best Alison Courses with Certificates',
@@ -175,7 +162,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/best-alison-courses-with-certificates',
         desc: 'CPD-accredited diplomas and certificates from Alison. Free to study, globally recognised, and available to anyone with no prerequisites.',
         curators: ['jason'],
-        lastUpdated: 'Jan 2026',
       },
     ],
   },
@@ -189,7 +175,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
         href: '/first-graduate-job-south-africa',
         desc: 'A step-by-step framework for SA graduates: fix your CV, close your skills gaps, prepare for interviews, and navigate the hidden job market.',
         curators: ['jason'],
-        lastUpdated: 'Jan 2026',
       },
     ],
   },
@@ -289,7 +274,7 @@ export default function GuidesPage() {
         {/* Page Hero */}
         <div className="max-w-3xl mb-14">
           <span className="inline-block text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-3 py-1 rounded-full mb-4">
-            {ALL_GUIDES.length} Guides · Updated 2026
+            {ALL_GUIDES.length} Guides · Updated {formatLastUpdated()}
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
             Online Course Guides for 2026
