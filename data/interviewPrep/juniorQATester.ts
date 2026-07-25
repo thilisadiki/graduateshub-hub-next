@@ -5,7 +5,6 @@ export const juniorQATesterPrep: InterviewPrep = {
   role: 'Junior QA / Software Tester',
   category: 'software-engineering',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and interview questions for junior QA analyst and software tester roles. Covers manual and automated testing concepts, SDLC, bug reporting, and common QA tools.',
   salaryBenchmarks: [
     { region: 'United States', range: '$50,000 – $75,000/year' },

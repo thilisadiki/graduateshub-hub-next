@@ -128,7 +128,6 @@ export default function FreeCoursesAccountingFinancePage() {
         { icon: Clock, label: 'Self-Paced' },
       ]}
       authors={['ndulamiso']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Choose a Career in Accounting & Finance?"
       benefitsSectionSubtitle="Every business relies on financial management, which means skilled professionals are always needed, regardless of economic conditions."
       benefits={benefits}

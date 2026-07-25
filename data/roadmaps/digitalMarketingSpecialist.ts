@@ -6,8 +6,7 @@ export const digitalMarketingSpecialistRoadmap: CareerRoadmap = {
   tagline: 'Build campaigns that drive traffic, leads, and revenue. Work fully remotely.',
   category: 'marketing',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
-  timeToJobReady: '4–8 months',
+  timeToJobReady: '3–6 months',
   demandLevel: 'High',
   entryLevel: true,
   description:

@@ -140,7 +140,6 @@ export default function FreeDigitalMarketingCoursesPage() {
         { icon: Clock, label: 'Self-Paced' },
       ]}
       authors={['jason']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Choose a Career in Digital Marketing?"
       benefitsSectionSubtitle="Digital marketing is growing faster than the talent pool. Here is why it is one of the smartest career moves you can make right now."
       benefits={benefits}

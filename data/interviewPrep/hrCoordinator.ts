@@ -5,7 +5,6 @@ export const hrCoordinatorPrep: InterviewPrep = {
   role: 'Junior HR Coordinator',
   category: 'business',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and common interview questions for junior HR coordinator roles. Covers recruitment support, onboarding, employment compliance basics, and the interpersonal skills HR managers test for.',
   salaryBenchmarks: [
     { region: 'United States', range: '$42,000 – $58,000/year' },

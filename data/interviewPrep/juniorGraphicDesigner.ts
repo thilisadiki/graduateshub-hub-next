@@ -5,7 +5,6 @@ export const juniorGraphicDesignerPrep: InterviewPrep = {
   role: 'Junior Graphic Designer',
   category: 'marketing',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and practical interview questions for junior graphic designer roles. Covers portfolio presentation, Adobe suite proficiency, brand consistency, and the creative briefs employers use to screen candidates.',
   salaryBenchmarks: [
     { region: 'United States', range: '$40,000 – $58,000/year' },

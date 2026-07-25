@@ -128,7 +128,6 @@ export default function FreeExcelCoursesPage() {
         { icon: Clock, label: 'Learn at Your Own Pace' }
       ]}
       authors={['ndulamiso']}
-      lastUpdated="May 2026"
       benefitsSectionTitle="Unlock Career Opportunities with Excel"
       benefitsSectionSubtitle="Almost every business department runs on spreadsheets. Mastering Excel is the fastest way to add immediate value to any corporate team."
       benefits={benefits}

@@ -5,7 +5,6 @@ export const webDeveloperPrep: InterviewPrep = {
   role: 'Junior Web Developer',
   category: 'software-engineering',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and technical interview questions for junior web developer roles. Curated by Jason Sadiki, a working web developer with 7+ years of professional experience building and shipping web products.',
   salaryBenchmarks: [
     { region: 'United States', range: '$55,000 – $85,000/year' },

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } from 'lucide-react';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import { formatLastUpdated } from '@/utils/dateUtils';
 
 export const metadata: Metadata = {
   title: 'Online Course Guides for 2026',
@@ -345,7 +346,7 @@ export default function GuidesPage() {
                     <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full shrink-0">
                       {guide.badge}
                     </span>
-                    <span className="text-xs text-gray-400 shrink-0 mt-1">Updated {guide.lastUpdated}</span>
+                    <span className="text-xs text-gray-400 shrink-0 mt-1">Updated {formatLastUpdated(guide.lastUpdated)}</span>
                   </div>
                   <div className="flex-grow">
                     <p className="font-bold text-gray-900 group-hover:text-primary transition-colors mb-2 leading-snug">

@@ -241,7 +241,6 @@ export default function FirstGraduateJobSAPage() {
         { icon: Briefcase, label: 'Step-by-Step Framework' },
       ]}
       authors={['jason']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Most SA Graduates Struggle to Land Their First Job"
       benefitsSectionSubtitle="The problem is rarely a lack of qualifications. These are the six specific, fixable reasons graduates stay unemployed longer than they should."
       benefits={benefits}

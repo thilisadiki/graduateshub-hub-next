@@ -128,7 +128,6 @@ export default function FreeCybersecurityCoursesPage() {
         { icon: Clock, label: 'Learn at Your Own Pace' }
       ]}
       authors={['jason']}
-      lastUpdated="May 2026"
       benefitsSectionTitle="Why Start a Career in Cybersecurity?"
       benefitsSectionSubtitle="As digital infrastructure scales globally, protecting data is the top priority for enterprises. Here is why you should learn security."
       benefits={benefits}

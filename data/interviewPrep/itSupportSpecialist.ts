@@ -5,7 +5,6 @@ export const itSupportSpecialistPrep: InterviewPrep = {
   role: 'IT Support Specialist',
   category: 'it',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and common interview questions for IT support and helpdesk roles. Covers hardware, networking, ITIL, ticketing, and the communication skills employers test for.',
   salaryBenchmarks: [
     { region: 'United States', range: '$38,000 – $58,000/year' },

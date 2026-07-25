@@ -5,7 +5,6 @@ export const businessAnalystPrep: InterviewPrep = {
   role: 'Junior Business Analyst',
   category: 'business',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   description: 'CV advice and interview questions for junior business analyst roles. Written with practical business intelligence, requirements gathering, and hiring-panel context.',
   salaryBenchmarks: [
     { region: 'United States', range: '$55,000 – $75,000/year' },

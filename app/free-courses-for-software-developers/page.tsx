@@ -144,7 +144,6 @@ export default function FreeCoursesForSoftwareDevelopersPage() {
         { icon: Clock, label: 'Self-Paced Learning' },
       ]}
       authors={['jason']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Learn Software Development?"
       benefitsSectionSubtitle="Software development powers everything, from websites and apps to AI systems and automation tools."
       benefits={benefits}

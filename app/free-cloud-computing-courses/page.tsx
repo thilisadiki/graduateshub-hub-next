@@ -128,7 +128,6 @@ export default function FreeCloudComputingCoursesPage() {
         { icon: Clock, label: 'Self-Paced Learning' }
       ]}
       authors={['jason']}
-      lastUpdated="May 2026"
       benefitsSectionTitle="Why Focus on Cloud & DevOps?"
       benefitsSectionSubtitle="Almost all modern enterprise systems are cloud-native. Understanding cloud architecture is a massive accelerator for software engineering careers."
       benefits={benefits}

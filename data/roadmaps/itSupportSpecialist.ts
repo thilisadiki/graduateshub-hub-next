@@ -6,7 +6,6 @@ export const itSupportSpecialistRoadmap: CareerRoadmap = {
   tagline: 'The entry point into tech. No degree, no prior experience required.',
   category: 'it',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   timeToJobReady: '3–6 months',
   demandLevel: 'High',
   entryLevel: true,

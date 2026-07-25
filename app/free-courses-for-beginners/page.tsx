@@ -169,7 +169,6 @@ export default function FreeCoursesForBeginnersPage() {
         { icon: Clock, label: 'Self-Paced' },
       ]}
       authors={['jason', 'ndulamiso']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Start with Beginner-Friendly Courses?"
       benefitsSectionSubtitle="Beginner courses exist for a reason. They remove the assumption that you already know something, and give you a clear, step-by-step path into a new skill."
       benefits={benefits}

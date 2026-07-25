@@ -5,7 +5,6 @@ export const digitalMarketingCoordinatorPrep: InterviewPrep = {
   role: 'Digital Marketing Coordinator',
   category: 'marketing',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and interview questions for digital marketing coordinator and social media roles. Curated by Jason Sadiki, a working Technical SEO Specialist who has reviewed and given feedback on many marketing CVs.',
   salaryBenchmarks: [
     { region: 'United States', range: '$42,000 – $60,000/year' },

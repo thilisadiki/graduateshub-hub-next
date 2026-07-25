@@ -140,7 +140,6 @@ export default function FreeCoursesWithCertificatesPage() {
         { icon: Clock, label: 'Self-Paced Learning' },
       ]}
       authors={['jason', 'ndulamiso']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Choose Free Online Courses?"
       benefitsSectionSubtitle="Free online courses have become one of the fastest ways to gain job-ready skills. Here is why they are worth considering."
       benefits={benefits}

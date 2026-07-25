@@ -6,7 +6,6 @@ export const juniorAccountantRoadmap: CareerRoadmap = {
   tagline: 'One of the most stable, in-demand careers. Start with zero experience.',
   category: 'accounting',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   timeToJobReady: '6–12 months',
   demandLevel: 'High',
   entryLevel: true,

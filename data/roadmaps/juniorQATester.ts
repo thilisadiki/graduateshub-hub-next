@@ -6,8 +6,7 @@ export const juniorQATesterRoadmap: CareerRoadmap = {
   tagline: 'The most accessible entry point into a software career. No coding required to start.',
   category: 'software-engineering',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
-  timeToJobReady: '4–8 months',
+  timeToJobReady: '3–6 months',
   demandLevel: 'High',
   entryLevel: true,
   description:

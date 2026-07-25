@@ -5,7 +5,6 @@ export const dataAnalystPrep: InterviewPrep = {
   role: 'Data Analyst',
   category: 'it',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and interview questions for junior data analyst roles. Covers Excel, SQL, Power BI, portfolio projects, and the analytical thinking questions employers use to screen candidates.',
   salaryBenchmarks: [
     { region: 'United States', range: '$55,000 – $80,000/year' },

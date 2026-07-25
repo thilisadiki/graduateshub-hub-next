@@ -132,7 +132,6 @@ export default function FreeBusinessCoursesPage() {
         { icon: Clock, label: 'Self-Paced' },
       ]}
       authors={['ndulamiso']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Study Business?"
       benefitsSectionSubtitle="Every organisation runs on business fundamentals. The skills in this guide appear in job listings across tech, finance, government, healthcare, and retail."
       benefits={benefits}

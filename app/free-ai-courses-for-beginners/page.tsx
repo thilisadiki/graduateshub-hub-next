@@ -109,7 +109,6 @@ export default function FreeAICoursesForBeginnersPage() {
         { icon: Clock, label: 'Start in Minutes' },
       ]}
       authors={['jason']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Learn AI as a Beginner?"
       benefitsSectionSubtitle="AI is one of the fastest-growing fields globally, and you do not need a technical background to get started."
       benefits={benefits}

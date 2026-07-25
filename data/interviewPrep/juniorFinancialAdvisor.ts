@@ -5,7 +5,6 @@ export const juniorFinancialAdvisorPrep: InterviewPrep = {
   role: 'Junior Financial Advisor',
   category: 'accounting',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   description: 'CV tips and interview questions for junior financial advisor and financial planning roles. Covers licensing awareness, KYC/AML, product knowledge, suitability, and trust-building skills.',
   salaryBenchmarks: [
     { region: 'United States', range: '$45,000 – $70,000/year plus commission' },

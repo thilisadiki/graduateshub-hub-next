@@ -6,7 +6,6 @@ export const projectCoordinatorRoadmap: CareerRoadmap = {
   tagline: 'Run the meetings, the schedule, the risk register. The most teachable role in corporate.',
   category: 'business',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   timeToJobReady: '4–8 months',
   demandLevel: 'High',
   entryLevel: true,

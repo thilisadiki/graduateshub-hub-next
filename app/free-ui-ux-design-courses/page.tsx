@@ -132,7 +132,6 @@ export default function FreeUiUxDesignCoursesPage() {
         { icon: Clock, label: 'Self-Paced Learning' }
       ]}
       authors={['jason']}
-      lastUpdated="May 2026"
       benefitsSectionTitle="Why Learn UI/UX Design?"
       benefitsSectionSubtitle="Great design is the single biggest differentiator for digital products today. Understanding user needs and crafting visual systems is a highly valued skill."
       benefits={benefits}

@@ -6,7 +6,6 @@ export const businessAnalystRoadmap: CareerRoadmap = {
   tagline: 'Bridge the gap between business problems and technical solutions.',
   category: 'business',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   timeToJobReady: '6–10 months',
   demandLevel: 'High',
   entryLevel: true,

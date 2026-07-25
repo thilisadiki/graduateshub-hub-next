@@ -6,7 +6,6 @@ export const dataAnalystRoadmap: CareerRoadmap = {
   tagline: 'Turn raw numbers into business decisions. No degree required.',
   category: 'it',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   timeToJobReady: '6–12 months',
   demandLevel: 'Very High',
   entryLevel: true,

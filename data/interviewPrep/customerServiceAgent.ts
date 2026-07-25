@@ -4,8 +4,7 @@ export const customerServiceAgentPrep: InterviewPrep = {
   id: 'customer-service-agent',
   role: 'Customer Service Agent',
   category: 'business',
-  curator: 'jason',
-  lastUpdated: 'Apr 2026',
+  curator: 'ndulamiso',
   description: 'CV tips and common interview questions for customer service and contact centre roles. Covers complaint handling, NPS, CRM basics, and the communication skills employers screen for.',
   salaryBenchmarks: [
     { region: 'United States', range: '$32,000 – $45,000/year' },

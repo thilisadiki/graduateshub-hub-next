@@ -11,7 +11,7 @@ export function formatLastUpdated(manualDate?: string): string {
 
   const now = new Date();
   return now.toLocaleDateString('en-US', {
-    month: 'short',
+    month: 'long',
     year: 'numeric',
   });
 }

@@ -130,7 +130,6 @@ export default function FreeCoursesForDataAnalystsPage() {
         { icon: Database, label: 'SQL, Python & More' },
       ]}
       authors={['jason']}
-      lastUpdated="January 2026"
       benefitsSectionTitle="Why Become a Data Analyst?"
       benefitsSectionSubtitle="Data analytics is one of the most in-demand career paths globally, and it is one of the few where free, self-directed learning genuinely works."
       benefits={benefits}

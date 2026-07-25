@@ -5,7 +5,6 @@ export const projectCoordinatorPrep: InterviewPrep = {
   role: 'Junior Project Coordinator',
   category: 'business',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   description: 'CV advice and interview questions for junior project coordinator and project administrator roles. Covers project lifecycle basics, Agile vs Waterfall, stakeholder communication, and common project tools.',
   salaryBenchmarks: [
     { region: 'United States', range: '$48,000 – $68,000/year' },

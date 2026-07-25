@@ -6,7 +6,6 @@ export const webDeveloperRoadmap: CareerRoadmap = {
   tagline: 'Build real products for the web. One of the highest-demand skills globally.',
   category: 'software-engineering',
   curator: 'jason',
-  lastUpdated: 'Apr 2026',
   timeToJobReady: '9–18 months',
   demandLevel: 'Very High',
   entryLevel: true,

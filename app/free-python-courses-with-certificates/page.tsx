@@ -128,7 +128,6 @@ export default function FreePythonCoursesPage() {
         { icon: Clock, label: 'Self-Paced Learning' }
       ]}
       authors={['jason']}
-      lastUpdated="May 2026"
       benefitsSectionTitle="Why Start a Career in Python Development?"
       benefitsSectionSubtitle="Python is the world's most popular programming language. It is the core tool driving modern backend services, automation scripts, and machine learning applications."
       benefits={benefits}

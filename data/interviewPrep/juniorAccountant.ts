@@ -5,7 +5,6 @@ export const juniorAccountantPrep: InterviewPrep = {
   role: 'Junior Accountant',
   category: 'accounting',
   curator: 'ndulamiso',
-  lastUpdated: 'Apr 2026',
   description: 'CV advice and interview questions for junior accountant and bookkeeper roles. Written from the perspective of someone who understands accounting hiring, tax compliance, and entry-level finance teams.',
   salaryBenchmarks: [
     { region: 'United States', range: '$45,000 – $60,000/year' },
