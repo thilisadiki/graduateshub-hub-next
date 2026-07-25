@@ -59,6 +59,8 @@ export async function GET(request: NextRequest) {
         taskTitle: row.task_title,
         taskId: row.task_id,
         createdAt: row.created_at,
+        score: row.evaluation?.overallScore ?? null,
+        verdict: row.evaluation?.verdict ?? 'Pass',
       }));
 
     return NextResponse.json(

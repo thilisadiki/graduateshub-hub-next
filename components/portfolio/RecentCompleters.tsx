@@ -10,6 +10,8 @@ export interface Completer {
   taskTitle?: string;
   taskId?: string;
   createdAt?: string;
+  score?: number | null;
+  verdict?: 'Pass' | 'Pass with Distinction';
 }
 
 interface RecentCompletersProps {
@@ -30,11 +32,11 @@ const AVATAR_GRADIENTS = [
 
 // High quality fallback samples when Supabase has no entries yet for a brand new task
 const SAMPLE_COMPLETERS: Completer[] = [
-  { id: 'sample-1', firstName: 'Thabo', taskTitle: 'Portfolio Showcase' },
-  { id: 'sample-2', firstName: 'Lerato', taskTitle: 'Portfolio Showcase' },
-  { id: 'sample-3', firstName: 'Sibusiso', taskTitle: 'Portfolio Showcase' },
-  { id: 'sample-4', firstName: 'Aisha', taskTitle: 'Portfolio Showcase' },
-  { id: 'sample-5', firstName: 'Jason', taskTitle: 'Portfolio Showcase' },
+  { id: 'sample-1', firstName: 'Thabo', score: 88, verdict: 'Pass with Distinction' },
+  { id: 'sample-2', firstName: 'Lerato', score: 82, verdict: 'Pass with Distinction' },
+  { id: 'sample-3', firstName: 'Sibusiso', score: 76, verdict: 'Pass' },
+  { id: 'sample-4', firstName: 'Aisha', score: 94, verdict: 'Pass with Distinction' },
+  { id: 'sample-5', firstName: 'Jason', score: 78, verdict: 'Pass' },
 ];
 
 export default function RecentCompleters({
@@ -63,7 +65,6 @@ export default function RecentCompleters({
         console.error('Failed to load recent completers:', err);
       }
       if (isMounted) {
-        // Use initial sample data as elegant fallback for empty DB states
         setCompleters(SAMPLE_COMPLETERS);
         setLoading(false);
       }
@@ -77,60 +78,77 @@ export default function RecentCompleters({
 
   if (loading) {
     return (
-      <div className="animate-pulse flex items-center gap-3 py-3 px-4 rounded-xl bg-amber-500/5 border border-amber-500/10">
-        <div className="w-8 h-8 rounded-full bg-amber-200/40" />
-        <div className="h-4 w-36 bg-amber-200/40 rounded" />
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 animate-pulse">
+        <div className="h-4 w-40 bg-gray-200 rounded mb-4" />
+        <div className="flex flex-wrap gap-2">
+          <div className="h-8 w-20 bg-gray-100 rounded-full" />
+          <div className="h-8 w-24 bg-gray-100 rounded-full" />
+          <div className="h-8 w-20 bg-gray-100 rounded-full" />
+        </div>
       </div>
     );
   }
 
   if (variant === 'compact') {
     return (
-      <div className="bg-gradient-to-r from-[#FFFDF9] to-[#FFF8F1] border border-[#EADBCE] rounded-2xl p-4 md:p-5 shadow-sm">
-        <div className="flex items-center justify-between gap-3 mb-3">
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-amber-500/10 text-amber-700">
-              <UserCheck size={16} />
-            </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#7C7061]">
-              {title || 'Graduates Who Completed This Task'}
-            </span>
+            <UserCheck size={18} className="text-primary" />
+            <h3 className="font-extrabold text-gray-900 text-sm">
+              {title || 'Recent Completers'}
+            </h3>
           </div>
-          <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-full">
-            <CheckCircle2 size={12} className="text-emerald-500" /> Verified Proofs
+          <span className="flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-full">
+            <CheckCircle2 size={11} className="text-emerald-500" /> Verified
           </span>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+          Graduates who passed this rubric and earned a shareable Badge of Competence:
+        </p>
+
+        <div className="flex flex-wrap items-center gap-2 mb-4">
           {completers.map((c, i) => {
             const gradient = AVATAR_GRADIENTS[i % AVATAR_GRADIENTS.length];
             const isRealProof = Boolean(c.id && !c.id.startsWith('sample-'));
-            const content = (
+            const isDistinction = c.verdict === 'Pass with Distinction' || (c.score && c.score >= 80);
+
+            const chip = (
               <div
                 key={c.id}
-                className="group relative flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#E6D9CC] shadow-2xs hover:border-amber-400 hover:shadow-xs transition-all duration-200"
+                className="group relative flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-gray-50 hover:bg-amber-50/80 border border-gray-200/80 hover:border-amber-300 transition-all duration-200 cursor-pointer"
               >
                 <div
-                  className={`w-6 h-6 rounded-full bg-gradient-to-br ${gradient} text-white font-bold text-xs flex items-center justify-center shadow-2xs`}
+                  className={`w-6 h-6 rounded-full bg-gradient-to-br ${gradient} text-white font-extrabold text-[11px] flex items-center justify-center shadow-2xs shrink-0`}
                 >
                   {c.firstName.charAt(0)}
                 </div>
-                <span className="text-xs font-semibold text-[#2C251E] group-hover:text-amber-800 transition-colors">
+                <span className="text-xs font-bold text-gray-800 group-hover:text-amber-900 transition-colors">
                   {c.firstName}
                 </span>
-                <Sparkles size={10} className="text-amber-500 opacity-60 group-hover:opacity-100 transition-opacity" />
+                {isDistinction ? (
+                  <Sparkles size={11} className="text-amber-500 shrink-0" />
+                ) : (
+                  <CheckCircle2 size={11} className="text-emerald-500/70 shrink-0" />
+                )}
               </div>
             );
 
             if (isRealProof) {
               return (
-                <Link key={c.id} href={`/proof/${c.id}`} title={`View ${c.firstName}'s verified badge`}>
-                  {content}
+                <Link key={c.id} href={`/proof/${c.id}`} title={`View ${c.firstName}'s verified proof badge`}>
+                  {chip}
                 </Link>
               );
             }
-            return content;
+            return chip;
           })}
+        </div>
+
+        <div className="pt-3 border-t border-gray-100 text-[11px] text-gray-500 flex items-center gap-1.5">
+          <Award size={13} className="text-amber-500 shrink-0" />
+          <span>Submit your task below to earn your badge & feature here.</span>
         </div>
       </div>
     );
