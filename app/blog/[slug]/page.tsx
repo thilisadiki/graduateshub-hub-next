@@ -84,16 +84,21 @@ function extractFaqSchema(html: string) {
     }
   }
 
-  // 2. Check for generic FAQ sections (H3 questions under FAQ section)
+  // 2. Check for generic FAQ sections (plain HTML H3 headings + P/DIV answers under any FAQ section)
   if (faqItems.length === 0 && /faq|frequently asked questions/i.test(html)) {
-    const genericFaqRegex = /<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/gi;
+    const genericFaqRegex = /<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<(?:p|div)[^>]*>([\s\S]*?)<\/(?:p|div)>/gi;
     const sections = html.split(/<h2[^>]*>/i);
     for (const section of sections) {
       if (/faq|frequently asked questions/i.test(section)) {
         let gMatch;
         while ((gMatch = genericFaqRegex.exec(section)) !== null) {
-          const question = gMatch[1].replace(/<[^>]+>/g, '').trim();
-          const answer = gMatch[2].replace(/<[^>]+>/g, '').trim();
+          const rawQuestion = gMatch[1].replace(/<[^>]+>/g, '').trim();
+          const rawAnswer = gMatch[2].replace(/<[^>]+>/g, '').trim();
+
+          // Strip leading numbers like "1. ", "Q1: ", etc.
+          const question = rawQuestion.replace(/^(?:\d+[\.\)]\s*|Q\d+:?\s*)/i, '').trim();
+          const answer = rawAnswer;
+
           if (question && answer && question.length > 5) {
             faqItems.push({
               '@type': 'Question',
