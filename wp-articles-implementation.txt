@@ -3,22 +3,22 @@ WordPress Articles Integration — Full Implementation Reference
 
 This document describes every file and every decision in a Next.js (App Router) project
 that pulls articles from a self-hosted WordPress instance living on a subdomain
-(articles.yourdomain.com). The Next.js site lives at www.yourdomain.com.
+(articles.graduateshub.co.za). The Next.js site lives at www.graduateshub.org.
 No GraphQL plugin is used — everything is plain WordPress REST API (/wp/v2/).
 
 
 Architecture Overview
 ---------------------
 
-  articles.yourdomain.com  <-  WordPress (content source, WP REST API)
-  www.yourdomain.com       <-  Next.js App Router (presentation layer)
+  articles.graduateshub.co.za  <-  WordPress (content source, WP REST API)
+  www.graduateshub.org       <-  Next.js App Router (presentation layer)
 
 The Next.js app never exposes the WordPress subdomain to the browser directly.
 It either fetches at build/request time on the server, or proxies through an
 internal API route. Images are served directly from the WordPress subdomain via
 Next.js <Image> (configured in next.config.ts).
 
-The URL for all WP REST calls is https://articles.yourdomain.com/wp-json and is
+The URL for all WP REST calls is https://articles.graduateshub.co.za/wp-json and is
 hardcoded as a constant (WP_API) in each file that needs it. There is no
 environment variable for it — it is treated as a stable infrastructure constant.
 
@@ -29,7 +29,7 @@ FILE 1: app/api/articles/route.ts — Internal API proxy
 
 import { NextRequest, NextResponse } from 'next/server';
 
-const WP_API = 'https://articles.yourdomain.com/wp-json';
+const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
   }
 
   const response = await fetch(url, {
-    headers: { Host: 'articles.yourdomain.com' },
+    headers: { Host: 'articles.graduateshub.co.za' },
     next: { revalidate: 300 },
   });
 
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
 
 PURPOSE:
 This is the only route that client-side React components call. It exists to avoid
-CORS issues — the browser never talks to articles.yourdomain.com directly. The route
+CORS issues — the browser never talks to articles.graduateshub.co.za directly. The route
 passes _embed so the response includes wp:featuredmedia (featured image) inline. It
 supports two query params: per_page (default 3) and search (optional keyword filter).
 Raw WP post objects are passed through unchanged so callers can extract _embedded,
@@ -79,8 +79,8 @@ import NewsletterBanner from '@/components/shared/NewsletterBanner';
 
 export const revalidate = 300;
 
-const WP_API = 'https://articles.yourdomain.com/wp-json';
-const SITE_URL = 'https://www.yourdomain.com';
+const WP_API = 'https://articles.graduateshub.co.za/wp-json';
+const SITE_URL = 'https://www.graduateshub.org';
 const PER_PAGE = 12;
 
 export const metadata: Metadata = {
@@ -228,8 +228,8 @@ import { notFound } from 'next/navigation';
 export const revalidate = 3600;    // ISR: regenerate once per hour
 export const dynamicParams = true; // posts published after build still work
 
-const WP_API = 'https://articles.yourdomain.com/wp-json';
-const SITE_URL = 'https://www.yourdomain.com';
+const WP_API = 'https://articles.graduateshub.co.za/wp-json';
+const SITE_URL = 'https://www.graduateshub.org';
 
 --- Request deduplication with React.cache ---
 
@@ -258,8 +258,8 @@ before rendering:
 function cleanContent(html: string): string {
   return html
     // 1. Rewrite absolute subdomain links to internal Next.js routes
-    //    e.g. https://articles.yourdomain.com/some-post -> /blog/some-post
-    .replace(/https:\/\/articles\.yourdomain\.com\//g, '/blog/')
+    //    e.g. https://articles.graduateshub.co.za/some-post -> /blog/some-post
+    .replace(/https:\/\/articles\.graduateshub\.com\//g, '/blog/')
     // 2. Remove Gutenberg block comments: <!-- wp:paragraph --> etc.
     .replace(/<!--\s*\/?wp:[^>]*-->/g, '')
     // 3. Remove all inline style="..." attributes (editor sets these, they conflict with your CSS)
@@ -587,7 +587,7 @@ KEY DECISIONS:
   hydrates with content immediately — no client-side waterfall, no loading skeleton
   flash on the homepage.
 - When no initialArticles are provided and searchQuery is set (used on other pages),
-  it calls the internal /api/articles proxy — never articles.yourdomain.com directly.
+  it calls the internal /api/articles proxy — never articles.graduateshub.co.za directly.
 - HTML stripping uses document.createElement('div') instead of regex because this
   runs client-side where the DOM is available.
 - Uses a regular <img> tag instead of Next.js <Image> because in the client-fetched
@@ -604,7 +604,7 @@ async function fetchHomeArticles(perPage: number) {
   try {
     // Direct server-to-server call — no proxy needed, no CORS
     const response = await fetch(
-      `https://articles.yourdomain.com/wp-json/wp/v2/posts?per_page=${perPage}&_embed`,
+      `https://articles.graduateshub.co.za/wp-json/wp/v2/posts?per_page=${perPage}&_embed`,
       { next: { revalidate: 300 } }
     );
     if (!response.ok) return undefined;
@@ -648,7 +648,7 @@ export default async function Home() {
 }
 
 KEY DECISIONS:
-- The homepage directly calls articles.yourdomain.com/wp-json — no internal proxy —
+- The homepage directly calls articles.graduateshub.co.za/wp-json — no internal proxy —
   because this is a server-to-server call that does not go through the browser.
   No CORS issue exists here.
 - Returns undefined on failure rather than throwing, so the homepage degrades
@@ -661,7 +661,7 @@ KEY DECISIONS:
 FILE 6: app/sitemap.ts — Sitemap generation
 =============================================================
 
-const WP_API = 'https://articles.yourdomain.com/wp-json';
+const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
 async function fetchAllBlogPosts(): Promise<{ slug: string; modified: string }[]> {
   const posts: { slug: string; modified: string }[] = [];
@@ -725,7 +725,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       // Allow next/image to optimise images from the WP subdomain
-      { protocol: 'https', hostname: 'articles.yourdomain.com' },
+      { protocol: 'https', hostname: 'articles.graduateshub.co.za' },
       // Allow Gravatar images for author avatars
       { protocol: 'https', hostname: 'secure.gravatar.com' },
       { protocol: 'https', hostname: '*.gravatar.com' },
@@ -736,7 +736,7 @@ const nextConfig: NextConfig = {
 };
 
 KEY DECISIONS:
-- articles.yourdomain.com must be in remotePatterns or Next.js <Image> will throw
+- articles.graduateshub.co.za must be in remotePatterns or Next.js <Image> will throw
   at runtime when rendering featured images.
 - Gravatar hostnames are needed for author avatar images fetched from WP's
   author.avatar_urls field.
@@ -808,8 +808,8 @@ Adapting this to your own site
 =============================================================
 
 Replace every occurrence of:
-  articles.graduateshub.co.za  ->  your WP subdomain
-  www.graduateshub.co.za       ->  your main domain
+  articles.graduateshub.co.za  ->   WP subdomain
+  www.graduateshub.ord      ->  main domain
   /blog                        ->  whatever route you want articles to live under
 
 The WP REST API endpoints are standard and will work on any self-hosted WordPress
