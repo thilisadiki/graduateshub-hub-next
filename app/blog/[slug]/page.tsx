@@ -63,6 +63,61 @@ function cleanContent(html: string): string {
     .trim();
 }
 
+function extractFaqSchema(html: string) {
+  const faqItems: { '@type': string; name: string; acceptedAnswer: { '@type': string; text: string } }[] = [];
+
+  // 1. Check for Rank Math FAQ blocks (matches rank-math-question and rank-math-answer)
+  const rankMathRegex = /<h3[^>]*class="[^"]*rank-math-question[^"]*"[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<div[^>]*class="[^"]*rank-math-answer[^"]*"[^>]*>([\s\S]*?)<\/div>/gi;
+  let match;
+  while ((match = rankMathRegex.exec(html)) !== null) {
+    const question = match[1].replace(/<[^>]+>/g, '').trim();
+    const answer = match[2].replace(/<[^>]+>/g, '').trim();
+    if (question && answer) {
+      faqItems.push({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: answer,
+        },
+      });
+    }
+  }
+
+  // 2. Check for generic FAQ sections (H3 questions under FAQ section)
+  if (faqItems.length === 0 && /faq|frequently asked questions/i.test(html)) {
+    const genericFaqRegex = /<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/gi;
+    const sections = html.split(/<h2[^>]*>/i);
+    for (const section of sections) {
+      if (/faq|frequently asked questions/i.test(section)) {
+        let gMatch;
+        while ((gMatch = genericFaqRegex.exec(section)) !== null) {
+          const question = gMatch[1].replace(/<[^>]+>/g, '').trim();
+          const answer = gMatch[2].replace(/<[^>]+>/g, '').trim();
+          if (question && answer && question.length > 5) {
+            faqItems.push({
+              '@type': 'Question',
+              name: question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: answer,
+              },
+            });
+          }
+        }
+      }
+    }
+  }
+
+  if (faqItems.length === 0) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems,
+  };
+}
+
 async function fetchRelatedPosts(categoryIds: number[], excludeId: number) {
   if (categoryIds.length === 0) return [];
   try {
@@ -208,9 +263,14 @@ export default async function BlogPostPage({
     },
   };
 
+  const faqSchema = extractFaqSchema(post.content.rendered);
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }} />
+      )}
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
