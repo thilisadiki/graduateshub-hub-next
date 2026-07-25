@@ -107,7 +107,7 @@ export default function AIToolsBanner() {
 
           <div className="text-center mt-6">
             <Link
-              href="/tools"
+              href="/free-ai-career-tools"
               className="inline-flex items-center gap-1.5 text-sm text-[#D1C5B4] hover:text-white transition-colors font-medium"
             >
               View all 7 free AI career tools <ArrowRight size={13} />

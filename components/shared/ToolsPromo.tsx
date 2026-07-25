@@ -35,7 +35,7 @@ export default function ToolsPromo() {
       </div>
 
       <Link
-        href="/tools"
+        href="/free-ai-career-tools"
         className="relative z-10 shrink-0 bg-white text-[#5a4000] hover:bg-[#FFDF9C]/20 px-5 py-2.5 rounded-xl font-bold text-sm transition-colors flex items-center gap-2 shadow-sm whitespace-nowrap"
       >
         View All 7 Free Tools <ArrowRight size={14} />

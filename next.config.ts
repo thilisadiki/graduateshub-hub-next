@@ -34,6 +34,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/tools',
+        destination: '/free-ai-career-tools',
+        permanent: true,
+      },
+      {
         source: '/articles',
         destination: '/blog',
         permanent: true,

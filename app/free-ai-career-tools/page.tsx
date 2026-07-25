@@ -7,12 +7,12 @@ import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Free AI Career Tools: CV Reviewer, Interview Prep, Skills Gap Analyser and More',
   description: '7 free AI-powered career tools for job seekers and graduates: CV reviewer, interview prep generator, skills gap analyser, learning path builder, course recommender, job description decoder, and career quiz. No sign-up required.',
-  alternates: { canonical: `${SITE_URL}/tools` },
+  alternates: { canonical: `${SITE_URL}/free-ai-career-tools` },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Free AI Career Tools | Graduates Hub',
     description: '7 free tools to plan your career, review your CV, prep for interviews, and find the right courses. Powered by Google Gemini. No account needed.',
-    url: `${SITE_URL}/tools`,
+    url: `${SITE_URL}/free-ai-career-tools`,
     type: 'website',
     images: [OG_IMAGE],
   },
@@ -316,7 +316,7 @@ export default function ToolsPage() {
               <Link
                 key={href}
                 href={href}
-                className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:border-primary hover:shadow-md transition-all group flex flex-col gap-2"
+                className="bg-white rounded-xl border border-[#D1C5B4] shadow-sm p-5 hover:border-primary hover:shadow-md transition-all group flex flex-col gap-2"
               >
                 <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm">{label}</p>
                 <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>

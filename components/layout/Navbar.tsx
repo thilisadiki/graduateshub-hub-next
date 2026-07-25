@@ -102,7 +102,7 @@ export default function Navbar() {
             <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Blog<LinkPendingDot /></Link>
             <Link href="/about" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">About<LinkPendingDot /></Link>
             <Link
-              href="/tools"
+              href="/free-ai-career-tools"
               className="flex items-center gap-1.5 text-sm font-bold text-primary bg-[#FFDF9C]/50 hover:bg-[#FFDF9C] px-3 py-1.5 rounded-full transition-colors border border-[#D1C5B4]"
             >
               <Sparkles size={14} className="text-primary" />
@@ -153,7 +153,7 @@ export default function Navbar() {
         <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">Blog</Link>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">About Us</Link>
         <Link
-          href="/tools"
+          href="/free-ai-career-tools"
           onClick={toggleMobileMenu}
           className="flex items-center gap-2 font-bold text-primary bg-[#FFDF9C]/50 py-3 px-4 rounded-lg border border-[#D1C5B4] transition-colors"
         >

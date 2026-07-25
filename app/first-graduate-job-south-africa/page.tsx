@@ -318,7 +318,7 @@ export default function FirstGraduateJobSAPage() {
                   icon: TrendingUp,
                   title: 'Skills Gap Analyser',
                   body: 'Enter your target role and your current skills. See exactly what you still need to learn.',
-                  href: '/tools',
+                  href: '/free-ai-career-tools',
                   cta: 'Analyse My Skills',
                 },
               ].map(({ icon: Icon, title, body, href, cta }) => (
@@ -341,7 +341,7 @@ export default function FirstGraduateJobSAPage() {
                 <p className="text-[#FFDF9C] text-sm">CV reviewer, job description decoder, career quiz, and more.</p>
               </div>
               <Link
-                href="/tools"
+                href="/free-ai-career-tools"
                 className="shrink-0 bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors whitespace-nowrap flex items-center gap-2"
               >
                 Browse All Tools <ArrowRight size={14} />
