@@ -15,7 +15,7 @@ export interface CareerRoadmap {
   tagline: string;
   category: string;
   curator: AuthorKey | AuthorKey[];
-  lastUpdated: string;
+  lastUpdated?: string;
   timeToJobReady: string;
   demandLevel: 'Moderate' | 'High' | 'Very High';
   entryLevel: boolean;
@@ -58,7 +58,7 @@ export interface InterviewPrep {
   role: string;
   category: string;
   curator: AuthorKey | AuthorKey[];
-  lastUpdated: string;
+  lastUpdated?: string;
   description: string;
   salaryBenchmarks: SalaryBenchmark[];
   cvMustInclude: string[];

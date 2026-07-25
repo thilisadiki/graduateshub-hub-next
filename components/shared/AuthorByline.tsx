@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
+import { formatLastUpdated } from '@/utils/dateUtils';
 
 type Author = {
   name: string;
@@ -51,13 +52,17 @@ function AuthorChip({ author }: { author: Author }) {
   );
 }
 
+export interface AuthorBylineProps {
+  authors: AuthorKey[];
+  lastUpdated?: string;
+}
+
 export default function AuthorByline({
   authors,
   lastUpdated,
-}: {
-  authors: AuthorKey[];
-  lastUpdated: string;
-}) {
+}: AuthorBylineProps) {
+  const displayDate = formatLastUpdated(lastUpdated);
+
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-6 pt-5 border-t border-[#D1C5B4]/60">
       <div className="flex flex-wrap gap-4">
@@ -66,7 +71,7 @@ export default function AuthorByline({
         ))}
       </div>
       <div className="flex items-center gap-3 sm:ml-auto text-xs text-gray-400 shrink-0">
-        <span>Last updated: <strong className="text-gray-500">{lastUpdated}</strong></span>
+        <span>Last updated: <strong className="text-gray-500">{displayDate}</strong></span>
         <span className="text-gray-200">·</span>
         <Link href="/curation-policy" className="hover:text-primary transition-colors font-medium">
           How we curate

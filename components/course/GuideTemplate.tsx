@@ -267,7 +267,7 @@ export default function GuideTemplate({
               </div>
             ))}
           </div>
-          {authors && lastUpdated && (
+          {authors && (
             <AuthorByline authors={authors} lastUpdated={lastUpdated} />
           )}
         </div>
