@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { CheckCircle2, Clock, TrendingUp, Award, Briefcase, Globe, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import GuideTemplate from '@/components/course/GuideTemplate';
+import ToolsPromo from '@/components/shared/ToolsPromo';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
@@ -93,11 +94,48 @@ const careerPaths: CareerPathItem[] = [
   { role: 'Business Analyst', detail: 'Cross-functional role bridging data, operations, and strategy. In demand at corporates, consultancies, and public sector organisations.' },
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Learn Business Skills for Free Online in 2026',
+  description: 'A 4-step structured learning guide to master project management, process improvement, compliance, and strategy with free CPD-accredited certificates.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Learn How Projects Work',
+      text: 'Master initiation, planning, execution, and risk management with the Diploma in Project Management.',
+      url: `${SITE_URL}/course/diploma-project-management`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Improve Processes with Data',
+      text: 'Learn the DMAIC framework and process optimization with Lean Six Sigma Yellow Belt.',
+      url: `${SITE_URL}/course/lean-six-sigma-yellow-belt`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Meet Regulatory Requirements',
+      text: 'Understand data protection, POPIA, and compliance obligations with GDPR General Data Protection.',
+      url: `${SITE_URL}/course/gdpr-general-data-protection`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Understand Economic Strategy & AI',
+      text: 'Learn macroeconomic context and strategic AI deployment in business operations.',
+      url: `${SITE_URL}/course/intro-economic-growth-development`,
+    },
+  ],
+};
+
 const relatedGuides: RelatedGuide[] = [
+  { title: 'Junior Business Analyst Roadmap', desc: 'Step-by-step roadmap to get job-ready as a Business Analyst for free.', href: '/career-roadmaps/business-analyst' },
+  { title: 'Proof of Work Portfolio', desc: 'Complete practical business tasks & earn a shareable LinkedIn badge of competence.', href: '/portfolio' },
   { title: 'Free AI Courses for Beginners (2026)', desc: 'Includes Introduction to AI in Business. No coding background required.', href: '/free-ai-courses-for-beginners' },
   { title: 'Free Courses for Accounting & Finance (2026)', desc: 'Bookkeeping, payroll, financial management, and auditing. A natural complement to business skills.', href: '/free-courses-for-accounting-and-finance' },
-  { title: 'Free Courses with Certificates (2026)', desc: 'The complete guide to free certified courses across all fields.', href: '/free-courses-with-certificates' },
-  { title: 'Browse All Business Courses', desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy in one place.', href: '/category/business' },
 ];
 
 const faqs: FaqItem[] = [
@@ -121,74 +159,132 @@ export default function FreeBusinessCoursesPage() {
     .slice(0, 10);
 
   return (
-    <GuideTemplate
-      canonicalUrl={CANONICAL}
-      datePublished="2026-01-01"
-      breadcrumb={[{ label: 'Free Business Courses' }]}
-      heading="How to Learn Business Skills for Free Online (2026)"
-      heroDescription="Discover how to learn in-demand business skills for free online in 2026. Master project management, process improvement, compliance, and strategy with CPD-accredited certificates — no degree or prior experience required."
-      heroBadges={[
-        { icon: CheckCircle2, label: 'No Experience Required', iconClassName: 'text-green-500' },
-        { icon: Award, label: 'CPD-Accredited Certificates', iconClassName: 'text-primary' },
-        { icon: Clock, label: 'Self-Paced' },
-      ]}
-      authors={['ndulamiso']}
-      benefitsSectionTitle="Why Study Business?"
-      benefitsSectionSubtitle="Every organisation runs on business fundamentals. The skills in this guide appear in job listings across tech, finance, government, healthcare, and retail."
-      benefits={benefits}
-      courseCategories={courseCategories}
-      relatedCourses={relatedCourses}
-      carouselTitle="More Business Courses"
-      carouselSubtitle="Additional free courses to round out your business and management knowledge"
-      postCarouselSection={
-        <>
-          <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Best Learning Path for Business</h2>
-            <p className="text-gray-500 mb-10 text-lg">If you are starting from scratch, follow this path to build a complete, employer-ready business skill set step by step.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {learningPath.map(({ step, title, detail, href, courseName }) => (
-                <div key={step} className="flex gap-4">
-                  <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-extrabold text-lg shrink-0">{step}</div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 text-lg mb-1">{title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-2">{detail}</p>
-                    <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
-                      <ChevronRight size={12} /> {courseName}
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema).replace(/</g, '\\u003c') }}
+      />
+      <GuideTemplate
+        canonicalUrl={CANONICAL}
+        datePublished="2026-01-01"
+        breadcrumb={[{ label: 'Free Business Courses' }]}
+        heading="How to Learn Business Skills for Free Online (2026)"
+        heroDescription="Discover how to learn in-demand business skills for free online in 2026. Master project management, process improvement, compliance, and strategy with CPD-accredited certificates — no degree or prior experience required."
+        heroBadges={[
+          { icon: CheckCircle2, label: 'No Experience Required', iconClassName: 'text-green-500' },
+          { icon: Award, label: 'CPD-Accredited Certificates', iconClassName: 'text-primary' },
+          { icon: Clock, label: 'Self-Paced' },
+        ]}
+        authors={['ndulamiso']}
+        benefitsSectionTitle="Why Study Business?"
+        benefitsSectionSubtitle="Every organisation runs on business fundamentals. The skills in this guide appear in job listings across tech, finance, government, healthcare, and retail."
+        benefits={benefits}
+        courseCategories={courseCategories}
+        relatedCourses={relatedCourses}
+        carouselTitle="More Business Courses"
+        carouselSubtitle="Additional free courses to round out your business and management knowledge"
+        postCarouselSection={
+          <>
+            {/* Position 0 Snippet Target: Summary Comparison Table */}
+            <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 overflow-x-auto">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Top Business Skills to Learn Free in 2026</h2>
+              <p className="text-gray-500 mb-8 text-lg">Compare study times, certificate types, and target career roles for each core business discipline.</p>
+              <table className="w-full text-left border-collapse min-w-[600px]">
+                <thead>
+                  <tr className="border-b border-gray-200 text-sm font-bold text-gray-900 bg-gray-50/50">
+                    <th className="py-3 px-4">Business Skill Category</th>
+                    <th className="py-3 px-4">Top Free Course</th>
+                    <th className="py-3 px-4">Study Time</th>
+                    <th className="py-3 px-4">Target Job Roles</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
+                  <tr>
+                    <td className="py-3.5 px-4 font-bold text-gray-900">Project Management</td>
+                    <td className="py-3.5 px-4"><Link href="/course/diploma-project-management" className="text-primary font-semibold hover:underline">Diploma in Project Management</Link></td>
+                    <td className="py-3.5 px-4">10–15 hrs</td>
+                    <td className="py-3.5 px-4">Project Coordinator, Operations Assistant</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3.5 px-4 font-bold text-gray-900">Agile & Scrum</td>
+                    <td className="py-3.5 px-4"><Link href="/course/agile-project-management" className="text-primary font-semibold hover:underline">Agile Project Management</Link></td>
+                    <td className="py-3.5 px-4">3–5 hrs</td>
+                    <td className="py-3.5 px-4">Scrum Master, Agile Team Member</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3.5 px-4 font-bold text-gray-900">Process Improvement</td>
+                    <td className="py-3.5 px-4"><Link href="/course/lean-six-sigma-yellow-belt" className="text-primary font-semibold hover:underline">Lean Six Sigma Yellow Belt</Link></td>
+                    <td className="py-3.5 px-4">4–6 hrs</td>
+                    <td className="py-3.5 px-4">Operations Specialist, QA Analyst</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3.5 px-4 font-bold text-gray-900">Regulatory Compliance</td>
+                    <td className="py-3.5 px-4"><Link href="/course/gdpr-general-data-protection" className="text-primary font-semibold hover:underline">GDPR Data Protection</Link></td>
+                    <td className="py-3.5 px-4">2–4 hrs</td>
+                    <td className="py-3.5 px-4">Compliance Officer, HR Assistant</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3.5 px-4 font-bold text-gray-900">AI Strategy</td>
+                    <td className="py-3.5 px-4"><Link href="/course/intro-ai-business" className="text-primary font-semibold hover:underline">Introduction to AI in Business</Link></td>
+                    <td className="py-3.5 px-4">3–5 hrs</td>
+                    <td className="py-3.5 px-4">Business Analyst, Strategy Associate</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
 
-          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Do You Need a Degree to Work in Business?</h2>
-            <p className="text-[#FFDF9C] mb-10">Not for most entry-level and mid-level roles. Here is how to think about it.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h3 className="font-bold text-white text-lg mb-4">You can start without a degree:</h3>
-                <ul className="space-y-3">
-                  {['Project coordinator and administrator roles', 'Process improvement and quality support positions', 'Compliance and data protection assistant roles', 'Operations support and business analyst entry points'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
-                      <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
-                    </li>
-                  ))}
-                </ul>
+            <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Best Learning Path for Business</h2>
+              <p className="text-gray-500 mb-10 text-lg">If you are starting from scratch, follow this path to build a complete, employer-ready business skill set step by step.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {learningPath.map(({ step, title, detail, href, courseName }) => (
+                  <div key={step} className="flex gap-4">
+                    <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-extrabold text-lg shrink-0">{step}</div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg mb-1">{title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-2">{detail}</p>
+                      <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
+                        <ChevronRight size={12} /> {courseName}
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h3 className="font-bold text-white text-lg mb-4">For senior roles, further study helps:</h3>
-                <ul className="space-y-3">
-                  {['Senior project manager roles often require a PMP or Prince2 certification', 'Chartered compliance and risk roles typically require postgraduate qualifications', 'Executive leadership benefits from an MBA or equivalent credential'].map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
-                      <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            </section>
+
+            {/* AI Tools Callout */}
+            <div className="mb-20">
+              <ToolsPromo />
             </div>
-          </section>
-        </>
-      }
+
+            <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Do You Need a Degree to Work in Business?</h2>
+              <p className="text-[#FFDF9C] mb-10">Not for most entry-level and mid-level roles. Here is how to think about it.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h3 className="font-bold text-white text-lg mb-4">You can start without a degree:</h3>
+                  <ul className="space-y-3">
+                    {['Project coordinator and administrator roles', 'Process improvement and quality support positions', 'Compliance and data protection assistant roles', 'Operations support and business analyst entry points'].map((point) => (
+                      <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
+                        <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h3 className="font-bold text-white text-lg mb-4">For senior roles, further study helps:</h3>
+                  <ul className="space-y-3">
+                    {['Senior project manager roles often require a PMP or Prince2 certification', 'Chartered compliance and risk roles typically require postgraduate qualifications', 'Executive leadership benefits from an MBA or equivalent credential'].map((point) => (
+                      <li key={point} className="flex items-start gap-2 text-[#FFDF9C] text-sm">
+                        <CheckCircle2 size={16} className="text-green-300 mt-0.5 shrink-0" />{point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </>
+        }
       careerPathsTitle="Career Paths in Business"
       careerPathsSubtitle="These courses map directly to entry-level and mid-level roles available across every industry."
       careerPaths={careerPaths}
@@ -203,5 +299,6 @@ export default function FreeBusinessCoursesPage() {
       ctaSecondaryLabel="All Free Courses with Certificates"
       ctaSecondaryHref="/free-courses-with-certificates"
     />
+    </>
   );
 }

@@ -74,7 +74,7 @@ INSTRUCTIONS:
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3.1-flash-lite',
+      model: 'gemini-3.5-flash-lite',
       contents: goal,
       config: { systemInstruction: systemPrompt, temperature: 0.2, responseMimeType: 'application/json' },
     });

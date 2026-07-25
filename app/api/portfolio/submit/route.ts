@@ -166,7 +166,7 @@ ${submission}`;
   let evaluation: PortfolioEvaluation;
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3.1-flash-lite',
+      model: 'gemini-3.5-flash-lite',
       contents: userInput,
       config: {
         systemInstruction: systemPrompt,
