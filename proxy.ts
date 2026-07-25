@@ -8,13 +8,13 @@ import type { NextRequest } from 'next/server';
 // Vercel's automatic noindex only covers the generated *.vercel.app deploy
 // URLs, NOT custom domains attached to the Preview environment (e.g.
 // staging.graduateshub.org), so we enforce it here at the edge.
-const PRODUCTION_HOST = 'www.graduateshub.org';
+const PRODUCTION_HOSTS = ['www.graduateshub.org', 'graduateshub.org'];
 
 export function proxy(request: NextRequest) {
   const host = request.headers.get('host') ?? '';
   const response = NextResponse.next();
 
-  if (host !== PRODUCTION_HOST) {
+  if (!PRODUCTION_HOSTS.includes(host)) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow');
   }
 

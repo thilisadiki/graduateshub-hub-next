@@ -122,7 +122,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${SITE_URL}/portfolio/${t.categoryId}/${t.topicId}/${t.level}`,
     lastModified,
     changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    priority: 0.3,
   }));
 
   const wpPosts = await fetchAllBlogPosts();
