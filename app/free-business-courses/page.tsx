@@ -10,15 +10,15 @@ import { SITE_URL, SITE_NAME } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/free-business-courses`;
 
 export const metadata: Metadata = {
-  title: 'Best Free Business Courses Online (2026)',
+  title: 'How to Learn Business Skills for Free Online (2026 Guide)',
   description:
-    'Discover the best free business courses in 2026. Project management, Lean Six Sigma, GDPR compliance, and economic strategy. All CPD-accredited with free certificates.',
+    'Learn essential business skills for free online in 2026. Master project management, Lean Six Sigma, compliance, and corporate strategy with free CPD certificates.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Best Free Business Courses Online (2026) | Graduates Hub',
+    title: 'How to Learn Business Skills for Free Online (2026 Guide) | Graduates Hub',
     description:
-      'Discover the best free business courses in 2026. Project management, Lean Six Sigma, GDPR compliance, and economic strategy. All CPD-accredited with free certificates.',
+      'Learn essential business skills for free online in 2026. Master project management, Lean Six Sigma, compliance, and corporate strategy with free CPD certificates.',
     url: CANONICAL,
   },
 };
@@ -101,6 +101,7 @@ const relatedGuides: RelatedGuide[] = [
 ];
 
 const faqs: FaqItem[] = [
+  { q: 'How can I learn business skills for free online in 2026?', a: 'You can learn essential business skills completely free online by enrolling in CPD-accredited courses on Graduates Hub. Focus on four core pillars: Project Management (Agile/Scrum), Process Improvement (Lean Six Sigma), Compliance (GDPR/POPIA), and Strategy (AI in Business). You can study at your own pace without paying tuition fees.' },
   { q: 'Do I need business experience to start these courses?', a: 'No. The Lean Six Sigma White Belt and Introduction to Economic Growth and Development are both designed for complete beginners. The Project Management diploma and Agile certificate assume no prior project management knowledge. Start with whichever track matches your immediate career goal.' },
   { q: 'What is the difference between the Lean Six Sigma White Belt and Yellow Belt?', a: 'The White Belt is a short introduction to Lean Six Sigma vocabulary and philosophy, designed so that any employee can participate intelligently in company-wide improvement initiatives. The Yellow Belt goes deeper: it covers the DMAIC framework in detail, process mapping, and data collection methods. If you want to actively lead or contribute to improvement projects, the Yellow Belt is the one employers look for.' },
   { q: 'Is GDPR relevant if I am based in South Africa?', a: "Yes. Any organisation that processes data belonging to EU citizens must comply with GDPR regardless of where it is based. Beyond the EU, GDPR has directly influenced South Africa's own POPIA legislation. Understanding GDPR gives you a working knowledge of both frameworks and makes you more valuable in any compliance or data-handling role." },
@@ -124,8 +125,8 @@ export default function FreeBusinessCoursesPage() {
       canonicalUrl={CANONICAL}
       datePublished="2026-01-01"
       breadcrumb={[{ label: 'Free Business Courses' }]}
-      heading="Best Free Business Courses Online (2026)"
-      heroDescription="Business skills transfer across every industry and every organisation size. This guide covers the best free courses across project management, process improvement, regulatory compliance, and economic strategy, all CPD-accredited and beginner-accessible."
+      heading="How to Learn Business Skills for Free Online (2026)"
+      heroDescription="Discover how to learn in-demand business skills for free online in 2026. Master project management, process improvement, compliance, and strategy with CPD-accredited certificates — no degree or prior experience required."
       heroBadges={[
         { icon: CheckCircle2, label: 'No Experience Required', iconClassName: 'text-green-500' },
         { icon: Award, label: 'CPD-Accredited Certificates', iconClassName: 'text-primary' },
