@@ -47,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${SITE_URL}/categories`,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.5,
       images: [`${SITE_URL}/opengraph-image`],
     },
     { url: `${SITE_URL}/guides`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -80,14 +80,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${SITE_URL}/category/${category.id}`,
     lastModified,
     changeFrequency: 'weekly',
-    priority: 0.8,
+    priority: 0.4,
     images: [`${SITE_URL}/opengraph-image`],
   }));
 
   const coursePages: MetadataRoute.Sitemap = courses.map((course) => ({
     url: `${SITE_URL}/course/${course.id}`,
     changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    priority: 0.4,
   }));
 
   const roadmapPages: MetadataRoute.Sitemap = roadmaps.map((r) => ({
