@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FileText, ChevronRight, DollarSign } from 'lucide-react';
 import { interviewPreps } from '@/data/interviewPrep';
+import { formatLastUpdated } from '@/utils/dateUtils';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -140,9 +141,12 @@ export default function InterviewPrepPage() {
                 </div>
 
                 {/* Stats row */}
-                <div className="flex items-center gap-4 text-xs text-gray-500">
+                <div className="flex items-center gap-3 text-xs text-gray-500">
                   <span className="font-medium">{prep.questions.length} interview questions</span>
+                  <span>·</span>
                   <span>{prep.cvTips.length} CV tips</span>
+                  <span>·</span>
+                  <span className="text-gray-400">Updated {formatLastUpdated(prep.lastUpdated)}</span>
                 </div>
 
                 {/* Curator + CTA */}
