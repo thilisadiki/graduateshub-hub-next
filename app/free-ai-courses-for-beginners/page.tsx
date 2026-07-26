@@ -150,14 +150,76 @@ export default function FreeAICoursesForBeginnersPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-8 mb-8">
               <div>
                 <h3 className="font-bold text-gray-900 text-base mb-2">Regional Job Distribution</h3>
                 <p className="mb-3">While Gauteng leads in AI vacancies, the <strong>Western Cape</strong> (Cape Town tech ecosystem) and <strong>KwaZulu-Natal</strong> follow closely as major hiring hubs for automation, data analytics, and digital transformation roles.</p>
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 text-base mb-2">Key Impact Sectors</h3>
-                <p>AI adoption is accelerating across <strong>Financial Services, Telecommunications, Healthcare, Agriculture, and E-commerce</strong>, making foundational AI literacy valuable regardless of your background.</p>
+                <h3 className="font-bold text-gray-900 text-base mb-2">Acute Local Skills Gap</h3>
+                <p>Despite hiring demand growing by <strong>+77% in a single year</strong> (RecruitAGraduate data), South African employers face a severe shortage of qualified candidates, making verified AI certificates highly competitive for applicants.</p>
+              </div>
+            </div>
+
+            {/* South African Enterprise AI Adoption Table */}
+            <div className="border-t border-gray-100 pt-8">
+              <h3 className="font-bold text-gray-900 text-lg mb-4">How South African Enterprise Leaders Use AI Today</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { sector: 'Financial Services', companies: 'Standard Bank, Absa, FirstRand', application: 'Fraud detection, credit risk scoring models, and automated customer service bots.' },
+                  { sector: 'Retail & E-commerce', companies: 'Takealot, Shoprite Group', application: 'Machine learning recommendation engines, price optimization, and inventory supply chain forecasting.' },
+                  { sector: 'Telecommunications', companies: 'MTN, Vodacom', application: 'Predictive network failure maintenance, churn prevention algorithms, and automated service management.' },
+                  { sector: 'Mining & Heavy Industry', companies: 'Anglo American, Sasol', application: 'Autonomous machinery, sensor data processing, and predictive equipment safety alerts.' },
+                ].map(({ sector, companies, application }) => (
+                  <div key={sector} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                    <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-0.5 rounded-full inline-block mb-2">
+                      {sector}
+                    </span>
+                    <p className="font-bold text-gray-900 text-sm mb-1">{companies}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">{application}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 3-Stage AI Skill Progression Framework */}
+          <section className="mb-20 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">3-Stage AI Skill Advancement Roadmap</h2>
+            <p className="text-gray-500 text-sm mb-8">From beginner conceptual understanding to advanced system architecture.</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-amber-50/50 rounded-2xl p-6 border border-amber-100">
+                <span className="text-xs font-extrabold bg-amber-100 text-amber-900 px-3 py-1 rounded-full inline-block mb-3">
+                  Stage 1: Beginner (0-3 Months)
+                </span>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">AI Concepts &amp; Prompting</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  Understand AI terminology, ethics, and prompt engineering. Master generative tools like ChatGPT, Claude, and Midjourney to boost daily productivity.
+                </p>
+                <p className="text-xs font-bold text-amber-900">Key Focus: DeepLearning.AI &amp; Alison AI Diplomas</p>
+              </div>
+
+              <div className="bg-blue-50/50 rounded-2xl p-6 border border-blue-100">
+                <span className="text-xs font-extrabold bg-blue-100 text-blue-900 px-3 py-1 rounded-full inline-block mb-3">
+                  Stage 2: Intermediate (3-6 Months)
+                </span>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Python &amp; Data Analysis</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  Learn Python programming, SQL database querying, and data cleaning. Build foundational machine learning models with Scikit-Learn.
+                </p>
+                <p className="text-xs font-bold text-blue-900">Key Focus: Python, SQL &amp; Data Prep Courses</p>
+              </div>
+
+              <div className="bg-emerald-50/50 rounded-2xl p-6 border border-emerald-100">
+                <span className="text-xs font-extrabold bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full inline-block mb-3">
+                  Stage 3: Advanced (6-12 Months)
+                </span>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Deep Learning &amp; MLOps</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  Master neural networks, Natural Language Processing (NLP), Computer Vision, and production deployment using TensorFlow and PyTorch.
+                </p>
+                <p className="text-xs font-bold text-emerald-900">Key Focus: Stanford ML &amp; IBM Professional Certificates</p>
               </div>
             </div>
           </section>
