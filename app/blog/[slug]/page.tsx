@@ -264,7 +264,7 @@ export default async function BlogPostPage({
       url: imageUrl ?? `${SITE_URL}/graduates-hub-logo.png`,
       width: 1200,
       height: 630,
-      alt: sanitizeText(post.title.rendered),
+      caption: sanitizeText(post.title.rendered),
     },
   };
 
