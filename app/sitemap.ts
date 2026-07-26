@@ -64,6 +64,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/first-graduate-job-south-africa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-ai-career-tools`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/cv-builder`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/cv-builder/create`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/career-roadmaps`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/interview-prep`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
