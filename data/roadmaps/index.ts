@@ -8,10 +8,16 @@ import { businessAnalystRoadmap } from './businessAnalyst';
 import { juniorQATesterRoadmap } from './juniorQATester';
 import { projectCoordinatorRoadmap } from './projectCoordinator';
 import { cybersecurityAnalystRoadmap } from './cybersecurityAnalyst';
+import { uiUxDesignerRoadmap } from './uiUxDesigner';
+import { cloudSupportDevOpsRoadmap } from './cloudSupportDevOps';
+import { seoContentStrategistRoadmap } from './seoContentStrategist';
 
 export const roadmaps: CareerRoadmap[] = [
   dataAnalystRoadmap,
   cybersecurityAnalystRoadmap,
+  uiUxDesignerRoadmap,
+  cloudSupportDevOpsRoadmap,
+  seoContentStrategistRoadmap,
   itSupportSpecialistRoadmap,
   digitalMarketingSpecialistRoadmap,
   juniorAccountantRoadmap,
