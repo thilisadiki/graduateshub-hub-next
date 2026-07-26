@@ -28,11 +28,18 @@ const jasonSchema = {
     'https://www.linkedin.com/in/jasonsadiki/',
     'https://thilisadiki.dev',
   ],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Graduates Hub',
-    url: SITE_URL,
-  },
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: 'Betway Africa',
+      url: 'https://www.betway.co.za',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Graduates Hub',
+      url: SITE_URL,
+    },
+  ],
   hasCredential: [
     {
       '@type': 'EducationalOccupationalCredential',
@@ -172,15 +179,14 @@ export default function AboutPage() {
                       ))}
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-                    <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-[#261A00] transition-colors">
-                      <ExternalLink size={14} /> LinkedIn
-                    </a>
+                  <div className="flex flex-wrap items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                    <Link href="/authors/jason-sadiki" className="inline-flex items-center gap-1 text-sm font-extrabold text-primary hover:underline">
+                      View Full Profile &amp; Curated Guides →
+                    </Link>
                     <span className="text-gray-200">|</span>
-                    <a href="https://thilisadiki.dev" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-gray-800 transition-colors">
-                      <ExternalLink size={14} /> thilisadiki.dev
+                    <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-gray-900 transition-colors">
+                      <ExternalLink size={14} /> LinkedIn
                     </a>
                   </div>
                 </div>
@@ -212,9 +218,13 @@ export default function AboutPage() {
                   <p className="text-gray-600 leading-relaxed">
                     She leads the accounting and business content on Graduates Hub, ensuring every recommended course and career guide reflects what is actually useful in practice, not just what looks good on paper.
                   </p>
-                  <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                  <div className="flex flex-wrap items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                    <Link href="/authors/ndulamiso-mamburu" className="inline-flex items-center gap-1 text-sm font-extrabold text-primary hover:underline">
+                      View Full Profile &amp; Curated Guides →
+                    </Link>
+                    <span className="text-gray-200">|</span>
                     <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-[#261A00] transition-colors">
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-gray-900 transition-colors">
                       <ExternalLink size={14} /> LinkedIn
                     </a>
                   </div>
