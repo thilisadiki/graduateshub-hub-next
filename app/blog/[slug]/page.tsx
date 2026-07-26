@@ -2,7 +2,7 @@ import { cache } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { notFound, redirect, RedirectType } from 'next/navigation';
 import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
 import DOMPurify from 'isomorphic-dompurify';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
@@ -170,6 +170,11 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  if (slug === 'artificial-intelligence-courses') {
+    return {
+      alternates: { canonical: `${SITE_URL}/free-ai-courses-for-beginners` },
+    };
+  }
   const post = await fetchPostBySlug(slug);
   if (!post) return { title: 'Article Not Found' };
 
@@ -204,6 +209,9 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === 'artificial-intelligence-courses') {
+    redirect('/free-ai-courses-for-beginners', RedirectType.replace);
+  }
   // Deduped, no second network request, uses the cached result from generateMetadata
   const post = await fetchPostBySlug(slug);
   if (!post) notFound();

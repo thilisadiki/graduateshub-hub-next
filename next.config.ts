@@ -39,6 +39,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/artificial-intelligence-courses',
+        destination: '/free-ai-courses-for-beginners',
+        permanent: true,
+      },
+      {
         source: '/articles',
         destination: '/blog',
         permanent: true,

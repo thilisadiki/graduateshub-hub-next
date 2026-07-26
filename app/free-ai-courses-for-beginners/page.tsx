@@ -118,7 +118,51 @@ export default function FreeAICoursesForBeginnersPage() {
       carouselSubtitle="Expand your skills with highly rated courses in software and data"
       postCarouselSection={
         <>
-          <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
+          {/* South Africa & Global AI Job Market Demand Section (Merged from /blog/artificial-intelligence-courses) */}
+          <section className="mb-20 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
+            <div className="max-w-3xl">
+              <span className="text-xs font-bold bg-[#FFDF9C]/20 text-[#5a4000] border border-[#D1C5B4] px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                Job Market Analysis 2026
+              </span>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+                The Rising Demand for Artificial Intelligence Skills
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-base mb-6">
+                Artificial Intelligence is no longer restricted to research labs or niche tech startups. Industry hiring data from PNet reveals that <strong>AI skill demand in South Africa has surged by +352% since 2019</strong>, with employers actively seeking professionals who understand machine learning, generative AI, and data automation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                <p className="text-3xl font-black text-primary mb-1">+352%</p>
+                <p className="font-bold text-gray-900 text-sm mb-1">AI Hiring Surge</p>
+                <p className="text-xs text-gray-500 leading-relaxed">PNet hiring data shows massive growth in AI skill requests across South African tech &amp; finance jobs.</p>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                <p className="text-3xl font-black text-emerald-600 mb-1">50%+</p>
+                <p className="font-bold text-gray-900 text-sm mb-1">Gauteng Hub</p>
+                <p className="text-xs text-gray-500 leading-relaxed">Gauteng alone accounts for over half of all South African AI job openings (JHB &amp; PTA tech hubs).</p>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                <p className="text-3xl font-black text-blue-600 mb-1">CPD &amp; Global</p>
+                <p className="font-bold text-gray-900 text-sm mb-1">Accredited Learning</p>
+                <p className="text-xs text-gray-500 leading-relaxed">Certificates from Google, IBM, and Alison carry recognized weight with hiring managers.</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-8">
+              <div>
+                <h3 className="font-bold text-gray-900 text-base mb-2">Regional Job Distribution</h3>
+                <p className="mb-3">While Gauteng leads in AI vacancies, the <strong>Western Cape</strong> (Cape Town tech ecosystem) and <strong>KwaZulu-Natal</strong> follow closely as major hiring hubs for automation, data analytics, and digital transformation roles.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-base mb-2">Key Impact Sectors</h3>
+                <p>AI adoption is accelerating across <strong>Financial Services, Telecommunications, Healthcare, Agriculture, and E-commerce</strong>, making foundational AI literacy valuable regardless of your background.</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-20 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Do You Need Coding to Learn AI?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div>
@@ -139,19 +183,20 @@ export default function FreeAICoursesForBeginnersPage() {
             </div>
           </section>
 
-          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-2xl p-8 md:p-12 text-white">
+          <section className="mb-20 bg-gradient-to-br from-[#7A5900] to-[#5a4000] rounded-3xl p-8 md:p-12 text-white shadow-sm">
             <h2 className="text-2xl md:text-3xl font-extrabold mb-2">How to Choose the Right AI Course</h2>
-            <p className="text-[#FFDF9C] mb-10">If you are new to AI, your starting point matters. Here is how to choose.</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <p className="text-[#FFDF9C] mb-10 text-sm md:text-base">If you are new to AI, your starting point matters. Evaluate these 4 core factors before enrolling.</p>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
-                { step: '1', title: 'Start with Fundamentals', body: 'Pick a course that explains concepts before tools. Understanding what AI is and why it works prepares you to learn faster later.' },
-                { step: '2', title: 'Decide Your Path', body: 'Non-technical learner? Focus on AI for business and strategy. Tech-oriented? Pair a fundamentals course with Python and data skills.' },
-                { step: '3', title: 'Keep It Simple First', body: 'Avoid overly complex courses early on. Build confidence with one beginner certificate before moving to machine learning or data science.' },
+                { step: '1', title: 'Experience Level', body: 'Start with non-technical fundamentals if you have zero coding background. Build confidence before diving into Python or algorithms.' },
+                { step: '2', title: 'Practical Projects', body: 'Look for courses that include hands-on prompt building or data manipulation so you leave with demonstrable skills.' },
+                { step: '3', title: 'Accreditation', body: 'Prioritize courses certified by recognised bodies (CPD, Google, IBM, Alison) that carry weight on your CV.' },
+                { step: '4', title: 'Career Alignment', body: 'Match your learning to target job roles: prompt engineering for operations, or Python/SQL for data roles.' },
               ].map(({ step, title, body }) => (
-                <div key={step} className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                <div key={step} className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
                   <div className="w-9 h-9 bg-white text-primary rounded-full flex items-center justify-center font-extrabold text-lg mb-4">{step}</div>
-                  <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                  <p className="text-[#FFDF9C] text-sm leading-relaxed">{body}</p>
+                  <h3 className="font-bold text-white text-base mb-2">{title}</h3>
+                  <p className="text-[#FFDF9C] text-xs leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>
