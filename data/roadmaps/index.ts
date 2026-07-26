@@ -12,9 +12,11 @@ import { uiUxDesignerRoadmap } from './uiUxDesigner';
 import { cloudSupportDevOpsRoadmap } from './cloudSupportDevOps';
 import { seoContentStrategistRoadmap } from './seoContentStrategist';
 import { financialAnalystRoadmap } from './financialAnalyst';
+import { softwareEngineerRoadmap } from './softwareEngineer';
 
 export const roadmaps: CareerRoadmap[] = [
   dataAnalystRoadmap,
+  softwareEngineerRoadmap,
   cybersecurityAnalystRoadmap,
   uiUxDesignerRoadmap,
   cloudSupportDevOpsRoadmap,
