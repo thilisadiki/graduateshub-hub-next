@@ -1,14 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Mail, CheckCircle2 } from 'lucide-react';
+import TurnstileWidget, { TurnstileWidgetHandle } from './TurnstileWidget';
 
 export default function NewsletterBanner() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Bot Protection state
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const [renderTime, setRenderTime] = useState<number>(0);
+  const turnstileRef = useRef<TurnstileWidgetHandle>(null);
+
+  useEffect(() => {
+    setRenderTime(Date.now());
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email) {
@@ -26,17 +37,42 @@ export default function NewsletterBanner() {
 
     setStatus('loading');
 
-    setTimeout(() => {
-      console.log('Newsletter signup:', email);
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          'cf-turnstile-response': turnstileToken,
+          _hp: honeypot,
+          _t: renderTime,
+          _ts: Date.now(),
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setStatus('error');
+        setMessage(data.error || 'Failed to subscribe. Please try again.');
+        turnstileRef.current?.reset();
+        return;
+      }
+
       setStatus('success');
-      setMessage('Thanks for subscribing! Check your inbox soon.');
+      setMessage(data.message || 'Thanks for subscribing! Check your inbox soon.');
       setEmail('');
+      turnstileRef.current?.reset();
 
       setTimeout(() => {
         setStatus('idle');
         setMessage('');
       }, 5000);
-    }, 1200);
+    } catch {
+      setStatus('error');
+      setMessage('Network error. Please try again later.');
+      turnstileRef.current?.reset();
+    }
   };
 
   return (
@@ -67,6 +103,17 @@ export default function NewsletterBanner() {
             </p>
 
             <form onSubmit={handleSubmit} className="w-full max-w-lg relative group">
+              {/* Hidden Honeypot Field for Bot Detection */}
+              <input
+                type="text"
+                name="_hp"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
               <div className="relative flex flex-col sm:flex-row shadow-2xl rounded-2xl sm:rounded-full bg-white/10 p-2 sm:p-0 backdrop-blur-md">
                 <div className="absolute left-4 top-4 sm:top-1/2 sm:-translate-y-1/2 text-[#5a4000] group-focus-within:text-primary transition-colors z-10">
                   <Mail size={20} />
@@ -101,6 +148,16 @@ export default function NewsletterBanner() {
                     <span>Subscribe Free</span>
                   )}
                 </button>
+              </div>
+
+              {/* Cloudflare Turnstile Bot Defense */}
+              <div className="mt-3 flex justify-center">
+                <TurnstileWidget
+                  ref={turnstileRef}
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken('')}
+                  onError={() => setTurnstileToken('')}
+                />
               </div>
             </form>
 
