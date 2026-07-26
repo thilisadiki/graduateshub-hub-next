@@ -210,8 +210,8 @@ export default function CurationPolicyPage() {
 
         {/* Affiliate disclosure */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Affiliate Links & Independence</h2>
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Affiliate Links &amp; Independence</h2>
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
             <Users size={22} className="text-primary shrink-0 mt-0.5" />
             <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
               <p>
@@ -227,12 +227,38 @@ export default function CurationPolicyPage() {
           </div>
         </section>
 
+        {/* Fact-Checking & Corrections Policy */}
+        <section>
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Fact-Checking &amp; Corrections Policy</h2>
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
+            <RefreshCw size={22} className="text-primary shrink-0 mt-0.5" />
+            <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
+              <p>
+                <strong>Fact-Checking Standard:</strong> Every career roadmap, salary benchmark, and course guide published on Graduates Hub is researched and verified against official accreditation databases, employer hiring requirements, and live job market listings.
+              </p>
+              <p>
+                <strong>48-Hour Correction Commitment:</strong> We hold ourselves accountable for accuracy. If a reader or partner reports a factual error, broken link, paywall change, or outdated prerequisite, our editorial team investigates and updates the content within 48 hours of verification.
+              </p>
+              <p>
+                <strong>Transparent Update Logs:</strong> Major updates, curriculum adjustments, and factual corrections are reflected in the <em>Last updated</em> date badge displayed at the top of every guide and roadmap.
+              </p>
+              <p className="text-xs text-gray-500 pt-2 border-t border-gray-100">
+                To submit a correction request or report an outdated course, please email us directly at{' '}
+                <a href="mailto:support@graduateshub.org" className="font-bold text-primary hover:underline">
+                  support@graduateshub.org
+                </a>{' '}
+                or use our <Link href="/contact" className="font-bold text-primary hover:underline">Contact Form</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Questions */}
         <section className="bg-[#FFDF9C]/20 rounded-2xl border border-[#D1C5B4] p-8 text-center">
-          <h2 className="text-xl font-extrabold text-gray-900 mb-2">Questions about a specific course?</h2>
-          <p className="text-gray-500 text-sm mb-5">If you believe a listed course no longer meets our criteria, let us know and we will review it.</p>
+          <h2 className="text-xl font-extrabold text-gray-900 mb-2">Questions about a specific course or guide?</h2>
+          <p className="text-gray-500 text-sm mb-5">If you believe a listed course no longer meets our criteria or found an error, let us know and we will review it.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">
-            Contact Us
+            Contact Us / Report Correction
           </Link>
         </section>
 
