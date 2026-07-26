@@ -47,7 +47,7 @@ export async function generateMetadata({
   return {
     title: `${task.title} — ${topicLabel} ${task.difficulty} Task`,
     description,
-    alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}/${level}` },
+    alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}` },
     openGraph: {
       siteName: SITE_NAME,
       title: `${task.title} | Graduates Hub Portfolio`,

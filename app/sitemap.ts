@@ -118,13 +118,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const portfolioTaskPages: MetadataRoute.Sitemap = portfolioTasks.map((t) => ({
-    url: `${SITE_URL}/portfolio/${t.categoryId}/${t.topicId}/${t.level}`,
-    lastModified,
-    changeFrequency: 'monthly' as const,
-    priority: 0.3,
-  }));
-
   const wpPosts = await fetchAllBlogPosts();
   const blogPostPages: MetadataRoute.Sitemap = wpPosts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
@@ -141,7 +134,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...interviewPrepPages,
     ...portfolioCategoryPages,
     ...portfolioTopicPages,
-    ...portfolioTaskPages,
     ...blogPostPages,
   ];
 }
