@@ -7,9 +7,11 @@ import { webDeveloperRoadmap } from './webDeveloper';
 import { businessAnalystRoadmap } from './businessAnalyst';
 import { juniorQATesterRoadmap } from './juniorQATester';
 import { projectCoordinatorRoadmap } from './projectCoordinator';
+import { cybersecurityAnalystRoadmap } from './cybersecurityAnalyst';
 
 export const roadmaps: CareerRoadmap[] = [
   dataAnalystRoadmap,
+  cybersecurityAnalystRoadmap,
   itSupportSpecialistRoadmap,
   digitalMarketingSpecialistRoadmap,
   juniorAccountantRoadmap,
