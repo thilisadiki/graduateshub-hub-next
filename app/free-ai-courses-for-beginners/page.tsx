@@ -112,77 +112,78 @@ export default function FreeAICoursesForBeginnersPage() {
       benefitsSectionTitle="Why Learn AI as a Beginner?"
       benefitsSectionSubtitle="AI is one of the fastest-growing fields globally, and you do not need a technical background to get started."
       benefits={benefits}
+      preCoursesSection={
+        /* South Africa & Global AI Job Market Demand Section (Merged from /blog/artificial-intelligence-courses) */
+        <section className="mb-20 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold bg-[#FFDF9C]/20 text-[#5a4000] border border-[#D1C5B4] px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+              Job Market Analysis 2026
+            </span>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+              The Rising Demand for Artificial Intelligence Skills
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-base mb-6">
+              Artificial Intelligence is no longer restricted to research labs or niche tech startups. Industry hiring data from PNet reveals that <strong>AI skill demand in South Africa has surged by +352% since 2019</strong>, with employers actively seeking professionals who understand machine learning, generative AI, and data automation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <p className="text-3xl font-black text-primary mb-1">+352%</p>
+              <p className="font-bold text-gray-900 text-sm mb-1">AI Hiring Surge</p>
+              <p className="text-xs text-gray-500 leading-relaxed">PNet hiring data shows massive growth in AI skill requests across South African tech &amp; finance jobs.</p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <p className="text-3xl font-black text-emerald-600 mb-1">50%+</p>
+              <p className="font-bold text-gray-900 text-sm mb-1">Gauteng Hub</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Gauteng alone accounts for over half of all South African AI job openings (JHB &amp; PTA tech hubs).</p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <p className="text-3xl font-black text-blue-600 mb-1">CPD &amp; Global</p>
+              <p className="font-bold text-gray-900 text-sm mb-1">Accredited Learning</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Certificates from Google, IBM, and Alison carry recognized weight with hiring managers.</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-8 mb-8">
+            <div>
+              <h3 className="font-bold text-gray-900 text-base mb-2">Regional Job Distribution</h3>
+              <p className="mb-3">While Gauteng leads in AI vacancies, the <strong>Western Cape</strong> (Cape Town tech ecosystem) and <strong>KwaZulu-Natal</strong> follow closely as major hiring hubs for automation, data analytics, and digital transformation roles.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 text-base mb-2">Acute Local Skills Gap</h3>
+              <p>Despite hiring demand growing by <strong>+77% in a single year</strong> (RecruitAGraduate data), South African employers face a severe shortage of qualified candidates, making verified AI certificates highly competitive for applicants.</p>
+            </div>
+          </div>
+
+          {/* South African Enterprise AI Adoption Table */}
+          <div className="border-t border-gray-100 pt-8">
+            <h3 className="font-bold text-gray-900 text-lg mb-4">How South African Enterprise Leaders Use AI Today</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { sector: 'Financial Services', companies: 'Standard Bank, Absa, FirstRand', application: 'Fraud detection, credit risk scoring models, and automated customer service bots.' },
+                { sector: 'Retail & E-commerce', companies: 'Takealot, Shoprite Group', application: 'Machine learning recommendation engines, price optimization, and inventory supply chain forecasting.' },
+                { sector: 'Telecommunications', companies: 'MTN, Vodacom', application: 'Predictive network failure maintenance, churn prevention algorithms, and automated service management.' },
+                { sector: 'Mining & Heavy Industry', companies: 'Anglo American, Sasol', application: 'Autonomous machinery, sensor data processing, and predictive equipment safety alerts.' },
+              ].map(({ sector, companies, application }) => (
+                <div key={sector} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                  <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-0.5 rounded-full inline-block mb-2">
+                    {sector}
+                  </span>
+                  <p className="font-bold text-gray-900 text-sm mb-1">{companies}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{application}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      }
       courseCategories={courseCategories}
       relatedCourses={relatedCourses}
       carouselTitle="More Tech & Development Courses"
       carouselSubtitle="Expand your skills with highly rated courses in software and data"
       postCarouselSection={
         <>
-          {/* South Africa & Global AI Job Market Demand Section (Merged from /blog/artificial-intelligence-courses) */}
-          <section className="mb-20 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold bg-[#FFDF9C]/20 text-[#5a4000] border border-[#D1C5B4] px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
-                Job Market Analysis 2026
-              </span>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
-                The Rising Demand for Artificial Intelligence Skills
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-base mb-6">
-                Artificial Intelligence is no longer restricted to research labs or niche tech startups. Industry hiring data from PNet reveals that <strong>AI skill demand in South Africa has surged by +352% since 2019</strong>, with employers actively seeking professionals who understand machine learning, generative AI, and data automation.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <p className="text-3xl font-black text-primary mb-1">+352%</p>
-                <p className="font-bold text-gray-900 text-sm mb-1">AI Hiring Surge</p>
-                <p className="text-xs text-gray-500 leading-relaxed">PNet hiring data shows massive growth in AI skill requests across South African tech &amp; finance jobs.</p>
-              </div>
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <p className="text-3xl font-black text-emerald-600 mb-1">50%+</p>
-                <p className="font-bold text-gray-900 text-sm mb-1">Gauteng Hub</p>
-                <p className="text-xs text-gray-500 leading-relaxed">Gauteng alone accounts for over half of all South African AI job openings (JHB &amp; PTA tech hubs).</p>
-              </div>
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <p className="text-3xl font-black text-blue-600 mb-1">CPD &amp; Global</p>
-                <p className="font-bold text-gray-900 text-sm mb-1">Accredited Learning</p>
-                <p className="text-xs text-gray-500 leading-relaxed">Certificates from Google, IBM, and Alison carry recognized weight with hiring managers.</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-8 mb-8">
-              <div>
-                <h3 className="font-bold text-gray-900 text-base mb-2">Regional Job Distribution</h3>
-                <p className="mb-3">While Gauteng leads in AI vacancies, the <strong>Western Cape</strong> (Cape Town tech ecosystem) and <strong>KwaZulu-Natal</strong> follow closely as major hiring hubs for automation, data analytics, and digital transformation roles.</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 text-base mb-2">Acute Local Skills Gap</h3>
-                <p>Despite hiring demand growing by <strong>+77% in a single year</strong> (RecruitAGraduate data), South African employers face a severe shortage of qualified candidates, making verified AI certificates highly competitive for applicants.</p>
-              </div>
-            </div>
-
-            {/* South African Enterprise AI Adoption Table */}
-            <div className="border-t border-gray-100 pt-8">
-              <h3 className="font-bold text-gray-900 text-lg mb-4">How South African Enterprise Leaders Use AI Today</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { sector: 'Financial Services', companies: 'Standard Bank, Absa, FirstRand', application: 'Fraud detection, credit risk scoring models, and automated customer service bots.' },
-                  { sector: 'Retail & E-commerce', companies: 'Takealot, Shoprite Group', application: 'Machine learning recommendation engines, price optimization, and inventory supply chain forecasting.' },
-                  { sector: 'Telecommunications', companies: 'MTN, Vodacom', application: 'Predictive network failure maintenance, churn prevention algorithms, and automated service management.' },
-                  { sector: 'Mining & Heavy Industry', companies: 'Anglo American, Sasol', application: 'Autonomous machinery, sensor data processing, and predictive equipment safety alerts.' },
-                ].map(({ sector, companies, application }) => (
-                  <div key={sector} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
-                    <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-0.5 rounded-full inline-block mb-2">
-                      {sector}
-                    </span>
-                    <p className="font-bold text-gray-900 text-sm mb-1">{companies}</p>
-                    <p className="text-xs text-gray-600 leading-relaxed">{application}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* 3-Stage AI Skill Progression Framework */}
           <section className="mb-20 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">3-Stage AI Skill Advancement Roadmap</h2>
