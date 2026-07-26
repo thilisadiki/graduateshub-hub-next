@@ -163,12 +163,6 @@ export default function LatestArticles({
             {customSubtitle || 'Expert advice, industry news, and guides to help you navigate your career.'}
           </p>
         </div>
-        <Link
-          href="/blog"
-          className="text-primary font-bold hover:text-[#5a4000] transition-colors hidden sm:flex items-center gap-1 group"
-        >
-          View All Articles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -207,9 +201,13 @@ export default function LatestArticles({
         ))}
       </div>
 
-      <div className="mt-6 text-center sm:hidden">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-[#5a4000] transition-colors">
-          View All Articles <ArrowRight size={18} />
+      {/* Prominent CTA below article grid */}
+      <div className="mt-10 text-center">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#FFDF9C]/20 border border-[#7A5900]/30 hover:border-[#7A5900] text-[#7A5900] font-extrabold text-base rounded-full shadow-sm hover:bg-[#FFDF9C]/40 transition-all group"
+        >
+          View All Articles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
     </section>
