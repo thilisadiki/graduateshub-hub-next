@@ -11,10 +11,22 @@ import { projectCoordinatorPrep } from './projectCoordinator';
 import { customerServiceAgentPrep } from './customerServiceAgent';
 import { juniorFinancialAdvisorPrep } from './juniorFinancialAdvisor';
 import { juniorQATesterPrep } from './juniorQATester';
+import { cybersecurityAnalystPrep } from './cybersecurityAnalyst';
+import { uiUxDesignerPrep } from './uiUxDesigner';
+import { cloudSupportDevOpsPrep } from './cloudSupportDevOps';
+import { seoContentStrategistPrep } from './seoContentStrategist';
+import { financialAnalystPrep } from './financialAnalyst';
+import { softwareEngineerPrep } from './softwareEngineer';
 
 export const interviewPreps: InterviewPrep[] = [
   itSupportSpecialistPrep,
   dataAnalystPrep,
+  softwareEngineerPrep,
+  cybersecurityAnalystPrep,
+  uiUxDesignerPrep,
+  cloudSupportDevOpsPrep,
+  seoContentStrategistPrep,
+  financialAnalystPrep,
   webDeveloperPrep,
   juniorAccountantPrep,
   digitalMarketingCoordinatorPrep,
@@ -40,4 +52,10 @@ export {
   customerServiceAgentPrep,
   juniorFinancialAdvisorPrep,
   juniorQATesterPrep,
+  cybersecurityAnalystPrep,
+  uiUxDesignerPrep,
+  cloudSupportDevOpsPrep,
+  seoContentStrategistPrep,
+  financialAnalystPrep,
+  softwareEngineerPrep,
 };
