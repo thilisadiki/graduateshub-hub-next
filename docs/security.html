@@ -338,6 +338,9 @@
       <li class="nav-item">
         <a href="#evaluation-signing">Evaluation Signing</a>
       </li>
+      <li class="nav-item">
+        <a href="#edge-security">Edge Host Security</a>
+      </li>
     </ul>
 
     <div class="doc-links">
@@ -516,10 +519,21 @@
         <p>When <code>/api/portfolio/sync</code> later persists a stashed proof, it recomputes the HMAC over the same payload (<code>proofId</code>, <code>taskId</code>, <code>graduateName</code>, <code>submission</code>, <code>submissionLinks</code>, <code>evaluation</code>) and rejects the request with <code>400 Bad Request</code> if the signature does not match. The signing key never leaves the server.</p>
       </div>
 
-      <pre><code>const signature = crypto
+      <pre><code>      const signature = crypto
   .createHmac('sha256', process.env.SUPABASE_SERVICE_ROLE_KEY)
   .update(JSON.stringify(payload))
   .digest('hex');</code></pre>
+    </section>
+
+    <section id="edge-security">
+      <h2>9. Edge Domain Redirect & Host Guards (<code>proxy.ts</code>)</h2>
+      <p>Site request isolation and domain canonicalization are handled at the Vercel edge via Next.js middleware in <code>proxy.ts</code>:</p>
+
+      <h3>A. Domain Redirect Security</h3>
+      <p>To prevent man-in-the-middle domain spoofing and canonical index fragmentation, any request hitting secondary domains (e.g. <code>graduateshub.co.za</code> or non-www <code>graduateshub.org</code>) receives an explicit <code>301 Moved Permanently</code> redirect to <code>https://www.graduateshub.org</code>.</p>
+
+      <h3>B. Staging Environment Noindex Guard</h3>
+      <p>To ensure non-production preview deploys or staging hosts (such as <code>*.vercel.app</code> or <code>staging.graduateshub.org</code>) never pollute search engine indexes or leak unreleased features, <code>proxy.ts</code> injects an <code>X-Robots-Tag: noindex, nofollow</code> header on all non-production hosts.</p>
     </section>
   </main>
 

@@ -339,6 +339,15 @@
       <li class="nav-item">
         <a href="#integrations">Integrations</a>
       </li>
+      <li class="nav-item">
+        <a href="#ai-tools">AI Tools & CV Builder</a>
+      </li>
+      <li class="nav-item">
+        <a href="#seo-proxy">Edge Proxy & SEO Strategy</a>
+      </li>
+      <li class="nav-item">
+        <a href="#proof-badging">Proof Verification & Badges</a>
+      </li>
     </ul>
 
     <div class="doc-links">
@@ -407,8 +416,8 @@
 │   ├── interview-prep/           # Interview preparation guides
 │   ├── portfolio/[category]/...  # Proof-of-work tasks (category/topic/level)
 │   ├── proof/[id]/               # Public portfolio submission showcases
-│   ├── tools/                    # Interactive career tools landing (Gemini-powered)
-│   ├── cv-builder/               # Multi-step CV builder + printable templates
+│   ├── free-ai-career-tools/     # Interactive career tools landing (Gemini-powered)
+│   ├── cv-builder/               # Multi-step CV builder + printable templates + cropper
 │   ├── find-a-course/            # Browse-and-filter course finder (replaces /search)
 │   ├── course/[courseId]/        # Individual course detail pages
 │   ├── category/[categoryId]/    # Course category listings
@@ -430,7 +439,7 @@
 ├── supabase/                     # SQL database schema and initialization scripts
 ├── types/                        # Main TypeScript interfaces (types/index.ts)
 └── utils/                        # Utilities (rate limiter, bot guards, HMAC signing,
-                                  #            Supabase client, email escaping)</code></pre>
+                                  #            Supabase client, dateUtils, email escaping)</code></pre>
     </section>
 
     <section id="patterns">
@@ -502,6 +511,56 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <li><strong>OneSignal:</strong> Delivers browser-push notifications initialized through a lazy client script.</li>
         <li><strong>Cloudflare Turnstile:</strong> Secures form inputs by executing verification tokens before executing endpoints.</li>
       </ul>
+    </section>
+
+    <section id="ai-tools">
+      <h2>6. Interactive AI Tools & CV Builder Architecture</h2>
+      <p>Graduates Hub hosts a suite of 7 interactive AI tools driven by Gemini 3.5 Flash Lite alongside a client-side multi-step CV Builder:</p>
+      
+      <h3>A. Interactive AI Tools Suite</h3>
+      <ul>
+        <li><code>/api/cv-review</code>: Analyzes resume text against target ATS keywords and outputs structured JSON scoring (formatting, impact, missing skills).</li>
+        <li><code>/api/interview-prep</code>: Generates dynamic role-specific interview simulation questions and grades user answers in real-time.</li>
+        <li><code>/api/jd-decoder</code>: Parses complex job descriptions into clear required vs. nice-to-have skill lists.</li>
+        <li><code>/api/skills-gap</code>: Compares candidate CVs against target job descriptions to identify missing technical competencies.</li>
+        <li><code>/api/learning-path</code>: Generates customized 90-day step-by-step learning schedules.</li>
+        <li><code>/api/recommendations</code>: Matches candidate goals to free certified courses and roadmaps.</li>
+      </ul>
+
+      <h3>B. CV Builder & Image Cropper Canvas</h3>
+      <p>The client-side CV builder (<code>/cv-builder</code>) features a multi-step form state (Personal, Summary, Experience, Education, Skills, References) coupled with a real-time print preview (Modern, Professional, Minimalist CSS templates).</p>
+      <div class="alert">
+        <div class="alert-title">ImageCropperModal Component</div>
+        <p>Profile photo uploads are processed via <code>ImageCropperModal.tsx</code>. Using an HTML5 <code>&lt;canvas&gt;</code> element with pointer event listeners, candidates can zoom (100%–300%), drag/pan, and rotate (90°) their photo inside a circular mask. Clicking 'Save & Apply' outputs a compressed 300x300 JPEG data URL stored in local CV state.</p>
+      </div>
+    </section>
+
+    <section id="seo-proxy">
+      <h2>7. Edge Proxy & SEO Canonical Architecture</h2>
+      <p>To comply with Google Search Console standards and protect search index equity, site routing is governed at the Vercel edge via <code>proxy.ts</code> middleware:</p>
+
+      <h3>A. Edge Domain Redirects</h3>
+      <p>All traffic arriving on <code>graduateshub.co.za</code>, <code>www.graduateshub.co.za</code>, or non-www <code>graduateshub.org</code> receives an HTTP 301 Permanent Redirect to <code>https://www.graduateshub.org</code>, unifying canonical domain authority.</p>
+
+      <h3>B. Staging Environment Index Guards</h3>
+      <p>Requests to staging or Vercel deploy aliases (<code>*.vercel.app</code>, <code>staging.graduateshub.org</code>) automatically receive an <code>X-Robots-Tag: noindex, nofollow</code> header to prevent duplicate staging content from surfacing in search.</p>
+
+      <h3>C. Canonical Hierarchy & Sitemap Priority Tiering</h3>
+      <ul>
+        <li><strong>Sub-level Exercise Pages:</strong> Difficulty variants (<code>/beginner</code>, <code>/intermediate</code>, <code>/advanced</code>) explicitly set their canonical tag to their parent topic URL (<code>/portfolio/category/topic</code>), consolidating ranking power.</li>
+        <li><strong>Sitemap Priority Tiering (<code>app/sitemap.ts</code>):</strong> High-intent editorial guides and roadmaps are set to <code>0.9–0.8</code> priority, while affiliate course aggregators (<code>/categories</code>, <code>/course/[id]</code>) are assigned lower <code>0.5–0.4</code> priority to comply with Google Helpful Content guidelines.</li>
+      </ul>
+    </section>
+
+    <section id="proof-badging">
+      <h2>8. Proof Verification & Dynamic Badging</h2>
+      <p>When a candidate completes a portfolio exercise and receives a passing grade from Gemini, a permanent public proof showcase is published at <code>/proof/[id]</code>.</p>
+
+      <h3>Dynamic OpenGraph Badge Rendering</h3>
+      <p>The route <code>/proof/-/opengraph-image</code> dynamically generates custom social sharing images using Next.js <code>ImageResponse</code>. The generated image features the student's name, task title, field badge, and verification QR code for LinkedIn sharing.</p>
+
+      <h3>Dynamic Evergreen Date Architecture</h3>
+      <p>All editorial guides, interview preps, and roadmaps utilize <code>utils/dateUtils.ts</code> (<code>formatLastUpdated</code>) to display dynamic evergreen month/year date stamps (e.g. <code>July 2026</code>), maintaining high user trust and search freshness signals.</p>
     </section>
   </main>
 
