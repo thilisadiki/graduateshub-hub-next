@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>System Architecture — Graduates Hub</title>
+  <title>System Architecture - Graduates Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -479,7 +479,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </ul>
 
       <h3>D. Database Downtime Contingency (HMAC-Signed Stashing)</h3>
-      <p>Portfolio submissions are graded by Gemini even if Supabase is unavailable. When the write to <code>portfolio_proofs</code> fails, <code>/api/portfolio/submit</code> returns the evaluation together with an HMAC-SHA256 signature (<code>utils/signing.ts</code>) covering the proof payload. The client stashes the signed result locally and renders it via <code>proof/[id]/TempProofViewer</code>. Once the database recovers, the client POSTs the stashed payload to <code>/api/portfolio/sync</code>, which re-verifies the signature before persisting — so a score can never be forged or altered client-side.</p>
+      <p>Portfolio submissions are graded by Gemini even if Supabase is unavailable. When the write to <code>portfolio_proofs</code> fails, <code>/api/portfolio/submit</code> returns the evaluation together with an HMAC-SHA256 signature (<code>utils/signing.ts</code>) covering the proof payload. The client stashes the signed result locally and renders it via <code>proof/[id]/TempProofViewer</code>. Once the database recovers, the client POSTs the stashed payload to <code>/api/portfolio/sync</code>, which re-verifies the signature before persisting - so a score can never be forged or altered client-side.</p>
     </section>
 
     <section id="database">

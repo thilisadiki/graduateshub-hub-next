@@ -7,7 +7,7 @@
   "difficulty": "Intermediate",
   "estimatedHours": "2 to 3 hours",
   "tagline": "Design the keyboard navigation flow for a complex component.",
-  "scenario": "A data table component has sortable columns, row selection, inline editing, and a context menu. Mouse users can do everything easily. Keyboard users are stuck — there is no focus management, no arrow key navigation, and Escape does not close the context menu.",
+  "scenario": "A data table component has sortable columns, row selection, inline editing, and a context menu. Mouse users can do everything easily. Keyboard users are stuck - there is no focus management, no arrow key navigation, and Escape does not close the context menu.",
   "brief": "Design the complete keyboard navigation specification for this data table. Cover focus order, key bindings, focus trapping for the context menu, and screen reader announcements.",
   "deliverables": [
     "A focus order specification: Tab sequence through the table, including column headers, rows, and action buttons",

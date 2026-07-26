@@ -45,7 +45,7 @@ export async function generateMetadata({
   const firstDeliverable = task.deliverables[0] ?? '';
   const description = `${task.tagline} ${firstDeliverable ? `Deliverable: ${firstDeliverable}.` : ''} Earn a public Badge of Competence.`.trim();
   return {
-    title: `${task.title} — ${topicLabel} ${task.difficulty} Task`,
+    title: `${task.title} - ${topicLabel} ${task.difficulty} Task`,
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}` },
     openGraph: {

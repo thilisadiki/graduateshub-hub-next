@@ -16,7 +16,7 @@
     "One edge case: what happens when a filter combination returns zero results"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "A dashboard with 10 filters and no guidance is unusable. Think about progressive disclosure — show the most-used filters first.",
+  "submissionGuidance": "A dashboard with 10 filters and no guidance is unusable. Think about progressive disclosure - show the most-used filters first.",
   "rubric": [
     {
       "key": "filters",

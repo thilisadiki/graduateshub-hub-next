@@ -11,12 +11,12 @@
   "brief": "Conduct a comprehensive component library audit. Evaluate consistency, completeness, accessibility, and usage. Produce a remediation plan.",
   "deliverables": [
     "An audit framework: the criteria you evaluate each component against (states, a11y, naming, responsiveness)",
-    "Audit findings for at least 6 components (invent them) — each with specific issues and severity",
+    "Audit findings for at least 6 components (invent them) - each with specific issues and severity",
     "A deprecation recommendation: which components to remove, merge, or replace",
     "A prioritised remediation plan with effort estimates (S/M/L) for the top 10 fixes"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "A component that exists but nobody uses is worse than no component — it creates maintenance overhead and confusion. Be willing to recommend deletion.",
+  "submissionGuidance": "A component that exists but nobody uses is worse than no component - it creates maintenance overhead and confusion. Be willing to recommend deletion.",
   "rubric": [
     {
       "key": "framework",

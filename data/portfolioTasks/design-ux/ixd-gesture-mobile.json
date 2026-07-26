@@ -7,7 +7,7 @@
   "difficulty": "Advanced",
   "estimatedHours": "3 to 5 hours",
   "tagline": "Design gesture interactions for a photo management app with discoverability cues.",
-  "scenario": "A photo management app wants to add gesture-based interactions: swipe to delete, long-press to select multiple, pinch to zoom, and double-tap to favourite. The challenge: gestures are invisible — how do users discover them?",
+  "scenario": "A photo management app wants to add gesture-based interactions: swipe to delete, long-press to select multiple, pinch to zoom, and double-tap to favourite. The challenge: gestures are invisible - how do users discover them?",
   "brief": "Design the complete gesture interaction system. Define each gesture, its visual feedback, discoverability mechanisms, and fallback for accessibility.",
   "deliverables": [
     "A gesture inventory: each gesture, what it does, and the visual feedback during and after the action",

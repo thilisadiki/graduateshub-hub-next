@@ -10,11 +10,11 @@
   "scenario": "A junior analyst keeps defaulting to bar charts for everything. Their manager asks them to prove they understand when to use lines, bars, scatter plots, pie charts, and histograms by completing a short exercise.",
   "brief": "For each of the 5 datasets described below, choose the best chart type and write one sentence explaining why each of the other common chart types would be a worse choice.",
   "deliverables": [
-    "Dataset 1: Monthly revenue over 24 months — your chart choice and reasoning",
-    "Dataset 2: Market share of 5 competitors — your chart choice and reasoning",
-    "Dataset 3: Correlation between ad spend and conversions — your chart choice and reasoning",
-    "Dataset 4: Distribution of employee salaries — your chart choice and reasoning",
-    "Dataset 5: Sales by region (10 regions, single quarter) — your chart choice and reasoning"
+    "Dataset 1: Monthly revenue over 24 months - your chart choice and reasoning",
+    "Dataset 2: Market share of 5 competitors - your chart choice and reasoning",
+    "Dataset 3: Correlation between ad spend and conversions - your chart choice and reasoning",
+    "Dataset 4: Distribution of employee salaries - your chart choice and reasoning",
+    "Dataset 5: Sales by region (10 regions, single quarter) - your chart choice and reasoning"
   ],
   "deliverableFormat": "markdown",
   "submissionGuidance": "For each dataset, name the chart type first, then explain why it is better than at least 2 alternatives. \"It looks nice\" is not a reason.",

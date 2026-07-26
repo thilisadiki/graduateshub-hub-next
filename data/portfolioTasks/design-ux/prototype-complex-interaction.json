@@ -16,7 +16,7 @@
     "Edge cases: what happens when dragging between columns during a sync error, or when two users drag the same card"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "The happy path is easy. The value is in edge cases — what happens when the drop fails? What does the user see during a network error? Design for failure.",
+  "submissionGuidance": "The happy path is easy. The value is in edge cases - what happens when the drop fails? What does the user see during a network error? Design for failure.",
   "rubric": [
     {
       "key": "drag-drop",

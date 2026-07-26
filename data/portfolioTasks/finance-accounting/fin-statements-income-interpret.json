@@ -15,7 +15,7 @@
     "The one line item you would investigate first and what question you would ask the finance team"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "The income statement must be internally consistent. If COGS grew faster than revenue, that is a margin squeeze — explain it in terms the ops manager understands.",
+  "submissionGuidance": "The income statement must be internally consistent. If COGS grew faster than revenue, that is a margin squeeze - explain it in terms the ops manager understands.",
   "rubric": [
     {
       "key": "statement",

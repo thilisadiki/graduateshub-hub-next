@@ -21,7 +21,7 @@ export async function generateMetadata({
   const title =
     pageNum === 1
       ? 'Career Guides & Study Tips Blog'
-      : `Career Guides & Study Tips Blog — Page ${pageNum}`;
+      : `Career Guides & Study Tips Blog - Page ${pageNum}`;
   return {
     title,
     description:

@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.warn('[Newsletter] RESEND_API_KEY not configured — subscription recorded locally.');
+      console.warn('[Newsletter] RESEND_API_KEY not configured - subscription recorded locally.');
       return NextResponse.json({ success: true, message: 'Thanks for subscribing! Check your inbox soon.' });
     }
 

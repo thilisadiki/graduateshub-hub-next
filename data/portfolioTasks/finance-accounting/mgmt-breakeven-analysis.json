@@ -15,7 +15,7 @@
     "A one-paragraph recommendation on pricing strategy based on the analysis"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "Break-even = Fixed Costs / (Price - Variable Cost). But the insight is in the sensitivity — how fragile is this business model?",
+  "submissionGuidance": "Break-even = Fixed Costs / (Price - Variable Cost). But the insight is in the sensitivity - how fragile is this business model?",
   "rubric": [
     {
       "key": "calculation",

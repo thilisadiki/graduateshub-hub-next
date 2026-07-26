@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // Only the canonical production host may be indexed. Every other host that
-// reaches the app — staging.graduateshub.org, the *.vercel.app preview/alias
-// URLs, localhost — gets a noindex header so it can never surface in search.
+// reaches the app - staging.graduateshub.org, the *.vercel.app preview/alias
+// URLs, localhost - gets a noindex header so it can never surface in search.
 //
 // Vercel's automatic noindex only covers the generated *.vercel.app deploy
 // URLs, NOT custom domains attached to the Preview environment (e.g.

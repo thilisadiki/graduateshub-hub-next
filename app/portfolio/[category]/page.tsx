@@ -31,8 +31,8 @@ export async function generateMetadata({
   const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
   const url = pageNum === 1 ? `${SITE_URL}/portfolio/${cat.id}` : `${SITE_URL}/portfolio/${cat.id}?page=${pageNum}`;
   const title = pageNum === 1 
-    ? `${cat.name} Portfolio Tasks — Graded Briefs for SA Graduates`
-    : `${cat.name} Portfolio Tasks — Page ${pageNum} — Graded Briefs`;
+    ? `${cat.name} Portfolio Tasks - Graded Briefs for SA Graduates`
+    : `${cat.name} Portfolio Tasks - Page ${pageNum} - Graded Briefs`;
   
   return {
     title,
@@ -101,7 +101,7 @@ export default async function CategoryPage({
   const itemListSchema: WithContext<ItemList> = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${cat.name} — Portfolio Topics`,
+    name: `${cat.name} - Portfolio Topics`,
     itemListOrder: 'https://schema.org/ItemListOrderAscending',
     numberOfItems: topics.length,
     itemListElement: topics.map((t, i) => ({

@@ -21,7 +21,7 @@ export function isValidEmail(email: string): boolean {
 /**
  * Emails a graduate the permanent link to their public Badge of Competence.
  * Returns true if sent, false if skipped (no API key / invalid input) or errored.
- * Never throws — emailing is best-effort and must not break submission/sync.
+ * Never throws - emailing is best-effort and must not break submission/sync.
  */
 export async function sendProofEmail(params: ProofEmailParams): Promise<boolean> {
   const { to, graduateName, taskTitle, verdict, overallScore, proofPath } = params;
@@ -30,7 +30,7 @@ export async function sendProofEmail(params: ProofEmailParams): Promise<boolean>
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.warn('[Proof Email] RESEND_API_KEY not configured — email not sent.');
+    console.warn('[Proof Email] RESEND_API_KEY not configured - email not sent.');
     return false;
   }
 
@@ -53,7 +53,7 @@ export async function sendProofEmail(params: ProofEmailParams): Promise<boolean>
             <strong>${safeVerdict}</strong> with an overall score of <strong>${overallScore}/100</strong>.
           </p>
           <p style="color: #374151; line-height: 1.6;">
-            This is your permanent, shareable Badge URL — add it to your CV or LinkedIn,
+            This is your permanent, shareable Badge URL - add it to your CV or LinkedIn,
             or send it to recruiters. It won't expire.
           </p>
           <p style="margin: 28px 0;">

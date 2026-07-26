@@ -50,7 +50,7 @@ export const itCourses: Course[] = [
     },
     {
         "id": "foundations-of-itil-4",
-        "title": "Alison Foundations of ITIL 4 — Full Course Review, Duration & Certificate Guide (2026)",
+        "title": "Alison Foundations of ITIL 4 - Full Course Review, Duration & Certificate Guide (2026)",
         "tag": "Certificate",
         "category": "IT Courses",
         "subCategory": "Networking & Infrastructure",

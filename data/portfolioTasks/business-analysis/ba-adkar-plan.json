@@ -7,7 +7,7 @@
   "difficulty": "Intermediate",
   "estimatedHours": "2 to 3 hours",
   "tagline": "Write an ADKAR-based change plan for migrating a sales team to a CRM.",
-  "scenario": "A 25-person sales team has used spreadsheets for 5 years. The company is implementing Salesforce. The sales director supports the change, but the team is sceptical — they see it as \"management spying on their pipeline.\"",
+  "scenario": "A 25-person sales team has used spreadsheets for 5 years. The company is implementing Salesforce. The sales director supports the change, but the team is sceptical - they see it as \"management spying on their pipeline.\"",
   "brief": "Write a change management plan using the ADKAR model (Awareness, Desire, Knowledge, Ability, Reinforcement). Address the scepticism directly.",
   "deliverables": [
     "An ADKAR assessment: current state of the sales team across all 5 ADKAR elements",

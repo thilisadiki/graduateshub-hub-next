@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Sparkles, TrendingUp, Brain, ArrowRight } from 'lucide-react';
 
 // Lazy-loaded so the homepage bundle doesn't ship these modals (and the full
-// course catalog they import) up front — they download only when opened.
+// course catalog they import) up front - they download only when opened.
 const AIRecommendationModal = dynamic(() => import('@/components/modals/AIRecommendationModal'), { ssr: false });
 const SkillsGapModal = dynamic(() => import('@/components/modals/SkillsGapModal'), { ssr: false });
 const CareerQuizModal = dynamic(() => import('@/components/modals/CareerQuizModal'), { ssr: false });

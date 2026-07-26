@@ -169,7 +169,7 @@ export default function FreeBusinessCoursesPage() {
         datePublished="2026-01-01"
         breadcrumb={[{ label: 'Free Business Courses' }]}
         heading="How to Learn Business Skills for Free Online (2026)"
-        heroDescription="Discover how to learn in-demand business skills for free online in 2026. Master project management, process improvement, compliance, and strategy with CPD-accredited certificates — no degree or prior experience required."
+        heroDescription="Discover how to learn in-demand business skills for free online in 2026. Master project management, process improvement, compliance, and strategy with CPD-accredited certificates - no degree or prior experience required."
         heroBadges={[
           { icon: CheckCircle2, label: 'No Experience Required', iconClassName: 'text-green-500' },
           { icon: Award, label: 'CPD-Accredited Certificates', iconClassName: 'text-primary' },

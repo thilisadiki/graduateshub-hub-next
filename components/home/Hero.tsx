@@ -92,7 +92,7 @@ export default function Hero() {
 
                 <h2 className="text-2xl font-black text-[#1F1B13] tracking-tight leading-tight mb-3">Proof of Work Portfolio</h2>
                 <p className="text-[#4F4639] text-sm font-medium leading-relaxed mb-6">
-                  Don&apos;t just list your skills — show them. Learn how to build projects that grab recruiters&apos; attention.
+                  Don&apos;t just list your skills - show them. Learn how to build projects that grab recruiters&apos; attention.
                 </p>
 
                 <div className="space-y-4 mb-8 relative">

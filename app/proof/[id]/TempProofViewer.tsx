@@ -133,7 +133,7 @@ export default function TempProofViewer({ id }: { id: string }) {
           <div className="flex items-center gap-3">
             <AlertCircle className="shrink-0 animate-pulse text-amber-100" size={20} />
             <div className="text-sm font-semibold">
-              Offline Mode — Graded submission stashed in your browser.
+              Offline Mode - Graded submission stashed in your browser.
               <p className="text-xs text-amber-100 font-medium">This temporary preview link cannot be shared with recruiters.</p>
             </div>
           </div>

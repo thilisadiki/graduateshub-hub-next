@@ -6,8 +6,8 @@
   "title": "Variance Analysis Report",
   "difficulty": "Intermediate",
   "estimatedHours": "2 to 3 hours",
-  "tagline": "Explain why actual results differ from budget — controllable vs uncontrollable.",
-  "scenario": "Q1 is over. The marketing team spent R680K against a budget of R600K — 13% over. The CFO wants to know why and whether it will happen again.",
+  "tagline": "Explain why actual results differ from budget - controllable vs uncontrollable.",
+  "scenario": "Q1 is over. The marketing team spent R680K against a budget of R600K - 13% over. The CFO wants to know why and whether it will happen again.",
   "brief": "Write a variance analysis report. Decompose the R80K overspend into specific line items, classify each as controllable or uncontrollable, and recommend corrective actions for Q2.",
   "deliverables": [
     "A variance table: Line Item, Budget, Actual, Variance (R and %), Controllable/Uncontrollable",

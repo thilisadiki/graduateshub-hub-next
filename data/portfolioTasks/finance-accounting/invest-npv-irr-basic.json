@@ -11,7 +11,7 @@
   "brief": "Calculate the NPV and IRR. Show your working step by step. Make a clear recommendation based on the results.",
   "deliverables": [
     "The NPV calculation with each year's discounted cash flow shown",
-    "The IRR (you can estimate using interpolation or trial and error — show the method)",
+    "The IRR (you can estimate using interpolation or trial and error - show the method)",
     "The payback period (simple, not discounted)",
     "A one-paragraph recommendation: buy or not, and why"
   ],

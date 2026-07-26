@@ -21,9 +21,9 @@ How our code moves from local to production, and how the environments are wired 
 > Bigger or risky work can start on a `feature/*` branch (its own noindexed
 > preview URL), then merge into `dev`. See "Feature-branch loop" below.
 
-- **`main`** auto-deploys to **production** `www.graduateshub.org` — the only host
+- **`main`** auto-deploys to **production** `www.graduateshub.org` - the only host
   Google indexes.
-- **`dev`** auto-deploys to **staging** `staging.graduateshub.org` — private (HTTP
+- **`dev`** auto-deploys to **staging** `staging.graduateshub.org` - private (HTTP
   401 via Vercel Deployment Protection) and noindexed. This is your test surface.
 - Every push to either branch triggers a Vercel build automatically. You never
   deploy manually.
@@ -46,7 +46,7 @@ git push
 ```
 
 Test on staging at `https://staging.graduateshub.org` (you must be logged into
-Vercel — see "Viewing staging"). Then promote:
+Vercel - see "Viewing staging"). Then promote:
 
 ```bash
 # 5. Promote dev -> production
@@ -109,7 +109,7 @@ git switch dev && git merge main && git push                   # backport to dev
    always `www.graduateshub.org`; staging pages canonical to prod on purpose.
    Don't point canonicals at staging.
 4. **`main` is the release line.** Never push experimental work straight to
-   `main` — it goes live instantly. Everything earns its way in through staging.
+   `main` - it goes live instantly. Everything earns its way in through staging.
 5. **Don't disable Deployment Protection** unless you specifically want a public,
    shareable staging. If you ever do, the `proxy.ts` `noindex` is what then keeps
    it out of Google.

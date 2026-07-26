@@ -8,14 +8,14 @@
   "estimatedHours": "1 to 2 hours",
   "tagline": "Define the KPIs and layout for tracking a product launch across 3 channels.",
   "scenario": "A beauty brand is launching a new product line across Instagram, Google Ads, and email. The marketing manager wants a single dashboard to track campaign performance in one view.",
-  "brief": "Design a campaign dashboard. Define the KPIs for each channel, the overall campaign KPIs, and the layout. You do not need to build it in a tool — a detailed wireframe description is sufficient.",
+  "brief": "Design a campaign dashboard. Define the KPIs for each channel, the overall campaign KPIs, and the layout. You do not need to build it in a tool - a detailed wireframe description is sufficient.",
   "deliverables": [
     "Channel-level KPIs: 3 metrics per channel (Instagram, Google Ads, Email) with definitions",
     "Campaign-level KPIs: 3 aggregate metrics that show overall launch success",
     "A dashboard layout description showing how the information is organised for a weekly review"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "A dashboard with 20 metrics is not a dashboard — it is a spreadsheet. Choose the metrics that actually drive decisions.",
+  "submissionGuidance": "A dashboard with 20 metrics is not a dashboard - it is a spreadsheet. Choose the metrics that actually drive decisions.",
   "rubric": [
     {
       "key": "kpis",

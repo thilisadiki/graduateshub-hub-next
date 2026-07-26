@@ -7,7 +7,7 @@
   "difficulty": "Intermediate",
   "estimatedHours": "2 to 3 hours",
   "tagline": "Evaluate build vs buy vs hybrid for a document management system.",
-  "scenario": "A law firm with 80 staff stores documents across shared drives, email attachments, and physical filing cabinets. They need a document management system. Three options: (A) build custom, (B) buy an off-the-shelf solution, (C) hybrid — buy a platform and customise.",
+  "scenario": "A law firm with 80 staff stores documents across shared drives, email attachments, and physical filing cabinets. They need a document management system. Three options: (A) build custom, (B) buy an off-the-shelf solution, (C) hybrid - buy a platform and customise.",
   "brief": "Evaluate all 3 options using weighted scoring. Define evaluation criteria, assign weights, score each option, and make a recommendation.",
   "deliverables": [
     "Evaluation criteria: at least 8 criteria (cost, time, fit, risk, etc.) with weights that sum to 100%",

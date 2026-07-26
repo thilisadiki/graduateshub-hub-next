@@ -15,7 +15,7 @@
     "A prioritised remediation roadmap: Critical (0-30 days), Important (30-90 days), Maintenance (ongoing)"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "POPIA has 8 conditions for lawful processing. Do not just list them — assess each against what the healthcare provider actually does (invent realistic current practices).",
+  "submissionGuidance": "POPIA has 8 conditions for lawful processing. Do not just list them - assess each against what the healthcare provider actually does (invent realistic current practices).",
   "rubric": [
     {
       "key": "assessment",

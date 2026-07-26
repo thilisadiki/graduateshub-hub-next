@@ -13,7 +13,7 @@ async function alertKeepaliveFailure(detail: string): Promise<void> {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        content: `🚨 Graduates Hub keepalive failed — Supabase may be paused or down.\nTime: ${new Date().toISOString()}\nDetail: ${detail}`,
+        content: `🚨 Graduates Hub keepalive failed - Supabase may be paused or down.\nTime: ${new Date().toISOString()}\nDetail: ${detail}`,
       }),
     });
   } catch (err) {

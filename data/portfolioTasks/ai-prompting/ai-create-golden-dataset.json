@@ -7,7 +7,7 @@
   "difficulty": "Beginner",
   "estimatedHours": "1 to 2 hours",
   "tagline": "Create 10 test cases to evaluate a new customer support prompt.",
-  "scenario": "Your team wrote a new prompt to answer customer FAQs. Before deploying it, you need to prove it works. You need a \"Golden Dataset\" — a spreadsheet of varied inputs and the exact expected outputs to test the prompt against.",
+  "scenario": "Your team wrote a new prompt to answer customer FAQs. Before deploying it, you need to prove it works. You need a \"Golden Dataset\" - a spreadsheet of varied inputs and the exact expected outputs to test the prompt against.",
   "brief": "Design a 10-row Golden Dataset for testing a retail e-commerce bot.",
   "deliverables": [
     "10 diverse test queries (Inputs)",

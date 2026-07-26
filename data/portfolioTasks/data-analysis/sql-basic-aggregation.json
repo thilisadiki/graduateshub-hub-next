@@ -8,7 +8,7 @@
   "estimatedHours": "1 to 2 hours",
   "tagline": "GROUP BY, HAVING, and ORDER BY on a sales table.",
   "scenario": "An online retailer has a `sales` table with columns: `order_id`, `product_category`, `sale_amount`, `sale_date`, and `region`. The marketing team wants three quick answers before their Monday meeting.",
-  "brief": "Write three SQL queries against the sales table. You do not need a live database — write the SQL in code blocks and explain what each query returns.",
+  "brief": "Write three SQL queries against the sales table. You do not need a live database - write the SQL in code blocks and explain what each query returns.",
   "deliverables": [
     "Query 1: Total revenue by product category, sorted highest to lowest",
     "Query 2: All regions where total revenue exceeds R500,000, using HAVING",

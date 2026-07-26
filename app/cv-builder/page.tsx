@@ -116,7 +116,7 @@ export default function CVBuilderPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Fill in your details, crop your profile photo, choose from 3 professional templates, and download a print-ready PDF — with zero watermarks or paywalls.
+            Fill in your details, crop your profile photo, choose from 3 professional templates, and download a print-ready PDF - with zero watermarks or paywalls.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

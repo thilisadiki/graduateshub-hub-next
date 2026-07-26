@@ -7,7 +7,7 @@
   "difficulty": "Intermediate",
   "estimatedHours": "2 to 3 hours",
   "tagline": "Design a notification system with in-app, push, and email channels.",
-  "scenario": "A project management app sends too many notifications. Users complain about notification fatigue — they get pinged for every comment, assignment, and status change. Some have turned off all notifications, missing critical updates.",
+  "scenario": "A project management app sends too many notifications. Users complain about notification fatigue - they get pinged for every comment, assignment, and status change. Some have turned off all notifications, missing critical updates.",
   "brief": "Redesign the notification system. Define which events trigger which channels, how notifications group, priority levels, and user control over preferences.",
   "deliverables": [
     "A notification matrix: Event Type × Channel (in-app, push, email) with default on/off for each",
@@ -16,7 +16,7 @@
     "A user preferences design: how users control notification settings without 50 individual toggles"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "The goal is not fewer notifications — it is the right notifications at the right time. A deadline change is urgent. A comment on a resolved task is not.",
+  "submissionGuidance": "The goal is not fewer notifications - it is the right notifications at the right time. A deadline change is urgent. A comment on a resolved task is not.",
   "rubric": [
     {
       "key": "matrix",

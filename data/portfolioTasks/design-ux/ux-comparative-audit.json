@@ -15,7 +15,7 @@
     "Two anti-patterns to avoid, with explanation of why they fail"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "Do not just list heuristic violations. The value is in the comparative lens — what does Product A do better than B, and why? Be specific about screens and interactions.",
+  "submissionGuidance": "Do not just list heuristic violations. The value is in the comparative lens - what does Product A do better than B, and why? Be specific about screens and interactions.",
   "rubric": [
     {
       "key": "heuristics",

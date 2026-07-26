@@ -16,7 +16,7 @@
     "An ethical framework for deciding how much accuracy you are willing to sacrifice for fairness"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "Simply removing the gender column does not fix bias — proxy features (name, school, hobbies) still leak. Show you understand this.",
+  "submissionGuidance": "Simply removing the gender column does not fix bias - proxy features (name, school, hobbies) still leak. Show you understand this.",
   "rubric": [
     {
       "key": "sources",

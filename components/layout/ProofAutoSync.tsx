@@ -14,7 +14,7 @@ const PROOF_KEY_PREFIX = 'portfolio-proof-';
  * soon as it's reachable again. On success the local stash is cleared and (if an
  * email was provided) the permanent link is emailed by the sync route.
  *
- * Fully best-effort and silent — failures leave the stash untouched for next time.
+ * Fully best-effort and silent - failures leave the stash untouched for next time.
  */
 export default function ProofAutoSync() {
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function ProofAutoSync() {
 
           // 2xx = synced. 400 = unrecoverable (bad signature / missing params) so
           // stop retrying it. Everything else (429 rate-limit, 5xx DB-down) is
-          // transient — keep the stash and try again on the next visit.
+          // transient - keep the stash and try again on the next visit.
           if (res.ok || res.status === 400) {
             try {
               localStorage.removeItem(key);
@@ -72,7 +72,7 @@ export default function ProofAutoSync() {
             }
           }
         } catch {
-          // Network error — leave the stash in place and try again next load.
+          // Network error - leave the stash in place and try again next load.
         }
       }
     }

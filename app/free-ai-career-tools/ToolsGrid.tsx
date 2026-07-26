@@ -13,7 +13,7 @@ const InterviewPrepModal = dynamic(() => import('@/components/modals/InterviewPr
 const JDDecoderModal = dynamic(() => import('@/components/modals/JDDecoderModal'), { ssr: false });
 const CareerQuizModal = dynamic(() => import('@/components/modals/CareerQuizModal'), { ssr: false });
 
-// Citrus MD3 palette — primary / secondary / tertiary
+// Citrus MD3 palette - primary / secondary / tertiary
 const P = {
   primary:   { accent: 'from-[#7A5900] to-[#FFDF9C]', iconBg: 'bg-[#FFDF9C]/50', iconColor: 'text-[#7A5900]', badgeBg: 'bg-[#FFDF9C] text-[#261A00]', btn: 'bg-primary hover:bg-[#5a4000]' },
   secondary: { accent: 'from-[#6C5D3F] to-[#F5E0BB]', iconBg: 'bg-[#F5E0BB]/50', iconColor: 'text-[#6C5D3F]', badgeBg: 'bg-[#F5E0BB] text-[#251A04]', btn: 'bg-[#6C5D3F] hover:bg-[#524633]' },

@@ -16,7 +16,7 @@
     "The enterprise value, net debt adjustment, and final equity value with a comparison to the R30M asking price"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "A DCF is only as good as its assumptions. State every assumption explicitly. Terminal value typically represents 60-80% of total value — if yours does not, check your growth rate and discount rate.",
+  "submissionGuidance": "A DCF is only as good as its assumptions. State every assumption explicitly. Terminal value typically represents 60-80% of total value - if yours does not, check your growth rate and discount rate.",
   "rubric": [
     {
       "key": "projections",

@@ -10,7 +10,7 @@
   "scenario": "A South African insurance company receives 2,000 customer calls per day. 40% are simple queries (claim status, policy details). The CTO suggests a chatbot. The COO wants to know if it is feasible before committing budget.",
   "brief": "Create a feasibility assessment covering technical, operational, financial, and schedule feasibility. Make a clear recommendation.",
   "deliverables": [
-    "A feasibility assessment with 4 dimensions: Technical, Operational, Financial, Schedule — each rated Green/Amber/Red",
+    "A feasibility assessment with 4 dimensions: Technical, Operational, Financial, Schedule - each rated Green/Amber/Red",
     "Key assumptions and risks for each dimension",
     "A one-paragraph recommendation: proceed, proceed with conditions, or do not proceed"
   ],

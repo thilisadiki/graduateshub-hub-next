@@ -1,4 +1,4 @@
-# Graduates Hub — Global Career & Course Directory
+# Graduates Hub - Global Career & Course Directory
 
 Graduates Hub is a Next.js web application designed to connect learners worldwide with free online courses and career guidance. The platform features structured, stage-by-stage career roadmaps, interactive interview prep guides, and a suite of AI-powered career tools built on Google Gemini.
 
@@ -71,10 +71,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## 📦 Project Scripts
 
-*   `npm run dev` — Launches the local Next.js development server.
-*   `npm run build` — Generates a static-optimized production build of the project.
-*   `npm start` — Boots the production server locally (must run `npm run build` first).
-*   `npx tsc --noEmit` — Executes static TypeScript validation checks.
+*   `npm run dev` - Launches the local Next.js development server.
+*   `npm run build` - Generates a static-optimized production build of the project.
+*   `npm start` - Boots the production server locally (must run `npm run build` first).
+*   `npx tsc --noEmit` - Executes static TypeScript validation checks.
 
 ---
 
@@ -82,5 +82,5 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 Detailed structural blueprints and safety guidelines are located in the `/docs` directory:
 
-1.  **[Architecture Blueprint](docs/architecture.html)** — Core routing conventions, layout design systems, static data configurations, and Supabase integration schemas.
-2.  **[Security Standards](docs/security.html)** — Rate limiting configs, turnstile bot defenses, input size validations, HTTP headers, and client-side guards.
+1.  **[Architecture Blueprint](docs/architecture.html)** - Core routing conventions, layout design systems, static data configurations, and Supabase integration schemas.
+2.  **[Security Standards](docs/security.html)** - Rate limiting configs, turnstile bot defenses, input size validations, HTTP headers, and client-side guards.

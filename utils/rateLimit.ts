@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
  * expired entries and returns a 429 NextResponse if the limit is exceeded,
  * or null if the request is allowed.
  *
- * Trade-off: state is per serverless instance — it resets when Vercel spins
+ * Trade-off: state is per serverless instance - it resets when Vercel spins
  * up a new instance. This catches rapid-fire abuse (the 90% case) without
  * needing Redis or any external service.
  */

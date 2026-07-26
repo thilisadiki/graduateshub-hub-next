@@ -134,7 +134,7 @@ export const uiUxDesignerRoadmap: CareerRoadmap = {
     },
     {
       q: 'What is the difference between UI and UX Design?',
-      a: 'UX (User Experience) is about how the product works and feels—user research, wireframes, usability testing, and information architecture. UI (User Interface) is about how the product looks—colors, typography, spacing, buttons, and visual aesthetic polish.',
+      a: 'UX (User Experience) is about how the product works and feels - user research, wireframes, usability testing, and information architecture. UI (User Interface) is about how the product looks - colors, typography, spacing, buttons, and visual aesthetic polish.',
     },
     {
       q: 'What actually gets you hired as a junior UI/UX designer?',

@@ -37,7 +37,7 @@ export const authors: Author[] = [
     bio: [
       'Jason Sadiki is the founder of Graduates Hub and a Technical SEO Specialist at Betway Africa with over 7 years of hands-on industry experience in web architecture, search performance, and digital marketing.',
       'He created Graduates Hub to eliminate financial barriers for students and job seekers by surfacing high-quality, internationally accredited free courses and career roadmaps based on real industry experience.',
-      'Every course and roadmap curated by Jason is evaluated for practical relevance, accreditation value, and real-world career application — ensuring candidates learn skills that employers actually test for.',
+      'Every course and roadmap curated by Jason is evaluated for practical relevance, accreditation value, and real-world career application - ensuring candidates learn skills that employers actually test for.',
     ],
     expertise: [
       'Technical SEO',

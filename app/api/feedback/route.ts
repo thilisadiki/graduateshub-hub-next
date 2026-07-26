@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.warn('[Feedback] RESEND_API_KEY not configured — email not sent.');
+      console.warn('[Feedback] RESEND_API_KEY not configured - email not sent.');
       return NextResponse.json({ success: true });
     }
 

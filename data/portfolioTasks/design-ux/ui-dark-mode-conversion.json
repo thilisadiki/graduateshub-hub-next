@@ -7,7 +7,7 @@
   "difficulty": "Advanced",
   "estimatedHours": "3 to 5 hours",
   "tagline": "Convert a light-mode design to dark mode, handling contrast, elevation, and states.",
-  "scenario": "A productivity app has a polished light-mode design. Users have been requesting dark mode for months. The design team needs a comprehensive dark mode specification — not just \"invert the colours.\"",
+  "scenario": "A productivity app has a polished light-mode design. Users have been requesting dark mode for months. The design team needs a comprehensive dark mode specification - not just \"invert the colours.\"",
   "brief": "Design the dark mode conversion specification. Cover colour mapping, contrast ratios, elevation representation, component state changes, and image/icon handling.",
   "deliverables": [
     "A colour mapping table: each light-mode colour and its dark-mode equivalent with WCAG contrast ratios",
@@ -16,7 +16,7 @@
     "Image and icon handling: when to invert, when to add backgrounds, when to swap assets"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "Dark mode is not \"white background → #121212.\" It is a complete rethinking of elevation, contrast, and visual weight. Shadows do not work on dark backgrounds — you need lighter surfaces instead.",
+  "submissionGuidance": "Dark mode is not \"white background → #121212.\" It is a complete rethinking of elevation, contrast, and visual weight. Shadows do not work on dark backgrounds - you need lighter surfaces instead.",
   "rubric": [
     {
       "key": "colours",

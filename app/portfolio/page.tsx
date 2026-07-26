@@ -9,7 +9,7 @@ import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 import RecentCompleters from '@/components/portfolio/RecentCompleters';
 
 export const metadata: Metadata = {
-  title: 'Proof of Work Portfolio for SA Graduates — Graded Micro-Internship Tasks',
+  title: 'Proof of Work Portfolio for SA Graduates - Graded Micro-Internship Tasks',
   description:
     'Complete short, practical micro-internship tasks graded against a public rubric and earn a shareable Badge of Competence for your LinkedIn. Built for South African graduates and career changers. No account required.',
   alternates: { canonical: `${SITE_URL}/portfolio` },

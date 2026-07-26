@@ -15,7 +15,7 @@
     "A before/after comparison for 3 specific settings showing how clarity improved"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "Good settings pages use progressive disclosure — show common settings first, hide advanced ones behind an \"Advanced\" section. Do not dump everything on one page.",
+  "submissionGuidance": "Good settings pages use progressive disclosure - show common settings first, hide advanced ones behind an \"Advanced\" section. Do not dump everything on one page.",
   "rubric": [
     {
       "key": "analysis",

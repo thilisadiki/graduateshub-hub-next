@@ -25,7 +25,7 @@ export async function generateMetadata({
   const skills = top.skillsProven.slice(0, 4).join(', ');
   const description = `${top.description}${skills ? ` Skills: ${skills}.` : ''} Beginner, Intermediate, and Advanced levels with graded rubrics.`;
   return {
-    title: `${top.title} — ${cat.name} Portfolio Tasks`,
+    title: `${top.title} - ${cat.name} Portfolio Tasks`,
     description,
     alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
     openGraph: {
@@ -90,7 +90,7 @@ export default async function TopicPage({
   const itemListSchema: WithContext<ItemList> = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${top.title} — Portfolio Tasks`,
+    name: `${top.title} - Portfolio Tasks`,
     itemListOrder: 'https://schema.org/ItemListOrderAscending',
     numberOfItems: availableTasks.length,
     itemListElement: availableTasks.map(({ lvl, task }, i) => ({

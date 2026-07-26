@@ -11,7 +11,7 @@
   "brief": "Write all the copy for the 5-step onboarding flow. Include headlines, body text, button labels, progress indicators, tooltips, and the empty state for a workspace with no projects.",
   "deliverables": [
     "Complete copy for all 5 screens: headline, body text (max 2 sentences), primary CTA, secondary CTA",
-    "A progress indicator design with copy (e.g., \"Step 2 of 5 — almost there\" vs \"2/5\")",
+    "A progress indicator design with copy (e.g., \"Step 2 of 5 - almost there\" vs \"2/5\")",
     "Tooltips for 3 non-obvious features encountered during onboarding",
     "An empty state for the dashboard after onboarding (no projects yet) that motivates the first action"
   ],

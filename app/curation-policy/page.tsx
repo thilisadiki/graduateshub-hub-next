@@ -5,7 +5,7 @@ import { ExternalLink, CheckCircle2, XCircle, RefreshCw, Users } from 'lucide-re
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'How We Curate Courses — Curation Policy',
+  title: 'How We Curate Courses - Curation Policy',
   description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
   alternates: { canonical: `${SITE_URL}/curation-policy` },
   openGraph: {

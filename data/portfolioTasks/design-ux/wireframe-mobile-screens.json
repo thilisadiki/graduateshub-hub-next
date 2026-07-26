@@ -8,7 +8,7 @@
   "estimatedHours": "1 to 2 hours",
   "tagline": "Sketch 5 key screens for a food delivery app.",
   "scenario": "A startup is building a food delivery app for campus students. Before any visual design, the product manager wants to see the core user flow in low-fidelity wireframes.",
-  "brief": "Sketch 5 key screens: Home/Browse, Restaurant Menu, Cart, Checkout, and Order Confirmation. Use boxes, lines, and placeholder text — no colour, no branding.",
+  "brief": "Sketch 5 key screens: Home/Browse, Restaurant Menu, Cart, Checkout, and Order Confirmation. Use boxes, lines, and placeholder text - no colour, no branding.",
   "deliverables": [
     "Descriptions of 5 lo-fi wireframe screens with layout notes (header, content areas, CTAs, navigation)",
     "A flow diagram showing how users move between the 5 screens",

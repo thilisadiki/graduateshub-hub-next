@@ -7,7 +7,7 @@
   "difficulty": "Advanced",
   "estimatedHours": "3 to 5 hours",
   "tagline": "Design a quarterly research programme for a product team.",
-  "scenario": "A growing fintech product team has 3 designers and 12 engineers. They do ad hoc user research — sometimes a lot, sometimes none. The Head of Product wants a structured research programme that runs continuously.",
+  "scenario": "A growing fintech product team has 3 designers and 12 engineers. They do ad hoc user research - sometimes a lot, sometimes none. The Head of Product wants a structured research programme that runs continuously.",
   "brief": "Design a quarterly research programme. Cover recruitment, method selection per question type, tooling, research repository, and how findings get to engineers who do not attend sessions.",
   "deliverables": [
     "A quarterly research calendar with research type (discovery, evaluative, continuous) mapped to product milestones",

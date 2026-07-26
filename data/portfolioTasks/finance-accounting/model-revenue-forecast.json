@@ -15,7 +15,7 @@
     "One scenario: what if churn drops from 15 to 10 per month? Show the revenue impact by month 12"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "Revenue = Customers × ARPU. But customers compound — losing fewer customers each month has a dramatic effect by month 12. Show this compounding.",
+  "submissionGuidance": "Revenue = Customers × ARPU. But customers compound - losing fewer customers each month has a dramatic effect by month 12. Show this compounding.",
   "rubric": [
     {
       "key": "model",

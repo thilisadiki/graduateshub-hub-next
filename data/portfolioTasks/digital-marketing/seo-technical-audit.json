@@ -7,8 +7,8 @@
   "difficulty": "Advanced",
   "estimatedHours": "3 to 5 hours",
   "tagline": "Audit a 5,000-page e-commerce site for crawlability, Core Web Vitals, and indexation.",
-  "scenario": "A South African e-commerce site selling 3,000 products has seen organic traffic decline 25% over 3 months despite no content changes. The SEO manager suspects technical issues — possibly crawl budget waste, duplicate content from faceted navigation, or Core Web Vitals failures.",
-  "brief": "Design a comprehensive technical SEO audit. You do not need to crawl a real site — describe the audit methodology, the tools you would use, and the prioritised findings you would expect.",
+  "scenario": "A South African e-commerce site selling 3,000 products has seen organic traffic decline 25% over 3 months despite no content changes. The SEO manager suspects technical issues - possibly crawl budget waste, duplicate content from faceted navigation, or Core Web Vitals failures.",
+  "brief": "Design a comprehensive technical SEO audit. You do not need to crawl a real site - describe the audit methodology, the tools you would use, and the prioritised findings you would expect.",
   "deliverables": [
     "An audit methodology covering: crawlability (robots.txt, sitemap, crawl budget), indexation (canonical tags, noindex, duplicate content), and performance (Core Web Vitals)",
     "A list of 5 hypothetical findings, prioritised by traffic impact, with remediation steps for each",

@@ -134,7 +134,7 @@ export const financialAnalystRoadmap: CareerRoadmap = {
     },
     {
       q: 'What Excel skills are required for financial modeling?',
-      a: 'Master INDEX/MATCH, XLOOKUP, SUMIFS, dynamic array formulas, financial functions (NPV, IRR, XIRR), and scenario Data Tables. Avoid relying on your computer mouse—fast keyboard shortcuts are expected in finance interviews.',
+      a: 'Master INDEX/MATCH, XLOOKUP, SUMIFS, dynamic array formulas, financial functions (NPV, IRR, XIRR), and scenario Data Tables. Avoid relying on your computer mouse - fast keyboard shortcuts are expected in finance interviews.',
     },
   ],
   firstNinetyDays: [

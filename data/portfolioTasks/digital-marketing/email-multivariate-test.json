@@ -7,7 +7,7 @@
   "difficulty": "Intermediate",
   "estimatedHours": "2 to 3 hours",
   "tagline": "Design a multivariate test across subject line, preview text, CTA, and send time.",
-  "scenario": "An online fashion retailer is launching a new summer collection. The email team wants to optimise not just the subject line, but the entire email — preview text, hero image, CTA button copy, and send time. They have a list of 120,000 subscribers.",
+  "scenario": "An online fashion retailer is launching a new summer collection. The email team wants to optimise not just the subject line, but the entire email - preview text, hero image, CTA button copy, and send time. They have a list of 120,000 subscribers.",
   "brief": "Design a multivariate testing plan that goes beyond simple A/B. Decide which variables to test simultaneously vs sequentially, calculate the traffic allocation, and define the success criteria.",
   "deliverables": [
     "A testing matrix showing which variables you are testing and which combinations you are comparing",
@@ -16,7 +16,7 @@
     "The decision framework: how you pick the winner when results are mixed (e.g., higher open rate but lower click rate)"
   ],
   "deliverableFormat": "markdown",
-  "submissionGuidance": "A full factorial design with 4 variables × 2 variants = 16 cells. With 120K subscribers, each cell gets 7,500 — is that enough? Show your reasoning.",
+  "submissionGuidance": "A full factorial design with 4 variables × 2 variants = 16 cells. With 120K subscribers, each cell gets 7,500 - is that enough? Show your reasoning.",
   "rubric": [
     {
       "key": "design",
