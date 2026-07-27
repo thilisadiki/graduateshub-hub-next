@@ -38,24 +38,3 @@ export const interviewPreps: InterviewPrep[] = [
   juniorFinancialAdvisorPrep,
   juniorQATesterPrep,
 ];
-
-export {
-  itSupportSpecialistPrep,
-  juniorAccountantPrep,
-  digitalMarketingCoordinatorPrep,
-  dataAnalystPrep,
-  webDeveloperPrep,
-  businessAnalystPrep,
-  hrCoordinatorPrep,
-  juniorGraphicDesignerPrep,
-  projectCoordinatorPrep,
-  customerServiceAgentPrep,
-  juniorFinancialAdvisorPrep,
-  juniorQATesterPrep,
-  cybersecurityAnalystPrep,
-  uiUxDesignerPrep,
-  cloudSupportDevOpsPrep,
-  seoContentStrategistPrep,
-  financialAnalystPrep,
-  softwareEngineerPrep,
-};

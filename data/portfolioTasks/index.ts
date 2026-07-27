@@ -232,10 +232,6 @@ export function getTaskByLocation(
   );
 }
 
-export function getTasksByCategory(categoryId: string): PortfolioTask[] {
-  return portfolioTasks.filter((t) => t.categoryId === categoryId);
-}
-
 export function getTasksByTopic(categoryId: string, topicId: string): PortfolioTask[] {
   return portfolioTasks.filter((t) => t.categoryId === categoryId && t.topicId === topicId);
 }

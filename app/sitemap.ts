@@ -5,7 +5,6 @@ import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
-import { portfolioTasks } from '@/data/portfolioTasks';
 
 const SITE_URL = 'https://www.graduateshub.org';
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';

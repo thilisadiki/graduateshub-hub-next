@@ -123,6 +123,3 @@ export function getAuthorBySlug(slug: string): Author | undefined {
   return authors.find((a) => a.slug === slug);
 }
 
-export function getAuthorByKey(key: string): Author | undefined {
-  return authors.find((a) => a.key === key);
-}
