@@ -52,6 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/guides`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog`, lastModified, changeFrequency: 'daily', priority: 0.9 },
     { url: `${SITE_URL}/free-courses-with-certificates`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/online-learning-platforms`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-ai-courses-for-beginners`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-courses-for-data-analysts`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/best-alison-courses-with-certificates`, lastModified, changeFrequency: 'monthly', priority: 0.9 },

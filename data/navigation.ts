@@ -59,6 +59,12 @@ export const popularGuides: GuideLink[] = [
     badge: 'Popular',
   },
   {
+    href: '/online-learning-platforms',
+    title: 'Best Online Learning Platforms',
+    desc: 'Compare top learning platforms, free audit tracks, and certified graduate courses.',
+    badge: 'Platforms',
+  },
+  {
     href: '/best-alison-courses-with-certificates',
     title: 'Best Alison Courses (2026)',
     desc: 'CPD-accredited diplomas and certificates. Free to study.',
