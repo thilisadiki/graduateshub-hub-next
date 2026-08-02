@@ -133,7 +133,7 @@ const howToSchema = {
 
 const relatedGuides: RelatedGuide[] = [
   { title: 'Junior Business Analyst Roadmap', desc: 'Step-by-step roadmap to get job-ready as a Business Analyst for free.', href: '/career-roadmaps/business-analyst' },
-  { title: 'Proof of Work Portfolio', desc: 'Complete practical business tasks & earn a shareable LinkedIn badge of competence.', href: '/portfolio' },
+  { title: 'Proof of Work Portfolio', desc: 'Complete practical business tasks & earn a shareable LinkedIn badge of competence.', href: '/portfolio-tasks' },
   { title: 'Free AI Courses for Beginners (2026)', desc: 'Includes Introduction to AI in Business. No coding background required.', href: '/free-ai-courses-for-beginners' },
   { title: 'Free Courses for Accounting & Finance (2026)', desc: 'Bookkeeping, payroll, financial management, and auditing. A natural complement to business skills.', href: '/free-courses-for-accounting-and-finance' },
 ];

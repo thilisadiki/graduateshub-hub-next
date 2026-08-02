@@ -104,7 +104,7 @@ export default function TempProofViewer({ id }: { id: string }) {
         <p className="text-gray-600 max-w-md mb-6">
           This local preview session doesn&apos;t exist or was already synchronized to the database.
         </p>
-        <Link href="/portfolio" className="bg-primary text-white px-5 py-2.5 rounded-lg font-bold text-sm">
+        <Link href="/portfolio-tasks" className="bg-primary text-white px-5 py-2.5 rounded-lg font-bold text-sm">
           Browse Portfolio Tasks
         </Link>
       </div>
@@ -178,7 +178,7 @@ export default function TempProofViewer({ id }: { id: string }) {
           <div className="flex items-center gap-2 mb-5 text-sm text-slate-400">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>›</span>
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+            <Link href="/portfolio-tasks" className="hover:text-white transition-colors">Portfolio</Link>
             <span>›</span>
             <span className="text-slate-300 font-medium">Local Badge Preview</span>
           </div>

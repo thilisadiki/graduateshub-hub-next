@@ -365,7 +365,7 @@ export default function CareerRoadmapsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/portfolio"
+              href="/portfolio-tasks"
               className="bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"
             >
               Explore Portfolio Tasks

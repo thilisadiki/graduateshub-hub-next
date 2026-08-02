@@ -29,7 +29,7 @@ export async function generateMetadata({
   const topics = getTopicsByCategory(cat.id);
   const topicTitles = topics.slice(0, 5).map((t) => t.title).join(', ');
   const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
-  const url = pageNum === 1 ? `${SITE_URL}/portfolio/${cat.id}` : `${SITE_URL}/portfolio/${cat.id}?page=${pageNum}`;
+  const url = pageNum === 1 ? `${SITE_URL}/portfolio-tasks/${cat.id}` : `${SITE_URL}/portfolio-tasks/${cat.id}?page=${pageNum}`;
   const title = pageNum === 1 
     ? `${cat.name} Portfolio Tasks - Graded Briefs for SA Graduates`
     : `${cat.name} Portfolio Tasks - Page ${pageNum} - Graded Briefs`;
@@ -93,8 +93,8 @@ export default async function CategoryPage({
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio` },
-      { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio/${cat.id}` },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio-tasks` },
+      { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio-tasks/${cat.id}` },
     ],
   };
 
@@ -107,7 +107,7 @@ export default async function CategoryPage({
     itemListElement: topics.map((t, i) => ({
       '@type': 'ListItem',
       position: (page - 1) * PER_PAGE + i + 1,
-      url: `${SITE_URL}/portfolio/${cat.id}/${t.id}`,
+      url: `${SITE_URL}/portfolio-tasks/${cat.id}/${t.id}`,
       name: t.title,
     })),
   };
@@ -120,7 +120,7 @@ export default async function CategoryPage({
       <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400">
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+            <Link href="/portfolio-tasks" className="hover:text-white transition-colors">Portfolio</Link>
             <span>›</span>
             <span className="text-slate-300 font-medium">{cat.name}</span>
           </div>
@@ -134,7 +134,7 @@ export default async function CategoryPage({
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 text-center">
             <h2 className="text-xl font-extrabold text-gray-900 mb-2">Topics coming soon</h2>
             <p className="text-gray-500">We are still writing the first briefs for this category. Check back soon or explore another category.</p>
-            <Link href="/portfolio" className="inline-flex items-center gap-1.5 mt-5 text-primary font-bold text-sm">
+            <Link href="/portfolio-tasks" className="inline-flex items-center gap-1.5 mt-5 text-primary font-bold text-sm">
               Back to all categories <ArrowRight size={14} />
             </Link>
           </div>
@@ -145,7 +145,7 @@ export default async function CategoryPage({
               return (
                 <Link
                   key={topic.id}
-                  href={`/portfolio/${cat.id}/${topic.id}`}
+                  href={`/portfolio-tasks/${cat.id}/${topic.id}`}
                   className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all p-6 md:p-7 flex flex-col md:flex-row md:items-center gap-5"
                 >
                   <div className="flex-1 min-w-0">
@@ -183,7 +183,7 @@ export default async function CategoryPage({
             <Pagination 
               currentPage={page} 
               totalPages={totalPages} 
-              baseUrl={`/portfolio/${cat.id}`} 
+              baseUrl={`/portfolio-tasks/${cat.id}`} 
             />
           </div>
         )}

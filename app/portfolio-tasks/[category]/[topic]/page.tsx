@@ -27,12 +27,12 @@ export async function generateMetadata({
   return {
     title: `${top.title} - ${cat.name} Portfolio Tasks`,
     description,
-    alternates: { canonical: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
+    alternates: { canonical: `${SITE_URL}/portfolio-tasks/${cat.id}/${top.id}` },
     openGraph: {
       siteName: SITE_NAME,
       title: `${top.title} | Graduates Hub Portfolio`,
       description,
-      url: `${SITE_URL}/portfolio/${cat.id}/${top.id}`,
+      url: `${SITE_URL}/portfolio-tasks/${cat.id}/${top.id}`,
       type: 'article',
       images: [OG_IMAGE],
     },
@@ -77,9 +77,9 @@ export default async function TopicPage({
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio` },
-      { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio/${cat.id}` },
-      { '@type': 'ListItem', position: 4, name: top.title, item: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio-tasks` },
+      { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio-tasks/${cat.id}` },
+      { '@type': 'ListItem', position: 4, name: top.title, item: `${SITE_URL}/portfolio-tasks/${cat.id}/${top.id}` },
     ],
   };
 
@@ -96,7 +96,7 @@ export default async function TopicPage({
     itemListElement: availableTasks.map(({ lvl, task }, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `${SITE_URL}/portfolio/${cat.id}/${top.id}/${lvl}`,
+      url: `${SITE_URL}/portfolio-tasks/${cat.id}/${top.id}/${lvl}`,
       name: `${task.title} (${task.difficulty})`,
     })),
   };
@@ -109,9 +109,9 @@ export default async function TopicPage({
       <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400 flex-wrap">
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+            <Link href="/portfolio-tasks" className="hover:text-white transition-colors">Portfolio</Link>
             <span>›</span>
-            <Link href={`/portfolio/${cat.id}`} className="hover:text-white transition-colors">{cat.name}</Link>
+            <Link href={`/portfolio-tasks/${cat.id}`} className="hover:text-white transition-colors">{cat.name}</Link>
             <span>›</span>
             <span className="text-slate-300 font-medium">{top.title}</span>
           </div>
@@ -144,7 +144,7 @@ export default async function TopicPage({
               return (
                 <Link
                   key={lvl}
-                  href={`/portfolio/${cat.id}/${top.id}/${lvl}`}
+                  href={`/portfolio-tasks/${cat.id}/${top.id}/${lvl}`}
                   className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all p-6 flex flex-col"
                 >
                   <div className="flex items-center gap-2 mb-3">

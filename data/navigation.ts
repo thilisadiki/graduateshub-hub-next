@@ -38,7 +38,7 @@ export const featuredLinks: FeaturedLink[] = [
     colors: { bg: 'bg-violet-50', hover: 'hover:bg-violet-100', text: 'text-violet-700', badge: 'bg-violet-600', mobileFocus: 'text-violet-700 hover:text-violet-900' },
   },
   {
-    href: '/portfolio',
+    href: '/portfolio-tasks',
     label: 'Proof of Work Portfolio',
     badge: 'New',
     colors: { bg: 'bg-amber-50', hover: 'hover:bg-amber-100', text: 'text-amber-700', badge: 'bg-amber-600', mobileFocus: 'text-amber-700 hover:text-amber-900' },

@@ -18,7 +18,7 @@ export default function PortfolioNotFound() {
         </p>
         
         <Link 
-          href="/portfolio" 
+          href="/portfolio-tasks" 
           className="bg-primary hover:bg-[#5a4000] text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/20 w-full sm:w-auto"
         >
           <ArrowLeft size={18} />

@@ -112,7 +112,7 @@ export default function Hero() {
                 </div>
 
                 <Link
-                  href="/portfolio"
+                  href="/portfolio-tasks"
                   className="group flex items-center justify-center w-full gap-2 bg-[#1F1B13] text-white font-bold px-6 py-3.5 rounded-xl hover:bg-[#2a2520] transition-colors shadow-lg"
                 >
                   View Portfolios <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

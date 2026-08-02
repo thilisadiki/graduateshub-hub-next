@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   title: 'Proof of Work Portfolio for SA Graduates - Graded Micro-Internship Tasks',
   description:
     'Complete short, practical micro-internship tasks graded against a public rubric and earn a shareable Badge of Competence for your LinkedIn. Built for South African graduates and career changers. No account required.',
-  alternates: { canonical: `${SITE_URL}/portfolio` },
+  alternates: { canonical: `${SITE_URL}/portfolio-tasks` },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Proof of Work Portfolio | Graduates Hub',
     description:
       'Most graduates have a CV. Very few have a portfolio. Complete practical tasks, get them graded, and earn a shareable Badge of Competence.',
-    url: `${SITE_URL}/portfolio`,
+    url: `${SITE_URL}/portfolio-tasks`,
     type: 'website',
     images: [OG_IMAGE],
   },
@@ -40,7 +40,7 @@ export default function PortfolioLandingPage() {
     name: 'Proof of Work Portfolio',
     description:
       'Complete practical micro-internship tasks and earn a public Badge of Competence you can share on LinkedIn.',
-    url: `${SITE_URL}/portfolio`,
+    url: `${SITE_URL}/portfolio-tasks`,
   };
 
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
@@ -48,7 +48,7 @@ export default function PortfolioLandingPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio` },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio-tasks` },
     ],
   };
 
@@ -61,7 +61,7 @@ export default function PortfolioLandingPage() {
     itemListElement: portfolioCategories.map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `${SITE_URL}/portfolio/${c.id}`,
+      url: `${SITE_URL}/portfolio-tasks/${c.id}`,
       name: c.name,
     })),
   };
@@ -130,7 +130,7 @@ export default function PortfolioLandingPage() {
               return (
                 <Link
                   key={cat.id}
-                  href={`/portfolio/${cat.id}`}
+                  href={`/portfolio-tasks/${cat.id}`}
                   className="group bg-white rounded-2xl border border-[#D1C5B4] shadow-sm hover:shadow-md hover:border-[#7C7061] transition-all flex flex-col overflow-hidden"
                 >
                   <div className={`h-1.5 bg-gradient-to-r ${cat.accentFrom} ${cat.accentTo}`} />

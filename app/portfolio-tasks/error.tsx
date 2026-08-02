@@ -41,7 +41,7 @@ export default function PortfolioError({
           </button>
           
           <Link 
-            href="/portfolio" 
+            href="/portfolio-tasks" 
             className="bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
           >
             <Home size={18} />

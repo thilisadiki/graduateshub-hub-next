@@ -146,7 +146,7 @@ export default function FreeExcelCoursesPage() {
       ctaPrimaryLabel="View Analytics Courses"
       ctaPrimaryHref="/category/data-analytics"
       ctaSecondaryLabel="Build Your Portfolio"
-      ctaSecondaryHref="/portfolio"
+      ctaSecondaryHref="/portfolio-tasks"
     />
   );
 }

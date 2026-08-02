@@ -67,7 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/cv-builder/create`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/career-roadmaps`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/interview-prep`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE_URL}/portfolio-tasks`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/authors/jason-sadiki`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/authors/ndulamiso-mamburu`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
@@ -108,14 +108,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const portfolioCategoryPages: MetadataRoute.Sitemap = portfolioCategories.map((c) => ({
-    url: `${SITE_URL}/portfolio/${c.id}`,
+    url: `${SITE_URL}/portfolio-tasks/${c.id}`,
     lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
 
   const portfolioTopicPages: MetadataRoute.Sitemap = portfolioTopics.map((t) => ({
-    url: `${SITE_URL}/portfolio/${t.categoryId}/${t.id}`,
+    url: `${SITE_URL}/portfolio-tasks/${t.categoryId}/${t.id}`,
     lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.7,

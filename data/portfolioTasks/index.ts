@@ -237,5 +237,5 @@ export function getTasksByTopic(categoryId: string, topicId: string): PortfolioT
 }
 
 export function getTaskUrl(task: PortfolioTask): string {
-  return `/portfolio/${task.categoryId}/${task.topicId}/${task.level}`;
+  return `/portfolio-tasks/${task.categoryId}/${task.topicId}/${task.level}`;
 }

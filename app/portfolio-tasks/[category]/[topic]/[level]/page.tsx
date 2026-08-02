@@ -47,12 +47,12 @@ export async function generateMetadata({
   return {
     title: `${task.title} - ${topicLabel} ${task.difficulty} Task`,
     description,
-    alternates: { canonical: `${SITE_URL}/portfolio/${category}/${topic}` },
+    alternates: { canonical: `${SITE_URL}/portfolio-tasks/${category}/${topic}` },
     openGraph: {
       siteName: SITE_NAME,
       title: `${task.title} | Graduates Hub Portfolio`,
       description,
-      url: `${SITE_URL}/portfolio/${category}/${topic}/${level}`,
+      url: `${SITE_URL}/portfolio-tasks/${category}/${topic}/${level}`,
       type: 'article',
       images: [OG_IMAGE],
     },
@@ -73,16 +73,16 @@ export default async function TaskSubmissionPage({
   const top = getTopicById(category, topic);
   if (!cat || !top) notFound();
 
-  const taskUrl = `${SITE_URL}/portfolio/${cat.id}/${top.id}/${task.level}`;
+  const taskUrl = `${SITE_URL}/portfolio-tasks/${cat.id}/${top.id}/${task.level}`;
 
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio` },
-      { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio/${cat.id}` },
-      { '@type': 'ListItem', position: 4, name: top.title, item: `${SITE_URL}/portfolio/${cat.id}/${top.id}` },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${SITE_URL}/portfolio-tasks` },
+      { '@type': 'ListItem', position: 3, name: cat.name, item: `${SITE_URL}/portfolio-tasks/${cat.id}` },
+      { '@type': 'ListItem', position: 4, name: top.title, item: `${SITE_URL}/portfolio-tasks/${cat.id}/${top.id}` },
       { '@type': 'ListItem', position: 5, name: task.difficulty, item: taskUrl },
     ],
   };
@@ -115,11 +115,11 @@ export default async function TaskSubmissionPage({
       <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
           <div className="flex items-center gap-2 mb-4 text-sm text-slate-400 flex-wrap">
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+            <Link href="/portfolio-tasks" className="hover:text-white transition-colors">Portfolio</Link>
             <span>›</span>
-            <Link href={`/portfolio/${cat.id}`} className="hover:text-white transition-colors">{cat.name}</Link>
+            <Link href={`/portfolio-tasks/${cat.id}`} className="hover:text-white transition-colors">{cat.name}</Link>
             <span>›</span>
-            <Link href={`/portfolio/${cat.id}/${top.id}`} className="hover:text-white transition-colors">{top.title}</Link>
+            <Link href={`/portfolio-tasks/${cat.id}/${top.id}`} className="hover:text-white transition-colors">{top.title}</Link>
             <span>›</span>
             <span className="text-slate-300 font-medium">{task.difficulty}</span>
           </div>

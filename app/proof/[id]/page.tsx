@@ -134,7 +134,7 @@ export default async function ProofPage({
           <div className="flex items-center gap-2 mb-5 text-sm text-slate-400">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>›</span>
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+            <Link href="/portfolio-tasks" className="hover:text-white transition-colors">Portfolio</Link>
             <span>›</span>
             <span className="text-slate-300 font-medium">Badge</span>
           </div>
@@ -278,7 +278,7 @@ export default async function ProofPage({
               </p>
               {task && (
                 <Link
-                  href={`/portfolio/${task.categoryId}/${task.topicId}/${task.level}`}
+                  href={`/portfolio-tasks/${task.categoryId}/${task.topicId}/${task.level}`}
                   className="text-sm font-bold text-primary hover:text-[#5a4000] mt-3 inline-flex items-center gap-1"
                 >
                   See the task rubric <ExternalLink size={13} />
@@ -295,7 +295,7 @@ export default async function ProofPage({
             Browse tasks across Web Development, Software Development, Data, Marketing, Finance, and Design.
           </p>
           <Link
-            href="/portfolio"
+            href="/portfolio-tasks"
             className="inline-flex items-center gap-2 bg-primary hover:bg-[#5a4000] text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-colors"
           >
             Browse Categories

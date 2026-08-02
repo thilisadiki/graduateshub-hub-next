@@ -146,7 +146,7 @@ export default function FreeCybersecurityCoursesPage() {
       ctaPrimaryLabel="View All IT Courses"
       ctaPrimaryHref="/category/it"
       ctaSecondaryLabel="Build Your Portfolio"
-      ctaSecondaryHref="/portfolio"
+      ctaSecondaryHref="/portfolio-tasks"
     />
   );
 }

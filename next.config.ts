@@ -90,6 +90,17 @@ const nextConfig: NextConfig = {
         destination: '/find-a-course',
         permanent: true,
       },
+      // Portfolio hub redirects
+      {
+        source: '/portfolio',
+        destination: '/portfolio-tasks',
+        permanent: true,
+      },
+      {
+        source: '/portfolio/:path*',
+        destination: '/portfolio-tasks/:path*',
+        permanent: true,
+      },
     ];
   },
   devIndicators: false,
