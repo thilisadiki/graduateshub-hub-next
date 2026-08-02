@@ -28,7 +28,8 @@ export async function GET(request: NextRequest) {
     const supabase = getSupabase();
     let query = supabase
       .from('portfolio_proofs')
-      .select('id, task_id, task_title, graduate_name, created_at, evaluation')
+      .select('id, task_id, task_title, graduate_name, created_at, evaluation, display_publicly')
+      .or('display_publicly.eq.true,display_publicly.is.null')
       .order('created_at', { ascending: false })
       .limit(limit);
 

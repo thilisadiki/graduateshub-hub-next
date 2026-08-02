@@ -56,6 +56,7 @@ export async function POST(request: NextRequest) {
   let graduateEmail: string;
   let submission: string;
   let submissionLinks: string[];
+  let displayPublicly = true;
   try {
     const body = await request.json();
     const botCheck = await checkBotProtection(body);
@@ -66,6 +67,7 @@ export async function POST(request: NextRequest) {
     graduateEmail = String(body.graduateEmail || '').trim().slice(0, MAX_EMAIL_LENGTH);
     submission = String(body.submission || '').trim();
     submissionLinks = sanitiseLinks(body.submissionLinks);
+    displayPublicly = typeof body.displayPublicly === 'boolean' ? body.displayPublicly : true;
   } catch {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });
   }
@@ -222,6 +224,7 @@ ${submission}`;
       submission,
       submission_links: submissionLinks,
       evaluation,
+      display_publicly: displayPublicly,
     });
     if (error) throw error;
   } catch (error: any) {

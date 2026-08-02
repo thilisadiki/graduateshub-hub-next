@@ -15,6 +15,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
   const [graduateEmail, setGraduateEmail] = useState('');
   const [submission, setSubmission] = useState('');
   const [linksRaw, setLinksRaw] = useState('');
+  const [displayPublicly, setDisplayPublicly] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
@@ -66,6 +67,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
           graduateEmail: trimmedEmail,
           submission: submission.trim(),
           submissionLinks,
+          displayPublicly,
           _hp: honeypot,
           _t: formLoadTime.current,
           _ts: turnstileToken,
@@ -209,6 +211,27 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
           <p className="text-xs text-gray-500 mt-1">One per line or comma separated. Up to 5 links.</p>
         </div>
 
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+          <label htmlFor="display-publicly" className="flex items-start gap-3 cursor-pointer select-none">
+            <input
+              id="display-publicly"
+              type="checkbox"
+              checked={displayPublicly}
+              onChange={(e) => setDisplayPublicly(e.target.checked)}
+              className="mt-0.5 h-4.5 w-4.5 rounded border-gray-300 text-primary focus:ring-primary shrink-0"
+              disabled={submitting}
+            />
+            <div className="text-xs leading-relaxed">
+              <span className="font-bold text-gray-900 block mb-0.5">
+                Feature my badge on the public Completers List
+              </span>
+              <span className="text-gray-500">
+                Allow your first name and completed task badge to appear on public Wall of Completers feeds across topic pages. Uncheck this if you prefer your submission to stay private to your direct Badge URL.
+              </span>
+            </div>
+          </label>
+        </div>
+
         {error && (
           <div className="flex items-start gap-2 bg-rose-50 border border-rose-100 rounded-lg p-3 text-sm text-rose-700">
             <AlertCircle size={16} className="shrink-0 mt-0.5" />
@@ -227,7 +250,7 @@ export default function SubmissionForm({ taskId }: { taskId: string }) {
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2 border-t border-gray-100">
           <p className="text-xs text-gray-500 leading-relaxed">
-            By submitting, you agree your submission text, name, and evaluation will appear on a public Badge URL.
+            By submitting, your evaluation will generate a personal Badge URL. If opted in, your badge will also appear on public completers lists.
           </p>
           <button
             type="submit"
