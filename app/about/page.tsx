@@ -26,8 +26,8 @@ const jasonSchema = {
   jobTitle: 'Technical SEO Specialist & Web Developer',
   description:
     'Technical SEO Specialist at Betway Africa and web developer with over 7 years of experience. Founder of Graduates Hub. Google-certified in Digital Marketing and Google Analytics 4. HubSpot Academy SEO certified. Full Stack Engineer certified by Codecademy.',
-  url: 'https://thilisadiki.dev',
-  sameAs: ['https://www.linkedin.com/in/jasonsadiki/', 'https://thilisadiki.dev'],
+  url: 'https://thilisadiki.com',
+  sameAs: ['https://www.linkedin.com/in/jasonsadiki/', 'https://thilisadiki.com'],
   worksFor: [
     {
       '@type': 'Organization',

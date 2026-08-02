@@ -40,7 +40,7 @@ const organizationSchema = {
     jobTitle: 'Technical SEO Specialist & Web Developer',
     sameAs: [
       'https://www.linkedin.com/in/jasonsadiki/',
-      'https://thilisadiki.dev',
+      'https://thilisadiki.com',
     ],
   },
 };

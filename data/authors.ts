@@ -77,7 +77,7 @@ export const authors: Author[] = [
       { name: 'Graduates Hub', url: 'https://www.graduateshub.org' },
     ],
     linkedinUrl: 'https://www.linkedin.com/in/jasonsadiki/',
-    websiteUrl: 'https://thilisadiki.dev',
+    websiteUrl: 'https://thilisadiki.com',
     metaTitle: 'Jason Sadiki - Founder & Technical SEO Specialist (Betway Africa) | Graduates Hub',
     metaDescription:
       'Jason Sadiki is the Founder of Graduates Hub and a Technical SEO Specialist at Betway Africa with 7+ years of experience. Explore career roadmaps and guides curated by Jason.',
