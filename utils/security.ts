@@ -13,7 +13,14 @@ export function escapeHtml(s: string): string {
 
 export async function verifyTurnstile(token: string): Promise<boolean> {
   const secret = process.env.TURNSTILE_SECRET_KEY;
-  if (!secret) return true; // not configured - skip verification
+  if (!secret) {
+    console.error('TURNSTILE_SECRET_KEY is not configured.');
+    return false;
+  }
+
+  if (!token) {
+    return false;
+  }
 
   try {
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {

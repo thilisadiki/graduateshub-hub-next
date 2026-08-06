@@ -28,7 +28,7 @@ interface TurnstileWidgetProps {
 
 const TurnstileWidget = forwardRef<TurnstileWidgetHandle, TurnstileWidgetProps>(
   ({ onVerify, onExpire, onError }, ref) => {
-    const [isReady, setIsReady] = useState(!SITE_KEY);
+    const [isReady, setIsReady] = useState(false);
     const turnstileRef = useRef<HTMLDivElement>(null);
     const widgetId = useRef<string | null>(null);
 
@@ -63,7 +63,7 @@ const TurnstileWidget = forwardRef<TurnstileWidgetHandle, TurnstileWidgetProps>(
 
     useEffect(() => {
       if (!SITE_KEY) {
-        callbacks.current.onVerify('');
+        callbacks.current.onError?.();
       }
 
       return () => {
@@ -76,7 +76,7 @@ const TurnstileWidget = forwardRef<TurnstileWidgetHandle, TurnstileWidgetProps>(
 
     useImperativeHandle(ref, () => ({
       reset: () => {
-        setIsReady(!SITE_KEY);
+        setIsReady(false);
         if (SITE_KEY && widgetId.current && window.turnstile) {
           window.turnstile.reset(widgetId.current);
         }
@@ -101,6 +101,11 @@ const TurnstileWidget = forwardRef<TurnstileWidgetHandle, TurnstileWidgetProps>(
               </p>
             )}
           </div>
+        )}
+        {!SITE_KEY && (
+          <p className="text-xs text-rose-500 mt-1.5 flex items-center gap-1">
+            <ShieldCheck size={12} /> Security check unavailable.
+          </p>
         )}
       </>
     );

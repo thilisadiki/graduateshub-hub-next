@@ -10,7 +10,7 @@ export default function NewsletterBanner() {
   const [message, setMessage] = useState('');
 
   // Bot Protection state
-  const [turnstileToken, setTurnstileToken] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [honeypot, setHoneypot] = useState('');
   const [renderTime, setRenderTime] = useState<number>(0);
   const turnstileRef = useRef<TurnstileWidgetHandle>(null);
@@ -43,10 +43,9 @@ export default function NewsletterBanner() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
-          'cf-turnstile-response': turnstileToken,
           _hp: honeypot,
           _t: renderTime,
-          _ts: Date.now(),
+          _ts: turnstileToken,
         }),
       });
 
@@ -62,6 +61,7 @@ export default function NewsletterBanner() {
       setStatus('success');
       setMessage(data.message || 'Thanks for subscribing! Check your inbox soon.');
       setEmail('');
+      setTurnstileToken(null);
       turnstileRef.current?.reset();
 
       setTimeout(() => {
@@ -71,6 +71,7 @@ export default function NewsletterBanner() {
     } catch {
       setStatus('error');
       setMessage('Network error. Please try again later.');
+      setTurnstileToken(null);
       turnstileRef.current?.reset();
     }
   };
@@ -131,7 +132,7 @@ export default function NewsletterBanner() {
                 />
                 <button
                   type="submit"
-                  disabled={status === 'loading' || status === 'success'}
+                  disabled={status === 'loading' || status === 'success' || !turnstileToken}
                   className="w-full mt-3 sm:mt-0 sm:absolute sm:right-1.5 sm:top-1.5 sm:bottom-1.5 sm:w-auto px-6 py-4 sm:py-0 bg-primary hover:bg-[#5a4000] text-white font-bold rounded-full transition-colors flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed shadow-md sm:shadow-none"
                 >
                   {status === 'loading' ? (
@@ -155,8 +156,8 @@ export default function NewsletterBanner() {
                 <TurnstileWidget
                   ref={turnstileRef}
                   onVerify={(token) => setTurnstileToken(token)}
-                  onExpire={() => setTurnstileToken('')}
-                  onError={() => setTurnstileToken('')}
+                  onExpire={() => setTurnstileToken(null)}
+                  onError={() => setTurnstileToken(null)}
                 />
               </div>
             </form>
