@@ -8,5 +8,37 @@
     "Model evaluation",
     "Bias detection",
     "Applied ML"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Machine Learning Fundamentals & Predictive Modeling",
+    "overviewBody": "Predictive analytics allows organizations to forecast future business trends. Data analysts demonstrate machine learning competence by training supervised models (Scikit-Learn), evaluating regression/classification algorithms, and assessing model performance.",
+    "deliverables": [
+      {
+        "title": "1. Predictive Machine Learning Notebook",
+        "desc": "Jupyter Notebook training linear regression, decision tree, or random forest models on tabular data."
+      },
+      {
+        "title": "2. Feature Engineering & Selection Log",
+        "desc": "Document detailing feature encoding, numerical scaling (StandardScaler), and correlation selection."
+      },
+      {
+        "title": "3. Model Performance Evaluation Report",
+        "desc": "Evaluation report presenting confusion matrices, Precision, Recall, F1-Score, and ROC-AUC metrics."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Overfitting and Underfitting?",
+        "answer": "Overfitting occurs when a model learns training data noise and fails to generalize to new data. Underfitting occurs when a model is too simple to capture underlying data patterns."
+      },
+      {
+        "question": "When should you prioritize Precision over Recall?",
+        "answer": "Prioritize Precision when false positives are costly (e.g. spam detection). Prioritize Recall when false negatives are dangerous (e.g. disease screening)."
+      },
+      {
+        "question": "Why is a train-test split necessary?",
+        "answer": "Splitting data into separate training (e.g. 80%) and testing (e.g. 20%) sets allows you to evaluate how well the model generalizes to unseen data."
+      }
+    ]
+  }
 }

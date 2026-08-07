@@ -8,5 +8,37 @@
     "numpy",
     "Data wrangling",
     "Report automation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Python Data Analysis with Pandas & NumPy",
+    "overviewBody": "Python is the industry standard for exploratory data analysis (EDA) and data manipulation. Employers look for candidates proficient in loading DataFrames, cleaning missing values, vectorizing computations with NumPy, filtering data subsets, and generating summary statistics.",
+    "deliverables": [
+      {
+        "title": "1. Python EDA Jupyter Notebook",
+        "desc": "Commented Jupyter Notebook (.ipynb) performing end-to-end exploratory data analysis on real datasets."
+      },
+      {
+        "title": "2. Data Cleaning & Transformation Log",
+        "desc": "Audit log documenting missing value handling, column data type conversions, and string normalization."
+      },
+      {
+        "title": "3. Data Analysis Summary Report",
+        "desc": "Executive summary detailing key statistical findings, correlation matrices, and business insights."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why are vectorized Pandas operations faster than Python for loops?",
+        "answer": "Vectorized operations execute underlying C code routines directly on contiguous memory arrays, eliminating slow Python interpreter loop overhead."
+      },
+      {
+        "question": "How should you handle missing values in Pandas DataFrames?",
+        "answer": "Missing values can be imputed using median/mean values for numerical data, mode for categorical fields, or dropped via dropna() if missingness is insignificant."
+      },
+      {
+        "question": "What is the difference between loc[] and iloc[] in Pandas?",
+        "answer": "loc[] selects data using explicit column/index labels, while iloc[] selects data using integer-based positional indexing."
+      }
+    ]
+  }
 }

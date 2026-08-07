@@ -8,5 +8,37 @@
     "Slide design",
     "Narrative structure",
     "Stakeholder management"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Data Storytelling & Executive Stakeholder Memos",
+    "overviewBody": "Technical analysis is useless if business stakeholders cannot understand the findings. Data analysts prove communication impact by writing clear executive memos, structuring data narratives, framing business recommendations, and presenting to non-technical leaders.",
+    "deliverables": [
+      {
+        "title": "1. Executive Data Storytelling Memo",
+        "desc": "Structured 2-page executive summary detailing business context, key findings, and strategic recommendations."
+      },
+      {
+        "title": "2. Stakeholder Action Plan & Roadmap",
+        "desc": "Prioritized recommendation matrix detailing expected ROI, effort levels, and implementation steps."
+      },
+      {
+        "title": "3. Metric Interpretation Guide",
+        "desc": "Glossary explaining key metric calculations and business implications in non-technical language."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you structure an executive data memo?",
+        "answer": "Start with a 3-bullet Executive Summary, followed by Business Context, Key Data Insights with visuals, and actionable Recommendations."
+      },
+      {
+        "question": "How do you explain statistical confidence to non-technical stakeholders?",
+        "answer": "Avoid jargon; explain confidence as the probability or likelihood that an observed metric change was caused by the strategy rather than random chance."
+      },
+      {
+        "question": "What makes a data recommendation actionable?",
+        "answer": "An actionable recommendation specifies what decision to make, expected financial or operational impact, and required next steps."
+      }
+    ]
+  }
 }

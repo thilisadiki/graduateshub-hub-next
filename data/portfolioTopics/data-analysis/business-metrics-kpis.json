@@ -8,5 +8,37 @@
     "Root-cause analysis",
     "North Star metrics",
     "Business acumen"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Business Metrics & KPI Definition (SaaS & E-Commerce)",
+    "overviewBody": "Understanding commercial metrics is critical for aligning data analysis with business goals. Tech companies look for analysts who know how to calculate Customer Acquisition Cost (CAC), Lifetime Value (LTV), Churn Rate, Monthly Recurring Revenue (MRR), and Net Promoter Score (NPS).",
+    "deliverables": [
+      {
+        "title": "1. Business KPI Taxonomy & Spec",
+        "desc": "Comprehensive KPI dictionary defining metric formulas, data source tables, update frequencies, and target benchmarks."
+      },
+      {
+        "title": "2. Automated SQL/Python Metric Script",
+        "desc": "Query script calculating CAC, LTV, churn rate, and cohort retention metrics."
+      },
+      {
+        "title": "3. Executive KPI Dashboard",
+        "desc": "Interactive KPI tracking board highlighting month-over-month trend variations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is an ideal LTV:CAC ratio for subscription businesses?",
+        "answer": "A healthy LTV:CAC ratio is 3:1 or higher, meaning customer lifetime value is three times the cost required to acquire them."
+      },
+      {
+        "question": "How do you calculate customer churn rate?",
+        "answer": "Churn Rate = (Customers lost during period / Total customers at start of period) * 100."
+      },
+      {
+        "question": "What is the difference between leading and lagging KPIs?",
+        "answer": "Leading KPIs predict future performance (e.g. free trial signups), whereas lagging KPIs measure historical outcomes (e.g. quarterly revenue)."
+      }
+    ]
+  }
 }

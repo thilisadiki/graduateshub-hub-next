@@ -8,5 +8,37 @@
     "Schema management",
     "Data engineering",
     "Streaming architecture"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "ETL & Data Pipeline Architecture (Extract, Transform, Load)",
+    "overviewBody": "Data pipelines automate the movement of data from transactional databases into central data warehouses (Snowflake, BigQuery). Analysts demonstrate data engineering readiness by creating ETL scripts, staging tables, handling schema drift, and configuring pipeline triggers.",
+    "deliverables": [
+      {
+        "title": "1. ETL Pipeline Architecture Blueprint",
+        "desc": "Diagram detailing data extraction sources, transformation logic, staging schemas, and warehouse target tables."
+      },
+      {
+        "title": "2. Automated ETL Script (Python / SQL)",
+        "desc": "Python/SQL script extracting raw API payloads, executing data transformations, and loading target tables."
+      },
+      {
+        "title": "3. Pipeline Test Suite & Logging Log",
+        "desc": "Verification log testing error alerting, data validation checks, and execution retry logic."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between ETL and ELT?",
+        "answer": "ETL transforms data on a staging server before loading into a database. ELT loads raw data into cloud data warehouses first, leveraging modern warehouse computing power to transform data in place."
+      },
+      {
+        "question": "What is schema drift in data pipelines?",
+        "answer": "Schema drift occurs when source API payloads or database tables add, delete, or rename columns unexpectedly, breaking pipeline ingestion."
+      },
+      {
+        "question": "Why are staging tables used in data warehousing?",
+        "answer": "Staging tables temporarily store raw extracted data, isolating transformations from source system queries and allowing easy pipeline re-runs on failure."
+      }
+    ]
+  }
 }

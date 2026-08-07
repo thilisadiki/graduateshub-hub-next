@@ -8,5 +8,37 @@
     "Excel formulas",
     "What-if analysis",
     "Data modelling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Advanced Spreadsheet & Financial Scenario Modeling (Excel / Sheets)",
+    "overviewBody": "Spreadsheets remain the most ubiquitous analytical tool in corporate environments. Employers test candidates on advanced lookup functions (XLOOKUP, INDEX/MATCH), dynamic array formulas, Pivot Tables, and scenario modeling (Goal Seek, Data Tables).",
+    "deliverables": [
+      {
+        "title": "1. Financial Scenario Spreadsheet Model",
+        "desc": "Excel workbook (.xlsx) featuring dynamic scenario inputs, sensitivity tables, and automated financial statements."
+      },
+      {
+        "title": "2. Pivot Table & Summary Dashboard",
+        "desc": "Interactive Pivot Table summary displaying multi-dimensional aggregation views."
+      },
+      {
+        "title": "3. Model User Guide & Formula Audit",
+        "desc": "Documentation explaining model assumptions, formula structures, and error-checking controls."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is XLOOKUP superior to VLOOKUP in Excel?",
+        "answer": "XLOOKUP searches in any direction (left or right), defaults to exact matching, handles column insertions safely, and does not require static column index numbers."
+      },
+      {
+        "question": "What is the function of INDEX/MATCH?",
+        "answer": "INDEX returns a value from a specified cell range based on row/column numbers, while MATCH searches for a value and returns its position, offering flexible 2D lookups."
+      },
+      {
+        "question": "How do you prevent spreadsheet formula corruption?",
+        "answer": "Use named ranges, lock calculation inputs, apply cell protection, and separate raw data tabs from calculation tabs."
+      }
+    ]
+  }
 }

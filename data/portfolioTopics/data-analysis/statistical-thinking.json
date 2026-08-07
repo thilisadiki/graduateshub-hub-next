@@ -8,5 +8,37 @@
     "Hypothesis testing",
     "Statistical reasoning",
     "Business communication"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Statistical Analysis & A/B Testing Hypothesis Testing",
+    "overviewBody": "Data-driven decisions require rigorous statistical validation. Employers look for candidates who design A/B test experiments, conduct hypothesis tests (t-test, chi-square, ANOVA), interpret p-values correctly, and calculate confidence intervals.",
+    "deliverables": [
+      {
+        "title": "1. A/B Test Experimentation Specification",
+        "desc": "Experiment plan specifying null/alternative hypotheses, sample size calculations, and primary metrics."
+      },
+      {
+        "title": "2. Python Statistical Analysis Script",
+        "desc": "Python script using scipy.stats to run two-sample t-tests, chi-square tests, and confidence interval calculations."
+      },
+      {
+        "title": "3. Statistical Findings & Decision Report",
+        "desc": "Report evaluating statistical significance (p-value), effect size, and practical business recommendations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does a p-value less than 0.05 actually mean?",
+        "answer": "A p-value < 0.05 indicates there is less than a 5% probability that the observed result occurred by random chance under the null hypothesis."
+      },
+      {
+        "question": "What is A/B test peeking bias?",
+        "answer": "Peeking bias occurs when analysts check experiment results continuously and stop the test early as soon as p < 0.05, artificially inflating false positive rates."
+      },
+      {
+        "question": "How do you calculate required sample sizes for an A/B test?",
+        "answer": "Sample sizes are calculated using statistical power (typically 80%), significance level (alpha = 0.05), baseline conversion rate, and Minimum Detectable Effect (MDE)."
+      }
+    ]
+  }
 }

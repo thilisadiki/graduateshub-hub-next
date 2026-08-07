@@ -8,5 +8,37 @@
     "Data quality",
     "POPIA/GDPR compliance",
     "Data documentation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Data Governance & Quality Auditing (POPIA / GDPR Compliance)",
+    "overviewBody": "Data governance ensures data assets are accurate, complete, accessible, and compliant with privacy laws like POPIA and GDPR. Analysts demonstrate enterprise readiness by conducting data quality audits, tracking data lineage, and anonymizing PII data.",
+    "deliverables": [
+      {
+        "title": "1. Corporate Data Governance Policy Spec",
+        "desc": "Governance framework detailing data ownership roles, data classification tiers, and quality SLAs."
+      },
+      {
+        "title": "2. Data Quality Audit Script & Rule Engine",
+        "desc": "Automated script testing data completeness, uniqueness, consistency, and validity across core tables."
+      },
+      {
+        "title": "3. PII Anonymization & Hashing Verification Log",
+        "desc": "Log verifying hashing and masking of customer PII data (emails, phone numbers) before analytical export."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the 6 core dimensions of data quality?",
+        "answer": "Completeness, Accuracy, Consistency, Timeliness, Uniqueness, and Validity."
+      },
+      {
+        "question": "How do you anonymize Personally Identifiable Information (PII) for analytics?",
+        "answer": "PII is anonymized using SHA-256 cryptographic hashing, tokenization, or generalization (e.g. replacing exact birth dates with age brackets)."
+      },
+      {
+        "question": "What is data lineage?",
+        "answer": "Data lineage tracks the complete lifecycle of data, mapping its origin, transformation steps, and downstream dependencies across systems."
+      }
+    ]
+  }
 }

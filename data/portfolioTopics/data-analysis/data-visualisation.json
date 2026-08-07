@@ -8,5 +8,37 @@
     "Metric selection",
     "Executive communication",
     "Analytical judgment"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Exploratory Data Visualization & Chart Selection",
+    "overviewBody": "Data visualization transforms numbers into visual insights. Employers seek analysts who understand visualization principles: choosing appropriate chart types (line, bar, scatter, heatmap), configuring accessible color palettes, and avoiding misleading axes.",
+    "deliverables": [
+      {
+        "title": "1. Exploratory Data Visualization Deck",
+        "desc": "Portfolio presentation showcasing chart visualisations paired with analytical commentary."
+      },
+      {
+        "title": "2. Custom Chart Code / BI Dashboard",
+        "desc": "Clean Matplotlib/Seaborn/Plotly Python scripts or interactive BI visual charts."
+      },
+      {
+        "title": "3. Visualization Principles Audit",
+        "desc": "Self-audit evaluating chart contrast ratios, axis scale integrity, and visual legibility."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "When should you use a line chart versus a bar chart?",
+        "answer": "Line charts are designed for continuous time-series trends over time, whereas bar charts are optimal for comparing discrete categorical groups."
+      },
+      {
+        "question": "Why should bar chart Y-axes always start at zero?",
+        "answer": "Truncating the Y-axis on bar charts exaggerates relative size differences between categories, misleading stakeholders about true proportions."
+      },
+      {
+        "question": "How do you ensure data visualisations are colorblind accessible?",
+        "answer": "Use colorblind-safe palettes (like Viridis or Okabe-Ito) and avoid relying solely on red/green contrast to convey status."
+      }
+    ]
+  }
 }

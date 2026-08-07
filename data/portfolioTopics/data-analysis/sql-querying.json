@@ -8,5 +8,37 @@
     "Aggregations",
     "Window functions",
     "Query optimisation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "SQL Data Querying, Joins & Advanced Aggregations",
+    "overviewBody": "SQL is the foundational language for data extraction and business analytics. Hiring managers evaluate data analysts on writing multi-table JOINs, GROUP BY aggregations, CTEs (Common Table Expressions), subqueries, and window functions (ROW_NUMBER(), RANK(), LAG()) to answer real business questions accurately.",
+    "deliverables": [
+      {
+        "title": "1. Relational SQL Query Library",
+        "desc": "Structured SQL script file containing multi-table JOINs, aggregation metrics, and CTE queries."
+      },
+      {
+        "title": "2. Query Performance & Execution Analysis",
+        "desc": "Execution plan breakdown explaining index usage, JOIN optimization, and subquery refactoring."
+      },
+      {
+        "title": "3. Executive Data Insights Summary",
+        "desc": "Business report translating raw SQL metric results into actionable stakeholder recommendations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between WHERE and HAVING in SQL?",
+        "answer": "WHERE filters rows before aggregations are processed, whereas HAVING filters aggregate results after GROUP BY execution."
+      },
+      {
+        "question": "When should you use Window Functions over GROUP BY?",
+        "answer": "GROUP BY collapses multiple rows into a single summary row, while Window Functions calculate metrics (like running totals or lead/lag values) across row partitions without reducing the overall row count."
+      },
+      {
+        "question": "How do you prevent duplicate rows during multi-table LEFT JOINs?",
+        "answer": "Ensure the joined key has a unique constraint, or use subqueries/CTEs to pre-aggregate the joined table before performing the main JOIN operation."
+      }
+    ]
+  }
 }

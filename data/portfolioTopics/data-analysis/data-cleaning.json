@@ -8,5 +8,37 @@
     "Exploratory data analysis",
     "Business communication",
     "Analytical thinking"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Data Cleaning, Wrangling & Preprocessing",
+    "overviewBody": "Real-world data is dirty, incomplete, and full of inconsistencies. Data analysts spend over 60% of their time wrangling data. Hiring managers value candidates who master deduplication, outlier detection, date format standardization, and automated data quality checks.",
+    "deliverables": [
+      {
+        "title": "1. Raw vs Cleaned Data Audit Log",
+        "desc": "Audit report detailing initial data anomalies, missing value distributions, and data cleaning transformations."
+      },
+      {
+        "title": "2. Automated Data Cleaning Script",
+        "desc": "Python or SQL script automating deduplication, text stripping, date parsing, and type casting."
+      },
+      {
+        "title": "3. Cleaned Master Dataset & Spec",
+        "desc": "Cleaned dataset export alongside data dictionary defining field definitions and valid ranges."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you identify statistical outliers in a dataset?",
+        "answer": "Outliers are commonly identified using the Interquartile Range (IQR) method (values outside 1.5 * IQR) or Z-score thresholds (|Z| > 3)."
+      },
+      {
+        "question": "Why is string normalization necessary during data cleaning?",
+        "answer": "Inconsistent casing or trailing whitespace creates fake distinct categories during GROUP BY operations."
+      },
+      {
+        "question": "What is data imputation?",
+        "answer": "Data imputation is the process of replacing missing data values with substituted estimates (e.g. median or k-NN nearest neighbor values)."
+      }
+    ]
+  }
 }

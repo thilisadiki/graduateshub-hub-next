@@ -8,5 +8,37 @@
     "Information hierarchy",
     "BI tools",
     "Real-time monitoring"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Business Intelligence & Interactive Dashboard Design (Power BI / Tableau)",
+    "overviewBody": "Business Intelligence (BI) tools translate complex raw data into intuitive visual dashboards for decision-makers. Recruiters evaluate candidates on dimensional data modeling (Star Schema vs Snowflake Schema), writing DAX/LOD measures, and building clean visual hierarchies.",
+    "deliverables": [
+      {
+        "title": "1. Interactive BI Dashboard File",
+        "desc": "Power BI (.pbix) or Tableau (.twbx) workbook featuring interactive slicers, KPI scorecards, and trend visualisations."
+      },
+      {
+        "title": "2. Dimensional Data Model Blueprint",
+        "desc": "Data model diagram documenting Star Schema relationships, fact tables, and dimension tables."
+      },
+      {
+        "title": "3. DAX / LOD Measure Specification",
+        "desc": "Documented library of calculated DAX measures (CALCULATE, SUMX) or Tableau Level of Detail expressions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is a Star Schema preferred over flat tables in Power BI?",
+        "answer": "Star Schemas eliminate data redundancy, simplify relationship cardinalities, and drastically improve DAX query evaluation speeds."
+      },
+      {
+        "question": "What is the function of the CALCULATE() measure in Power BI DAX?",
+        "answer": "CALCULATE() evaluates an expression under modified filter contexts, allowing analysts to override or expand visual filters dynamically."
+      },
+      {
+        "question": "How many visuals should be included on a single dashboard page?",
+        "answer": "Limit dashboard pages to 4 to 6 core visuals to prevent visual clutter and maintain high rendering performance."
+      }
+    ]
+  }
 }
