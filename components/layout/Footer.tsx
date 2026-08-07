@@ -60,14 +60,14 @@ export default function Footer() {
 
         {/* Course Categories */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">Categories</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Subject Areas</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/category/it" className="hover:text-[#FFDF9C] transition-colors">IT & Technology</Link></li>
-            <li><Link href="/category/software-engineering" className="hover:text-[#FFDF9C] transition-colors">Software Development</Link></li>
-            <li><Link href="/category/business" className="hover:text-[#FFDF9C] transition-colors">Business & Management</Link></li>
-            <li><Link href="/category/marketing" className="hover:text-[#FFDF9C] transition-colors">Digital Marketing</Link></li>
-            <li><Link href="/category/accounting" className="hover:text-[#FFDF9C] transition-colors">Accounting & Finance</Link></li>
-            <li><Link href="/categories" className="hover:text-[#FFDF9C] transition-colors">All Categories →</Link></li>
+            <li><Link href="/career-roadmaps/software-engineer" className="hover:text-[#FFDF9C] transition-colors">Software Engineering</Link></li>
+            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-[#FFDF9C] transition-colors">Data Analytics</Link></li>
+            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-[#FFDF9C] transition-colors">Business & Management</Link></li>
+            <li><Link href="/career-roadmaps/digital-marketing-specialist" className="hover:text-[#FFDF9C] transition-colors">Digital Marketing</Link></li>
+            <li><Link href="/career-roadmaps/junior-accountant" className="hover:text-[#FFDF9C] transition-colors">Accounting & Finance</Link></li>
+            <li><Link href="/career-roadmaps" className="hover:text-[#FFDF9C] transition-colors">All Career Roadmaps →</Link></li>
           </ul>
         </div>
 

@@ -130,14 +130,13 @@ export default function Navbar() {
             <Link key={guide.href} href={guide.href} onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">{guide.title}</Link>
           ))}
         </div>
-        <div className="py-3 text-[#7C7061] font-bold text-xs uppercase tracking-wider mt-2">Explore Subject Areas</div>
+        <div className="py-3 text-[#7C7061] font-bold text-xs uppercase tracking-wider mt-2">Explore Career Paths</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#FFDF9C] mb-4">
-          {categories.map(cat => (
-            <Link key={cat.id} href={`/category/${cat.id}`} onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">
-              {cat.name}
-            </Link>
-          ))}
-          <Link href="/categories" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Categories →</Link>
+          <Link href="/career-roadmaps/software-engineer" onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">Software Engineering</Link>
+          <Link href="/career-roadmaps/data-analyst" onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">Data Analytics</Link>
+          <Link href="/career-roadmaps/business-analyst" onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">Business & Management</Link>
+          <Link href="/career-roadmaps/digital-marketing-specialist" onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">Digital Marketing</Link>
+          <Link href="/career-roadmaps" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Roadmaps →</Link>
         </div>
         <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">Blog</Link>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">About Us</Link>
