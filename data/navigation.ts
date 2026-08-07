@@ -148,4 +148,28 @@ export const popularGuides: GuideLink[] = [
     desc: 'SQL, spreadsheets, R programming, and Tableau visualization breakdown.',
     badge: 'Google Data',
   },
+  {
+    href: '/google-cybersecurity-certificate-guide',
+    title: 'Google Cybersecurity Certificate Guide',
+    desc: 'SIEM tools, Splunk, Linux CLI, Python security automation, and Security+ mapping.',
+    badge: 'Google Security',
+  },
+  {
+    href: '/google-it-support-certificate-guide',
+    title: 'Google IT Support Certificate Guide',
+    desc: 'TCP/IP networking, Active Directory DS, system administration, and CompTIA A+.',
+    badge: 'Google IT',
+  },
+  {
+    href: '/google-project-management-certificate-guide',
+    title: 'Google Project Management Certificate Guide',
+    desc: 'Agile/Scrum, Jira workflows, project charters, risk management, and CAPM.',
+    badge: 'Google PM',
+  },
+  {
+    href: '/google-ux-design-certificate-guide',
+    title: 'Google UX Design Certificate Guide',
+    desc: 'Figma prototyping, user research, wireframing, WCAG accessibility, and UX portfolio.',
+    badge: 'Google UX',
+  },
 ];
