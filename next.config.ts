@@ -116,6 +116,16 @@ const nextConfig: NextConfig = {
         destination: '/portfolio-tasks/:path*',
         permanent: true,
       },
+      {
+        source: '/portfolio-tasks/it',
+        destination: '/portfolio-tasks/information-technology',
+        permanent: true,
+      },
+      {
+        source: '/portfolio-tasks/it/:path*',
+        destination: '/portfolio-tasks/information-technology/:path*',
+        permanent: true,
+      },
     ];
   },
   devIndicators: false,

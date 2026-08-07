@@ -74,7 +74,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     accentTo: 'to-[#CCECC8]',
   },
   {
-    id: 'it',
+    id: 'information-technology',
     name: 'IT & Infrastructure',
     tagline: 'Document the network, run the helpdesk, ship the policy.',
     description:

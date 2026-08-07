@@ -13,7 +13,7 @@ const CATEGORY_DIRS = [
   'business-analysis',
   'customer-ops',
   'ai-prompting',
-  'it',
+  'information-technology',
 ];
 
 function loadTopicsFromDir(categoryDirName: string): PortfolioTopic[] {
