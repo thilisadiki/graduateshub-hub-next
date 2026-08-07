@@ -218,7 +218,7 @@ export default function FreeCoursesWithCertificatesPage() {
       ctaPrimaryLabel="Browse All Courses"
       ctaPrimaryHref="/categories"
       ctaSecondaryLabel="Search a Specific Topic"
-      ctaSecondaryHref="/find-a-course"
+      ctaSecondaryHref="/career-roadmaps"
     />
   );
 }

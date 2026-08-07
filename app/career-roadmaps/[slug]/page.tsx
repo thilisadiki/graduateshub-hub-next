@@ -279,9 +279,25 @@ export default async function CareerRoadmapPage({
 
                       {/* Courses for this stage */}
                       {stageCourses.length > 0 && (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                        <div className="flex flex-col gap-3 mb-5">
+                          <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Recommended Free Course:</span>
                           {stageCourses.map((course) => (
-                            course && <CourseCard key={course.id} course={course} />
+                            course && (
+                              <div key={course.id} className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+                                <div>
+                                  <h4 className="font-bold text-gray-900 text-sm">{course.title}</h4>
+                                  <p className="text-xs text-gray-500 mt-0.5">Alison · {course.duration} · CPD Accredited</p>
+                                </div>
+                                <a
+                                  href={course.affiliateLink}
+                                  target="_blank"
+                                  rel="nofollow noopener noreferrer"
+                                  className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2 rounded-lg transition-colors shrink-0"
+                                >
+                                  Start Course →
+                                </a>
+                              </div>
+                            )
                           ))}
                         </div>
                       )}

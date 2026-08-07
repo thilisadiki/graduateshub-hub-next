@@ -81,9 +81,9 @@ const learningPaths = [
     color: 'bg-[#FFDF9C]/20 border-[#D1C5B4]',
     accent: 'text-primary',
     steps: [
-      { title: 'AI Fundamentals', href: '/course/diploma-fundamentals-ai' },
-      { title: 'Python for Beginners', href: '/course/python-for-beginners-data' },
-      { title: 'Data Analysis with Excel', href: '/course/microsoft-excel-data-analysis' },
+      { title: 'AI Fundamentals', href: '/free-ai-courses-for-beginners' },
+      { title: 'Python for Beginners', href: '/free-python-courses-with-certificates' },
+      { title: 'Data Analysis with Excel', href: '/free-excel-courses-with-certificates' },
     ],
     outcome: 'Junior Data Analyst / IT Support',
   },
@@ -92,9 +92,9 @@ const learningPaths = [
     color: 'bg-green-50 border-green-100',
     accent: 'text-green-700',
     steps: [
-      { title: 'Fundamentals of Accounting', href: '/course/fundamentals-of-accounting' },
-      { title: 'Diploma in Project Management', href: '/course/diploma-project-management' },
-      { title: 'Digital Marketing Basics', href: '/course/basic-concepts-of-digital-marketing' },
+      { title: 'Fundamentals of Accounting', href: '/free-courses-for-accounting-and-finance' },
+      { title: 'Diploma in Project Management', href: '/free-business-courses' },
+      { title: 'Digital Marketing Basics', href: '/free-digital-marketing-courses' },
     ],
     outcome: 'Project Coordinator / Operations',
   },
@@ -103,9 +103,9 @@ const learningPaths = [
     color: 'bg-purple-50 border-purple-100',
     accent: 'text-purple-700',
     steps: [
-      { title: 'Digital Marketing Basics', href: '/course/basic-concepts-of-digital-marketing' },
-      { title: 'Excel for Analysis', href: '/course/microsoft-excel-data-analysis' },
-      { title: 'Python for Beginners', href: '/course/python-for-beginners-data' },
+      { title: 'Digital Marketing Basics', href: '/free-digital-marketing-courses' },
+      { title: 'Excel for Analysis', href: '/free-excel-courses-with-certificates' },
+      { title: 'Python for Beginners', href: '/free-python-courses-with-certificates' },
     ],
     outcome: 'Digital Marketer / Content Analyst',
   },
@@ -275,7 +275,7 @@ export default function FreeCoursesForBeginnersPage() {
       ctaPrimaryLabel="Browse All Courses"
       ctaPrimaryHref="/categories"
       ctaSecondaryLabel="Search a Specific Topic"
-      ctaSecondaryHref="/find-a-course"
+      ctaSecondaryHref="/career-roadmaps"
     />
   );
 }

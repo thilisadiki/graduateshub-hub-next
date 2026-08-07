@@ -87,7 +87,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/search',
-        destination: '/find-a-course',
+        destination: '/career-roadmaps',
+        permanent: true,
+      },
+      {
+        source: '/find-a-course',
+        destination: '/career-roadmaps',
+        permanent: true,
+      },
+      {
+        source: '/course',
+        destination: '/career-roadmaps',
+        permanent: true,
+      },
+      {
+        source: '/course/:path*',
+        destination: '/career-roadmaps',
         permanent: true,
       },
       // Portfolio hub redirects

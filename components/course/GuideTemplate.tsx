@@ -326,9 +326,22 @@ export default function GuideTemplate({
               <div className="w-12 h-1 bg-primary rounded-full mb-8" />
               
               {cat.ids && catCourses.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="flex flex-col gap-4">
                   {catCourses.map((course) => (
-                    <CourseCard key={course.id} course={course} />
+                    <div key={course.id} className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+                      <div>
+                        <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
+                        <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
+                      </div>
+                      <a
+                        href={course.affiliateLink}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
+                      >
+                        Start Course →
+                      </a>
+                    </div>
                   ))}
                 </div>
               )}
@@ -338,9 +351,9 @@ export default function GuideTemplate({
                   {catItems.map(({ course, customContent }) => (
                     <li key={course.id} className="flex flex-col gap-2">
                       <h3 className="font-bold text-gray-900 text-lg">
-                        <Link href={`/course/${course.id}`} className="hover:text-primary transition-colors hover:underline">
+                        <a href={course.affiliateLink} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-primary transition-colors hover:underline">
                           {course.title}
-                        </Link>
+                        </a>
                       </h3>
                       <p className="text-gray-600 leading-relaxed text-sm">{customContent}</p>
                     </li>

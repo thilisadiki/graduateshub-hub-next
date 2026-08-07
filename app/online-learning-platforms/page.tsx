@@ -46,7 +46,7 @@ const platformsList = [
       'Integrated career roadmaps and interview preparation guides',
       'No subscription fees or hidden paywalls',
     ],
-    link: '/find-a-course',
+    link: '/career-roadmaps',
     isExternal: false,
     ctaText: 'Browse Curated Courses',
   },

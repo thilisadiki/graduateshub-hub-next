@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { courses } from '@/data/courses';
 import { categories } from '@/data/categories';
 import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
@@ -87,12 +86,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     images: [`${SITE_URL}/opengraph-image`],
   }));
 
-  const coursePages: MetadataRoute.Sitemap = courses.map((course) => ({
-    url: `${SITE_URL}/course/${course.id}`,
-    changeFrequency: 'monthly' as const,
-    priority: 0.4,
-  }));
-
   const roadmapPages: MetadataRoute.Sitemap = roadmaps.map((r) => ({
     url: `${SITE_URL}/career-roadmaps/${r.id}`,
     lastModified,
@@ -132,7 +125,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticPages,
     ...categoryPages,
-    ...coursePages,
     ...roadmapPages,
     ...interviewPrepPages,
     ...portfolioCategoryPages,

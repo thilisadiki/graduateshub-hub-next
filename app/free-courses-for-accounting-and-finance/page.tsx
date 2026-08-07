@@ -69,10 +69,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const learningPath = [
-  { step: '1', title: 'Learn Accounting Basics', detail: 'Start with fundamentals of accounting and bookkeeping to understand how financial records work.', href: '/course/fundamentals-of-accounting', courseName: 'Fundamentals of Accounting' },
-  { step: '2', title: 'Understand Financial Concepts', detail: 'Move into financial management, statement analysis, and how businesses evaluate performance.', href: '/course/mastering-financial-statement-analysis', courseName: 'Mastering Financial Statement Analysis' },
-  { step: '3', title: 'Learn Payroll & Compliance', detail: 'Payroll and accounts management skills are among the most hired-for in entry-level finance roles.', href: '/course/diploma-effective-bookkeeping-payroll', courseName: 'Diploma in Effective Bookkeeping and Payroll' },
-  { step: '4', title: 'Apply with Real Scenarios', detail: 'Practice building financial reports, reconciling accounts, and interpreting balance sheets using industry-standard software.', href: '/course/accounts-management-xero', courseName: 'Accounts Management Using Xero' },
+  { step: '1', title: 'Learn Accounting Basics', detail: 'Start with fundamentals of accounting and bookkeeping to understand how financial records work.', href: 'https://alison.com/course/fundamentals-of-accounting-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Fundamentals of Accounting' },
+  { step: '2', title: 'Understand Financial Concepts', detail: 'Move into financial management, statement analysis, and how businesses evaluate performance.', href: 'https://alison.com/course/mastering-financial-statement-analysis?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Mastering Financial Statement Analysis' },
+  { step: '3', title: 'Learn Payroll & Compliance', detail: 'Payroll and accounts management skills are among the most hired-for in entry-level finance roles.', href: 'https://alison.com/course/diploma-in-effective-bookkeeping-and-payroll?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Diploma in Effective Bookkeeping and Payroll' },
+  { step: '4', title: 'Apply with Real Scenarios', detail: 'Practice building financial reports, reconciling accounts, and interpreting balance sheets using industry-standard software.', href: 'https://alison.com/course/accounts-management-using-xero-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Accounts Management Using Xero' },
 ];
 
 const careerPaths: CareerPathItem[] = [
@@ -147,9 +147,9 @@ export default function FreeCoursesAccountingFinancePage() {
                   <div>
                     <h3 className="font-bold text-gray-900 text-lg mb-1">{title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-2">{detail}</p>
-                    <Link href={href} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
+                    <a href={href} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] transition-colors">
                       <ChevronRight size={12} /> {courseName}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}

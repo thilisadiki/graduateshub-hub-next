@@ -133,15 +133,45 @@ export default function CategoryContent({
             {selectedGroup !== 'All' ? (
               <div className="mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{selectedGroup} Courses</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {displayCourses.map(course => <CourseCard key={course.id} course={course} />)}
+                <div className="flex flex-col gap-4">
+                  {displayCourses.map(course => (
+                    <div key={course.id} className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+                      <div>
+                        <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
+                        <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
+                      </div>
+                      <a
+                        href={course.affiliateLink}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
+                      >
+                        Start Course →
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             ) : currentGroups.length === 1 && currentGroups[0] === 'General' ? (
               <>
                 <h2 className="sr-only">Available Courses</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                  {categoryCourses.slice(0, visibleCount).map(course => <CourseCard key={course.id} course={course} />)}
+                <div className="flex flex-col gap-4 mb-12">
+                  {categoryCourses.slice(0, visibleCount).map(course => (
+                    <div key={course.id} className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+                      <div>
+                        <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
+                        <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
+                      </div>
+                      <a
+                        href={course.affiliateLink}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
+                      >
+                        Start Course →
+                      </a>
+                    </div>
+                  ))}
                 </div>
                 {visibleCount < categoryCourses.length && (
                   <div className="text-center">
@@ -153,12 +183,27 @@ export default function CategoryContent({
                 )}
               </>
             ) : (
-              <div className="flex flex-col gap-16 mb-12">
+              <div className="flex flex-col gap-12 mb-12">
                 {currentGroups.sort().map(group => (
                   <div key={group}>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{group} Courses</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {groupedCourses[group].map(course => <CourseCard key={course.id} course={course} />)}
+                    <div className="flex flex-col gap-4">
+                      {groupedCourses[group].map(course => (
+                        <div key={course.id} className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+                          <div>
+                            <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
+                            <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
+                          </div>
+                          <a
+                            href={course.affiliateLink}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
+                          >
+                            Start Course →
+                          </a>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}
