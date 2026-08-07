@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import { formatLastUpdated } from '@/utils/dateUtils';
 
@@ -29,12 +30,15 @@ export type AuthorKey = keyof typeof AUTHORS;
 function AuthorChip({ author }: { author: Author }) {
   return (
     <div className="flex items-center gap-2.5">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={author.photo}
-        alt={author.name}
-        className="w-8 h-8 rounded-full object-cover ring-2 ring-white shrink-0"
-      />
+      <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-white shrink-0">
+        <Image
+          src={author.photo}
+          alt={author.name}
+          fill
+          sizes="32px"
+          className="object-cover"
+        />
+      </div>
       <div className="flex flex-col leading-tight">
         <span className="font-bold text-gray-800 text-sm">{author.name}</span>
         <span className="text-gray-500 text-xs">{author.title}</span>

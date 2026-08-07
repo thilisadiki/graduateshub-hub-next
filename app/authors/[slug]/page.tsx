@@ -115,7 +115,6 @@ export default async function AuthorProfilePage({ params }: { params: Promise<{ 
                 fill
                 sizes="(max-width: 768px) 144px, 176px"
                 className="object-cover"
-                priority
               />
             </div>
 

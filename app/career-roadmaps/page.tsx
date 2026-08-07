@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Clock, TrendingUp, ChevronRight, Map, CheckCircle2,
   BookOpen, Wrench, Award, FileText, HelpCircle, ArrowRight,
@@ -187,13 +188,15 @@ export default function CareerRoadmapsPage() {
                   <div className="flex items-center gap-2">
                     <div className="flex -space-x-2">
                       {curators.map((key) => (
-                        /* eslint-disable-next-line @next/next/no-img-element */
-                        <img
-                          key={key}
-                          src={CURATORS[key].photo}
-                          alt={CURATORS[key].name}
-                          className="w-7 h-7 rounded-full object-cover ring-2 ring-white"
-                        />
+                        <div key={key} className="relative w-7 h-7 rounded-full overflow-hidden ring-2 ring-white shrink-0">
+                          <Image
+                            src={CURATORS[key].photo}
+                            alt={CURATORS[key].name}
+                            fill
+                            sizes="28px"
+                            className="object-cover"
+                          />
+                        </div>
                       ))}
                     </div>
                     <span className="text-xs text-gray-500">
