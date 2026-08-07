@@ -5,6 +5,7 @@ import { ArrowRight, Clock, Award, Lock, HelpCircle, Sparkles } from 'lucide-rea
 import { getCategoryById } from '@/data/portfolioCategories';
 import { portfolioTopics, getTopicById } from '@/data/portfolioTopics';
 import { getTaskByLocation } from '@/data/portfolioTasks';
+import { getPortfolioCategorySeo } from '@/data/portfolioCategorySeo';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, FAQPage, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
@@ -76,6 +77,7 @@ export default async function TopicPage({
   if (!cat || !top) notFound();
 
   const topicSeo = top.seo;
+  const catSeo = getPortfolioCategorySeo(cat.id);
 
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
@@ -261,20 +263,30 @@ export default async function TopicPage({
               </section>
             )}
 
-            {/* Back to Category CTA */}
-            <section className="bg-gradient-to-r from-[#1F1B13] to-[#2A241A] text-white rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+            {/* Navigation & Career Roadmap CTA */}
+            <section className="bg-gradient-to-r from-[#1F1B13] to-[#2A241A] text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
               <div>
-                <h3 className="text-xl font-extrabold mb-1">Explore all topics in {cat.name}</h3>
-                <p className="text-slate-300 text-sm">
-                  Build proof of work across other topics and earn badges for your LinkedIn profile.
+                <h3 className="text-xl font-extrabold mb-1">Explore {cat.name} Career Paths</h3>
+                <p className="text-slate-300 text-sm max-w-xl">
+                  Build proof of work across other topics or view full career roadmaps mapping technical skills to hiring expectations.
                 </p>
               </div>
-              <Link
-                href={`/portfolio-tasks/${cat.id}`}
-                className="bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap shadow-sm border border-primary"
-              >
-                All {cat.name} Topics →
-              </Link>
+              <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                <Link
+                  href={`/portfolio-tasks/${cat.id}`}
+                  className="bg-[#3D3325] hover:bg-[#4E4231] text-white font-bold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap border border-[#5E503C] text-center flex-1 md:flex-initial"
+                >
+                  All {cat.name} Topics →
+                </Link>
+                {catSeo?.relatedRoadmapHref && (
+                  <Link
+                    href={catSeo.relatedRoadmapHref}
+                    className="bg-primary hover:bg-[#5a4000] text-white font-bold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap shadow-sm border border-primary text-center flex-1 md:flex-initial"
+                  >
+                    {catSeo.relatedRoadmapLabel || 'Career Roadmap'} →
+                  </Link>
+                )}
+              </div>
             </section>
           </div>
         )}
