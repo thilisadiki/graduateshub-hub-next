@@ -1,0 +1,53 @@
+export interface PortfolioTopicSeo {
+  categoryId: string;
+  topicId: string;
+  overviewTitle: string;
+  overviewBody: string;
+  deliverables: { title: string; desc: string }[];
+  faqs: { question: string; answer: string }[];
+}
+
+export const portfolioTopicSeoData: Record<string, PortfolioTopicSeo> = {
+  'web-development/auth-flow-implementation': {
+    categoryId: 'web-development',
+    topicId: 'auth-flow-implementation',
+    overviewTitle: 'Mastering Authentication Flows in Web Development',
+    overviewBody:
+      'Authentication is one of the most critical security boundaries in web development. Hiring managers check whether you understand secure session storage (HTTP-only cookies vs localStorage), CSRF prevention, JWT token expiration, password hashing, and client-side route guards. Completing an authentication brief proves you can handle sensitive user data safely.',
+    deliverables: [
+      {
+        title: '1. Secure Auth Architecture Plan',
+        desc: 'A markdown document outlining your chosen auth pattern (JWT / Sessions), token storage strategy, CSRF protection, and error handling.',
+      },
+      {
+        title: '2. Functional React/Next.js Auth Components',
+        desc: 'Production-ready Login, Register, and Password Reset UI components with real-time form validation and loading/error states.',
+      },
+      {
+        title: '3. Route Guard & Middleware Implementation',
+        desc: 'Protected route wrapper or Next.js middleware preventing unauthorized access to private dashboard pages.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Why should I store JWTs in HTTP-only cookies instead of localStorage?',
+        answer:
+          'Storing JWT tokens in localStorage makes them vulnerable to Cross-Site Scripting (XSS) attacks. HTTP-only cookies cannot be accessed by client-side JavaScript, significantly reducing XSS token theft risks.',
+      },
+      {
+        question: 'What is the difference between authentication and authorization?',
+        answer:
+          'Authentication verifies who a user is (e.g. verifying email and password), whereas authorization determines what permissions or resources an authenticated user is allowed to access (e.g. admin vs subscriber roles).',
+      },
+      {
+        question: 'Should my authentication portfolio project use OAuth or NextAuth / Supabase Auth?',
+        answer:
+          'Demonstrating custom JWT handling or using modern authentication providers like NextAuth.js, Supabase Auth, or Firebase Auth are both valid. The key is proving you handle session lifecycle and token refreshment securely.',
+      },
+    ],
+  },
+};
+
+export function getPortfolioTopicSeo(categoryId: string, topicId: string): PortfolioTopicSeo | undefined {
+  return portfolioTopicSeoData[`${categoryId}/${topicId}`];
+}
