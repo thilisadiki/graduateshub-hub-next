@@ -76,13 +76,13 @@ const nextConfig: NextConfig = {
       },
       // Category redirects
       {
-        source: '/category/business-management',
-        destination: '/category/business',
+        source: '/categories',
+        destination: '/career-roadmaps',
         permanent: true,
       },
       {
-        source: '/category/data-analytics',
-        destination: '/categories',
+        source: '/category/:path*',
+        destination: '/career-roadmaps',
         permanent: true,
       },
       {

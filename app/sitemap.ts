@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { categories } from '@/data/categories';
 import { roadmaps } from '@/data/roadmaps';
 import { interviewPreps } from '@/data/interviewPrep';
 import { portfolioCategories } from '@/data/portfolioCategories';
@@ -41,13 +40,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1.0,
       images: [`${SITE_URL}/opengraph-image`],
     },
-    {
-      url: `${SITE_URL}/categories`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.5,
-      images: [`${SITE_URL}/opengraph-image`],
-    },
     { url: `${SITE_URL}/guides`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog`, lastModified, changeFrequency: 'daily', priority: 0.9 },
     { url: `${SITE_URL}/free-courses-with-certificates`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -77,14 +69,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/disclosure`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
   ];
-
-  const categoryPages: MetadataRoute.Sitemap = categories.map((category: { id: string }) => ({
-    url: `${SITE_URL}/category/${category.id}`,
-    lastModified,
-    changeFrequency: 'weekly',
-    priority: 0.4,
-    images: [`${SITE_URL}/opengraph-image`],
-  }));
 
   const roadmapPages: MetadataRoute.Sitemap = roadmaps.map((r) => ({
     url: `${SITE_URL}/career-roadmaps/${r.id}`,
@@ -124,7 +108,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
-    ...categoryPages,
     ...roadmapPages,
     ...interviewPrepPages,
     ...portfolioCategoryPages,
