@@ -25,13 +25,13 @@ export async function generateMetadata({
   return {
     title,
     description:
-      'Browse expert career guides, free certificate course breakdowns, YES Youth program guides, and practical advice for South African graduates.',
+      'Browse expert career guides, free certificate course breakdowns, career development strategies, and practical advice for graduates worldwide.',
     alternates: { canonical: url },
     openGraph: {
       siteName: SITE_NAME,
       title: `${title} | Graduates Hub`,
       description:
-        'Browse expert career guides, free certificate course breakdowns, YES Youth program guides, and practical advice for South African graduates.',
+        'Browse expert career guides, free certificate course breakdowns, career development strategies, and practical advice for graduates worldwide.',
       url,
       images: [OG_IMAGE],
     },
@@ -51,7 +51,7 @@ const breadcrumbSchema = {
 const ESSENTIAL_READS = [
   {
     title: 'YES Youth Program Guide 2026: Application, Stipends & Placement',
-    desc: 'Everything South African youth need to know about joining the Youth Employment Service initiative, monthly stipends, and work experience.',
+    desc: 'Everything job seekers need to know about joining the Youth Employment Service initiative, stipends, and work experience.',
     href: '/blog/yes-youth-program-guide-south-africa',
     badge: 'SA Youth Programs',
     readTime: '8 min read',
@@ -183,7 +183,7 @@ export default async function BlogPage({
     '@type': 'Blog',
     name: 'Graduates Hub Blog',
     url: `${SITE_URL}/blog`,
-    description: 'Career guides, study tips, and expert advice to help South African graduates navigate their career journey.',
+    description: 'Career guides, study tips, and expert advice to help graduates navigate their career journey.',
     publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
     ...(formattedPosts.length > 0 && {
       blogPost: formattedPosts.slice(0, 6).map((post: FormattedPost) => ({
@@ -220,7 +220,7 @@ export default async function BlogPage({
             Graduate Career Guides &amp; Insights
           </h1>
           <p className="text-[#D1C5B4] text-lg max-w-2xl leading-relaxed mb-8">
-            Expert advice on free courses, CV optimization, South African youth employment programs, and technical career roadmaps.
+            Expert advice on free courses, CV optimization, career development programs, and technical career roadmaps.
           </p>
 
           {/* Quick Category Filters */}
