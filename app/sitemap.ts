@@ -4,6 +4,8 @@ import { interviewPreps } from '@/data/interviewPrep';
 import { portfolioCategories } from '@/data/portfolioCategories';
 import { portfolioTopics } from '@/data/portfolioTopics';
 
+import { popularGuides, type GuideLink } from '@/data/navigation';
+
 const SITE_URL = 'https://www.graduateshub.org';
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
@@ -42,25 +44,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     { url: `${SITE_URL}/guides`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog`, lastModified, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${SITE_URL}/free-courses-with-certificates`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/online-learning-platforms`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-ai-courses-for-beginners`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-courses-for-data-analysts`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/best-alison-courses-with-certificates`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-courses-for-beginners`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-digital-marketing-courses`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-courses-for-software-developers`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-courses-for-accounting-and-finance`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/free-business-courses`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/first-graduate-job-south-africa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/free-ai-career-tools`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/cv-builder`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/cv-builder/create`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/career-roadmaps`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/interview-prep`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/google-ai-essentials-course-guide`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/google-digital-marketing-ecommerce-guide`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/google-data-analytics-certificate-guide`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/portfolio-tasks`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/authors/jason-sadiki`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
@@ -72,6 +62,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/disclosure`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
   ];
+
+  const courseGuidePages: MetadataRoute.Sitemap = popularGuides.map((guide: GuideLink) => ({
+    url: `${SITE_URL}${guide.href}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
 
   const roadmapPages: MetadataRoute.Sitemap = roadmaps.map((r) => ({
     url: `${SITE_URL}/career-roadmaps/${r.id}`,
@@ -111,6 +108,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...courseGuidePages,
     ...roadmapPages,
     ...interviewPrepPages,
     ...portfolioCategoryPages,
