@@ -8,5 +8,37 @@
     "VLAN design",
     "Network troubleshooting",
     "Infrastructure migration"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Enterprise Networking, Subnetting & VLAN Architecture",
+    "overviewBody": "Reliable computer networks are the foundation of IT infrastructure. Network engineers are evaluated on IPv4/IPv6 CIDR subnetting, VLAN segmentation, switch and router configuration (Cisco/MikroTik), NAT rules, and VPN tunnel setup.",
+    "deliverables": [
+      {
+        "title": "1. Network Topology & Subnet IP Plan",
+        "desc": "Network diagram specifying CIDR subnet boundaries, Gateway IPs, and VLAN IDs across corporate departments."
+      },
+      {
+        "title": "2. Switch & Router Configuration File",
+        "desc": "Production-ready CLI configuration script for managed switches establishing trunk ports, VLANs, and inter-VLAN routing."
+      },
+      {
+        "title": "3. VPN Tunnel & Latency Test Report",
+        "desc": "Site-to-Site IPsec/WireGuard VPN setup document and latency ping benchmark test log."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why should corporate networks be segmented into VLANs?",
+        "answer": "VLANs isolate network broadcast domains, improve security by preventing lateral movement, and optimize bandwidth by grouping departmental traffic."
+      },
+      {
+        "question": "What is the difference between a Site-to-Site VPN and a Remote Access VPN?",
+        "answer": "Site-to-Site VPNs connect two static branch office networks together securely, while Remote Access VPNs connect individual remote user laptops to the corporate network."
+      },
+      {
+        "question": "How does NAT (Network Address Translation) work?",
+        "answer": "NAT maps private internal IP addresses (e.g. 192.168.x.x) to a single public IP address when communicating across the internet."
+      }
+    ]
+  }
 }

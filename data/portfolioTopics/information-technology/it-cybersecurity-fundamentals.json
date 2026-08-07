@@ -8,5 +8,37 @@
     "Vulnerability assessment",
     "Incident response",
     "Security awareness"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Enterprise IT Cybersecurity & Vulnerability Management",
+    "overviewBody": "Cybersecurity specialists protect organization networks against ransomware, data breaches, and insider threats. Employers look for hands-on skills in vulnerability scanning (Nessus/Qualys), SOC incident triage, Endpoint Detection & Response (EDR), and firewall rules.",
+    "deliverables": [
+      {
+        "title": "1. Enterprise Threat & Vulnerability Report",
+        "desc": "Vulnerability assessment report detailing CVE severity scores, affected assets, and patch prioritization."
+      },
+      {
+        "title": "2. EDR & Firewall Security Policy Config",
+        "desc": "Firewall rule configuration file and EDR endpoint policy enforcing zero-trust access controls."
+      },
+      {
+        "title": "3. SOC Incident Triage & Response Playbook",
+        "desc": "Step-by-step incident response playbook for containing malware outbreaks and investigating suspicious login alerts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Common Vulnerability Scoring System (CVSS)?",
+        "answer": "CVSS provides a standardized numerical score (0.0 to 10.0) reflecting the severity, exploitability, and impact of software security vulnerabilities."
+      },
+      {
+        "question": "How does Zero Trust Architecture differ from traditional perimeter security?",
+        "answer": "Traditional security assumes everything inside the corporate network is trustworthy. Zero Trust operates under a never trust, always verify model for every request."
+      },
+      {
+        "question": "Why is Endpoint Detection & Response (EDR) preferred over basic antivirus?",
+        "answer": "Basic antivirus relies on known signature matching. EDR monitors continuous behavioral telemetry to detect and isolate novel zero-day attacks."
+      }
+    ]
+  }
 }

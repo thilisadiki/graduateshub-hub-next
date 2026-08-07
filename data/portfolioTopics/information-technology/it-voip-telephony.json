@@ -8,5 +8,37 @@
     "SIP trunking",
     "Call routing design",
     "Quality of Service (QoS)"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Enterprise VoIP & Telephony System Architecture",
+    "overviewBody": "VoIP telephony powers modern business voice communications. Telephony engineers demonstrate expertise in Session Initiation Protocol (SIP), IP PBX configuration (3CX/Asterisk), Session Border Controllers (SBCs), Quality of Service (QoS) priority queuing, and IVR auto-attendants.",
+    "deliverables": [
+      {
+        "title": "1. Corporate VoIP Topology & QoS Plan",
+        "desc": "Network design document detailing SIP trunking, SBC placement, and DSCP quality-of-service priority tagging."
+      },
+      {
+        "title": "2. IP PBX Extension & IVR Call Flow Config",
+        "desc": "PBX configuration script setting up ring groups, extension routing, voicemail-to-email, and interactive voice response (IVR) menus."
+      },
+      {
+        "title": "3. Call Quality & Jitter Diagnostic Report",
+        "desc": "Network analysis report diagnosing packet loss, latency, and jitter metrics affecting voice clarity."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is Quality of Service (QoS) essential for VoIP networks?",
+        "answer": "Voice traffic is intolerant to delay. QoS prioritizes audio packets over general web traffic to prevent choppy calls, jitter, and dropped connections."
+      },
+      {
+        "question": "What is a Session Border Controller (SBC)?",
+        "answer": "An SBC is a specialized firewall that secures SIP trunking, prevents toll fraud, and normalizes signaling between IP PBX systems and telecom providers."
+      },
+      {
+        "question": "What is the difference between SIP trunks and traditional ISDN lines?",
+        "answer": "ISDN lines use legacy physical copper wire channels. SIP trunks deliver virtual voice channels dynamically over IP internet connections."
+      }
+    ]
+  }
 }

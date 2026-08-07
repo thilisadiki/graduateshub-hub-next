@@ -8,5 +8,37 @@
     "Linux hardening",
     "Performance analysis",
     "System documentation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Linux & Windows Server System Administration",
+    "overviewBody": "System administrators maintain server uptime, system performance, and operating system security. Hiring managers seek candidates capable of administering both Linux (Ubuntu/RHEL) and Windows Server environments, automating tasks with Bash/PowerShell, and managing disk storage.",
+    "deliverables": [
+      {
+        "title": "1. OS Hardening & Server Setup Spec",
+        "desc": "System hardening guide covering SSH key authentication, UFW/iptables firewall settings, and service disabling."
+      },
+      {
+        "title": "2. Automated Admin Bash/PowerShell Script",
+        "desc": "Automated maintenance script handling OS updates, disk cleanup, and service status checks."
+      },
+      {
+        "title": "3. Server Performance & Uptime Benchmark",
+        "desc": "Performance monitoring report analyzing CPU utilization, memory pressure, and disk I/O metrics."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is SSH passwordless key authentication safer than passwords?",
+        "answer": "Cryptographic SSH keys resist brute-force dictionary attacks, cannot be easily guessed, and can be further protected with passphrase passkeys."
+      },
+      {
+        "question": "What is the function of systemd in modern Linux distributions?",
+        "answer": "Systemd is an init system and service manager that bootstraps the user space, manages background daemons, and logs system events via journalctl."
+      },
+      {
+        "question": "How do you automate server maintenance tasks?",
+        "answer": "Linux uses cron jobs (/etc/cron.d), while Windows Server uses Task Scheduler to trigger automated PowerShell or Bash scripts on recurring schedules."
+      }
+    ]
+  }
 }

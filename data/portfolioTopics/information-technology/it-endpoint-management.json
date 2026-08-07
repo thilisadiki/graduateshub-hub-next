@@ -8,5 +8,37 @@
     "Patch management",
     "Standard builds",
     "MDM policy"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Endpoint Security & Mobile Device Management (MDM)",
+    "overviewBody": "Managing laptop and mobile hardware fleets requires centralized endpoint management tools. IT teams evaluate candidates on Microsoft Intune or Jamf configuration, automated patch deployment, disk encryption (BitLocker/FileVault), and compliance policies.",
+    "deliverables": [
+      {
+        "title": "1. Corporate MDM Security Policy Spec",
+        "desc": "Device management policy establishing passcode rules, OS patch baselines, and app installation restrictions."
+      },
+      {
+        "title": "2. Intune / Jamf Compliance Configuration",
+        "desc": "Configuration profile enforcing mandatory disk encryption, firewall activation, and remote wipe capabilities."
+      },
+      {
+        "title": "3. Endpoint Encryption Audit Report",
+        "desc": "Fleet compliance audit documenting BitLocker/FileVault recovery key escrow and unencrypted device remediations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is BitLocker recovery key escrow?",
+        "answer": "Key escrow automatically backs up full-disk encryption keys to Entra ID (Azure AD) or Active Directory so IT can assist users with locked drives."
+      },
+      {
+        "question": "How does MDM protect corporate data on BYOD mobile devices?",
+        "answer": "MDM isolates corporate apps and emails inside a secure container separate from personal user data, allowing remote wipes of business data without deleting personal photos."
+      },
+      {
+        "question": "Why automated OS patch management necessary?",
+        "answer": "Unpatched operating system vulnerabilities are primary entry vectors for malware. MDM enforces mandatory patch windows."
+      }
+    ]
+  }
 }

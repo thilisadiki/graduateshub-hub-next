@@ -8,5 +8,37 @@
     "SharePoint governance",
     "Tenant hardening",
     "Conditional Access"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Microsoft 365 Tenant Administration & Security Hardening",
+    "overviewBody": "Microsoft 365 powers productivity across top South African corporate enterprises. Hiring managers check whether IT administrators understand Entra ID (Azure AD) user provisioning, Exchange Online mail flow rules, SharePoint permissions, and Conditional Access MFA policies to defend against phishing and unauthorized access.",
+    "deliverables": [
+      {
+        "title": "1. M365 Tenant Security Hardening Plan",
+        "desc": "Security architecture blueprint specifying Conditional Access policies, MFA rules, and legacy authentication block settings."
+      },
+      {
+        "title": "2. PowerShell User Provisioning Script",
+        "desc": "Automated PowerShell script for bulk user onboarding, license assignment, and group membership configuration."
+      },
+      {
+        "title": "3. Tenant Security Score Audit Log",
+        "desc": "Audit log documenting Microsoft Secure Score recommendations, implementation steps, and security score improvements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is disabling legacy authentication critical in Microsoft 365?",
+        "answer": "Legacy protocols (like POP3, IMAP, and basic SMTP) do not support Multi-Factor Authentication (MFA), making them primary targets for credential stuffing and brute-force attacks."
+      },
+      {
+        "question": "What is the difference between Security Defaults and Conditional Access?",
+        "answer": "Security Defaults provide baseline MFA rules for all users without customization. Conditional Access allows granular rules based on user risk, IP location, device compliance, and client application."
+      },
+      {
+        "question": "How do you enforce SharePoint permissions governance safely?",
+        "answer": "SharePoint sites should be restricted using security groups rather than individual user permissions, with external sharing links set to expire automatically."
+      }
+    ]
+  }
 }

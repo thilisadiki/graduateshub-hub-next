@@ -8,5 +8,37 @@
     "SQL security",
     "Backup configurations",
     "Performance tuning"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Database Administration & Security Access Auditing",
+    "overviewBody": "Database administrators keep organizational databases online, secure, and fast. Technical leads look for skills in database user privilege auditing, backup restoration testing, slow query log profiling, and data encryption at rest.",
+    "deliverables": [
+      {
+        "title": "1. Database Access & Security Audit Spec",
+        "desc": "Security specification detailing database user roles, schema permissions, and access control policies."
+      },
+      {
+        "title": "2. Backup & Point-in-Time Restore Script",
+        "desc": "Automated database backup script with point-in-time recovery verification log."
+      },
+      {
+        "title": "3. Query Optimization & Index Audit Report",
+        "desc": "Performance report identifying slow query bottlenecks and executing index optimizations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is access control auditing critical for database compliance?",
+        "answer": "Regulations like POPIA and GDPR mandate that personal data access is restricted exclusively to authorized personnel with logged audit trails."
+      },
+      {
+        "question": "What is Point-In-Time Recovery (PITR)?",
+        "answer": "PITR uses transaction log backups to restore a database to an exact microsecond timestamp right before a data corruption event occurred."
+      },
+      {
+        "question": "How do you protect database backups at rest?",
+        "answer": "Backup files must be encrypted using AES-256 encryption before being transferred over the network or saved to storage media."
+      }
+    ]
+  }
 }

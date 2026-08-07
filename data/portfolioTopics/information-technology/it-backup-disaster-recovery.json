@@ -8,5 +8,37 @@
     "Disaster recovery",
     "RTO / RPO design",
     "Business continuity"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "IT Backup & Disaster Recovery (DR) Strategy",
+    "overviewBody": "Data loss or ransomware attacks can disrupt business operations permanently without robust backups. System engineers prove competence by establishing Recovery Time Objectives (RTO), Recovery Point Objectives (RPO), 3-2-1 backup strategies, immutable cloud storage, and DR failover drills.",
+    "deliverables": [
+      {
+        "title": "1. Disaster Recovery & Business Continuity Plan",
+        "desc": "Comprehensive DR strategy documenting RTO/RPO metrics, backup retention windows, and emergency failover protocols."
+      },
+      {
+        "title": "2. Automated Backup & Cloud Sync Script",
+        "desc": "Script executing automated database and file snapshots with encrypted offsite cloud synchronization."
+      },
+      {
+        "title": "3. DR Failover Drill Verification Report",
+        "desc": "Audit log documenting a simulated server crash, backup restoration, and database integrity validation."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the 3-2-1 backup strategy?",
+        "answer": "Keep 3 copies of your data on 2 different media types, with at least 1 copy stored in an offsite or cloud location."
+      },
+      {
+        "question": "What is the difference between RTO and RPO?",
+        "answer": "Recovery Time Objective (RTO) is the maximum acceptable duration of downtime. Recovery Point Objective (RPO) is the maximum acceptable data loss measured in time."
+      },
+      {
+        "question": "Why is immutable backup storage essential against ransomware?",
+        "answer": "Immutable backups cannot be modified, encrypted, or deleted by unauthorized software or ransomware attackers after creation."
+      }
+    ]
+  }
 }

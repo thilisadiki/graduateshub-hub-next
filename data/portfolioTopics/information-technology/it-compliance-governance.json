@@ -8,5 +8,37 @@
     "ISO 27001",
     "Gap analysis",
     "Audit readiness"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "IT Governance & Compliance Frameworks (POPIA / ISO 27001)",
+    "overviewBody": "IT compliance guarantees that corporate technology operations adhere to legal data privacy regulations and security standards. Hiring managers value specialists who understand South Africa’s Protection of Personal Information Act (POPIA), ISO 27001 ISMS controls, and data retention policies.",
+    "deliverables": [
+      {
+        "title": "1. Corporate POPIA Compliance Framework",
+        "desc": "Compliance document specifying data operator requirements, lawful processing rules, and Data Subject Access Request (DSAR) procedures."
+      },
+      {
+        "title": "2. Data Classification & Retention Matrix",
+        "desc": "Matrix classifying data sensitivity (Public, Internal, Confidential, Restricted) alongside statutory retention schedules."
+      },
+      {
+        "title": "3. ISO 27001 Security Control Checklist",
+        "desc": "Audit checklist evaluating Annex A physical, technical, and operational security controls."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the core requirements of POPIA for South African businesses?",
+        "answer": "POPIA requires organizations to process personal information lawfully, obtain consent, implement security safeguards, notify of data breaches, and allow individuals to request data correction or deletion."
+      },
+      {
+        "question": "What is an Information Officer under POPIA?",
+        "answer": "An Information Officer is a designated corporate official responsible for ensuring company compliance with POPIA regulatory mandates."
+      },
+      {
+        "question": "What is the difference between POPIA and GDPR?",
+        "answer": "POPIA is South Africa’s data privacy law, while GDPR is the European Union regulation. Both enforce similar data protection principles, but differ in fine structures and registration requirements."
+      }
+    ]
+  }
 }

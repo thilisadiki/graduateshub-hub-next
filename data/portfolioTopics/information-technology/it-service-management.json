@@ -8,5 +8,37 @@
     "Network documentation",
     "Helpdesk triage",
     "IT policy writing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "ITIL Service Desk, Ticket Severity & SLA Management",
+    "overviewBody": "IT Service Management (ITSM) ensures technical support teams deliver business value efficiently. IT managers evaluate candidates on ITIL v4 frameworks, ticket severity triage (P1 critical vs P4 minor), escalation handling, SOP authoring, and CSAT metrics.",
+    "deliverables": [
+      {
+        "title": "1. ITIL Incident SLA Triage Matrix",
+        "desc": "Policy matrix defining P1–P4 ticket impact, response time SLAs, resolution target windows, and escalation paths."
+      },
+      {
+        "title": "2. Service Desk Macro Response Templates",
+        "desc": "Standardized customer email response templates and step-by-step Knowledge Base SOP articles."
+      },
+      {
+        "title": "3. Monthly Service Desk KPI Report",
+        "desc": "Data report tracking SLA compliance percentages, first-contact resolution rates, and CSAT scores."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between an Incident and a Problem in ITIL?",
+        "answer": "An Incident is an unplanned interruption to an IT service. A Problem is the underlying root cause of one or more recurring incidents."
+      },
+      {
+        "question": "How do you prevent Service Level Agreement (SLA) breaches?",
+        "answer": "Automated ticket queue monitors send escalation notifications before SLA timers expire, while automated ticket assignment routes urgent P1 issues instantly."
+      },
+      {
+        "question": "What is First Contact Resolution (FCR) rate?",
+        "answer": "FCR measures the percentage of customer support tickets resolved during the initial contact without requiring escalations."
+      }
+    ]
+  }
 }

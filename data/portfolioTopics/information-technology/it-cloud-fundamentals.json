@@ -8,5 +8,37 @@
     "Migration planning",
     "Hybrid architecture",
     "IaaS / SaaS literacy"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Cloud Infrastructure Architecture (AWS & Azure)",
+    "overviewBody": "Cloud computing allows organizations to deploy scalable infrastructure on demand. Employers look for foundational cloud expertise across AWS and Azure, including virtual networks (VPC/VNet), virtual machines (EC2/Azure VMs), cloud storage, IAM policies, and cost management.",
+    "deliverables": [
+      {
+        "title": "1. Cloud Architecture & Network Blueprint",
+        "desc": "Cloud topology diagram detailing VPC subnets, Internet Gateways, NAT Gateways, and security groups."
+      },
+      {
+        "title": "2. Infrastructure as Code (Terraform) Script",
+        "desc": "Declarative Terraform configuration file provisioning a multi-zone cloud environment with secure IAM roles."
+      },
+      {
+        "title": "3. Cloud Cost Optimization Report",
+        "desc": "Analysis report detailing idle cloud asset removal, right-sizing VM instances, and Reserved Instance cost savings."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Cloud Shared Responsibility Model?",
+        "answer": "The cloud provider manages physical security and infrastructure hardware, while the customer is responsible for configuring OS patches, data security, IAM, and firewall rules."
+      },
+      {
+        "question": "How do you secure Amazon S3 buckets or Azure Storage Blobs?",
+        "answer": "Block public access settings, enforce SSE-KMS encryption at rest, and restrict access using IAM bucket policies."
+      },
+      {
+        "question": "What is the benefit of Infrastructure as Code (IaC)?",
+        "answer": "IaC allows infrastructure to be version-controlled in Git, tested automatically, and provisioned repeatably without manual GUI configuration errors."
+      }
+    ]
+  }
 }

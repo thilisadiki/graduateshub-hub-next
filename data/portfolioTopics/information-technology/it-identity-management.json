@@ -8,5 +8,37 @@
     "Group Policy",
     "Access governance",
     "Least-privilege design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Active Directory Domain Services & Identity Access Management",
+    "overviewBody": "Identity is the security perimeter for enterprise IT networks. Enterprise recruiters evaluate candidates on Active Directory Domain Services (AD DS) design, Group Policy Object (GPO) configuration, Role-Based Access Control (RBAC), and Single Sign-On (SSO) SAML integration.",
+    "deliverables": [
+      {
+        "title": "1. AD Organizational Unit & GPO Blueprint",
+        "desc": "Architectural blueprint detailing Organizational Unit (OU) structure, Group Policy enforcement, and domain trust relationships."
+      },
+      {
+        "title": "2. RBAC Privilege Matrix & Lifecycle Script",
+        "desc": "Privilege matrix and PowerShell script automating user onboarding, role-based group assignments, and offboarding deprovisioning."
+      },
+      {
+        "title": "3. Identity Audit & Access Review Log",
+        "desc": "Verification audit identifying inactive user accounts, stale passwords, and excessive domain admin privileges."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the principle of least privilege in identity management?",
+        "answer": "Least privilege ensures users and service accounts are granted only the minimum permissions necessary to perform their specific job responsibilities."
+      },
+      {
+        "question": "How does Group Policy Object (GPO) precedence work?",
+        "answer": "GPOs process in LSMOU order: Local policy, Site level, Domain level, and Organizational Unit (OU) level, where later processed policies override earlier ones unless enforced."
+      },
+      {
+        "question": "What is the difference between Active Directory DS and Entra ID?",
+        "answer": "Active Directory DS is an on-premise LDAP/Kerberos directory service, whereas Entra ID (Azure AD) is a cloud-native identity service using modern protocols like OAuth 2.0 and OpenID Connect."
+      }
+    ]
+  }
 }

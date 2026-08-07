@@ -8,5 +8,37 @@
     "License compliance",
     "Asset lifecycle",
     "Inventory management"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "IT Asset & Hardware Lifecycle Management",
+    "overviewBody": "IT Asset Management (ITAM) tracks hardware and software assets from procurement to secure disposal. IT managers evaluate candidates on inventory auditing, software license compliance, asset tracking databases, and secure data sanitization.",
+    "deliverables": [
+      {
+        "title": "1. IT Asset Lifecycle & Disposal Policy",
+        "desc": "Policy document establishing asset tagging, procurement workflows, hardware depreciation, and secure disposal guidelines."
+      },
+      {
+        "title": "2. Asset & License Inventory Database",
+        "desc": "Inventory database tracking laptop serial numbers, assigned users, software license keys, and warranty expiration dates."
+      },
+      {
+        "title": "3. NIST 800-88 Data Sanitization Log",
+        "desc": "Certificate of destruction log verifying full disk sanitization using NIST 800-88 compliant wiping tools before hardware disposal."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is NIST 800-88 data sanitization required before hardware disposal?",
+        "answer": "Simply formatting a drive leaves recoverable data. NIST 800-88 wiping overwrites drive sectors with pseudo-random data to prevent data leakage."
+      },
+      {
+        "question": "What is software license audit risk?",
+        "answer": "Using un-licensed software can lead to financial penalties from software vendors during compliance audits."
+      },
+      {
+        "question": "How does asset tagging improve hardware tracking?",
+        "answer": "Unique barcode/QR asset tags allow rapid physical inventory reconciliation during annual hardware audits."
+      }
+    ]
+  }
 }
