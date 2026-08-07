@@ -8,5 +8,37 @@
     "Prototyping",
     "Interaction flows",
     "Lo-fi design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Wireframing & Interactive Prototyping in Figma",
+    "overviewBody": "Prototypes bring product concepts to life before writing code. Hiring managers evaluate UI/UX designers on sketching low-fidelity wireframes, translating user flows into high-fidelity interactive Figma prototypes, component state variants, and realistic micro-interactions.",
+    "deliverables": [
+      {
+        "title": "1. Interactive Figma Prototype Link",
+        "desc": "Fully linked Figma prototype featuring clickable user flows, component state hover/active variants, and smooth transitions."
+      },
+      {
+        "title": "2. Low-to-High Fidelity Wireframe Evolution Deck",
+        "desc": "Design deck documenting layout iterations from initial paper sketches to finalized UI wireframes."
+      },
+      {
+        "title": "3. Prototype User Flow Documentation",
+        "desc": "Diagram mapping primary user task pathways, edge cases, and modal overlay behaviors."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between a wireframe and a prototype?",
+        "answer": "Wireframes are static, low-fidelity structural blueprints focused on layout and content hierarchy. Prototypes are interactive, high-fidelity simulations that demonstrate user interactions and dynamic behavior."
+      },
+      {
+        "question": "When should designers transition from low-fi to high-fi wireframes?",
+        "answer": "Transition to high-fidelity UI only after core layout, information hierarchy, and user task flows are validated on low-fidelity wireframes."
+      },
+      {
+        "question": "How do you structure overlay interactions in Figma prototypes?",
+        "answer": "Use Figma's 'Open Overlay' trigger set to 'Center' or 'Manual' positioning, with 'Close when clicking outside' enabled for clean modal testing."
+      }
+    ]
+  }
 }

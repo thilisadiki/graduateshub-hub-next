@@ -8,5 +8,37 @@
     "Heuristic evaluation",
     "Design critique",
     "Product prioritisation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "UX Audit & Heuristic Evaluation Teardown",
+    "overviewBody": "Heuristic evaluation identifies user experience bottlenecks in digital products. Product design leads assess candidates on conducting UX teardowns using Jakob Nielsen's 10 Usability Heuristics, assigning severity ratings (1 to 4), mapping user task friction, and creating actionable redesign recommendations.",
+    "deliverables": [
+      {
+        "title": "1. Heuristic UX Audit Presentation Deck",
+        "desc": "Visual teardown deck auditing a real digital product against Nielsen's 10 usability heuristics."
+      },
+      {
+        "title": "2. Friction Point & Severity Rating Matrix",
+        "desc": "Prioritized spreadsheet categorizing usability issues from 1 (Cosmetic) to 4 (Usability Catastrophe)."
+      },
+      {
+        "title": "3. Wireframed UX Redesign Recommendation Spec",
+        "desc": "Redesign proposal presenting low/high-fidelity wireframes resolving identified usability flaws."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are Jakob Nielsen's 10 Usability Heuristics?",
+        "answer": "A set of 10 general principles for interface design: Visibility of system status, Match between system and real world, User control and freedom, Consistency and standards, Error prevention, Recognition rather than recall, Flexibility and efficiency of use, Aesthetic and minimalist design, Help users recognize/recover from errors, and Documentation."
+      },
+      {
+        "question": "How do UX severity rating scales work?",
+        "answer": "Severity ratings rank usability issues: 0 (Not a problem), 1 (Cosmetic issue only), 2 (Minor usability problem), 3 (Major usability problem), and 4 (Usability catastrophe blocking task completion)."
+      },
+      {
+        "question": "Why is a UX audit valuable for product teams?",
+        "answer": "UX audits quickly uncover conversion blockers and usability bugs without requiring immediate expensive user testing campaigns."
+      }
+    ]
+  }
 }

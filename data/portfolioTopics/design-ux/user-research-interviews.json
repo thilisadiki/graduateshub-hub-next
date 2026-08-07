@@ -8,5 +8,37 @@
     "Affinity mapping",
     "Research synthesis",
     "Research operations"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "User Research & Semi-Structured Interview Protocols",
+    "overviewBody": "User research uncovers genuine customer needs, mental models, and pain points. Employers value UX researchers who design semi-structured interview scripts, conduct non-leading qualitative interviews, synthesize findings via affinity mapping, and build realistic user personas.",
+    "deliverables": [
+      {
+        "title": "1. User Research Plan & Interview Protocol Script",
+        "desc": "Research plan detailing objectives, target participant criteria, screening survey, and open-ended interview questions."
+      },
+      {
+        "title": "2. Synthesized Affinity Diagram & User Personas",
+        "desc": "Affinity map clustering interview insights into core themes alongside detailed user persona profiles."
+      },
+      {
+        "title": "3. User Insights & Feature Recommendation Brief",
+        "desc": "Executive brief translating qualitative user quotes into prioritized product feature recommendations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you avoid asking leading questions during user interviews?",
+        "answer": "Ask open-ended questions focused on past behavior (e.g. 'Tell me about the last time you tried to...') rather than hypothetical future questions (e.g. 'Would you use a feature that...')."
+      },
+      {
+        "question": "How many participants are needed for qualitative user research?",
+        "answer": "5 to 8 targeted participants per user segment typically uncover 80%+ of core usability issues and qualitative pain point themes."
+      },
+      {
+        "question": "What is an Affinity Diagram?",
+        "answer": "An affinity diagram is a synthesis method where qualitative notes, observations, and quotes are grouped into thematic clusters to reveal key patterns."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Micro-interactions",
     "Form design",
     "Motion design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Interaction Design & UI Micro-Animations",
+    "overviewBody": "Interaction design turns static screens into engaging, responsive user experiences. Designers demonstrate technical capability by crafting micro-interactions, configuring easing animation curves (200-300ms timing), designing interactive state feedback, and mapping gesture controls.",
+    "deliverables": [
+      {
+        "title": "1. Micro-Interaction Specification & Animation Specs",
+        "desc": "Spec document defining UI trigger events, animation durations (ms), easing curves (cubic-bezier), and spatial transformations."
+      },
+      {
+        "title": "2. Interactive Figma Prototype with Micro-Animations",
+        "desc": "Figma prototype demonstrating hover states, active press feedback, animated toggle switches, and page transition loaders."
+      },
+      {
+        "title": "3. UI Easing Curve & Feedback System Guide",
+        "desc": "Design guide establishing standard timing parameters and feedback states for interactive components."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the ideal duration for UI micro-interactions?",
+        "answer": "UI micro-interactions should last between 200ms and 300ms. Anything faster feels abrupt; anything slower than 400ms feels sluggish."
+      },
+      {
+        "question": "Why are easing curves (ease-in-out) used in UI animation instead of linear movement?",
+        "answer": "Physical objects in the real world accelerate and decelerate naturally. Linear animations feel robotic and unnatural to the human eye."
+      },
+      {
+        "question": "What is a feedback loop in interaction design?",
+        "answer": "A feedback loop provides instant visual, audio, or haptic confirmation that the system received a user input (e.g. a button changing state when pressed)."
+      }
+    ]
+  }
 }

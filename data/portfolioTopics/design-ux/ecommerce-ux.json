@@ -8,5 +8,37 @@
     "Checkout optimization",
     "Form design",
     "Friction reduction"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "E-Commerce UX & Checkout Flow Optimization",
+    "overviewBody": "E-commerce UX directly drives digital revenue by eliminating buying friction. Growth designers demonstrate impact by optimizing Product Detail Pages (PDP), designing slide-out cart drawers, streamlining guest checkout flows, and placing trust signals effectively.",
+    "deliverables": [
+      {
+        "title": "1. E-Commerce PDP & Checkout UX Redesign Spec",
+        "desc": "High-fidelity redesign of a Product Detail Page (PDP) and streamlined 3-step checkout flow."
+      },
+      {
+        "title": "2. Guest Checkout Friction Audit Report",
+        "desc": "Friction report identifying forced account creation roadblocks, hidden shipping costs, and field validation issues."
+      },
+      {
+        "title": "3. Mobile Shopping Experience Wireframes",
+        "desc": "Mobile-first e-commerce wireframes featuring sticky add-to-cart bars and one-click express checkout options."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is forced account creation a primary cause of cart abandonment?",
+        "answer": "Forcing users to register before purchasing adds unnecessary cognitive friction; offering a seamless Guest Checkout option increases conversion rates dramatically."
+      },
+      {
+        "question": "What essential elements belong on an effective Product Detail Page (PDP)?",
+        "answer": "High-res image gallery, clear product title, pricing, stock availability, customer ratings/reviews, variant selectors, sticky Add-to-Cart CTA, and delivery/returns info."
+      },
+      {
+        "question": "Where should trust signals be placed during checkout?",
+        "answer": "Display security trust badges (SSL certificates, secure payment logos) directly adjacent to credit card input fields and the final 'Pay Now' button."
+      }
+    ]
+  }
 }

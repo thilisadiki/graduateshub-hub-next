@@ -8,5 +8,37 @@
     "UI layout",
     "Colour theory",
     "Responsive design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "UI Visual Design & 8pt Spatial Grid Systems",
+    "overviewBody": "Visual design creates aesthetically captivating, functional digital interfaces. Design leads evaluate candidates on applying 8pt spatial grid systems, establishing clear typographic scales, balancing visual contrast and hierarchy, and crafting responsive UI layouts.",
+    "deliverables": [
+      {
+        "title": "1. Pixel-Perfect High-Fidelity Desktop & Mobile UI Designs",
+        "desc": "Polished Figma screens featuring consistent spatial padding, harmonious color palettes, and clear visual hierarchy."
+      },
+      {
+        "title": "2. Visual Hierarchy & 8pt Spatial Grid Specification",
+        "desc": "Specification document detailing layout grid rules (8pt/4pt increment grid), layout columns, and margin gutters."
+      },
+      {
+        "title": "3. Typography Scale & Color Style System",
+        "desc": "Style guide establishing modular font scale hierarchies and accessible semantic color systems."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is the 8pt Spatial Grid System the industry standard in UI design?",
+        "answer": "8 divides evenly across almost all modern screen resolutions (1920x1080, 1440x900, 375x812), preventing fractional pixel rendering bugs and maintaining clean spatial alignment."
+      },
+      {
+        "question": "How do you establish clear visual hierarchy on a dense UI screen?",
+        "answer": "Vary font sizes, weight contrast (bold vs regular), spatial margins, and color intensity to guide the user's eye naturally to the primary CTA."
+      },
+      {
+        "question": "What is the 60-30-10 color rule in UI design?",
+        "answer": "60% dominant neutral background color, 30% secondary brand structure color, and 10% vivid accent color reserved exclusively for primary interactive CTAs."
+      }
+    ]
+  }
 }

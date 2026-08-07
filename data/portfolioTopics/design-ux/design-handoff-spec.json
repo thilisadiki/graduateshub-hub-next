@@ -8,5 +8,37 @@
     "Redlining specs",
     "Design system alignment",
     "CSS layout collaboration"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Design Handoff & Developer Redline Specifications",
+    "overviewBody": "Design handoff bridges the gap between design vision and technical production code. Senior UI designers prove readiness by organizing Figma files, producing detailed redline annotations, exporting clean assets (SVG/WebP), mapping design tokens, and performing design QA reviews.",
+    "deliverables": [
+      {
+        "title": "1. Comprehensive Design Handoff Document & Specs",
+        "desc": "Developer-ready Figma handoff file featuring redline spatial measurements, responsive behavior notes, and component token mappings."
+      },
+      {
+        "title": "2. Asset Export & Developer Token Library",
+        "desc": "Clean export package of optimized SVG icons, WebP imagery, and JSON design token definitions."
+      },
+      {
+        "title": "3. Design QA Audit Checklist",
+        "desc": "Design QA checklist for reviewing staging builds against original Figma design specifications."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How should Figma files be organized for seamless developer handoff?",
+        "answer": "Separate files into Cover, User Flows, Dev-Ready Screens, and Archive pages. Clearly label component states, auto-layout properties, and token variables."
+      },
+      {
+        "question": "What are redline annotations in design handoffs?",
+        "answer": "Redline annotations explicitly document padding, margin spacing, font sizes, line heights, component states, and responsive breakpoint rules for developers."
+      },
+      {
+        "question": "What is Design QA?",
+        "answer": "Design QA is the process where designers inspect front-end staging builds to verify that visual styling, layout spacing, fonts, and micro-interactions accurately match original design specs before release."
+      }
+    ]
+  }
 }

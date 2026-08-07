@@ -8,5 +8,37 @@
     "Sitemap design",
     "Navigation design",
     "Taxonomy"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Information Architecture (IA), Card Sorting & Sitemap Design",
+    "overviewBody": "Information Architecture (IA) structures digital content so users can find information intuitively. Product designers demonstrate IA expertise by conducting card sorting research, performing tree testing, mapping sitemap hierarchies, and designing navigation systems.",
+    "deliverables": [
+      {
+        "title": "1. Comprehensive Sitemap & IA Blueprint",
+        "desc": "Sitemap diagram mapping page nodes, parent-child navigation hierarchies, and content taxonomy."
+      },
+      {
+        "title": "2. Card Sorting & Tree Testing Analysis Report",
+        "desc": "Research report analyzing Open/Closed card sort results and tree test task success rates."
+      },
+      {
+        "title": "3. Navigation System & Taxonomy Redesign Spec",
+        "desc": "Redesign proposal defining primary, secondary, and utility navigation menus across breakpoint sizes."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Open and Closed Card Sorting?",
+        "answer": "In Open Card Sorting, participants group content cards into categories they create and label themselves. In Closed Card Sorting, participants sort cards into pre-established category buckets."
+      },
+      {
+        "question": "What is Tree Testing in Information Architecture?",
+        "answer": "Tree testing evaluates the findability of topics in a text-only site structure, testing navigation hierarchy without visual UI distractions."
+      },
+      {
+        "question": "What is the difference between flat and deep sitemap architectures?",
+        "answer": "Flat architectures have few vertical levels requiring fewer clicks to reach content. Deep architectures have many nested sub-categories, which can bury information."
+      }
+    ]
+  }
 }

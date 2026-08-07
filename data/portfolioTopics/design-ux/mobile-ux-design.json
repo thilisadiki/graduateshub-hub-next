@@ -8,5 +8,37 @@
     "iOS/Android guidelines",
     "Mobile patterns",
     "Touch target optimisation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Mobile UX Design (iOS HIG & Android Material 3)",
+    "overviewBody": "Mobile UX design accounts for touch ergonomics, limited screen real estate, and platform conventions. Product designers prove readiness by designing mobile-first layouts, adhering to Apple HIG vs Android Material 3 guidelines, and optimizing for thumb-zone accessibility.",
+    "deliverables": [
+      {
+        "title": "1. iOS & Android Mobile App UI Design Deck",
+        "desc": "Mobile app screen designs tailored to platform conventions (iOS navigation bars vs Android bottom navigation)."
+      },
+      {
+        "title": "2. Thumb Zone Ergonomics & Navigation Audit",
+        "desc": "Ergonomic audit mapping key interactive UI elements within natural thumb reach zones."
+      },
+      {
+        "title": "3. Mobile Touch Target & Gesture Specification",
+        "desc": "Specification establishing minimum 44x44pt touch targets, pull-to-refresh gestures, and swipe actions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the primary differences between iOS HIG and Android Material 3?",
+        "answer": "iOS uses centered navigation titles, back chevrons, and SF Pro typography. Android Material 3 uses left-aligned titles, floating action buttons (FAB), Material icons, and Roboto/Variable typography."
+      },
+      {
+        "question": "What is the Mobile Thumb Zone?",
+        "answer": "The natural arc an adult thumb can easily reach while holding a smartphone with one hand; critical primary CTAs should be placed in the bottom center natural reach zone."
+      },
+      {
+        "question": "What is the minimum recommended touch target size for mobile UI?",
+        "answer": "Apple HIG recommends a minimum touch target size of 44x44 points; Android Material Design recommends 48x48 dp."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Microcopy",
     "Voice & tone",
     "Content design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "UX Writing & Product Content Design",
+    "overviewBody": "UX writing guides users through interfaces using clear, concise microcopy. Content designers demonstrate skills by writing intuitive onboarding copy, helpful error messages that guide recovery, informative empty states, tooltips, and consistent UI button copy.",
+    "deliverables": [
+      {
+        "title": "1. Comprehensive UX Copy Matrix",
+        "desc": "Spreadsheet matrix documenting microcopy strings across modals, button CTAs, tooltips, error alerts, and empty states."
+      },
+      {
+        "title": "2. Product Onboarding Microcopy Specification",
+        "desc": "Onboarding flow copy deck guiding new users through feature discovery with conversational, concise microcopy."
+      },
+      {
+        "title": "3. Tone of Voice UI Guidelines",
+        "desc": "Content guidelines defining brand tone of voice across product states (encouraging in success states vs clear/calm in error states)."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What makes an effective error message in UI design?",
+        "answer": "An effective error message clearly explains what went wrong without technical jargon, reassures the user, and provides immediate actionable steps to resolve it."
+      },
+      {
+        "question": "What is an Empty State in product design?",
+        "answer": "An empty state is a screen shown when there is no data to display (e.g. empty inbox, no search results); it should educate the user and provide a clear call to action to populate content."
+      },
+      {
+        "question": "How does UX writing differ from traditional copywriting?",
+        "answer": "Traditional marketing copywriting aims to persuade and entice. UX writing aims to guide, clarify, and help users complete tasks seamlessly inside a digital product."
+      }
+    ]
+  }
 }

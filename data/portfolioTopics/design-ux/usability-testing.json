@@ -8,5 +8,37 @@
     "Test planning",
     "Result analysis",
     "Task design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Usability Testing & User Task Protocols",
+    "overviewBody": "Usability testing validates whether real users can accomplish tasks efficiently in an interface. UX leads assess designers on creating unmoderated/moderated usability test plans, measuring task completion rates, logging user errors, and calculating System Usability Scale (SUS) scores.",
+    "deliverables": [
+      {
+        "title": "1. Usability Test Protocol & Task Scenarios Document",
+        "desc": "Testing plan outlining realistic user task scenarios, success criteria, and post-task questionnaire scripts."
+      },
+      {
+        "title": "2. Video Session Observation & Error Log",
+        "desc": "Session log documenting user task completion rates, time-on-task metrics, misclicks, and verbalized frustrations."
+      },
+      {
+        "title": "3. System Usability Scale (SUS) Benchmark Report",
+        "desc": "Quantitative report computing SUS survey scores (0-100) and outlining UX remediation priorities."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is the System Usability Scale (SUS) score calculated?",
+        "answer": "SUS uses a 10-item Likert scale survey. Individual item scores (0-4) are summed and multiplied by 2.5 to yield a normalized usability benchmark score from 0 to 100."
+      },
+      {
+        "question": "What is an acceptable System Usability Scale (SUS) benchmark score?",
+        "answer": "An SUS score above 68 is considered average; scores above 80 indicate excellent usability."
+      },
+      {
+        "question": "What is the difference between moderated and unmoderated usability testing?",
+        "answer": "Moderated testing has a live facilitator guiding the participant in real time. Unmoderated testing allows users to complete tasks independently via automated platforms (like Maze or UserTesting)."
+      }
+    ]
+  }
 }

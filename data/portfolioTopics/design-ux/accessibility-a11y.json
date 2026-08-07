@@ -8,5 +8,37 @@
     "Keyboard navigation",
     "Screen reader support",
     "Inclusive design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Accessibility (a11y) & WCAG 2.1 Compliance Guidelines",
+    "overviewBody": "Accessible design guarantees that digital products are usable by people of all abilities. UX leads test candidates on Web Content Accessibility Guidelines (WCAG 2.1 AA), color contrast ratios, focus indicator states, screen reader ARIA labels, and keyboard navigation.",
+    "deliverables": [
+      {
+        "title": "1. WCAG 2.1 AA Accessibility Audit Report",
+        "desc": "Comprehensive accessibility audit analyzing color contrast ratios, screen reader compatibility, and touch target sizes."
+      },
+      {
+        "title": "2. Accessible UI Component Redesign",
+        "desc": "Redesigned UI components featuring 4.5:1 text contrast ratios, visible keyboard focus rings, and high-contrast color palettes."
+      },
+      {
+        "title": "3. Screen Reader & Keyboard Navigation Test Log",
+        "desc": "Testing log documenting keyboard tab ordering, skip link functionality, and ARIA label correctness."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the minimum WCAG 2.1 AA color contrast requirements?",
+        "answer": "WCAG 2.1 AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text (18pt+) and essential UI graphical components."
+      },
+      {
+        "question": "Why are visible focus indicators mandatory for keyboard accessibility?",
+        "answer": "Focus indicators (like high-contrast outlines) allow keyboard users tabbing through a page to identify which interactive element currently has focus."
+      },
+      {
+        "question": "What is the difference between Alt Text and ARIA Labels?",
+        "answer": "Alt text describes non-text image content to screen readers. ARIA labels provide accessible names or context for interactive UI controls (like icon buttons without visible text)."
+      }
+    ]
+  }
 }

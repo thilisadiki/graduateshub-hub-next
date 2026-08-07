@@ -8,5 +8,37 @@
     "Design tokens",
     "Style guides",
     "Consistency auditing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Design Systems & UI Token Libraries (Figma)",
+    "overviewBody": "Design systems ensure visual consistency and development speed across multi-product teams. Senior product designers evaluate candidates on defining design tokens (colors, typography, spacing, shadows), applying Atomic Design principles, and building reusable Figma component libraries.",
+    "deliverables": [
+      {
+        "title": "1. Figma Design System Library File",
+        "desc": "Figma UI library containing design tokens, auto-layout components, auto-updating typography styles, and dark mode variants."
+      },
+      {
+        "title": "2. Design Token & Component Guidelines Document",
+        "desc": "Documentation detailing component usage guidelines, accessibility rules, and spatial grid standards."
+      },
+      {
+        "title": "3. Component State & Variant Specification",
+        "desc": "Component library spec illustrating default, hover, focus, active, disabled, and loading states."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Atomic Design methodology?",
+        "answer": "Atomic Design organizes UI interfaces into 5 distinct levels: Atoms (basic tags/buttons), Molecules (search bars), Organisms (headers), Templates (layouts), and Pages (final UI screens)."
+      },
+      {
+        "question": "What are design tokens in a design system?",
+        "answer": "Design tokens are named sub-atomic values (e.g. color-primary-500: #0066CC, spacing-md: 16px) that store visual design decisions in code-ready formats."
+      },
+      {
+        "question": "How do component variants streamline design in Figma?",
+        "answer": "Variants combine related component states (e.g. primary button vs disabled button) into a single master component container with customizable properties."
+      }
+    ]
+  }
 }
