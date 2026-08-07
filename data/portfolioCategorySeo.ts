@@ -513,6 +513,7 @@ export const portfolioCategorySeoData: Record<string, PortfolioCategorySeo> = {
 };
 
 export function getPortfolioCategorySeo(id: string): PortfolioCategorySeo | undefined {
+  if (id === 'it') return portfolioCategorySeoData['information-technology'];
   if (id === 'data-analysis') return portfolioCategorySeoData['data'];
   return portfolioCategorySeoData[id];
 }

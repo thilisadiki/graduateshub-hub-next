@@ -39,9 +39,11 @@ function loadTopicsFromDir(categoryDirName: string): PortfolioTopic[] {
 export const portfolioTopics: PortfolioTopic[] = CATEGORY_DIRS.flatMap(loadTopicsFromDir);
 
 export function getTopicById(categoryId: string, topicId: string): PortfolioTopic | undefined {
-  return portfolioTopics.find((t) => t.categoryId === categoryId && t.id === topicId);
+  const targetCategory = categoryId === 'it' ? 'information-technology' : categoryId === 'data-analysis' ? 'data' : categoryId;
+  return portfolioTopics.find((t) => (t.categoryId === targetCategory || t.categoryId === categoryId) && t.id === topicId);
 }
 
 export function getTopicsByCategory(categoryId: string): PortfolioTopic[] {
-  return portfolioTopics.filter((t) => t.categoryId === categoryId);
+  const targetCategory = categoryId === 'it' ? 'information-technology' : categoryId === 'data-analysis' ? 'data' : categoryId;
+  return portfolioTopics.filter((t) => t.categoryId === targetCategory || t.categoryId === categoryId);
 }

@@ -12,7 +12,7 @@ const FINANCE_ACCOUNTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/fin
 const DESIGN_UX_DIR = path.join(process.cwd(), 'data/portfolioTasks/design-ux');
 const BUSINESS_ANALYSIS_DIR = path.join(process.cwd(), 'data/portfolioTasks/business-analysis');
 const CUSTOMER_OPS_DIR = path.join(process.cwd(), 'data/portfolioTasks/customer-ops');
-const IT_DIR = path.join(process.cwd(), 'data/portfolioTasks/it');
+const IT_DIR = path.join(process.cwd(), 'data/portfolioTasks/information-technology');
 const AI_PROMPTING_DIR = path.join(process.cwd(), 'data/portfolioTasks/ai-prompting');
 
 function loadWebDevTasks(): PortfolioTask[] {
@@ -227,13 +227,15 @@ export function getTaskByLocation(
   topicId: string,
   level: PortfolioLevel,
 ): PortfolioTask | undefined {
+  const targetCategory = categoryId === 'it' ? 'information-technology' : categoryId === 'data-analysis' ? 'data' : categoryId;
   return portfolioTasks.find(
-    (t) => t.categoryId === categoryId && t.topicId === topicId && t.level === level,
+    (t) => (t.categoryId === targetCategory || t.categoryId === categoryId) && t.topicId === topicId && t.level === level,
   );
 }
 
 export function getTasksByTopic(categoryId: string, topicId: string): PortfolioTask[] {
-  return portfolioTasks.filter((t) => t.categoryId === categoryId && t.topicId === topicId);
+  const targetCategory = categoryId === 'it' ? 'information-technology' : categoryId === 'data-analysis' ? 'data' : categoryId;
+  return portfolioTasks.filter((t) => (t.categoryId === targetCategory || t.categoryId === categoryId) && t.topicId === topicId);
 }
 
 export function getTaskUrl(task: PortfolioTask): string {

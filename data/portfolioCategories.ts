@@ -94,5 +94,7 @@ export const portfolioCategories: PortfolioCategory[] = [
 ];
 
 export function getCategoryById(id: string): PortfolioCategory | undefined {
+  if (id === 'it') return portfolioCategories.find((c) => c.id === 'information-technology');
+  if (id === 'data-analysis') return portfolioCategories.find((c) => c.id === 'data');
   return portfolioCategories.find((c) => c.id === id);
 }
