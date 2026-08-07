@@ -172,4 +172,28 @@ export const popularGuides: GuideLink[] = [
     desc: 'Figma prototyping, user research, wireframing, WCAG accessibility, and UX portfolio.',
     badge: 'Google UX',
   },
+  {
+    href: '/microsoft-azure-fundamentals-course-guide',
+    title: 'Microsoft Azure Fundamentals Guide',
+    desc: 'AZ-900 cloud concepts, Azure VMs, Blob storage, VNets, and free sandbox labs.',
+    badge: 'Microsoft Azure',
+  },
+  {
+    href: '/microsoft-power-bi-data-analyst-guide',
+    title: 'Microsoft Power BI Data Analyst Guide',
+    desc: 'PL-300 Power Query ETL, STAR schema modeling, DAX measures, and RLS dashboards.',
+    badge: 'Microsoft Power BI',
+  },
+  {
+    href: '/microsoft-ai-fundamentals-course-guide',
+    title: 'Microsoft Azure AI Fundamentals Guide',
+    desc: 'AI-900 Generative AI, Azure OpenAI, Microsoft Copilot Studio, and Responsible AI.',
+    badge: 'Microsoft AI',
+  },
+  {
+    href: '/microsoft-365-fundamentals-course-guide',
+    title: 'Microsoft 365 Fundamentals Guide',
+    desc: 'MS-900 Entra ID provisioning, Exchange Online, SharePoint permissions, and MFA.',
+    badge: 'Microsoft 365',
+  },
 ];
