@@ -8,5 +8,37 @@
     "Balance sheets",
     "Financial reporting",
     "Trial balance"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Financial Statement Preparation & Reporting under IFRS for SMEs",
+    "overviewBody": "Preparing accurate financial statements is essential for statutory compliance and investor confidence. Financial accountants demonstrate expertise in drafting full sets of financial statements under IFRS for SMEs: Balance Sheet, Income Statement, Cash Flows, Equity Changes, and Disclosure Notes.",
+    "deliverables": [
+      {
+        "title": "1. IFRS-Compliant Financial Statement Model",
+        "desc": "Integrated Excel financial statement model (.xlsx) producing fully linked Balance Sheet, P&L, and Cash Flow statements."
+      },
+      {
+        "title": "2. Accounting Policies & Disclosure Notes Document",
+        "desc": "Statutory notes detailing significant accounting policies, revenue recognition rules, and asset depreciation schedules."
+      },
+      {
+        "title": "3. Trial Balance Audit Reconciliation Sheet",
+        "desc": "Year-end trial balance working papers linking general ledger accounts to final financial statement line items."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the main differences between Full IFRS and IFRS for SMEs?",
+        "answer": "IFRS for SMEs simplifies measurement rules, eliminates non-relevant accounting topics (like earnings per share and segment reporting), and significantly reduces mandatory disclosure note requirements."
+      },
+      {
+        "question": "How is revenue recognized under IFRS accounting standards?",
+        "answer": "Revenue is recognized when control of goods or services is transferred to the customer in an amount reflecting the expected consideration."
+      },
+      {
+        "question": "How are Property, Plant, and Equipment (PPE) accounted for under IAS 16 / Section 17?",
+        "answer": "PPE is initially recorded at cost, then systematically depreciated over its estimated useful life down to its residual value."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Credit thinking",
     "Business writing",
     "Financial judgment"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Financial Ratio Analysis & Business Performance Benchmarking",
+    "overviewBody": "Financial ratios evaluate a company's financial health, operational efficiency, and profitability trends. Financial analysts use liquidity ratios (Current/Quick), solvency metrics (Debt-to-Equity, Interest Coverage), efficiency numbers (Inventory Turnover), and DuPont ROE breakdowns to assess credit risk.",
+    "deliverables": [
+      {
+        "title": "1. Financial Ratio Diagnostic & Benchmarking Spreadsheet",
+        "desc": "Comprehensive spreadsheet workbook computing multi-year liquidity, solvency, activity, and profitability ratios."
+      },
+      {
+        "title": "2. Executive Financial Health Analysis Memo",
+        "desc": "Analytical memo evaluating financial strengths, balance sheet vulnerabilities, and industry peer benchmark comparisons."
+      },
+      {
+        "title": "3. DuPont 3-Step ROE Decomposition Model",
+        "desc": "DuPont model breaking Return on Equity into Net Profit Margin, Asset Turnover, and Financial Leverage components."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does a DuPont 3-Step ROE breakdown reveal?",
+        "answer": "DuPont analysis breaks ROE into Profitability (Net Margin), Operational Efficiency (Asset Turnover), and Financial Leverage (Equity Multiplier) to pinpoint exact return drivers."
+      },
+      {
+        "question": "What is a healthy Current Ratio benchmark?",
+        "answer": "A Current Ratio between 1.5 and 2.0 is generally considered healthy, indicating sufficient short-term assets to cover immediate liabilities without excess idle capital."
+      },
+      {
+        "question": "Why is the Quick Ratio (Acid-Test) more conservative than the Current Ratio?",
+        "answer": "The Quick Ratio excludes inventory from current assets because inventory cannot be converted into cash immediately during liquidity crises."
+      }
+    ]
+  }
 }

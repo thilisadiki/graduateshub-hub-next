@@ -9,5 +9,37 @@
     "Drafting Notice of Objection (NOO)",
     "Supporting document compilation",
     "Legal/tax writing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "SARS Tax Dispute Resolution & Objections (Tax Administration Act)",
+    "overviewBody": "Tax dispute resolution manages disagreements with the South African Revenue Service (SARS) under the Tax Administration Act (TAA). Tax practitioners demonstrate capability by drafting Requests for Reasons (RFR), Notice of Objections (ADR1), Appeals (ADR2), and Section 164 Suspension of Payment requests.",
+    "deliverables": [
+      {
+        "title": "1. SARS Notice of Objection Submission (ADR1)",
+        "desc": "Formal legal objection document detailing SARS audit assessment grounds, factual background, and legal merit."
+      },
+      {
+        "title": "2. TAA Section 164 Suspension of Payment Application",
+        "desc": "Formal application requesting SARS to suspend tax payment collection pending dispute resolution."
+      },
+      {
+        "title": "3. SARS Dispute Timeline & Status Log",
+        "desc": "Statutory tracking log monitoring SARS 21-day and 60-day response deadlines under TAA dispute rules."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the deadline for submitting a SARS Notice of Objection under the TAA?",
+        "answer": "An objection must be submitted within 80 business days after the date of the assessment or SARS Request for Reasons response."
+      },
+      {
+        "question": "What is the 'pay now, argue later' rule under SARS Section 164?",
+        "answer": "Under TAA Section 164, an obligation to pay tax is NOT automatically suspended by an objection. Taxpayers must submit a formal Suspension of Payment application."
+      },
+      {
+        "question": "What is the difference between a Request for Reasons and a Notice of Objection?",
+        "answer": "A Request for Reasons asks SARS to provide missing grounds for an assessment when reasons are unclear. A Notice of Objection formally disputes an assessment based on known facts and tax law."
+      }
+    ]
+  }
 }

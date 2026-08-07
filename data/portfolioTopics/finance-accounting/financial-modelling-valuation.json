@@ -8,5 +8,37 @@
     "DCF valuation",
     "Revenue forecasting",
     "Three-statement models"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Financial Modeling & DCF Company Valuation",
+    "overviewBody": "Financial modeling translates business strategies into dynamic financial projections. Investment analysts and corporate finance professionals demonstrate expertise by constructing 3-statement integrated models, calculating WACC, running DCF valuations, and building sensitivity tables.",
+    "deliverables": [
+      {
+        "title": "1. Integrated 3-Statement & DCF Valuation Model",
+        "desc": "Dynamic 3-statement financial model (.xlsx) featuring historical data, 5-year projections, and Discounted Cash Flow valuation."
+      },
+      {
+        "title": "2. Weighted Average Cost of Capital (WACC) Calculation Sheet",
+        "desc": "Cost of Capital model calculating Cost of Equity (CAPM), Cost of Debt, and target capital structure weightings."
+      },
+      {
+        "title": "3. Sensitivity & Scenario Analysis Matrix",
+        "desc": "2-way Excel data tables analyzing valuation changes based on discount rates and terminal growth rate assumptions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you calculate Free Cash Flow to Firm (FCFF)?",
+        "answer": "FCFF = EBIT * (1 - Tax Rate) + Depreciation & Amortization - Capital Expenditures - Change in Net Working Capital."
+      },
+      {
+        "question": "What is the Gordon Growth Model for Terminal Value?",
+        "answer": "Terminal Value = (Final Year FCFF * (1 + g)) / (WACC - g), where g is the perpetual long-term growth rate."
+      },
+      {
+        "question": "How do you calculate WACC?",
+        "answer": "WACC = (E/V * Cost of Equity) + (D/V * Cost of Debt * (1 - Corporate Tax Rate))."
+      }
+    ]
+  }
 }

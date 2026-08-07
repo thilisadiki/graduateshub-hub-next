@@ -8,5 +8,37 @@
     "PAYE",
     "Provisional tax",
     "SARS compliance"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "South African Corporate Income Tax Compliance (ITR14 & VAT201)",
+    "overviewBody": "Tax compliance ensures business entities meet South African Revenue Service (SARS) obligations while optimizing allowable tax deductions. Tax specialists prove competence by preparing Corporate Income Tax (ITR14) computations, Section 11(a) general deduction reviews, and VAT201 reconciliations.",
+    "deliverables": [
+      {
+        "title": "1. Corporate Income Tax Computation & ITR14 Workings",
+        "desc": "Tax calculation spreadsheet converting financial accounting profit to taxable income with Section 11 tax adjustment schedules."
+      },
+      {
+        "title": "2. Output vs Input VAT Reconciliation Sheet",
+        "desc": "Monthly VAT201 reconciliation matching general ledger tax accounts against SARS eFiling returns."
+      },
+      {
+        "title": "3. SARS Tax Compliance Audit & Risk Report",
+        "desc": "Compliance audit report evaluating provisional tax payment accuracy (IRP6) and tax clearance requirements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the core requirements of the Section 11(a) General Deduction Formula?",
+        "answer": "To be deductible under Section 11(a), expenditure must be actually incurred during the tax year, in the production of income, and not of a capital nature."
+      },
+      {
+        "question": "What documents are required to support an Input VAT claim in South Africa?",
+        "answer": "Valid tax invoices containing the seller and buyer's registered name, address, VAT registration numbers, invoice date, sequential number, and explicit VAT amount."
+      },
+      {
+        "question": "How are 1st and 2nd Provisional Tax (IRP6) payments calculated?",
+        "answer": "1st provisional tax (6 months in) is based on estimated basic taxable income. 2nd provisional tax (end of tax year) requires an accurate estimate of full-year taxable income to avoid SARS under-estimation penalties."
+      }
+    ]
+  }
 }

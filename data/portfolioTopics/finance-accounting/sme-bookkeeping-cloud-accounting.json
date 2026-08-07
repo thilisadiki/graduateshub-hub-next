@@ -9,5 +9,37 @@
     "Double-entry bookkeeping",
     "SME financial reporting",
     "Journal adjustments"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "SME Bookkeeping & Cloud Accounting (Xero / Sage / QuickBooks)",
+    "overviewBody": "Cloud accounting platforms streamline financial record-keeping for growing small businesses. Bookkeepers and junior accountants prove value by establishing Chart of Accounts structures, reconciling automated bank feeds, managing invoicing, and producing monthly management accounts.",
+    "deliverables": [
+      {
+        "title": "1. Cloud Accounting Setup & Chart of Accounts Spec",
+        "desc": "System setup blueprint establishing general ledger account codes, tax settings, and tracking categories."
+      },
+      {
+        "title": "2. Bank Feed Reconciliation & Trial Balance Export",
+        "desc": "Reconciliation working paper confirming zero unreconciled bank transactions and verified trial balance balances."
+      },
+      {
+        "title": "3. Monthly SME Management Accounts Deck",
+        "desc": "Professional management pack featuring Income Statement, Balance Sheet, Aged Receivables, and Cash Summary."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How should a Chart of Accounts be structured for an SME?",
+        "answer": "Organize accounts logically into Assets (1000s), Liabilities (2000s), Equity (3000s), Revenue (4000s), and Expenses (5000s+) with consistent numbering."
+      },
+      {
+        "question": "What is the difference between Cash-Basis and Accrual-Basis accounting?",
+        "answer": "Cash-basis records transactions only when cash moves. Accrual-basis records revenue when earned and expenses when incurred, regardless of cash timing."
+      },
+      {
+        "question": "How do you handle unreconciled items in bank reconciliations?",
+        "answer": "Investigate un-matched transactions against supplier invoices or bank statements, clearing duplicate entries or posting adjusting journal entries."
+      }
+    ]
+  }
 }

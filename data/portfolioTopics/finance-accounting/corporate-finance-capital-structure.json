@@ -9,5 +9,37 @@
     "Debt vs. equity financing",
     "Corporate valuation",
     "Scenario modeling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Corporate Finance & Capital Structure Optimization",
+    "overviewBody": "Capital structure decisions determine how a business finances its growth through debt and equity. Corporate finance specialists prove competence by modeling WACC, evaluating financial leverage, analyzing debt covenant metrics, and assessing Modigliani-Miller capital trade-offs.",
+    "deliverables": [
+      {
+        "title": "1. Capital Structure & WACC Optimization Model",
+        "desc": "Financial model (.xlsx) evaluating overall cost of capital across varying debt-to-equity ratio scenarios."
+      },
+      {
+        "title": "2. Debt Refinancing & Capital Cost Memo",
+        "desc": "Executive memo evaluating corporate bond issuance versus bank debt covenants and equity dilution."
+      },
+      {
+        "title": "3. Financial Leverage & Interest Coverage Report",
+        "desc": "Risk report analyzing Debt-to-EBITDA and Interest Coverage ratios under stress-tested EBITDA decline scenarios."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Capital Asset Pricing Model (CAPM) formula for Cost of Equity?",
+        "answer": "Cost of Equity (Ke) = Risk-Free Rate (Rf) + Beta * (Market Risk Premium)."
+      },
+      {
+        "question": "What is the Trade-Off Theory of Capital Structure?",
+        "answer": "Trade-off theory states that companies balance the tax benefit of debt (interest tax shields) against the increased costs of financial distress."
+      },
+      {
+        "question": "What is an Interest Coverage Ratio?",
+        "answer": "Interest Coverage = EBIT / Interest Expense. Higher ratios indicate a safer buffer for servicing debt obligations."
+      }
+    ]
+  }
 }

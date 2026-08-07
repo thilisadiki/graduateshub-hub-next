@@ -8,5 +8,37 @@
     "Financial forecasting",
     "SME finance",
     "Financial storytelling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "13-Week Direct Cash Flow Forecasting & Working Capital Management",
+    "overviewBody": "Cash flow management is the lifeline of corporate and SME operations. Financial analysts demonstrate value by building 13-week direct cash flow models, optimizing working capital timing (Accounts Receivable DSO vs Accounts Payable DPO), and evaluating cash runway under revenue sensitivity scenarios.",
+    "deliverables": [
+      {
+        "title": "1. 13-Week Direct Cash Flow Forecast Model",
+        "desc": "Dynamic Excel forecast model (.xlsx) projecting weekly cash inflows, payroll, vendor disbursements, and net cash balances."
+      },
+      {
+        "title": "2. Working Capital & Liquidity Audit Memo",
+        "desc": "Executive memo analyzing Days Sales Outstanding (DSO), inventory holding periods, and vendor payment term negotiations."
+      },
+      {
+        "title": "3. Cash Runway & Sensitivity Scenario Report",
+        "desc": "Sensitivity analysis detailing cash runway durations under best-case, base-case, and downside revenue contraction scenarios."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Direct and Indirect cash flow forecasting?",
+        "answer": "Direct cash flow forecasting tracks actual cash receipts from customers and cash payments to suppliers weekly. Indirect forecasting starts with net income and adjusts for non-cash expenses and working capital changes."
+      },
+      {
+        "question": "How do you calculate Days Sales Outstanding (DSO)?",
+        "answer": "DSO = (Accounts Receivable / Total Credit Sales) * Number of Days. Lower DSO indicates faster cash collection from customers."
+      },
+      {
+        "question": "How do you manage cash flow timing mismatches in South African SMEs?",
+        "answer": "Implement strict 30-day credit terms, offer early settlement discounts, request upfront customer deposits, and negotiate aligned payment terms with key suppliers."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Cost allocation",
     "Activity-based costing",
     "Decision analysis"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Management Accounting, Activity-Based Costing & CVP Analysis",
+    "overviewBody": "Management accounting provides internal cost insights to optimize product pricing and profitability. Cost accountants demonstrate skills by applying Activity-Based Costing (ABC), Marginal Costing, Break-Even Cost-Volume-Profit (CVP) analysis, and Contribution Margins.",
+    "deliverables": [
+      {
+        "title": "1. Activity-Based Costing (ABC) Model",
+        "desc": "Cost allocation model (.xlsx) tracing indirect overhead costs to activity cost pools and product lines."
+      },
+      {
+        "title": "2. Break-Even & CVP Sensitivity Calculator",
+        "desc": "CVP spreadsheet calculating fixed costs, variable costs per unit, contribution margin, and break-even sales volume."
+      },
+      {
+        "title": "3. Product Line Profitability Report",
+        "desc": "Management report recommending product pricing adjustments and high-margin product push strategies."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does Activity-Based Costing (ABC) differ from traditional overhead allocation?",
+        "answer": "Traditional costing allocates overhead using arbitrary drivers like direct labor hours. ABC assigns overhead based on actual activities (e.g. machine setups, inspection runs) consumed by products."
+      },
+      {
+        "question": "How do you calculate the Break-Even Point in units?",
+        "answer": "Break-Even Units = Total Fixed Costs / Contribution Margin per Unit (where Contribution Margin = Selling Price - Variable Cost)."
+      },
+      {
+        "question": "What is Contribution Margin Ratio?",
+        "answer": "Contribution Margin Ratio = (Selling Price - Variable Cost) / Selling Price, showing the percentage of sales revenue available to cover fixed costs."
+      }
+    ]
+  }
 }

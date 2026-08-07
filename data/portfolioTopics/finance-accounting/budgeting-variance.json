@@ -8,5 +8,37 @@
     "Variance analysis",
     "Zero-based budgeting",
     "Financial planning"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Operating Budgeting, Rolling Forecasts & Variance Analysis",
+    "overviewBody": "Budgeting sets financial targets while variance analysis measures performance against those targets. Management accountants demonstrate skill by building master operating budgets, running rolling forecasts, and isolating price, volume, and mix variances to explain profitability gaps.",
+    "deliverables": [
+      {
+        "title": "1. Master Operating Budget & Forecast Model",
+        "desc": "Integrated Excel budget model (.xlsx) incorporating revenue projections, departmental OPEX, and capital expenditure."
+      },
+      {
+        "title": "2. Monthly Budget vs Actual Variance Report",
+        "desc": "Variance report calculating favorable and unfavorable dollar and percentage deviations across P&L accounts."
+      },
+      {
+        "title": "3. Price, Volume & Mix Variance Analysis Memo",
+        "desc": "Management commentary memo breaking revenue variances into price changes versus volume shifts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the advantage of a Flexible Budget over a Static Budget?",
+        "answer": "Static budgets remain fixed regardless of actual activity levels. Flexible budgets adjust budgeted costs to actual sales volumes, providing accurate cost control comparisons."
+      },
+      {
+        "question": "What is the difference between Zero-Based Budgeting (ZBB) and Incremental Budgeting?",
+        "answer": "Incremental budgeting adjusts prior year budgets by a percentage. ZBB requires every departmental expense to be justified from a zero base each new budget cycle."
+      },
+      {
+        "question": "What is a favorable cost variance?",
+        "answer": "A favorable cost variance occurs when actual incurred expenses are lower than budgeted amounts."
+      }
+    ]
+  }
 }

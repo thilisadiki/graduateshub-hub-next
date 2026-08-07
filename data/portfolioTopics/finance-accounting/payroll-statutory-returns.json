@@ -8,5 +8,37 @@
     "EMP201",
     "EMP501",
     "Statutory deductions"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Payroll Processing & SARS Statutory Returns (PAYE / UIF / SDL / EMP201)",
+    "overviewBody": "Payroll management guarantees accurate employee remuneration and statutory tax compliance. Payroll specialists demonstrate competence by computing PAYE tax brackets, UIF and SDL contributions, submitting monthly EMP201 returns, and completing bi-annual EMP501 reconciliations.",
+    "deliverables": [
+      {
+        "title": "1. Monthly Payroll Calculation & Payslip Sheet",
+        "desc": "Payroll master sheet calculating gross pay, PAYE deductions, UIF caps, SDL contributions, and net pay."
+      },
+      {
+        "title": "2. SARS EMP201 Statutory Return Reconciliation",
+        "desc": "Monthly EMP201 reconciliation matching payroll register liabilities against SARS eFiling declarations."
+      },
+      {
+        "title": "3. Bi-Annual EMP501 Rebalancing Audit Log",
+        "desc": "EMP501 audit log reconciling IRP5/IT3(a) certificates against annual statutory payments."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is PAYE calculated for employees in South Africa?",
+        "answer": "PAYE is calculated by annualizing monthly taxable income, applying annual SARS tax brackets, subtracting primary/secondary tax rebates, and dividing by 12."
+      },
+      {
+        "question": "What are the UIF contribution rules and caps?",
+        "answer": "Unemployment Insurance Fund (UIF) is contributed at 1% by the employee and 1% by the employer (total 2%), subject to a statutory monthly earnings cap."
+      },
+      {
+        "question": "What is an EMP501 reconciliation?",
+        "answer": "An EMP501 is a bi-annual SARS reconciliation where employers reconcile total monthly EMP201 payments made against employee IRP5/IT3(a) tax certificates."
+      }
+    ]
+  }
 }

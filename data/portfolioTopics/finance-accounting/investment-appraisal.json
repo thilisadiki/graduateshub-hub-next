@@ -8,5 +8,37 @@
     "IRR",
     "Payback period",
     "Capital budgeting"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Investment Appraisal & Capital Budgeting (NPV / IRR / Payback)",
+    "overviewBody": "Capital budgeting evaluates major corporate investment projects to ensure long-term value creation. Financial managers prove decision-making rigor by evaluating Net Present Value (NPV), Internal Rate of Return (IRR), Payback Period, and Profitability Index.",
+    "deliverables": [
+      {
+        "title": "1. Capital Investment Evaluation Model",
+        "desc": "Capital budgeting spreadsheet (.xlsx) modeling initial outlays, operating cash flows, NPV, IRR, and payback period."
+      },
+      {
+        "title": "2. NPV & IRR Scenario Comparison Memo",
+        "desc": "Executive memo comparing competing capital project proposals under different hurdle discount rates."
+      },
+      {
+        "title": "3. Risk & Payback Period Sensitivity Analysis",
+        "desc": "Sensitivity analysis evaluating project breakeven timelines under pessimistic cash flow assumptions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is NPV theoretically superior to the Payback Period method?",
+        "answer": "NPV accounts for the time value of money and evaluates all cash flows across the entire project lifecycle, whereas Payback Period ignores cash flows after breakeven."
+      },
+      {
+        "question": "What does Internal Rate of Return (IRR) represent?",
+        "answer": "IRR is the exact discount rate at which the Net Present Value (NPV) of a project's cash flows equals zero."
+      },
+      {
+        "question": "What should you do when NPV and IRR give conflicting project rankings?",
+        "answer": "Always rely on Net Present Value (NPV) because it measures absolute currency value added to shareholder wealth."
+      }
+    ]
+  }
 }
