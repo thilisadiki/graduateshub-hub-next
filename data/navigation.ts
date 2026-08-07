@@ -131,9 +131,21 @@ export const popularGuides: GuideLink[] = [
     badge: 'Excel',
   },
   {
-    href: '/free-python-courses-with-certificates',
-    title: 'Free Python Courses',
-    desc: 'Python programming, Flask web frameworks, database models, and Docker containerization.',
-    badge: 'Python',
+    href: '/google-ai-essentials-course-guide',
+    title: 'Google AI Essentials Guide',
+    desc: 'Master prompt engineering and Generative AI for workplace productivity with Google credentials.',
+    badge: 'Google AI',
+  },
+  {
+    href: '/google-digital-marketing-ecommerce-guide',
+    title: 'Google Digital Marketing & E-Commerce Guide',
+    desc: 'Learn Shopify store management, Google Search Ads, SEO, and sales funnels.',
+    badge: 'Google Marketing',
+  },
+  {
+    href: '/google-data-analytics-certificate-guide',
+    title: 'Google Data Analytics Certificate Guide',
+    desc: 'SQL, spreadsheets, R programming, and Tableau visualization breakdown.',
+    badge: 'Google Data',
   },
 ];

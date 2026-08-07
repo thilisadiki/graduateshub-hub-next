@@ -17,9 +17,13 @@ import { cloudSupportDevOpsPrep } from './cloudSupportDevOps';
 import { seoContentStrategistPrep } from './seoContentStrategist';
 import { financialAnalystPrep } from './financialAnalyst';
 import { softwareEngineerPrep } from './softwareEngineer';
+import { googleAIEssentialsPrep } from './googleAIEssentials';
+import { digitalMarketingEcommercePrep } from './digitalMarketingEcommerce';
 
 export const interviewPreps: InterviewPrep[] = [
   itSupportSpecialistPrep,
+  googleAIEssentialsPrep,
+  digitalMarketingEcommercePrep,
   dataAnalystPrep,
   softwareEngineerPrep,
   cybersecurityAnalystPrep,

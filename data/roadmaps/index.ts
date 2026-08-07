@@ -13,9 +13,13 @@ import { cloudSupportDevOpsRoadmap } from './cloudSupportDevOps';
 import { seoContentStrategistRoadmap } from './seoContentStrategist';
 import { financialAnalystRoadmap } from './financialAnalyst';
 import { softwareEngineerRoadmap } from './softwareEngineer';
+import { googleAIEssentialsRoadmap } from './googleAIEssentials';
+import { digitalMarketingEcommerceRoadmap } from './digitalMarketingEcommerce';
 
 export const roadmaps: CareerRoadmap[] = [
   dataAnalystRoadmap,
+  googleAIEssentialsRoadmap,
+  digitalMarketingEcommerceRoadmap,
   softwareEngineerRoadmap,
   cybersecurityAnalystRoadmap,
   uiUxDesignerRoadmap,
