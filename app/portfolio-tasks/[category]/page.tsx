@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowRight, Award } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle2, HelpCircle, Briefcase, Sparkles } from 'lucide-react';
 import { portfolioCategories, getCategoryById } from '@/data/portfolioCategories';
 import { getTopicsByCategory } from '@/data/portfolioTopics';
 import { getTasksByTopic } from '@/data/portfolioTasks';
+import { getPortfolioCategorySeo } from '@/data/portfolioCategorySeo';
 import type { PortfolioLevel } from '@/types';
-import { BreadcrumbList, ItemList, WithContext } from 'schema-dts';
+import { BreadcrumbList, ItemList, FAQPage, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 import Pagination from '@/components/shared/Pagination';
 
@@ -26,14 +27,17 @@ export async function generateMetadata({
   const pageNum = Math.max(1, parseInt(page ?? '1'));
   const cat = getCategoryById(category);
   if (!cat) return {};
+  const seoData = getPortfolioCategorySeo(cat.id);
   const topics = getTopicsByCategory(cat.id);
   const topicTitles = topics.slice(0, 5).map((t) => t.title).join(', ');
-  const description = `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
-  const url = pageNum === 1 ? `${SITE_URL}/portfolio-tasks/${cat.id}` : `${SITE_URL}/portfolio-tasks/${cat.id}?page=${pageNum}`;
-  const title = pageNum === 1 
-    ? `${cat.name} Portfolio Tasks - Graded Briefs for SA Graduates`
-    : `${cat.name} Portfolio Tasks - Page ${pageNum} - Graded Briefs`;
   
+  const title = pageNum === 1 
+    ? (seoData?.seoTitle ?? `${cat.name} Portfolio Tasks - Graded Briefs for SA Graduates`)
+    : `${cat.name} Portfolio Tasks - Page ${pageNum} - Graded Briefs`;
+    
+  const description = seoData?.seoDescription ?? `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
+  const url = pageNum === 1 ? `${SITE_URL}/portfolio-tasks/${cat.id}` : `${SITE_URL}/portfolio-tasks/${cat.id}?page=${pageNum}`;
+
   return {
     title,
     description,
@@ -82,6 +86,7 @@ export default async function CategoryPage({
   const cat = getCategoryById(category);
   if (!cat) notFound();
 
+  const seoData = getPortfolioCategorySeo(cat.id);
   const allTopics = getTopicsByCategory(cat.id);
   const PER_PAGE = 10;
   const totalPages = Math.ceil(allTopics.length / PER_PAGE);
@@ -112,10 +117,26 @@ export default async function CategoryPage({
     })),
   };
 
+  const faqSchema: WithContext<FAQPage> | null = seoData?.faqs ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: seoData.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.answer ?? f.a ?? '',
+      },
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
 
       <div className="bg-gradient-to-br bg-[#1F1B13] text-white">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-14">
@@ -129,7 +150,7 @@ export default async function CategoryPage({
         </div>
       </div>
 
-      <main className="max-w-5xl mx-auto px-6 py-10">
+      <main className="max-w-5xl mx-auto px-6 py-10 flex flex-col gap-12">
         {allTopics.length === 0 ? (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 text-center">
             <h2 className="text-xl font-extrabold text-gray-900 mb-2">Topics coming soon</h2>
@@ -185,6 +206,96 @@ export default async function CategoryPage({
               totalPages={totalPages} 
               baseUrl={`/portfolio-tasks/${cat.id}`} 
             />
+          </div>
+        )}
+
+        {/* SEO Editorial Content Section */}
+        {seoData && (
+          <div className="flex flex-col gap-10 border-t border-gray-200 pt-12">
+            {/* Why Build Proof of Work */}
+            <section className="bg-white rounded-2xl border border-[#D1C5B4] p-8 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <Sparkles size={20} className="text-primary" />
+                <span className="text-xs font-bold uppercase tracking-wider text-primary">Proof of Work Guide</span>
+              </div>
+              <h2 className="text-2xl font-extrabold text-gray-900 mb-4">
+                Why Build a {cat.name} Portfolio?
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-base">
+                {seoData.whyBuildPortfolio}
+              </p>
+            </section>
+
+            {/* Recruiter Expectations & Skills Tested */}
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm flex flex-col gap-4">
+                <div className="flex items-center gap-2 text-gray-900 font-extrabold text-lg">
+                  <Briefcase size={20} className="text-primary shrink-0" />
+                  <h3>What Hiring Managers Look For</h3>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {seoData.whatRecruitersLookFor.map((item) => (
+                    <div key={item.title} className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                      <strong className="text-gray-900 text-sm font-bold block mb-1">{item.title}</strong>
+                      <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm flex flex-col gap-4">
+                <div className="flex items-center gap-2 text-gray-900 font-extrabold text-lg">
+                  <CheckCircle2 size={20} className="text-emerald-600 shrink-0" />
+                  <h3>Key Skills Tested</h3>
+                </div>
+                <ul className="flex flex-col gap-2.5">
+                  {seoData.keySkillsTested.map((skill) => (
+                    <li key={skill} className="flex items-start gap-2.5 text-sm text-gray-700 font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                      <span>{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
+            {/* Category FAQs */}
+            {seoData.faqs.length > 0 && (
+              <section className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+                <div className="flex items-center gap-2 mb-6">
+                  <HelpCircle size={22} className="text-primary" />
+                  <h2 className="text-2xl font-extrabold text-gray-900">
+                    Frequently Asked Questions ({cat.name})
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {seoData.faqs.map((faq) => (
+                    <div key={faq.question} className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex flex-col gap-2">
+                      <h3 className="font-extrabold text-gray-900 text-base">{faq.question}</h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">{faq.answer ?? faq.a ?? ''}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Related Roadmap Banner */}
+            {seoData.relatedRoadmapHref && (
+              <section className="bg-gradient-to-r from-[#1F1B13] to-[#2A241A] text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+                <div>
+                  <h3 className="text-xl font-extrabold mb-1">Want to prepare for job applications in {cat.name}?</h3>
+                  <p className="text-slate-300 text-sm">
+                    Follow our step-by-step career roadmap for skills, salary benchmarks, and interview preparation.
+                  </p>
+                </div>
+                <Link
+                  href={seoData.relatedRoadmapHref}
+                  className="bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap shadow-sm border border-primary"
+                >
+                  {seoData.relatedRoadmapLabel ?? 'Explore Roadmap'} →
+                </Link>
+              </section>
+            )}
           </div>
         )}
       </main>
