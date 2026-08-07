@@ -8,5 +8,37 @@
     "Topic clusters",
     "SEO content",
     "Content ROI"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Content Strategy, Pillar Pages & Editorial Planning",
+    "overviewBody": "Content strategy aligns organic content creation with business revenue goals. Marketing leads evaluate candidates on developing content pillars, editorial calendars, content repurposing workflows, pillar-cluster SEO architecture, and content distribution plans.",
+    "deliverables": [
+      {
+        "title": "1. 90-Day Content Strategy & Editorial Calendar",
+        "desc": "Editorial plan mapping content themes, target buyer stages (TOFU/MOFU/BOFU), formats, and publication schedules."
+      },
+      {
+        "title": "2. Topic Cluster & Pillar Page Architecture",
+        "desc": "SEO content architecture mapping main pillar pages linked to supporting cluster articles."
+      },
+      {
+        "title": "3. Content Distribution & Repurposing Spec",
+        "desc": "Workflow guide detailing how to transform long-form assets (webinars/whitepapers) into social posts, emails, and short videos."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Topic Cluster SEO model?",
+        "answer": "Topic clusters organize content around a central comprehensive 'pillar' page linked internally to and from multiple granular 'cluster' sub-articles, building topical authority in Google."
+      },
+      {
+        "question": "What is the difference between TOFU, MOFU, and BOFU content?",
+        "answer": "TOFU (Top of Funnel) builds awareness with educational guides. MOFU (Middle of Funnel) evaluates solutions via comparison charts. BOFU (Bottom of Funnel) drives conversion via case studies and demo requests."
+      },
+      {
+        "question": "How do you repurpose a long-form blog post?",
+        "answer": "Convert key quotes into LinkedIn text posts, design an infographic for Instagram, summarize key takeaways into an email newsletter, and record a 60-second video recap."
+      }
+    ]
+  }
 }

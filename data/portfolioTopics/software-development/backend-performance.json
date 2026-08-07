@@ -8,5 +8,37 @@
     "Caching",
     "Database Profiling",
     "Algorithmic Optimization"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Backend Performance Optimization & SQL Query Tuning",
+    "overviewBody": "High-traffic software applications demand optimized database queries and backend execution. Employers look for developers who can analyze query execution plans (EXPLAIN ANALYZE), eliminate N+1 query problems, configure database indexes (B-Tree/GIN), and implement Redis caching layers.",
+    "deliverables": [
+      {
+        "title": "1. Database Query Bottleneck Audit Report",
+        "desc": "Performance report diagnosing slow SQL queries, missing indexes, and un-indexed foreign key joins using EXPLAIN ANALYZE."
+      },
+      {
+        "title": "2. Optimized SQL & Index Migration Script",
+        "desc": "DDL migration script adding targeted B-Tree/GIN indexes and refactoring inefficient JOIN queries."
+      },
+      {
+        "title": "3. Post-Optimization Benchmark & Load Test Log",
+        "desc": "Load test report documenting response time latency reductions and database CPU utilization improvements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the N+1 query problem and how do you resolve it?",
+        "answer": "N+1 occurs when an application executes 1 query to fetch parent records, followed by N separate queries to fetch related child records. Resolve it using JOIN fetching or eager batch loading (e.g. Prisma include or SQL JOIN)."
+      },
+      {
+        "question": "When should you add a database index?",
+        "answer": "Add indexes to columns frequently queried in WHERE clauses, JOIN conditions, and ORDER BY statements. Avoid indexing low-cardinality columns or tables with high write/insert volumes."
+      },
+      {
+        "question": "How does Redis cache invalidation work?",
+        "answer": "Cache invalidation clears or updates cached Redis keys when underlying database data changes, preventing stale data reads."
+      }
+    ]
+  }
 }

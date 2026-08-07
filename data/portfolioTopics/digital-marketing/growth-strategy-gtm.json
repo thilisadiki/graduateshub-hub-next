@@ -8,5 +8,37 @@
     "AARRR framework",
     "Referral programmes",
     "Go-to-market strategy"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Go-To-Market (GTM) & Growth Marketing Strategy",
+    "overviewBody": "Go-To-Market strategy guides how a product launches and captures market share. Growth leaders look for candidates who develop product positioning, select acquisition channels, model unit economics (LTV/CAC), and architect Product-Led Growth (PLG) viral acquisition loops.",
+    "deliverables": [
+      {
+        "title": "1. Product Go-To-Market (GTM) Strategy Deck",
+        "desc": "Comprehensive launch deck defining target market segments, competitive positioning, channel strategies, and pricing tiers."
+      },
+      {
+        "title": "2. Growth Loop & Customer Acquisition Spec",
+        "desc": "Specification detailing viral referral loops, content acquisition loops, or paid acquisition flywheels."
+      },
+      {
+        "title": "3. GTM Launch Execution & Milestone Timeline",
+        "desc": "Phase-by-phase launch roadmap mapping pre-launch teaser, launch day push, and post-launch retention activities."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Product-Led Growth (PLG)?",
+        "answer": "PLG is a business methodology where the product itself (via free trials or freemium tiers) drives customer acquisition, retention, and expansion."
+      },
+      {
+        "question": "What is a compounding growth loop?",
+        "answer": "A growth loop is a closed system where the output of one user action feeds back into input for acquiring new users (e.g. viral referral invites)."
+      },
+      {
+        "question": "How do you validate product-market fit (PMF)?",
+        "answer": "PMF is validated when organic user retention flattens into a stable horizontal baseline, or when >40% of surveyed users report being 'very disappointed' if the product disappeared."
+      }
+    ]
+  }
 }

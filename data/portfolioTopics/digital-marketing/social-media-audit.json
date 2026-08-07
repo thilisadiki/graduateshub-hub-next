@@ -8,5 +8,37 @@
     "Content planning",
     "Marketing analytics",
     "Small business marketing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Social Media Channel Audits & Organic Strategy",
+    "overviewBody": "Social media marketing builds brand awareness and customer engagement across digital platforms. Marketing leads evaluate candidates on social media channel teardowns (LinkedIn, Instagram, TikTok, X), engagement rate calculations, visual branding consistency, and competitive analysis.",
+    "deliverables": [
+      {
+        "title": "1. Multi-Channel Social Media Audit Deck",
+        "desc": "Analytical audit deck evaluating current brand profiles, posting frequency, visual identity, and audience sentiment."
+      },
+      {
+        "title": "2. Competitive Benchmarking Matrix",
+        "desc": "Competitor analysis comparing share of voice, follower growth velocity, top-performing content formats, and engagement rates."
+      },
+      {
+        "title": "3. Channel-Specific Content Strategy",
+        "desc": "Tailored platform strategy detailing pillar themes, post formats (Reels, Carousels, Text), and posting cadences."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you calculate social media engagement rate correctly?",
+        "answer": "Engagement Rate = ((Total Likes + Comments + Shares + Saves) / Total Followers or Impressions) * 100."
+      },
+      {
+        "question": "How does organic social strategy differ between B2B and B2C brands?",
+        "answer": "B2B brands focus on thought leadership, industry insights, and employee advocacy on LinkedIn. B2C brands focus on visual storytelling, user-generated content, and trend participation on Instagram/TikTok."
+      },
+      {
+        "question": "What is the role of video content in social algorithm ranking?",
+        "answer": "Short-form video formats (Reels, TikToks, Shorts) receive algorithmic priority due to higher watch time completion metrics."
+      }
+    ]
+  }
 }

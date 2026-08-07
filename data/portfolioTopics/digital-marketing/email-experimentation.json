@@ -8,5 +8,37 @@
     "A/B testing",
     "Marketing analytics",
     "Experimentation design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Lifecycle Email Marketing & Automation Experimentation",
+    "overviewBody": "Email marketing remains the highest-ROI direct marketing channel. Employers evaluate candidates on building lifecycle email flows (Welcome Series, Abandoned Cart, Post-Purchase), A/B testing subject lines, optimizing open/click rates, and maintaining domain deliverability (SPF/DKIM/DMARC).",
+    "deliverables": [
+      {
+        "title": "1. Automated Lifecycle Email Flow Blueprint",
+        "desc": "Flowchart mapping trigger rules, delay timers, branching logic, and goal criteria across subscriber journeys."
+      },
+      {
+        "title": "2. High-Converting Email Copy & HTML Templates",
+        "desc": "Email templates featuring persuasive copywriting, visual hierarchy, mobile responsiveness, and clear CTA buttons."
+      },
+      {
+        "title": "3. Subject Line A/B Test & Deliverability Log",
+        "desc": "Experimentation log documenting subject line test variants, open/click rate uplift, and domain deliverability status."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are SPF, DKIM, and DMARC records?",
+        "answer": "SPF verifies authorized sending servers, DKIM adds a cryptographic signature to emails, and DMARC tells receiving mail servers how to handle unauthenticated messages, preventing domain spoofing."
+      },
+      {
+        "question": "How do you optimize email subject lines for open rates?",
+        "answer": "Keep subject lines under 50 characters, create curiosity or urgency without spam trigger words, incorporate preview text effectively, and test personalization tags."
+      },
+      {
+        "question": "What is an Abandoned Cart email flow?",
+        "answer": "An automated series triggered when a logged-in user adds items to an e-commerce cart but exits before checkout, aimed at recovering lost revenue."
+      }
+    ]
+  }
 }

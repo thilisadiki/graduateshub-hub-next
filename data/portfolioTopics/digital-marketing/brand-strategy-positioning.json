@@ -8,5 +8,37 @@
     "Competitive analysis",
     "Brand architecture",
     "Strategic thinking"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Brand Strategy, Positioning & Messaging Architecture",
+    "overviewBody": "Brand positioning dictates how a company sets itself apart from competitors in the minds of consumers. Strategists evaluate candidates on brand positioning statements, target customer persona profiles, brand tone of voice guidelines, and messaging hierarchies.",
+    "deliverables": [
+      {
+        "title": "1. Brand Positioning & Messaging Architecture Spec",
+        "desc": "Strategic document outlining brand vision, core positioning statement, competitive differentiators, and messaging pillars."
+      },
+      {
+        "title": "2. Target Customer Persona Profiles",
+        "desc": "Detailed buyer personas defining demographics, psychographics, key pain points, and decision triggers."
+      },
+      {
+        "title": "3. Brand Voice & Style Guidelines",
+        "desc": "Tone-of-voice guide establishing brand personality traits, vocabulary preferences, and do's & don'ts examples."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you write a classic brand positioning statement?",
+        "answer": "Structure: For [target audience], [Brand Name] is the [category] that [key benefit] because [reason to believe]."
+      },
+      {
+        "question": "Why are negative buyer personas useful?",
+        "answer": "Negative personas represent customer types you do NOT want to target (e.g. low budget, high support friction), preventing wasted ad spend."
+      },
+      {
+        "question": "How do you maintain brand voice consistency across multiple copywriters?",
+        "answer": "Provide concrete 'We write like THIS, not like THAT' side-by-side copy examples in the brand style guide."
+      }
+    ]
+  }
 }

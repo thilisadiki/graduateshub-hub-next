@@ -8,5 +8,37 @@
     "AIDA framework",
     "Ad copy testing",
     "Persuasive writing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Conversion Copywriting & Direct Response Messaging",
+    "overviewBody": "Copywriting is the art of persuasive writing that drives measurable customer action. Marketing managers look for writers who master direct-response frameworks (PAS, AIDA, BAB), write high-converting landing page headlines, refine value propositions, and craft clear CTAs.",
+    "deliverables": [
+      {
+        "title": "1. Conversion Copywriting Portfolio",
+        "desc": "Copy portfolio featuring landing page headlines, ad creative copy variants, email sequences, and product descriptions."
+      },
+      {
+        "title": "2. Value Proposition & Messaging Matrix",
+        "desc": "Matrix defining target audience pain points, feature-to-benefit transformations, and objection handling copy."
+      },
+      {
+        "title": "3. Copy A/B Testing Analysis Report",
+        "desc": "Performance report tracking click-through rate (CTR) differences across headline and CTA button copy variants."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the PAS (Problem-Agitate-Solve) copywriting framework?",
+        "answer": "PAS introduces the reader's specific pain point (Problem), amplifies the emotional/financial cost of leaving it unfixed (Agitate), and presents the product as the clear remedy (Solve)."
+      },
+      {
+        "question": "How do you write compelling Call-To-Action (CTA) button copy?",
+        "answer": "Use action-oriented first-person or benefit-driven phrases (e.g. 'Get My Free Guide' or 'Start 14-Day Free Trial') instead of generic 'Submit' or 'Click Here'."
+      },
+      {
+        "question": "What is the difference between features and benefits?",
+        "answer": "Features describe what a product has or does (e.g. 256GB storage). Benefits explain the positive outcome or relief it brings to the user (e.g. store 50,000 photos without running out of space)."
+      }
+    ]
+  }
 }

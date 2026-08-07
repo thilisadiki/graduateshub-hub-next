@@ -8,5 +8,37 @@
     "GitHub Actions",
     "Deployment pipelines",
     "Automation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "CI/CD Pipeline Automation & Continuous Deployment",
+    "overviewBody": "CI/CD automation guarantees that code changes are built, tested, and deployed reliably. DevOps leads look for experience with GitHub Actions / GitLab CI workflows, matrix test runners, Docker container registry builds, environment secrets, and zero-downtime deployments.",
+    "deliverables": [
+      {
+        "title": "1. GitHub Actions Workflow Configuration",
+        "desc": "Production-ready .github/workflows/ci-cd.yml file defining linting, unit testing, container build, and deployment jobs."
+      },
+      {
+        "title": "2. Container Build & Test Script",
+        "desc": "Automated container build script compiling production images and running isolated test suites in ephemeral containers."
+      },
+      {
+        "title": "3. Deployment Verification & Rollback Log",
+        "desc": "Audit log documenting automated pipeline execution, deployment health checks, and rollback triggers."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is matrix testing in CI/CD pipelines?",
+        "answer": "Matrix testing executes parallel pipeline jobs across multiple operating systems (Ubuntu, Windows) and language versions (Node 18, 20, 22) simultaneously."
+      },
+      {
+        "question": "How do you manage sensitive secrets in CI/CD pipelines?",
+        "answer": "Secrets should be stored in encrypted repository settings (e.g. GitHub Secrets or HashiCorp Vault) and injected into runner environments at build time."
+      },
+      {
+        "question": "What is zero-downtime deployment?",
+        "answer": "Zero-downtime deployment (like Blue-Green or Rolling deployments) routes traffic to new container versions only after health checks pass, preventing user disruption during updates."
+      }
+    ]
+  }
 }

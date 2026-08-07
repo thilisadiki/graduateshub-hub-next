@@ -8,5 +8,37 @@
     "System thinking",
     "Technical writing",
     "Product scoping"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "REST API Design & OpenAPI 3.0 Specification",
+    "overviewBody": "RESTful API design is a foundational backend software engineering skill. Tech leads evaluate software engineers on URI resource modeling, HTTP status semantics (201 Created vs 200 OK, 400 vs 422), versioning strategy, error payload standardization (RFC 7807), and Postman test assertions.",
+    "deliverables": [
+      {
+        "title": "1. OpenAPI 3.0 API Specification",
+        "desc": "OpenAPI 3.0 YAML/JSON specification detailing request/response schemas, query parameters, and status codes."
+      },
+      {
+        "title": "2. REST API Architecture Reference Doc",
+        "desc": "Documentation explaining URI resource naming conventions, versioning rules (/v1/), and authentication headers."
+      },
+      {
+        "title": "3. Postman Collection & Automated Tests",
+        "desc": "Exported Postman test collection validating success payloads and edge-case error assertions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between URI versioning and header versioning?",
+        "answer": "URI versioning (/v1/users) includes the API version explicitly in the path URL, making it visible and easy to route. Header versioning (Accept: application/vnd.company.v1+json) keeps URLs clean but complicates caching."
+      },
+      {
+        "question": "When should you return HTTP 400 versus HTTP 422?",
+        "answer": "HTTP 400 Bad Request indicates malformed request syntax or invalid JSON parsing errors. HTTP 422 Unprocessable Entity indicates syntactically correct JSON that violates semantic domain validation rules."
+      },
+      {
+        "question": "Why is the RFC 7807 Problem Details format recommended for API errors?",
+        "answer": "RFC 7807 provides a standardized machine-readable JSON format for API errors (type, title, status, detail, instance), preventing custom inconsistent error objects across endpoints."
+      }
+    ]
+  }
 }

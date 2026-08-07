@@ -8,5 +8,37 @@
     "Meta Ads",
     "ROAS optimisation",
     "Audience targeting"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Paid Media Performance Marketing & PPC Campaigns (Google & Meta Ads)",
+    "overviewBody": "Paid media marketing drives predictable acquisition through targeted search and social advertising. Performance marketing leads evaluate candidates on keyword selection, bidding strategies (Target CPA vs Maximize Conversions), Quality Score optimization, ad copy testing, and Return on Ad Spend (ROAS) tracking.",
+    "deliverables": [
+      {
+        "title": "1. PPC Campaign Architecture & Keyword Matrix",
+        "desc": "Structured ad campaign plan detailing keyword match types, negative keywords, and audience demographic targeting."
+      },
+      {
+        "title": "2. Multi-Variant Ad Copy & Creative Specs",
+        "desc": "A/B test ad copy variations, responsive search ad headlines, and visual ad asset briefs."
+      },
+      {
+        "title": "3. Budget & ROAS Performance Model",
+        "desc": "Financial model projecting Cost per Acquisition (CPA), Return on Ad Spend (ROAS), and conversion volume across channels."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Target CPA and Maximize Conversions bidding?",
+        "answer": "Target CPA bids automatically to achieve a specific target cost per acquisition, whereas Maximize Conversions spends the full daily budget to capture the highest possible volume of conversions regardless of individual cost."
+      },
+      {
+        "question": "How does Google Ads Quality Score affect Cost-Per-Click (CPC)?",
+        "answer": "Quality Score (1-10) measures ad relevance, expected CTR, and landing page experience. Higher Quality Scores reduce actual CPC costs while improving ad rank placement."
+      },
+      {
+        "question": "How should Meta (Facebook/Instagram) ad sets be structured for audience testing?",
+        "answer": "Isolate interest, lookalike, and broad audiences into separate ad sets under a Campaign Budget Optimization (CBO) structure to prevent internal audience cannibalization."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Community building",
     "Partnership management",
     "Campaign measurement"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Influencer Marketing & Community Management",
+    "overviewBody": "Influencer marketing leverages trusted creators to amplify brand messaging. Brand managers look for candidates who craft influencer campaign briefs, negotiate creator agreements, audit fake followers, track campaign ROI, and foster online brand communities.",
+    "deliverables": [
+      {
+        "title": "1. Influencer Campaign Brief & Creator Guide",
+        "desc": "Comprehensive campaign brief detailing content guidelines, key messaging points, mandatory disclosures, and deliverables."
+      },
+      {
+        "title": "2. Creator Audit & ROI Tracking Matrix",
+        "desc": "Audit log checking creator engagement rates, audience demographics, fake follower percentages, and promo code sales."
+      },
+      {
+        "title": "3. Community Engagement & Moderation SOP",
+        "desc": "Standard operating procedure for managing community comments, handling brand crises, and encouraging user-generated content (UGC)."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you detect fake followers or engagement on creator profiles?",
+        "answer": "Look for sudden follower spikes without gradual growth, comment sections filled with generic emojis/bot text, or engagement rates drastically below industry averages (<1%)."
+      },
+      {
+        "question": "What is the difference between micro-influencers and macro-influencers?",
+        "answer": "Micro-influencers (10k-50k followers) typically offer higher engagement rates and niche trust at lower costs. Macro-influencers (100k+) deliver mass brand reach."
+      },
+      {
+        "question": "What legal terms must be included in influencer contracts?",
+        "answer": "Usage rights, exclusivity windows, payment terms, content approval workflows, and mandatory advertising disclosure compliance (e.g. #ad or #sponsored)."
+      }
+    ]
+  }
 }

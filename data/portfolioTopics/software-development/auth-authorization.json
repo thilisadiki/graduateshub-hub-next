@@ -8,5 +8,37 @@
     "JWT",
     "OAuth 2.0",
     "Access Control"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Authentication & Role-Based Access Control (RBAC)",
+    "overviewBody": "Securing backend systems requires robust authentication and granular access control. Recruiters test backend engineers on Role-Based Access Control (RBAC) vs Attribute-Based Access Control (ABAC), scope enforcement, JWT signature verification, and secure password hashing (Argon2 / bcrypt).",
+    "deliverables": [
+      {
+        "title": "1. RBAC Permission Matrix & Policy Spec",
+        "desc": "Matrix defining roles (Admin, Manager, User), resource actions (Create, Read, Update, Delete), and permission scopes."
+      },
+      {
+        "title": "2. Authentication Middleware & Guard Code",
+        "desc": "Secure HTTP middleware verifying bearer tokens, enforcing role permissions, and rejecting unauthorized requests."
+      },
+      {
+        "title": "3. Password Hashing & Invalidation Test Log",
+        "desc": "Test suite verifying Argon2/bcrypt password hashing, salt generation, and token revocation upon password reset."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between RBAC and ABAC?",
+        "answer": "RBAC grants permissions based on static user roles (e.g. Admin vs Member). ABAC evaluates dynamic attributes (e.g. user role + time of day + IP location + resource ownership)."
+      },
+      {
+        "question": "How do you revoke stateless JWT access tokens before expiration?",
+        "answer": "Maintain a Redis blacklist of revoked JWT IDs (jti) until token expiration, or issue short-lived access tokens (15 mins) paired with revokable refresh tokens."
+      },
+      {
+        "question": "Why is bcrypt or Argon2 required for password storage instead of SHA-256?",
+        "answer": "Fast hash functions like SHA-256 can be brute-forced rapidly on modern GPUs. Bcrypt and Argon2 incorporate adaptive work factors (salts and memory hardness) to make brute-forcing computationally infeasible."
+      }
+    ]
+  }
 }

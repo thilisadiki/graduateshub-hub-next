@@ -8,5 +8,37 @@
     "Event Loop",
     "Background Jobs",
     "Distributed Systems"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Asynchronous Job Processing & Event Message Queues",
+    "overviewBody": "Modern software architectures offload long-running tasks from synchronous HTTP request/response loops. Engineering managers look for experience with message queues (Redis BullMQ, RabbitMQ, Kafka), worker pools, idempotency keys, and Dead Letter Queue (DLQ) retry policies.",
+    "deliverables": [
+      {
+        "title": "1. Async Message Queue Architecture Diagram",
+        "desc": "System diagram illustrating job producers, message broker queues, worker consumers, and dead letter fallback queues."
+      },
+      {
+        "title": "2. Queue Producer & Worker Implementation",
+        "desc": "Production-ready background worker code handling queue jobs, rate limiting, and exponential backoff retries."
+      },
+      {
+        "title": "3. Idempotency & Failure Recovery Test Suite",
+        "desc": "Test suite verifying that duplicate job deliveries are handled safely without side effects."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why offload tasks to background message queues?",
+        "answer": "Offloading heavy tasks (like video encoding, PDF generation, or bulk emails) prevents web servers from timing out HTTP requests and keeps client interfaces responsive."
+      },
+      {
+        "question": "How do idempotency keys prevent duplicate background job processing?",
+        "answer": "Idempotency keys ensure that processing a message multiple times produces the exact same state outcome as processing it once, ignoring duplicate retry executions."
+      },
+      {
+        "question": "What is a Dead Letter Queue (DLQ)?",
+        "answer": "A DLQ holds failed messages that exceeded maximum retry attempts, isolating un-processable jobs for manual engineering inspection without blocking active queues."
+      }
+    ]
+  }
 }

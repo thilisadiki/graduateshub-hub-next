@@ -9,5 +9,37 @@
     "Exploratory testing",
     "Regression planning",
     "STLC"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Quality Assurance & End-to-End (E2E) Test Automation",
+    "overviewBody": "QA automation guarantees user flows function reliably across releases. QA leads assess software engineers on writing automated End-to-End (E2E) tests with Playwright or Cypress, implementing Page Object Model (POM) design patterns, and running headless tests in CI.",
+    "deliverables": [
+      {
+        "title": "1. E2E Test Strategy & POM Architecture Plan",
+        "desc": "Test automation plan establishing Page Object Model classes, user scenario paths, and test data management."
+      },
+      {
+        "title": "2. Automated Playwright / Cypress Test Suite",
+        "desc": "Robust E2E test suite covering critical user flows (authentication, checkout, dashboard actions) with assertions."
+      },
+      {
+        "title": "3. CI Headless Test Execution & Media Artifact Log",
+        "desc": "Pipeline execution report with video recordings and screenshot artifacts captured during headless CI runs."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Page Object Model (POM) design pattern?",
+        "answer": "POM abstracts web page UI elements and actions into reusable class objects, insulating test scripts from UI layout changes."
+      },
+      {
+        "question": "How do you eliminate flaky E2E tests?",
+        "answer": "Avoid static sleep/wait timers; use dynamic auto-waiting assertions (e.g. await expect(locator).toBeVisible()) that poll DOM state automatically."
+      },
+      {
+        "question": "What is the difference between E2E testing and integration testing?",
+        "answer": "E2E tests evaluate complete application flows through a browser environment including real APIs/databases. Integration tests verify isolated boundaries between specific subsystems."
+      }
+    ]
+  }
 }

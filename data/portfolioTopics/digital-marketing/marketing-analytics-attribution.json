@@ -8,5 +8,37 @@
     "Attribution modelling",
     "Marketing dashboards",
     "Data-driven marketing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Marketing Analytics & Attribution Modeling (GA4 & UTM Tagging)",
+    "overviewBody": "Marketing analytics attributes revenue to specific marketing channels. Analytics managers seek candidates skilled in configuring Google Analytics 4 (GA4) custom events, establishing standardized UTM tagging, and evaluating attribution models (First Touch, Last Touch, Data-Driven).",
+    "deliverables": [
+      {
+        "title": "1. GA4 Event Tracking & UTM Taxonomy Spec",
+        "desc": "Governance guide defining UTM naming conventions (source/medium/campaign) and custom GA4 conversion event parameters."
+      },
+      {
+        "title": "2. Multi-Channel Attribution Analysis Report",
+        "desc": "Analytical report comparing acquisition performance across First Touch, Last Touch, and Data-Driven attribution models."
+      },
+      {
+        "title": "3. Executive Marketing Performance Dashboard",
+        "desc": "Data dashboard visualizing channel conversion rates, customer journey paths, and campaign ROI."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between First-Touch and Last-Touch attribution?",
+        "answer": "First-Touch attributes 100% of conversion value to the initial brand discovery channel. Last-Touch attributes 100% of conversion value to the final channel clicked immediately before purchase."
+      },
+      {
+        "question": "Why is consistent UTM parameter capitalization critical?",
+        "answer": "Analytics tools treat 'facebook' and 'Facebook' as two distinct traffic sources, fragmenting reporting data."
+      },
+      {
+        "question": "How did Apple iOS 14.5+ affect digital marketing tracking?",
+        "answer": "App Tracking Transparency (ATT) allowed users to opt out of cross-app tracking, limiting third-party ad pixel attribution and requiring server-side Conversions API (CAPI) setups."
+      }
+    ]
+  }
 }

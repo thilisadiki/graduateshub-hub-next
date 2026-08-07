@@ -8,5 +8,37 @@
     "Kubernetes",
     "Infrastructure as Code",
     "Microservices"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Docker Containerization & Multi-Service Orchestration",
+    "overviewBody": "Containerization packages applications with their exact dependencies for consistent execution across environments. Engineering teams assess developers on multi-stage Dockerfiles, Docker Compose multi-container setups, non-root user execution, and network isolation.",
+    "deliverables": [
+      {
+        "title": "1. Multi-Stage Dockerfile & Security Config",
+        "desc": "Optimized multi-stage Dockerfile shrinking final production image size and enforcing non-root user execution."
+      },
+      {
+        "title": "2. Multi-Container docker-compose.yml Architecture",
+        "desc": "Docker Compose setup orchestrating application servers, database instances, Redis caches, and reverse proxies."
+      },
+      {
+        "title": "3. Container Healthcheck & Resource Log",
+        "desc": "Inspection log documenting container health checks, memory resource limits, and internal network isolation."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why are multi-stage Docker builds recommended?",
+        "answer": "Multi-stage builds separate compilation build tools from the runtime image, drastically reducing final image size and attack surface."
+      },
+      {
+        "question": "Why should containers avoid running as root?",
+        "answer": "Running containers as root poses container breakout security risks; non-root users limit attacker permissions if a container is compromised."
+      },
+      {
+        "question": "What is the difference between Docker volume mounts and bind mounts?",
+        "answer": "Volume mounts are managed entirely by Docker in host storage, making them safer and persistent across container rebuilds. Bind mounts link to exact host paths, best for local dev code reloading."
+      }
+    ]
+  }
 }

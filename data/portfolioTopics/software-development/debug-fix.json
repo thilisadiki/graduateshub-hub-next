@@ -8,5 +8,37 @@
     "JavaScript fundamentals",
     "Code quality",
     "Technical communication"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Production Bug Debugging & Root Cause Analysis (RCA)",
+    "overviewBody": "Debugging production failures requires methodical troubleshooting skills. Tech leads look for developers who inspect error log stack traces, write Root Cause Analysis (RCA) post-mortems, reproduce complex edge cases in test environments, and deploy regression patches.",
+    "deliverables": [
+      {
+        "title": "1. Production Incident Post-Mortem & RCA",
+        "desc": "Detailed RCA document analyzing incident timeline, root cause, impact, immediate fix, and preventive action items."
+      },
+      {
+        "title": "2. Isolated Regression Unit Test",
+        "desc": "Unit or integration test reproducing the exact failure edge-case before the bug fix is applied."
+      },
+      {
+        "title": "3. Bug Fix Patch & Deployment Verification",
+        "desc": "Code modification patch resolving the bug alongside deployment verification log."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is a 5 Whys Root Cause Analysis?",
+        "answer": "The 5 Whys method iteratively asks 'Why did this happen?' five times to dig past surface symptoms to underlying process or technical failures."
+      },
+      {
+        "question": "Why is reproducing a bug in an isolated test the first step in fixing it?",
+        "answer": "Reproducing the bug in a automated test proves you understand the root cause and provides immediate automated verification when the fix works."
+      },
+      {
+        "question": "What should be included in a blameless post-mortem?",
+        "answer": "Incident timeline, technical root cause, business impact, short-term remediation, and long-term systemic preventive actions."
+      }
+    ]
+  }
 }

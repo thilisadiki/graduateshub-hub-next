@@ -8,5 +8,37 @@
     "Lead scoring",
     "Workflow design",
     "CRM administration"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "CRM & Marketing Automation Workflows (HubSpot / Klaviyo)",
+    "overviewBody": "Marketing automation nurture leads automatically at scale. Hiring managers test candidates on designing CRM workflows (HubSpot, Salesforce, Klaviyo), establishing demographic and behavioral lead scoring models, and automating pipeline stage updates.",
+    "deliverables": [
+      {
+        "title": "1. CRM Workflow Architecture & Nurture Spec",
+        "desc": "Blueprint detailing trigger conditions, conditional branching, delay timers, and automated internal task creation."
+      },
+      {
+        "title": "2. Automated Lead Scoring Model Configuration",
+        "desc": "Lead scoring matrix assigning point values for demographic fit and behavioral actions (email clicks, pricing page visits)."
+      },
+      {
+        "title": "3. CRM Data Hygiene & Segmentation Audit",
+        "desc": "Audit report identifying un-engaged contacts, duplicate lead entries, and list cleanup rules."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between demographic and behavioral lead scoring?",
+        "answer": "Demographic scoring awards points for job title or company size. Behavioral scoring awards points for active engagements like downloading a whitepaper or visiting the pricing page."
+      },
+      {
+        "question": "When should a lead be handed off from Marketing (MQL) to Sales (SQL)?",
+        "answer": "A Marketing Qualified Lead (MQL) becomes a Sales Qualified Lead (SQL) when their cumulative lead score crosses an agreed threshold or when they request a live demo/quote."
+      },
+      {
+        "question": "How do automated workflow delay steps improve deliverability?",
+        "answer": "Inserting realistic delays (e.g. 2 days between emails) prevents subscribers from feeling spammed and reduces unsubscribe rates."
+      }
+    ]
+  }
 }

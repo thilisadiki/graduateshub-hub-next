@@ -8,5 +8,37 @@
     "Integration testing",
     "E2E testing",
     "Mocking"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Automated Unit & Integration Testing Strategies",
+    "overviewBody": "Automated testing ensures software code is reliable and regression-free. Engineering managers test candidates on applying the Testing Pyramid (Unit, Integration, E2E), mocking external dependencies (Jest/Vitest mocks, MSW), and targeting meaningful code coverage metrics.",
+    "deliverables": [
+      {
+        "title": "1. Testing Strategy & Coverage Target Spec",
+        "desc": "Testing document establishing unit vs integration test boundaries, mocking guidelines, and coverage targets."
+      },
+      {
+        "title": "2. Unit & Integration Test Suite (Jest / Vitest / MSW)",
+        "desc": "Comprehensive test suite covering domain logic, API handlers, and database interactions."
+      },
+      {
+        "title": "3. Automated Code Coverage & Benchmark Report",
+        "desc": "Coverage report verifying 80%+ branch/line coverage with deterministic test execution times."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Testing Pyramid?",
+        "answer": "The Testing Pyramid recommends a foundation of many fast, cheap Unit Tests, a moderate layer of Integration Tests, and a thin top layer of slower E2E Tests."
+      },
+      {
+        "question": "Why is Mock Service Worker (MSW) preferred for API mocking?",
+        "answer": "MSW intercepts network requests at the network layer using Service Workers, allowing tests to use real fetch calls without modifying application code."
+      },
+      {
+        "question": "Why can 100% code coverage be a misleading vanity metric?",
+        "answer": "100% line coverage only proves code executed during tests, not that assertions verified correctness or edge-case handling."
+      }
+    ]
+  }
 }

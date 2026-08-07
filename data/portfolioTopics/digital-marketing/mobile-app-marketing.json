@@ -8,5 +8,37 @@
     "Mobile push strategy",
     "In-app referrals",
     "Mobile analytics"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "App Store Optimization (ASO) & Mobile User Acquisition",
+    "overviewBody": "Mobile app marketing drives app downloads and user retention. Mobile marketers demonstrate skills in App Store Optimization (ASO for iOS App Store & Google Play), keyword optimization, app store screenshot conversion testing, and push notification retention flows.",
+    "deliverables": [
+      {
+        "title": "1. App Store Optimization (ASO) Metadata Spec",
+        "desc": "ASO document specifying app title keywords, subtitle text, keyword field entries, and long description copy."
+      },
+      {
+        "title": "2. App Store Screenshot Conversion Brief",
+        "desc": "Design brief outlining app screenshot value callouts, visual framing, and A/B test variations."
+      },
+      {
+        "title": "3. Push Notification Retention Flow Blueprint",
+        "desc": "Automated push campaign series mapping onboarding nudges, feature discovery alerts, and inactive user win-backs."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does ASO differ between the iOS App Store and Google Play Store?",
+        "answer": "iOS uses a dedicated 100-character private keyword field. Google Play indexes keywords directly from the public short and long app descriptions."
+      },
+      {
+        "question": "How do app store screenshots affect conversion rates?",
+        "answer": "Screenshots are the primary visual element users evaluate before tapping download; adding clear benefit captions over UI screens increases conversion by 15-30%."
+      },
+      {
+        "question": "What is an optimal push notification strategy?",
+        "answer": "Send personalized, context-relevant notifications based on user actions, while offering opt-out controls to prevent uninstalls."
+      }
+    ]
+  }
 }

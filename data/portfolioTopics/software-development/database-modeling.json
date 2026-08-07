@@ -8,5 +8,37 @@
     "Normalization",
     "Relational databases",
     "Data integrity"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Relational & NoSQL Database Schema Modeling",
+    "overviewBody": "Database schema design affects data integrity, query flexibility, and system scalability. Senior engineers evaluate candidates on normalization rules (1NF to 3NF), foreign key indexing, choosing relational SQL vs NoSQL document stores, and writing schema migration scripts.",
+    "deliverables": [
+      {
+        "title": "1. Entity Relationship Diagram (ERD) & Schema Spec",
+        "desc": "Detailed ERD diagram documenting table entities, primary/foreign key relationships, and data types."
+      },
+      {
+        "title": "2. Database DDL Migration & Seeding Scripts",
+        "desc": "Production SQL DDL migration files creating tables, foreign key constraints, indexes, and initial seed data."
+      },
+      {
+        "title": "3. Complex Join & Data Integrity Benchmark",
+        "desc": "Benchmark report evaluating complex multi-table query performance and data integrity constraints."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Database Normalization (1NF to 3NF)?",
+        "answer": "Normalization organizes relational schema data to eliminate data redundancy and prevent update/delete anomalies."
+      },
+      {
+        "question": "When should you choose PostgreSQL over MongoDB?",
+        "answer": "Choose PostgreSQL for structured relational data requiring strict ACID transaction guarantees. Choose MongoDB for flexible hierarchical document schemas with rapidly evolving attributes."
+      },
+      {
+        "question": "How do you handle database migrations safely in production?",
+        "answer": "Execute database migrations in backward-compatible steps (e.g. add new column -> deploy new code -> migrate data -> drop old column) to avoid downtime."
+      }
+    ]
+  }
 }

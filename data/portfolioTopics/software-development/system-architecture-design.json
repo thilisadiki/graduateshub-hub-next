@@ -8,5 +8,37 @@
     "Scalability",
     "Microservices",
     "Trade-off analysis"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "System Architecture & Microservices Design",
+    "overviewBody": "System architecture defines how software components scale, communicate, and handle failure. Principal engineers evaluate candidates on Monolith vs Microservices tradeoffs, event-driven architecture, API gateways, database-per-service patterns, and circuit breakers.",
+    "deliverables": [
+      {
+        "title": "1. High-Level System Architecture Specification",
+        "desc": "System blueprint detailing component boundaries, API gateways, asynchronous event buses, and data stores."
+      },
+      {
+        "title": "2. Resilient Microservices API Gateway Config",
+        "desc": "API Gateway routing configuration enforcing rate-limiting, authentication delegation, and health checks."
+      },
+      {
+        "title": "3. Scalability & Resilience Tradeoff Document",
+        "desc": "Technical paper analyzing CAP theorem trade-offs, circuit breaker fallback rules, and event consistency."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "When should a team choose a Monolith over Microservices?",
+        "answer": "Start with a Monolith for early products to move fast without network latency, distributed tracing, and complex DevOps overhead. Consider Microservices when independent scaling or team domain autonomy requires it."
+      },
+      {
+        "question": "What is the Circuit Breaker pattern?",
+        "answer": "Circuit breakers monitor remote service calls and trip automatically when failures exceed thresholds, failing fast and returning fallback responses to prevent cascading system crashes."
+      },
+      {
+        "question": "What is the CAP Theorem?",
+        "answer": "CAP states that a distributed data store can simultaneously provide at most two out of three guarantees: Consistency, Availability, and Partition Tolerance."
+      }
+    ]
+  }
 }

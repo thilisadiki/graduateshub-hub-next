@@ -8,5 +8,37 @@
     "Clean code",
     "SOLID principles",
     "Legacy migrations"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Legacy Code Refactoring & Design Pattern Architecture",
+    "overviewBody": "Refactoring improves code readability, maintainability, and extensibility without altering external behavior. Software architects evaluate candidates on identifying code smells (God classes, long functions, duplicate logic), applying SOLID principles, and refactoring using design patterns.",
+    "deliverables": [
+      {
+        "title": "1. Code Smell Audit & Target Architecture Plan",
+        "desc": "Refactoring proposal identifying SOLID principle violations, high cyclomatic complexity, and target design patterns."
+      },
+      {
+        "title": "2. Refactored Modular Codebase Patch",
+        "desc": "Clean code refactoring separating concerns into decoupled services, strategy objects, and dependency injection wrappers."
+      },
+      {
+        "title": "3. Regression Test Suite Verification",
+        "desc": "Comprehensive unit test suite confirming 100% feature behavioral parity with 0 regression bugs."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Single Responsibility Principle (SRP)?",
+        "answer": "SRP states that a class or module should have one, and only one, reason to change, isolating business responsibilities."
+      },
+      {
+        "question": "How do you refactor safely without breaking production features?",
+        "answer": "Ensure comprehensive unit/integration test coverage exists BEFORE refactoring, allowing tests to catch accidental regressions instantly."
+      },
+      {
+        "question": "When should you use the Strategy Pattern?",
+        "answer": "Use the Strategy Pattern when you have multiple interchangeable algorithms or business logic variations (e.g. Stripe vs PayPal payment processing) to avoid long nested if-else blocks."
+      }
+    ]
+  }
 }

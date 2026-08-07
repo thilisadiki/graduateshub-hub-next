@@ -8,5 +8,37 @@
     "On-page SEO",
     "Technical SEO",
     "Search intent"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Search Engine Optimization (SEO) & Organic Growth Strategy",
+    "overviewBody": "SEO drives long-term organic traffic without continuous ad spend. Hiring managers seek digital marketers who can conduct technical website audits, map keyword search intent, optimize on-page content hierarchy, build high-authority backlinks, and analyze Google Search Console data.",
+    "deliverables": [
+      {
+        "title": "1. Technical & On-Page SEO Audit Report",
+        "desc": "Comprehensive SEO audit analyzing indexability, meta tags, heading structures, internal links, and Core Web Vitals."
+      },
+      {
+        "title": "2. Keyword Research & Intent Mapping Matrix",
+        "desc": "Keyword research spreadsheet classifying search volume, keyword difficulty, and search intent (Informational vs Transactional)."
+      },
+      {
+        "title": "3. Organic Growth Action Plan & Roadmap",
+        "desc": "Prioritized 6-month SEO roadmap outlining content creation, technical fixes, and backlink acquisition tactics."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Informational and Transactional search intent?",
+        "answer": "Informational queries (e.g. 'how to fix credit score') seek knowledge, requiring educational blog guides. Transactional queries (e.g. 'buy credit monitoring software') seek products, requiring conversion-focused landing pages."
+      },
+      {
+        "question": "Why are self-referencing canonical tags important in SEO?",
+        "answer": "Canonical tags inform search engine crawlers which URL is the primary authoritative version, preventing URL parameter duplicate content penalties."
+      },
+      {
+        "question": "How do you measure organic search ROI?",
+        "answer": "Track non-branded organic traffic growth, keyword ranking movements in top 3 positions, and organic conversion value attributed in Google Analytics."
+      }
+    ]
+  }
 }
