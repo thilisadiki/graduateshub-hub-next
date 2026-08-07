@@ -123,7 +123,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
               {/* Honeypot */}
               <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
                 <label htmlFor="jd_hp">Leave this blank</label>
-                <input id="jd_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                <input id="jd_hp" name="jd_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
               </div>
 
               <div>
@@ -132,6 +132,7 @@ export default function JDDecoderModal({ isOpen, onClose }: { isOpen: boolean; o
                 </label>
                 <textarea
                   id="jd-text"
+                  name="jobDescription"
                   value={jobDescription}
                   onChange={e => setJobDescription(e.target.value)}
                   placeholder={SAMPLE_JD}

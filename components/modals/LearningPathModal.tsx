@@ -95,13 +95,14 @@ export default function LearningPathModal({ isOpen, onClose }: { isOpen: boolean
               {/* Honeypot */}
               <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
                 <label htmlFor="lp_hp">Leave this blank</label>
-                <input id="lp_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                <input id="lp_hp" name="lp_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
               </div>
 
               <label htmlFor="lp-goal" className="font-bold text-gray-700 text-sm tracking-wide uppercase">What career goal do you want to achieve?</label>
               <div className="relative">
                 <textarea
                   id="lp-goal"
+                  name="goal"
                   value={goal}
                   onChange={e => setGoal(e.target.value)}
                   placeholder="e.g., 'I want to become a Data Analyst. I know basic Excel but have no coding experience.'"

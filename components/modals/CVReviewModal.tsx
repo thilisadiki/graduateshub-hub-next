@@ -158,7 +158,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
               {/* Honeypot */}
               <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
                 <label htmlFor="cv_hp">Leave this blank</label>
-                <input id="cv_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                <input id="cv_hp" name="cv_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
               </div>
 
               <div>
@@ -167,6 +167,7 @@ export default function CVReviewModal({ isOpen, onClose }: { isOpen: boolean; on
                 </label>
                 <input
                   id="cv-target-role"
+                  name="targetRole"
                   type="text"
                   value={targetRole}
                   onChange={e => setTargetRole(e.target.value)}

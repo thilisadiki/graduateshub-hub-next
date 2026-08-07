@@ -89,13 +89,14 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
               {/* Honeypot */}
               <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
                 <label htmlFor="sg_hp">Leave this blank</label>
-                <input id="sg_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                <input id="sg_hp" name="sg_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
               </div>
 
               <div>
                 <label htmlFor="job-target" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">Target Job / Role</label>
                 <input
                   id="job-target"
+                  name="jobTarget"
                   type="text"
                   value={jobTarget}
                   onChange={e => setJobTarget(e.target.value)}
@@ -107,6 +108,7 @@ export default function SkillsGapModal({ isOpen, onClose }: { isOpen: boolean; o
                 <label htmlFor="current-skills" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">Your Current Skills <span className="text-gray-400 font-normal normal-case">(optional)</span></label>
                 <textarea
                   id="current-skills"
+                  name="currentSkills"
                   value={currentSkills}
                   onChange={e => setCurrentSkills(e.target.value)}
                   placeholder="e.g., Excel, basic accounting, customer service, some SQL..."

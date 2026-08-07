@@ -73,13 +73,14 @@ export default function AIRecommendationModal({ isOpen, onClose }: { isOpen: boo
               {/* Honeypot */}
               <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
                 <label htmlFor="ai_hp">Leave this blank</label>
-                <input id="ai_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                <input id="ai_hp" name="ai_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
               </div>
 
               <label htmlFor="ai-prompt" className="font-bold text-gray-700 text-sm tracking-wide uppercase">Describe what you want to learn:</label>
               <div className="relative">
                 <textarea
                   id="ai-prompt"
+                  name="query"
                   value={query}
                   onChange={e => setQuery(e.target.value)}
                   placeholder="e.g., 'I want to transition into tech but I only know basic Excel. I am interested in solving problems and analyzing data.'"

@@ -161,7 +161,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
               {/* Honeypot */}
               <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10 h-0 overflow-hidden">
                 <label htmlFor="ip_hp">Leave this blank</label>
-                <input id="ip_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                <input id="ip_hp" name="ip_hp" type="text" tabIndex={-1} value={honeypot} onChange={e => setHoneypot(e.target.value)} />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -169,6 +169,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                   <label htmlFor="interview-job-title" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">Job Title</label>
                   <input
                     id="interview-job-title"
+                    name="jobTitle"
                     type="text"
                     value={jobTitle}
                     onChange={e => setJobTitle(e.target.value)}
@@ -180,6 +181,7 @@ export default function InterviewPrepModal({ isOpen, onClose }: { isOpen: boolea
                   <label htmlFor="experience-level" className="font-bold text-gray-700 text-sm tracking-wide uppercase block mb-1.5">Level</label>
                   <select
                     id="experience-level"
+                    name="experienceLevel"
                     value={experienceLevel}
                     onChange={e => setExperienceLevel(e.target.value)}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-shadow text-gray-800"

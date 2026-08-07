@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
-import SearchBar from '@/components/shared/SearchBar';
 import { categories } from '@/data/categories';
 import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
@@ -91,13 +90,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Search Bar */}
-        <div className="hidden sm:flex flex-grow w-full max-w-2xl">
-          <SearchBar variant="header" placeholder="What do you want to learn?" buttonColor="bg-primary hover:bg-[#5a4000]" />
-        </div>
-
         {/* Right Actions */}
-        <div className="flex items-center gap-4 shrink-0">
+        <div className="flex items-center gap-4 shrink-0 ml-auto">
           <div className="hidden md:flex items-center gap-4">
             <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Blog<LinkPendingDot /></Link>
             <Link href="/about" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">About<LinkPendingDot /></Link>
@@ -120,11 +114,6 @@ export default function Navbar() {
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
-      </div>
-
-      {/* Mobile Search */}
-      <div className="sm:hidden px-4 pb-3">
-        <SearchBar variant="header" placeholder="Search courses..." buttonColor="bg-primary hover:bg-[#5a4000]" />
       </div>
 
       {/* Mobile Menu */}

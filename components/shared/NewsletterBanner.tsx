@@ -106,6 +106,7 @@ export default function NewsletterBanner() {
             <form onSubmit={handleSubmit} className="w-full max-w-lg relative group">
               {/* Hidden Honeypot Field for Bot Detection */}
               <input
+                id="newsletter_hp"
                 type="text"
                 name="_hp"
                 value={honeypot}
@@ -120,6 +121,8 @@ export default function NewsletterBanner() {
                   <Mail size={20} />
                 </div>
                 <input
+                  id="newsletter-email"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => {

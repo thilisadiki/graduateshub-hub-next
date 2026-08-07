@@ -74,6 +74,8 @@ export default function SearchBar({
       <div className={`relative flex-grow text-left ${isHeader ? 'flex text-gray-800' : ''}`}>
         {!isHeader && <Search className="absolute left-3 top-3.5 text-gray-400" size={20} />}
         <input
+          id="search-course-input"
+          name="search-course"
           type="text"
           value={searchQuery}
           onChange={handleInputChange}
