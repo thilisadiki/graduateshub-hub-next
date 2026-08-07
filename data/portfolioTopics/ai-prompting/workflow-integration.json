@@ -8,5 +8,37 @@
     "Automation design",
     "API bridging",
     "Workflow mapping"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "LLM Workflow Integration & API Pipeline Design (LangChain / LlamaIndex)",
+    "overviewBody": "Integrating LLMs into production web applications requires robust API pipeline orchestration. Software engineers showcase skills by building LLM pipelines with LangChain/LlamaIndex/Vercel AI SDK, streaming responses via Server-Sent Events (SSE), and configuring multi-provider fallback layers.",
+    "deliverables": [
+      {
+        "title": "1. LLM Application Pipeline Architecture Spec",
+        "desc": "Integration blueprint mapping API request pipelines, model orchestration frameworks, and caching layers."
+      },
+      {
+        "title": "2. Response Streaming & UI Integration Spec",
+        "desc": "Specification establishing Server-Sent Events (SSE) streaming from backend LLM APIs to front-end UI components."
+      },
+      {
+        "title": "3. Multi-Provider LLM Fallback Strategy",
+        "desc": "Failover spec routing queries automatically to secondary providers (e.g. OpenAI to Anthropic/Gemini) on API timeouts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is streaming responses via Server-Sent Events (SSE) crucial for UX?",
+        "answer": "Streaming renders response tokens in real-time as they generate, reducing perceived latency from seconds to milliseconds for end users."
+      },
+      {
+        "question": "When should you use raw LLM SDKs versus frameworks like LangChain?",
+        "answer": "Use raw SDKs (OpenAI/Anthropic) for lightweight, custom, performance-critical applications. Use LangChain/LlamaIndex for complex multi-step chaining and quick RAG prototyping."
+      },
+      {
+        "question": "How do you handle rate limits (429 errors) when calling LLM APIs?",
+        "answer": "Implement exponential backoff retries with random jitter, and configure automatic fallback routing to alternative model endpoints."
+      }
+    ]
+  }
 }

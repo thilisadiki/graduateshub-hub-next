@@ -8,5 +8,37 @@
     "Win-back campaigns",
     "Customer health scoring",
     "Account recovery"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Churn Recovery & Retention Save Playbooks",
+    "overviewBody": "Customer retention directly protects Recurring Revenue (MRR/ARR). Retention managers and CS specialists demonstrate value by analyzing churn survey data, creating proactive intervention playbooks for at-risk accounts, structuring discount save offers, and tracking Net Revenue Retention (NRR).",
+    "deliverables": [
+      {
+        "title": "1. Customer Churn Intervention Playbook",
+        "desc": "Action playbook defining early churn warning signals, outreach triggers, and personalized save scripts."
+      },
+      {
+        "title": "2. Exit Survey Analysis & Churn Root Cause Report",
+        "desc": "Analytical report categorizing cancellation reasons (pricing, missing features, poor support) and strategic recommendations."
+      },
+      {
+        "title": "3. Customer Win-Back Campaign & Offer Tree",
+        "desc": "Structured offer tree detailing discount save permissions, pause options, and automated win-back email sequences."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are early indicators of customer churn risk?",
+        "answer": "Declining login frequency, sudden drop in core feature usage, open high-severity support tickets, unassigned user seats, and change of internal project sponsor."
+      },
+      {
+        "question": "How do you calculate Net Revenue Retention (NRR)?",
+        "answer": "NRR = ((Starting ARR + Expansion ARR - Contraction ARR - Churn ARR) / Starting ARR) * 100. NRR above 100% indicates net revenue growth even without acquiring new customers."
+      },
+      {
+        "question": "How should save offers be structured without devaluing the product?",
+        "answer": "Offer temporary account pauses, free training, or feature add-ons before offering price discounts, reserving discounts for validated budget-conscious accounts."
+      }
+    ]
+  }
 }

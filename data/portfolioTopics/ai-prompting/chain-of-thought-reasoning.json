@@ -8,5 +8,37 @@
     "Logic prompting",
     "Hallucination reduction",
     "Complex reasoning"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Chain-of-Thought (CoT) & Reasoning Prompt Architecture",
+    "overviewBody": "Chain-of-Thought (CoT) prompting breaks complex multi-step reasoning problems into explicit intermediate steps. Prompt engineers evaluate CoT strategies ('Let's think step by step'), Tree of Thoughts (ToT) exploration, and step-by-step logic verification for math, symbolic, and analytical tasks.",
+    "deliverables": [
+      {
+        "title": "1. Chain-of-Thought (CoT) Prompt Framework",
+        "desc": "Structured prompt framework enforcing step-by-step reasoning decomposition before outputting final answers."
+      },
+      {
+        "title": "2. Complex Logic Problem Decomposition Guide",
+        "desc": "Guide demonstrating CoT application for financial calculations, logic puzzles, and multi-step business analysis."
+      },
+      {
+        "title": "3. CoT vs Standard Prompt Benchmark Report",
+        "desc": "Performance report benchmarking reasoning accuracy improvements across standard prompts vs CoT prompts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why does 'Let's think step by step' improve reasoning accuracy?",
+        "answer": "Instructing the model to generate intermediate reasoning tokens forces it to compute step-by-step logic before committing to a final answer token, reducing computational shortcut errors."
+      },
+      {
+        "question": "What is the difference between Chain-of-Thought (CoT) and Tree of Thoughts (ToT)?",
+        "answer": "CoT evaluates a single linear sequence of reasoning steps. ToT evaluates multiple branching reasoning paths simultaneously, allowing the model to self-evaluate and backtrack from unpromising branches."
+      },
+      {
+        "question": "How do you debug logic errors in Chain-of-Thought outputs?",
+        "answer": "Inspect the intermediate reasoning tokens to locate the exact step where incorrect assumptions or mathematical errors occurred, then add targeted Few-Shot CoT examples correcting that step."
+      }
+    ]
+  }
 }

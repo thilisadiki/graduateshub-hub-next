@@ -8,5 +8,37 @@
     "GDPR compliance",
     "Data sanitisation",
     "Access request handling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Data Privacy & POPIA/GDPR Compliance in Support",
+    "overviewBody": "Customer support teams handle sensitive personal information daily. Compliance officers and support leads evaluate candidates on identity verification protocols, handling Data Subject Access Requests (DSARs), redacting PII in support attachments, and adhering to POPIA/GDPR privacy rules.",
+    "deliverables": [
+      {
+        "title": "1. Customer Support Data Privacy & Verification SOP",
+        "desc": "Standard operating procedure establishing strict identity verification steps before disclosing account details."
+      },
+      {
+        "title": "2. DSAR & Data Erasure Workflow Document",
+        "desc": "Workflow guide for processing customer Right-to-Be-Forgotten requests within statutory POPIA/GDPR timeframes."
+      },
+      {
+        "title": "3. PII Masking & Support Redaction Checklist",
+        "desc": "Compliance checklist for redacting credit card numbers, passwords, and IDs from support tickets and CRM attachments."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you verify customer identity over chat or email before sharing sensitive data?",
+        "answer": "Require multi-factor verification: confirm registered account email, verify recent transaction numbers, or send an automated pin verification code to the registered phone number."
+      },
+      {
+        "question": "What is a Data Subject Access Request (DSAR)?",
+        "answer": "A formal request under privacy laws (POPIA/GDPR) where an individual requests access to, correction of, or deletion of their personal data held by an organization."
+      },
+      {
+        "question": "How should support teams handle credit card details sent accidentally by customers?",
+        "answer": "Immediately redact or permanently delete the credit card numbers from ticket logs and notify the customer using secure payment link alternatives."
+      }
+    ]
+  }
 }

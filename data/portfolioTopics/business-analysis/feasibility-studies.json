@@ -8,5 +8,37 @@
     "Options analysis",
     "Weighted scoring",
     "Risk evaluation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Feasibility Studies & TELOS Framework Risk Assessment",
+    "overviewBody": "Feasibility studies evaluate whether a proposed project is viable before committing resources. Business analysts use the TELOS framework (Technical, Economic, Legal, Operational, Schedule), construct 5x5 risk matrices, and present Go / No-Go decision recommendations.",
+    "deliverables": [
+      {
+        "title": "1. Comprehensive Feasibility Study Report (TELOS)",
+        "desc": "Formal feasibility document evaluating Technical, Economic, Legal, Operational, and Schedule viability."
+      },
+      {
+        "title": "2. Probability & Impact Risk Assessment Matrix",
+        "desc": "5x5 risk matrix scoring project risks by probability and severity alongside mitigation strategies."
+      },
+      {
+        "title": "3. Go / No-Go Decision Recommendation Brief",
+        "desc": "Executive recommendation brief outlining project viability tradeoffs and critical success prerequisites."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does the TELOS feasibility framework evaluate?",
+        "answer": "Technical (is technology available?), Economic (is it cost-effective?), Legal (does it comply with law/POPIA?), Operational (will the business adopt it?), Schedule (can it be built in time?)."
+      },
+      {
+        "question": "How does a 5x5 Risk Probability-Impact Matrix work?",
+        "answer": "Risks are scored from 1 to 5 on Likelihood and 1 to 5 on Severity; multiplying both gives a Risk Score (1-25) to prioritize mitigation focus."
+      },
+      {
+        "question": "What defines a clear Go / No-Go decision checkpoint?",
+        "answer": "A milestone where executive sponsors review feasibility findings against predefined success criteria to approve continuation or cancel the initiative."
+      }
+    ]
+  }
 }

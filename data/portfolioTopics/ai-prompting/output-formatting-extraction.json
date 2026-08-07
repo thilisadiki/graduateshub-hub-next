@@ -8,5 +8,37 @@
     "Format constraint",
     "Data parsing",
     "Reliability engineering"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Structured Output Generation & JSON Schema Extraction",
+    "overviewBody": "Integrating LLMs into production code requires strict, predictable structured data outputs. Software engineers master output formatting by enforcing Pydantic models, JSON Schema definitions, OpenAI Structured Outputs, and regex parsing to extract clean JSON payloads from unstructured text.",
+    "deliverables": [
+      {
+        "title": "1. JSON Schema & Pydantic Model Specification",
+        "desc": "Pydantic class definitions and JSON Schema specifications constraining LLM response types, field enums, and required properties."
+      },
+      {
+        "title": "2. Unstructured Text-to-JSON Extraction Pipeline",
+        "desc": "Python pipeline executing text extraction, schema validation, and automatic retries on malformed JSON outputs."
+      },
+      {
+        "title": "3. Schema Validation Error & Recovery Log",
+        "desc": "Test log capturing invalid output schema instances and demonstrating automated fallback repair routines."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do OpenAI Structured Outputs guarantee valid JSON?",
+        "answer": "OpenAI Structured Outputs use constrained decoding at the model token sampling layer to ensure generated tokens strictly match the supplied JSON Schema."
+      },
+      {
+        "question": "Why should you use Pydantic for LLM output parsing in Python?",
+        "answer": "Pydantic automatically validates dictionary types, casts data types, enforces required fields, and raises clear validation errors if the LLM output violates schema rules."
+      },
+      {
+        "question": "How do you handle LLMs wrapping JSON in markdown code blocks?",
+        "answer": "Use regex patterns to extract raw content inside ```json ... ``` code fences, or enforce JSON-only output instructions without markdown formatting."
+      }
+    ]
+  }
 }

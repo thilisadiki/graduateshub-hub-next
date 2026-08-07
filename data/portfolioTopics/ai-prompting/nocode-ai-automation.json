@@ -9,5 +9,37 @@
     "LLM prompt chaining",
     "API payload mapping",
     "Error handling & fallbacks"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "No-Code AI Automation & Custom GPT / Agent Building",
+    "overviewBody": "No-code AI automation connects LLMs with business tools without writing code. Automation specialists build Custom GPTs, configure OpenAPI action schemas, orchestrate Zapier / Make.com AI workflows, and automate email and document generation pipelines.",
+    "deliverables": [
+      {
+        "title": "1. Custom GPT / Agent System Spec & Action Schema",
+        "desc": "Specification detailing Custom GPT system instructions, uploaded knowledge files, and OpenAPI action schemas."
+      },
+      {
+        "title": "2. Zapier / Make.com AI Automation Workflow",
+        "desc": "Visual automation flowchart connecting form triggers, LLM processing modules, and CRM output actions."
+      },
+      {
+        "title": "3. End-to-End Test Execution & Error Handling Log",
+        "desc": "Audit log verifying automated workflow triggers, JSON payload parsing, and error recovery handling."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do OpenAPI Action Schemas work in Custom GPTs?",
+        "answer": "OpenAPI schemas define third-party API endpoints (URL, method, parameters), allowing Custom GPTs to fetch live web data or push actions to external webhooks."
+      },
+      {
+        "question": "What are best practices for Custom GPT System Instructions?",
+        "answer": "Use clear numbered sections: Role & Objective, Knowledge Context Usage, Response Format Rules, and Banned Actions."
+      },
+      {
+        "question": "How do you handle API timeouts in Make.com AI workflows?",
+        "answer": "Add error handler modules ('Break' or 'Resume') to retry failed AI processing calls automatically before sending error alerts."
+      }
+    ]
+  }
 }

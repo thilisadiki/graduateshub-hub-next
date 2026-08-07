@@ -8,5 +8,37 @@
     "Success planning",
     "Churn prevention",
     "Account health"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Success Onboarding & Time-to-Value (TTV)",
+    "overviewBody": "Customer Success onboarding ensures new software clients adopt key features quickly to drive long-term retention. CS managers assess candidates on building 30-60-90 day onboarding plans, reducing Time-to-Value (TTV), tracking milestone completion, and constructing customer health scorecards.",
+    "deliverables": [
+      {
+        "title": "1. Customer Onboarding Playbook & 30-60-90 Day Plan",
+        "desc": "Comprehensive onboarding roadmap detailing kick-off meeting agendas, milestone targets, and user training sessions."
+      },
+      {
+        "title": "2. Time-to-Value (TTV) Milestone Tracker",
+        "desc": "Tracker model measuring client progression from initial account setup to first key feature activation ('Value Moment')."
+      },
+      {
+        "title": "3. Customer Health Scoring Model",
+        "desc": "Scoring framework evaluating client product usage frequency, license adoption, support ticket volume, and executive engagement."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Time-to-Value (TTV) in Customer Success?",
+        "answer": "TTV measures the duration from customer sign-up or contract start until the customer experiences their first tangible business benefit ('Aha moment') from the product."
+      },
+      {
+        "question": "What key metrics belong in a Customer Health Score?",
+        "answer": "Product login frequency, feature adoption depth, license utilization percentage, support ticket sentiment, executive sponsor engagement, and invoice payment history."
+      },
+      {
+        "question": "How do you prevent customer drop-off during onboarding?",
+        "answer": "Establish clear milestone checklists, send proactive progress check-in emails, offer automated product walk-throughs, and schedule weekly milestone alignment calls."
+      }
+    ]
+  }
 }

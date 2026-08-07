@@ -8,5 +8,37 @@
     "LLM-as-a-judge",
     "Benchmarking",
     "Quality assurance"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "LLM Output Evaluation & Benchmarking Rubrics (LLM-as-a-Judge)",
+    "overviewBody": "Rigorous evaluation guarantees AI applications maintain quality in production. AI QA engineers evaluate LLM applications using LLM-as-a-Judge methodologies, RAG Triad metrics (Context Relevance, Groundedness, Answer Relevance), scoring rubrics, and automated test datasets.",
+    "deliverables": [
+      {
+        "title": "1. LLM Evaluation Rubric & Scoring Matrix",
+        "desc": "Multi-dimensional scoring rubric evaluating accuracy, tone, compliance, completeness, and hallucination rates."
+      },
+      {
+        "title": "2. Automated LLM-as-a-Judge Test Suite",
+        "desc": "Python test script using a powerful evaluator LLM (e.g. GPT-4o) to grade application responses against ground-truth datasets."
+      },
+      {
+        "title": "3. RAG Triad Performance Benchmark Report",
+        "desc": "Benchmark report evaluating Context Relevance, Groundedness (Faithfulness), and Answer Relevance scores."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the LLM-as-a-Judge evaluation methodology?",
+        "answer": "Using a high-capability LLM (like GPT-4o or Claude 3.5 Sonnet) as an automated evaluator to grade candidate model outputs against structured scoring rubrics and reference answers."
+      },
+      {
+        "question": "What are the 3 metrics of the RAG Triad?",
+        "answer": "1. Context Relevance (was retrieved context relevant to query?), 2. Groundedness / Faithfulness (is the answer derived solely from retrieved context?), 3. Answer Relevance (does the answer directly address the user query?)."
+      },
+      {
+        "question": "How do you detect hallucinations programmatically?",
+        "answer": "Compare claims in the model's output against facts in the retrieved context using NLI (Natural Language Inference) premise-entailment verification."
+      }
+    ]
+  }
 }

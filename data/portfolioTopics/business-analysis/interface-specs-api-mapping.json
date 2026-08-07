@@ -8,5 +8,37 @@
     "Integration specifications",
     "JSON schema design",
     "System interface modeling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "System Interface Specifications & Data Mapping",
+    "overviewBody": "Interface specifications define how separate IT systems exchange data seamlessly. Technical BAs demonstrate capability by building source-to-target data mapping documents, defining field transformation rules, specifying API payloads, and documenting error handling.",
+    "deliverables": [
+      {
+        "title": "1. Source-to-Target Data Mapping Specification",
+        "desc": "Comprehensive mapping spreadsheet detailing source fields, target schema attributes, data types, and transformation rules."
+      },
+      {
+        "title": "2. System Integration Interface Specification",
+        "desc": "Technical integration document specifying API endpoints, JSON/XML request-response structures, and header standards."
+      },
+      {
+        "title": "3. API Field Transformation & Error Log",
+        "desc": "Specification mapping field conversion logic (e.g. string formatting, date conversions) and exception handling rules."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is a Source-to-Target Data Mapping document?",
+        "answer": "A specification that maps individual data fields from a source system table/API to their corresponding destination fields in a target system, defining necessary data type conversions."
+      },
+      {
+        "question": "How do you handle data type mismatches during integration mapping?",
+        "answer": "Define explicit transformation rules (e.g. cast string '123' to integer 123, reformat date 'DD/MM/YYYY' to ISO 8601 'YYYY-MM-DD')."
+      },
+      {
+        "question": "Why are error response mappings necessary in interface specifications?",
+        "answer": "They define how integration middleware handles system timeouts, invalid payloads, or target server errors gracefully without dropping messages."
+      }
+    ]
+  }
 }

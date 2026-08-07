@@ -8,5 +8,37 @@
     "De-escalation",
     "Empathy",
     "Customer communication"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Support Triage & Angry Customer De-Escalation",
+    "overviewBody": "Frontline support operations determine customer retention and brand reputation. Support leads evaluate candidates on applying the HEAR de-escalation framework (Hear, Empathize, Apologize, Resolve), triaging ticket priority levels (P1 critical vs P4 minor), writing macro response templates, and recovering negative CSAT ratings.",
+    "deliverables": [
+      {
+        "title": "1. De-Escalation & Angry Customer Playbook",
+        "desc": "Response guide detailing phrasing scripts, empathy statements, and escalation boundaries for handling frustrated users."
+      },
+      {
+        "title": "2. Ticket Triage & Severity Matrix (P1-P4)",
+        "desc": "Operational matrix classifying ticket urgency, response SLAs, and routing rules based on business impact."
+      },
+      {
+        "title": "3. CSAT Recovery Workflow Document",
+        "desc": "Standardized workflow for following up on negative CSAT ratings (1-2 stars) and resolving root cause complaints."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the HEAR framework in customer support de-escalation?",
+        "answer": "HEAR stands for Hear (actively listen without interrupting), Empathize (validate their frustration), Apologize (own the experience sincerely without defensive excuses), and Resolve (provide clear, actionable next steps)."
+      },
+      {
+        "question": "When should a customer support ticket be escalated to management?",
+        "answer": "Escalate when a issue involves legal threats, executive complaints, severe financial loss, security data breaches, or when standard agent authority cannot resolve the customer's policy request."
+      },
+      {
+        "question": "How do you recover a negative Customer Satisfaction (CSAT) rating?",
+        "answer": "Reach out within 24 hours via phone or personalized email, acknowledge the initial service breakdown, offer an immediate resolution or gesture of goodwill, and confirm satisfaction."
+      }
+    ]
+  }
 }

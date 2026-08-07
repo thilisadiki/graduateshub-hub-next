@@ -8,5 +8,37 @@
     "Reporting",
     "CSAT analysis",
     "SLA tracking"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Operations Metrics (CSAT, CES, NPS, FCR, FRT)",
+    "overviewBody": "Key Performance Indicators (KPIs) drive customer operations efficiency and quality. Operations managers evaluate candidates on calculating and balancing First Response Time (FRT), First Contact Resolution (FCR), Customer Satisfaction (CSAT), Customer Effort Score (CES), and Net Promoter Score (NPS).",
+    "deliverables": [
+      {
+        "title": "1. Customer Operations KPI Performance Dashboard",
+        "desc": "Excel dashboard model (.xlsx) tracking monthly FRT, FCR, CSAT, CES, and NPS trends alongside agent benchmarks."
+      },
+      {
+        "title": "2. Support Metric Calculation & Benchmark Guide",
+        "desc": "Documentation defining metric formulas, survey trigger timings, and target industry benchmarks."
+      },
+      {
+        "title": "3. Weekly Operational KPI Report",
+        "desc": "Executive memo analyzing weekly metric fluctuations, queue backlog drivers, and staffing capacity recommendations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the trade-off between First Response Time (FRT) and First Contact Resolution (FCR)?",
+        "answer": "Rushing to achieve low FRT can lead to rushed, incomplete agent answers that lower FCR. Operations must balance speed with thorough initial resolution quality."
+      },
+      {
+        "question": "How do you calculate Customer Effort Score (CES)?",
+        "answer": "CES asks customers to rate ease of interaction (e.g. 1-7 scale). CES = (Sum of all responses / Total number of survey responses)."
+      },
+      {
+        "question": "How is Net Promoter Score (NPS) calculated?",
+        "answer": "NPS asks how likely a customer is to recommend the company (0-10 scale). NPS = % Promoters (9-10) minus % Detractors (0-6)."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Persona design",
     "Boundary setting",
     "Tone control"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "System Prompts & AI Persona Architecture",
+    "overviewBody": "System prompts set the persistent behavioral boundaries and persona tone for AI applications. AI developers demonstrate skill by writing enterprise system prompts, defining strict 'Do Not' constraint rules, establishing role personas, and maintaining consistent brand voice across multi-turn chats.",
+    "deliverables": [
+      {
+        "title": "1. Enterprise AI Assistant System Prompt Specification",
+        "desc": "Production-ready system prompt specifying assistant identity, knowledge bounds, tone of voice, and boundary constraints."
+      },
+      {
+        "title": "2. Persona Tone & Constraint Policy Document",
+        "desc": "Policy document establishing rules for handling off-topic inquiries, sensitive queries, and tone adaptations."
+      },
+      {
+        "title": "3. Multi-Turn Persona Consistency Test Log",
+        "desc": "Test suite evaluating system prompt instruction adherence across long 15-turn conversational sessions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between a System Prompt and a User Prompt?",
+        "answer": "A System Prompt sets high-priority persistent rules, persona identity, and safety constraints. A User Prompt is the dynamic input query submitted by the end user during interaction."
+      },
+      {
+        "question": "How do you enforce strict 'Do Not' rules in system prompts?",
+        "answer": "Place negative constraints in a dedicated 'BOUNDARIES & CONSTRAINTS' section using explicit uppercase framing, and test edge-case prompts designed to trigger rule breaches."
+      },
+      {
+        "question": "Why do system prompts lose effectiveness in long conversations?",
+        "answer": "As conversation context grows, earlier system instructions can suffer from attention dilution ('Lost in the Middle' effect) unless reinforced or pinned in API payload architecture."
+      }
+    ]
+  }
 }

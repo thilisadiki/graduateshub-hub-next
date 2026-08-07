@@ -8,5 +8,37 @@
     "Cost-benefit analysis",
     "NPV",
     "Executive communication"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Business Case Development & Financial Cost-Benefit Analysis",
+    "overviewBody": "A business case justifies corporate capital investments. Financial BAs and project leads create executive business cases incorporating problem statements, strategic option evaluations, Return on Investment (ROI), Net Present Value (NPV), Payback Period, and risk assessments.",
+    "deliverables": [
+      {
+        "title": "1. Executive Business Case Document",
+        "desc": "Formal business case detailing strategic context, problem definition, option appraisal, and recommended solution."
+      },
+      {
+        "title": "2. Financial Cost-Benefit Analysis Model",
+        "desc": "Excel financial model (.xlsx) projecting initial CAPEX, recurring OPEX, financial savings, ROI, NPV, and Payback Period."
+      },
+      {
+        "title": "3. Strategic Risk & Option Evaluation Matrix",
+        "desc": "Matrix comparing 'Do Nothing', 'Minimum Viable Fix', and 'Full Transformation' options against strategic goals."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why must a business case evaluate a 'Do Nothing' option?",
+        "answer": "Evaluating 'Do Nothing' establishes a clear baseline of baseline costs, ongoing risks, and missed opportunities if no investment is made."
+      },
+      {
+        "question": "What is the difference between tangible and intangible business benefits?",
+        "answer": "Tangible benefits can be quantified in financial terms (e.g. $50k monthly labor cost savings). Intangible benefits are qualitative (e.g. improved brand reputation or employee morale)."
+      },
+      {
+        "question": "How is Payback Period calculated in a business case?",
+        "answer": "Payback Period = Initial Investment Cost / Annual Net Cash Inflows."
+      }
+    ]
+  }
 }

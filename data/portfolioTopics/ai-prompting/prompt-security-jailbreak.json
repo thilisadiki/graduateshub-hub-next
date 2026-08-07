@@ -8,5 +8,37 @@
     "Prompt injection mitigation",
     "Security vulnerability audit",
     "Adversarial evaluation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Prompt Security & Jailbreak Defense (Prompt Injection Mitigation)",
+    "overviewBody": "Prompt injection is the top security threat facing LLM applications (OWASP LLM Top 10 #1). Security researchers and prompt defense engineers evaluate Direct vs Indirect prompt injection attacks, jailbreak bypasses (roleplay, DAN), prompt armor architecture, and input sanitization.",
+    "deliverables": [
+      {
+        "title": "1. Prompt Injection Vulnerability Audit Report",
+        "desc": "Security audit analyzing application susceptibility to direct injection, indirect injection, and system prompt extraction."
+      },
+      {
+        "title": "2. Prompt Security Defense & Armor Architecture",
+        "desc": "Architecture specification implementing input sanitization, instruction-data separation, and output verification layers."
+      },
+      {
+        "title": "3. Jailbreak Penetration Test Log",
+        "desc": "Security test log documenting simulated adversarial jailbreak attempts and verified defense mitigations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Direct and Indirect Prompt Injection?",
+        "answer": "Direct Injection occurs when a user enters adversarial instructions directly in the chat box. Indirect Injection occurs when an LLM processes external data (e.g. a webpage or PDF) containing hidden malicious prompt instructions."
+      },
+      {
+        "question": "What is a Jailbreak attack in LLMs?",
+        "answer": "An adversarial technique (such as hypotheticals, roleplay framing, or character personas) designed to bypass system prompt constraints and safety filters."
+      },
+      {
+        "question": "How do you defend against Indirect Prompt Injection in RAG applications?",
+        "answer": "Treat all retrieved document content as untrusted data, isolate context inside strict XML delimiters (e.g. <context>...</context>), and instruct the model never to follow instructions found inside data blocks."
+      }
+    ]
+  }
 }

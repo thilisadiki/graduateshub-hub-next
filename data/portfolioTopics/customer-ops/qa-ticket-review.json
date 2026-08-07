@@ -8,5 +8,37 @@
     "Rubric grading",
     "Constructive feedback",
     "Brand voice"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Quality Assurance (QA) Support Ticket Review Scorecards",
+    "overviewBody": "Support QA audits maintain brand standards, accuracy, and policy compliance across support interactions. QA specialists prove capability by designing QA review rubrics, conducting agent calibration sessions, auditing sample ticket batches, and providing 1-on-1 coaching feedback.",
+    "deliverables": [
+      {
+        "title": "1. Support QA Ticket Review Scorecard Rubric",
+        "desc": "Evaluation rubric scoring Soft Skills (Empathy, Tone), Compliance (Privacy, Verification), and Technical Accuracy."
+      },
+      {
+        "title": "2. Agent Performance Calibration Audit Log",
+        "desc": "Monthly QA audit log recording agent evaluation scores, failed mandatory compliance auto-fails, and team averages."
+      },
+      {
+        "title": "3. 1-on-1 QA Coaching & Feedback Guide",
+        "desc": "Coaching template for reviewing QA ticket audits with agents and setting actionable performance goals."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are auto-fail items in a support QA scorecard?",
+        "answer": "Auto-fail items are critical compliance breaches (e.g. sharing PII without identity verification, abusive language, or severe security violations) that result in a 0% score for the ticket."
+      },
+      {
+        "question": "How many tickets should be audited per agent per month?",
+        "answer": "A standard QA sampling rate is 3 to 5 random tickets per agent per month, representing a cross-section of email, chat, and phone channels."
+      },
+      {
+        "question": "What is a QA calibration session?",
+        "answer": "A meeting where QA reviewers and team leads evaluate the same sample ticket independently, then compare scores to ensure consistent grading standards across reviewers."
+      }
+    ]
+  }
 }

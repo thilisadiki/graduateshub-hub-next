@@ -8,5 +8,37 @@
     "Document summarisation",
     "Information density",
     "Context management"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Context Window Management & Token Optimization",
+    "overviewBody": "Context windows limit the amount of text an LLM can process in a single request. AI developers demonstrate performance optimization by tracking BPE token counts (tiktoken), mitigating 'Lost in the Middle' attention loss, implementing context window compression, and optimizing API token costs.",
+    "deliverables": [
+      {
+        "title": "1. Context Window Allocation & Token Budget Model",
+        "desc": "Token budget specification allocating exact token limits for system prompts, retrieved context, chat history, and response completion."
+      },
+      {
+        "title": "2. Dynamic Prompt Compression & Truncation Script",
+        "desc": "Python script using sliding window context summarization and token truncation to stay within API limits."
+      },
+      {
+        "title": "3. LLM API Token Cost Optimization Report",
+        "desc": "Financial optimization report measuring cost savings achieved through prompt compression and cache hits."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the 'Lost in the Middle' phenomenon in LLM context windows?",
+        "answer": "Research shows LLMs recall information best at the very beginning and very end of long context windows, while frequently missing key details buried in the middle."
+      },
+      {
+        "question": "How do Byte-Pair Encoding (BPE) tokenizers count text?",
+        "answer": "BPE tokenizers break words into common sub-word character chunks (e.g. 'unbelievable' -> 'un', 'believ', 'able'), where 1 token averages ~4 characters or 0.75 words in English."
+      },
+      {
+        "question": "How do you manage conversation history in long multi-turn chat sessions?",
+        "answer": "Use a sliding window memory approach (keep last N turns) paired with periodic background LLM summarization of older chat history."
+      }
+    ]
+  }
 }

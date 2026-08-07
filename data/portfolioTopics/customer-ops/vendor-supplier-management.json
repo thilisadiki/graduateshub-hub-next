@@ -8,5 +8,37 @@
     "SLA monitoring",
     "Dispute resolution",
     "Performance tracking"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Vendor & Third-Party Supplier SLA Management",
+    "overviewBody": "Third-party vendors (3PL logistics, software vendors, call centers) directly impact operational quality. Vendor managers evaluate candidates on building vendor SLA scorecards, conducting performance reviews, monitoring contract compliance, and enforcing penalty clauses.",
+    "deliverables": [
+      {
+        "title": "1. Vendor Performance & SLA Evaluation Scorecard",
+        "desc": "Monthly scorecard assessing third-party suppliers on SLA uptime, quality accuracy, response times, and billing correctness."
+      },
+      {
+        "title": "2. 3PL / Supplier Audit & Review Report",
+        "desc": "Quarterly audit report evaluating 3PL logistics error rates, warehouse SLA compliance, and contract renewal recommendations."
+      },
+      {
+        "title": "3. Vendor Contract Escalation & Dispute SOP",
+        "desc": "Standard operating procedure detailing step-by-step resolution processes for vendor SLA breaches and penalty enforcement."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What key Performance Indicators (KPIs) evaluate 3PL warehouse suppliers?",
+        "answer": "Order Accuracy Rate (99.8%+), Same-Day Shipping SLA Compliance, Inventory Count Accuracy, and Return Processing Speed."
+      },
+      {
+        "question": "How do SLA penalty clauses work in vendor contracts?",
+        "answer": "Penalty clauses deduct financial credits (e.g. 5% monthly fee reduction) from vendor invoices if monthly service performance falls below contractually agreed SLA minimums."
+      },
+      {
+        "question": "How often should vendor performance reviews be conducted?",
+        "answer": "Conduct monthly scorecard reviews for core operational vendors and comprehensive quarterly executive business reviews (QBRs) for strategic partners."
+      }
+    ]
+  }
 }

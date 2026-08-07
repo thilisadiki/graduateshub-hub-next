@@ -8,5 +8,37 @@
     "Self-serve support",
     "Information architecture",
     "Readability"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Knowledge Base Article Writing & Self-Service Optimization",
+    "overviewBody": "Self-service knowledge bases empower customers to resolve questions independently while reducing support ticket volumes. Support leaders evaluate candidates on Knowledge-Centered Service (KCS) principles, writing scannable help articles, optimizing search keywords, and tracking ticket deflection rates.",
+    "deliverables": [
+      {
+        "title": "1. Self-Service Knowledge Base Article Library (5 Articles)",
+        "desc": "Formatted help articles featuring clear step-by-step guides, callout boxes, and annotated UI screenshots."
+      },
+      {
+        "title": "2. KCS Content Governance & Maintenance Plan",
+        "desc": "Governance framework establishing article review schedules, authoring standards, and flagging rules for stale content."
+      },
+      {
+        "title": "3. Help Center Search & Ticket Deflection Audit Report",
+        "desc": "Analytics report tracking search terms with zero results, article helpfulness ratings, and deflected ticket volumes."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the core principles of Knowledge-Centered Service (KCS)?",
+        "answer": "KCS integrates knowledge creation directly into the support workflow: capture knowledge in the moment, structure articles for reuse, refine articles based on real demand, and share collective knowledge across the team."
+      },
+      {
+        "question": "How do you calculate help center ticket deflection rate?",
+        "answer": "Ticket Deflection Rate = (Total Help Center Visitors who did NOT submit a ticket / Total Help Center Visitors) * 100."
+      },
+      {
+        "question": "How should help center articles be structured for scannability?",
+        "answer": "Use descriptive H2 headings, short 2-3 sentence paragraphs, numbered lists for sequential steps, bold UI button text, and visual callout boxes for warnings."
+      }
+    ]
+  }
 }

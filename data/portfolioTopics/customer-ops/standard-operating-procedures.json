@@ -8,5 +8,37 @@
     "Process documentation",
     "Clarity",
     "Edge-case handling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Standard Operating Procedures (SOP Writing & Process Docs)",
+    "overviewBody": "Standard Operating Procedures ensure consistent operational execution across growing support and operations teams. Operations managers test candidates on writing clear, ISO-compliant SOPs, designing decision flowcharts, establishing document control numbering, and specifying exception handling.",
+    "deliverables": [
+      {
+        "title": "1. Production-Ready Standard Operating Procedure (SOP)",
+        "desc": "Formal SOP document detailing purpose, scope, roles, step-by-step procedure instructions, and revision history."
+      },
+      {
+        "title": "2. Process Flowchart & Exception Matrix",
+        "desc": "Visual process diagram mapping primary execution steps and troubleshooting branches for operational exceptions."
+      },
+      {
+        "title": "3. SOP Compliance Audit Checklist",
+        "desc": "Audit scorecard for inspecting team compliance with documented operational procedures."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the essential sections of a corporate Standard Operating Procedure (SOP)?",
+        "answer": "Header (Document ID, Version, Effective Date), Purpose, Scope, Responsibilities (RACI), Step-by-Step Procedure, Definitions, Exception Handling, and Revision Log."
+      },
+      {
+        "question": "Why is document control numbering important for SOPs?",
+        "answer": "Unique document IDs and version numbers (e.g. SOP-OPS-04 v2.1) ensure team members follow the latest approved procedures rather than obsolete guidelines."
+      },
+      {
+        "question": "How do you audit SOP compliance in operations?",
+        "answer": "Conduct quarterly spot-check audits sampling executed tasks against written SOP steps, logging compliance percentages and updating unclear steps."
+      }
+    ]
+  }
 }

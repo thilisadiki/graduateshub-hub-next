@@ -9,5 +9,37 @@
     "RACI design",
     "Status reporting",
     "Agile facilitation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Project Coordination, RACI Matrix & RAID Log Management",
+    "overviewBody": "Project coordination keeps multidisciplinary teams aligned and on schedule. Project coordinators and junior project managers use RACI matrices, maintain RAID logs (Risks, Assumptions, Issues, Dependencies), and prepare executive project status reports.",
+    "deliverables": [
+      {
+        "title": "1. Project RACI Matrix & Governance Blueprint",
+        "desc": "RACI matrix clarifying team role responsibilities across project deliverables and decision points."
+      },
+      {
+        "title": "2. RAID Log & Project Status Dashboard",
+        "desc": "Active RAID log tracking project Risks, Assumptions, Issues, and Dependencies alongside mitigation actions."
+      },
+      {
+        "title": "3. Project Milestone & Governance Plan",
+        "desc": "Project charter detailing milestone schedules, team communication cadences, and escalation paths."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does RACI stand for in project management?",
+        "answer": "Responsible (does the work), Accountable (approves/owns the work), Consulted (provides input), Informed (kept updated)."
+      },
+      {
+        "question": "Why should a task have only ONE person marked 'Accountable' in a RACI matrix?",
+        "answer": "Assigning multiple Accountable owners creates diluted ownership where nobody takes ultimate responsibility for deliverable quality."
+      },
+      {
+        "question": "What is a RAID Log?",
+        "answer": "A RAID Log is a centralized tracking document for Risks (potential future problems), Assumptions (things assumed true), Issues (current active problems), and Dependencies (external prerequisites)."
+      }
+    ]
+  }
 }

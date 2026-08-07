@@ -8,5 +8,37 @@
     "Exception handling",
     "Driver communication",
     "Route planning"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Logistics, Order Fulfillment & Dispatch Operations",
+    "overviewBody": "Logistics and dispatch operations ensure physical products reach customers accurately and on schedule. Operations managers assess candidates on order fulfillment workflows, reducing 'Where Is My Order' (WISMO) tickets, courier SLA auditing, and inventory error resolution.",
+    "deliverables": [
+      {
+        "title": "1. Order Fulfillment & Dispatch Standard Operating Procedure",
+        "desc": "SOP mapping warehouse picking, packing, shipping label generation, and carrier dispatch handoffs."
+      },
+      {
+        "title": "2. WISMO Ticket Reduction & Tracking Strategy",
+        "desc": "Strategy document outlining automated SMS/email tracking updates to proactively eliminate WISMO inquiry tickets."
+      },
+      {
+        "title": "3. Courier SLA & Delivery Performance Audit Log",
+        "desc": "Audit log tracking courier delivery times, damaged package rates, lost-in-transit claims, and SLA compliance."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is a WISMO ticket and how do you reduce its volume?",
+        "answer": "WISMO stands for 'Where Is My Order'. Reduce WISMO tickets by sending automated branded tracking notifications at key milestones (Order Received, Shipped, Out for Delivery)."
+      },
+      {
+        "question": "How do you handle lost-in-transit courier escalations?",
+        "answer": "Verify courier tracking scans, file a formal tracer claim with the shipping partner, and immediately dispatch a replacement order or refund to maintain customer goodwill."
+      },
+      {
+        "question": "What key metrics evaluate courier delivery performance?",
+        "answer": "On-Time Delivery (OTD) percentage, Average Transit Time, Package Damage Rate, and First-Time Delivery Success Rate."
+      }
+    ]
+  }
 }

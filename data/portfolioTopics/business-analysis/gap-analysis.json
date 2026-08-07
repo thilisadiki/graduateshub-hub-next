@@ -8,5 +8,37 @@
     "Current-state assessment",
     "Remediation planning",
     "Compliance"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Gap Analysis & As-Is vs To-Be State Assessment",
+    "overviewBody": "Gap analysis identifies what an organization needs to achieve its target goals. Senior business analysts demonstrate strategic insight by analyzing current state capabilities (As-Is), defining desired future state (To-Be), isolating operational deltas, and creating gap remediation roadmaps.",
+    "deliverables": [
+      {
+        "title": "1. As-Is vs To-Be Gap Analysis Matrix",
+        "desc": "Structured matrix comparing current process capabilities against future requirements across people, process, and technology."
+      },
+      {
+        "title": "2. Capability Assessment & Delta Report",
+        "desc": "Analytical report detailing root causes of performance gaps and operational risks."
+      },
+      {
+        "title": "3. Strategic Gap Remediation Roadmap",
+        "desc": "Phased implementation roadmap outlining action items, resource requirements, and milestone timelines to bridge identified gaps."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the core steps in conducting a Gap Analysis?",
+        "answer": "1. Identify current state (As-Is), 2. Define target future state (To-Be), 3. Identify the gaps between states, 4. Develop an action plan to bridge the gaps."
+      },
+      {
+        "question": "What dimensions should be evaluated during a business gap analysis?",
+        "answer": "People (skills/roles), Processes (workflows/SOPs), Technology (systems/tools), and Data (governance/quality)."
+      },
+      {
+        "question": "How do you prioritize gaps for remediation?",
+        "answer": "Prioritize gaps based on business impact, risk severity, compliance urgency, and implementation cost."
+      }
+    ]
+  }
 }

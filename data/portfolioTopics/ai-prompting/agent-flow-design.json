@@ -8,5 +8,37 @@
     "Systems thinking",
     "State management",
     "Workflow design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "AI Agent Flow & Tool-Calling Architecture (Function Calling)",
+    "overviewBody": "AI agents execute autonomous multi-step tasks by calling external tools and APIs. AI engineers build agent workflows using the ReAct framework (Reason + Act), OpenAI Function Calling / Gemini Tool Use, JSON tool schema definitions, and loop control guards.",
+    "deliverables": [
+      {
+        "title": "1. AI Agent ReAct Loop Architecture Diagram",
+        "desc": "Flowchart illustrating Thought -> Action -> Observation -> Thought execution loops for multi-tool AI agents."
+      },
+      {
+        "title": "2. Tool Calling JSON Schema Specification",
+        "desc": "Collection of tool JSON schemas defining function names, parameters, descriptions, and required arguments."
+      },
+      {
+        "title": "3. Multi-Step Agent Execution Trace Log",
+        "desc": "Trace log detailing agent tool calls, API request-response payloads, state updates, and goal completion."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does the ReAct (Reason + Act) agent loop work?",
+        "answer": "The agent generates a Thought about the current state, selects an Action (tool call), receives an Observation (tool execution output), and repeats until reaching the final answer."
+      },
+      {
+        "question": "Why are clear tool descriptions critical for OpenAI Function Calling?",
+        "answer": "The LLM relies entirely on tool description text to determine WHEN and HOW to invoke a tool; vague descriptions lead to misfires or incorrect argument formatting."
+      },
+      {
+        "question": "How do you prevent AI agents from getting stuck in infinite execution loops?",
+        "answer": "Implement maximum step limits (e.g. max 5 iterations), timeout guards, duplicate tool call detection, and explicit human-in-the-loop fallback triggers."
+      }
+    ]
+  }
 }

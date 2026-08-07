@@ -8,5 +8,37 @@
     "Status page updates",
     "Post-mortems",
     "Crisis management"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Incident Management & Crisis Customer Communications",
+    "overviewBody": "Service outages test a company's transparency and operational resilience. Incident response leads and operations specialists create crisis communications playbooks, status page update templates (Statuspage.io), incident update cadences, and transparent post-incident reports (RCA).",
+    "deliverables": [
+      {
+        "title": "1. Crisis Communications & Outage Playbook",
+        "desc": "Playbook defining incident severity tiers (Sev-1 critical outage vs Sev-3 minor bug), comms leads, and update channels."
+      },
+      {
+        "title": "2. Status Page Incident Update Templates",
+        "desc": "Pre-approved copy templates for Investigating, Identified, Monitoring, and Resolved status page updates."
+      },
+      {
+        "title": "3. Post-Incident Root Cause Communication (RCA) Memo",
+        "desc": "Customer-facing RCA memo explaining technical root causes, impact duration, and preventive infrastructure upgrades."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How frequently should customer status pages be updated during an active outage?",
+        "answer": "Update status pages every 15 to 30 minutes during major Sev-1 outages, even if the update simply confirms that engineers are continuing active investigation."
+      },
+      {
+        "question": "What key elements belong in a customer-facing Post-Incident Report (RCA)?",
+        "answer": "Executive Summary, Incident Timeline (UTC), Root Cause Explanation, Impact Summary, Immediate Remediation Steps, and Long-Term Preventive Actions."
+      },
+      {
+        "question": "How do you maintain customer trust during major service downtime?",
+        "answer": "Acknowledge issues instantly, communicate transparently without hiding technical mistakes, provide frequent updates, and offer pro-rated service credits when appropriate."
+      }
+    ]
+  }
 }

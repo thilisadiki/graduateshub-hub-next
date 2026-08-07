@@ -8,5 +8,37 @@
     "Acceptance criteria",
     "Story mapping",
     "Agile requirements"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Agile User Stories & Acceptance Criteria (Gherkin Syntax)",
+    "overviewBody": "User stories define product requirements from the end user's perspective. Agile teams assess business analysts on writing stories using standard syntax ('As a... I want... So that...'), adhering to INVEST quality criteria, and defining testable acceptance criteria in Gherkin (Given-When-Then) format.",
+    "deliverables": [
+      {
+        "title": "1. Agile User Story Backlog Specification",
+        "desc": "Product backlog document containing well-structured user stories complete with user personas and business value justifications."
+      },
+      {
+        "title": "2. Gherkin Acceptance Criteria Test Suite",
+        "desc": "Acceptance criteria library written in Given-When-Then format covering happy path and edge-case scenarios."
+      },
+      {
+        "title": "3. INVEST Criteria Quality Audit Log",
+        "desc": "Quality assurance checklist verifying user stories meet INVEST standards before sprint planning."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does the INVEST acronym stand for in user stories?",
+        "answer": "Independent, Negotiable, Valuable, Estimable, Small, and Testable."
+      },
+      {
+        "question": "How do you write acceptance criteria using Gherkin syntax?",
+        "answer": "Given [initial context/state], When [action occurs], Then [expected outcome/behavior]."
+      },
+      {
+        "question": "What is the difference between a User Story and a System Requirement?",
+        "answer": "A User Story focuses on end-user needs and value ('As a shopper...'). A System Requirement specifies technical mechanics ('The database shall encrypt stored credit card numbers')."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Boundary setting",
     "Clarity",
     "Risk mitigation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Policy Writing (Refunds, Returns, SLAs & Terms)",
+    "overviewBody": "Clear customer-facing policies reduce disputes, chargebacks, and legal liability. Operations specialists write transparent refund policies, return guidelines, delivery SLAs, and terms summary documents using plain language while maintaining fraud prevention controls.",
+    "deliverables": [
+      {
+        "title": "1. Customer Refund, Return & Cancellation Policy",
+        "desc": "Clear customer-facing policy document detailing eligibility windows, return shipping rules, and refund processing timelines."
+      },
+      {
+        "title": "2. Service Level Agreement (SLA) & Terms Summary",
+        "desc": "Plain-language summary explaining service availability SLAs, response time commitments, and credit remedy terms."
+      },
+      {
+        "title": "3. Policy Exception Matrix for Frontline Agents",
+        "desc": "Internal matrix empowering support agents to grant policy exceptions up to specified financial thresholds."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does a transparent return policy reduce credit card chargebacks?",
+        "answer": "When customers clearly understand return instructions and receive prompt refund confirmations, they are far less likely to file chargeback disputes with their bank."
+      },
+      {
+        "question": "How do you empower support agents while preventing policy abuse?",
+        "answer": "Create a tiered Policy Exception Matrix: Tier 1 agents can issue up to $25 goodwill credits without approval; Tier 2 leads approve up to $100."
+      },
+      {
+        "question": "Why should customer policies avoid dense legalese?",
+        "answer": "Plain-language policies improve customer trust, lower support ticket inquiries asking for policy clarification, and reduce customer frustration."
+      }
+    ]
+  }
 }

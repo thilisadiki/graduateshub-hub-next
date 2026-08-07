@@ -8,5 +8,37 @@
     "Constraint setting",
     "Iterative refinement",
     "Clarity"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Prompt Engineering Fundamentals (Zero-Shot, Few-Shot & Role Prompting)",
+    "overviewBody": "Prompt engineering optimizes LLM outputs through clear instruction framing. AI engineers and prompt specialists demonstrate expertise by mastering Zero-Shot, Few-Shot, and Role Prompting techniques, configuring temperature parameters (0.0 for code/facts vs 0.7 for creative generation), and eliminating model hallucinations.",
+    "deliverables": [
+      {
+        "title": "1. Few-Shot Prompt Template Library",
+        "desc": "Structured prompt library containing Zero-Shot, Few-Shot, and System Role templates across business use cases."
+      },
+      {
+        "title": "2. Prompt Iteration & Performance Comparison Log",
+        "desc": "Benchmark log tracking accuracy improvements, response consistency, and token usage across prompt revisions."
+      },
+      {
+        "title": "3. LLM Parameter & Temperature Tuning Spec",
+        "desc": "Guide establishing temperature, Top-P, and frequency penalty settings for deterministic vs creative LLM tasks."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Zero-Shot and Few-Shot prompting?",
+        "answer": "Zero-Shot asks the model to perform a task without providing example input-output pairs. Few-Shot provides 2 to 5 exemplary input-output demonstrations inside the prompt to guide output structure and tone."
+      },
+      {
+        "question": "How does the temperature parameter affect LLM responses?",
+        "answer": "Temperature controls randomness: 0.0 makes outputs deterministic and focused (ideal for code and extraction), while higher settings (0.7-1.0) increase response creativity and variability."
+      },
+      {
+        "question": "How do you reduce LLM hallucinations in prompts?",
+        "answer": "Ground the prompt with explicit source context, instruct the model to answer ONLY based on provided text, and explicitly direct it to state 'I do not have enough information' when facts are missing."
+      }
+    ]
+  }
 }

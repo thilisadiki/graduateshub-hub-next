@@ -8,5 +8,37 @@
     "Data normalisation",
     "Data dictionaries",
     "Logical modelling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Business Data Modeling & Entity Relationship Diagrams (ERD)",
+    "overviewBody": "Data modeling structures organizational information logically to support system design. Business analysts create Conceptual and Logical Data Models, Entity Relationship Diagrams (ERDs) using Crow's Foot notation, cardinality mappings (1:1, 1:N, M:N), and data dictionaries.",
+    "deliverables": [
+      {
+        "title": "1. Business Entity Relationship Diagram (ERD)",
+        "desc": "ERD diagram using Crow's Foot notation illustrating entities, attributes, primary/foreign keys, and cardinalities."
+      },
+      {
+        "title": "2. Conceptual & Logical Data Model Spec",
+        "desc": "Documentation detailing business entity definitions, attribute rules, and relational relationships."
+      },
+      {
+        "title": "3. Data Dictionary & Cardinality Matrix",
+        "desc": "Data dictionary defining attribute data types, mandatory/optional nullability constraints, and valid domain values."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Conceptual, Logical, and Physical Data Models?",
+        "answer": "Conceptual models show high-level business entities. Logical models define attributes, keys, and relationships independent of technology. Physical models specify actual database implementation details (table names, indexes, SQL data types)."
+      },
+      {
+        "question": "What do Crow's Foot notation cardinality symbols mean?",
+        "answer": "Symbols indicate relationship bounds: One (||), Many (>|), Zero (O). Common relationships include 1:1 (One-to-One), 1:N (One-to-Many), and M:N (Many-to-Many)."
+      },
+      {
+        "question": "How do you resolve a Many-to-Many (M:N) relationship in data modeling?",
+        "answer": "Decompose the M:N relationship into two 1:N relationships by introducing an intermediate associative junction entity (e.g. Student_Courses junction table)."
+      }
+    ]
+  }
 }

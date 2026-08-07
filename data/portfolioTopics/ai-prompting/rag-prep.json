@@ -8,5 +8,37 @@
     "Data cleaning",
     "Metadata extraction",
     "RAG principles"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Retrieval-Augmented Generation (RAG) Document Preprocessing",
+    "overviewBody": "RAG combines LLMs with external knowledge bases. Data engineers and AI developers demonstrate competence by chunking raw documents (Fixed-Size vs Semantic Chunking), configuring overlap parameters (10-20%), tagging metadata, and cleaning text for vector embedding.",
+    "deliverables": [
+      {
+        "title": "1. RAG Document Chunking & Cleaning Specification",
+        "desc": "Specification defining optimal chunk sizes (e.g. 512 tokens), overlap ratios, header preservation rules, and noise removal."
+      },
+      {
+        "title": "2. Chunk Metadata Taxonomy & Tagging Architecture",
+        "desc": "Metadata schema tagging document source, author, creation date, section title, and access permissions per chunk."
+      },
+      {
+        "title": "3. RAG Data Ingestion Test Log",
+        "desc": "Audit log verifying document parsing accuracy, chunk boundary integrity, and embedding vector readiness."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Fixed-Size and Semantic Chunking in RAG?",
+        "answer": "Fixed-size chunking splits text by strict token/character counts (e.g. 500 tokens). Semantic chunking splits text at natural semantic boundaries (paragraphs, headings, or topic shifts) to preserve context integrity."
+      },
+      {
+        "question": "Why is chunk overlap important in RAG preprocessing?",
+        "answer": "Chunk overlap (typically 10-20%) ensures key sentences spanning chunk boundaries are not split in half, preserving complete contextual meaning for vector retrieval."
+      },
+      {
+        "question": "Why should metadata be attached to document chunks?",
+        "answer": "Metadata enables hybrid search filtering (e.g. filtering retrieval to docs created in 2026 or tagged under specific departments) before vector similarity ranking."
+      }
+    ]
+  }
 }

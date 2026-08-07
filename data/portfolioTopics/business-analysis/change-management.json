@@ -8,5 +8,37 @@
     "ADKAR",
     "Impact assessment",
     "Organisational readiness"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Organizational Change Management & Prosci ADKAR Model",
+    "overviewBody": "Technology implementations fail without effective user adoption. Change managers and BAs apply the Prosci ADKAR model (Awareness, Desire, Knowledge, Ability, Reinforcement) to conduct change impact assessments, design training programs, and address user resistance.",
+    "deliverables": [
+      {
+        "title": "1. Organizational Change Impact Assessment",
+        "desc": "Impact matrix evaluating how upcoming system changes affect specific job roles, processes, and daily tasks."
+      },
+      {
+        "title": "2. ADKAR Change Management Strategy & Plan",
+        "desc": "Comprehensive change roadmap structured across Awareness, Desire, Knowledge, Ability, and Reinforcement pillars."
+      },
+      {
+        "title": "3. User Training & Resistance Mitigation Plan",
+        "desc": "Training plan and communication strategy addressing stakeholder anxiety and adoption bottlenecks."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the 5 elements of the Prosci ADKAR model?",
+        "answer": "Awareness (of the need for change), Desire (to support the change), Knowledge (on how to change), Ability (to implement skills), and Reinforcement (to sustain the change)."
+      },
+      {
+        "question": "Why do enterprise software projects experience user resistance?",
+        "answer": "Resistance stems from lack of communication on 'why' the change is occurring, fear of job obsolescence, inadequate training, or poor user experience."
+      },
+      {
+        "question": "How do you measure change adoption success?",
+        "answer": "Track system login active rates, feature usage metrics, support ticket volumes post-launch, and user proficiency assessment scores."
+      }
+    ]
+  }
 }

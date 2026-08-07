@@ -8,5 +8,37 @@
     "Prompt injection defence",
     "Topic restriction",
     "AI safety"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "AI Safety, Content Filtering & Output Guardrails",
+    "overviewBody": "Safety guardrails protect enterprise applications from unsafe content, topic drift, and privacy violations. AI safety developers implement NeMo Guardrails or Guardrails AI, PII detection masking, toxicity filters, and topic boundary enforcement.",
+    "deliverables": [
+      {
+        "title": "1. AI Safety Guardrails Policy Specification",
+        "desc": "Policy document establishing input/output guardrail rules, toxicity thresholds, and banned topic boundaries."
+      },
+      {
+        "title": "2. PII & Toxicity Masking Pipeline Spec",
+        "desc": "Regex and NER pipeline detecting and redacting PII (emails, SSNs, credit cards) before sending queries to LLM APIs."
+      },
+      {
+        "title": "3. Fallback Response & Boundary Test Log",
+        "desc": "Security test log verifying graceful fallback responses when users attempt off-topic or unsafe queries."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Input Guardrails and Output Guardrails?",
+        "answer": "Input Guardrails inspect user queries BEFORE reaching the LLM to block malicious prompts or PII. Output Guardrails inspect LLM responses BEFORE rendering to users to catch hallucinations, toxicity, or data leaks."
+      },
+      {
+        "question": "How do topic boundary guardrails work?",
+        "answer": "Topic guardrails use semantic intent classifiers to verify user queries match approved application domains (e.g. banking support), returning polite fallback messages for off-topic requests."
+      },
+      {
+        "question": "Why is PII masking necessary before sending prompts to external APIs?",
+        "answer": "Masking PII prevents sensitive customer data from being transmitted to third-party cloud LLM providers, ensuring compliance with POPIA and GDPR."
+      }
+    ]
+  }
 }

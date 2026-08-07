@@ -8,5 +8,37 @@
     "Process analysis",
     "Value stream mapping",
     "Continuous improvement"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Process Mapping & Business Process Modeling (BPMN 2.0)",
+    "overviewBody": "Process mapping provides visual clarity on operational workflows, handoffs, and system interactions. Business analysts demonstrate value by creating BPMN 2.0 swimlane diagrams, modeling As-Is vs To-Be business processes, identifying operational bottlenecks, and quantifying cycle time improvements.",
+    "deliverables": [
+      {
+        "title": "1. BPMN 2.0 Process Swimlane Diagram",
+        "desc": "Detailed BPMN 2.0 diagram mapping role swimlanes, start/end events, task activities, and decision gateways."
+      },
+      {
+        "title": "2. As-Is vs To-Be Process Optimization Spec",
+        "desc": "Comparative specification documenting baseline process friction points and streamlined To-Be target flows."
+      },
+      {
+        "title": "3. Operational Bottleneck Analysis Memo",
+        "desc": "Executive memo measuring task cycle times, queue delays, manual workarounds, and automation opportunities."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Exclusive (XOR) and Parallel (AND) gateways in BPMN 2.0?",
+        "answer": "An Exclusive (XOR) gateway routes execution down exactly one path based on a condition. A Parallel (AND) gateway splits execution into multiple concurrent paths that run simultaneously."
+      },
+      {
+        "question": "Why are swimlanes essential in process modeling?",
+        "answer": "Swimlanes visually segregate activities by department, role, or system, making organizational handoffs and accountability boundaries instantly clear."
+      },
+      {
+        "question": "What is the difference between an As-Is and To-Be process map?",
+        "answer": "An As-Is map depicts current operational reality including inefficiencies. A To-Be map depicts the optimized future process state after proposed technical or procedural changes."
+      }
+    ]
+  }
 }

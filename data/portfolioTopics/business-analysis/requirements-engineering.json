@@ -8,5 +8,37 @@
     "BRD writing",
     "Traceability",
     "Prioritisation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Requirements Elicitation & BRD / SRS Specification Writing",
+    "overviewBody": "Requirements engineering translates vague business problems into precise technical specifications. Hiring managers evaluate business analysts on writing comprehensive Business Requirements Documents (BRDs), defining Functional vs Non-Functional Requirements (NFRs), and building traceability matrices.",
+    "deliverables": [
+      {
+        "title": "1. Comprehensive Business Requirements Document (BRD)",
+        "desc": "Formal BRD detailing project scope, business objectives, stakeholder impacts, and functional requirements."
+      },
+      {
+        "title": "2. Functional & Non-Functional Traceability Matrix",
+        "desc": "Requirements Traceability Matrix (RTM) mapping business goals to system requirements, NFRs, and test cases."
+      },
+      {
+        "title": "3. Requirements Elicitation Interview Protocol",
+        "desc": "Elicitation plan documenting stakeholder interview scripts, observation notes, and workshop techniques."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Functional and Non-Functional Requirements (NFRs)?",
+        "answer": "Functional requirements describe what the system must do (e.g. process payment). Non-Functional requirements specify quality attributes of how it performs (e.g. 99.9% uptime, <200ms page load speed, PCI-DSS compliance)."
+      },
+      {
+        "question": "What is the MoSCoW prioritization technique?",
+        "answer": "MoSCoW categorizes requirements into Must have (critical), Should have (important), Could have (desirable), and Won't have (out of scope for current release)."
+      },
+      {
+        "question": "Why is a Requirements Traceability Matrix (RTM) important?",
+        "answer": "An RTM ensures that every business requirement is tracked through system design, development, and testing, preventing missing features or unrequested scope creep."
+      }
+    ]
+  }
 }

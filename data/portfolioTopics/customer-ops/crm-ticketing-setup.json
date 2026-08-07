@@ -8,5 +8,37 @@
     "Zendesk / Jira Service Desk",
     "Ticket workflows",
     "Support automation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Customer Support CRM Queue Setup (Zendesk / Freshdesk)",
+    "overviewBody": "A well-architected support CRM routes tickets efficiently and prevents SLA breaches. Support operations specialists demonstrate capability by configuring ticket queue views in Zendesk or Freshdesk, setting automated routing rules, defining SLA breach warnings, and establishing tag taxonomies.",
+    "deliverables": [
+      {
+        "title": "1. Zendesk / Freshdesk Support Queue Architecture Blueprint",
+        "desc": "Blueprint specifying ticket group definitions, multi-tier escalation channels, and agent view filters."
+      },
+      {
+        "title": "2. Automated Routing & SLA Trigger Rule Spec",
+        "desc": "Specification mapping automated ticket assignments based on customer tier, topic tags, and SLA countdown timers."
+      },
+      {
+        "title": "3. Macro Response & Tag Taxonomy Library",
+        "desc": "Standardized library of reusable agent macros and root-cause tag structures for reporting."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you structure ticket views for multi-tier support teams?",
+        "answer": "Create separate views for Tier 1 (General Support), Tier 2 (Technical Escalations), VIP Customers, and Approaching SLA Breaches to keep agent focus organized."
+      },
+      {
+        "question": "What is the function of SLA trigger rules in Zendesk?",
+        "answer": "Triggers automatically send notifications to team leads or adjust ticket priority when First Response or Resolution timers reach 80% of SLA thresholds."
+      },
+      {
+        "question": "Why is a standardized tag taxonomy essential in CRM setups?",
+        "answer": "Consistent tags (e.g. issue_billing_refund or bug_checkout_error) allow operations managers to run precise root-cause reporting on support volume drivers."
+      }
+    ]
+  }
 }

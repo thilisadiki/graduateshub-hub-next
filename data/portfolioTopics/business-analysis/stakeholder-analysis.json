@@ -8,5 +8,37 @@
     "Communication planning",
     "Influence management",
     "Relationship building"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Stakeholder Analysis & Power-Interest Mapping",
+    "overviewBody": "Stakeholder management aligns project goals with key organizational influencers. BAs demonstrate leadership by mapping stakeholders on Mendelow's Power-Interest Grid (Manage Closely, Keep Satisfied, Keep Informed, Monitor), developing communication plans, and managing conflicting priorities.",
+    "deliverables": [
+      {
+        "title": "1. Stakeholder Power-Interest Matrix & Grid",
+        "desc": "Mendelow’s Power-Interest grid categorizing project stakeholders by influence and interest levels."
+      },
+      {
+        "title": "2. Stakeholder Communication & Engagement Plan",
+        "desc": "Communication matrix specifying update channels, reporting frequencies, and tailored messaging strategies."
+      },
+      {
+        "title": "3. Stakeholder Conflict Resolution Log",
+        "desc": "Documentation logging conflicting stakeholder requirements, negotiation trade-offs, and consensus agreements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you manage stakeholders in Mendelow’s 'High Power / Low Interest' quadrant?",
+        "answer": "Keep Satisfied: Engage them sufficiently to ensure their needs are met without overwhelming them with operational details, as they possess authority to block projects."
+      },
+      {
+        "question": "How do you handle conflicting requirements between two senior stakeholders?",
+        "answer": "Facilitate a structured alignment workshop, present data-driven trade-off analysis tied to strategic business goals, and escalate to the project sponsor if consensus cannot be reached."
+      },
+      {
+        "question": "Why is stakeholder analysis conducted early in the project lifecycle?",
+        "answer": "Early analysis identifies key decision-makers, uncovers hidden opposition, and aligns expectations before requirements are finalized."
+      }
+    ]
+  }
 }

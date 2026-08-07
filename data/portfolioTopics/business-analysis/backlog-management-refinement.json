@@ -8,5 +8,37 @@
     "WSJF framework",
     "Dependency mapping",
     "Refinement facilitation"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Agile Backlog Refinement & Prioritization (RICE / WSJF)",
+    "overviewBody": "Backlog refinement ensures engineering teams focus on highest-value features. Product managers and BAs prove capability by organizing product backlogs, scoring epics with RICE (Reach, Impact, Confidence, Effort) or WSJF frameworks, decomposing epics into stories, and estimating complexity using Fibonacci planning poker.",
+    "deliverables": [
+      {
+        "title": "1. Prioritized Product Backlog Matrix (RICE / WSJF)",
+        "desc": "Scored product backlog spreadsheet prioritizing features based on business value, reach, effort, and cost of delay."
+      },
+      {
+        "title": "2. Epic-to-Story Decomposition Blueprint",
+        "desc": "Structural diagram breaking large strategic epics into manageable user stories suitable for single-sprint execution."
+      },
+      {
+        "title": "3. Sprint Backlog Refinement SOP",
+        "desc": "Standard operating procedure detailing pre-refinement checklists, definition of ready (DoR), and story pointing guidelines."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is a RICE score calculated?",
+        "answer": "RICE Score = (Reach * Impact * Confidence) / Effort."
+      },
+      {
+        "question": "What is Weighted Shortest Job First (WSJF)?",
+        "answer": "WSJF prioritizes jobs in Scaled Agile (SAFe) by dividing Cost of Delay by Job Duration (Job Size)."
+      },
+      {
+        "question": "Why is the Fibonacci sequence (1, 2, 3, 5, 8, 13) used for story point estimation?",
+        "answer": "Fibonacci numbers reflect growing uncertainty as task complexity increases, preventing artificial precision during estimation."
+      }
+    ]
+  }
 }

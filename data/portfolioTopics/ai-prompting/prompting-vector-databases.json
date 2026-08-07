@@ -8,5 +8,37 @@
     "Metadata extraction",
     "Semantic search optimization",
     "Hybrid search prompting"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Vector Databases & Semantic Search Retrieval Prompting",
+    "overviewBody": "Vector databases store text embeddings to enable fast semantic similarity retrieval. AI developers prove skills by configuring vector databases (Pinecone, Qdrant, ChromaDB, Weaviate), generating embeddings, calculating Cosine Similarity, and engineering Top-K context retrieval prompts.",
+    "deliverables": [
+      {
+        "title": "1. Vector Database Search & Retrieval Specification",
+        "desc": "Architectural blueprint detailing embedding model selection, vector dimension settings, and similarity metrics."
+      },
+      {
+        "title": "2. Hybrid Search (Dense + Sparse) Query Architecture",
+        "desc": "Query pipeline combining dense vector embeddings (semantic match) with sparse BM25 keywords (exact match)."
+      },
+      {
+        "title": "3. Top-K Retrieval Precision Audit Report",
+        "desc": "Evaluation report measuring retrieval precision@K, recall@K, and context relevance in RAG prompts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between Cosine Similarity and Dot Product vector distances?",
+        "answer": "Cosine Similarity measures the angle direction between two normalized vectors regardless of magnitude. Dot Product accounts for both vector angle and magnitude, faster when vectors are pre-normalized."
+      },
+      {
+        "question": "What is Hybrid Search (Dense + Sparse)?",
+        "answer": "Hybrid search combines dense vector search (capturing conceptual meaning) with sparse keyword search (BM25 capturing exact product IDs or names), delivering optimal retrieval accuracy."
+      },
+      {
+        "question": "How many context chunks (Top-K) should be injected into a RAG prompt?",
+        "answer": "Typically Top 3 to 5 relevant chunks. Injecting too many chunks increases token costs and risks introducing irrelevant context noise."
+      }
+    ]
+  }
 }

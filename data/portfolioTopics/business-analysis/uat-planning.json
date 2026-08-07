@@ -8,5 +8,37 @@
     "Test case design",
     "Defect management",
     "Go/no-go criteria"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "User Acceptance Testing (UAT) Planning & Execution",
+    "overviewBody": "UAT validates that a system satisfies business user needs before deployment. Business analysts manage UAT by writing master test plans, drafting business scenario test scripts, triaging defect severity (Blocker vs Cosmetic), and securing executive sign-off.",
+    "deliverables": [
+      {
+        "title": "1. UAT Master Test Plan & Strategy Document",
+        "desc": "Master UAT plan defining entry/exit criteria, testing schedules, business participant roles, and environment prerequisites."
+      },
+      {
+        "title": "2. Business User Test Scenario Scripts",
+        "desc": "Detailed step-by-step test scenario scripts with expected business outcomes for end-user testers."
+      },
+      {
+        "title": "3. UAT Defect Log & Sign-Off Certificate",
+        "desc": "Defect triage log tracking issue severities alongside formal executive UAT sign-off documentation."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between QA testing and UAT testing?",
+        "answer": "QA testing verifies that software meets technical specifications without code bugs. UAT testing validates that software fulfills real-world business workflows and user needs."
+      },
+      {
+        "question": "What are UAT Entry and Exit Criteria?",
+        "answer": "Entry criteria are conditions required to start UAT (e.g. QA testing 100% complete, UAT environment seeded). Exit criteria are conditions required to pass UAT (e.g. 0 Critical defects, business sign-off secured)."
+      },
+      {
+        "question": "How do you handle a P1 Blocker defect discovered during UAT?",
+        "answer": "Log the defect immediately, halt related test paths, escalate to the development lead for hotfix resolution, and re-test before final sign-off."
+      }
+    ]
+  }
 }
