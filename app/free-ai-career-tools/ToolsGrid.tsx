@@ -28,7 +28,7 @@ const tools = [
     label: 'Course Recommender',
     badge: 'AI-Powered',
     description: 'Not sure which course to take? Describe your goals in plain English and get a personalised shortlist of free courses matched to you in seconds.',
-    bullets: ['Matched to your specific goals', 'Pulls from 128+ free courses', 'Includes external Alison courses'],
+    bullets: ['Matched to your specific goals', 'Pulls from curated career roadmaps & interview guides', 'Includes verified learning resources'],
     cta: 'Get Recommendations',
   },
   {

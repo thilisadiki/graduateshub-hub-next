@@ -401,10 +401,10 @@ export default function OnlineLearningPlatformsPage() {
                 </p>
               </div>
               <Link
-                href="/find-a-course"
+                href="/career-roadmaps"
                 className="shrink-0 bg-white hover:bg-gray-100 text-gray-900 font-extrabold text-sm px-6 py-3 rounded-xl transition-colors whitespace-nowrap"
               >
-                Browse All Free Courses →
+                Explore Career Roadmaps →
               </Link>
             </div>
           </section>
@@ -413,16 +413,16 @@ export default function OnlineLearningPlatformsPage() {
       careerPathsTitle="Popular Graduate Career Paths"
       careerPathsSubtitle="Explore roles you can prepare for using free online learning platforms."
       careerPaths={careerPaths}
-      careerPathsBrowseHref="/categories"
-      careerPathsBrowseLabel="Browse All Categories"
+      careerPathsBrowseHref="/career-roadmaps"
+      careerPathsBrowseLabel="Browse All Career Roadmaps"
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Start Learning Today?"
       ctaBody="Choose a platform, select a course, and build your skill set step-by-step. Consistency and practical project proof are what set successful candidates apart."
-      ctaPrimaryLabel="Find a Free Course"
-      ctaPrimaryHref="/find-a-course"
-      ctaSecondaryLabel="Explore Career Roadmaps"
-      ctaSecondaryHref="/career-roadmaps"
+      ctaPrimaryLabel="Explore Career Roadmaps"
+      ctaPrimaryHref="/career-roadmaps"
+      ctaSecondaryLabel="View All Guides"
+      ctaSecondaryHref="/guides"
     />
   );
 }

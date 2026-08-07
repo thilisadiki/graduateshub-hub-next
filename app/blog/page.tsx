@@ -262,17 +262,17 @@ export default async function BlogPage({
               ))}
             </div>
 
-            {/* Find a course strip */}
+            {/* Career Roadmaps strip */}
             <div className="mb-12 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <p className="font-bold text-gray-900 mb-1">Reading about careers? Find a free course to go with it.</p>
-                <p className="text-sm text-gray-500">Browse 100+ free certified courses across IT, Business, Marketing, Accounting, and more.</p>
+                <p className="font-bold text-gray-900 mb-1">Reading about careers? Explore our step-by-step career roadmaps.</p>
+                <p className="text-sm text-gray-500">Learn the exact skills, learning order, and interview expectations for high-demand roles.</p>
               </div>
               <Link
-                href="/find-a-course"
+                href="/career-roadmaps"
                 className="shrink-0 bg-primary hover:bg-[#5a4000] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
               >
-                Browse Free Courses →
+                Explore Roadmaps →
               </Link>
             </div>
 

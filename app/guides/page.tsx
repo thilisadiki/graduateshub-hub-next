@@ -468,15 +468,15 @@ export default function GuidesPage() {
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-primary rounded-2xl p-8 flex flex-col gap-3">
             <BookOpen size={28} className="text-[#FFDF9C]" strokeWidth={1.5} />
-            <h3 className="font-extrabold text-white text-lg">Looking for a specific course?</h3>
+            <h3 className="font-extrabold text-white text-lg">Looking for structured career roadmaps?</h3>
             <p className="text-[#FFDF9C] text-sm leading-relaxed">
-              Search across hundreds of free certified courses by topic, platform, or skill level.
+              Explore step-by-step career roadmaps by role, required skills, and interview expectations.
             </p>
             <Link
-              href="/find-a-course"
+              href="/career-roadmaps"
               className="mt-2 self-start bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#FFDF9C]/20 transition-colors"
             >
-              Search Free Courses →
+              Explore Roadmaps →
             </Link>
           </div>
           <div className="bg-white border border-gray-100 rounded-2xl p-8 flex flex-col gap-3 shadow-sm">

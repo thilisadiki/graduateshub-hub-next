@@ -15,13 +15,13 @@ import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: 'Free Learning Resources, Guides & Courses',
-  description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
+  title: 'Free Career Roadmaps, Interview Prep & Proof of Work Portfolios',
+  description: 'Graduates Hub is your free career resource hub. Explore step-by-step career roadmaps, interview prep guides, proof of work portfolios, study articles, and AI career tools.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Free Learning Resources, Guides & Courses | Graduates Hub',
-    description: 'Graduates Hub is your free learning resource centre. Browse career guides, study tips, and hundreds of free online courses across IT, Software Development, Business, Marketing, Accounting, and more.',
+    title: 'Free Career Roadmaps, Interview Prep & Proof of Work Portfolios | Graduates Hub',
+    description: 'Graduates Hub is your free career resource hub. Explore step-by-step career roadmaps, interview prep guides, proof of work portfolios, study articles, and AI career tools.',
     url: `${SITE_URL}/`,
     images: [OG_IMAGE],
   },
@@ -33,7 +33,7 @@ const organizationSchema = {
   name: 'Graduates Hub',
   url: SITE_URL,
   logo: `${SITE_URL}/graduates-hub-logo.png`,
-  description: 'Your free learning resource centre for career guides, study tips, and hundreds of free certified courses.',
+  description: 'Your free career resource hub for career roadmaps, interview prep guides, proof of work portfolios, and AI tools.',
   founder: {
     '@type': 'Person',
     name: 'Jason Sadiki',
@@ -50,11 +50,6 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'Graduates Hub',
   url: SITE_URL,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${SITE_URL}/find-a-course?q={search_term_string}`,
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 async function fetchHomeArticles(perPage: number) {

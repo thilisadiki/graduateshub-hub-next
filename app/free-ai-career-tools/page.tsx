@@ -224,7 +224,7 @@ export default function ToolsPage() {
               The AI tools use Google Gemini to generate personalised results based on your input. The Career Quiz is the exception: it runs entirely in your browser using a weighted scoring system with no AI involved, which means it is instant and works offline.
             </p>
             <p>
-              Every tool connects to our catalog of 128+ free certified courses from Alison.com. When a tool identifies a skill gap or recommends learning material, it links directly to a relevant free course so you can act immediately. No upsells, no paywalls.
+              Every tool connects to our verified career roadmaps, interview prep guides, and skill development resources. When a tool identifies a skill gap or recommends learning material, it links directly to relevant career resources so you can act immediately. No upsells, no paywalls.
             </p>
             <p>
               These tools do not replace a career counsellor or a mentor. They are designed to give you structured, specific starting points that you can then build on with real-world practice, networking, and continued learning.
@@ -311,7 +311,7 @@ export default function ToolsPage() {
               { href: '/portfolio-tasks', label: 'Proof of Work Portfolio', desc: 'Complete practical tasks and earn a shareable Badge of Competence for LinkedIn' },
               { href: '/career-roadmaps', label: 'Career Roadmaps', desc: 'Step-by-step guides to getting job-ready in a specific field' },
               { href: '/interview-prep', label: 'CV and Interview Prep', desc: 'Expert-written guides for writing a strong CV and preparing for interviews' },
-              { href: '/find-a-course', label: 'Find a Course', desc: 'Browse and filter 128+ free certified courses by topic and level' },
+              { href: '/cv-builder', label: 'Free CV Builder', desc: 'Create and download ATS-friendly CVs with zero paywalls' },
             ].map(({ href, label, desc }) => (
               <Link
                 key={href}
@@ -329,15 +329,15 @@ export default function ToolsPage() {
         {/* Bottom CTA */}
         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-extrabold text-gray-900 mb-1">Looking for free certified courses?</h3>
-            <p className="text-gray-500 text-sm">Browse 128+ free courses across IT, Business, Marketing, Data Analytics, Accounting, Languages, and Personal Development.</p>
+            <h3 className="text-xl font-extrabold text-gray-900 mb-1">Looking for structured career guidance?</h3>
+            <p className="text-gray-500 text-sm">Explore step-by-step career roadmaps across IT, Business, Marketing, Data Analytics, Accounting, and Software Engineering.</p>
           </div>
           <div className="flex gap-3 shrink-0">
             <Link
-              href="/find-a-course"
+              href="/career-roadmaps"
               className="bg-primary hover:bg-[#5a4000] text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm whitespace-nowrap"
             >
-              Browse All Courses
+              Explore Career Roadmaps
             </Link>
             <Link
               href="/career-roadmaps"

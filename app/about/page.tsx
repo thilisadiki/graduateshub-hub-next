@@ -363,7 +363,7 @@ export default function AboutPage() {
               Graduates Hub surfaces high-quality, accredited learning resources from trusted global providers, including <strong>Alison</strong>, one of the world&apos;s largest free online learning platforms with over 40 million learners, alongside Google, Harvard edX, and IBM.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4 text-sm md:text-base">
-              When you find a course that fits your goals, clicking <strong>&ldquo;Start Learning For Free&rdquo;</strong> takes you directly to the course provider where you can register (free) and begin immediately. Upon completion, you&apos;ll receive a certificate or diploma to share with employers.
+              When you select a recommended course inside a roadmap or guide, clicking <strong>&ldquo;Start Course&rdquo;</strong> takes you directly to the official provider where you can begin learning immediately for free.
             </p>
           </div>
         </section>
@@ -371,16 +371,16 @@ export default function AboutPage() {
         {/* 5. CTA */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-[#7A5900] to-[#5a4000] rounded-3xl p-10 text-white shadow-md">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Ready to start learning?</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Ready to build your career?</h2>
             <p className="text-[#FFDF9C] max-w-lg mx-auto mb-8 text-sm md:text-base">
-              Explore free learning resources across IT, Business, Accounting, Marketing, and Software Engineering.
+              Explore step-by-step career roadmaps across IT, Business, Accounting, Marketing, and Software Engineering.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/categories"
+                href="/career-roadmaps"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#5a4000] hover:bg-[#FFDF9C]/20 px-8 py-4 rounded-xl font-extrabold transition-all shadow-md text-base"
               >
-                Explore Resources <ArrowRight size={20} />
+                Explore Career Roadmaps <ArrowRight size={20} />
               </Link>
               <Link
                 href="/blog"

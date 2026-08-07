@@ -425,10 +425,10 @@ export default async function BlogPostPage({
             <ArrowLeft size={16} /> All Articles
           </Link>
           <Link
-            href="/find-a-course"
+            href="/career-roadmaps"
             className="bg-primary hover:bg-[#5a4000] text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-sm"
           >
-            Find a Free Course →
+            Explore Career Roadmaps →
           </Link>
         </div>
       </main>

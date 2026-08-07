@@ -5,13 +5,13 @@ import { ExternalLink, CheckCircle2, XCircle, RefreshCw, Users } from 'lucide-re
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'How We Curate Courses - Curation Policy',
-  description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
+  title: 'Editorial & Content Curation Policy',
+  description: 'Every resource, roadmap, and guide on Graduates Hub is vetted by an industry specialist. Learn about our editorial standards, selection criteria, and review process.',
   alternates: { canonical: `${SITE_URL}/curation-policy` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'How We Curate Courses | Curation Policy – Graduates Hub',
-    description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
+    title: 'Editorial & Content Curation Policy – Graduates Hub',
+    description: 'Every resource, roadmap, and guide on Graduates Hub is vetted by an industry specialist. Learn about our editorial standards, selection criteria, and review process.',
     url: `${SITE_URL}/curation-policy`,
     images: [OG_IMAGE],
   },
@@ -29,9 +29,9 @@ const breadcrumbSchema = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'How We Curate Courses | Curation Policy',
+  name: 'Editorial & Content Curation Policy',
   url: `${SITE_URL}/curation-policy`,
-  description: 'Every course on Graduates Hub is hand-picked by a specialist. Learn about our editorial standards, selection criteria, and review process.',
+  description: 'Every resource, roadmap, and guide on Graduates Hub is vetted by an industry specialist. Learn about our editorial standards, selection criteria, and review process.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
   breadcrumb: breadcrumbSchema,
 };
