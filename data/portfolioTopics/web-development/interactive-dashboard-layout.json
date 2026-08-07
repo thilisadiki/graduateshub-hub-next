@@ -8,5 +8,37 @@
     "Responsive data tables",
     "Data visualization",
     "Real-time updates"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Designing Responsive Interactive Dashboard Layouts",
+    "overviewBody": "Dashboards require clean UI composition, responsive CSS layouts, data visualization widgets, theme switching, and collapsible sidebars. Tech leads look for developers who can build fast, component-driven layouts that stay performant when rendering real-time data visualisations.",
+    "deliverables": [
+      {
+        "title": "1. Responsive Dashboard Layout Blueprint",
+        "desc": "Grid layout architecture specifying responsive mobile, tablet, and desktop viewports with CSS Grid / Flexbox."
+      },
+      {
+        "title": "2. Interactive Data Visualization Widgets",
+        "desc": "Chart components (Recharts / Chart.js) with tooltips, filter dropdowns, stat metric cards, and responsive container resizing."
+      },
+      {
+        "title": "3. Theme Provider & Collapsible Sidebar Handler",
+        "desc": "Dark/Light mode state toggle persistence and accessible collapsible sidebar navigation component."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you keep heavy chart visualisations performant on mobile screens?",
+        "answer": "Charts should be wrapped in ResponsiveContainer components, use debounced resize listeners, and employ canvas rendering (Chart.js) over thousands of individual SVG DOM nodes when rendering heavy datasets."
+      },
+      {
+        "question": "What is the best way to handle dark mode without flash of unstyled theme (FOUC)?",
+        "answer": "Injecting an inline blocking script in the HTML <head> that reads theme preferences from localStorage or prefers-color-scheme before React mounts prevents white flash on initial load."
+      },
+      {
+        "question": "Should dashboard sidebar navigation use CSS transforms or grid columns?",
+        "answer": "For mobile viewports, sidebars should overlay content using CSS transform: translateX() for 60fps animations. On desktop, CSS Grid grid-template-columns enables clean content reflow."
+      }
+    ]
+  }
 }

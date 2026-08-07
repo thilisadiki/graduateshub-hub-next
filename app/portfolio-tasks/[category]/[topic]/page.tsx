@@ -5,7 +5,6 @@ import { ArrowRight, Clock, Award, Lock, HelpCircle, Sparkles } from 'lucide-rea
 import { getCategoryById } from '@/data/portfolioCategories';
 import { portfolioTopics, getTopicById } from '@/data/portfolioTopics';
 import { getTaskByLocation } from '@/data/portfolioTasks';
-import { getPortfolioTopicSeo } from '@/data/portfolioTopicSeo';
 import type { PortfolioLevel } from '@/types';
 import { BreadcrumbList, ItemList, FAQPage, WithContext } from 'schema-dts';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
@@ -76,7 +75,7 @@ export default async function TopicPage({
   const top = getTopicById(category, topic);
   if (!cat || !top) notFound();
 
-  const topicSeo = getPortfolioTopicSeo(cat.id, top.id);
+  const topicSeo = top.seo;
 
   const breadcrumbSchema: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',

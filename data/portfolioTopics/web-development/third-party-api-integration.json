@@ -8,5 +8,37 @@
     "Webhooks",
     "Security (API Keys)",
     "Documentation parsing"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Secure Third-Party API Integration & Webhook Handling",
+    "overviewBody": "Modern web apps rely heavily on third-party services (Stripe, Google Maps, Twilio, SendGrid, OpenAI). Building secure integrations requires server-side API proxying, secret key protection, webhook signature verification, rate-limit retry logic, and fallback UI states.",
+    "deliverables": [
+      {
+        "title": "1. Third-Party API & Webhook Security Architecture Plan",
+        "desc": "Security plan specifying environment variable management, server-side route proxies, and webhook signature validation."
+      },
+      {
+        "title": "2. Secure Server Route Proxy & Webhook Handler",
+        "desc": "Next.js API route / Server Action proxying third-party API calls securely with rate limit retries and signature verification."
+      },
+      {
+        "title": "3. Resilient Client Component & Fallback UI",
+        "desc": "React component handling third-party API payloads, loading states, and user-friendly error fallbacks during provider outages."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why should secret API keys never be exposed in client-side code?",
+        "answer": "Client-side API keys exposed in browser bundles can be stolen and abused by third parties, leading to unauthorized billing charges or data leaks. Secret keys must remain strictly on server proxy endpoints."
+      },
+      {
+        "question": "How do you verify the authenticity of an incoming webhook payload?",
+        "answer": "Providers (such as Stripe or GitHub) send a cryptographic signature header with webhooks. Your server computes an HMAC hash using your webhook secret and verifies it matches the header before processing payload logic."
+      },
+      {
+        "question": "What is exponential backoff retry logic?",
+        "answer": "Exponential backoff is a retry algorithm where the delay between failed API request retries increases exponentially (e.g. 1s, 2s, 4s, 8s) to prevent overwhelming rate-limited third-party servers."
+      }
+    ]
+  }
 }

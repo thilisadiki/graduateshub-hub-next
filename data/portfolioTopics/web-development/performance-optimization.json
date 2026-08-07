@@ -8,5 +8,37 @@
     "Core Web Vitals",
     "Code splitting",
     "Rendering strategies"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Frontend Performance & Core Web Vitals Optimization",
+    "overviewBody": "Page speed directly impacts user retention and search engine rankings. Mastering performance optimization requires diagnosing Core Web Vitals (LCP, INP, CLS), implementing code splitting, eliminating unused JavaScript bundles, and optimizing web font and image delivery.",
+    "deliverables": [
+      {
+        "title": "1. Core Web Vitals Bottleneck Audit",
+        "desc": "Detailed Chrome DevTools Performance & Web Vitals audit identifying script execution delays and layout shifts."
+      },
+      {
+        "title": "2. Code Splitting & Asset Optimization Patch",
+        "desc": "Implementation of dynamic imports (next/dynamic), image format optimization, font subsetting, and tree-shaking."
+      },
+      {
+        "title": "3. Post-Optimization Benchmark Report",
+        "desc": "Before-and-after performance metrics comparison documenting LCP, INP, and CLS improvements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Interaction to Next Paint (INP) and how do you improve it?",
+        "answer": "INP measures responsiveness to user interactions. You improve INP by splitting long JavaScript tasks, offloading heavy computations to Web Workers, and minimizing main thread blocking calls."
+      },
+      {
+        "question": "How do you prevent Cumulative Layout Shift (CLS)?",
+        "answer": "CLS is prevented by specifying aspect-ratio or explicit width/height attributes on images and videos, reserving space for dynamic ad banners, and using font-display: swap with matched fallback metrics."
+      },
+      {
+        "question": "When should you use dynamic imports (React.lazy / next/dynamic)?",
+        "answer": "Dynamic imports should be used for heavy components not visible in the initial viewport (such as modals, chart libraries, or rich text editors) to shrink initial JavaScript bundle downloads."
+      }
+    ]
+  }
 }

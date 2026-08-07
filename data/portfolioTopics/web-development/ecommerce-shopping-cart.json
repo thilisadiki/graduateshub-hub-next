@@ -8,5 +8,37 @@
     "Data persistence",
     "UI interactions",
     "Edge cases"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "E-Commerce Shopping Cart State & Payment Integration",
+    "overviewBody": "Shopping carts require reliable client-side state management, persistence across page refreshes, real-time total calculations, stock checks, and secure payment checkout flows. Demonstrating a clean cart architecture proves readiness for high-volume commercial web applications.",
+    "deliverables": [
+      {
+        "title": "1. Cart State & Data Flow Specification",
+        "desc": "Data flow model defining item additions, quantity modifications, promo code application, and tax calculations."
+      },
+      {
+        "title": "2. Shopping Cart & Drawer Components",
+        "desc": "Interactive cart drawer with item quantity controls, price subtotal updates, persistent local storage, and slide-over UI."
+      },
+      {
+        "title": "3. Stripe Payment Gateway Checkout Handler",
+        "desc": "Stripe Checkout API integration or server-side PaymentIntent handler for processing secure transactions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you prevent client-side price manipulation in e-commerce carts?",
+        "answer": "Prices rendered in the browser UI should never be trusted during checkout. Client carts submit item IDs and quantities to the server; the backend recalculates official prices from the database before generating Stripe payment sessions."
+      },
+      {
+        "question": "How do you synchronize cart state across multiple open browser tabs?",
+        "answer": "Listening to window.addEventListener(\"storage\", callback) allows tab cart states to update instantly whenever a user modifies cart items in another open tab."
+      },
+      {
+        "question": "Should guest carts be merged when a user logs in?",
+        "answer": "Yes, best practice is to read local guest cart items upon authentication and trigger a server mutation merging anonymous guest items into the user’s account cart."
+      }
+    ]
+  }
 }

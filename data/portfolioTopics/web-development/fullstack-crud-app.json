@@ -8,5 +8,37 @@
     "Database operations",
     "Full-stack integration",
     "Server-side logic"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Building Production-Grade Fullstack CRUD Applications",
+    "overviewBody": "Fullstack CRUD (Create, Read, Update, Delete) applications test your ability to connect frontend interfaces with server databases securely. Recruiters look for structured REST or GraphQL APIs, ORM database integration (Prisma, Drizzle), input sanitization, optimistic updates, and pagination.",
+    "deliverables": [
+      {
+        "title": "1. Database ERD & API Endpoint Design",
+        "desc": "Entity Relationship Diagram (ERD) and OpenAPI/REST route spec defining request/response structures."
+      },
+      {
+        "title": "2. Fullstack Next.js Server Actions / API Routes",
+        "desc": "Database queries using Prisma or Drizzle ORM featuring input validation, error handling, and authorization checks."
+      },
+      {
+        "title": "3. Dynamic Data Grid & Modal Editor UI",
+        "desc": "Data table UI with sorting, filtering, server-side pagination, optimistic UI updates, and confirmation modals."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the advantages of Next.js Server Actions over traditional REST APIs?",
+        "answer": "Next.js Server Actions allow client components to invoke server-side database functions directly without manually writing fetch boilerplate, while benefiting from automatic POST request handling and progressive enhancement."
+      },
+      {
+        "question": "Why is input validation essential on both client and server?",
+        "answer": "Client validation provides instant UI feedback to users, but can be bypassed by malicious actors. Server-side validation (using Zod) guarantees database integrity and prevents injection attacks."
+      },
+      {
+        "question": "How does optimistic UI updating improve user experience?",
+        "answer": "Optimistic UI updates immediately modify the browser UI assuming server success. If the database update fails, the UI automatically rolls back to previous state and displays an error alert."
+      }
+    ]
+  }
 }

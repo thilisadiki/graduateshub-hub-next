@@ -103,12 +103,20 @@ export interface PortfolioCategory {
   accentTo: string;
 }
 
+export interface PortfolioTopicSeo {
+  overviewTitle: string;
+  overviewBody: string;
+  deliverables: { title: string; desc: string }[];
+  faqs: { question: string; answer: string }[];
+}
+
 export interface PortfolioTopic {
   id: string;
   categoryId: string;
   title: string;
   description: string;
   skillsProven: string[];
+  seo?: PortfolioTopicSeo;
 }
 
 export interface PortfolioRubricCriterion {

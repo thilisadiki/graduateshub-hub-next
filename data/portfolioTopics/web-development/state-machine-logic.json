@@ -8,5 +8,37 @@
     "Complex state logic",
     "Media APIs",
     "Event handling"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Deterministic UI State Management with Finite State Machines",
+    "overviewBody": "Complex UI components (such as audio players, checkout flows, or multi-step async operations) often break when state is managed using loosely coupled boolean flags. Finite State Machines (FSMs) eliminate impossible UI states by enforcing explicit state nodes and deterministic transitions.",
+    "deliverables": [
+      {
+        "title": "1. State Machine Transition Diagram",
+        "desc": "Visual chart mapping state nodes (idle, loading, success, error), allowed events, and guard conditions."
+      },
+      {
+        "title": "2. XState / Custom Reducer FSM Implementation",
+        "desc": "Fully typed state machine using XState or React useReducer managing complex state transitions cleanly."
+      },
+      {
+        "title": "3. Edge Case & Invalid Event Test Suite",
+        "desc": "Unit test suite verifying that invalid events dispatched during inappropriate states are ignored deterministically."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why are Finite State Machines superior to multiple boolean flags like isLoading / isError?",
+        "answer": "Multiple boolean flags allow illegal combinations (e.g. isLoading: true AND isError: true simultaneously). State machines permit exactly one active state node at a time, eliminating impossible UI states."
+      },
+      {
+        "question": "What is a state guard condition in XState?",
+        "answer": "A guard is a conditional predicate function that must evaluate to true before a state transition is allowed to execute."
+      },
+      {
+        "question": "Should all React components use state machines?",
+        "answer": "No. Simple UI components with independent boolean toggles (e.g. tooltip visibility) do not require state machines. FSMs are best reserved for multi-step workflows, async pipelines, and media players."
+      }
+    ]
+  }
 }

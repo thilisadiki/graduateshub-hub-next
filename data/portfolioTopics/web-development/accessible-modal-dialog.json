@@ -8,5 +8,37 @@
     "React Portals",
     "Accessibility (WAI-ARIA)",
     "Component design"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Building Fully Accessible Modal Dialogs & Focus Traps",
+    "overviewBody": "Modal dialogs are a common UI pattern, but poorly implemented modals frequently fail accessibility compliance. Hiring managers look for frontend engineers who understand WAI-ARIA standards, focus trapping, keyboard navigation, and DOM portaling so assistive technologies can read modal content effortlessly.",
+    "deliverables": [
+      {
+        "title": "1. WAI-ARIA Accessibility Specification",
+        "desc": "Documentation detailing focus trap logic, role=\"dialog\", aria-modal=\"true\", aria-labelledby, and keyboard event handling."
+      },
+      {
+        "title": "2. Accessible React Modal Component",
+        "desc": "Reusable Modal component utilizing React Portals, trap focus management, and automatic restoration on close."
+      },
+      {
+        "title": "3. Keyboard & Screen Reader Test Log",
+        "desc": "A verification log documenting Tab, Shift+Tab, and Escape key behavior alongside screen reader announcements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What happens if a modal does not trap keyboard focus?",
+        "answer": "Without a focus trap, keyboard users navigating via Tab can move focus behind the modal backdrop into underlying page content, breaking the user experience for blind or vision-impaired users."
+      },
+      {
+        "question": "Why should modals use React Portals?",
+        "answer": "React Portals render modal DOM nodes outside the parent element component hierarchy (usually directly inside document.body), avoiding CSS z-index stack collisions and overflow clipping."
+      },
+      {
+        "question": "Is the native HTML <dialog> element better than custom React portals?",
+        "answer": "The native <dialog> element provides built-in focus trapping and showModal() backdrop support. However, custom React portal implementations are often required for advanced animation control and legacy browser fallbacks."
+      }
+    ]
+  }
 }

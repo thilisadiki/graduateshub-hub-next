@@ -8,5 +8,37 @@
     "React state",
     "Error handling",
     "Performance optimization"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Robust API Data Fetching, Caching & Error Handling",
+    "overviewBody": "Production web applications must handle asynchronous data loading gracefully. Employers look for developers who manage loading states, race conditions, stale-while-revalidate caching, automatic retries, and user-friendly error boundaries without crashing the user interface.",
+    "deliverables": [
+      {
+        "title": "1. Data Fetching & Caching Strategy Doc",
+        "desc": "Architectural breakdown comparing custom fetch hooks vs TanStack Query (React Query) and SWR caching mechanisms."
+      },
+      {
+        "title": "2. Custom Hook & Data Fetching Module",
+        "desc": "TypeScript custom hook featuring loading indicators, refetching on window focus, optimistic updates, and exponential backoff."
+      },
+      {
+        "title": "3. Error Boundary & Skeleton UI Demo",
+        "desc": "Skeleton loader component and React Error Boundary wrapping the data grid during network failures or API rate limiting."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Stale-While-Revalidate (SWR) caching?",
+        "answer": "SWR is a HTTP cache invalidation strategy where the client first returns cached (stale) data immediately, then dispatches a fetch request (revalidates) in the background to update the cache."
+      },
+      {
+        "question": "How do you prevent race conditions during fast search inputs?",
+        "answer": "Race conditions occur when an earlier API request resolves after a later request. You prevent this using AbortController signals to cancel pending fetch calls when query state changes, or debouncing input handlers."
+      },
+      {
+        "question": "Why use TanStack Query instead of plain useEffect + fetch?",
+        "answer": "Plain useEffect fetches lack built-in request deduplication, cache sharing across components, automatic background revalidation, retry mechanisms, and pagination state management."
+      }
+    ]
+  }
 }

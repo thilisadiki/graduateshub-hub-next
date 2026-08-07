@@ -9,5 +9,37 @@
     "Schema markup",
     "Technical SEO auditing",
     "Crawl budget optimization"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Technical SEO Architecture & Structured Data (JSON-LD)",
+    "overviewBody": "Technical SEO guarantees that web pages can be crawled, parsed, and indexed effectively by search engines. Tech companies require developers who understand dynamic metadata tags, OpenGraph previews, canonical URLs, XML sitemaps, robots.txt rules, and JSON-LD schema.org structured data.",
+    "deliverables": [
+      {
+        "title": "1. Technical SEO Strategy & Indexability Audit",
+        "desc": "Comprehensive audit analyzing indexability, canonical configuration, sitemap routes, and meta tag architecture."
+      },
+      {
+        "title": "2. Next.js Dynamic Metadata & JSON-LD Module",
+        "desc": "Reusable metadata generator producing canonical links, OpenGraph tags, and valid Schema.org (Article, WebPage, FAQPage) JSON-LD scripts."
+      },
+      {
+        "title": "3. Schema Validator & Google Search Console Test Log",
+        "desc": "Validation log confirming 0 errors on Rich Results Test tools and XML sitemap generation scripts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is JSON-LD preferred over Microdata or RDFa for Schema.org markup?",
+        "answer": "JSON-LD is injected as a single script block <script type=\"application/ld+json\">, separating structured metadata cleanly from HTML markup without cluttering component DOM structures."
+      },
+      {
+        "question": "How do self-referencing canonical tags prevent duplicate content issues?",
+        "answer": "Canonical tags explicitly tell search engines which URL version is the primary authoritative page, preventing ranking dilution when parameters (e.g. ?utm_source or ?page=1) are appended."
+      },
+      {
+        "question": "What is the function of an XML sitemap in Next.js applications?",
+        "answer": "An XML sitemap lists all discoverable public URLs, their last modification timestamps, and change frequencies, allowing search engine crawlers to discover new pages efficiently."
+      }
+    ]
+  }
 }

@@ -8,5 +8,37 @@
     "Complex validation",
     "UX patterns",
     "Accessibility"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "Architecting Complex Multi-Step Forms & Form Validation",
+    "overviewBody": "Multi-step forms (such as onboarding flows, loan applications, or checkout wizards) require careful state persistence, step validation, and progress tracking. Engineering leads evaluate your ability to maintain form state across steps, validate schemas using Zod or Yup, and save unsubmitted drafts.",
+    "deliverables": [
+      {
+        "title": "1. Form Architecture & State Machine Spec",
+        "desc": "Blueprint detailing step transitions, global vs step-level validation, and session draft persistence."
+      },
+      {
+        "title": "2. Multi-Step Form Wizard Component",
+        "desc": "React Hook Form wizard with Zod schema validation, dynamic field arrays, and accessible step indicator UI."
+      },
+      {
+        "title": "3. Draft Recovery & Submission Test Suite",
+        "desc": "Demonstration of auto-saving unsubmitted inputs to sessionStorage and handling backend validation errors."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Should multi-step form state be stored in URL search parameters?",
+        "answer": "Storing the active step step=2 in URL search parameters allows users to bookmark or share wizard progress without exposing sensitive user inputs in the URL."
+      },
+      {
+        "question": "How do you validate individual steps before allowing users to proceed?",
+        "answer": "Libraries like React Hook Form paired with Zod allow trigger(\"fieldName\") step-level validation. If step inputs fail validation rules, step transition is blocked and inline errors are focused."
+      },
+      {
+        "question": "What is the best way to handle form draft recovery?",
+        "answer": "Draft state can be debounced and written to localStorage or sessionStorage. On form mount, a draft restoration banner asks users if they want to resume their saved progress."
+      }
+    ]
+  }
 }

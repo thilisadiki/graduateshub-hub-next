@@ -9,5 +9,37 @@
     "Responsive design",
     "Accessibility",
     "Design collaboration"
-  ]
+  ],
+  "seo": {
+    "overviewTitle": "High-Conversion Responsive Landing Page Engineering",
+    "overviewBody": "Landing pages are the primary conversion driver for tech products. Rebuilding a high-conversion landing page tests your mastery of semantic HTML5, CSS layout precision, responsive breakpoints, font & image performance optimization, and conversion-focused Call-to-Action (CTA) design.",
+    "deliverables": [
+      {
+        "title": "1. Responsive Layout & Typography Spec",
+        "desc": "Fluid layout design system defining typography scale, mobile-to-desktop breakpoints, and spacing variables."
+      },
+      {
+        "title": "2. Production Landing Page Code",
+        "desc": "Pixel-perfect, responsive landing page featuring hero section, feature cards, social proof testimonials, and pricing table."
+      },
+      {
+        "title": "3. Lighthouse Audit & Optimization Report",
+        "desc": "Performance audit achieving 90+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is mobile-first CSS development recommended for landing pages?",
+        "answer": "Mobile-first CSS ensures light base styles for mobile networks before adding min-width media queries for larger displays, improving mobile page load times and Google indexing priority."
+      },
+      {
+        "question": "How does image optimization affect hero section LCP scores?",
+        "answer": "Using modern WebP/AVIF image formats with explicit priority loading flags prevents layout shifts and guarantees fast Largest Contentful Paint (LCP) rendering on slow mobile connections."
+      },
+      {
+        "question": "What semantic HTML elements should be used on landing pages?",
+        "answer": "Use <header>, <main>, <section> for logical feature blocks, <article> for testimonials/reviews, <aside> for highlight callouts, and <footer> for copyright and footer links."
+      }
+    ]
+  }
 }
