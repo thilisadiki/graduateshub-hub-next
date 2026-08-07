@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
+import { Calendar, ArrowRight, BookOpen, ChevronRight, Sparkles, Clock, Compass, ShieldCheck, Zap, Award } from 'lucide-react';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
@@ -20,18 +20,18 @@ export async function generateMetadata({
   const url = pageNum === 1 ? `${SITE_URL}/blog` : `${SITE_URL}/blog?page=${pageNum}`;
   const title =
     pageNum === 1
-      ? 'Career Guides & Study Tips Blog'
-      : `Career Guides & Study Tips Blog - Page ${pageNum}`;
+      ? 'Graduate Career Guides & Study Tips Blog (2026)'
+      : `Graduate Career Guides & Study Tips Blog - Page ${pageNum}`;
   return {
     title,
     description:
-      'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',
+      'Browse expert career guides, free certificate course breakdowns, YES Youth program guides, and practical advice for South African graduates.',
     alternates: { canonical: url },
     openGraph: {
       siteName: SITE_NAME,
       title: `${title} | Graduates Hub`,
       description:
-        'Browse career guides, study tips, and expert advice to help you navigate your education and career journey.',
+        'Browse expert career guides, free certificate course breakdowns, YES Youth program guides, and practical advice for South African graduates.',
       url,
       images: [OG_IMAGE],
     },
@@ -47,6 +47,42 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
   ],
 };
+
+const ESSENTIAL_READS = [
+  {
+    title: 'YES Youth Program Guide 2026: Application, Stipends & Placement',
+    desc: 'Everything South African youth need to know about joining the Youth Employment Service initiative, monthly stipends, and work experience.',
+    href: '/blog/yes-youth-program-guide-south-africa',
+    badge: 'SA Youth Programs',
+    readTime: '8 min read',
+    accent: 'from-[#7A5900] to-[#FFDF9C]',
+  },
+  {
+    title: 'Are Alison Certificates Recognized by Employers in 2026?',
+    desc: 'An honest evaluation of Alison free online courses, accreditation status, CV listing best practices, and employer perception in SA.',
+    href: '/blog/is-an-alison-certificate-recognised-by-employers-2026',
+    badge: 'Certificates & CVs',
+    readTime: '6 min read',
+    accent: 'from-[#1F1B13] to-[#3D3325]',
+  },
+  {
+    title: 'How to Get Coursera Certificates for Free (2026 Financial Aid)',
+    desc: 'Step by step walkthrough to apply for 100% Coursera financial aid fee waivers for top university and Google professional certificates.',
+    href: '/blog/how-to-get-coursera-certificates-for-free-2026-financial-aid-guide',
+    badge: 'Free Learning',
+    readTime: '7 min read',
+    accent: 'from-[#1E3A8A] to-[#3B82F6]',
+  },
+];
+
+const CATEGORY_TAGS = [
+  { label: 'All Articles', href: '/blog' },
+  { label: 'Free Courses & Certificates', href: '/free-courses-with-certificates' },
+  { label: 'Grow with Google', href: '/google-ai-essentials-course-guide' },
+  { label: 'Career Roadmaps', href: '/career-roadmaps' },
+  { label: 'Interview Prep', href: '/interview-prep' },
+  { label: 'Portfolio Briefs', href: '/portfolio-tasks' },
+];
 
 const LISTING_FIELDS = '_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia';
 
@@ -84,29 +120,9 @@ function formatPost(post: any) {
     excerpt: cleanExcerpt.substring(0, 150) + '...',
     date,
     imageUrl,
+    readTime: '5 min read',
   };
 }
-
-const RELATED_GUIDES = [
-  {
-    title: 'Free Courses for Data Analysts',
-    desc: 'Excel, SQL, Python, and Power BI in one structured path.',
-    href: '/free-courses-for-data-analysts',
-    badge: 'Data',
-  },
-  {
-    title: 'Free Courses for Accounting & Finance',
-    desc: 'Bookkeeping, payroll, and financial management from scratch.',
-    href: '/free-courses-for-accounting-and-finance',
-    badge: 'Finance',
-  },
-  {
-    title: 'Free Digital Marketing Courses',
-    desc: 'SEO, content strategy, and growth from the ground up.',
-    href: '/free-digital-marketing-courses',
-    badge: 'Marketing',
-  },
-];
 
 type FormattedPost = ReturnType<typeof formatPost>;
 
@@ -114,34 +130,35 @@ function FeaturedCard({ post }: { post: FormattedPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-all mb-12"
+      className="group block bg-white rounded-2xl border border-[#D1C5B4] shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 mb-12"
     >
       <div className="flex flex-col md:flex-row">
-        <div className="relative h-56 md:h-auto md:w-2/5 shrink-0 overflow-hidden">
+        <div className="relative h-64 md:h-auto md:w-1/2 shrink-0 overflow-hidden">
           <Image
             src={post.imageUrl}
             alt={post.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 768px) 100vw, 40vw"
+            sizes="(max-width: 768px) 100vw, 50vw"
             priority
           />
-          <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
-            Latest
+          <div className="absolute top-4 left-4 bg-[#1F1B13] text-[#FFDF9C] border border-[#FFDF9C]/30 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
+            <Sparkles size={12} className="text-yellow-400" /> Latest Feature
           </div>
         </div>
-        <div className="p-8 md:p-10 flex flex-col justify-center md:w-3/5">
-          <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-3">
-            <Calendar size={12} />
-            {post.date}
+        <div className="p-8 md:p-10 flex flex-col justify-center md:w-1/2 bg-white">
+          <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+            <span className="flex items-center gap-1"><Calendar size={12} /> {post.date}</span>
+            <span>&bull;</span>
+            <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight mb-4 group-hover:text-primary transition-colors">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#1F1B13] leading-tight mb-4 group-hover:text-primary transition-colors">
             {post.title}
           </h2>
-          <p className="text-gray-500 leading-relaxed mb-6 text-sm md:text-base">{post.excerpt}</p>
-          <span className="inline-flex items-center gap-2 text-sm font-bold text-primary">
-            Read Article <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-          </span>
+          <p className="text-[#4F4639] leading-relaxed mb-6 text-sm md:text-base">{post.excerpt}</p>
+          <div className="mt-auto flex items-center gap-2 text-sm font-bold text-primary">
+            Read Full Article <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </div>
         </div>
       </div>
     </Link>
@@ -166,7 +183,7 @@ export default async function BlogPage({
     '@type': 'Blog',
     name: 'Graduates Hub Blog',
     url: `${SITE_URL}/blog`,
-    description: 'Career guides, study tips, and expert advice to help you navigate your education and career journey.',
+    description: 'Career guides, study tips, and expert advice to help South African graduates navigate their career journey.',
     publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
     ...(formattedPosts.length > 0 && {
       blogPost: formattedPosts.slice(0, 6).map((post: FormattedPost) => ({
@@ -180,122 +197,160 @@ export default async function BlogPage({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-[#FFF8F1] flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 py-3 text-sm text-gray-500 flex items-center gap-2">
+      <div className="bg-white border-b border-[#D1C5B4]">
+        <div className="max-w-6xl mx-auto px-6 py-3 text-sm text-[#4F4639] flex items-center gap-2">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
           <span className="text-gray-300">›</span>
-          <span className="text-gray-900 font-medium">Blog</span>
+          <span className="text-[#1F1B13] font-medium">Blog &amp; Career Guides</span>
         </div>
       </div>
 
-      {/* Hero */}
-      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-14 px-6">
+      {/* Hero Header */}
+      <div className="bg-[#1F1B13] text-white border-b border-[#D1C5B4] py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-3">
-            <BookOpen className="text-primary" size={28} />
-            <p className="text-sm font-bold text-primary uppercase tracking-widest">Graduates Hub Blog</p>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7A5900]/30 border border-[#FFDF9C]/30 text-[#FFDF9C] font-bold text-xs uppercase tracking-wider mb-6">
+            <BookOpen size={14} className="text-yellow-400" /> Career Knowledge Base
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight max-w-2xl leading-tight">
-            Career Guides & Study Tips
+          <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4 leading-tight">
+            Graduate Career Guides &amp; Insights
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
-            Expert advice, industry insights, and practical guides to help you navigate your career and
-            education journey.
+          <p className="text-[#D1C5B4] text-lg max-w-2xl leading-relaxed mb-8">
+            Expert advice on free courses, CV optimization, South African youth employment programs, and technical career roadmaps.
           </p>
+
+          {/* Quick Category Filters */}
+          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#D1C5B4]/20">
+            {CATEGORY_TAGS.map((cat, idx) => (
+              <Link
+                key={idx}
+                href={cat.href}
+                className="text-xs font-bold px-3.5 py-1.5 rounded-lg bg-[#2A241A] text-[#D1C5B4] hover:text-white hover:bg-primary border border-[#3D3325] transition-all"
+              >
+                {cat.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
-      <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
+      <main className="flex-grow max-w-6xl mx-auto px-6 py-12 w-full">
+        {/* Page 1 Essential Reading Showcase */}
+        {page === 1 && (
+          <section className="mb-14">
+            <div className="flex items-center gap-2 mb-6">
+              <Compass size={20} className="text-primary" />
+              <h2 className="text-2xl font-extrabold text-[#1F1B13]">Essential Graduate Reading</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {ESSENTIAL_READS.map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  className="group bg-white rounded-2xl border border-[#D1C5B4] p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-3">
+                      <span className="text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full">
+                        {item.badge}
+                      </span>
+                      <span className="text-xs text-gray-400 font-medium">{item.readTime}</span>
+                    </div>
+                    <h3 className="font-extrabold text-[#1F1B13] text-lg leading-snug mb-2 group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-[#4F4639] leading-relaxed mb-4">{item.desc}</p>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-primary pt-3 border-t border-[#EBE3D5]">
+                    Read Guide <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         {total > 0 && (
-          <p className="text-gray-400 text-sm mb-8">
-            {total} articles &middot; Page {page} of {totalPages}
-          </p>
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#D1C5B4]">
+            <h2 className="text-2xl font-extrabold text-[#1F1B13]">All Career Articles</h2>
+            <p className="text-xs text-[#4F4639] font-medium">
+              {total} articles &bull; Page {page} of {totalPages}
+            </p>
+          </div>
         )}
 
         {formattedPosts.length === 0 ? (
           <div className="text-center py-24 text-gray-400">
             <BookOpen size={40} className="mx-auto mb-4 opacity-40" />
-            <p className="font-semibold">No articles found.</p>
+            <p className="font-semibold text-gray-700">No articles found.</p>
           </div>
         ) : (
           <>
-            {/* Featured post - first article on page 1 only */}
+            {/* Featured Post Card */}
             {featuredPost && <FeaturedCard post={featuredPost} />}
 
-            {/* Article grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {gridPosts.map((post: FormattedPost) => (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
-                >
-                  <div className="h-48 overflow-hidden relative">
-                    <Image
-                      src={post.imageUrl}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-700 flex items-center gap-1 shadow-sm">
-                      <Calendar size={12} />
-                      {post.date}
+            {/* Article Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
+              {gridPosts.map((post: FormattedPost, idx: number) => (
+                <div key={post.id} className="flex flex-col h-full">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="bg-white rounded-2xl shadow-sm border border-[#D1C5B4] overflow-hidden hover:shadow-md transition-all group flex flex-col h-full"
+                  >
+                    <div className="h-48 overflow-hidden relative">
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-700 flex items-center gap-1 shadow-sm border border-[#D1C5B4]">
+                        <Calendar size={12} />
+                        {post.date}
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h2 className="text-lg font-bold text-gray-900 leading-tight mb-3 group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-500 text-sm mb-6 flex-grow leading-relaxed">{post.excerpt}</p>
-                    <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-bold text-primary">
-                      <span>Read Article</span>
-                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h2 className="text-lg font-extrabold text-[#1F1B13] leading-tight mb-3 group-hover:text-primary transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="text-[#4F4639] text-xs leading-relaxed mb-6 flex-grow">{post.excerpt}</p>
+                      <div className="mt-auto pt-4 border-t border-[#EBE3D5] flex items-center justify-between text-xs font-bold text-primary">
+                        <span>Read Article</span>
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               ))}
             </div>
 
-            {/* Career Roadmaps strip */}
-            <div className="mb-12 bg-[#FFDF9C]/20 border border-[#D1C5B4] rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            {/* Interactive Career Tools Banner */}
+            <section className="mb-14 bg-gradient-to-br from-[#1F1B13] to-[#2E281F] text-white p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-[#D1C5B4]">
               <div>
-                <p className="font-bold text-gray-900 mb-1">Reading about careers? Explore our step-by-step career roadmaps.</p>
-                <p className="text-sm text-gray-500">Learn the exact skills, learning order, and interview expectations for high-demand roles.</p>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#FFDF9C] mb-2 block">Interactive Career Accelerators</span>
+                <h3 className="text-2xl font-black mb-2">Build Your Proof of Work Portfolio</h3>
+                <p className="text-sm text-[#D1C5B4] max-w-xl leading-relaxed">
+                  Put reading into practice: complete graded portfolio tasks across IT, Web Dev, Data Analysis, Marketing, and Finance.
+                </p>
               </div>
-              <Link
-                href="/career-roadmaps"
-                className="shrink-0 bg-primary hover:bg-[#5a4000] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
-              >
-                Explore Roadmaps →
-              </Link>
-            </div>
-
-            {/* Related guides */}
-            <section className="mb-12">
-              <h2 className="text-lg font-extrabold text-gray-900 mb-4">Popular Learning Guides</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {RELATED_GUIDES.map(({ title, desc, href, badge }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all flex flex-col gap-2"
-                  >
-                    <span className="self-start text-xs font-bold text-primary bg-[#FFDF9C]/20 border border-[#D1C5B4] px-2.5 py-1 rounded-full">
-                      {badge}
-                    </span>
-                    <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm leading-snug">{title}</p>
-                    <p className="text-xs text-gray-500 leading-relaxed flex-grow">{desc}</p>
-                    <span className="inline-flex items-center gap-1 text-xs font-bold text-primary mt-1">
-                      View Guide <ChevronRight size={12} />
-                    </span>
-                  </Link>
-                ))}
+              <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                <Link
+                  href="/portfolio-tasks"
+                  className="bg-primary hover:bg-[#5a4000] text-white font-bold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap shadow-sm border border-primary text-center flex-1 md:flex-initial"
+                >
+                  Explore Portfolio Briefs →
+                </Link>
+                <Link
+                  href="/cv-builder"
+                  className="bg-[#3D3325] hover:bg-[#4E4231] text-white font-bold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap border border-[#5E503C] text-center flex-1 md:flex-initial"
+                >
+                  Free AI CV Reviewer →
+                </Link>
               </div>
             </section>
           </>
@@ -307,18 +362,18 @@ export default async function BlogPage({
             {page > 1 && (
               <Link
                 href={`/blog?page=${page - 1}`}
-                className="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 font-bold rounded-lg hover:border-primary hover:text-primary transition-colors text-sm"
+                className="px-5 py-2.5 bg-white border border-[#D1C5B4] text-[#1F1B13] font-bold rounded-xl hover:border-primary hover:text-primary transition-colors text-sm"
               >
                 Previous
               </Link>
             )}
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-sm text-[#4F4639] font-medium">
               Page {page} of {totalPages}
             </span>
             {page < totalPages && (
               <Link
                 href={`/blog?page=${page + 1}`}
-                className="px-5 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-[#5a4000] transition-colors text-sm"
+                className="px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-[#5a4000] transition-colors text-sm"
               >
                 Next
               </Link>
