@@ -161,8 +161,8 @@ export const portfolioCategorySeoData: Record<string, PortfolioCategorySeo> = {
     relatedRoadmapLabel: 'Web Developer Roadmap',
   },
 
-  'data-analysis': {
-    id: 'data-analysis',
+  data: {
+    id: 'data',
     seoTitle: 'Data & Analytics Portfolio Tasks & Data Science Briefs',
     seoDescription:
       'Complete graded data analyst tasks: SQL database queries, Power BI dashboards, Python data cleaning scripts, and business intelligence reporting.',
@@ -513,5 +513,6 @@ export const portfolioCategorySeoData: Record<string, PortfolioCategorySeo> = {
 };
 
 export function getPortfolioCategorySeo(id: string): PortfolioCategorySeo | undefined {
+  if (id === 'data-analysis') return portfolioCategorySeoData['data'];
   return portfolioCategorySeoData[id];
 }
