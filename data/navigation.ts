@@ -137,6 +137,24 @@ export const popularGuides: GuideLink[] = [
     badge: 'IT Support',
   },
   {
+    href: '/free-customer-service-courses',
+    title: 'Free Customer Service Courses',
+    desc: 'CRM platforms, Zendesk, SLA ticket management, empathy, and CSAT / NPS metrics.',
+    badge: 'Customer Ops',
+  },
+  {
+    href: '/free-sql-courses-with-certificates',
+    title: 'Free SQL & Database Courses',
+    desc: 'PostgreSQL, MySQL, DDL/DML, multi-table JOINs, Window Functions, and CTEs.',
+    badge: 'SQL & Data',
+  },
+  {
+    href: '/free-agile-project-management-courses',
+    title: 'Free Agile & Project Management Courses',
+    desc: 'Scrum events, Kanban, Jira/Asana workflows, RACI matrices, and CAPM alignment.',
+    badge: 'Agile & PM',
+  },
+  {
     href: '/google-ai-essentials-course-guide',
     title: 'Google AI Essentials Guide',
     desc: 'Master prompt engineering and Generative AI for workplace productivity with Google credentials.',

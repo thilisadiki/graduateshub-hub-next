@@ -103,6 +103,27 @@ const GUIDE_GROUPS: GuideGroup[] = [
         curators: ['jason'],
       },
       {
+        title: 'Free SQL & Database Courses',
+        badge: 'SQL',
+        href: '/free-sql-courses-with-certificates',
+        desc: 'PostgreSQL, MySQL, DDL/DML, multi-table JOINs, Window Functions, CTEs, and index optimization.',
+        curators: ['jason'],
+      },
+      {
+        title: 'Free Agile & Project Management Courses',
+        badge: 'Agile',
+        href: '/free-agile-project-management-courses',
+        desc: 'Scrum events, Kanban boards, Jira/Asana workflows, RACI matrices, and CAPM alignment.',
+        curators: ['ndulamiso'],
+      },
+      {
+        title: 'Free Customer Service & Operations Courses',
+        badge: 'Customer Ops',
+        href: '/free-customer-service-courses',
+        desc: 'CRM platforms, Zendesk, SLA ticket management, active listening, and CSAT / NPS metrics.',
+        curators: ['ndulamiso'],
+      },
+      {
         title: 'Free UI/UX Design Courses',
         badge: 'Design',
         href: '/free-ui-ux-design-courses',
