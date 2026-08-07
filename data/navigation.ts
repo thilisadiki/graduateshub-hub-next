@@ -131,6 +131,12 @@ export const popularGuides: GuideLink[] = [
     badge: 'Excel',
   },
   {
+    href: '/free-it-courses-with-certificates',
+    title: 'Free IT Support Courses',
+    desc: 'Computer networking, Active Directory DS, ITSM SLAs, and CompTIA A+ alignment.',
+    badge: 'IT Support',
+  },
+  {
     href: '/google-ai-essentials-course-guide',
     title: 'Google AI Essentials Guide',
     desc: 'Master prompt engineering and Generative AI for workplace productivity with Google credentials.',

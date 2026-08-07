@@ -96,6 +96,13 @@ const GUIDE_GROUPS: GuideGroup[] = [
         curators: ['jason'],
       },
       {
+        title: 'Free IT Support Courses',
+        badge: 'IT',
+        href: '/free-it-courses-with-certificates',
+        desc: 'Computer networking, Active Directory DS, help desk SLA ticket triage, OS administration, and CompTIA A+ alignment.',
+        curators: ['jason'],
+      },
+      {
         title: 'Free UI/UX Design Courses',
         badge: 'Design',
         href: '/free-ui-ux-design-courses',
