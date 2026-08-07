@@ -1,6 +1,6 @@
 {
   "id": "kpi-diagnose-metric-drop",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "business-metrics-kpis",
   "level": "intermediate",
   "title": "Diagnose a Metric Drop",

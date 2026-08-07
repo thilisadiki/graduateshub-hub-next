@@ -1,6 +1,6 @@
 {
   "id": "sql-basic-aggregation",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "sql-querying",
   "level": "beginner",
   "title": "Write Basic Aggregation Queries",

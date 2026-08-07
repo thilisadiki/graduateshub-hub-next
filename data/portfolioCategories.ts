@@ -20,8 +20,8 @@ export const portfolioCategories: PortfolioCategory[] = [
     accentTo: 'to-[#F5E0BB]',
   },
   {
-    id: 'data',
-    name: 'Data',
+    id: 'data-analytics',
+    name: 'Data Analytics',
     tagline: 'Turn messy data into decisions.',
     description:
       'Analytics tasks: cleaning real-world data, choosing the right chart, writing insight memos, and defending your metric choices to a non-technical stakeholder.',
@@ -95,6 +95,6 @@ export const portfolioCategories: PortfolioCategory[] = [
 
 export function getCategoryById(id: string): PortfolioCategory | undefined {
   if (id === 'it') return portfolioCategories.find((c) => c.id === 'information-technology');
-  if (id === 'data-analysis') return portfolioCategories.find((c) => c.id === 'data');
+  if (id === 'data' || id === 'data-analysis') return portfolioCategories.find((c) => c.id === 'data-analytics');
   return portfolioCategories.find((c) => c.id === id);
 }

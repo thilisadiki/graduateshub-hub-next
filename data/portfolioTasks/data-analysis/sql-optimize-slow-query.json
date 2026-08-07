@@ -1,6 +1,6 @@
 {
   "id": "sql-optimize-slow-query",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "sql-querying",
   "level": "advanced",
   "title": "Optimize a Slow Query on a 50M-Row Table",

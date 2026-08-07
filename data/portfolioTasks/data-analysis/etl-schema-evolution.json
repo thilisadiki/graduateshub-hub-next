@@ -1,6 +1,6 @@
 {
   "id": "etl-schema-evolution",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "etl-data-pipelines",
   "level": "intermediate",
   "title": "Handle Schema Changes Gracefully",

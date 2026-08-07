@@ -1,6 +1,6 @@
 {
   "id": "data-governance-quality",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "title": "Data Governance & Quality",
   "description": "Ensure data is trustworthy, compliant, and well-documented. Tests data dictionaries, quality checks, and privacy compliance.",
   "skillsProven": [

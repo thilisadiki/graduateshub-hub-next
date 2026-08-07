@@ -1,6 +1,6 @@
 {
   "id": "etl-simple-flow",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "etl-data-pipelines",
   "level": "beginner",
   "title": "Design a Simple ETL Flow",

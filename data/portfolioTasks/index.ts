@@ -227,14 +227,14 @@ export function getTaskByLocation(
   topicId: string,
   level: PortfolioLevel,
 ): PortfolioTask | undefined {
-  const targetCategory = categoryId === 'it' ? 'information-technology' : categoryId === 'data-analysis' ? 'data' : categoryId;
+  const targetCategory = categoryId === 'it' ? 'information-technology' : (categoryId === 'data' || categoryId === 'data-analysis') ? 'data-analytics' : categoryId;
   return portfolioTasks.find(
     (t) => (t.categoryId === targetCategory || t.categoryId === categoryId) && t.topicId === topicId && t.level === level,
   );
 }
 
 export function getTasksByTopic(categoryId: string, topicId: string): PortfolioTask[] {
-  const targetCategory = categoryId === 'it' ? 'information-technology' : categoryId === 'data-analysis' ? 'data' : categoryId;
+  const targetCategory = categoryId === 'it' ? 'information-technology' : (categoryId === 'data' || categoryId === 'data-analysis') ? 'data-analytics' : categoryId;
   return portfolioTasks.filter((t) => (t.categoryId === targetCategory || t.categoryId === categoryId) && t.topicId === topicId);
 }
 

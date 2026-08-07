@@ -1,6 +1,6 @@
 {
   "id": "governance-quality-checks",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "data-governance-quality",
   "level": "intermediate",
   "title": "Design Data Quality Checks",

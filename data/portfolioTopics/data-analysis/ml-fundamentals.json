@@ -1,6 +1,6 @@
 {
   "id": "ml-fundamentals",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "title": "Machine Learning Fundamentals",
   "description": "Apply practical, applied machine learning thinking. Tests algorithm selection, model evaluation, and bias detection.",
   "skillsProven": [

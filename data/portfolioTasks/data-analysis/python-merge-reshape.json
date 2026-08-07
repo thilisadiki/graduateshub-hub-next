@@ -1,6 +1,6 @@
 {
   "id": "python-merge-reshape",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "python-data-analysis",
   "level": "intermediate",
   "title": "Merge, Reshape, and Aggregate Multi-Source Data",

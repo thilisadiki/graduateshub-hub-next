@@ -1,6 +1,6 @@
 {
   "id": "data-cleaning-healthcare-imputation",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "data-cleaning",
   "level": "intermediate",
   "title": "Handling Missing Data in a Healthcare Dataset",

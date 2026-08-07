@@ -1,6 +1,6 @@
 {
   "id": "etl-streaming-pipeline",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "etl-data-pipelines",
   "level": "advanced",
   "title": "Design a Real-Time Streaming Pipeline",

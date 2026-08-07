@@ -1,6 +1,6 @@
 {
   "id": "business-metrics-kpis",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "title": "Business Metrics & KPIs",
   "description": "Understand what to measure and why. Tests metric definition, root-cause analysis, and building metrics frameworks that drive decisions.",
   "skillsProven": [

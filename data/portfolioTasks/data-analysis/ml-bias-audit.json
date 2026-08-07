@@ -1,6 +1,6 @@
 {
   "id": "ml-bias-audit",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "ml-fundamentals",
   "level": "advanced",
   "title": "Detect and Mitigate Model Bias",

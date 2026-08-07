@@ -1,6 +1,6 @@
 {
   "id": "python-explore-dataset",
-  "categoryId": "data",
+  "categoryId": "data-analytics",
   "topicId": "python-data-analysis",
   "level": "beginner",
   "title": "Explore a Dataset with pandas",
