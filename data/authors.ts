@@ -78,7 +78,7 @@ export const authors: Author[] = [
     ],
     linkedinUrl: 'https://www.linkedin.com/in/jasonsadiki/',
     websiteUrl: 'https://thilisadiki.com',
-    metaTitle: 'Jason Sadiki - Founder & Technical SEO Specialist (Betway Africa) | Graduates Hub',
+    metaTitle: 'Jason Sadiki - Founder & Technical SEO Specialist (Betway Africa)',
     metaDescription:
       'Jason Sadiki is the Founder of Graduates Hub and a Technical SEO Specialist at Betway Africa with 7+ years of experience. Explore career roadmaps and guides curated by Jason.',
   },
@@ -113,7 +113,7 @@ export const authors: Author[] = [
       { name: 'Graduates Hub', url: 'https://www.graduateshub.org' },
     ],
     linkedinUrl: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
-    metaTitle: 'Ndulamiso Mamburu - Tax Professional & Co-Founder | Graduates Hub',
+    metaTitle: 'Ndulamiso Mamburu - Tax Professional & Co-Founder',
     metaDescription:
       'Ndulamiso Mamburu is an Accounting Science Graduate and SARS Tax Professional. Explore accounting and business career guides curated by Ndulamiso.',
   },
