@@ -333,14 +333,13 @@ export default function GuidesPage() {
             {ALL_GUIDES.length} Guides · Updated {formatLastUpdated()}
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-            Online Course Guides for 2026
+            Structured Course &amp; Certification Guides
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            Every guide on this page was built by a subject-matter specialist, not an algorithm.
-            Each one covers a specific field, explains which courses are worth your time, and tells you exactly who curated it and why.
+            Specialist-curated learning roadmaps covering free certified courses, professional credentials, and skill outcomes across tech, business, finance, and marketing.
           </p>
           <p className="text-gray-500 text-base leading-relaxed">
-            We do not publish guides outside our areas of expertise. That is why you will not find health, Food or language guides here. Only fields where we have practitioners we trust.{' '}
+            Every guide on this page provides a structured pathway from beginner concepts to employer-recognized certifications and portfolio proof tasks.{' '}
             <Link href="/curation-policy" className="text-primary font-medium hover:text-[#261A00] transition-colors">
               Read our curation policy →
             </Link>

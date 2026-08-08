@@ -54,13 +54,13 @@ export default function Navbar() {
                       <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">{link.badge}</span>
                     </Link>
                   ))}
-                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider">Popular Guides</p>
+                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider">Course &amp; Certification Guides</p>
                   {popularGuides.slice(0, 6).map(guide => (
                     <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-[#FBF3EB] hover:text-primary rounded-md transition-colors block text-sm text-[#4F4639]">{guide.title}</Link>
                   ))}
                   <div className="mt-auto pt-2 border-t border-[#D1C5B4]">
                     <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-[#FFDF9C]/40 rounded-md transition-colors block text-sm">
-                      View All Guides →
+                      View All Course Guides →
                     </Link>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Navbar() {
         {/* Right Actions */}
         <div className="flex items-center gap-4 shrink-0 ml-auto">
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Blog<LinkPendingDot /></Link>
+            <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Articles &amp; Advice<LinkPendingDot /></Link>
             <Link href="/about" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">About<LinkPendingDot /></Link>
             <Link
               href="/free-ai-career-tools"
@@ -124,7 +124,7 @@ export default function Navbar() {
             {link.label} <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full">{link.badge}</span>
           </Link>
         ))}
-        <div className="py-3 text-[#7C7061] font-bold text-xs uppercase tracking-wider mt-2">Popular Guides</div>
+        <div className="py-3 text-[#7C7061] font-bold text-xs uppercase tracking-wider mt-2">Course &amp; Certification Guides</div>
         <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#FFDF9C] mb-4">
           {popularGuides.slice(0, 6).map(guide => (
             <Link key={guide.href} href={guide.href} onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">{guide.title}</Link>
@@ -138,7 +138,7 @@ export default function Navbar() {
           <Link href="/career-roadmaps/digital-marketing-specialist" onClick={toggleMobileMenu} className="font-medium text-sm text-[#4F4639] hover:text-primary py-2.5">Digital Marketing</Link>
           <Link href="/career-roadmaps" onClick={toggleMobileMenu} className="font-semibold text-sm text-primary py-2.5">View All Roadmaps →</Link>
         </div>
-        <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">Blog</Link>
+        <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">Articles &amp; Advice</Link>
         <Link href="/about" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">About Us</Link>
         <Link
           href="/free-ai-career-tools"

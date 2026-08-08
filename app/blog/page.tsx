@@ -214,13 +214,13 @@ export default async function BlogPage({
       <div className="bg-[#1F1B13] text-white border-b border-[#D1C5B4] py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7A5900]/30 border border-[#FFDF9C]/30 text-[#FFDF9C] font-bold text-xs uppercase tracking-wider mb-6">
-            <BookOpen size={14} className="text-yellow-400" /> Career Knowledge Base
+            <BookOpen size={14} className="text-yellow-400" /> Career Journal &amp; Advice
           </div>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4 leading-tight">
-            Graduate Career Guides &amp; Insights
+            Graduate Career Journal &amp; Advice
           </h1>
           <p className="text-[#D1C5B4] text-lg max-w-2xl leading-relaxed mb-8">
-            Expert advice on free courses, CV optimization, career development programs, and technical career roadmaps.
+            Step-by-step program guides, financial aid application tips, interview strategies, and real-world career advice for graduates and job seekers.
           </p>
 
           {/* Quick Category Filters */}

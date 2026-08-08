@@ -24,37 +24,33 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Popular Guides */}
+        {/* Course & Skill Guides */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">Popular Guides</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Course &amp; Skill Guides</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/free-courses-for-beginners" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Beginners</Link></li>
             <li><Link href="/free-courses-with-certificates" className="hover:text-[#FFDF9C] transition-colors">Free Courses with Certificates</Link></li>
-            <li><Link href="/best-alison-courses-with-certificates" className="hover:text-[#FFDF9C] transition-colors">Best Alison Courses</Link></li>
             <li><Link href="/free-courses-for-data-analysts" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Data Analysts</Link></li>
-            <li><Link href="/free-ai-courses-for-beginners" className="hover:text-[#FFDF9C] transition-colors">Free AI Courses for Beginners</Link></li>
-            <li><Link href="/free-courses-for-accounting-and-finance" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Accounting & Finance</Link></li>
             <li><Link href="/free-courses-for-software-developers" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Software Developers</Link></li>
+            <li><Link href="/free-it-courses-with-certificates" className="hover:text-[#FFDF9C] transition-colors">Free IT Support Courses</Link></li>
+            <li><Link href="/free-ai-courses-for-beginners" className="hover:text-[#FFDF9C] transition-colors">Free AI Courses for Beginners</Link></li>
             <li><Link href="/free-business-courses" className="hover:text-[#FFDF9C] transition-colors">Free Business Courses</Link></li>
-            <li><Link href="/guides" className="hover:text-[#FFDF9C] transition-colors font-medium">View All Guides →</Link></li>
+            <li><Link href="/guides" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">All Course Guides →</Link></li>
           </ul>
         </div>
 
-        {/* Career Resources */}
+        {/* Articles & Career Advice */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">Career Resources</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Articles &amp; Advice</h3>
           <ul className="space-y-2 text-sm">
+            <li><Link href="/blog" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">Blog &amp; Career Journal →</Link></li>
+            <li><Link href="/blog/yes-youth-program-guide-south-africa" className="hover:text-[#FFDF9C] transition-colors">YES Youth Program Guide</Link></li>
+            <li><Link href="/blog/how-to-get-coursera-certificates-for-free-2026-financial-aid-guide" className="hover:text-[#FFDF9C] transition-colors">Coursera Financial Aid Guide</Link></li>
+            <li><Link href="/blog/is-an-alison-certificate-recognised-by-employers-2026" className="hover:text-[#FFDF9C] transition-colors">Alison Certificate Audit</Link></li>
             <li><Link href="/free-ai-career-tools" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">AI Career Tools →</Link></li>
             <li><Link href="/portfolio-tasks" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#CCECC8]">Proof of Work Portfolio →</Link></li>
             <li><Link href="/cv-builder" className="hover:text-[#FFDF9C] transition-colors font-medium">Free CV Builder →</Link></li>
-            <li><Link href="/career-roadmaps" className="hover:text-[#FFDF9C] transition-colors font-medium">Career Roadmaps →</Link></li>
-            <li><Link href="/career-roadmaps/data-analyst" className="hover:text-[#FFDF9C] transition-colors">Data Analyst Roadmap</Link></li>
-            <li><Link href="/career-roadmaps/web-developer" className="hover:text-[#FFDF9C] transition-colors">Web Developer Roadmap</Link></li>
-            <li><Link href="/career-roadmaps/business-analyst" className="hover:text-[#FFDF9C] transition-colors">Business Analyst Roadmap</Link></li>
-            <li className="pt-1"><Link href="/interview-prep" className="hover:text-[#FFDF9C] transition-colors font-medium">CV & Interview Prep →</Link></li>
-            <li><Link href="/interview-prep/data-analyst" className="hover:text-[#FFDF9C] transition-colors">Data Analyst Prep</Link></li>
-            <li><Link href="/interview-prep/web-developer" className="hover:text-[#FFDF9C] transition-colors">Web Developer Prep</Link></li>
-            <li><Link href="/interview-prep/junior-accountant" className="hover:text-[#FFDF9C] transition-colors">Junior Accountant Prep</Link></li>
+            <li><Link href="/interview-prep" className="hover:text-[#FFDF9C] transition-colors font-medium">CV &amp; Interview Prep →</Link></li>
           </ul>
         </div>
 
