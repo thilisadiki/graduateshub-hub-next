@@ -17,16 +17,16 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <div className="bg-slate-900 text-white py-12 px-6">
+    <div className="min-h-screen bg-[#FFF8F1] flex flex-col">
+      <div className="bg-[#1F1B13] text-white py-14 px-6 border-b border-[#D1C5B4]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold">Privacy <span className="text-primary">Policy</span></h1>
-          <p className="text-gray-400 mt-4">Last updated: April 2026</p>
-          <p className="text-gray-500 mt-2 text-sm">In compliance with the Protection of Personal Information Act (POPIA), Act 4 of 2013</p>
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">Privacy <span className="text-[#FFDF9C]">Policy</span></h1>
+          <p className="text-[#D1C5B4] mt-3 text-base">Last updated: August 2026</p>
+          <p className="text-[#D1C5B4]/80 mt-1 text-sm">In compliance with the Protection of Personal Information Act (POPIA), Act 4 of 2013</p>
         </div>
       </div>
 
-      <main className="flex-grow max-w-4xl mx-auto px-6 py-16 w-full prose [&_p]:text-gray-700 [&_h2]:text-gray-900 [&_h3]:text-gray-900 [&_li]:text-gray-700 [&_strong]:text-gray-900">
+      <main className="flex-grow max-w-4xl mx-auto px-6 py-16 w-full prose [&_p]:text-[#4F4639] [&_h2]:text-[#1F1B13] [&_h3]:text-[#1F1B13] [&_li]:text-[#4F4639] [&_strong]:text-[#1F1B13] [&_h2]:font-extrabold [&_h2]:text-2xl [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:leading-relaxed [&_p]:mb-4">
 
         <h2>1. Introduction and Responsible Party</h2>
         <p>
@@ -57,6 +57,9 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong>Newsletter subscriptions:</strong> If you subscribe to our newsletter, we collect your email address.
+          </li>
+          <li>
+            <strong>Interactive AI tools &amp; CV Builder inputs:</strong> Text snippets, job descriptions, or resume bullet points uploaded into our interactive AI utilities (CV Reviewer, JD Decoder, Skills Gap Analyzer, AI Interview Simulator) or CV Builder are processed via secure server-side API calls to Google Gemini API for transient analysis. We do not store your uploaded documents permanently in public databases.
           </li>
         </ul>
         <h3>Information collected automatically:</h3>
