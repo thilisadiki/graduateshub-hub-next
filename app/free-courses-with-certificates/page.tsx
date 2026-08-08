@@ -10,15 +10,15 @@ import { SITE_URL, SITE_NAME } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/free-courses-with-certificates`;
 
 export const metadata: Metadata = {
-  title: 'Best Free Online Courses with Certificates (2026)',
+  title: 'Free Online Courses with Free Certificates (2026)',
   description:
-    'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',
+    'Discover top-rated free online courses with free certificates and free online certificate programs in 2026. Hand-picked accredited courses in IT, Data, Business, Marketing, Finance, and Software Dev.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Best Free Online Courses with Certificates (2026) | Graduates Hub',
+    title: 'Free Online Courses with Free Certificates (2026) | Graduates Hub',
     description:
-      'The best free certified courses across multiple platforms in 2026. Hand-picked courses in IT, Business, Marketing, Finance, and Software Development from providers like Google, IBM, Microsoft, and Alison.',
+      'Discover top-rated free online courses with free certificates and free online certificate programs in 2026. Hand-picked accredited courses in IT, Data, Business, Marketing, Finance, and Software Dev.',
     url: CANONICAL,
   },
 };
@@ -132,10 +132,10 @@ export default function FreeCoursesWithCertificatesPage() {
     <GuideTemplate
       canonicalUrl={CANONICAL}
       breadcrumb={[{ label: 'Free Online Courses with Certificates' }]}
-      heading="Best Free Online Courses with Certificates (2026)"
-      heroDescription="Looking to upgrade your skills without spending money? We have curated the best free online courses with certificates across IT, Business, Marketing, Finance, and Software Development, all free to start, all career-focused."
+      heading="Free Online Courses with Free Certificates (2026)"
+      heroDescription="Looking for online certificate courses free of charge? We have curated the top free online courses with free certificates and online certificate programs free to enroll across IT, Data, Business, Marketing, Finance, and Software Development."
       heroBadges={[
-        { icon: CheckCircle2, label: '100% Free to Start', iconClassName: 'text-green-500' },
+        { icon: CheckCircle2, label: '100% Free to Study', iconClassName: 'text-green-500' },
         { icon: Award, label: 'Recognised Certificates', iconClassName: 'text-primary' },
         { icon: Clock, label: 'Self-Paced Learning' },
       ]}
