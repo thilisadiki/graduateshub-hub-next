@@ -535,6 +535,24 @@
       <h3>B. Staging Environment Noindex Guard</h3>
       <p>To ensure non-production preview deploys or staging hosts (such as <code>*.vercel.app</code> or <code>staging.graduateshub.org</code>) never pollute search engine indexes or leak unreleased features, <code>proxy.ts</code> injects an <code>X-Robots-Tag: noindex, nofollow</code> header on all non-production hosts.</p>
     </section>
+
+    <section id="indexation-standards">
+      <h2>10. Search Indexation &amp; Crawling Standards</h2>
+      <p>Search indexation across Graduates Hub is governed by a strict architectural principle:</p>
+      
+      <div class="alert tip">
+        <div class="alert-title">The Indexing Golden Rule</div>
+        <p>If a URL represents a stable, useful resource that someone could intentionally search for, index it. If it represents a user's session, generated state, filtering state, private data, or an application action, don't index it.</p>
+      </div>
+
+      <ul>
+        <li><strong>Stable Search Resources (INDEX)</strong>: <code>/career-roadmaps/*</code>, <code>/blog/*</code>, <code>/guides</code>, static landing pages. Emits <code>robots: { index: true, follow: true }</code> and registered in <code>sitemap.xml</code>.</li>
+        <li><strong>Interactive Workspaces (NOINDEX)</strong>: <code>/cv-builder/create</code>. Emits <code>robots: { index: false, follow: true }</code> and disallowed in <code>robots.ts</code>.</li>
+        <li><strong>User Submissions &amp; Proofs (NOINDEX)</strong>: <code>/proof/[id]</code>. Emits <code>robots: { index: false, follow: true }</code> and disallowed in <code>robots.ts</code> to keep private user badges out of public search results.</li>
+        <li><strong>Faceted &amp; Filtered Views (NOINDEX)</strong>: Any URL containing query parameters (e.g. <code>?page=2</code>, <code>?difficulty=beginner</code>, <code>?sort=latest</code>, <code>?skill=postgresql</code>). Canonical tag points strictly to clean base URL and metadata emits <code>robots: { index: false, follow: true }</code>.</li>
+        <li><strong>Internal API Endpoints (BLOCK CRAWL)</strong>: <code>/api/*</code>. Disallowed in <code>robots.ts</code>.</li>
+      </ul>
+    </section>
   </main>
 
   <script>

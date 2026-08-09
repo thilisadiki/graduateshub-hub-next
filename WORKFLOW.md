@@ -114,6 +114,21 @@ git switch dev && git merge main && git push                   # backport to dev
    shareable staging. If you ever do, the `proxy.ts` `noindex` is what then keeps
    it out of Google.
 
+## Search Indexing & Crawling Policy
+
+> **The Indexing Golden Rule:**
+> If a URL represents a stable, useful resource that someone could intentionally search for, index it. If it represents a user's session, generated state, filtering state, private data, or an application action, don't index it.
+
+### Indexing Decision Matrix
+
+| URL Category | Examples | Indexing Policy | Implementation |
+| :--- | :--- | :--- | :--- |
+| **Stable Search Resources** | `/career-roadmaps/data-analyst`, `/blog/*`, `/guides` | ✅ **INDEX** | `robots: { index: true, follow: true }` + `sitemap.xml` |
+| **Interactive Workspaces** | `/cv-builder/create` | ❌ **NOINDEX** | `robots: { index: false, follow: true }` + `disallow` in `robots.ts` |
+| **User Submissions & Proofs** | `/proof/[id]` | ❌ **NOINDEX** | `robots: { index: false, follow: true }` + `disallow` in `robots.ts` |
+| **Filtered / Paginated Views** | `/portfolio-tasks/*?page=2&difficulty=beginner` | ❌ **NOINDEX** | Dynamic `noindex, follow` on `searchParams` + Clean Canonical |
+| **Internal API Endpoints** | `/api/*` | 🚫 **BLOCK CRAWL** | `disallow: '/api/'` in `robots.ts` |
+
 ## Cheat sheet
 
 | Goal | Command |
