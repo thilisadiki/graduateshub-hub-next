@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Landmark, Award, Clock, Lock, CheckCircle2 } from 'lucide-react';
 import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
-import { courses as allCourses } from '@/data/courses';
+import { usGovernmentCourses } from '@/data/categories/usGovernmentCourses';
 import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/us-government-free-online-courses-certificates`;
@@ -25,77 +25,36 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Emergency Preparedness & Incident Command',
     slug: 'business',
-    description: 'Master public safety, disaster management, and community health frameworks with official federal certificates.',
-    items: [
-      {
-        id: 'diploma-project-management',
-        customContent: 'FEMA Emergency Management Institute (EMI) Independent Study (IS) Program: Earning a FEMA certificate validates your knowledge of public safety protocols. Courses such as IS-100 (Introduction to Incident Command System) and IS-700 (National Incident Management System) cover disaster response coordination, resource management, and emergency operations center procedures. Passing the online final exam grants an official electronic FEMA certificate.',
-      },
-    ],
+    description: 'Master public safety, disaster management, and community health frameworks with official federal certificates from FEMA.',
+    ids: ['fema-is-100c', 'fema-is-700b'],
   },
   {
     label: 'Cybersecurity & Public Technology',
     slug: 'it',
-    description: 'Gain technical cybersecurity skills through training modules developed by top federal technology agencies.',
-    items: [
-      {
-        id: 'computer-networking',
-        customContent: 'CISA & FedVTE Cybersecurity Portals: The Cybersecurity and Infrastructure Security Agency (CISA) provides free technical cybersecurity training covering threat hunting, incident response, network defense, and critical infrastructure protection. Learners complete structured modules and earn course certificates designed to align with federal cybersecurity framework standards.',
-      },
-      {
-        id: 'diploma-in-it-management',
-        customContent: 'NICCS (National Initiative for Cybersecurity Careers and Studies): Sponsored by the Department of Homeland Security, NICCS connects job seekers and technology professionals to federally funded training pathways and recognized credentials in cloud security, risk management, and ethical hacking.',
-      },
-    ],
+    description: 'Gain technical cybersecurity skills through training modules developed by CISA and the Department of Homeland Security.',
+    ids: ['cisa-fedvte-cybersecurity-foundations'],
   },
   {
     label: 'Public Health & Safety',
     slug: 'business',
     description: 'Earn public health, bioethics, and occupational safety credentials backed by premier federal healthcare institutions.',
-    items: [
-      {
-        id: 'lean-six-sigma-yellow-belt',
-        customContent: 'CDC Learning Connection & NIH Training Center: The Centers for Disease Control and Prevention (CDC) and National Institutes of Health (NIH) offer free online modules covering epidemiology, bioethics, human research subject protection, and health communication. Completing these courses earns official digital certificates and Continuing Education Units (CEUs).',
-      },
-      {
-        id: 'diploma-financial-management-managers',
-        customContent: 'OSHA Training Institute (OTI): The Occupational Safety and Health Administration provides free online training resources covering workplace hazard identification, personal protective equipment (PPE), chemical safety standards, and fall protection.',
-      },
-    ],
+    ids: ['cdc-public-health-101', 'nih-human-subjects-research', 'osha-10-hour-general-industry'],
   },
   {
     label: 'Business, Finance & Leadership',
     slug: 'business',
     description: 'Develop entrepreneurial, financial management, and civic leadership skills backed by U.S. government departments.',
-    items: [
-      {
-        id: 'diploma-effective-bookkeeping-payroll',
-        customContent: 'Small Business Administration (SBA) Learning Center: The SBA offers self-paced courses on business planning, startup financing, legal entity selection, and government contracting (8(a) certification). Finishing each module awards a downloadable SBA completion certificate.',
-      },
-      {
-        id: 'agile-project-management',
-        customContent: 'YALI Network (U.S. Department of State): Sponsored by the U.S. Department of State, the Young African Leaders Initiative portal provides free online leadership tracks in business entrepreneurship, civic engagement, public management, and workforce ethics, awarding official digital certificates.',
-      },
-      {
-        id: 'accounts-management-xero',
-        customContent: 'USDA AgLearn & Training: The U.S. Department of Agriculture provides open modules on agribusiness management, rural economic development, and environmental sustainability for emerging agricultural leaders.',
-      },
-    ],
+    ids: ['sba-small-business-guide', 'yali-servant-leadership'],
   },
   {
     label: 'Federal Acquisition & Public Administration',
     slug: 'business',
     description: 'Understand government procurement, public sector contracting, and administrative project management.',
-    items: [
-      {
-        id: 'diploma-project-management',
-        customContent: 'Federal Acquisition Institute (FAI): FAI offers open training modules on public sector procurement, contract management, and federal compliance. Completing these courses provides verifiable credentials suited for contractors, grant managers, and public administration professionals.',
-      },
-    ],
+    ids: ['fai-federal-contracting-101'],
   },
 ];
 
-const relatedCourses = allCourses.slice(0, 6);
+const relatedCourses = usGovernmentCourses.slice(0, 6);
 
 const benefits: BenefitItem[] = [
   {
@@ -199,8 +158,8 @@ export default function USGovernmentCoursesPage() {
       benefits={benefits}
       courseCategories={courseCategories}
       relatedCourses={relatedCourses}
-      carouselTitle="More Top-Rated Free Courses"
-      carouselSubtitle="Hand-picked career development paths from verified global providers"
+      carouselTitle="Official Federal Agency Courses"
+      carouselSubtitle="Direct links to free training modules and certification exams from U.S. government agencies"
       careerPathsTitle="Career Paths Powered by Government Training"
       careerPathsSubtitle="These free federal training modules prepare you for high-responsibility public and private sector roles."
       careerPaths={careerPaths}
