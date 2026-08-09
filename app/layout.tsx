@@ -14,10 +14,11 @@ import { Analytics } from '@vercel/analytics/next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.graduateshub.org'),
   title: {
-    default: 'Graduates Hub - Free Online Courses with Certificates',
+    default: 'Graduates Hub - Free Career Roadmaps, Interview Prep & AI Tools',
     template: '%s | Graduates Hub',
   },
-  description: 'Empowering learners worldwide to achieve their goals with completely free, high-quality online education across IT, Business, Languages, and more.',
+  description:
+    'Graduates Hub is South Africa\'s leading graduate career resource platform. Explore step-by-step career roadmaps, role-specific interview prep guides, proof of work portfolio tasks, certified course guides, and AI career tools.',
   openGraph: {
     siteName: 'Graduates Hub',
     type: 'website',

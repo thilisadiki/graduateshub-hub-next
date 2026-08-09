@@ -95,11 +95,11 @@ export default function Image() {
               gap: 18,
             }}
           >
-            <div style={{ fontSize: 68, lineHeight: 1.05, fontWeight: 800 }}>
-              Free Online Courses with Certificates
+            <div style={{ fontSize: 60, lineHeight: 1.1, fontWeight: 800 }}>
+              Career Roadmaps, Interview Prep &amp; AI Tools
             </div>
-            <div style={{ fontSize: 28, lineHeight: 1.35, color: '#334155' }}>
-              Discover flexible courses in IT, business, health, languages, marketing, and more.
+            <div style={{ fontSize: 26, lineHeight: 1.35, color: '#334155' }}>
+              Step-by-step career roadmaps, interview prep guides, proof of work portfolios, and AI tools.
             </div>
           </div>
 
