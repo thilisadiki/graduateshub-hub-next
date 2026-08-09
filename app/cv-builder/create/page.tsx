@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   description:
     'Distraction-free CV builder workspace. Fill in your details, crop profile photo, preview in real-time, and download your print-ready PDF for free.',
   alternates: { canonical: `${SITE_URL}/cv-builder/create` },
+  robots: {
+    index: false,
+    follow: true,
+  },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Create Your Free CV - Interactive Workspace | Graduates Hub',
