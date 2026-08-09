@@ -16,10 +16,15 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string; topic: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
   const { category, topic } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const hasQueryParams = Object.keys(resolvedSearchParams).length > 0;
+
   const cat = getCategoryById(category);
   const top = getTopicById(category, topic);
   if (!cat || !top) return {};
@@ -32,6 +37,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: url },
+    ...(hasQueryParams && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
     openGraph: {
       siteName: SITE_NAME,
       title: `${title} | Graduates Hub`,

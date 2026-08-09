@@ -32,10 +32,15 @@ function parseLevel(value: string): PortfolioLevel | null {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string; topic: string; level: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
   const { category, topic, level } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const hasQueryParams = Object.keys(resolvedSearchParams).length > 0;
+
   const parsed = parseLevel(level);
   if (!parsed) return {};
   const task = getTaskByLocation(category, topic, parsed);
@@ -48,6 +53,12 @@ export async function generateMetadata({
     title: `${task.title} - ${topicLabel} ${task.difficulty} Task`,
     description,
     alternates: { canonical: `${SITE_URL}/portfolio-tasks/${category}/${topic}` },
+    ...(hasQueryParams && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
     openGraph: {
       siteName: SITE_NAME,
       title: `${task.title} | Graduates Hub Portfolio`,

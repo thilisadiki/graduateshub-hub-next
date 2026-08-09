@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { page } = await searchParams;
   const pageNum = Math.max(1, parseInt(page ?? '1'));
-  const url = pageNum === 1 ? `${SITE_URL}/blog` : `${SITE_URL}/blog?page=${pageNum}`;
+  const url = `${SITE_URL}/blog`;
   const title =
     pageNum === 1
       ? 'Graduate Career Guides & Study Tips Blog (2026)'

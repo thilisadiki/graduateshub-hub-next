@@ -36,12 +36,20 @@ export async function generateMetadata({
     : `${cat.name} Portfolio Tasks - Page ${pageNum} - Graded Briefs`;
     
   const description = seoData?.seoDescription ?? `${cat.tagline}${topicTitles ? ` Topics: ${topicTitles}.` : ''} Practical, graded tasks across Beginner, Intermediate, and Advanced levels.`;
-  const url = pageNum === 1 ? `${SITE_URL}/portfolio-tasks/${cat.id}` : `${SITE_URL}/portfolio-tasks/${cat.id}?page=${pageNum}`;
+  const url = `${SITE_URL}/portfolio-tasks/${cat.id}`;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const hasQueryParams = Object.keys(resolvedSearchParams).length > 0;
 
   return {
     title,
     description,
     alternates: { canonical: url },
+    ...(hasQueryParams && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
     openGraph: {
       siteName: SITE_NAME,
       title: `${title} | Graduates Hub`,
