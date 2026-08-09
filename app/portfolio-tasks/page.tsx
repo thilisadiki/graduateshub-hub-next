@@ -9,15 +9,15 @@ import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 import RecentCompleters from '@/components/portfolio/RecentCompleters';
 
 export const metadata: Metadata = {
-  title: 'Proof of Work Portfolio for SA Graduates - Graded Micro-Internship Tasks',
+  title: 'Proof of Work Portfolio for SA Graduates - AI-Graded Tasks',
   description:
-    'Complete short, practical micro-internship tasks graded against a public rubric and earn a shareable Badge of Competence for your LinkedIn. Built for South African graduates and career changers. No account required.',
+    'Complete short, practical micro-internship tasks evaluated against a public rubric and earn an AI-graded proof-of-work assessment badge for your LinkedIn. Built for South African graduates and career changers. No account required.',
   alternates: { canonical: `${SITE_URL}/portfolio-tasks` },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Proof of Work Portfolio | Graduates Hub',
     description:
-      'Most graduates have a CV. Very few have a portfolio. Complete practical tasks, get them graded, and earn a shareable Badge of Competence.',
+      'Most graduates have a CV. Very few have a portfolio. Complete practical tasks, get them graded via AI, and earn a shareable proof-of-work badge.',
     url: `${SITE_URL}/portfolio-tasks`,
     type: 'website',
     images: [OG_IMAGE],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const steps = [
   { step: '1', icon: Briefcase, title: 'Pick a category and topic', body: 'Browse categories like Web Development, Data, or Digital Marketing. Each topic has up to three difficulty levels.' },
   { step: '2', icon: FileText, title: 'Choose your level', body: 'Beginner, Intermediate, or Advanced. Start where you are, revisit to level up.' },
-  { step: '3', icon: Award, title: 'Earn a Badge of Competence', body: 'Your submission is graded against a public rubric. Pass and you get a shareable Badge URL for LinkedIn.' },
+  { step: '3', icon: Award, title: 'Earn a Proof-of-Work Badge', body: 'Your submission is evaluated by AI against a public rubric. Pass and you get a shareable proof URL for LinkedIn.' },
 ];
 
 export default function PortfolioLandingPage() {

@@ -144,7 +144,7 @@ export default async function ProofPage({
           </div>
           <div className="flex items-center gap-2 mb-4">
             <Award size={18} className="text-yellow-400" />
-            <span className="text-xs font-bold uppercase tracking-wider text-yellow-400">Badge of Competence</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-yellow-400">AI-Graded Proof-of-Work Assessment</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-3 leading-tight">
             {proof.task_title}
@@ -184,6 +184,23 @@ export default async function ProofPage({
           <p className="text-gray-600 leading-relaxed text-[15px] mt-6 pt-6 border-t border-gray-100">
             {ev.summary}
           </p>
+        </section>
+
+        {/* AI-Graded Assessment Disclaimer */}
+        <section className="bg-slate-50 border border-slate-200 rounded-2xl p-5 shadow-sm">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+              <Sparkles size={18} />
+            </div>
+            <div>
+              <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider mb-1">
+                AI-Graded Proof-of-Work Assessment Notice
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                This badge represents an automated evaluation of student-submitted project deliverables assessed against a public rubric using Google Gemini. It demonstrates hands-on project completion and self-directed skill building. It is not an accredited academic degree, professional board certification, or human employer evaluation.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Rubric breakdown */}

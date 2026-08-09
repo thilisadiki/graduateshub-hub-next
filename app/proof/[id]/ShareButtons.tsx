@@ -28,7 +28,7 @@ export default function ShareButtons({ shareUrl, graduateName, taskTitle }: Shar
 
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
 
-  const snippet = `I just earned a Badge of Competence for completing the "${taskTitle}" task on Graduates Hub. It is a practical, graded piece of work you can review: ${shareUrl}`;
+  const snippet = `I just completed an AI-graded proof-of-work assessment for the "${taskTitle}" task on Graduates Hub. It is a practical, graded project deliverable you can review: ${shareUrl}`;
 
   async function handleCopy() {
     try {

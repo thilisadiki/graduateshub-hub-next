@@ -15,7 +15,7 @@ const steps = [
   {
     icon: ShieldCheck,
     title: 'Earn a public Badge',
-    body: 'Share a verifiable Badge of Competence straight from your LinkedIn profile.',
+    body: 'Share a verifiable AI-graded proof-of-work assessment badge straight from your LinkedIn profile.',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function PortfolioBanner() {
             Most graduates have a CV. Very few have a portfolio.
           </h2>
           <p className="text-[#D1C5B4] mt-3 max-w-2xl mx-auto text-lg">
-            Complete a practical, graded task and earn a shareable Badge of Competence. Prove your skills, not just your certificates.
+            Complete a practical, graded task and earn an AI-graded proof-of-work assessment badge. Prove your skills, not just your certificates.
           </p>
         </div>
 
