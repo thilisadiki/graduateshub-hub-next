@@ -562,6 +562,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <h3>Dynamic Evergreen Date Architecture</h3>
       <p>All editorial guides, interview preps, and roadmaps utilize <code>utils/dateUtils.ts</code> (<code>formatLastUpdated</code>) to display dynamic evergreen month/year date stamps (e.g. <code>July 2026</code>), maintaining high user trust and search freshness signals.</p>
     </section>
+
+    <section id="ai-tools-seo-architecture">
+      <h2>9. AI Tools SEO &amp; Intent Architecture</h2>
+      <p>Graduates Hub distinguishes between interactive product features and indexable search assets:</p>
+      
+      <div class="alert tip">
+        <div class="alert-title">AI Tools Architectural Paradigm</div>
+        <p><strong>AI Tools = Product Conversion &amp; Engagement Engine</strong> (delivers instant interactive utility via Google Gemini API)<br>
+        <strong>Host Landing Pages = SEO Search Intent Engine</strong> (provides rich static editorial text addressing real user career problems for search engines)</p>
+      </div>
+
+      <p>Rather than relying on client-side dynamic AI outputs for search ranking, editorial landing pages (such as <code>/free-ai-career-tools</code>) contain rich static problem-solving text (CV audits, job description decoding, skill gap analysis, STAR interview prep) that ranks on search engines while embedding the interactive tool widget inside.</p>
+    </section>
   </main>
 
   <script>

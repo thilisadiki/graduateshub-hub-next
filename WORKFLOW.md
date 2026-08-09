@@ -129,6 +129,14 @@ git switch dev && git merge main && git push                   # backport to dev
 | **Filtered / Paginated Views** | `/portfolio-tasks/*?page=2&difficulty=beginner` | ❌ **NOINDEX** | Dynamic `noindex, follow` on `searchParams` + Clean Canonical |
 | **Internal API Endpoints** | `/api/*` | 🚫 **BLOCK CRAWL** | `disallow: '/api/'` in `robots.ts` |
 
+## AI Tools Architecture & SEO Intent Model
+
+> **AI Tools = Product Conversion & Engagement Engine**  
+> **Host Landing Pages = SEO Search Intent Engine**
+
+- **Interactive API & Client Layer (`/api/*`)**: Delivers instant utility, user engagement, and retention via Google Gemini. Dynamic client outputs are NOT indexed as content assets.
+- **Editorial Landing Layer (`/free-ai-career-tools`)**: Provides indexable, search-optimized editorial text addressing real user career problems (*CV auditing, JD decoding, skills gap analysis, interview preparation*). Hosts and frames the interactive tool inside it.
+
 ## Cheat sheet
 
 | Goal | Command |

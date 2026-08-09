@@ -213,21 +213,46 @@ export default function ToolsPage() {
           <ToolsGrid />
         </section>
 
-        {/* What these tools are */}
+        {/* What these tools are & Problem Breakdown */}
         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">What Are These Tools?</h2>
-          <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed flex flex-col gap-4 text-[15px]">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">How These Tools Solve Real Job Hunting Challenges</h2>
+          <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed flex flex-col gap-6 text-[15px]">
             <p>
-              Graduates Hub offers seven free, AI-powered career tools designed specifically for graduates and job seekers in South Africa and beyond. Each tool is built around a specific stage of the job search process, from figuring out which career to pursue all the way through to walking into an interview prepared.
+              Graduates Hub provides seven free career tools designed to solve specific bottlenecks in the South African graduate job search: evaluating your CV, decoding employer expectations, identifying missing technical skills, and preparing for high-stakes interviews.
             </p>
-            <p>
-              The AI tools use Google Gemini to generate personalised results based on your input. The Career Quiz is the exception: it runs entirely in your browser using a weighted scoring system with no AI involved, which means it is instant and works offline.
-            </p>
-            <p>
-              Every tool connects to our verified career roadmaps, interview prep guides, and skill development resources. When a tool identifies a skill gap or recommends learning material, it links directly to relevant career resources so you can act immediately. No upsells, no paywalls.
-            </p>
-            <p>
-              These tools do not replace a career counsellor or a mentor. They are designed to give you structured, specific starting points that you can then build on with real-world practice, networking, and continued learning.
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2 not-prose">
+              <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+                <h3 className="font-extrabold text-gray-900 text-base mb-2">1. CV Review &amp; ATS Audit</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Many graduate CVs fail initial ATS screens due to generic objective statements, poor formatting, or missing keywords. Our CV Reviewer audits your text for impact metrics, structure, and job-specific relevance.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+                <h3 className="font-extrabold text-gray-900 text-base mb-2">2. Decoding Complex Job Postings</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Job ads are often padded with corporate buzzwords. The JD Decoder separates core non-negotiable skills from optional preferences, giving you a clear picture of what hiring managers actually care about.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+                <h3 className="font-extrabold text-gray-900 text-base mb-2">3. Skills Gap Identification</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Applying without knowing your skill gaps leads to repeated rejections. The Skills Gap Analyser compares your current experience against target job specs and pairs missing skills with verified free courses.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+                <h3 className="font-extrabold text-gray-900 text-base mb-2">4. Competency Interview Prep</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Interviewing requires clear, structured communication. The Interview Prep Generator creates role-specific technical and behavioral questions with STAR framework model answers.
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-2">
+              Every interactive tool connects to our verified career roadmaps, interview prep guides, and portfolio tasks so you can act on your results immediately without paywalls.
             </p>
           </div>
         </section>
