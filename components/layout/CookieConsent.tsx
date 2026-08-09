@@ -12,30 +12,41 @@ export default function CookieConsent() {
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem('cookieConsent', 'true');
+  const handleAcceptAll = () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    setIsVisible(false);
+  };
+
+  const handleEssentialOnly = () => {
+    localStorage.setItem('cookieConsent', 'essential');
     setIsVisible(false);
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 border-t border-gray-200">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#1F1B13] text-white shadow-[0_-4px_12px_rgba(0,0,0,0.2)] z-50 border-t border-[#D1C5B4]/30">
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="text-sm text-gray-600 flex-1">
+        <div className="text-xs sm:text-sm text-gray-300 flex-1 leading-relaxed">
           <p>
-            We use cookies to enhance your browsing experience, display personalized ads, and analyze our traffic. By clicking &quot;Accept&quot;, you consent to our use of cookies according to our{' '}
-            <Link href="/privacy" className="text-primary hover:text-[#261A00] underline font-medium">
+            We use cookies and similar technologies to enhance your experience, serve personalized ads, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies as detailed in our{' '}
+            <Link href="/privacy" className="text-[#FFDF9C] hover:underline font-semibold">
               Privacy Policy
             </Link>.
           </p>
         </div>
-        <div className="flex-shrink-0">
+        <div className="flex flex-col sm:flex-row items-center gap-2 shrink-0 w-full sm:w-auto">
           <button
-            onClick={handleAccept}
-            className="w-full sm:w-auto px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-[#5a4000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors shadow-sm"
+            onClick={handleEssentialOnly}
+            className="w-full sm:w-auto px-4 py-2 bg-transparent text-gray-300 font-medium text-xs rounded-lg border border-gray-600 hover:bg-gray-800 focus:outline-none transition-colors"
           >
-            Accept
+            Essential Only
+          </button>
+          <button
+            onClick={handleAcceptAll}
+            className="w-full sm:w-auto px-5 py-2 bg-primary text-white font-semibold text-xs rounded-lg hover:bg-[#5a4000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors shadow-sm"
+          >
+            Accept All
           </button>
         </div>
       </div>
