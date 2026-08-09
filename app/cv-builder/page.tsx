@@ -156,7 +156,7 @@ export default function CVBuilderPage() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
-            3 Professional, ATS-Compliant Templates
+            3 Professional, ATS-Friendly Templates
           </h2>
           <p className="text-sm text-gray-500">
             Select a template below to launch directly into the builder workspace.

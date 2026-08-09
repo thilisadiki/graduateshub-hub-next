@@ -204,7 +204,7 @@ export default function BestCareersSAPage() {
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Launch One of SA's Best Careers?"
-      ctaBody="Prepare your job application with an ATS-compliant resume and industry-relevant online certificates."
+      ctaBody="Prepare your job application with an ATS-friendly resume and industry-relevant online certificates."
       ctaPrimaryLabel="Build a Free Professional CV"
       ctaPrimaryHref="/cv-builder"
       ctaSecondaryLabel="Explore Highest Paying Careers"

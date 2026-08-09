@@ -154,7 +154,7 @@ export default function SAGraduateInternshipsPage() {
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Apply for SA Graduate Internships?"
-      ctaBody="Prepare your application with an ATS-compliant resume and industry-relevant online certificates."
+      ctaBody="Prepare your application with an ATS-friendly resume and industry-relevant online certificates."
       ctaPrimaryLabel="Build a Free Professional CV"
       ctaPrimaryHref="/cv-builder"
       ctaSecondaryLabel="View SA Graduate Jobs Guide"

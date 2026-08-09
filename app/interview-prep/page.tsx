@@ -68,7 +68,7 @@ const FAQS = [
   },
   {
     q: 'How do I build an ATS-optimized CV using Graduates Hub?',
-    a: 'Once you review the role-specific tips in our prep guides, use our free CV Builder (/cv-builder). It provides 3 professional, ATS-compliant templates, an interactive photo cropper, and instant PDF download.',
+    a: 'Once you review the role-specific tips in our prep guides, use our free CV Builder (/cv-builder). It provides 3 professional, ATS-friendly templates, an interactive photo cropper, and instant PDF download.',
   },
 ];
 
