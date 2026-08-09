@@ -177,10 +177,10 @@ const careerPaths: CareerPathItem[] = [
 ];
 
 const relatedGuides: RelatedGuide[] = [
-  { title: 'Career Roadmaps', desc: 'Visual step-by-step paths from where you are now to where you want to be, by role and industry.', href: '/career-roadmaps' },
-  { title: 'Interview Prep', desc: 'Role-specific interview questions with model answers and common mistakes to avoid.', href: '/interview-prep' },
-  { title: 'Best Free Courses for Beginners (2026)', desc: 'Zero experience needed. Start building job-ready skills from scratch across any field.', href: '/free-courses-for-beginners' },
-  { title: 'Best Free Online Courses with Certificates (2026)', desc: 'The full catalogue of free certified courses across IT, Business, Marketing, and Finance.', href: '/free-courses-with-certificates' },
+  { title: 'Graduate Jobs in South Africa (2026)', desc: 'Entry-level graduate jobs, sector salary benchmarks, ATS CV strategies, and hiring calendars.', href: '/graduate-jobs-south-africa' },
+  { title: 'Graduate Internships in South Africa (2026)', desc: '12-month SETA internships, YES Youth placements, monthly stipend benchmarks, and permanent hiring tips.', href: '/graduate-internships-south-africa' },
+  { title: 'Graduate Trainee Programmes in SA (2026)', desc: 'Breakdown of corporate GDP rotational programs at top SA banks, tech hubs, and retailers.', href: '/graduate-trainee-programmes-south-africa' },
+  { title: 'Free SA Government & SETA Online Courses', desc: 'Earn recognized digital certificates from NSG, NYDA, NEMISA, and SETA training portals.', href: '/sa-government-free-online-courses-certificates' },
 ];
 
 const faqs: FaqItem[] = [

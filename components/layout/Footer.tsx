@@ -44,9 +44,12 @@ export default function Footer() {
           <h3 className="text-lg font-bold text-white mb-4">Articles &amp; Advice</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/blog" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">Blog &amp; Career Journal →</Link></li>
+            <li><Link href="/graduate-jobs-south-africa" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">Graduate Jobs in SA →</Link></li>
+            <li><Link href="/graduate-internships-south-africa" className="hover:text-[#FFDF9C] transition-colors">Graduate Internships SA</Link></li>
+            <li><Link href="/graduate-trainee-programmes-south-africa" className="hover:text-[#FFDF9C] transition-colors">Graduate Trainee Programmes</Link></li>
+            <li><Link href="/sa-government-free-online-courses-certificates" className="hover:text-[#FFDF9C] transition-colors">SA Government Free Courses</Link></li>
             <li><Link href="/blog/yes-youth-program-guide-south-africa" className="hover:text-[#FFDF9C] transition-colors">YES Youth Program Guide</Link></li>
             <li><Link href="/blog/how-to-get-coursera-certificates-for-free-2026-financial-aid-guide" className="hover:text-[#FFDF9C] transition-colors">Coursera Financial Aid Guide</Link></li>
-            <li><Link href="/blog/is-an-alison-certificate-recognised-by-employers-2026" className="hover:text-[#FFDF9C] transition-colors">Alison Certificate Audit</Link></li>
             <li><Link href="/free-ai-career-tools" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">AI Career Tools →</Link></li>
             <li><Link href="/portfolio-tasks" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#CCECC8]">Proof of Work Portfolio →</Link></li>
             <li><Link href="/cv-builder" className="hover:text-[#FFDF9C] transition-colors font-medium">Free CV Builder →</Link></li>

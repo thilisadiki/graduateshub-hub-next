@@ -233,6 +233,27 @@ const GUIDE_GROUPS: GuideGroup[] = [
         desc: 'Official free certificates from South African public sector portals including NSG, NYDA, NEMISA, mLab, and SETA programs.',
         curators: ['jason', 'ndulamiso'],
       },
+      {
+        title: 'Graduate Jobs in South Africa',
+        badge: 'SA Grad Jobs',
+        href: '/graduate-jobs-south-africa',
+        desc: 'A complete framework for finding entry-level graduate jobs in SA: recruitment calendars, sector salary ranges, and ATS CV tips.',
+        curators: ['jason', 'ndulamiso'],
+      },
+      {
+        title: 'Graduate Internships in South Africa',
+        badge: 'SA Internships',
+        href: '/graduate-internships-south-africa',
+        desc: 'Navigate 12-month SETA internships, YES Youth program placements, stipend expectations, and permanent hiring strategies.',
+        curators: ['jason', 'ndulamiso'],
+      },
+      {
+        title: 'Graduate Trainee Programmes in SA',
+        badge: 'SA Trainee Programs',
+        href: '/graduate-trainee-programmes-south-africa',
+        desc: 'Crack corporate Graduate Development Programmes (GDPs) at top SA banks, tech hubs, retailers, and state enterprises.',
+        curators: ['jason', 'ndulamiso'],
+      },
     ],
   },
   {

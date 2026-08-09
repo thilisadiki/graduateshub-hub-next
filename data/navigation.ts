@@ -232,4 +232,22 @@ export const popularGuides: GuideLink[] = [
     desc: 'Free official certificates from NSG, NYDA, NEMISA, mLab, and SETA portals.',
     badge: 'SA Gov Certs',
   },
+  {
+    href: '/graduate-jobs-south-africa',
+    title: 'Graduate Jobs in South Africa',
+    desc: 'Entry-level jobs, hiring calendars, salary benchmarks, and ATS CV strategies.',
+    badge: 'SA Grad Jobs',
+  },
+  {
+    href: '/graduate-internships-south-africa',
+    title: 'Graduate Internships in South Africa',
+    desc: '12-month SETA internships, YES Youth placements, and stipend benchmarks.',
+    badge: 'SA Internships',
+  },
+  {
+    href: '/graduate-trainee-programmes-south-africa',
+    title: 'Graduate Trainee Programmes in SA',
+    desc: 'Corporate GDP rotational programs, assessment centers, and application windows.',
+    badge: 'SA Trainee Programs',
+  },
 ];
