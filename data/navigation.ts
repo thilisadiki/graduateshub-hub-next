@@ -64,12 +64,7 @@ export const popularGuides: GuideLink[] = [
     desc: 'Compare top learning platforms, free audit tracks, and certified graduate courses.',
     badge: 'Platforms',
   },
-  {
-    href: '/best-alison-courses-with-certificates',
-    title: 'Best Alison Courses (2026)',
-    desc: 'CPD-accredited diplomas and certificates. Free to study.',
-    badge: 'Alison',
-  },
+
   {
     href: '/free-courses-for-data-analysts',
     title: 'Free Courses for Data Analysts',

@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Sparkles, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award } from 'lucide-react';
-import { categories } from '@/data/categories';
 import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
 
@@ -55,48 +54,21 @@ export default function Navbar() {
               Explore <ChevronDown size={14} className={`transition-transform duration-200 ${isCategoriesDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
-            <div className={`absolute top-full left-0 mt-0 w-[580px] bg-[#FFFFFF] border border-[#D1C5B4] shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-left ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-              <div className="grid grid-cols-2 divide-x divide-[#D1C5B4]">
-
-                {/* Left: Guides and Roadmaps */}
-                <div className="p-4 flex flex-col gap-1">
-                  {featuredLinks.map(link => (
-                    <Link key={link.href} href={link.href} className={`flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#FBF3EB] transition-colors mb-1`}>
-                      <span className="text-sm font-bold text-[#1F1B13]">{link.label}</span>
-                      <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">{link.badge}</span>
-                    </Link>
-                  ))}
-                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider">Course &amp; Certification Guides</p>
-                  {popularGuides.slice(0, 6).map(guide => (
-                    <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-[#FBF3EB] hover:text-primary rounded-md transition-colors block text-sm text-[#4F4639]">{guide.title}</Link>
-                  ))}
-                  <div className="mt-auto pt-2 border-t border-[#D1C5B4]">
-                    <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-[#FFDF9C]/40 rounded-md transition-colors block text-sm">
-                      View All Course Guides →
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Right: Browse by Subject */}
-                <div className="p-4 flex flex-col gap-1 bg-[#FBF3EB]/50">
-                  <p className="px-3 pt-1 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider mb-1">Browse by Subject</p>
-                  {categories.map(cat => (
-                    <Link
-                      key={cat.id}
-                      href={`/category/${cat.id}`}
-                      className="flex items-center gap-3 px-3 py-2 hover:bg-[#FFFFFF] hover:text-primary rounded-lg transition-colors group"
-                    >
-                      <cat.icon size={16} className="text-[#7C7061] group-hover:text-primary transition-colors shrink-0" strokeWidth={1.75} />
-                      <span className="text-sm text-[#4F4639] group-hover:text-primary transition-colors">{cat.name}</span>
-                    </Link>
-                  ))}
-                  <div className="mt-auto pt-2 border-t border-[#D1C5B4]">
-                    <Link href="/categories" className="px-3 py-1.5 text-primary font-semibold hover:bg-[#FFFFFF] rounded-md transition-colors block text-sm">
-                      View All Subjects →
-                    </Link>
-                  </div>
-                </div>
-
+            <div className={`absolute top-full left-0 mt-0 w-[340px] bg-[#FFFFFF] border border-[#D1C5B4] shadow-xl rounded-xl overflow-hidden transition-all duration-200 origin-top-left p-4 flex flex-col gap-1 ${isCategoriesDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+              {featuredLinks.map(link => (
+                <Link key={link.href} href={link.href} className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-[#FBF3EB] transition-colors mb-1">
+                  <span className="text-sm font-bold text-[#1F1B13]">{link.label}</span>
+                  <span className="text-xs bg-primary text-white px-1.5 py-0.5 rounded-full font-bold leading-none">{link.badge}</span>
+                </Link>
+              ))}
+              <p className="px-3 pt-2 pb-0.5 text-xs font-bold text-[#7C7061] uppercase tracking-wider">Career &amp; Certification Guides</p>
+              {popularGuides.slice(0, 6).map(guide => (
+                <Link key={guide.href} href={guide.href} className="px-3 py-1.5 hover:bg-[#FBF3EB] hover:text-primary rounded-md transition-colors block text-sm text-[#4F4639]">{guide.title}</Link>
+              ))}
+              <div className="mt-2 pt-2 border-t border-[#D1C5B4]">
+                <Link href="/guides" className="px-3 py-1.5 text-primary font-semibold hover:bg-[#FFDF9C]/40 rounded-md transition-colors block text-sm">
+                  View All Guides →
+                </Link>
               </div>
             </div>
           </div>
