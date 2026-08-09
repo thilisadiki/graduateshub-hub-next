@@ -183,9 +183,9 @@ export default function NewsletterBanner() {
 
             <p className="text-[#FFDF9C]/70 text-sm mt-6">
               By subscribing, you agree to our{' '}
-              <a href="/terms" className="underline hover:text-white transition-colors">Terms of Service</a>
-              {' '}and{' '}
-              <a href="/privacy" className="underline hover:text-white transition-colors">Privacy Policy</a>. Unsubscribe anytime.
+            <a href="/terms-of-service" className="underline hover:text-white transition-colors">Terms of Service</a>{' '}
+            and{' '}
+            <a href="/privacy-policy" className="underline hover:text-white transition-colors">Privacy Policy</a>. Unsubscribe anytime.
             </p>
           </div>
         </div>

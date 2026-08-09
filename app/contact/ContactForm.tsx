@@ -390,7 +390,7 @@ export default function ContactForm() {
 
       <p className="text-xs text-gray-400 text-center">
         By submitting this form you agree to our{' '}
-        <a href="/privacy" className="text-primary hover:underline">
+        <a href="/privacy-policy" className="text-primary hover:underline">
           Privacy Policy
         </a>
         . We will only use your information to respond to your enquiry.

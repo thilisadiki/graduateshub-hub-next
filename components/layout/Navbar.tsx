@@ -22,8 +22,8 @@ export default function Navbar() {
     { href: '/contact', label: 'Contact Us', desc: 'Get in touch with our team', icon: Mail },
     { href: '/feedback', label: 'Give Feedback', desc: 'Help us improve Graduates Hub', icon: MessageSquare },
     { href: '/curation-policy', label: 'Curation Policy', desc: 'Our 5-point editorial quality checklist', icon: ShieldCheck },
-    { href: '/terms', label: 'Terms of Service', desc: 'Platform terms & AI disclaimers', icon: FileText },
-    { href: '/privacy', label: 'Privacy Policy', desc: 'POPIA & GDPR compliance disclosures', icon: Lock },
+    { href: '/terms-of-service', label: 'Terms of Service', desc: 'Platform terms & AI disclaimers', icon: FileText },
+    { href: '/privacy-policy', label: 'Privacy Policy', desc: 'POPIA & GDPR compliance disclosures', icon: Lock },
     { href: '/disclosure', label: 'Affiliate Disclosure', desc: 'Partner transparency & link policy', icon: Award },
   ];
 

@@ -123,7 +123,7 @@ export default function ContactPage() {
               <div className="mt-4 pt-4 border-t border-[#D1C5B4]">
                 <p className="text-xs text-[#7C7061]">
                   For POPIA-related requests, please select &ldquo;POPIA / privacy request&rdquo; as your subject so we can route it to our Information Officer promptly. See our{' '}
-                  <Link href="/privacy" className="font-bold underline hover:text-primary">Privacy Policy</Link>.
+                  <Link href="/privacy-policy" className="font-bold underline hover:text-primary">Privacy Policy</Link>.
                 </p>
               </div>
             </div>

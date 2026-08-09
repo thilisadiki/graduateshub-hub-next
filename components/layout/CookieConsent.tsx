@@ -30,7 +30,7 @@ export default function CookieConsent() {
         <div className="text-xs sm:text-sm text-gray-300 flex-1 leading-relaxed">
           <p>
             We use cookies and similar technologies to enhance your experience, serve personalized ads, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies as detailed in our{' '}
-            <Link href="/privacy" className="text-[#FFDF9C] hover:underline font-semibold">
+            <Link href="/privacy-policy" className="text-[#FFDF9C] hover:underline font-semibold">
               Privacy Policy
             </Link>.
           </p>

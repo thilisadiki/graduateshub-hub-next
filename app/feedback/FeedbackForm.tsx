@@ -283,7 +283,7 @@ export default function FeedbackForm() {
 
         <p className="text-xs text-gray-400 text-center">
           By submitting this form you agree to our{' '}
-          <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.
+          <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>.
           Anonymous submissions are welcome.
         </p>
       </form>

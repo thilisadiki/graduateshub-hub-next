@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: 'Terms of Service (2026)',
   description:
     'Read the Terms of Service for Graduates Hub. Information about your use of our course guides, AI career tools, portfolio briefs, CV builder, and platform resources.',
-  alternates: { canonical: `${SITE_URL}/terms` },
+  alternates: { canonical: `${SITE_URL}/terms-of-service` },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Terms of Service (2026) | Graduates Hub',
     description:
       'Read the Terms of Service for Graduates Hub. Information about your use of our course guides, AI career tools, portfolio briefs, CV builder, and platform resources.',
-    url: `${SITE_URL}/terms`,
+    url: `${SITE_URL}/terms-of-service`,
     images: [OG_IMAGE],
   },
 };
@@ -118,7 +118,7 @@ export default function TermsPage() {
         <h2>8. Protection of Personal Information (POPIA Compliance)</h2>
         <p>
           We respect your privacy and process all personal information in accordance with South Africa&apos;s Protection of Personal Information Act (POPIA), Act 4 of 2013. For details on how we collect, process, and safeguard your data, please read our full{' '}
-          <Link href="/privacy" className="text-primary font-bold hover:underline">
+          <Link href="/privacy-policy" className="text-primary font-bold hover:underline">
             Privacy Policy
           </Link>.
         </p>

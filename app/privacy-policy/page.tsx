@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: 'Privacy Policy (POPIA & GDPR Compliant)',
   description:
     'Our Privacy Policy explains how Graduates Hub collects, uses, and safeguards personal information in compliance with POPIA (Act 4 of 2013) and the General Data Protection Regulation (GDPR).',
-  alternates: { canonical: `${SITE_URL}/privacy` },
+  alternates: { canonical: `${SITE_URL}/privacy-policy` },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Privacy Policy (POPIA & GDPR Compliant) | Graduates Hub',
     description:
       'Our Privacy Policy explains how Graduates Hub collects, uses, and safeguards personal information in compliance with POPIA (Act 4 of 2013) and the General Data Protection Regulation (GDPR).',
-    url: `${SITE_URL}/privacy`,
+    url: `${SITE_URL}/privacy-policy`,
     images: [OG_IMAGE],
   },
 };

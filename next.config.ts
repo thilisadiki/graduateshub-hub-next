@@ -53,6 +53,16 @@ const nextConfig: NextConfig = {
         destination: '/disclosure',
         permanent: true,
       },
+      {
+        source: '/privacy',
+        destination: '/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/terms',
+        destination: '/terms-of-service',
+        permanent: true,
+      },
       // Career roadmap redirects
       {
         source: '/career-roadmaps/accounting',

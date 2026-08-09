@@ -83,8 +83,8 @@ export default function Footer() {
             <li><Link href="/contact" className="hover:text-[#FFDF9C] transition-colors">Contact Us</Link></li>
             <li><Link href="/feedback" className="hover:text-[#FFDF9C] transition-colors">Give Feedback</Link></li>
             <li><Link href="/curation-policy" className="hover:text-[#FFDF9C] transition-colors">Curation Policy</Link></li>
-            <li><Link href="/terms" className="hover:text-[#FFDF9C] transition-colors">Terms of Service</Link></li>
-            <li><Link href="/privacy" className="hover:text-[#FFDF9C] transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-service" className="hover:text-[#FFDF9C] transition-colors">Terms of Service</Link></li>
+            <li><Link href="/privacy-policy" className="hover:text-[#FFDF9C] transition-colors">Privacy Policy</Link></li>
             <li><Link href="/disclosure" className="hover:text-[#FFDF9C] transition-colors">Affiliate Disclosure</Link></li>
           </ul>
         </div>
