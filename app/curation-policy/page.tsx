@@ -1,17 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
-import { ExternalLink, CheckCircle2, XCircle, RefreshCw, Users } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, Search, FileCheck, ExternalLink, RefreshCw, Scale } from 'lucide-react';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Editorial & Content Curation Policy',
-  description: 'Every resource, roadmap, and guide on Graduates Hub is vetted by an industry specialist. Learn about our editorial standards, selection criteria, and review process.',
+  title: 'Content & Research Curation Policy',
+  description: 'Our 7-part editorial standards governing how Graduates Hub selects resources, researches market data, verifies information, and maintains editorial independence.',
   alternates: { canonical: `${SITE_URL}/curation-policy` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Editorial & Content Curation Policy – Graduates Hub',
-    description: 'Every resource, roadmap, and guide on Graduates Hub is vetted by an industry specialist. Learn about our editorial standards, selection criteria, and review process.',
+    title: 'Content & Research Curation Policy · Graduates Hub',
+    description: 'Our 7-part editorial standards governing how Graduates Hub selects resources, researches market data, verifies information, and maintains editorial independence.',
     url: `${SITE_URL}/curation-policy`,
     images: [OG_IMAGE],
   },
@@ -29,55 +28,12 @@ const breadcrumbSchema = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Editorial & Content Curation Policy',
+  name: 'Content & Research Curation Policy',
   url: `${SITE_URL}/curation-policy`,
-  description: 'Every resource, roadmap, and guide on Graduates Hub is vetted by an industry specialist. Learn about our editorial standards, selection criteria, and review process.',
+  description: 'Our 7-part editorial standards governing how Graduates Hub selects resources, researches market data, verifies information, and maintains editorial independence.',
   publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
   breadcrumb: breadcrumbSchema,
 };
-
-const criteria = [
-  {
-    pass: true,
-    label: 'Accreditation',
-    detail: 'CPD-certified by the CPD Standards Office (UK), internationally recognised, or issued by a credible institution (e.g. Google, IBM, Alison).',
-  },
-  {
-    pass: true,
-    label: 'Relevance to job market',
-    detail: 'We check actual job listings to confirm the skill is actively sought by employers in South Africa and globally.',
-  },
-  {
-    pass: true,
-    label: 'Genuinely free to study',
-    detail: 'The full course content must be accessible at no cost. A paid physical certificate option is acceptable; a paywall on the content is not.',
-  },
-  {
-    pass: true,
-    label: 'Practical outcome',
-    detail: 'Courses must teach an applicable skill - not just theory. Learners should finish with something demonstrable.',
-  },
-  {
-    pass: true,
-    label: 'Curator expertise match',
-    detail: 'Each course is reviewed by a curator with direct professional experience in that field.',
-  },
-  {
-    pass: false,
-    label: 'Paid-first providers',
-    detail: 'We do not list courses where the free tier is a teaser and the real content requires payment.',
-  },
-  {
-    pass: false,
-    label: 'Outdated content',
-    detail: 'Courses covering deprecated tools or practices that are no longer used in industry are removed.',
-  },
-  {
-    pass: false,
-    label: 'Unverifiable credentials',
-    detail: 'Certificates from providers with no verifiable accreditation body or employer recognition are excluded.',
-  },
-];
 
 export default function CurationPolicyPage() {
   return (
@@ -85,181 +41,265 @@ export default function CurationPolicyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
+      {/* Breadcrumb Navigation */}
       <div className="bg-white border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-6 py-3 text-sm text-gray-500 flex items-center gap-2">
+        <div className="max-w-4xl mx-auto px-6 py-3 text-sm text-gray-500 flex items-center gap-2">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
           <span className="text-gray-300">›</span>
           <span className="text-gray-900 font-medium">Curation Policy</span>
         </div>
       </div>
 
-      <div className="bg-slate-900 text-white py-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[#7C7061] font-bold text-sm uppercase tracking-widest mb-3">Editorial Standards</p>
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-4">How We Curate Courses</h1>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Every course on Graduates Hub is selected by someone with direct, professional experience in that field. Here is exactly how we decide what makes the cut - and what doesn&apos;t.
+      {/* Header Hero */}
+      <div className="bg-[#1F1B13] text-white py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#7A5900]/20 border border-[#FFDF9C]/30 text-[#FFDF9C] font-bold text-xs uppercase tracking-wider mb-4">
+            <ShieldCheck size={14} className="text-yellow-400" />
+            Editorial Framework
+          </div>
+          <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4">Curation Policy</h1>
+          <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
+            Our 7-part editorial standards governing how Graduates Hub selects learning materials, researches South African market data, verifies source claims, and maintains strict independence.
           </p>
         </div>
       </div>
 
-      <main className="flex-grow max-w-3xl mx-auto px-6 py-16 w-full space-y-14">
+      {/* Main Content Sections */}
+      <main className="max-w-4xl mx-auto px-6 py-12 flex flex-col gap-12 flex-1">
+        
+        {/* Section 1 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">1</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">What We Curate</h2>
+          </div>
+          <p className="text-gray-600 leading-relaxed mb-6 text-[15px]">
+            Graduates Hub aggregates and structures educational and career assets to help South African job seekers transition from learning to employment. We curate content across five primary areas:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Courses</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Free, CPD-accredited, or low-cost learning modules from verified providers (e.g. Alison, Google, Microsoft, IBM, Coursera financial audit tracks).</p>
+            </div>
+            <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Career Resources</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Role-specific interview preparation guides, ATS-friendly CV templates, and job hunting strategy frameworks.</p>
+            </div>
+            <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Portfolio Projects</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Practical micro-internship briefs with objective rubrics and AI-graded proof-of-work assessment badges.</p>
+            </div>
+            <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Career Information &amp; Market Data</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Salary benchmarks, entry-level demand metrics, and skill taxonomies tailored to the South African job market.</p>
+            </div>
+            <div className="bg-slate-50 border border-slate-100 rounded-xl p-5 md:col-span-2">
+              <h3 className="font-bold text-gray-900 text-base mb-1">Tools &amp; Practical Utilities</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Interactive AI tools (CV reviewer, job description decoder, skills gap analyser) built to streamline job preparation.</p>
+            </div>
+          </div>
+        </section>
 
-        {/* Who curates */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Who Does the Curating</h2>
-          <div className="flex flex-col gap-4">
-
-            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-              <div className="relative w-12 h-12 shrink-0">
-                <Image src="/jason-sadiki.jpg" alt="Jason Sadiki" fill sizes="48px" className="rounded-full object-cover ring-2 ring-blue-100" />
-              </div>
+        {/* Section 2 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">2</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">How We Select Resources</h2>
+          </div>
+          <p className="text-gray-600 leading-relaxed mb-6 text-[15px]">
+            Every course, tool, or roadmap listed on Graduates Hub must satisfy a six-point quality evaluation before inclusion:
+          </p>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
               <div>
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <p className="font-extrabold text-gray-900">Jason Sadiki</p>
-                  <span className="text-xs bg-[#FFDF9C]/20 text-[#5a4000] border border-[#D1C5B4] px-2 py-0.5 rounded-full font-bold">Founder</span>
-                </div>
-                <p className="text-primary text-sm font-semibold mb-2">Technical SEO Specialist &amp; Web Developer · 7+ years</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Curates all IT, software engineering, digital marketing, and AI courses. Jason&apos;s 7+ years in Technical SEO means every resource is also assessed for discoverability - whether the right learners can actually find it.
-                </p>
-                <div className="flex flex-wrap gap-1.5 mt-3">
-                  {[
-                    { label: 'SEO Certified', issuer: 'HubSpot Academy', url: 'https://app-eu1.hubspot.com/academy/achievements/6z3p70zn/en/1/jason-sadiki/seo' },
-                    { label: 'Google Analytics 4', issuer: 'Google Skillshop', url: 'https://skillshop.credential.net/c8c90dfb-fba6-4296-8e42-e451b00c2660#acc.tNqRO1Ex' },
-                    { label: 'Digital Marketing', issuer: 'Google', url: 'https://skillshop.exceedlms.com/student/award/rHfzphDrFqaZ7PNRdvdUnBMZ' },
-                    { label: 'Full Stack Engineer', issuer: 'Codecademy', url: 'https://www.codecademy.com/profiles/jasonsadiki/certificates/ffd0f42cce1a44e9a0108b365047a0a6' },
-                  ].map(({ label, issuer, url }) => (
-                    <a
-                      key={label}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-medium bg-green-50 text-green-700 border border-green-200 px-2 py-1 rounded-full hover:bg-green-100 transition-colors"
-                    >
-                      <svg className="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                      {label} · {issuer}
-                    </a>
-                  ))}
-                </div>
-                <a href="https://www.linkedin.com/in/jasonsadiki/" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] mt-3 transition-colors">
-                  <ExternalLink size={12} /> LinkedIn
-                </a>
+                <strong className="text-gray-900 font-bold">Relevance to the Career Path:</strong> The resource must directly address technical competencies or soft skills explicitly required by entry-level job descriptions.
               </div>
-            </div>
-
-            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-              <div className="relative w-12 h-12 shrink-0">
-                <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu" fill sizes="48px" className="rounded-full object-cover ring-2 ring-teal-100" />
-              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
               <div>
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <p className="font-extrabold text-gray-900">Ndulamiso Mamburu</p>
-                  <span className="text-xs bg-teal-50 text-teal-700 border border-teal-100 px-2 py-0.5 rounded-full font-bold">Co-Founder</span>
-                </div>
-                <p className="text-teal-600 text-sm font-semibold mb-2">Co-Founder · Accounting Science Graduate · Pursuing Taxation Degree · Works at SARS</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Co-founder of Graduates Hub. Ndulamiso curates all accounting, finance, and business courses. Her practitioner-level experience at the South African Revenue Service (SARS) ensures that recommended courses reflect real compliance, tax, and financial management requirements - not just textbook theory.
-                </p>
-                <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#261A00] mt-2 transition-colors">
-                  <ExternalLink size={12} /> LinkedIn
-                </a>
+                <strong className="text-gray-900 font-bold">Accessibility:</strong> Content must be accessible online via standard web or mobile browsers without requiring proprietary software downloads.
               </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Selection criteria */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Our Selection Criteria</h2>
-          <p className="text-gray-500 mb-6">A course must pass every &ldquo;include&rdquo; criterion to be listed. Any &ldquo;exclude&rdquo; criterion is an automatic disqualifier.</p>
-          <div className="flex flex-col gap-3">
-            {criteria.map(({ pass, label, detail }) => (
-              <div key={label} className={`bg-white rounded-xl border shadow-sm p-5 flex gap-4 items-start ${pass ? 'border-gray-100' : 'border-red-50'}`}>
-                {pass
-                  ? <CheckCircle2 size={20} className="text-green-500 shrink-0 mt-0.5" />
-                  : <XCircle size={20} className="text-red-400 shrink-0 mt-0.5" />
-                }
-                <div>
-                  <p className="font-bold text-gray-800 text-sm">{pass ? 'Include: ' : 'Exclude: '}{label}</p>
-                  <p className="text-gray-500 text-sm mt-0.5">{detail}</p>
-                </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
+              <div>
+                <strong className="text-gray-900 font-bold">Cost &amp; Free Availability:</strong> Course content must be genuinely free to audit or study. Paid physical certificates are acceptable only if the full learning materials remain accessible at zero cost.
               </div>
-            ))}
-          </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
+              <div>
+                <strong className="text-gray-900 font-bold">Quality &amp; Structure:</strong> Learning materials must offer clear pedagogical progression, updated instruction, and actionable exercises rather than superficial overviews.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
+              <div>
+                <strong className="text-gray-900 font-bold">Provider Credibility:</strong> Courses must originate from recognized educational institutions, technology vendors (e.g. Google, Microsoft, AWS), or established accredited platforms (e.g. Alison CPD-certified).
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
+              <div>
+                <strong className="text-gray-900 font-bold">Practical Usefulness:</strong> Learners must finish with a practical outcome (e.g. a sample project, script, campaign plan, or spreadsheet model) suitable for a portfolio.
+              </div>
+            </li>
+          </ul>
         </section>
 
-        {/* Review cadence */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">How Often We Review</h2>
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-            <RefreshCw size={22} className="text-primary shrink-0 mt-0.5" />
-            <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
-              <p>
-                All guide pages display a <strong>Last updated</strong> date. When a course is removed from a provider, changes significantly, or becomes paywalled, we remove or replace it within 30 days of being notified.
-              </p>
-              <p>
-                New courses are added on a rolling basis as curators identify resources that meet all criteria. We do not add courses in bulk to inflate numbers - each addition is a deliberate decision.
-              </p>
+        {/* Section 3 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">3</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">How We Research Career Information</h2>
+          </div>
+          <p className="text-gray-600 leading-relaxed mb-6 text-[15px]">
+            To ensure high editorial accuracy, claims made across our career roadmaps and guides follow a structured research methodology:
+          </p>
+          <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <strong className="text-gray-900 block font-bold mb-1">Salary Benchmarks:</strong>
+              Figures reflect realistic entry-level pay ranges synthesized from active South African employer job listings, salary aggregate surveys (Payscale, SalaryExpert, Pnet), and verified employer career portals.
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <strong className="text-gray-900 block font-bold mb-1">Skills &amp; Qualifications:</strong>
+              Taxonomies are constructed by analyzing recurring keyword requirements across active South African job advertisements for target roles.
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <strong className="text-gray-900 block font-bold mb-1">Career Demand Assessment:</strong>
+              Demand ratings (Moderate, High, Very High) are derived by observing listing volumes across major South African recruitment hubs (LinkedIn, Pnet, OfferZen, Careers24).
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <strong className="text-gray-900 block font-bold mb-1">Industry Requirements:</strong>
+              Professional registration prerequisites (e.g. SAICA for accountants, ECSA for engineers) are validated against official South African professional bodies.
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <strong className="text-gray-900 block font-bold mb-1">South African Market Localization:</strong>
+              All market insights prioritize South African economic context, regional hiring hubs (Gauteng, Western Cape, KwaZulu-Natal), and local graduate programs.
             </div>
           </div>
         </section>
 
-        {/* Affiliate disclosure */}
-        <section>
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Affiliate Links &amp; Independence</h2>
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-            <Users size={22} className="text-primary shrink-0 mt-0.5" />
-            <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
-              <p>
-                Some links on Graduates Hub are affiliate links. If you purchase a paid upgrade (such as a physical certificate), we may earn a small commission at no cost to you.
-              </p>
-              <p>
-                Affiliate relationships <strong>never influence curation decisions</strong>. A course is not listed because it pays a commission - it is listed because it meets our criteria. We turn down affiliate relationships with providers whose free content we would not recommend independently.
-              </p>
-              <Link href="/disclosure" className="inline-block font-bold text-primary hover:underline text-sm mt-1">
-                Read our full Affiliate Disclosure →
-              </Link>
+        {/* Section 4 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">4</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">How We Verify Information</h2>
+          </div>
+          <p className="text-gray-600 leading-relaxed mb-6 text-[15px]">
+            We enforce strict verification checks before publishing or updating any career roadmap:
+          </p>
+          <ul className="space-y-3 text-sm text-gray-600">
+            <li className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+              <span><strong className="text-gray-900 font-bold">Primary Sources:</strong> We rely on direct course catalogs, official documentation, and primary employer portals rather than secondary blogs.</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+              <span><strong className="text-gray-900 font-bold">Official Employer &amp; Provider Pages:</strong> Program details, module lists, and certificate fees are confirmed directly on provider domains.</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+              <span><strong className="text-gray-900 font-bold">Government &amp; Statutory Sources:</strong> Labor market data and SETA accreditation frameworks reference official Statistics South Africa (Stats SA) and Department of Higher Education &amp; Training guidelines.</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+              <span><strong className="text-gray-900 font-bold">Reputable Industry Sources:</strong> Engineering, IT, and financial claims cross-reference established industry publications and professional association guidelines.</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+              <span><strong className="text-gray-900 font-bold">Structured Review Process:</strong> Every roadmap page displays an explicit verification log detailing the review date, reviewer credentials, and market sample methodology.</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Section 5 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">5</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">How We Handle Recommendations</h2>
+          </div>
+          <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+            <p>
+              <strong className="text-gray-900 font-bold">Why a Resource is Recommended:</strong> Every course or tool recommendation includes a rationale explaining why it was selected for that specific stage of the career roadmap.
+            </p>
+            <p>
+              <strong className="text-gray-900 font-bold">Direct Links to Original Providers:</strong> We link directly to the official provider page so learners can inspect course syllabus details independently.
+            </p>
+            <p>
+              <strong className="text-gray-900 font-bold">Affiliate Relationships &amp; Transparency:</strong> Graduates Hub participates in affiliate programs (including Alison.com). We receive a small commission when users click through and complete purchases. This comes at zero extra cost to the user and supports platform maintenance.
+            </p>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs text-slate-700">
+              <strong className="text-slate-900 font-bold block mb-1">No Guarantee Disclosure:</strong>
+              Enrolling in or completing recommended courses, roadmaps, or portfolio tasks does not guarantee job placement, employment offers, or specific salary outcomes. Employment outcomes depend on individual effort, market conditions, and employer evaluation.
             </div>
           </div>
         </section>
 
-        {/* Fact-Checking & Corrections Policy */}
-        <section>
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Fact-Checking &amp; Corrections Policy</h2>
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex gap-4 items-start">
-            <RefreshCw size={22} className="text-primary shrink-0 mt-0.5" />
-            <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
-              <p>
-                <strong>Fact-Checking Standard:</strong> Every career roadmap, salary benchmark, and course guide published on Graduates Hub is researched and verified against official accreditation databases, employer hiring requirements, and live job market listings.
-              </p>
-              <p>
-                <strong>48-Hour Correction Commitment:</strong> We hold ourselves accountable for accuracy. If a reader or partner reports a factual error, broken link, paywall change, or outdated prerequisite, our editorial team investigates and updates the content within 48 hours of verification.
-              </p>
-              <p>
-                <strong>Transparent Update Logs:</strong> Major updates, curriculum adjustments, and factual corrections are reflected in the <em>Last updated</em> date badge displayed at the top of every guide and roadmap.
-              </p>
-              <p className="text-xs text-gray-500 pt-2 border-t border-gray-100">
-                To submit a correction request or report an outdated course, please email us directly at{' '}
-                <a href="mailto:support@graduateshub.org" className="font-bold text-primary hover:underline">
-                  support@graduateshub.org
-                </a>{' '}
-                or use our <Link href="/contact" className="font-bold text-primary hover:underline">Contact Form</Link>.
-              </p>
+        {/* Section 6 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">6</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">How We Keep Content Updated</h2>
+          </div>
+          <p className="text-gray-600 leading-relaxed mb-6 text-[15px]">
+            Career information and digital learning options evolve rapidly. We maintain content freshness through systematic maintenance:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-600">
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+              <strong className="text-gray-900 font-bold block text-sm mb-1">Review Dates</strong>
+              Every roadmap and guide displays dynamic month/year timestamps reflecting when data was last audited.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+              <strong className="text-gray-900 font-bold block text-sm mb-1">Salary Updates</strong>
+              Salary benchmarks are audited annually against current job market listings.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+              <strong className="text-gray-900 font-bold block text-sm mb-1">Removing Unavailable Courses</strong>
+              Broken links, deprecated modules, or paywalled courses are purged promptly upon discovery.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+              <strong className="text-gray-900 font-bold block text-sm mb-1">Correcting Inaccuracies</strong>
+              Users or industry partners can report content discrepancies via our feedback channel for rapid editorial review.
             </div>
           </div>
         </section>
 
-        {/* Questions */}
-        <section className="bg-[#FFDF9C]/20 rounded-2xl border border-[#D1C5B4] p-8 text-center">
-          <h2 className="text-xl font-extrabold text-gray-900 mb-2">Questions about a specific course or guide?</h2>
-          <p className="text-gray-500 text-sm mb-5">If you believe a listed course no longer meets our criteria or found an error, let us know and we will review it.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-[#5a4000] text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">
-            Contact Us / Report Correction
-          </Link>
+        {/* Section 7 */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary font-black text-base flex items-center justify-center shrink-0">7</div>
+            <h2 className="text-2xl font-extrabold text-gray-900">Editorial Independence</h2>
+          </div>
+          <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+            <p>
+              <strong className="text-gray-900 font-bold">Commercial Relationships Do Not Determine Recommendations:</strong> Educational quality, cost accessibility, and career relevance are the sole criteria for inclusion in our roadmaps. An affiliate relationship never grants a provider automatic placement.
+            </p>
+            <p>
+              <strong className="text-gray-900 font-bold">Affiliate Relationships Are Fully Disclosed:</strong> All monetized links follow clear disclosure guidelines across our site footers and individual guide pages.
+            </p>
+            <p>
+              <strong className="text-gray-900 font-bold">No Subjective "Best" Claims Without Defined Criteria:</strong> We do not label a course or provider as objectively "best" without stating the explicit criteria used (e.g. CPD accreditation, zero content paywalls, user ratings, or employer recognition).
+            </p>
+          </div>
+        </section>
+
+        {/* Co-Founders Integrity Note */}
+        <section className="bg-gradient-to-br from-[#FBF3EB] to-[#FFF8F1] rounded-2xl border border-[#D1C5B4] p-8 md:p-10">
+          <h2 className="text-xl font-extrabold text-gray-900 mb-3">Questions About Our Curation Policy?</h2>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            Our editorial standards are maintained by co-founders <strong className="text-gray-900">Jason Sadiki</strong> (Full-Stack Engineer) and <strong className="text-gray-900">Ndulamiso Mamburu</strong> (Accounting &amp; Tax Professional). If you notice an outdated course link or salary figure, please let us know.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-[#5a4000] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Contact Editorial Team
+            </Link>
+            <Link href="/about" className="inline-flex items-center gap-2 bg-white border border-[#D1C5B4] text-gray-800 hover:text-primary font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Meet Our Authors &amp; Team
+            </Link>
+          </div>
         </section>
 
       </main>
