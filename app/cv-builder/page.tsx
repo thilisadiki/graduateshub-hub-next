@@ -8,15 +8,15 @@ import {
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Free CV Builder: Create & Download ATS-Friendly Resumes (2026)',
+  title: 'How to Write a Graduate CV (Free ATS CV Builder 2026)',
   description:
-    'Build a professional, ATS-friendly CV for free. Choose from Modern, Professional, or Minimalist templates, crop profile photos, and download print-ready PDFs instantly with no sign-up required.',
+    'Learn how to write a graduate CV that passes ATS screening. Free interactive ATS CV builder, templates, profile cropper, and step-by-step graduate resume examples with zero sign-up required.',
   alternates: { canonical: `${SITE_URL}/cv-builder` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Free CV Builder: Create & Download ATS-Friendly Resumes (2026) | Graduates Hub',
+    title: 'How to Write a Graduate CV (Free ATS CV Builder 2026) | Graduates Hub',
     description:
-      'Build a professional, ATS-friendly CV for free. Choose from Modern, Professional, or Minimalist templates, crop profile photos, and download print-ready PDFs instantly with no sign-up required.',
+      'Step-by-step guide on how to write a graduate CV. Free interactive ATS resume builder with templates, profile cropper, and instant PDF download.',
     type: 'website',
     url: `${SITE_URL}/cv-builder`,
     images: [OG_IMAGE],
@@ -111,12 +111,12 @@ export default function CVBuilderPage() {
           </span>
 
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
-            Build an ATS-Friendly CV <br className="hidden sm:block" />
-            <span className="text-primary">in Minutes</span>
+            How to Write a Graduate CV <br className="hidden sm:block" />
+            <span className="text-primary">&amp; Build an ATS Resume</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Fill in your details, crop your profile photo, choose from 3 professional templates, and download a print-ready PDF - with zero watermarks or paywalls.
+            Learn how to write a winning graduate CV that passes Applicant Tracking Systems (ATS). Use our free interactive CV builder to create, format, and download your resume with zero paywalls.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

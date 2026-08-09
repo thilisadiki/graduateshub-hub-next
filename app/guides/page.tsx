@@ -254,6 +254,27 @@ const GUIDE_GROUPS: GuideGroup[] = [
         desc: 'Crack corporate Graduate Development Programmes (GDPs) at top SA banks, tech hubs, retailers, and state enterprises.',
         curators: ['jason', 'ndulamiso'],
       },
+      {
+        title: 'Best Careers in South Africa (2026)',
+        badge: 'Best SA Careers',
+        href: '/best-careers-in-south-africa',
+        desc: 'Comprehensive guide to top high-growth sectors, entry requirements, starting salary benchmarks, and free online diplomas.',
+        curators: ['jason', 'ndulamiso'],
+      },
+      {
+        title: 'Highest Paying Careers in SA (2026)',
+        badge: 'High Pay SA',
+        href: '/highest-paying-careers-in-south-africa',
+        desc: 'Detailed breakdown of top-earning salary bands from entry-level to senior executive roles across tech, finance, and engineering.',
+        curators: ['jason', 'ndulamiso'],
+      },
+      {
+        title: 'IT Careers Without a Degree (2026)',
+        badge: 'No-Degree IT',
+        href: '/it-careers-without-a-degree',
+        desc: 'How to launch high-paying tech careers using online certifications, proof-of-work portfolios, and self-taught entry routes.',
+        curators: ['jason', 'ndulamiso'],
+      },
     ],
   },
   {

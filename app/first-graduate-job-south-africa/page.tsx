@@ -22,15 +22,15 @@ import { SITE_URL, SITE_NAME } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/first-graduate-job-south-africa`;
 
 export const metadata: Metadata = {
-  title: 'How to Get Your First Graduate Job in South Africa (2026)',
+  title: 'How to Find a Job After University in South Africa (2026 Guide)',
   description:
-    'A step-by-step guide for SA graduates on landing their first job. Learn how to write a standout CV, build in-demand skills, prepare for interviews, and navigate the South African job market.',
+    'Step-by-step framework on how to find a job after university in South Africa. Learn how to write a standout CV, target graduate recruitment cycles, close skills gaps, and ace entry-level interviews.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'How to Get Your First Graduate Job in South Africa (2026) | Graduates Hub',
+    title: 'How to Find a Job After University in South Africa (2026 Guide) | Graduates Hub',
     description:
-      'A step-by-step guide for SA graduates on landing their first job. Learn how to write a standout CV, build in-demand skills, prepare for interviews, and navigate the South African job market.',
+      'Step-by-step framework on how to find a job after university in South Africa. Learn how to write a standout CV, target graduate recruitment cycles, close skills gaps, and ace entry-level interviews.',
     url: CANONICAL,
   },
 };
@@ -232,9 +232,9 @@ export default function FirstGraduateJobSAPage() {
   return (
     <GuideTemplate
       canonicalUrl={CANONICAL}
-      breadcrumb={[{ label: 'How to Get Your First Graduate Job in SA' }]}
-      heading="How to Get Your First Graduate Job in South Africa (2026)"
-      heroDescription="South Africa has one of the highest graduate unemployment rates in the world. But the graduates who land jobs quickly are not necessarily the most qualified: they are the most prepared. This guide gives you a practical, step-by-step framework for getting your first job: fixing your CV, identifying the right roles, closing your skills gaps, and walking into interviews with confidence."
+      breadcrumb={[{ label: 'How to Find a Job After University in SA' }]}
+      heading="How to Find a Job After University in South Africa (2026 Guide)"
+      heroDescription="Wondering how to find a job after university in South Africa? While SA has one of the highest graduate unemployment rates globally, graduates who land jobs quickly are the most prepared. This guide provides a practical 5-step framework for getting hired after graduation: fixing your CV, targeting recruitment calendars, closing skills gaps, and walking into interviews with confidence."
       heroBadges={[
         { icon: CheckCircle2, label: 'SA-Focused Advice', iconClassName: 'text-green-500' },
         { icon: Award, label: 'Free Courses Included', iconClassName: 'text-primary' },

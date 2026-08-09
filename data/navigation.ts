@@ -250,4 +250,22 @@ export const popularGuides: GuideLink[] = [
     desc: 'Corporate GDP rotational programs, assessment centers, and application windows.',
     badge: 'SA Trainee Programs',
   },
+  {
+    href: '/best-careers-in-south-africa',
+    title: 'Best Careers in South Africa',
+    desc: 'Top in-demand sectors, starting salary benchmarks, and free certified learning paths.',
+    badge: 'Best SA Careers',
+  },
+  {
+    href: '/highest-paying-careers-in-south-africa',
+    title: 'Highest Paying Careers in SA',
+    desc: 'Salary compensation bands from entry-level to senior executive roles across SA.',
+    badge: 'High Pay SA',
+  },
+  {
+    href: '/it-careers-without-a-degree',
+    title: 'IT Careers Without a Degree',
+    desc: 'Non-degree tech paths, vendor certifications, portfolios, and self-taught routes.',
+    badge: 'No-Degree IT',
+  },
 ];

@@ -11,15 +11,15 @@ import { formatLastUpdated } from '@/utils/dateUtils';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'CV & Interview Prep for Entry-Level Roles (2026)',
+  title: 'Graduate Interview Questions & Answers (2026 Guide)',
   description:
-    'Field-specific CV advice, STAR-method interview frameworks, technical screening questions, and regional salary benchmarks for entry-level roles.',
+    'Master common graduate interview questions with model answers, STAR technique frameworks, role-specific technical screening questions, and entry-level salary benchmarks.',
   alternates: { canonical: `${SITE_URL}/interview-prep` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'CV & Interview Prep for Entry-Level Roles (2026) | Graduates Hub',
+    title: 'Graduate Interview Questions & Answers (2026 Guide) | Graduates Hub',
     description:
-      'Field-specific CV advice, STAR-method interview frameworks, technical screening questions, and regional salary benchmarks for entry-level roles.',
+      'Master common graduate interview questions with model answers, STAR technique frameworks, role-specific technical screening questions, and entry-level salary benchmarks.',
     url: `${SITE_URL}/interview-prep`,
     images: [OG_IMAGE],
   },
@@ -129,9 +129,9 @@ export default function InterviewPrepPage() {
             <FileText size={24} className="text-primary" />
           </div>
           <div>
-            <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">CV & Interview Prep</h1>
+            <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">Graduate Interview Questions &amp; Answers (2026)</h1>
             <p className="text-gray-500 mt-2 text-lg max-w-2xl">
-              Role-specific CV advice, practical interview questions, and global salary context for entry-level job seekers.
+              Role-specific graduate interview questions, STAR method answer frameworks, technical screening questions, and salary benchmarks for entry-level jobs.
             </p>
           </div>
         </div>
