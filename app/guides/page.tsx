@@ -226,6 +226,13 @@ const GUIDE_GROUPS: GuideGroup[] = [
         desc: 'Official free certificates from U.S. federal agency training portals including FEMA, CISA, CDC, NIH, SBA, and YALI Network.',
         curators: ['jason', 'ndulamiso'],
       },
+      {
+        title: 'SA Government Free Online Courses',
+        badge: 'SA Gov Certs',
+        href: '/sa-government-free-online-courses-certificates',
+        desc: 'Official free certificates from South African public sector portals including NSG, NYDA, NEMISA, mLab, and SETA programs.',
+        curators: ['jason', 'ndulamiso'],
+      },
     ],
   },
   {

@@ -226,4 +226,10 @@ export const popularGuides: GuideLink[] = [
     desc: 'Free official certificates from FEMA, CISA, CDC, NIH, SBA, and YALI Network.',
     badge: 'US Gov Certs',
   },
+  {
+    href: '/sa-government-free-online-courses-certificates',
+    title: 'SA Government Free Online Courses',
+    desc: 'Free official certificates from NSG, NYDA, NEMISA, mLab, and SETA portals.',
+    badge: 'SA Gov Certs',
+  },
 ];
