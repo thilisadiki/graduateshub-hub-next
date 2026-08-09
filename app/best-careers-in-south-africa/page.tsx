@@ -144,6 +144,56 @@ export default function BestCareersSAPage() {
       benefitsSectionTitle="What Makes These the Best Careers in South Africa?"
       benefitsSectionSubtitle="These career paths offer the strongest combination of hiring demand, salary growth potential, and long-term economic resilience."
       benefits={benefits}
+      preCoursesSection={
+        <section className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm mb-16">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+              <ShieldCheck size={20} />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+              Official Data Sources &amp; Industry Reports
+            </h2>
+          </div>
+          <p className="text-gray-600 mb-6 text-sm md:text-base">
+            Career growth metrics and demand projections in this guide are synthesized from official South African labor statistics and global economic reports:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a
+              href="https://www.dhet.gov.za"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">DHET Official Portal</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Occupations in High Demand (OIHD)</h3>
+              <p className="text-xs text-gray-500">Official Department of Higher Education &amp; Training gazetted scarce skills list.</p>
+            </a>
+
+            <a
+              href="https://www.statssa.gov.za"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Stats SA Official</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Quarterly Labour Force Survey (QLFS)</h3>
+              <p className="text-xs text-gray-500">National employment statistics, graduate labor absorption, and sector metrics.</p>
+            </a>
+
+            <a
+              href="https://www.weforum.org/reports/the-future-of-jobs-report-2023/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">World Economic Forum</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Future of Jobs Report</h3>
+              <p className="text-xs text-gray-500">Global insights on AI adoption, digital skills, and workplace transformation.</p>
+            </a>
+          </div>
+        </section>
+      }
       courseCategories={courseCategories}
       relatedCourses={relatedCourses}
       carouselTitle="Free Courses to Prepare for Top SA Careers"

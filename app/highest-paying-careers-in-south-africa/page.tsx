@@ -393,6 +393,56 @@ export default function HighestPayingCareersSAPage() {
               </div>
             </div>
           </div>
+
+          {/* Section 5: E-E-A-T External Verifications & Data Citations */}
+          <section className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                <ShieldCheck size={20} />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+                Official Regulatory &amp; Labor Data Sources
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6 text-sm md:text-base">
+              Salary compensation thresholds, tax regulations, and qualification frameworks in this guide are verified against official South African state bodies:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a
+                href="https://www.sars.gov.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+              >
+                <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">SARS Official Portal</span>
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Tax Tables &amp; Foreign Income (Sec 10)</h3>
+                <p className="text-xs text-gray-500">Official South African Revenue Service tax brackets &amp; foreign employment rules.</p>
+              </a>
+
+              <a
+                href="https://www.saqa.org.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+              >
+                <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">SAQA Official Portal</span>
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">NQF Qualifications Framework</h3>
+                <p className="text-xs text-gray-500">National Qualifications Framework ratings from NQF Level 5 to Level 10 Doctorates.</p>
+              </a>
+
+              <a
+                href="https://www.statssa.gov.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+              >
+                <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Stats SA Official</span>
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Quarterly Employment Statistics (QES)</h3>
+                <p className="text-xs text-gray-500">Official average gross earnings by sector across formal non-agricultural industries.</p>
+              </a>
+            </div>
+          </section>
         </div>
       }
       courseCategories={courseCategories}

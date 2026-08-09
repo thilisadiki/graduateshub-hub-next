@@ -144,6 +144,67 @@ export default function ITCareersWithoutDegreePage() {
       benefitsSectionTitle="Why Tech Is the Best Field for Non-Degree Holders"
       benefitsSectionSubtitle="In technology, demonstrated practical ability and problem-solving skills matter far more to hiring managers than paper qualifications."
       benefits={benefits}
+      preCoursesSection={
+        <section className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm mb-16">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+              <ShieldCheck size={20} />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+              Official Certification &amp; Testing Authorities
+            </h2>
+          </div>
+          <p className="text-gray-600 mb-6 text-sm md:text-base">
+            Industry certification roadmaps and vendor training credentials featured in this guide link directly to official global testing authorities:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a
+              href="https://grow.google/certificates/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Google Official</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Google Career Certs</h3>
+              <p className="text-xs text-gray-500">IT Support, Cybersecurity, Data Analytics, and UX Design professional certificates.</p>
+            </a>
+
+            <a
+              href="https://learn.microsoft.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Microsoft Official</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">Microsoft Learn Portal</h3>
+              <p className="text-xs text-gray-500">Azure Cloud Fundamentals (AZ-900), Power BI, and Microsoft 365 role paths.</p>
+            </a>
+
+            <a
+              href="https://aws.amazon.com/certification/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">AWS Official</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">AWS Cloud Certification</h3>
+              <p className="text-xs text-gray-500">AWS Certified Cloud Practitioner and Solutions Architect testing routes.</p>
+            </a>
+
+            <a
+              href="https://www.comptia.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border border-gray-200 rounded-xl hover:border-primary transition-colors bg-gray-50/50 block group"
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">CompTIA Official</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary transition-colors mb-1">CompTIA Infrastructure</h3>
+              <p className="text-xs text-gray-500">Industry standard CompTIA A+, Network+, and Security+ certification standards.</p>
+            </a>
+          </div>
+        </section>
+      }
       courseCategories={courseCategories}
       relatedCourses={relatedCourses}
       carouselTitle="Free Certification Courses for Non-Degree IT Roles"
