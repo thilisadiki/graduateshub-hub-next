@@ -10,7 +10,7 @@ export const businessAnalystRoadmap: CareerRoadmap = {
   demandLevel: 'High',
   entryLevel: true,
   description:
-    'A practical roadmap for entering business analysis. Covers project management, Agile, process improvement, information systems, and AI in business. Curated by Ndulamiso Mamburu, an Accounting Science graduate with corporate experience at SARS.',
+    'A practical roadmap for entering business analysis. Covers project management, Agile, process improvement, information systems, and AI in business. Curated by Ndulamiso Mamburu, an Accounting and Tax Professional at SARS.',
   overview:
     'Business analysts are the translators of the corporate world. They sit between the people who have a business problem and the people who build the technical solution. A BA\'s job is to understand what a business needs, document it precisely, model the current and future state of processes, and communicate requirements in a way that development teams can act on.\n\nThe role is highly accessible to people with a mix of business and technical interest. You do not need to write code, but you do need to understand how systems work and how businesses operate. Graduates with backgrounds in accounting, finance, management, or IT are all natural candidates for business analysis. This roadmap was curated by Ndulamiso Mamburu, who brings direct corporate experience in navigating the intersection of business operations and technology.',
   jobTitles: [

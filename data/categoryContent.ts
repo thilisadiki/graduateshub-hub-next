@@ -400,7 +400,7 @@ export const categoryContent: Record<string, CategoryContentEntry> = {
             },
             {
                 q: "Who curates the accounting courses on Graduates Hub?",
-                a: "The accounting content is curated by Ndulamiso Mamburu, an Accounting Science graduate currently pursuing a degree in Taxation at SARS. Every course recommendation reflects what is practically relevant to the South African finance sector, not just what looks good in a course catalogue."
+                a: "The accounting content is curated by Ndulamiso Mamburu, an Accounting and Tax Professional at SARS. Every course recommendation reflects what is practically relevant to the South African finance sector, not just what looks good in a course catalogue."
             },
         ],
         guideLinks: [

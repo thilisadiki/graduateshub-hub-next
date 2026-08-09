@@ -100,11 +100,11 @@ export const authors: Author[] = [
     ],
     credentials: [
       {
-        label: 'Accounting Science Graduate',
-        issuer: 'University Degree',
+        label: 'Accounting & Tax Professional',
+        issuer: 'SARS / Practitioner',
       },
       {
-        label: 'Tax Professional',
+        label: 'Taxation Specialist',
         issuer: 'South African Revenue Service (SARS)',
       },
     ],
@@ -113,9 +113,9 @@ export const authors: Author[] = [
       { name: 'Graduates Hub', url: 'https://www.graduateshub.org' },
     ],
     linkedinUrl: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
-    metaTitle: 'Ndulamiso Mamburu - Tax Professional & Co-Founder',
+    metaTitle: 'Ndulamiso Mamburu - Accounting & Tax Professional & Co-Founder',
     metaDescription:
-      'Ndulamiso Mamburu is an Accounting Science Graduate and SARS Tax Professional. Explore accounting and business career guides curated by Ndulamiso.',
+      'Ndulamiso Mamburu is an Accounting and Tax Professional at SARS. Explore accounting and business career guides curated by Ndulamiso.',
   },
 ];
 

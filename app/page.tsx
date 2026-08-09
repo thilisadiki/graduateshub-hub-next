@@ -194,7 +194,7 @@ export default async function Home() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-extrabold text-[#1F1B13] text-sm">Ndulamiso Mamburu</p>
-                <p className="text-[#4F4639] text-xs mb-1.5">Accounting Science Graduate · SARS</p>
+                <p className="text-[#4F4639] text-xs mb-1.5">Accounting &amp; Tax Professional · SARS</p>
                 <p className="text-[#7C7061] text-xs leading-relaxed">Accounting, Finance &amp; Business</p>
                 <a href="https://www.linkedin.com/in/ndulamiso-mamburu/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#5a4000] transition-colors mt-1.5">

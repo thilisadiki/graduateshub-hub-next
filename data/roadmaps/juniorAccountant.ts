@@ -10,7 +10,7 @@ export const juniorAccountantRoadmap: CareerRoadmap = {
   demandLevel: 'High',
   entryLevel: true,
   description:
-    'A practical roadmap for entering the accounting profession. Covers bookkeeping fundamentals, financial accounting, payroll, and financial statement analysis. Curated by Ndulamiso Mamburu, an Accounting Science graduate working at SARS.',
+    'A practical roadmap for entering the accounting profession. Covers bookkeeping fundamentals, financial accounting, payroll, and financial statement analysis. Curated by Ndulamiso Mamburu, an Accounting and Tax Professional at SARS.',
   overview:
     'Accounting is one of the most consistently in-demand professions across every industry. Every business, from a corner shop to a listed company, needs someone to track money, reconcile accounts, process payroll, and prepare financial statements. The junior accountant and bookkeeper roles are the entry points into this profession, and they are hiring constantly.\n\nThis roadmap was curated by Ndulamiso Mamburu, an Accounting Science graduate with direct professional experience at the South African Revenue Service. The course selection reflects what the accounting profession in South Africa and globally actually requires, not just what sounds good on paper. You will learn double-entry bookkeeping, financial statement construction, payroll processing, and the analytical skills that let you interpret the numbers you produce.',
   jobTitles: [

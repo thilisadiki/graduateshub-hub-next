@@ -262,7 +262,7 @@ export default function AboutPage() {
                       Co-Founder
                     </span>
                   </div>
-                  <p className="text-teal-600 font-bold text-sm mb-2">Tax Professional (SARS) &amp; Accounting Science Graduate</p>
+                  <p className="text-teal-600 font-bold text-sm mb-2">Accounting &amp; Tax Professional (SARS)</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {['Accounting & Finance', 'Business', 'Taxation'].map((tag) => (
                       <span key={tag} className="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full font-medium">
