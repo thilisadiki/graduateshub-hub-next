@@ -9,6 +9,14 @@ export interface RoadmapStage {
   milestone: string;
 }
 
+export interface RoadmapMethodology {
+  lastReviewed: string;
+  sources: string[];
+  sampleSize?: string;
+  demandBasis?: string;
+  degreeRequirementBasis?: string;
+}
+
 export interface CareerRoadmap {
   id: string;
   title: string;
@@ -39,6 +47,7 @@ export interface CareerRoadmap {
   faqs: { q: string; a: string }[];
   firstNinetyDays: string[];
   commonMistakes: { mistake: string; fix: string }[];
+  methodology?: RoadmapMethodology;
 }
 
 export interface InterviewQuestion {
