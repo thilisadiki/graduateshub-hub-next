@@ -53,6 +53,10 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: `${SITE_URL}/proof/${proof.id}` },
+    robots: {
+      index: false,
+      follow: true,
+    },
     openGraph: {
       siteName: SITE_NAME,
       title,
