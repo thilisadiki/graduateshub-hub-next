@@ -99,10 +99,10 @@ export default async function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
 
       <Hero />
+      <HowItWorks />
+
       <main className="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
-        <div className="mt-0"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
-        <div className="mt-24"><HowItWorks /></div>
-        <div className="mt-16"><PortfolioBanner /></div>
+        <div><PortfolioBanner /></div>
 
         {/* Popular Guides */}
         <div className="mt-16">
@@ -134,6 +134,7 @@ export default async function Home() {
         </div>
 
         <div className="mt-24"><AIToolsBanner /></div>
+        <div className="mt-24"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
 
         {/* Browse by Subject */}
         <div className="mt-24">

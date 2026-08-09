@@ -22,6 +22,10 @@ const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
     answer: "It depends entirely on the course format. Standard Certificate courses typically take 2 to 3 hours to complete, while comprehensive Diploma programs can take 10 to 15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our study tips and time management guides to help you stay on track.",
     node: <>It depends entirely on the course format. Standard Certificate courses typically take 2 to 3 hours to complete, while comprehensive Diploma programs can take 10 to 15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our <a href="/blog/how-to-successfully-balance-full-time-work-with-online-study" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
   },
+  {
+    question: 'How does Graduates Hub compare to a paid coding or career bootcamp?',
+    answer: "Bootcamps charge thousands of Rands for structured learning paths, project assignments, CV assistance, and interview prep. Graduates Hub provides this entire 5-step career execution framework (Roadmaps, Verified Free Courses, Proof of Work Portfolio Tasks, ATS-Friendly CV Builder, and Interview Prep) completely free.",
+  },
 ];
 
 const faqSchema = {

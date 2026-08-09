@@ -20,21 +20,18 @@ export default function Hero() {
             {/* Top Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFDF9C]/90 border border-[#D1C5B4] text-[#261A00] font-bold text-xs uppercase tracking-wider mb-6 shadow-sm backdrop-blur-sm">
               <Sparkles size={13} className="text-[#7A5900] shrink-0" />
-              <span className="sm:hidden">Free Career Roadmaps &amp; Guides</span>
-              <span className="hidden sm:inline">Career Roadmaps, Guides &amp; Interview Prep</span>
+              <span>100% Free Graduate Career Platform</span>
             </div>
 
-            {/* Headline with fixed spacing */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F1B13] leading-[1.18] tracking-tight mb-5 max-w-xl">
-              Your free{' '}
-              <br className="sm:hidden" />
-              career{' '}
-              <span className="text-primary">resource hub.</span>
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F1B13] leading-[1.15] tracking-tight mb-5 max-w-xl">
+              Get job-ready{' '}
+              <span className="text-primary">without paying for a bootcamp.</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#4F4639] mb-8 max-w-xl font-medium leading-relaxed">
-              Master your career journey. Explore step-by-step career roadmaps, in-depth guides, proof of work portfolios, and ace your next interview.
+              Step-by-step career roadmaps, verified free course guides, proof of work portfolio tasks, and AI career tools to land your first job.
             </p>
 
             {/* CTAs */}
@@ -46,10 +43,10 @@ export default function Hero() {
                 Explore Roadmaps <ArrowRight size={18} />
               </Link>
               <Link
-                href="/guides"
+                href="/cv-builder"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-[#1F1B13] font-bold px-8 py-4 rounded-xl border border-[#D1C5B4] hover:bg-[#FBF3EB] hover:border-[#7C7061] transition-colors shadow-sm text-base"
               >
-                Read Guides
+                Build Free CV
               </Link>
             </div>
 
