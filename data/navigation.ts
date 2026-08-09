@@ -220,4 +220,10 @@ export const popularGuides: GuideLink[] = [
     desc: 'MS-900 Entra ID provisioning, Exchange Online, SharePoint permissions, and MFA.',
     badge: 'Microsoft 365',
   },
+  {
+    href: '/us-government-free-online-courses-certificates',
+    title: 'US Government Free Online Courses',
+    desc: 'Free official certificates from FEMA, CISA, CDC, NIH, SBA, and YALI Network.',
+    badge: 'US Gov Certs',
+  },
 ];

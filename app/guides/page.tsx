@@ -219,6 +219,13 @@ const GUIDE_GROUPS: GuideGroup[] = [
         desc: 'CPD-accredited diplomas and certificates from Alison. Free to study, globally recognised, and available to anyone with no prerequisites.',
         curators: ['jason'],
       },
+      {
+        title: 'US Government Free Online Courses',
+        badge: 'US Gov Certs',
+        href: '/us-government-free-online-courses-certificates',
+        desc: 'Official free certificates from U.S. federal agency training portals including FEMA, CISA, CDC, NIH, SBA, and YALI Network.',
+        curators: ['jason', 'ndulamiso'],
+      },
     ],
   },
   {
