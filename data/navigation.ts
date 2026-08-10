@@ -107,6 +107,12 @@ export const popularGuides: GuideLink[] = [
     badge: 'Finance',
   },
   {
+    href: '/online-courses-for-bookkeeping',
+    title: 'Bookkeeping Courses with Certificates',
+    desc: 'Double-entry bookkeeping, Xero, QuickBooks, and payroll training with certificates.',
+    badge: 'Bookkeeping',
+  },
+  {
     href: '/free-business-courses',
     title: 'Free Business Courses Online',
     desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. CPD-accredited and free.',
