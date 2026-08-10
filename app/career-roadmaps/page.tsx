@@ -217,10 +217,10 @@ export default function CareerRoadmapsPage() {
               Our Methodology
             </span>
             <h2 className="text-3xl font-extrabold text-gray-900 mt-3 mb-4">
-              How Our 4-Stage Career Framework Works
+              How Our 4-Stage Learning Roadmap Framework Works
             </h2>
             <p className="text-gray-500 text-base leading-relaxed">
-              Breaking into a new field can feel overwhelming. We break every career track down into four manageable, sequential stages so you always know what to learn next.
+              Step 1 of your 5-step path to getting hired begins here. We break every career roadmap down into four structured, sequential stages so you always know what to learn next.
             </p>
           </div>
 
