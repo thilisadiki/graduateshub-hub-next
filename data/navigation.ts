@@ -83,6 +83,12 @@ export const popularGuides: GuideLink[] = [
     badge: 'AI',
   },
   {
+    href: '/artificial-intelligence-training',
+    title: 'Artificial Intelligence Training',
+    desc: 'Generative AI, prompt engineering, and machine learning training paths with certificates.',
+    badge: 'AI Track',
+  },
+  {
     href: '/free-digital-marketing-courses',
     title: 'Free Digital Marketing Courses',
     desc: 'SEO, content, growth hacking, and conversion. Build a marketing career from scratch.',
