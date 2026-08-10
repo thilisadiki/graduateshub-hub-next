@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import CookieConsent from '@/components/layout/CookieConsent';
-import InstallPrompt from '@/components/layout/InstallPrompt';
 import ScrollToTop from '@/components/layout/ScrollToTop';
-import OneSignalInit from '@/components/layout/OneSignalInit';
-import ProofAutoSync from '@/components/layout/ProofAutoSync';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
+
+// Defer non-critical client layout components out of initial hydration bundle
+const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'));
+const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'));
+const OneSignalInit = dynamic(() => import('@/components/layout/OneSignalInit'));
+const ProofAutoSync = dynamic(() => import('@/components/layout/ProofAutoSync'));
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.graduateshub.org'),
@@ -52,9 +55,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <script
-          async
+        {/* Preconnect & DNS prefetch hints for critical third-party domains */}
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* AdSense script for site verification & ad delivery */}
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7185526762692935"
+          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
         {/* Google Tag Manager */}
