@@ -78,8 +78,8 @@ export default function CurationPolicyPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
-              <h3 className="font-bold text-gray-900 text-base mb-1">Courses</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Free, CPD-accredited, or low-cost learning modules from verified providers (e.g. Alison, Google, Microsoft, IBM, Coursera financial audit tracks).</p>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Courses &amp; Certifications</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Free, free-to-audit, and high-ROI paid learning modules and vendor certifications (e.g. Google, Microsoft, AWS, CompTIA, Alison, Coursera, Udemy).</p>
             </div>
             <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
               <h3 className="font-bold text-gray-900 text-base mb-1">Career Resources</h3>
@@ -125,7 +125,7 @@ export default function CurationPolicyPage() {
             <li className="flex items-start gap-3">
               <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
               <div>
-                <strong className="text-gray-900 font-bold">Cost &amp; Free Availability:</strong> Course content must be genuinely free to audit or study. Paid physical certificates are acceptable only if the full learning materials remain accessible at zero cost.
+                <strong className="text-gray-900 font-bold">Value-First Hierarchy &amp; Price Transparency:</strong> We prioritize free and free-to-audit learning options first. Paid courses or vendor certifications are listed only if they offer verified employer recognition (e.g. AWS, CompTIA, Cisco, Microsoft) or exceptional career ROI. Every listed resource explicitly displays its pricing model.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -137,7 +137,7 @@ export default function CurationPolicyPage() {
             <li className="flex items-start gap-3">
               <CheckCircle2 size={18} className="text-primary shrink-0 mt-1" />
               <div>
-                <strong className="text-gray-900 font-bold">Provider Credibility:</strong> Courses must originate from recognized educational institutions, technology vendors (e.g. Google, Microsoft, AWS), or established accredited platforms (e.g. Alison CPD-certified).
+                <strong className="text-gray-900 font-bold">Provider Credibility:</strong> Courses must originate from recognized educational institutions, technology vendors (e.g. Google, Microsoft, AWS, Cisco), or established accredited platforms.
               </div>
             </li>
             <li className="flex items-start gap-3">
