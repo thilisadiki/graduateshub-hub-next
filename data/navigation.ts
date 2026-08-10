@@ -64,7 +64,12 @@ export const popularGuides: GuideLink[] = [
     desc: 'Compare top learning platforms, free audit tracks, and certified graduate courses.',
     badge: 'Platforms',
   },
-
+  {
+    href: '/free-google-courses-with-certificates',
+    title: 'Free Google Courses (2026)',
+    desc: 'Official Grow with Google career certificates, Skillshop exams, and free audit options.',
+    badge: 'Google',
+  },
   {
     href: '/free-courses-for-data-analysts',
     title: 'Free Courses for Data Analysts',
