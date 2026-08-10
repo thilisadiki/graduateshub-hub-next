@@ -5,13 +5,13 @@ import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
 
 const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   {
-    question: 'Are the courses on Graduates Hub really free?',
-    answer: "Yes! Every course listed on Graduates Hub is 100% free to access. There are no hidden fees, subscription charges, or paywalls. You only pay if you choose to purchase an official physical certificate after completing a course.",
+    question: 'How does Graduates Hub curate learning resources & courses?',
+    answer: "We follow a Value-First Curation Policy: free and free-to-audit learning options are prioritized first so you can learn without subscription traps. When we list high-value paid vendor certifications (such as AWS, CompTIA, or Cisco), every resource features full price transparency.",
   },
   {
     question: 'Are these certificates recognised by employers?',
-    answer: "Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our career guides and industry insights on Graduates Hub.",
-    node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited and recognized by thousands of employers globally. For a deeper look at what employers value, read our <a href="/blog" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub.</>,
+    answer: "Absolutely. The courses are CPD (Continuing Professional Development) accredited or issued directly by global technology leaders like Google and Microsoft. For a deeper look at what employers value, read our career guides and industry insights on Graduates Hub.",
+    node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited or issued directly by global technology leaders like Google and Microsoft. For a deeper look at what employers value, read our <a href="/blog" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub.</>,
   },
   {
     question: 'Do I need any previous experience to enrol?',
@@ -24,7 +24,7 @@ const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   },
   {
     question: 'How does Graduates Hub compare to a paid coding or career bootcamp?',
-    answer: "Bootcamps charge thousands of Rands for structured learning paths, project assignments, CV assistance, and interview prep. Graduates Hub provides this entire 5-step career execution framework (Roadmaps, Verified Free Courses, Proof of Work Portfolio Tasks, ATS-Friendly CV Builder, and Interview Prep) completely free.",
+    answer: "Bootcamps charge tens of thousands of Rands for structured learning paths, project assignments, CV assistance, and interview prep. Graduates Hub provides this entire 5-step career execution framework (Roadmaps, Value-First Courses, Proof of Work Portfolio Tasks, ATS-Friendly CV Builder, and Interview Prep) with zero mandatory fees, letting you build job-ready skills at your own pace.",
   },
 ];
 

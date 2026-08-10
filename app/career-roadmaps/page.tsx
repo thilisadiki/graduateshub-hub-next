@@ -51,8 +51,8 @@ const itemListSchema = {
 
 const FAQS = [
   {
-    q: 'Are these career roadmaps completely free to follow?',
-    a: 'Yes, 100% free. Every stage in our career roadmaps links directly to free certified courses (from Google, Harvard edX, IBM, Alison, and Coursera financial aid options) alongside free practice portfolio tasks.',
+    q: 'How are courses selected for these career roadmaps?',
+    a: 'Our roadmaps follow a Value-First Curation Policy: we prioritize free and free-to-audit learning paths first (including Google, Microsoft, Alison, and Coursera financial aid tracks), alongside free practice portfolio tasks. High-ROI paid vendor credentials are clearly labeled with full price transparency.',
   },
   {
     q: 'How long does it typically take to become job-ready using these roadmaps?',
@@ -285,8 +285,8 @@ export default function CareerRoadmapsPage() {
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
               Why Follow a Curated Career Roadmap?
             </h2>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Random tutorial searches lead to tutorial hell. Our curated roadmaps streamline your focus onto high-impact skills that actually convert into job offers.
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+              Random tutorial searches lead to tutorial hell. Our <Link href="/curation-policy" className="text-primary font-bold hover:underline">7-part editorial curation policy</Link> prioritizes free and free-to-audit learning paths first, curating high-ROI vendor credentials only when backed by verified employer demand.
             </p>
           </div>
 
@@ -302,31 +302,31 @@ export default function CareerRoadmapsPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
-                  <td className="py-4 px-4 font-semibold text-gray-900">Cost</td>
-                  <td className="py-4 px-4 font-bold text-emerald-600 bg-primary/5">100% Free</td>
+                  <td className="py-4 px-4 font-semibold text-gray-900">Cost &amp; Access Policy</td>
+                  <td className="py-4 px-4 font-bold text-emerald-600 bg-primary/5">Value-First (Free options prioritized + High-ROI vendor options)</td>
                   <td className="py-4 px-4 text-gray-500">Free</td>
-                  <td className="py-4 px-4 text-rose-600 font-semibold">$5,000 – $15,000</td>
+                  <td className="py-4 px-4 text-rose-600 font-semibold">$5,000 to $15,000</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-4 font-semibold text-gray-900">Curated Order & Sequence</td>
+                  <td className="py-4 px-4 font-semibold text-gray-900">Curated Order &amp; Sequence</td>
                   <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Structured 4 Stages</td>
-                  <td className="py-4 px-4 text-rose-500">❌ Random & Unorganized</td>
+                  <td className="py-4 px-4 text-rose-500">❌ Random &amp; Unorganized</td>
                   <td className="py-4 px-4 text-gray-700">✅ Structured</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-4 font-semibold text-gray-900">Verifiable Proof of Work</td>
-                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Public Badges & Code Reviews</td>
+                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ AI-Graded Badges &amp; Portfolio Rubrics</td>
                   <td className="py-4 px-4 text-rose-500">❌ None</td>
                   <td className="py-4 px-4 text-gray-700">⚠️ Mixed Quality</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-4 font-semibold text-gray-900">Free Verified Certificates</td>
-                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Google, edX, Alison, IBM</td>
+                  <td className="py-4 px-4 font-semibold text-gray-900">Industry &amp; Vendor Credentials</td>
+                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Google, Microsoft, AWS, CompTIA, Alison</td>
                   <td className="py-4 px-4 text-rose-500">❌ No Certificates</td>
                   <td className="py-4 px-4 text-gray-700">⚠️ Bootcamp Certificate Only</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-4 font-semibold text-gray-900">Interview Q&A & Salary Benchmarks</td>
+                  <td className="py-4 px-4 font-semibold text-gray-900">Interview Q&amp;A &amp; Salary Benchmarks</td>
                   <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5 rounded-b-xl">✅ Built-in per Role</td>
                   <td className="py-4 px-4 text-rose-500">❌ None</td>
                   <td className="py-4 px-4 text-gray-700">✅ Included</td>
