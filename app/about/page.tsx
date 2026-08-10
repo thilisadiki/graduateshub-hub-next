@@ -129,7 +129,7 @@ export default function AboutPage() {
             Democratizing Career Education for <span className="text-primary">Everyone, Everywhere</span>
           </h1>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
-            Connecting job seekers and graduates with internationally recognized free courses, step-by-step career roadmaps, and verified portfolio tools - 100% free with zero paywalls.
+            Connecting job seekers and graduates with internationally recognized courses, step-by-step career roadmaps, and verified portfolio tools.
           </p>
         </div>
       </div>
@@ -322,8 +322,8 @@ export default function AboutPage() {
               {
                 icon: Heart,
                 color: 'bg-red-100 text-red-500',
-                title: '100% Free, Always',
-                desc: 'No hidden fees, no paywalls, no required credit card. Every resource on Graduates Hub is and will always be completely free.',
+                title: 'Value-First & Transparent',
+                desc: 'Free and free-to-audit resources prioritized first. High-ROI paid credentials listed only with explicit price transparency.',
               },
             ].map(({ icon: Icon, color, title, desc }) => (
               <div key={title} className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 flex gap-4 items-start">
