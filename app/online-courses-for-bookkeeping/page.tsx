@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calculator, CheckCircle2, ArrowRight, Award, HelpCircle, Briefcase, FileText, ExternalLink, ShieldCheck, DollarSign, Layers } from 'lucide-react';
+import { Calculator, CheckCircle2, ArrowRight, Award, HelpCircle, Briefcase, FileText, ExternalLink, ShieldCheck, DollarSign, Layers, BookOpen, Check, Building2, Landmark, Scale } from 'lucide-react';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -142,6 +142,15 @@ const dualCertTrack = [
   },
 ];
 
+const coreCompetencies = [
+  { title: 'General Ledger Posting', detail: 'Accurately recording debits and credits for all revenue, expense, asset, and liability accounts.' },
+  { title: 'Bank Reconciliation', detail: 'Matching bank statement line items with internal ledger entries to detect errors or missing vouchers.' },
+  { title: 'Accounts Payable (AP)', detail: 'Managing supplier invoices, verifying purchase orders, and scheduling payment batches.' },
+  { title: 'Accounts Receivable (AR)', detail: 'Issuing customer invoices, tracking payment due dates, and generating age analysis reports.' },
+  { title: 'Month-End Trial Balance', detail: 'Verifying that total debit balances equal total credit balances before financial reporting.' },
+  { title: 'Statutory Payroll Deductions', detail: 'Calculating PAYE tax brackets, UIF employee/employer contributions, and SDL payments.' },
+];
+
 export default function BookkeepingCoursesPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -203,6 +212,32 @@ export default function BookkeepingCoursesPage() {
           </div>
         </section>
 
+        {/* Editorial Deep Dive: The Role of a Modern Bookkeeper */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Editorial Analysis: What Does a Modern Bookkeeper Do?</h2>
+          <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed text-[15px] flex flex-col gap-4">
+            <p>
+              In the modern business environment, bookkeeping has evolved far beyond manual paper ledgers. Today&apos;s bookkeepers manage digital cloud software (Xero, QuickBooks Online, Sage), process automated bank feeds, manage payroll compliance, and ensure real-time financial accuracy for small and medium businesses.
+            </p>
+            <p>
+              Because every operational company requires systematic financial tracking, **bookkeeping is one of the most resilient, high-demand entry points into the business and finance industry**. You do not need a 4-year degree in accounting to start working as a bookkeeper; mastering double-entry fundamentals and cloud accounting software provides direct entry into accounts assistant, accounts clerk, and junior bookkeeper roles.
+            </p>
+          </div>
+
+          {/* 6 Core Competencies Grid */}
+          <div className="mt-8 pt-8 border-t border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">6 Core Bookkeeping Competencies Tested by Employers</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {coreCompetencies.map((comp) => (
+                <div key={comp.title} className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">{comp.title}</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">{comp.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: Bookkeeping Fundamentals */}
         <section>
           <div className="mb-8 flex items-center gap-3">
@@ -236,6 +271,53 @@ export default function BookkeepingCoursesPage() {
           </div>
         </section>
 
+        {/* Editorial Deep Dive: Software Comparison */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Cloud Accounting Software Guide: Xero vs. QuickBooks vs. Sage</h2>
+          <p className="text-gray-600 text-sm mb-6">Which accounting software platform should you learn first?</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-6 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Market Leader</span>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Xero Accounting</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  Xero is widely used by modern tech startups, digital agencies, and small businesses across South Africa. Features automated bank feeds, intuitive chart of accounts, and built-in invoicing.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700">
+                Recommended Certification: Xero Advisor Certified
+              </div>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-6 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">Global Standard</span>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">QuickBooks Online</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  QuickBooks Online is the most popular global software for small business bookkeeping. Excellent for inventory tracking, job costing, and automated expense categorization.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700">
+                Recommended Certification: QuickBooks ProAdvisor
+              </div>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-6 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">SA Industry Classic</span>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Sage Business Cloud</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  Sage (formerly Sage Pastel) has deep historical roots in South Africa. Widely used by established corporate firms, accounting practices, and retail businesses.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700">
+                Recommended Certification: Sage Authorized User
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Section 2: Software Track */}
         <section>
           <div className="mb-8 flex items-center gap-3">
@@ -266,6 +348,42 @@ export default function BookkeepingCoursesPage() {
                 </Link>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Editorial Guide: South African Statutory Compliance (SARS, PAYE, UIF, VAT) */}
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
+              <Landmark size={20} />
+            </div>
+            <div>
+              <h2 className="text-2xl font-extrabold text-gray-900">South African Tax &amp; Payroll Compliance Overview</h2>
+              <p className="text-xs text-gray-600">Essential SARS statutory filings every South African bookkeeper must know.</p>
+            </div>
+          </div>
+
+          <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+            <div className="bg-slate-50 border-l-4 border-emerald-600 rounded-r-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">1. Value-Added Tax (VAT201 Returns)</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Businesses with taxable turnover exceeding R1 million per annum must register for VAT. Bookkeepers categorize transactions into Standard Rated (15%), Zero Rated (0%), and Exempt supplies, submitting bi-monthly VAT201 returns to SARS.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border-l-4 border-blue-600 rounded-r-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">2. Monthly Payroll Statutory Deductions (EMP201)</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Every employer must submit an EMP201 return by the 7th of each month, declaring Pay As You Earn (PAYE), Unemployment Insurance Fund (UIF 1% employee + 1% employer), and Skills Development Levy (SDL 1%).
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border-l-4 border-amber-600 rounded-r-xl p-5">
+              <h3 className="font-bold text-gray-900 text-base mb-1">3. Annual Employee Tax Reconciliations (EMP501)</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Bi-annual EMP501 reconciliations verify that total PAYE tax withheld matches IRP5 tax certificates issued to staff before individual tax filing season.
+              </p>
+            </div>
           </div>
         </section>
 

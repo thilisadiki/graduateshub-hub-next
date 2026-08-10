@@ -137,6 +137,16 @@ git switch dev && git merge main && git push                   # backport to dev
 - **Interactive API & Client Layer (`/api/*`)**: Delivers instant utility, user engagement, and retention via Google Gemini. Dynamic client outputs are NOT indexed as content assets.
 - **Editorial Landing Layer (`/free-ai-career-tools`)**: Provides indexable, search-optimized editorial text addressing real user career problems (*CV auditing, JD decoding, skills gap analysis, interview preparation*). Hosts and frames the interactive tool inside it.
 
+## Comprehensive Editorial Content Standard (Google Helpful Content System)
+
+> **Golden Rule**: Every indexable page created on Graduates Hub MUST feature comprehensive, high-value editorial content to satisfy Google's Helpful Content and E-E-A-T guidelines.
+
+1. **No Thin Listicles**: Pages must never be simple lists of links. Every hub, guide, or training page must contain rich background context, skill breakdowns, software comparisons, or market analysis.
+2. **E-E-A-T Attribution**: Every major guide must highlight verified co-founder or specialist expertise (e.g. Jason Sadiki - Technical SEO / Full-Stack Engineer; Ndulamiso Mamburu - Tax Professional at SARS).
+3. **Structured Competency Matrices**: Incorporate structured tables, competency grids, and practical software guides (e.g. Xero vs QuickBooks, Python vs SQL, SARS compliance rules).
+4. **Market & Industry Localization**: Always include real-world South African job market context, employer expectations, and statutory compliance frameworks.
+5. **Actionable Next Steps**: Every page must guide the learner to concrete next steps (e.g. portfolio proof tasks, roadmaps, or interactive AI tools).
+
 ## Cheat sheet
 
 | Goal | Command |
