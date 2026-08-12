@@ -190,3 +190,20 @@ body {
 /* First element — remove top margin */
 .wp-content > *:first-child { margin-top: 0; }
 
+/* Google Translate iframe & top banner cleanup */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+

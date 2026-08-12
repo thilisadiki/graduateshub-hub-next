@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LanguageSelector from '@/components/layout/LanguageSelector';
 
 export default function Footer() {
   return (
@@ -8,14 +9,17 @@ export default function Footer() {
         {/* Brand */}
         <div className="sm:col-span-2 md:col-span-4 lg:col-span-2">
           <h2 className="text-2xl font-bold text-white mb-4">Graduates <span className="text-[#FFDF9C]">Hub</span></h2>
-          <p className="text-sm leading-relaxed max-w-sm">
+          <p className="text-sm leading-relaxed max-w-sm mb-4">
             Your free learning resource centre: career guides, study articles, and hundreds of free certified courses to help you grow your skills and advance your career.
           </p>
+          <div className="mb-4">
+            <LanguageSelector />
+          </div>
           <a
             href="https://facebook.com/Graduateshub"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-5 text-sm text-[#7C7061] hover:text-[#FFDF9C] transition-colors group"
+            className="inline-flex items-center gap-2 text-sm text-[#7C7061] hover:text-[#FFDF9C] transition-colors group"
           >
             <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#7A5900] text-white shrink-0">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>

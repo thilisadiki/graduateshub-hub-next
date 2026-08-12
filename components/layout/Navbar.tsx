@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown, Sparkles, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award } from 'lucide-react';
 import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
+import LanguageSelector from '@/components/layout/LanguageSelector';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -127,6 +128,9 @@ export default function Navbar() {
                 ))}
               </div>
             </div>
+
+            {/* Language Selector */}
+            <LanguageSelector />
           </div>
 
           <button onClick={toggleMobileMenu} className="md:hidden p-2 text-gray-600 flex items-center justify-center focus:outline-none" aria-label="Toggle navigation menu">
@@ -137,6 +141,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`md:hidden absolute w-full bg-[#FFF8F1] border-b border-[#D1C5B4] shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
+        <div className="py-2 border-b border-[#D1C5B4] flex items-center justify-between">
+          <span className="text-xs font-bold text-[#7C7061] uppercase tracking-wider">Select Language</span>
+          <LanguageSelector isCompact />
+        </div>
         <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-b border-[#D1C5B4]">Home</Link>
         {featuredLinks.map(link => (
           <Link key={link.href} href={link.href} onClick={toggleMobileMenu} className="font-bold text-primary hover:text-[#5a4000] py-3 border-b border-[#D1C5B4] flex items-center gap-2">
