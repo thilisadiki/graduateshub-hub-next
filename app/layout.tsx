@@ -61,10 +61,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* AdSense script for site verification & ad delivery */}
-        <Script
+        {/* AdSense script for site verification & ad delivery (raw async script for crawler verification) */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7185526762692935"
-          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
         {/* Google Tag Manager */}
