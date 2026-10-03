@@ -23,6 +23,12 @@ const AUTHORS = {
     photo: '/ndulamiso-mamburu.jpg',
     linkedin: 'https://www.linkedin.com/in/ndulamiso-mamburu/',
   },
+  phumudzo: {
+    name: 'Phumudzo Constance Sadiki',
+    title: 'Senior Student Support Officer · Ekurhuleni East TVET College',
+    photo: '/phumudzo-sadiki.jpg',
+    linkedin: 'https://www.linkedin.com/in/phumudzo-constance-sadiki-115023213/',
+  },
 } satisfies Record<string, Author>;
 
 export type AuthorKey = keyof typeof AUTHORS;

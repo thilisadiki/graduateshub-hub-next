@@ -117,6 +117,47 @@ export const authors: Author[] = [
     metaDescription:
       'Ndulamiso Mamburu is an Accounting and Tax Professional at SARS. Explore accounting and business career guides curated by Ndulamiso.',
   },
+  {
+    slug: 'phumudzo-constance-sadiki',
+    key: 'phumudzo',
+    name: 'Phumudzo Constance Sadiki',
+    role: 'Senior Student Support Officer (Ekurhuleni East TVET College) & Social Development Specialist',
+    photo: '/phumudzo-sadiki.jpg',
+    bio: [
+      'Phumudzo Constance Sadiki is a Senior Student Support Officer at Ekurhuleni East TVET College with extensive senior experience in social work, student welfare, and higher education development.',
+      'She holds a Master’s degree in Social Development and Policy and a Bachelor of Arts in Social Work, bringing deep expertise in graduate readiness, student mental health, bursary guidance, and career support frameworks.',
+      'At Graduates Hub, Phumudzo curates student development guides, internship navigation resources, and social support frameworks to help South African graduates transition smoothly into the workplace.',
+    ],
+    expertise: [
+      'Student Support & Welfare',
+      'Social Development & Policy',
+      'Graduate Internship Guidance',
+      'Higher Education Development',
+      'Youth Mentorship',
+    ],
+    credentials: [
+      {
+        label: 'Senior Student Support Officer',
+        issuer: 'Ekurhuleni East TVET College',
+      },
+      {
+        label: "Master's Degree in Social Development & Policy",
+        issuer: 'Postgraduate Qualification',
+      },
+      {
+        label: 'BA in Social Work',
+        issuer: 'Professional Social Worker',
+      },
+    ],
+    worksFor: [
+      { name: 'Ekurhuleni East TVET College', url: 'https://eec.edu.za' },
+      { name: 'Graduates Hub', url: 'https://www.graduateshub.org' },
+    ],
+    linkedinUrl: 'https://www.linkedin.com/in/phumudzo-constance-sadiki-115023213/',
+    metaTitle: 'Phumudzo Constance Sadiki - Senior Student Support Officer & Curator',
+    metaDescription:
+      'Phumudzo Constance Sadiki is a Senior Student Support Officer at Ekurhuleni East TVET College with a Master’s in Social Development & Policy. Explore student support and career guides curated by Phumudzo.',
+  },
 ];
 
 export function getAuthorBySlug(slug: string): Author | undefined {

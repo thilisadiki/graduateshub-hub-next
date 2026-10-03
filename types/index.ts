@@ -1,4 +1,4 @@
-export type AuthorKey = 'jason' | 'ndulamiso';
+export type AuthorKey = 'jason' | 'ndulamiso' | 'phumudzo';
 
 export interface RoadmapStage {
   number: number;

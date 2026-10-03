@@ -293,6 +293,53 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+
+            {/* Phumudzo */}
+            <div id="phumudzo-constance-sadiki" className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-28">
+              <div className="flex flex-col md:flex-row gap-0">
+                <div className="md:w-48 shrink-0 bg-gradient-to-br from-indigo-50 to-blue-100 flex items-center justify-center p-8">
+                  <div className="w-32 h-32 rounded-full overflow-hidden bg-indigo-100 relative shadow-md ring-4 ring-white">
+                    <Image src="/phumudzo-sadiki.jpg" alt="Phumudzo Constance Sadiki, Senior Student Support Officer" fill sizes="128px" className="object-cover object-top" />
+                  </div>
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="text-2xl font-extrabold text-gray-900">Phumudzo Constance Sadiki</h3>
+                    <span className="text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-100 px-2.5 py-1 rounded-full">
+                      Senior Student Support Curator
+                    </span>
+                  </div>
+                  <p className="text-indigo-600 font-bold text-sm mb-2">Senior Student Support Officer (Ekurhuleni East TVET College)</p>
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {['Student Support & Welfare', 'Social Development & Policy', 'Career Readiness'].map((tag) => (
+                      <span key={tag} className="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Phumudzo holds a Master’s degree in Social Development and Policy and a Bachelor of Arts in Social Work. She serves as a Senior Student Support Officer at Ekurhuleni East TVET College, bringing extensive practitioner experience in student welfare and higher education support.
+                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    At Graduates Hub, Phumudzo curates student development resources, internship transition frameworks, and social support guidance tailored for South African youth.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                    <Link href="/authors/phumudzo-constance-sadiki" className="inline-flex items-center gap-1 text-sm font-extrabold text-primary hover:underline">
+                      View Full Profile &amp; Curated Guides →
+                    </Link>
+                    <span className="text-gray-200">|</span>
+                    <a
+                      href="https://www.linkedin.com/in/phumudzo-constance-sadiki-115023213/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-gray-900 transition-colors"
+                    >
+                      <ExternalLink size={14} /> LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
