@@ -50,28 +50,28 @@ const breadcrumbSchema = {
 
 const ESSENTIAL_READS = [
   {
-    title: 'YES Youth Program Guide 2026: Application, Stipends & Placement',
-    desc: 'Everything job seekers need to know about joining the Youth Employment Service initiative, stipends, and work experience.',
-    href: '/blog/yes-youth-program-guide-south-africa',
-    badge: 'SA Youth Programs',
+    title: 'Top 6 Career Roadmaps to Capitalize On in 2026',
+    desc: 'Discover the highest-growth career tracks across software development, data analytics, business analysis, and digital publishing.',
+    href: '/blog/top-career-roadmaps-2026-guide',
+    badge: 'Career Roadmaps',
     readTime: '8 min read',
     accent: 'from-[#7A5900] to-[#FFDF9C]',
   },
   {
-    title: 'Are Alison Certificates Recognized by Employers in 2026?',
-    desc: 'An honest evaluation of Alison free online courses, accreditation status, CV listing best practices, and employer perception in SA.',
-    href: '/blog/is-an-alison-certificate-recognised-by-employers-2026',
-    badge: 'Certificates & CVs',
-    readTime: '6 min read',
-    accent: 'from-[#1F1B13] to-[#3D3325]',
-  },
-  {
-    title: 'How to Get Coursera Certificates for Free (2026 Financial Aid)',
-    desc: 'Step by step walkthrough to apply for 100% Coursera financial aid fee waivers for top university and Google professional certificates.',
-    href: '/blog/how-to-get-coursera-certificates-for-free-2026-financial-aid-guide',
-    badge: 'Free Learning',
+    title: 'The Ultimate Guide to Free Google Courses with Certificates in 2026',
+    desc: 'Complete walkthrough on earning verified Google Career Certificates and badges in AI, cybersecurity, and data analysis for free.',
+    href: '/blog/the-ultimate-guide-to-free-google-courses-with-certificates-in-2026',
+    badge: 'Free Certifications',
     readTime: '7 min read',
     accent: 'from-[#1E3A8A] to-[#3B82F6]',
+  },
+  {
+    title: 'How to Use AI to Personalize Your CV Without Looking Robotic',
+    desc: 'Practical prompt frameworks to tailor your resume for ATS algorithms and recruiters while preserving your authentic voice.',
+    href: '/blog/how-to-use-ai-to-personalize-your-cv-without-looking-robotic',
+    badge: 'CV & AI Tools',
+    readTime: '6 min read',
+    accent: 'from-[#1F1B13] to-[#3D3325]',
   },
 ];
 
