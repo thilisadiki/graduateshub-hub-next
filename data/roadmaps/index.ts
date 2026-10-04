@@ -15,11 +15,13 @@ import { financialAnalystRoadmap } from './financialAnalyst';
 import { softwareEngineerRoadmap } from './softwareEngineer';
 import { googleAIEssentialsRoadmap } from './googleAIEssentials';
 import { digitalMarketingEcommerceRoadmap } from './digitalMarketingEcommerce';
+import { digitalPublisherRoadmap } from './digitalPublisher';
 
 export const roadmaps: CareerRoadmap[] = [
   dataAnalystRoadmap,
   googleAIEssentialsRoadmap,
   digitalMarketingEcommerceRoadmap,
+  digitalPublisherRoadmap,
   softwareEngineerRoadmap,
   cybersecurityAnalystRoadmap,
   uiUxDesignerRoadmap,

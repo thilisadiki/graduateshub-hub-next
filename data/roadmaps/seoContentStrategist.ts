@@ -113,7 +113,7 @@ export const seoContentStrategistRoadmap: CareerRoadmap = {
     'Organic Traffic Growth Case Study: document before-and-after organic impressions, clicks, and ranking improvements using Google Search Console',
     'JSON-LD Schema Implementation: draft and validate clean FAQPage and HowTo JSON-LD schema for a blog article',
   ],
-  relatedRoadmapIds: ['digital-marketing-specialist', 'business-analyst', 'web-developer'],
+  relatedRoadmapIds: ['digital-publisher', 'digital-marketing-specialist', 'web-developer'],
   salaryBenchmarks: [
     { region: 'United States', range: '$50,000 – $78,000/year' },
     { region: 'United Kingdom', range: '£25,000 – £42,000/year' },
