@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BookOpen, Users, Award, Heart, ArrowRight, Newspaper, ExternalLink } from 'lucide-react';
+import { BookOpen, Users, Award, Heart, ArrowRight, Newspaper, ExternalLink, Compass } from 'lucide-react';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'About Graduates Hub – Our Mission & Team',
+  title: 'About Graduates Hub - Our Mission & Team',
   description:
     'Graduates Hub is co-founded by Jason Sadiki (Technical SEO Specialist at Betway Africa) and Ndulamiso Mamburu (Tax Professional, SARS & Accounting Science Graduate). Real credentials behind every resource.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'About Graduates Hub – Our Mission & Team',
+    title: 'About Graduates Hub - Our Mission & Team',
     description:
       'Graduates Hub is co-founded by Jason Sadiki (Technical SEO Specialist at Betway Africa) and Ndulamiso Mamburu (Tax Professional, SARS & Accounting Science Graduate). Real credentials behind every resource.',
     url: `${SITE_URL}/about`,
@@ -355,10 +355,10 @@ export default function AboutPage() {
                 desc: 'From IT and Software Engineering to Business, Accounting, and Marketing. Every resource is hand-picked for quality and workplace applicability.',
               },
               {
-                icon: Award,
-                color: 'bg-green-100 text-green-600',
-                title: 'Certificates & Diplomas',
-                desc: 'Earn verifiable certificates and diplomas from internationally recognized global providers to strengthen your CV.',
+                icon: Compass,
+                color: 'bg-emerald-100 text-emerald-600',
+                title: 'Step-by-Step Career Roadmaps',
+                desc: 'Structured learning pathways that guide you from beginner to job-ready with clear milestones, curated curriculum, and portfolio projects.',
               },
               {
                 icon: Users,
