@@ -19,7 +19,7 @@ const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const fetchPostBySlug = cache(async (slug: string) => {
   try {
     const res = await fetch(`${WP_API}/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed`, {
-      next: { revalidate: 3600 },
+      next: { revalidate: 3600, tags: ['articles', `article-${slug}`] },
     });
     if (!res.ok) return null;
     const posts = await res.json();
@@ -128,7 +128,7 @@ async function fetchRelatedPosts(categoryIds: number[], excludeId: number) {
   try {
     const res = await fetch(
       `${WP_API}/wp/v2/posts?per_page=3&categories=${categoryIds.join(',')}&exclude=${excludeId}&_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia`,
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 3600, tags: ['articles'] } }
     );
     if (!res.ok) return [];
     return await res.json();

@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
 
   const response = await fetch(url, {
     headers: { Host: 'articles.graduateshub.co.za' },
-    next: { revalidate: 300 },
+    next: { revalidate: 900 },
   });
 
   if (!response.ok) {

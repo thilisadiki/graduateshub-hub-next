@@ -5,7 +5,7 @@ import { Calendar, ArrowRight, BookOpen, ChevronRight, Sparkles, Clock, Compass,
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
-export const revalidate = 300;
+export const revalidate = 900;
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const PER_PAGE = 12;
@@ -90,7 +90,7 @@ async function fetchPosts(page: number) {
   try {
     const res = await fetch(
       `${WP_API}/wp/v2/posts?per_page=${PER_PAGE}&page=${page}&${LISTING_FIELDS}`,
-      { next: { revalidate: 300 } }
+      { next: { revalidate: 900, tags: ['articles', 'blog-list'] } }
     );
     if (!res.ok) return { posts: [], total: 0, totalPages: 1 };
 

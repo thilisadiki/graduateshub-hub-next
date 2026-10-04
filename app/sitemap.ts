@@ -16,7 +16,7 @@ async function fetchAllBlogPosts(): Promise<{ slug: string; modified: string }[]
     try {
       const res = await fetch(
         `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`,
-        { next: { revalidate: 3600 } }
+        { next: { revalidate: 3600, tags: ['articles', 'sitemap'] } }
       );
       if (!res.ok) break;
       const batch = await res.json();
