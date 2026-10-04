@@ -26,7 +26,7 @@ const AUTHORS = {
   phumudzo: {
     name: 'Phumudzo Constance Sadiki',
     title: 'Senior Student Support Officer · Ekurhuleni East TVET College',
-    photo: '/phumudzo-sadiki.jpg',
+    photo: '/phumudzo-sadiki.jpeg',
     linkedin: 'https://www.linkedin.com/in/phumudzo-constance-sadiki-115023213/',
   },
 } satisfies Record<string, Author>;

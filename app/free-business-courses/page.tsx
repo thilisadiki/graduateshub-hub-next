@@ -11,15 +11,15 @@ import { SITE_URL, SITE_NAME } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/free-business-courses`;
 
 export const metadata: Metadata = {
-  title: 'How to Learn Business Skills for Free Online (2026 Guide)',
+  title: '10 Best Free Business Courses Online with Certificates (2026)',
   description:
-    'Learn essential business skills for free online in 2026. Master project management, Lean Six Sigma, compliance, and corporate strategy with free CPD certificates.',
+    'Study 10+ free accredited business courses online in 2026. Earn downloadable CPD certificates in Project Management, Lean Six Sigma, Agile & GDPR. 100% free with zero tuition fees.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'How to Learn Business Skills for Free Online (2026 Guide) | Graduates Hub',
+    title: '10 Best Free Business Courses Online with Certificates (2026) | Graduates Hub',
     description:
-      'Learn essential business skills for free online in 2026. Master project management, Lean Six Sigma, compliance, and corporate strategy with free CPD certificates.',
+      'Study 10+ free accredited business courses online in 2026. Earn downloadable CPD certificates in Project Management, Lean Six Sigma, Agile & GDPR. 100% free with zero tuition fees.',
     url: CANONICAL,
   },
 };
@@ -167,8 +167,8 @@ export default function FreeBusinessCoursesPage() {
         canonicalUrl={CANONICAL}
         datePublished="2026-01-01"
         breadcrumb={[{ label: 'Free Business Courses' }]}
-        heading="How to Learn Business Skills for Free Online (2026)"
-        heroDescription="Discover how to learn in-demand business skills for free online in 2026. Master project management, process improvement, compliance, and strategy with CPD-accredited certificates - no degree or prior experience required."
+        heading="10 Best Free Business Courses Online with Certificates (2026)"
+        heroDescription="Study top-rated accredited business courses online for free in 2026. Master project management, Lean Six Sigma, compliance, and corporate strategy with downloadable CPD certificates - no degree or tuition fees required."
         heroBadges={[
           { icon: CheckCircle2, label: 'No Experience Required', iconClassName: 'text-green-500' },
           { icon: Award, label: 'CPD-Accredited Certificates', iconClassName: 'text-primary' },
@@ -200,32 +200,32 @@ export default function FreeBusinessCoursesPage() {
                 <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
                   <tr>
                     <td className="py-3.5 px-4 font-bold text-gray-900">Project Management</td>
-                    <td className="py-3.5 px-4"><Link href="/course/diploma-project-management" className="text-primary font-semibold hover:underline">Diploma in Project Management</Link></td>
-                    <td className="py-3.5 px-4">10–15 hrs</td>
+                    <td className="py-3.5 px-4 font-semibold text-gray-900">Diploma in Project Management</td>
+                    <td className="py-3.5 px-4">10-15 hrs</td>
                     <td className="py-3.5 px-4">Project Coordinator, Operations Assistant</td>
                   </tr>
                   <tr>
                     <td className="py-3.5 px-4 font-bold text-gray-900">Agile & Scrum</td>
-                    <td className="py-3.5 px-4"><Link href="/course/agile-project-management" className="text-primary font-semibold hover:underline">Agile Project Management</Link></td>
-                    <td className="py-3.5 px-4">3–5 hrs</td>
+                    <td className="py-3.5 px-4 font-semibold text-gray-900">Agile Project Management</td>
+                    <td className="py-3.5 px-4">3-5 hrs</td>
                     <td className="py-3.5 px-4">Scrum Master, Agile Team Member</td>
                   </tr>
                   <tr>
                     <td className="py-3.5 px-4 font-bold text-gray-900">Process Improvement</td>
-                    <td className="py-3.5 px-4"><Link href="/course/lean-six-sigma-yellow-belt" className="text-primary font-semibold hover:underline">Lean Six Sigma Yellow Belt</Link></td>
-                    <td className="py-3.5 px-4">4–6 hrs</td>
+                    <td className="py-3.5 px-4 font-semibold text-gray-900">Lean Six Sigma Yellow Belt</td>
+                    <td className="py-3.5 px-4">4-6 hrs</td>
                     <td className="py-3.5 px-4">Operations Specialist, QA Analyst</td>
                   </tr>
                   <tr>
                     <td className="py-3.5 px-4 font-bold text-gray-900">Regulatory Compliance</td>
-                    <td className="py-3.5 px-4"><Link href="/course/gdpr-general-data-protection" className="text-primary font-semibold hover:underline">GDPR Data Protection</Link></td>
-                    <td className="py-3.5 px-4">2–4 hrs</td>
+                    <td className="py-3.5 px-4 font-semibold text-gray-900">GDPR Data Protection</td>
+                    <td className="py-3.5 px-4">2-4 hrs</td>
                     <td className="py-3.5 px-4">Compliance Officer, HR Assistant</td>
                   </tr>
                   <tr>
                     <td className="py-3.5 px-4 font-bold text-gray-900">AI Strategy</td>
-                    <td className="py-3.5 px-4"><Link href="/course/intro-ai-business" className="text-primary font-semibold hover:underline">Introduction to AI in Business</Link></td>
-                    <td className="py-3.5 px-4">3–5 hrs</td>
+                    <td className="py-3.5 px-4 font-semibold text-gray-900">Introduction to AI in Business</td>
+                    <td className="py-3.5 px-4">3-5 hrs</td>
                     <td className="py-3.5 px-4">Business Analyst, Strategy Associate</td>
                   </tr>
                 </tbody>
