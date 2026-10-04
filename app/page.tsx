@@ -12,7 +12,7 @@ import { categories } from '@/data/categories';
 import { popularGuides } from '@/data/navigation';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
-export const revalidate = 900;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Career Roadmaps, Verified Learning Paths & Proof of Work Portfolios',
@@ -50,13 +50,14 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'Graduates Hub',
   url: SITE_URL,
+  logo: undefined,
 };
 
 async function fetchHomeArticles(perPage: number) {
   try {
     const response = await fetch(
       `https://articles.graduateshub.co.za/wp-json/wp/v2/posts?per_page=${perPage}&_embed`,
-      { next: { revalidate: 900, tags: ['articles', 'home-articles'] } }
+      { next: { revalidate: 86400, tags: ['articles', 'home-articles'] } }
     );
     if (!response.ok) return undefined;
 

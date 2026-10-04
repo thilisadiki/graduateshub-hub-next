@@ -9,6 +9,8 @@ import { popularGuides, type GuideLink } from '@/data/navigation';
 const SITE_URL = 'https://www.graduateshub.org';
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 
+export const revalidate = 86400;
+
 async function fetchAllBlogPosts(): Promise<{ slug: string; modified: string }[]> {
   const posts: { slug: string; modified: string }[] = [];
   let page = 1;
@@ -16,7 +18,7 @@ async function fetchAllBlogPosts(): Promise<{ slug: string; modified: string }[]
     try {
       const res = await fetch(
         `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`,
-        { next: { revalidate: 3600, tags: ['articles', 'sitemap'] } }
+        { next: { revalidate: 86400, tags: ['articles', 'sitemap'] } }
       );
       if (!res.ok) break;
       const batch = await res.json();

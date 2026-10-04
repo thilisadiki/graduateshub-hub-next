@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import crypto from 'crypto';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 
@@ -62,7 +62,14 @@ async function handleRevalidation(request: NextRequest, target: RevalidateTarget
   const revalidatedPaths: string[] = [];
 
   try {
-    // 1. Always revalidate the blog index and homepage
+    // 1. Invalidate Next.js Data Cache tags
+    try {
+      revalidateTag('articles', 'max');
+    } catch (tagErr) {
+      console.warn('Could not revalidate tag articles:', tagErr);
+    }
+
+    // 2. Always revalidate the blog index and homepage
     revalidatePath('/blog');
     revalidatedPaths.push('/blog');
 
@@ -72,7 +79,7 @@ async function handleRevalidation(request: NextRequest, target: RevalidateTarget
     revalidatePath('/sitemap.xml');
     revalidatedPaths.push('/sitemap.xml');
 
-    // 2. If a specific post slug is provided, revalidate that specific post page
+    // 3. If a specific post slug is provided, revalidate that specific post page and tag
     if (target.slug) {
       const cleanSlug = target.slug
         .replace(/^\/blog\//, '')
@@ -80,6 +87,9 @@ async function handleRevalidation(request: NextRequest, target: RevalidateTarget
         .trim();
 
       if (cleanSlug) {
+        try {
+          revalidateTag(`article-${cleanSlug}`, 'max');
+        } catch {}
         revalidatePath(`/blog/${cleanSlug}`);
         revalidatedPaths.push(`/blog/${cleanSlug}`);
       }

@@ -9,7 +9,7 @@ import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
 import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
-export const revalidate = 3600;   // regenerate cached posts every hour
+export const revalidate = 86400;   // 24-hour fallback (instant on-demand webhook handles real-time updates)
 export const dynamicParams = true; // posts published after build still work
 
 const WP_API = 'https://articles.graduateshub.co.za/wp-json';
@@ -19,7 +19,7 @@ const WP_API = 'https://articles.graduateshub.co.za/wp-json';
 const fetchPostBySlug = cache(async (slug: string) => {
   try {
     const res = await fetch(`${WP_API}/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed`, {
-      next: { revalidate: 3600, tags: ['articles', `article-${slug}`] },
+      next: { revalidate: 86400, tags: ['articles', `article-${slug}`] },
     });
     if (!res.ok) return null;
     const posts = await res.json();
@@ -128,7 +128,7 @@ async function fetchRelatedPosts(categoryIds: number[], excludeId: number) {
   try {
     const res = await fetch(
       `${WP_API}/wp/v2/posts?per_page=3&categories=${categoryIds.join(',')}&exclude=${excludeId}&_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia`,
-      { next: { revalidate: 3600, tags: ['articles'] } }
+      { next: { revalidate: 86400, tags: ['articles'] } }
     );
     if (!res.ok) return [];
     return await res.json();
@@ -147,7 +147,7 @@ export async function generateStaticParams() {
     try {
       const res = await fetch(
         `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=slug`,
-        { next: { revalidate: 3600 } }
+        { next: { revalidate: 86400 } }
       );
       if (!res.ok) break;
       const posts: { slug: string }[] = await res.json();

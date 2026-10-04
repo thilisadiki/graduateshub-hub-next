@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const search = searchParams.get('search');
 
-  // Clamp per_page to a safe range (1–12)
+  // Clamp per_page to a safe range (1-12)
   const rawPerPage = parseInt(searchParams.get('per_page') ?? '3', 10);
   const perPage = Math.min(Math.max(isNaN(rawPerPage) ? 3 : rawPerPage, 1), MAX_PER_PAGE);
 
@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
 
   const response = await fetch(url, {
     headers: { Host: 'articles.graduateshub.co.za' },
-    next: { revalidate: 900 },
+    next: { revalidate: 86400, tags: ['articles'] },
   });
 
   if (!response.ok) {
