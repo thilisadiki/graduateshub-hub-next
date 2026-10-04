@@ -122,7 +122,7 @@ export const authors: Author[] = [
     key: 'phumudzo',
     name: 'Phumudzo Constance Sadiki',
     role: 'Senior Student Support Officer (Ekurhuleni East TVET College) & Social Development Specialist',
-    photo: '/phumudzo-sadiki.jpg',
+    photo: '/phumudzo-sadiki.jpeg',
     bio: [
       'Phumudzo Constance Sadiki is a Senior Student Support Officer at Ekurhuleni East TVET College with extensive senior experience in social work, student welfare, and higher education development.',
       'She holds a Master’s degree in Social Development and Policy and a Bachelor of Arts in Social Work, bringing deep expertise in graduate readiness, student mental health, bursary guidance, and career support frameworks.',

@@ -88,7 +88,7 @@ const faqSchema = {
 const CURATORS = {
   jason: { name: 'Jason Sadiki', photo: '/jason-sadiki.jpg' },
   ndulamiso: { name: 'Ndulamiso Mamburu', photo: '/ndulamiso-mamburu.jpg' },
-  phumudzo: { name: 'Phumudzo Constance Sadiki', photo: '/phumudzo-sadiki.jpg' },
+  phumudzo: { name: 'Phumudzo Constance Sadiki', photo: '/phumudzo-sadiki.jpeg' },
 };
 
 const CATEGORY_BADGES: Record<string, string> = {

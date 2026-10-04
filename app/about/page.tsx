@@ -299,7 +299,7 @@ export default function AboutPage() {
               <div className="flex flex-col md:flex-row gap-0">
                 <div className="md:w-48 shrink-0 bg-gradient-to-br from-indigo-50 to-blue-100 flex items-center justify-center p-8">
                   <div className="w-32 h-32 rounded-full overflow-hidden bg-indigo-100 relative shadow-md ring-4 ring-white">
-                    <Image src="/phumudzo-sadiki.jpg" alt="Phumudzo Constance Sadiki, Senior Student Support Officer" fill sizes="128px" className="object-cover object-top" />
+                    <Image src="/phumudzo-sadiki.jpeg" alt="Phumudzo Constance Sadiki, Senior Student Support Officer" fill sizes="128px" className="object-cover object-top" />
                   </div>
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
