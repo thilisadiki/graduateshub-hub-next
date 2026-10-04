@@ -1,4 +1,4 @@
-import { Star, Clock, ExternalLink } from 'lucide-react';
+import { Star, Clock } from 'lucide-react';
 import { formatCategoryName } from '@/utils/formatters';
 import type { Course } from '@/types';
 
@@ -13,15 +13,9 @@ export default function CourseCard({ course }: { course: Course }) {
           <span className="flex items-center font-medium text-gray-700"><Star size={14} className="mr-1 fill-current text-yellow-500" /> {course.rating}</span>
         </div>
       </div>
-      <a
-        href={course.affiliateLink}
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-        aria-label={`Start ${course.title}`}
-        className="mt-4 inline-flex items-center justify-center gap-1.5 w-full bg-[#FFF8F1] border border-primary text-primary hover:bg-[#FFDF9C]/40 py-2 px-4 rounded-lg text-xs font-bold transition-colors"
-      >
-        Start Course <ExternalLink size={13} />
-      </a>
+      <div className="mt-4 inline-flex items-center justify-center gap-1.5 w-full bg-emerald-50 border border-emerald-100 text-emerald-800 py-2 px-4 rounded-lg text-xs font-bold">
+        Free Curriculum
+      </div>
     </div>
   );
 }

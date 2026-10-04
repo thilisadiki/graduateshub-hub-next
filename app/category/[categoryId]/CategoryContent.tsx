@@ -140,14 +140,9 @@ export default function CategoryContent({
                         <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
                         <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
                       </div>
-                      <a
-                        href={course.affiliateLink}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
-                      >
-                        Start Course →
-                      </a>
+                      <span className="inline-flex items-center justify-center text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full shrink-0 self-start sm:self-auto">
+                        Free Curriculum
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -162,14 +157,9 @@ export default function CategoryContent({
                         <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
                         <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
                       </div>
-                      <a
-                        href={course.affiliateLink}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
-                      >
-                        Start Course →
-                      </a>
+                      <span className="inline-flex items-center justify-center text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full shrink-0 self-start sm:self-auto">
+                        Free Curriculum
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -194,14 +184,9 @@ export default function CategoryContent({
                             <h3 className="font-bold text-gray-900 text-base">{course.title}</h3>
                             <p className="text-xs text-gray-500 mt-1">Duration: {course.duration} · Rating: {course.rating} ★ · CPD Accredited</p>
                           </div>
-                          <a
-                            href={course.affiliateLink}
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            className="inline-flex items-center justify-center text-xs font-bold text-primary bg-[#FFDF9C]/30 hover:bg-[#FFDF9C] border border-[#D1C5B4] px-4 py-2.5 rounded-lg transition-colors shrink-0"
-                          >
-                            Start Course →
-                          </a>
+                          <span className="inline-flex items-center justify-center text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full shrink-0 self-start sm:self-auto">
+                            Free Curriculum
+                          </span>
                         </div>
                       ))}
                     </div>

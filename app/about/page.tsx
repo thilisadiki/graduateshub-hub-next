@@ -410,7 +410,7 @@ export default function AboutPage() {
               Graduates Hub surfaces high-quality, accredited learning resources from trusted global providers, including <strong>Alison</strong>, one of the world&apos;s largest free online learning platforms with over 40 million learners, alongside Google, Harvard edX, and IBM.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4 text-sm md:text-base">
-              When you select a recommended course inside a roadmap or guide, clicking <strong>&ldquo;Start Course&rdquo;</strong> takes you directly to the official provider where you can begin learning immediately for free.
+              When you explore our structured roadmaps and guides, you can review recommended syllabus outlines and study resources to build job-ready skills step by step.
             </p>
           </div>
         </section>
