@@ -15,7 +15,7 @@ const steps = [
     title: 'Learn the right skills',
     href: '/guides',
     actionLabel: 'View Study Guides',
-    description: 'Stage-by-stage learning paths with verified free courses from Google, IBM, Microsoft, and Alison.',
+    description: 'Stage-by-stage learning paths featuring verified free courses and employer-recognized paid certifications.',
     icon: <BookOpen className="text-primary" size={26} />,
   },
   {
@@ -56,7 +56,7 @@ export default function HowItWorks() {
             Your 5-Step Path to Getting Hired
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#4F4639] font-medium">
-            Everything you need to go from beginner to employed without paying thousands for a bootcamp.
+            Everything you need to go from beginner to employed: transparent free paths and verified high-ROI credentials.
           </p>
         </div>
 

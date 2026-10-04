@@ -20,18 +20,18 @@ export default function Hero() {
             {/* Top Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFDF9C]/90 border border-[#D1C5B4] text-[#261A00] font-bold text-xs uppercase tracking-wider mb-6 shadow-sm backdrop-blur-sm">
               <Sparkles size={13} className="text-[#7A5900] shrink-0" />
-              <span>100% Free Graduate Career Platform</span>
+              <span>Accessible Career Education: Free &amp; High-ROI Pathways</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F1B13] leading-[1.15] tracking-tight mb-5 max-w-xl">
               Get job-ready{' '}
-              <span className="text-primary">without paying for a bootcamp.</span>
+              <span className="text-primary">with verified free &amp; high-ROI pathways.</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#4F4639] mb-8 max-w-xl font-medium leading-relaxed">
-              Step-by-step career roadmaps, verified free course guides, proof of work portfolio tasks, and AI career tools to land your first job.
+              Step-by-step career roadmaps, curated free courses, high-ROI paid certifications, and proof of work portfolio tools to land your next job.
             </p>
 
             {/* CTAs */}

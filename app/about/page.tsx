@@ -140,7 +140,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Our Mission</h2>
           <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-10">
             <p className="text-gray-700 leading-relaxed text-lg">
-              Graduates Hub is built on a simple belief: <strong>quality career education should be accessible to everyone, everywhere.</strong> We connect learners across Africa and worldwide with internationally recognized, accredited online courses at absolutely zero cost.
+              Graduates Hub is built on a simple belief: <strong>quality career education should be accessible to everyone, everywhere.</strong> We connect learners across Africa and worldwide with structured, job-ready pathways: prioritizing top-tier free foundational learning while reviewing high-ROI professional certifications.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4 text-base">
               Whether you are a recent graduate entering the job market, a professional looking to upskill, or a career switcher exploring a new path, Graduates Hub provides the step-by-step roadmaps, interview prep guides, and CV tools to help you succeed without financial barriers.
@@ -351,8 +351,8 @@ export default function AboutPage() {
               {
                 icon: BookOpen,
                 color: 'bg-[#FFDF9C]/40 text-primary',
-                title: 'Free Learning Resources',
-                desc: 'From IT and Software Engineering to Business, Accounting, and Marketing. Every resource is hand-picked for quality and workplace applicability.',
+                title: 'Curated Learning Resources',
+                desc: 'From IT and Software Engineering to Business, Accounting, and Marketing. We curate verified free modules and high-value professional credentials for workplace applicability.',
               },
               {
                 icon: Compass,
@@ -370,7 +370,7 @@ export default function AboutPage() {
                 icon: Heart,
                 color: 'bg-red-100 text-red-500',
                 title: 'Value-First & Transparent',
-                desc: 'Free and free-to-audit resources prioritized first. High-ROI paid credentials listed only with explicit price transparency.',
+                desc: 'We prioritize free audit tracks first, while evaluating premium vendor certifications (AWS, CompTIA, Microsoft, Google) with full price and career ROI transparency.',
               },
             ].map(({ icon: Icon, color, title, desc }) => (
               <div key={title} className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 flex gap-4 items-start">

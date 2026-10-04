@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="sm:col-span-2 md:col-span-4 lg:col-span-2">
           <h2 className="text-2xl font-bold text-white mb-4">Graduates <span className="text-[#FFDF9C]">Hub</span></h2>
           <p className="text-sm leading-relaxed max-w-sm mb-4">
-            Your free learning resource centre: career guides, study articles, and hundreds of free certified courses to help you grow your skills and advance your career.
+            Your career growth resource centre: career roadmaps, study articles, and vetted free &amp; paid learning pathways to help you grow your skills and advance your career.
           </p>
           <div className="mb-4">
             <LanguageSelector />

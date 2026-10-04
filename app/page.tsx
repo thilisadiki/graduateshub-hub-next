@@ -15,13 +15,13 @@ import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 export const revalidate = 900;
 
 export const metadata: Metadata = {
-  title: 'Free Career Roadmaps, Interview Prep & Proof of Work Portfolios',
-  description: 'Graduates Hub is your free career resource hub. Explore step-by-step career roadmaps, interview prep guides, proof of work portfolios, study articles, and AI career tools.',
+  title: 'Career Roadmaps, Verified Learning Paths & Proof of Work Portfolios',
+  description: 'Graduates Hub guides job seekers and professionals to career success. Explore step-by-step roadmaps, vetted free & paid certifications, portfolio tasks, and AI career tools.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Free Career Roadmaps, Interview Prep & Proof of Work Portfolios | Graduates Hub',
-    description: 'Graduates Hub is your free career resource hub. Explore step-by-step career roadmaps, interview prep guides, proof of work portfolios, study articles, and AI career tools.',
+    title: 'Career Roadmaps, Verified Learning Paths & Proof of Work Portfolios | Graduates Hub',
+    description: 'Graduates Hub guides job seekers and professionals to career success. Explore step-by-step roadmaps, vetted free & paid certifications, portfolio tasks, and AI career tools.',
     url: `${SITE_URL}/`,
     images: [OG_IMAGE],
   },
@@ -33,7 +33,7 @@ const organizationSchema = {
   name: 'Graduates Hub',
   url: SITE_URL,
   logo: `${SITE_URL}/graduates-hub-logo.png`,
-  description: 'Your free career resource hub for career roadmaps, interview prep guides, proof of work portfolios, and AI tools.',
+  description: 'Your career resource hub for step-by-step roadmaps, vetted free & paid certifications, proof of work portfolios, and AI tools.',
   founder: {
     '@type': 'Person',
     name: 'Jason Sadiki',
@@ -109,7 +109,7 @@ export default async function Home() {
           <div className="flex justify-between items-end mb-8">
             <div>
               <h2 className="text-3xl font-extrabold text-[#1F1B13]">Popular Guides</h2>
-              <p className="text-[#4F4639] mt-2">Curated learning paths for every goal. All free to start.</p>
+              <p className="text-[#4F4639] mt-2">Curated learning paths for every goal: start free, scale with high-ROI certifications.</p>
             </div>
             <Link href="/guides" className="text-primary font-bold hover:text-[#5a4000] transition-colors hidden sm:block">
               View All Guides →
