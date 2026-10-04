@@ -15,7 +15,7 @@ const steps = [
     title: 'Learn the right skills',
     href: '/guides',
     actionLabel: 'View Study Guides',
-    description: 'Stage-by-stage learning paths featuring verified free courses and employer-recognized paid certifications.',
+    description: 'Stage-by-stage learning paths featuring verified free resources and employer-recognized paid certifications.',
     icon: <BookOpen className="text-primary" size={26} />,
   },
   {

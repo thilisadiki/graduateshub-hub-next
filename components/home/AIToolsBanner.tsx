@@ -19,7 +19,7 @@ const tools = [
     bgColor: 'bg-[#7A5900]/15 hover:bg-[#7A5900]/25',
     borderColor: 'border-[#FFDF9C]/25',
     label: 'Career Quiz',
-    description: 'Not sure where to start? Answer 6 quick questions and we will match you to the right career path and courses.',
+    description: 'Not sure where to start? Answer 6 quick questions and we will match you to the right career path and learning resources.',
     cta: 'Find My Path',
   },
   {
@@ -40,8 +40,8 @@ const tools = [
     iconColor: 'text-[#F5E0BB]',
     bgColor: 'bg-[#6C5D3F]/15 hover:bg-[#6C5D3F]/25',
     borderColor: 'border-[#F5E0BB]/25',
-    label: 'Course Recommender',
-    description: 'Tell us your goals and we will match you to the perfect free course in seconds.',
+    label: 'Learning Path Matcher',
+    description: 'Tell us your goals and we will match you to the right learning path in seconds.',
     cta: 'Get Recommendations',
   },
 ];
@@ -79,7 +79,7 @@ export default function AIToolsBanner() {
               Let AI guide your learning
             </h2>
             <p className="text-[#D1C5B4] mt-3 max-w-xl mx-auto text-lg">
-              Not sure where to start? Our free AI tools help you find the right course, build a career roadmap, and identify your skill gaps in seconds.
+              Not sure where to start? Our free AI tools help you find the right learning path, build a career roadmap, and identify your skill gaps in seconds.
             </p>
           </div>
 

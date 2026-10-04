@@ -5,26 +5,26 @@ import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
 
 const faqs: { question: string; answer: string; node?: React.ReactNode }[] = [
   {
-    question: 'How does Graduates Hub curate learning resources & courses?',
+    question: 'How does Graduates Hub curate learning resources & credentials?',
     answer: "We follow a Value-First Curation Policy: free and free-to-audit learning options are prioritized first so you can learn without subscription traps. When we list high-value paid vendor certifications (such as AWS, CompTIA, or Cisco), every resource features full price transparency.",
   },
   {
-    question: 'Are these certificates recognised by employers?',
-    answer: "Absolutely. The courses are CPD (Continuing Professional Development) accredited or issued directly by global technology leaders like Google and Microsoft. For a deeper look at what employers value, read our career guides and industry insights on Graduates Hub.",
-    node: <>Absolutely. The courses are CPD (Continuing Professional Development) accredited or issued directly by global technology leaders like Google and Microsoft. For a deeper look at what employers value, read our <a href="/blog" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub.</>,
+    question: 'Are these credentials recognised by employers?',
+    answer: "Absolutely. Recommended certifications and learning paths are CPD (Continuing Professional Development) accredited or issued directly by global technology leaders like Google, Microsoft, and leading industry bodies. For a deeper look at what employers value, read our career guides and industry insights on Graduates Hub.",
+    node: <>Absolutely. Recommended certifications and learning paths are CPD (Continuing Professional Development) accredited or issued directly by global technology leaders like Google, Microsoft, and leading industry bodies. For a deeper look at what employers value, read our <a href="/blog" className="text-primary font-semibold hover:underline">career guides and industry insights</a> on Graduates Hub.</>,
   },
   {
-    question: 'Do I need any previous experience to enrol?',
-    answer: "No formal entry requirements are needed for the vast majority of our certificate and diploma courses. They are specifically designed to be accessible to beginners while still providing immense value to experienced professionals looking to upskill.",
+    question: 'Do I need previous experience to start learning?',
+    answer: "No formal entry requirements are needed for the vast majority of our recommended learning tracks. They are specifically curated to be accessible to beginners while still providing practical value to professionals looking to upskill.",
   },
   {
-    question: 'How long does it take to complete a course?',
-    answer: "It depends entirely on the course format. Standard Certificate courses typically take 2 to 3 hours to complete, while comprehensive Diploma programs can take 10 to 15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our study tips and time management guides to help you stay on track.",
-    node: <>It depends entirely on the course format. Standard Certificate courses typically take 2 to 3 hours to complete, while comprehensive Diploma programs can take 10 to 15 hours. Because everything is completely self-paced, you learn on your own schedule. Check out our <a href="/blog/how-to-successfully-balance-full-time-work-with-online-study" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
+    question: 'How long does it take to complete a learning path or certification?',
+    answer: "It depends entirely on the learning track. Foundational skills guides typically take 2 to 3 hours to complete, while comprehensive certification programs can take several weeks of self-paced study. Because everything is flexible, you learn on your own schedule. Check out our study tips and time management guides to help you stay on track.",
+    node: <>It depends entirely on the learning track. Foundational skills guides typically take 2 to 3 hours to complete, while comprehensive certification programs can take several weeks of self-paced study. Because everything is flexible, you learn on your own schedule. Check out our <a href="/blog/how-to-successfully-balance-full-time-work-with-online-study" className="text-primary font-semibold hover:underline">study tips and time management guides</a> to help you stay on track.</>,
   },
   {
     question: 'How does Graduates Hub compare to a paid coding or career bootcamp?',
-    answer: "Bootcamps charge tens of thousands of Rands for structured learning paths, project assignments, CV assistance, and interview prep. Graduates Hub provides this entire 5-step career execution framework (Roadmaps, Value-First Courses, Proof of Work Portfolio Tasks, ATS-Friendly CV Builder, and Interview Prep) with zero mandatory fees, letting you build job-ready skills at your own pace.",
+    answer: "Bootcamps charge tens of thousands of Rands for structured learning paths, project assignments, CV assistance, and interview prep. Graduates Hub provides this entire 5-step career execution framework (Roadmaps, Value-First Learning, Proof of Work Portfolio Tasks, ATS-Friendly CV Builder, and Interview Prep) with zero mandatory fees, letting you build job-ready skills at your own pace.",
   },
 ];
 

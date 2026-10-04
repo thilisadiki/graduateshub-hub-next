@@ -48,38 +48,38 @@ export const featuredLinks: FeaturedLink[] = [
 export const popularGuides: GuideLink[] = [
   {
     href: '/free-courses-for-beginners',
-    title: 'Free Courses for Beginners',
+    title: 'Beginner Learning Pathways',
     desc: 'Zero experience needed. Start building real skills from scratch.',
     badge: 'Beginner',
   },
   {
     href: '/free-courses-with-certificates',
-    title: 'Free Courses with Certificates',
-    desc: 'Top-rated courses across IT, Business, Marketing, and Finance.',
+    title: 'Verified Certificate Pathways',
+    desc: 'Top-rated credentials across IT, Business, Marketing, and Finance.',
     badge: 'Popular',
   },
   {
     href: '/online-learning-platforms',
     title: 'Best Online Learning Platforms',
-    desc: 'Compare top learning platforms, free audit tracks, and certified graduate courses.',
+    desc: 'Compare top learning platforms, free audit tracks, and certified graduate programs.',
     badge: 'Platforms',
   },
   {
     href: '/free-google-courses-with-certificates',
-    title: 'Free Google Courses (2026)',
+    title: 'Google Career Certificates & Guides',
     desc: 'Official Grow with Google career certificates, Skillshop exams, and free audit options.',
     badge: 'Google',
   },
   {
     href: '/free-courses-for-data-analysts',
-    title: 'Free Courses for Data Analysts',
-    desc: 'Excel, SQL, Python, and Power BI: the full analyst learning path.',
+    title: 'Data Analyst Learning Tracks',
+    desc: 'Excel, SQL, Python, and Power BI: the full analyst roadmap.',
     badge: 'Data',
   },
   {
     href: '/free-ai-courses-for-beginners',
-    title: 'Free AI Courses for Beginners',
-    desc: 'Learn AI and Generative AI without any coding background.',
+    title: 'AI & GenAI for Beginners',
+    desc: 'Learn AI and Generative AI fundamentals without any coding background.',
     badge: 'AI',
   },
   {
@@ -90,14 +90,14 @@ export const popularGuides: GuideLink[] = [
   },
   {
     href: '/free-digital-marketing-courses',
-    title: 'Free Digital Marketing Courses',
+    title: 'Digital Marketing Playbook',
     desc: 'SEO, content, growth hacking, and conversion. Build a marketing career from scratch.',
     badge: 'Marketing',
   },
   {
     href: '/free-courses-for-software-developers',
-    title: 'Free Courses for Software Developers',
-    desc: 'Web development, programming languages, DevOps, and software architecture. All free.',
+    title: 'Software Developer Pathways',
+    desc: 'Web development, programming languages, DevOps, and software architecture.',
     badge: 'Dev',
   },
   {

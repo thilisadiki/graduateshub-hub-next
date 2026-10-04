@@ -31,7 +31,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#4F4639] mb-8 max-w-xl font-medium leading-relaxed">
-              Step-by-step career roadmaps, curated free courses, high-ROI paid certifications, and proof of work portfolio tools to land your next job.
+              Step-by-step career roadmaps, curated free learning, high-ROI paid certifications, and proof of work portfolio tools to land your next job.
             </p>
 
             {/* CTAs */}

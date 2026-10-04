@@ -8,7 +8,6 @@ import LatestArticles from '@/components/home/LatestArticles';
 import FAQ from '@/components/home/FAQ';
 import AIToolsBanner from '@/components/home/AIToolsBanner';
 import PortfolioBanner from '@/components/home/PortfolioBanner';
-import { categories } from '@/data/categories';
 import { popularGuides } from '@/data/navigation';
 import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 
@@ -137,35 +136,6 @@ export default async function Home() {
         <div className="mt-24"><AIToolsBanner /></div>
         <div className="mt-24"><LatestArticles perPage={6} initialArticles={homeArticles} /></div>
 
-        {/* Browse by Subject */}
-        <div className="mt-24">
-          <div className="flex justify-between items-end mb-8">
-            <div>
-              <h2 className="text-3xl font-extrabold text-[#1F1B13]">Browse by Subject</h2>
-              <p className="text-[#4F4639] mt-2">Explore courses organised by field. Every subject is free to start.</p>
-            </div>
-            <Link href="/categories" className="text-primary font-bold hover:text-[#5a4000] transition-colors hidden sm:block">
-              View All Subjects →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {categories.map(({ id, name, icon: Icon, description }) => (
-              <Link
-                key={id}
-                href={`/category/${id}`}
-                className="group bg-white rounded-xl border border-[#D1C5B4] shadow-sm p-6 hover:border-primary hover:shadow-md transition-all flex flex-col gap-3"
-              >
-                <Icon size={28} className="text-primary" strokeWidth={1.5} />
-                <div>
-                  <p className="font-bold text-[#1F1B13] group-hover:text-primary transition-colors mb-1">{name}</p>
-                  <p className="text-xs text-[#4F4639] leading-relaxed">{description}</p>
-                </div>
-                <ChevronRight size={16} className="text-[#7C7061] group-hover:text-primary transition-colors mt-auto self-end" />
-              </Link>
-            ))}
-          </div>
-        </div>
-
         {/* Curators */}
         <div className="mt-24 bg-white rounded-2xl border border-[#D1C5B4] shadow-sm px-6 py-6">
           <h2 className="text-xs font-bold text-[#7C7061] uppercase tracking-wider mb-5">Curated by specialists</h2>
@@ -206,7 +176,7 @@ export default async function Home() {
           </div>
           <div className="mt-4 pt-4 border-t border-[#D1C5B4] text-right">
             <Link href="/curation-policy" className="text-xs text-[#7C7061] hover:text-primary transition-colors font-medium">
-              How we select courses →
+              Our learning curation policy →
             </Link>
           </div>
         </div>
