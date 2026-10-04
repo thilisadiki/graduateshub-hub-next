@@ -27,8 +27,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'AI Fundamentals',
     description: 'Start with the core concepts, what AI is, how it works, and where it is headed.',
-    categoryHref: '/category/software-engineering',
-    categoryLabel: 'AI & ML',
+    roadmapHref: '/career-roadmaps/google-ai-essentials',
+    roadmapLabel: 'Google AI Essentials',
     items: [
       { id: 'diploma-fundamentals-ai', customContent: 'If you are completely new to the world of artificial intelligence, this is exactly where you should start. This comprehensive diploma strips away the media hype and sci-fi tropes to explain the core mathematical and logical mechanics of AI in plain, accessible English. You will gain a solid, foundational understanding of how machine learning algorithms operate, what neural networks actually are, and how these systems process data to make decisions. It provides the critical context needed before you start using or building AI tools yourself.' },
       { id: 'diploma-applied-generative-ai', customContent: 'Moving from theoretical concepts to immediate, practical application, this course focuses on the tools that are reshaping the modern workplace. You will learn how to effectively use powerful generative models like ChatGPT, Claude, and Midjourney to accelerate your daily tasks. The curriculum places a heavy emphasis on advanced prompt engineering, teaching you how to structure your requests to get precise, high-quality outputs, and explores how to integrate these generative AI capabilities seamlessly into your existing business workflows and creative processes.' },
@@ -38,8 +38,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Tech Skills for AI',
     description: 'Build the foundational data and programming skills that underpin every AI system.',
-    categoryHref: '/category/software-engineering',
-    categoryLabel: 'AI & ML',
+    roadmapHref: '/career-roadmaps/software-engineer',
+    roadmapLabel: 'Software Engineer',
     items: [
       { id: 'python-flask-docker', customContent: 'Python is universally recognized as the lingua franca of the artificial intelligence and data science communities. While it is possible to use consumer AI tools without knowing how to code, learning Python unlocks the ability to build custom AI solutions. This course provides the foundational programming skills needed to interact programmatically with APIs (like OpenAI\'s), process and clean large datasets at scale, and eventually build and deploy your own lightweight AI-powered web applications using Flask and Docker.' },
       { id: 'databases-dml-sql-server', customContent: 'The secret behind every successful artificial intelligence model is the quality and quantity of the data it was trained on. This essential course teaches you how to interact with large-scale relational databases using SQL. You will learn how to write efficient queries to extract specific datasets, manipulate records, and structure data in a way that is ready for machine learning ingestion. Mastering database management is an absolutely critical skill for anyone looking to prepare training data or work seriously in the AI space.' },
@@ -68,8 +68,8 @@ const careerPaths: CareerPathItem[] = [
 
 const relatedGuides: RelatedGuide[] = [
   { title: 'Best Free Online Courses with Certificates (2026)', desc: 'The complete guide to free certified courses across all fields.', href: '/free-courses-with-certificates' },
-  { title: 'Browse IT Courses', desc: 'Networking, cybersecurity, database administration, and IT infrastructure.', href: '/category/it' },
-  { title: 'Software Development Courses', desc: 'Learn web development, databases, and engineering from scratch.', href: '/category/software-engineering' },
+  { title: 'IT Support Specialist Roadmap', desc: 'Networking, troubleshooting, database administration, and IT infrastructure.', href: '/career-roadmaps/it-support-specialist' },
+  { title: 'Software Engineer Roadmap', desc: 'Full development lifecycle, system design, databases, and programming fundamentals.', href: '/career-roadmaps/software-engineer' },
   { title: 'Best Free Business Courses Online (2026)', desc: 'Project management, Lean Six Sigma, and business strategy skills that complement AI knowledge.', href: '/free-business-courses' },
 ];
 
@@ -269,14 +269,14 @@ export default function FreeAICoursesForBeginnersPage() {
       careerPathsTitle="Career Paths You Can Explore with AI"
       careerPathsSubtitle="Starting with free AI courses can open doors to a wide range of roles, from entry-level to specialist positions."
       careerPaths={careerPaths}
-      careerPathsBrowseHref="/category/software-engineering"
-      careerPathsBrowseLabel="Browse all AI & ML courses"
+      careerPathsBrowseHref="/career-roadmaps/google-ai-essentials"
+      careerPathsBrowseLabel="Explore Google AI Essentials Roadmap"
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Start Learning AI?"
       ctaBody="AI can feel overwhelming at first, but the key is to start simple. Choose one beginner-friendly course, complete it, and build from there. Consistency matters more than complexity."
-      ctaPrimaryLabel="Browse AI & ML Courses"
-      ctaPrimaryHref="/category/software-engineering"
+      ctaPrimaryLabel="Explore Google AI Essentials Roadmap"
+      ctaPrimaryHref="/career-roadmaps/google-ai-essentials"
       ctaSecondaryLabel="All Free Courses with Certificates"
       ctaSecondaryHref="/free-courses-with-certificates"
     />

@@ -28,8 +28,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Project Management',
     description: 'The skills behind planning, executing, and delivering projects on time and within scope.',
-    categoryHref: '/category/business',
-    categoryLabel: 'Business',
+    roadmapHref: '/career-roadmaps/project-coordinator',
+    roadmapLabel: 'Project Coordinator',
     items: [
       { id: 'diploma-project-management', customContent: 'The gold standard for business organization. This comprehensive diploma moves beyond simple task tracking, teaching you how to manage complex stakeholder relationships, mitigate severe project risks, and control budgets. Whether you are launching a marketing campaign or opening a new retail store, the frameworks taught here are the backbone of corporate execution.' },
       { id: 'agile-project-management', customContent: 'While traditional project management is rigid, Agile is flexible and adaptive. This essential course teaches you how to manage projects in environments where requirements change rapidly. You will learn how to prioritize iterative delivery, run Scrum ceremonies, and foster continuous improvement, skills heavily demanded by modern, fast-moving businesses.' }
@@ -38,8 +38,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Process & Quality',
     description: 'Lean, Six Sigma, and ISO auditing frameworks used across manufacturing, logistics, and corporate services.',
-    categoryHref: '/category/business',
-    categoryLabel: 'Business',
+    roadmapHref: '/career-roadmaps/business-analyst',
+    roadmapLabel: 'Business Analyst',
     items: [
       { id: 'lean-six-sigma-white-belt', customContent: 'A fantastic entry point into the world of corporate efficiency. This course introduces the foundational vocabulary and mindset of Lean Six Sigma. You will learn how to identify the "8 wastes" in any business process and understand the importance of continuous improvement, making you a valuable contributor to any company\'s operational goals.' },
       { id: 'lean-six-sigma-yellow-belt', customContent: 'Moving from theory to practice, the Yellow Belt certification equips you with the tools to actively solve problems. You will master the DMAIC framework (Define, Measure, Analyze, Improve, Control) and learn how to collect and analyze process data. This is a highly respected credential for anyone targeting roles in operations, logistics, or quality assurance.' },
@@ -49,8 +49,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Compliance & Regulation',
     description: 'The regulatory knowledge required in any organisation that handles personal data or financial transactions.',
-    categoryHref: '/category/business',
-    categoryLabel: 'Business',
+    roadmapHref: '/career-roadmaps/business-analyst',
+    roadmapLabel: 'Business Analyst',
     items: [
       { id: 'gdpr-general-data-protection', customContent: 'Data privacy is no longer optional; it is a strict legal requirement globally. This critical course breaks down the General Data Protection Regulation (GDPR). You will understand the legal obligations companies have when handling personal data, the rights of consumers, and how to avoid catastrophic compliance fines, which is essential knowledge for HR, marketing, and IT professionals.' },
       { id: 'anti-money-laundering', customContent: 'The financial sector is heavily regulated to prevent criminal activity. This specialized course covers the mechanisms of Anti-Money Laundering (AML) and Know Your Customer (KYC) protocols. If you are aiming for a career in banking, fintech, or corporate compliance, understanding how to identify and report suspicious financial transactions is a strict prerequisite.' }
@@ -59,8 +59,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Economics & Strategy',
     description: 'Macroeconomic theory, sustainable development, and AI in business for those thinking at a strategic level.',
-    categoryHref: '/category/business',
-    categoryLabel: 'Business',
+    roadmapHref: '/career-roadmaps/business-analyst',
+    roadmapLabel: 'Business Analyst',
     items: [
       { id: 'intro-economic-growth-development', customContent: 'Business decisions do not happen in a vacuum; they are driven by macroeconomic trends. This course introduces the fundamental theories of economic growth, explaining how inflation, interest rates, and government policy impact corporate strategy. Developing this macro-awareness is crucial for anyone aspiring to senior leadership or strategic consulting roles.' },
       { id: 'diploma-economic-growth-development', customContent: 'Taking economic theory further, this diploma explores the complex relationship between economic development, international trade, and sustainability. You will learn how global markets interact and how businesses must adapt to changing economic realities in developing nations. It is an excellent credential for roles in public policy, NGOs, or international business.' },
@@ -287,14 +287,14 @@ export default function FreeBusinessCoursesPage() {
       careerPathsTitle="Career Paths in Business"
       careerPathsSubtitle="These courses map directly to entry-level and mid-level roles available across every industry."
       careerPaths={careerPaths}
-      careerPathsBrowseHref="/category/business"
-      careerPathsBrowseLabel="Browse all Business courses"
+      careerPathsBrowseHref="/career-roadmaps/business-analyst"
+      careerPathsBrowseLabel="Explore Business Analyst Career Roadmap"
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Build Your Business Skills?"
       ctaBody="Pick one track, complete it, and apply it. Business knowledge compounds when you practice it in real situations. The courses here give you the frameworks. You provide the context."
-      ctaPrimaryLabel="Browse All Business Courses"
-      ctaPrimaryHref="/category/business"
+      ctaPrimaryLabel="Explore Business Analyst Roadmap"
+      ctaPrimaryHref="/career-roadmaps/business-analyst"
       ctaSecondaryLabel="All Free Courses with Certificates"
       ctaSecondaryHref="/free-courses-with-certificates"
     />

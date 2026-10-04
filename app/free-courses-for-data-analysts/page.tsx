@@ -26,8 +26,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Spreadsheets & Visualisation',
     description: 'Excel and Power BI are the two tools most entry-level analyst roles test on day one.',
-    categoryHref: '/category/accounting',
-    categoryLabel: 'Accounting & Finance',
+    roadmapHref: '/career-roadmaps/data-analyst',
+    roadmapLabel: 'Data Analyst',
     items: [
       { id: 'microsoft-excel-data-analysis', customContent: 'Excel remains the undisputed backbone of corporate data analytics, and most entry-level interviews will test your spreadsheet proficiency before anything else. This comprehensive course skips the basic data entry and dives straight into the advanced analytical tools that employers actually care about. You will learn how to write complex nested formulas, master VLOOKUP and XLOOKUP functions, and build dynamic pivot tables that can summarize thousands of rows of data instantly. By the end of this course, you will be able to take messy, unstructured datasets and transform them into clean, actionable business reports that drive decision-making.' },
       { id: 'intro-power-bi', customContent: 'Once your data is clean and analyzed, you need to present it in a way that non-technical stakeholders can easily understand. This beginner-friendly course introduces you to Microsoft Power BI, one of the most widely used business intelligence tools in the corporate world. You will learn how to connect raw data sources, build relational data models, and create interactive, visually compelling dashboards. Understanding how to tell a story with data through dynamic charts and graphs is what separates a good analyst from a great one, and this course provides the perfect starting point.' },
@@ -37,8 +37,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'SQL & Databases',
     description: 'SQL is the single most important technical skill for a data analyst. Start here.',
-    categoryHref: '/category/it',
-    categoryLabel: 'IT & Technology',
+    roadmapHref: '/career-roadmaps/data-analyst',
+    roadmapLabel: 'Data Analyst',
     items: [
       { id: 'intro-database-concepts', customContent: 'Before you can write complex queries to extract data, you must understand how modern relational databases are fundamentally structured. This foundational course covers the core architecture of databases, explaining critical concepts like primary keys, foreign keys, table schemas, and data normalization. It lays the essential groundwork for understanding how data is stored, organized, and linked across different tables, ensuring that when you do start writing SQL, you understand exactly how the underlying system is executing your requests.' },
       { id: 'diploma-databases-t-sql', customContent: 'SQL (Structured Query Language) is the single most important technical skill for any data analyst, period. This comprehensive diploma moves you from writing basic SELECT statements to mastering complex JOINs, subqueries, and data aggregation techniques using T-SQL. You will gain the fluency needed to extract precisely the data you need from massive, multi-table corporate databases. Employers expect analysts to be entirely self-sufficient when pulling data, and this diploma provides the rigorous, practical training required to meet that expectation on day one.' },
@@ -48,8 +48,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Python for Data',
     description: 'Python handles datasets, automates reporting, and unlocks machine learning.',
-    categoryHref: '/category/software-engineering',
-    categoryLabel: 'Software Development',
+    roadmapHref: '/career-roadmaps/data-analyst',
+    roadmapLabel: 'Data Analyst',
     items: [
       { id: 'python-for-beginners-data', customContent: 'As datasets grow too large for Excel to handle efficiently, Python has rapidly become the programming language of choice for data professionals. This accessible primer introduces you to Python syntax and core data structures, specifically focusing on how the language is used to automate repetitive data tasks. You will learn how to set up your environment, write basic scripts, and understand how Python can drastically reduce the time spent on manual data cleaning and processing.' },
       { id: 'diploma-python-programming', customContent: 'Taking your skills to the next level, this comprehensive diploma dives deeper into Python\'s powerful capabilities. You will master the logic and scripting techniques required to interact with external APIs, scrape web data, and handle complex data transformations. It covers essential programming concepts like loops, conditional logic, and error handling, giving you the robust technical foundation needed to utilize advanced data science libraries like Pandas and NumPy in your future projects.' },
@@ -87,7 +87,7 @@ const careerPaths: CareerPathItem[] = [
 const relatedGuides: RelatedGuide[] = [
   { title: 'Best Free AI Courses for Beginners (2026)', desc: 'Machine learning and AI are the natural next step after data analytics fundamentals.', href: '/free-ai-courses-for-beginners' },
   { title: 'Best Free Online Courses with Certificates (2026)', desc: 'The complete guide to free certified courses across all fields and career paths.', href: '/free-courses-with-certificates' },
-  { title: 'Browse All IT & AI Courses', desc: 'SQL, databases, software engineering, and AI, all in one place.', href: '/category/it' },
+  { title: 'IT Support Specialist Roadmap', desc: 'Step-by-step career path covering systems, networking, databases, and IT fundamentals.', href: '/career-roadmaps/it-support-specialist' },
   { title: 'Best Free Business Courses Online (2026)', desc: 'Project management and business strategy skills that complement a data analyst career.', href: '/free-business-courses' },
 ];
 
@@ -211,14 +211,14 @@ export default function FreeCoursesForDataAnalystsPage() {
       careerPathsTitle="Career Paths in Data Analytics"
       careerPathsSubtitle="These free courses lead directly to entry-level roles, and lay the foundation for more advanced positions with further learning."
       careerPaths={careerPaths}
-      careerPathsBrowseHref="/category/it"
-      careerPathsBrowseLabel="Browse all IT & Data courses"
+      careerPathsBrowseHref="/career-roadmaps/data-analyst"
+      careerPathsBrowseLabel="Explore Data Analyst Career Roadmap"
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Start Your Data Analytics Journey?"
       ctaBody="Becoming a data analyst does not require a traditional degree; it requires the right skills. Start with one course, build your foundation, and expand from there. Consistency and practice are what set successful learners apart."
-      ctaPrimaryLabel="Browse IT & Data Courses"
-      ctaPrimaryHref="/category/it"
+      ctaPrimaryLabel="Explore Data Analyst Roadmap"
+      ctaPrimaryHref="/career-roadmaps/data-analyst"
       ctaSecondaryLabel="All Free Courses with Certificates"
       ctaSecondaryHref="/free-courses-with-certificates"
     />

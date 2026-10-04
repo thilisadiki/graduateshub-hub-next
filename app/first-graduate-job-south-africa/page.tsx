@@ -115,22 +115,22 @@ const courseCategories: CourseCategory[] = [
     label: 'Build Your CV and Application',
     description: 'Your CV and cover letter are screened before any human reads them. These courses teach you how to build an application that gets through.',
     ids: ['job-search-resume-cover-letter', 'microsoft-word-2021', 'effective-job-search-strategies'],
-    categoryHref: '/category/business',
-    categoryLabel: 'Business & Professional Skills',
+    roadmapHref: '/career-roadmaps',
+    roadmapLabel: 'Career Roadmaps',
   },
   {
     label: 'Skills SA Employers Test For',
     description: 'These are the three skills that come up repeatedly in entry-level SA job specs, including in the technical parts of interviews.',
     ids: ['microsoft-excel-data-analysis', 'diploma-project-management', 'intro-ai-business'],
-    categoryHref: '/category/business',
-    categoryLabel: 'Business Courses',
+    roadmapHref: '/career-roadmaps/business-analyst',
+    roadmapLabel: 'Business Analyst',
   },
   {
     label: 'Stand Out in the Interview Room',
     description: 'Employers consistently rank communication as the skill graduates lack most. These courses fix that before your first interview.',
     ids: ['workplace-communication', 'basic-concepts-of-digital-marketing', 'lean-six-sigma-white-belt'],
-    categoryHref: '/category/business',
-    categoryLabel: 'Business Courses',
+    roadmapHref: '/career-roadmaps/project-coordinator',
+    roadmapLabel: 'Project Coordinator',
   },
 ];
 
@@ -168,12 +168,12 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Administrative Coordinator', href: '/category/business', category: 'Business & Management' },
-  { role: 'Junior Accountant / Accounts Assistant', href: '/category/accounting', category: 'Accounting & Finance' },
-  { role: 'Marketing Assistant', href: '/category/marketing', category: 'Digital Marketing' },
-  { role: 'IT Support Technician', href: '/category/it', category: 'IT & Technology' },
-  { role: 'HR Administrator', href: '/category/business', category: 'Business & Management' },
-  { role: 'Graduate Trainee (Corporate Programme)', detail: 'Structured 12–24 month programmes run by large SA corporates. Competitive but highly valuable as a first role.' },
+  { role: 'Administrative Coordinator', href: '/career-roadmaps/business-analyst', category: 'Business & Management' },
+  { role: 'Junior Accountant / Accounts Assistant', href: '/career-roadmaps/junior-accountant', category: 'Accounting & Finance' },
+  { role: 'Marketing Assistant', href: '/career-roadmaps/digital-marketing-specialist', category: 'Digital Marketing' },
+  { role: 'IT Support Technician', href: '/career-roadmaps/it-support-specialist', category: 'IT & Technology' },
+  { role: 'HR Administrator', href: '/career-roadmaps/business-analyst', category: 'Business & Management' },
+  { role: 'Graduate Trainee (Corporate Programme)', detail: 'Structured 12-24 month programmes run by large SA corporates. Competitive but highly valuable as a first role.' },
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -390,11 +390,11 @@ export default function FirstGraduateJobSAPage() {
       careerPathsBrowseLabel="Browse all career roadmaps"
       relatedGuides={relatedGuides}
       exploreCategories={[
-        { label: 'IT & Technology', href: '/category/it' },
-        { label: 'Business & Management', href: '/category/business' },
-        { label: 'Accounting & Finance', href: '/category/accounting' },
-        { label: 'Digital Marketing', href: '/category/marketing' },
-        { label: 'Software Development', href: '/category/software-engineering' },
+        { label: 'IT & Technology', href: '/career-roadmaps/it-support-specialist' },
+        { label: 'Business & Management', href: '/career-roadmaps/business-analyst' },
+        { label: 'Accounting & Finance', href: '/career-roadmaps/junior-accountant' },
+        { label: 'Digital Marketing', href: '/career-roadmaps/digital-marketing-specialist' },
+        { label: 'Software Development', href: '/career-roadmaps/web-developer' },
       ]}
       faqs={faqs}
       ctaHeading="Your First Job Starts With One Step"

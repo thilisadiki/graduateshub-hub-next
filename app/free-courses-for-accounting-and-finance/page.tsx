@@ -27,8 +27,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Accounting Foundations',
     description: 'The core principles every accounting professional needs before moving into specialised roles.',
-    categoryHref: '/category/accounting',
-    categoryLabel: 'Accounting & Finance',
+    roadmapHref: '/career-roadmaps/junior-accountant',
+    roadmapLabel: 'Junior Accountant',
     items: [
       { id: 'fundamentals-of-accounting', customContent: 'Every successful finance career begins with a rock-solid understanding of the basics. This course explains the fundamental accounting equation (Assets = Liabilities + Equity) and introduces you to the core financial statements. You will develop the critical commercial vocabulary required to understand how money flows through an organization, laying the groundwork for all future financial study.' },
       { id: 'diploma-financial-accounting', customContent: 'This comprehensive diploma takes you deep into the mechanics of corporate finance. You will learn how to prepare detailed balance sheets, income statements, and cash flow reports in accordance with standard accounting principles. This rigorous training ensures you have the technical competence expected of a Junior Accountant or Finance Officer on day one.' },
@@ -38,8 +38,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Bookkeeping & Payroll',
     description: 'Two of the most in-demand entry-level skills across small businesses and corporate finance teams.',
-    categoryHref: '/category/accounting',
-    categoryLabel: 'Accounting & Finance',
+    roadmapHref: '/career-roadmaps/junior-accountant',
+    roadmapLabel: 'Junior Accountant',
     items: [
       { id: 'diploma-effective-bookkeeping-payroll', customContent: 'Small and medium-sized businesses desperately need staff who can handle both their books and their staff payments. This powerful dual-certification teaches you how to manage accounts payable/receivable while simultaneously mastering the complexities of calculating wages, tax deductions, and statutory leave. It is one of the most direct routes to immediate employment in administrative finance.' },
       { id: 'payroll-computation-bookkeeping', customContent: 'Focus specifically on the intricacies of employee compensation. This course dives into the legal and mathematical requirements of payroll processing. You will learn how to handle overtime calculations, bonus structures, and compliance with local tax regulations, ensuring employees are paid accurately and the company avoids legal penalties.' },
@@ -49,8 +49,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Financial Management & Analysis',
     description: 'Go beyond the basics. Understand how businesses manage, report, and evaluate financial performance.',
-    categoryHref: '/category/accounting',
-    categoryLabel: 'Accounting & Finance',
+    roadmapHref: '/career-roadmaps/financial-analyst',
+    roadmapLabel: 'Financial Analyst',
     items: [
       { id: 'mastering-financial-statement-analysis', customContent: 'Gathering financial data is only the first step; interpreting it is where the real value lies. This advanced course teaches you how to perform ratio analysis, evaluate corporate liquidity, and assess long-term solvency. You will learn how to look beyond the numbers to understand a company\'s true financial health, a critical skill for financial analysts and investors.' },
       { id: 'diploma-financial-management-managers', customContent: 'Designed for those moving into leadership, this diploma focuses on the strategic deployment of capital. You will learn how to evaluate investment opportunities, manage working capital, and understand the cost of debt versus equity. It equips you with the financial acumen needed to make high-level decisions that drive corporate profitability.' },
@@ -119,7 +119,7 @@ export default function FreeCoursesAccountingFinancePage() {
     <GuideTemplate
       canonicalUrl={CANONICAL}
       datePublished="2026-01-01"
-      breadcrumb={[{ label: 'Accounting & Finance', href: '/category/accounting' }, { label: 'Free Courses for Accounting & Finance' }]}
+      breadcrumb={[{ label: 'Career Roadmaps', href: '/career-roadmaps' }, { label: 'Free Courses for Accounting & Finance' }]}
       heading="Best Free Courses for Accounting & Finance Careers (2026)"
       heroDescription="Accounting and finance are among the most stable and in-demand career paths globally, offering strong job security, clear progression, and opportunities across every industry. This guide covers the best free courses to help you build practical, job-ready skills without needing a degree."
       heroBadges={[
@@ -187,14 +187,14 @@ export default function FreeCoursesAccountingFinancePage() {
       careerPathsTitle="Career Paths in Accounting & Finance"
       careerPathsSubtitle="These free courses lead directly to entry-level roles and lay the foundation for more senior positions with further learning and experience."
       careerPaths={careerPaths}
-      careerPathsBrowseHref="/category/accounting"
-      careerPathsBrowseLabel="Browse all Accounting & Finance courses"
+      careerPathsBrowseHref="/career-roadmaps/junior-accountant"
+      careerPathsBrowseLabel="Explore Junior Accountant Career Roadmap"
       relatedGuides={relatedGuides}
       faqs={faqs}
       ctaHeading="Ready to Start Your Accounting & Finance Career?"
       ctaBody="Accounting and finance are skills that remain relevant in every economy. Start with the basics, build practical skills, and progress consistently. You do not need to learn everything at once. Just take the first step."
-      ctaPrimaryLabel="Browse Accounting & Finance Courses"
-      ctaPrimaryHref="/category/accounting"
+      ctaPrimaryLabel="Explore Junior Accountant Roadmap"
+      ctaPrimaryHref="/career-roadmaps/junior-accountant"
       ctaSecondaryLabel="All Free Courses with Certificates"
       ctaSecondaryHref="/free-courses-with-certificates"
     />

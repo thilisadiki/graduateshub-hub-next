@@ -37,7 +37,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Cloud & Cybersecurity Fundamentals',
-    slug: 'it',
+    slug: 'cybersecurity',
     description: 'Build entry-level SOC analyst and Cloud support capabilities with vendor certifications (AWS, Google, Microsoft).',
     ids: ['google-cybersecurity-certificate', 'microsoft-azure-fundamentals'],
   },

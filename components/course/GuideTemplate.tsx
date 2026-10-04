@@ -29,11 +29,15 @@ export interface CourseCategory {
   description: string;
   ids?: string[];
   items?: GuideCourseItem[];
-  /** Used for the "See all X courses" link. Falls back to /category/${slug} */
+  /** Dedicated career roadmap destination link */
+  roadmapHref?: string;
+  /** Label for the roadmap link */
+  roadmapLabel?: string;
+  /** Legacy alias for roadmap link */
   categoryHref?: string;
-  /** Label for the "See all" link. Falls back to cat.label */
+  /** Legacy alias for roadmap label */
   categoryLabel?: string;
-  /** Used to build /category/${slug} fallback href */
+  /** Slug used to resolve destination roadmap */
   slug?: string;
 }
 
@@ -128,6 +132,136 @@ export interface GuideTemplateProps {
 
 function getCoursesByIds(ids: string[]): Course[] {
   return ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean) as Course[];
+}
+
+interface RoadmapTarget {
+  href: string;
+  label: string;
+}
+
+const ROADMAP_SLUG_MAP: Record<string, RoadmapTarget> = {
+  // Business & Operations
+  'business': { href: '/career-roadmaps/business-analyst', label: 'Business Analyst' },
+  'business-analysis': { href: '/career-roadmaps/business-analyst', label: 'Business Analyst' },
+  'business-analyst': { href: '/career-roadmaps/business-analyst', label: 'Business Analyst' },
+  'project-management': { href: '/career-roadmaps/project-coordinator', label: 'Project Coordinator' },
+  'project-coordinator': { href: '/career-roadmaps/project-coordinator', label: 'Project Coordinator' },
+  'customer-ops': { href: '/career-roadmaps/it-support-specialist', label: 'IT Support Specialist' },
+
+  // Accounting & Finance
+  'accounting': { href: '/career-roadmaps/junior-accountant', label: 'Junior Accountant' },
+  'junior-accountant': { href: '/career-roadmaps/junior-accountant', label: 'Junior Accountant' },
+  'finance': { href: '/career-roadmaps/financial-analyst', label: 'Financial Analyst' },
+  'financial-analysis': { href: '/career-roadmaps/financial-analyst', label: 'Financial Analyst' },
+  'financial-analyst': { href: '/career-roadmaps/financial-analyst', label: 'Financial Analyst' },
+
+  // Data & BI
+  'data': { href: '/career-roadmaps/data-analyst', label: 'Data Analyst' },
+  'data-analytics': { href: '/career-roadmaps/data-analyst', label: 'Data Analyst' },
+  'data-analyst': { href: '/career-roadmaps/data-analyst', label: 'Data Analyst' },
+
+  // Tech, Web & Software
+  'software-engineering': { href: '/career-roadmaps/web-developer', label: 'Web Developer' },
+  'web-development': { href: '/career-roadmaps/web-developer', label: 'Web Developer' },
+  'web-developer': { href: '/career-roadmaps/web-developer', label: 'Web Developer' },
+  'software-engineer': { href: '/career-roadmaps/software-engineer', label: 'Software Engineer' },
+
+  // IT & Infrastructure
+  'it': { href: '/career-roadmaps/it-support-specialist', label: 'IT Support Specialist' },
+  'information-technology': { href: '/career-roadmaps/it-support-specialist', label: 'IT Support Specialist' },
+  'it-support-specialist': { href: '/career-roadmaps/it-support-specialist', label: 'IT Support Specialist' },
+
+  // Marketing, Publishing & SEO
+  'marketing': { href: '/career-roadmaps/digital-marketing-specialist', label: 'Digital Marketing Specialist' },
+  'digital-marketing': { href: '/career-roadmaps/digital-marketing-specialist', label: 'Digital Marketing Specialist' },
+  'digital-marketing-specialist': { href: '/career-roadmaps/digital-marketing-specialist', label: 'Digital Marketing Specialist' },
+  'digital-marketing-ecommerce': { href: '/career-roadmaps/digital-marketing-ecommerce', label: 'Digital Marketing & E-Commerce' },
+  'publishing': { href: '/career-roadmaps/digital-publisher', label: 'Digital Publisher' },
+  'digital-publisher': { href: '/career-roadmaps/digital-publisher', label: 'Digital Publisher' },
+  'seo': { href: '/career-roadmaps/seo-content-strategist', label: 'SEO & Content Strategist' },
+  'seo-content-strategist': { href: '/career-roadmaps/seo-content-strategist', label: 'SEO & Content Strategist' },
+
+  // Security, Cloud, QA & Design
+  'cybersecurity': { href: '/career-roadmaps/cybersecurity-analyst', label: 'Cybersecurity Analyst' },
+  'cybersecurity-analyst': { href: '/career-roadmaps/cybersecurity-analyst', label: 'Cybersecurity Analyst' },
+  'cloud': { href: '/career-roadmaps/cloud-support-devops', label: 'Cloud & DevOps' },
+  'cloud-support-devops': { href: '/career-roadmaps/cloud-support-devops', label: 'Cloud & DevOps' },
+  'ui-ux': { href: '/career-roadmaps/ui-ux-designer', label: 'UI/UX Designer' },
+  'ui-ux-designer': { href: '/career-roadmaps/ui-ux-designer', label: 'UI/UX Designer' },
+  'design': { href: '/career-roadmaps/ui-ux-designer', label: 'UI/UX Designer' },
+  'qa': { href: '/career-roadmaps/junior-qa-tester', label: 'Junior QA Tester' },
+  'junior-qa-tester': { href: '/career-roadmaps/junior-qa-tester', label: 'Junior QA Tester' },
+
+  // AI
+  'ai': { href: '/career-roadmaps/google-ai-essentials', label: 'Google AI Essentials' },
+  'google-ai-essentials': { href: '/career-roadmaps/google-ai-essentials', label: 'Google AI Essentials' },
+};
+
+function formatSlugToTitle(slug: string): string {
+  return slug
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
+function resolveRoadmapLink(cat: CourseCategory): RoadmapTarget | null {
+  if (cat.roadmapHref) {
+    const rawLabel = cat.roadmapLabel ?? cat.categoryLabel ?? 'Career Roadmaps';
+    return { href: cat.roadmapHref, label: rawLabel };
+  }
+
+  const targetHref = cat.categoryHref;
+  if (targetHref) {
+    if (targetHref.startsWith('/career-roadmaps/')) {
+      const slug = targetHref.replace('/career-roadmaps/', '').replace(/\/$/, '');
+      const mapped = ROADMAP_SLUG_MAP[slug];
+      const label = cat.roadmapLabel ?? cat.categoryLabel ?? mapped?.label ?? formatSlugToTitle(slug);
+      return { href: targetHref, label };
+    }
+    if (targetHref === '/career-roadmaps' || targetHref === '/categories') {
+      return { href: '/career-roadmaps', label: 'Career Roadmaps' };
+    }
+    if (targetHref.startsWith('/category/')) {
+      const slug = targetHref.replace('/category/', '').replace(/\/$/, '');
+      const mapped = ROADMAP_SLUG_MAP[slug];
+      if (mapped) {
+        const isGenericLabel = !cat.categoryLabel || cat.categoryLabel.toLowerCase().includes('course');
+        return {
+          href: mapped.href,
+          label: cat.roadmapLabel ?? (isGenericLabel ? mapped.label : (cat.categoryLabel ?? mapped.label)),
+        };
+      }
+      return { href: '/career-roadmaps', label: 'Career Roadmaps' };
+    }
+    return {
+      href: targetHref,
+      label: cat.roadmapLabel ?? cat.categoryLabel ?? 'Career Roadmaps',
+    };
+  }
+
+  if (cat.slug) {
+    const mapped = ROADMAP_SLUG_MAP[cat.slug];
+    if (mapped) {
+      return {
+        href: mapped.href,
+        label: cat.roadmapLabel ?? cat.categoryLabel ?? mapped.label,
+      };
+    }
+    return { href: '/career-roadmaps', label: 'Career Roadmaps' };
+  }
+
+  return null;
+}
+
+function formatRoadmapLinkText(label: string): string {
+  const trimmed = label.trim();
+  if (trimmed.toLowerCase().endsWith('roadmaps')) {
+    return `Explore ${trimmed}`;
+  }
+  if (trimmed.toLowerCase().endsWith('roadmap')) {
+    return `Explore ${trimmed}`;
+  }
+  return `Explore ${trimmed} Roadmap`;
 }
 
 export default function GuideTemplate({
@@ -305,8 +439,7 @@ export default function GuideTemplate({
 
           if (catCourses.length === 0 && catItems.length === 0) return null;
           
-          const allHref = cat.categoryHref ?? (cat.slug ? `/category/${cat.slug}` : null);
-          const allLabel = cat.categoryLabel ?? cat.label;
+          const roadmapTarget = resolveRoadmapLink(cat);
           return (
             <section key={`${cat.label}-${i}`} className="mb-20">
               <div className="flex items-end justify-between mb-2 flex-wrap gap-4">
@@ -314,12 +447,12 @@ export default function GuideTemplate({
                   <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">{cat.label}</h2>
                   <p className="text-gray-500 mt-1">{cat.description}</p>
                 </div>
-                {allHref && (
+                {roadmapTarget && (
                   <Link
-                    href={allHref}
+                    href={roadmapTarget.href}
                     className="text-primary font-bold hover:text-[#261A00] transition-colors flex items-center gap-1 whitespace-nowrap text-sm"
                   >
-                    See all {allLabel} courses <ChevronRight size={16} />
+                    {formatRoadmapLinkText(roadmapTarget.label)} <ChevronRight size={16} />
                   </Link>
                 )}
               </div>

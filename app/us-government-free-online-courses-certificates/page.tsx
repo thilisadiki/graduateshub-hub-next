@@ -30,7 +30,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Cybersecurity & Public Technology',
-    slug: 'it',
+    slug: 'cybersecurity',
     description: 'Gain technical cybersecurity skills through training modules developed by CISA and the Department of Homeland Security.',
     ids: ['cisa-fedvte-cybersecurity-foundations'],
   },

@@ -80,10 +80,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Junior Python Developer', category: 'Backend Dev', href: '/category/software-engineering' },
-  { role: 'Automation Specialist', category: 'Scripting & Operations', href: '/category/data-analytics' },
-  { role: 'Junior Backend Engineer', category: 'Web Infrastructure', href: '/category/software-engineering' },
-  { role: 'Data Processing Analyst', category: 'Data Analysis', href: '/category/data-analytics' }
+  { role: 'Junior Python Developer', category: 'Backend Dev', href: '/career-roadmaps/software-engineer' },
+  { role: 'Automation Specialist', category: 'Scripting & Operations', href: '/career-roadmaps/data-analyst' },
+  { role: 'Junior Backend Engineer', category: 'Web Infrastructure', href: '/career-roadmaps/software-engineer' },
+  { role: 'Data Processing Analyst', category: 'Data Analysis', href: '/career-roadmaps/data-analyst' }
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -99,9 +99,9 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'Software Engineering', href: '/category/software-engineering' },
-  { label: 'Data Analytics', href: '/category/data-analytics' },
-  { label: 'Business & Management', href: '/category/business' }
+  { label: 'Software Engineer Roadmap', href: '/career-roadmaps/software-engineer' },
+  { label: 'Data Analyst Roadmap', href: '/career-roadmaps/data-analyst' },
+  { label: 'Cloud & DevOps Roadmap', href: '/career-roadmaps/cloud-support-devops' }
 ];
 
 export default function FreePythonCoursesPage() {
@@ -143,8 +143,8 @@ export default function FreePythonCoursesPage() {
       faqs={faqs}
       ctaHeading="Write Your First Line of Python Today"
       ctaBody="Begin with Python for Beginners. Learn the foundational programming concepts that open the door to backend web development, scripting, and data science."
-      ctaPrimaryLabel="View Software Courses"
-      ctaPrimaryHref="/category/software-engineering"
+      ctaPrimaryLabel="Explore Software Engineer Roadmap"
+      ctaPrimaryHref="/career-roadmaps/software-engineer"
       ctaSecondaryLabel="Explore Career Roadmaps"
       ctaSecondaryHref="/career-roadmaps"
     />

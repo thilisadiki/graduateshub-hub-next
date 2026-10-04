@@ -80,10 +80,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Business Reporting Coordinator', category: 'Operations', href: '/category/business' },
-  { role: 'Financial Assistant', category: 'Finance', href: '/category/accounting' },
-  { role: 'Data Analytics Assistant', category: 'Data Analysis', href: '/category/data-analytics' },
-  { role: 'Administrative Assistant', category: 'Office Admin', href: '/category/business' }
+  { role: 'Business Reporting Coordinator', category: 'Operations', href: '/career-roadmaps/business-analyst' },
+  { role: 'Financial Assistant', category: 'Finance', href: '/career-roadmaps/junior-accountant' },
+  { role: 'Data Analytics Assistant', category: 'Data Analysis', href: '/career-roadmaps/data-analyst' },
+  { role: 'Administrative Assistant', category: 'Office Admin', href: '/career-roadmaps/business-analyst' }
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -99,9 +99,9 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'Data Analytics', href: '/category/data-analytics' },
-  { label: 'Accounting & Finance', href: '/category/accounting' },
-  { label: 'Business & Management', href: '/category/business' }
+  { label: 'Data Analyst', href: '/career-roadmaps/data-analyst' },
+  { label: 'Junior Accountant', href: '/career-roadmaps/junior-accountant' },
+  { label: 'Business Analyst', href: '/career-roadmaps/business-analyst' }
 ];
 
 export default function FreeExcelCoursesPage() {
@@ -143,8 +143,8 @@ export default function FreeExcelCoursesPage() {
       faqs={faqs}
       ctaHeading="Upgrade Your Data Productivity Today"
       ctaBody="Start with Microsoft Excel for Data Analysis. Gain the practical skills that make you immediately productive in any business environment."
-      ctaPrimaryLabel="View Analytics Courses"
-      ctaPrimaryHref="/category/data-analytics"
+      ctaPrimaryLabel="Explore Data Analyst Roadmap"
+      ctaPrimaryHref="/career-roadmaps/data-analyst"
       ctaSecondaryLabel="Build Your Portfolio"
       ctaSecondaryHref="/portfolio-tasks"
     />

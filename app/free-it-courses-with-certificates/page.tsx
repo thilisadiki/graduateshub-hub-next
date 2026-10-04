@@ -66,15 +66,15 @@ const benefits: BenefitItem[] = [
   { icon: Award, title: 'CPD Accredited Certificates', body: 'Earn verifiable digital certificates to attach to your CV and showcase on LinkedIn.' },
   { icon: Clock, title: '100% Free & Self-Paced', body: 'Study on your own schedule. Build your IT foundation without spending on expensive bootcamps.' },
   { icon: Wifi, title: 'Networking Fundamentals', body: 'Master TCP/IP 5-layer model, IPv4 subnetting, DNS, DHCP, and Wireshark packet analysis.' },
-  { icon: Users, title: 'Help Desk & ITSM SLAs', body: 'Understand ITIL v4 incident triage, ticket priority matrices (P1–P4), and SLA management.' },
+  { icon: Users, title: 'Help Desk & ITSM SLAs', body: 'Understand ITIL v4 incident triage, ticket priority matrices (P1-P4), and SLA management.' },
   { icon: Star, title: 'Industry-Vetted Content', body: 'Curated to align with CompTIA A+, CompTIA Network+, and Google IT Support certifications.' },
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'IT Support Specialist', category: 'IT Support', href: '/portfolio-tasks/information-technology' },
-  { role: 'Help Desk Technician', category: 'Service Desk', href: '/portfolio-tasks/information-technology' },
-  { role: 'Systems Administrator Associate', category: 'Systems Admin', href: '/portfolio-tasks/information-technology' },
-  { role: 'Junior Network Technician', category: 'Networking', href: '/portfolio-tasks/information-technology' },
+  { role: 'IT Support Specialist', category: 'IT Support', href: '/career-roadmaps/it-support-specialist' },
+  { role: 'Help Desk Technician', category: 'Service Desk', href: '/career-roadmaps/it-support-specialist' },
+  { role: 'Cloud Support Associate', category: 'Cloud Infrastructure', href: '/career-roadmaps/cloud-support-devops' },
+  { role: 'Cybersecurity Analyst', category: 'Security Operations', href: '/career-roadmaps/cybersecurity-analyst' },
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -90,9 +90,9 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'IT & Infrastructure', href: '/portfolio-tasks/information-technology' },
-  { label: 'Cloud Computing', href: '/free-cloud-computing-courses' },
-  { label: 'Cybersecurity', href: '/free-cybersecurity-courses' },
+  { label: 'IT Support Specialist Roadmap', href: '/career-roadmaps/it-support-specialist' },
+  { label: 'Cloud & DevOps Roadmap', href: '/career-roadmaps/cloud-support-devops' },
+  { label: 'Cybersecurity Analyst Roadmap', href: '/career-roadmaps/cybersecurity-analyst' },
 ];
 
 export default function FreeITCoursesPage() {

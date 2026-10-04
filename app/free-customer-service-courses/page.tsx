@@ -40,7 +40,7 @@ const courseCategories: CourseCategory[] = [
     items: [
       {
         id: 'job-search-resume-cover-letter',
-        customContent: 'Customer operations relies on structured ticketing systems to track customer issues. This course breaks down CRM workflow fundamentals, setting ticket priority matrices (P1–P4), managing First Response Time (FRT), and preventing Service Level Agreement (SLA) breaches.',
+        customContent: 'Customer operations relies on structured ticketing systems to track customer issues. This course breaks down CRM workflow fundamentals, setting ticket priority matrices (P1-P4), managing First Response Time (FRT), and preventing Service Level Agreement (SLA) breaches.',
       },
     ],
   },

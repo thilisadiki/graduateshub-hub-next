@@ -150,8 +150,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Software Development & IT',
     description: 'Build foundational programming skills with top-rated free developer courses.',
-    categoryHref: '/category/software-engineering',
-    categoryLabel: 'Software Engineering',
+    roadmapHref: '/career-roadmaps/web-developer',
+    roadmapLabel: 'Web Developer',
     items: [
       { id: 'python-for-beginners-data', customContent: 'Python is the versatile programming language driving web development, automation, and artificial intelligence. This accessible course introduces syntax, data structures, and scripting essentials with no prior coding experience needed.' },
       { id: 'diploma-python-programming', customContent: 'Master object-oriented programming, external API integrations, and database operations in Python. Perfect for graduates advancing toward backend engineering or data engineering roles.' },
@@ -161,8 +161,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Data Analytics & AI',
     description: 'Learn to query databases, analyze data, and build predictive models.',
-    categoryHref: '/category/it',
-    categoryLabel: 'IT & Data Science',
+    roadmapHref: '/career-roadmaps/data-analyst',
+    roadmapLabel: 'Data Analyst',
     items: [
       { id: 'microsoft-excel-data-analysis', customContent: 'Spreadsheet fluency remains the baseline requirement for corporate analysts. Master VLOOKUP, XLOOKUP, nested formulas, and dynamic pivot tables for reporting.' },
       { id: 'diploma-databases-t-sql', customContent: 'SQL is the single most essential technical query language for data analysts. Master complex JOINs, aggregation functions, and subqueries.' },
@@ -172,8 +172,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Accounting & Finance',
     description: 'Practical financial management, bookkeeping, and auditing fundamentals.',
-    categoryHref: '/category/accounting',
-    categoryLabel: 'Accounting & Finance',
+    roadmapHref: '/career-roadmaps/junior-accountant',
+    roadmapLabel: 'Junior Accountant',
     items: [
       { id: 'mastering-financial-statement-analysis', customContent: 'Learn how to read and interpret balance sheets, income statements, and cash flow reports to evaluate business performance.' },
       { id: 'advanced-excel-financial-modeling', customContent: 'Build dynamic financial models, scenario managers, and cash flow projections using advanced Excel techniques.' },
@@ -182,8 +182,8 @@ const courseCategories: CourseCategory[] = [
   {
     label: 'Digital Marketing & Business',
     description: 'Master search engine optimization, content strategy, and business management.',
-    categoryHref: '/category/marketing',
-    categoryLabel: 'Marketing & Business',
+    roadmapHref: '/career-roadmaps/digital-marketing-specialist',
+    roadmapLabel: 'Digital Marketing Specialist',
     items: [
       { id: 'diploma-digital-marketing', customContent: 'Comprehensive coverage of search engine optimization, social media marketing, email campaigns, and conversion funnel optimization.' },
       { id: 'project-management-fundamentals', customContent: 'Learn Agile, Scrum, and classic project management methodologies to coordinate team workflows effectively.' },

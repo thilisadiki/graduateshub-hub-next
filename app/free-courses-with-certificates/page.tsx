@@ -86,12 +86,12 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Data Analyst', category: 'IT & Accounting', href: '/category/it' },
-  { role: 'Digital Marketer', category: 'Marketing', href: '/category/marketing' },
-  { role: 'Junior Developer', category: 'Software Development', href: '/category/software-engineering' },
-  { role: 'Project Coordinator', category: 'Business & Management', href: '/category/business' },
-  { role: 'Bookkeeper', category: 'Accounting & Finance', href: '/category/accounting' },
-  { role: 'IT Support Technician', category: 'IT Courses', href: '/category/it' },
+  { role: 'Data Analyst', category: 'Data & Analytics', href: '/career-roadmaps/data-analyst' },
+  { role: 'Digital Marketer', category: 'Marketing', href: '/career-roadmaps/digital-marketing-specialist' },
+  { role: 'Junior Developer', category: 'Software Development', href: '/career-roadmaps/web-developer' },
+  { role: 'Project Coordinator', category: 'Business & Management', href: '/career-roadmaps/project-coordinator' },
+  { role: 'Bookkeeper', category: 'Accounting & Finance', href: '/career-roadmaps/junior-accountant' },
+  { role: 'IT Support Technician', category: 'IT & Infrastructure', href: '/career-roadmaps/it-support-specialist' },
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -110,11 +110,11 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'IT & Technology', href: '/category/it' },
-  { label: 'Software Development', href: '/category/software-engineering' },
-  { label: 'Business & Management', href: '/category/business' },
-  { label: 'Accounting & Finance', href: '/category/accounting' },
-  { label: 'Digital Marketing', href: '/category/marketing' },
+  { label: 'IT & Technology', href: '/career-roadmaps/it-support-specialist' },
+  { label: 'Software Development', href: '/career-roadmaps/web-developer' },
+  { label: 'Business & Management', href: '/career-roadmaps/business-analyst' },
+  { label: 'Accounting & Finance', href: '/career-roadmaps/junior-accountant' },
+  { label: 'Digital Marketing', href: '/career-roadmaps/digital-marketing-specialist' },
 ];
 
 export default function FreeCoursesWithCertificatesPage() {
@@ -215,8 +215,8 @@ export default function FreeCoursesWithCertificatesPage() {
       faqs={faqs}
       ctaHeading="Ready to Begin?"
       ctaBody="Pick one course, complete it, and apply what you learn. The key is consistency: small steps taken regularly lead to real results."
-      ctaPrimaryLabel="Browse All Courses"
-      ctaPrimaryHref="/categories"
+      ctaPrimaryLabel="Explore Career Roadmaps"
+      ctaPrimaryHref="/career-roadmaps"
       ctaSecondaryLabel="Search a Specific Topic"
       ctaSecondaryHref="/career-roadmaps"
     />

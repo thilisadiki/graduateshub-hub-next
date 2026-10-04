@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const courseCategories: CourseCategory[] = [
   {
     label: 'Foundational UI/UX Design Principles',
-    slug: 'it',
+    slug: 'ui-ux',
     description: 'Learn the theories of user experience, interaction models, and brand design.',
     items: [
       {
@@ -40,7 +40,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Figma & Interactive Prototyping',
-    slug: 'it',
+    slug: 'ui-ux',
     description: 'Master the industry-standard tools and front-end coding layouts used by product teams.',
     items: [
       {
@@ -84,10 +84,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'UI/UX Designer', category: 'Product Design', href: '/category/marketing' },
-  { role: 'Product Designer', category: 'Product & Dev', href: '/category/software-engineering' },
-  { role: 'UX Researcher', category: 'User Research', href: '/category/marketing' },
-  { role: 'Front-End UI Developer', category: 'Web Development', href: '/category/software-engineering' }
+  { role: 'UI/UX Designer', category: 'Product Design', href: '/career-roadmaps/ui-ux-designer' },
+  { role: 'Product Designer', category: 'Product & Dev', href: '/career-roadmaps/ui-ux-designer' },
+  { role: 'UX Researcher', category: 'User Research', href: '/career-roadmaps/ui-ux-designer' },
+  { role: 'Front-End UI Developer', category: 'Web Development', href: '/career-roadmaps/web-developer' }
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -103,9 +103,9 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'Software Engineering', href: '/category/software-engineering' },
-  { label: 'Digital Marketing', href: '/category/marketing' },
-  { label: 'Business & PM', href: '/category/business' }
+  { label: 'UI/UX Designer', href: '/career-roadmaps/ui-ux-designer' },
+  { label: 'Web Developer', href: '/career-roadmaps/web-developer' },
+  { label: 'Digital Marketing Specialist', href: '/career-roadmaps/digital-marketing-specialist' },
 ];
 
 export default function FreeUiUxDesignCoursesPage() {
@@ -147,8 +147,8 @@ export default function FreeUiUxDesignCoursesPage() {
       faqs={faqs}
       ctaHeading="Design the Future of Digital Products"
       ctaBody="Start with Web Development to learn layout logic, then proceed to Conversion Optimization to learn how to design for user action."
-      ctaPrimaryLabel="View Marketing Courses"
-      ctaPrimaryHref="/category/marketing"
+      ctaPrimaryLabel="Explore UI/UX Designer Roadmap"
+      ctaPrimaryHref="/career-roadmaps/ui-ux-designer"
       ctaSecondaryLabel="Browse Career Roadmaps"
       ctaSecondaryHref="/career-roadmaps"
     />

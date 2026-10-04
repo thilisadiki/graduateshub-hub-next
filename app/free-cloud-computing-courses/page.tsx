@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const courseCategories: CourseCategory[] = [
   {
     label: 'Cloud Infrastructure & Networking',
-    slug: 'it',
+    slug: 'cloud',
     description: 'Master the fundamental networking layer that binds cloud systems together.',
     items: [
       {
@@ -36,7 +36,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'DevOps & CI/CD Pipelines',
-    slug: 'software-engineering',
+    slug: 'cloud',
     description: 'Learn how to automate infrastructure deployments and manage code delivery in the cloud.',
     items: [
       {
@@ -80,10 +80,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Cloud Support Engineer', category: 'Cloud Infrastructure', href: '/category/it' },
-  { role: 'Junior DevOps Engineer', category: 'DevOps & Platform', href: '/category/software-engineering' },
-  { role: 'Backend Cloud Developer', category: 'Software Development', href: '/category/software-engineering' },
-  { role: 'Database Administrator', category: 'Cloud Databases', href: '/category/it' }
+  { role: 'Cloud Support Engineer', category: 'Cloud Infrastructure', href: '/career-roadmaps/cloud-support-devops' },
+  { role: 'Junior DevOps Engineer', category: 'DevOps & Platform', href: '/career-roadmaps/cloud-support-devops' },
+  { role: 'Backend Cloud Developer', category: 'Software Development', href: '/career-roadmaps/software-engineer' },
+  { role: 'Database Administrator', category: 'Cloud Databases', href: '/career-roadmaps/it-support-specialist' }
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -99,9 +99,9 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'IT & Technology', href: '/category/it' },
-  { label: 'Software Development', href: '/category/software-engineering' },
-  { label: 'Business & Management', href: '/category/business' }
+  { label: 'Cloud & DevOps', href: '/career-roadmaps/cloud-support-devops' },
+  { label: 'Software Engineer', href: '/career-roadmaps/software-engineer' },
+  { label: 'IT Support Specialist', href: '/career-roadmaps/it-support-specialist' }
 ];
 
 export default function FreeCloudComputingCoursesPage() {
@@ -143,8 +143,8 @@ export default function FreeCloudComputingCoursesPage() {
       faqs={faqs}
       ctaHeading="Accelerate Your Cloud Career"
       ctaBody="Begin with Computer Networking or DevOps Fundamentals. Gain the credentials that prove you understand how modern cloud systems scale."
-      ctaPrimaryLabel="View All Software Courses"
-      ctaPrimaryHref="/category/software-engineering"
+      ctaPrimaryLabel="Explore Cloud & DevOps Roadmap"
+      ctaPrimaryHref="/career-roadmaps/cloud-support-devops"
       ctaSecondaryLabel="Explore Career Roadmaps"
       ctaSecondaryHref="/career-roadmaps"
     />

@@ -30,7 +30,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Technical & Software Engineering Graduate Roles',
-    slug: 'it',
+    slug: 'software-engineering',
     description: 'Essential software development, data analytics, and cloud computing courses to make your CV stand out to SA tech recruiters.',
     ids: ['computer-networking', 'diploma-in-it-management'],
   },

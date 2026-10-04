@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const courseCategories: CourseCategory[] = [
   {
     label: 'Cybersecurity Leadership & Management',
-    slug: 'it',
+    slug: 'cybersecurity',
     description: 'Prepare for senior governance roles and master corporate information security.',
     items: [
       {
@@ -51,7 +51,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Network Security & Compliance',
-    slug: 'it',
+    slug: 'cybersecurity',
     description: 'Understand the foundations of computer networking and regulatory frameworks.',
     items: [
       {
@@ -80,10 +80,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Security Analyst', category: 'IT Security', href: '/category/it' },
-  { role: 'Secure Code Auditor', category: 'Software Engineering', href: '/category/software-engineering' },
-  { role: 'Compliance Officer', category: 'Risk & Governance', href: '/category/business' },
-  { role: 'Network Support Specialist', category: 'IT & Infrastructure', href: '/category/it' }
+  { role: 'Security Analyst', category: 'Cybersecurity', href: '/career-roadmaps/cybersecurity-analyst' },
+  { role: 'Secure Code Auditor', category: 'Software Engineering', href: '/career-roadmaps/software-engineer' },
+  { role: 'Compliance Officer', category: 'Risk & Governance', href: '/career-roadmaps/business-analyst' },
+  { role: 'Network Support Specialist', category: 'IT & Infrastructure', href: '/career-roadmaps/it-support-specialist' }
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -99,9 +99,9 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'IT & Technology', href: '/category/it' },
-  { label: 'Software Development', href: '/category/software-engineering' },
-  { label: 'Business & Management', href: '/category/business' }
+  { label: 'Cybersecurity Analyst', href: '/career-roadmaps/cybersecurity-analyst' },
+  { label: 'Software Engineer', href: '/career-roadmaps/software-engineer' },
+  { label: 'IT Support Specialist', href: '/career-roadmaps/it-support-specialist' },
 ];
 
 export default function FreeCybersecurityCoursesPage() {
@@ -143,8 +143,8 @@ export default function FreeCybersecurityCoursesPage() {
       faqs={faqs}
       ctaHeading="Start Securing Your Future"
       ctaBody="Pick your first course (we recommend starting with Networking if you are a beginner) and build a foundation in security today."
-      ctaPrimaryLabel="View All IT Courses"
-      ctaPrimaryHref="/category/it"
+      ctaPrimaryLabel="Explore Cybersecurity Analyst Roadmap"
+      ctaPrimaryHref="/career-roadmaps/cybersecurity-analyst"
       ctaSecondaryLabel="Build Your Portfolio"
       ctaSecondaryHref="/portfolio-tasks"
     />

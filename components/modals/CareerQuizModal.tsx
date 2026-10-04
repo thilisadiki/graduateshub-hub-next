@@ -202,7 +202,7 @@ function ResultScreen({
           onClick={onClose}
           className={`flex-1 flex items-center justify-center gap-2 bg-gradient-to-r ${result.gradient} text-white px-5 py-3 rounded-xl font-bold transition-opacity hover:opacity-90 shadow-md text-sm`}
         >
-          Browse All {result.title.split(' ')[0]} Courses <ExternalLink size={14} />
+          Explore Career Roadmap <ExternalLink size={14} />
         </Link>
         <button
           onClick={onRetake}

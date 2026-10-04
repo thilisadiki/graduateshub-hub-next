@@ -45,7 +45,7 @@ const courseCategories: CourseCategory[] = [
   },
   {
     label: 'Content Marketing & SEO',
-    slug: 'marketing',
+    slug: 'seo-content-strategist',
     description: 'Create content that actually gets found, covering YouTube SEO, content strategy, and Instagram growth.',
     items: [
       { id: 'youtube-marketing-seo', customContent: 'Video is the dominant medium on the internet, and YouTube is the world’s second-largest search engine. This highly specific course teaches you how to optimize video content to rank highly in search results. You will learn about keyword research for video, thumbnail optimization, and audience retention metrics, skills that are incredibly valuable to modern media brands.' },
@@ -85,12 +85,12 @@ const skills = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Digital Marketing Assistant', category: 'Entry Level', href: '/category/marketing' },
-  { role: 'SEO Specialist', category: 'Entry to Mid Level', href: '/category/marketing' },
-  { role: 'Social Media Manager', category: 'Entry to Mid Level', href: '/category/marketing' },
-  { role: 'Content Marketer', category: 'Entry to Mid Level', href: '/category/marketing' },
-  { role: 'PPC Specialist', category: 'Mid Level', href: '/category/marketing' },
-  { role: 'Digital Marketing Manager', category: 'Senior Level', href: '/category/marketing' },
+  { role: 'Digital Marketing Assistant', category: 'Entry Level', href: '/career-roadmaps/digital-marketing-specialist' },
+  { role: 'SEO Specialist', category: 'Entry to Mid Level', href: '/career-roadmaps/seo-content-strategist' },
+  { role: 'Social Media Manager', category: 'Entry to Mid Level', href: '/career-roadmaps/digital-marketing-specialist' },
+  { role: 'Content Marketer', category: 'Entry to Mid Level', href: '/career-roadmaps/seo-content-strategist' },
+  { role: 'PPC Specialist', category: 'Mid Level', href: '/career-roadmaps/digital-marketing-ecommerce' },
+  { role: 'Digital Marketing Manager', category: 'Senior Level', href: '/career-roadmaps/digital-marketing-specialist' },
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -110,11 +110,11 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'Digital Marketing', href: '/category/marketing' },
-  { label: 'IT & Technology', href: '/category/it' },
-  { label: 'Software Development', href: '/category/software-engineering' },
-  { label: 'Business & Management', href: '/category/business' },
-  { label: 'Accounting & Finance', href: '/category/accounting' },
+  { label: 'Digital Marketing', href: '/career-roadmaps/digital-marketing-specialist' },
+  { label: 'IT & Technology', href: '/career-roadmaps/it-support-specialist' },
+  { label: 'Software Development', href: '/career-roadmaps/web-developer' },
+  { label: 'Business & Management', href: '/career-roadmaps/business-analyst' },
+  { label: 'Accounting & Finance', href: '/career-roadmaps/junior-accountant' },
 ];
 
 export default function FreeDigitalMarketingCoursesPage() {
@@ -131,7 +131,7 @@ export default function FreeDigitalMarketingCoursesPage() {
   return (
     <GuideTemplate
       canonicalUrl={CANONICAL}
-      breadcrumb={[{ label: 'Digital Marketing', href: '/category/marketing' }, { label: 'Free Digital Marketing Courses' }]}
+      breadcrumb={[{ label: 'Career Roadmaps', href: '/career-roadmaps' }, { label: 'Free Digital Marketing Courses' }]}
       heading="Best Free Courses for Digital Marketing Careers (2026)"
       heroDescription="Digital marketing is one of the most accessible and in-demand career paths available today, and you do not need a degree to break in. These free courses cover everything from strategy and SEO to conversion optimisation and growth hacking, all designed for beginners."
       heroBadges={[
@@ -234,8 +234,8 @@ export default function FreeDigitalMarketingCoursesPage() {
       faqs={faqs}
       ctaHeading="Ready to Start Your Digital Marketing Career?"
       ctaBody="Start with the fundamentals, pick a specialisation, and build something real while you study. Consistent practice, even on small personal projects, is what separates candidates who get hired from those who don't."
-      ctaPrimaryLabel="Browse Marketing Courses"
-      ctaPrimaryHref="/category/marketing"
+      ctaPrimaryLabel="Explore Digital Marketing Specialist Roadmap"
+      ctaPrimaryHref="/career-roadmaps/digital-marketing-specialist"
       ctaSecondaryLabel="Search a Specific Topic"
       ctaSecondaryHref="/career-roadmaps"
     />

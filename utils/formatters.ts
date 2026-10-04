@@ -36,15 +36,15 @@ export const formatCategoryName = (id: string | undefined): string => {
  * /categories when no dedicated category page exists for the label.
  */
 export const courseCategoryHref = (category: string | undefined): string => {
-    if (!category) return '/categories';
+    if (!category) return '/career-roadmaps';
     const primary = category.split(',')[0].trim().toLowerCase();
     const map: Record<string, string> = {
-        'it': '/category/it',
-        'it courses': '/category/it',
-        'software engineering': '/category/software-engineering',
-        'business': '/category/business',
-        'accounting': '/category/accounting',
-        'marketing': '/category/marketing',
+        'it': '/career-roadmaps/it-support-specialist',
+        'it courses': '/career-roadmaps/it-support-specialist',
+        'software engineering': '/career-roadmaps/software-engineer',
+        'business': '/career-roadmaps/business-analyst',
+        'accounting': '/career-roadmaps/junior-accountant',
+        'marketing': '/career-roadmaps/digital-marketing-specialist',
     };
-    return map[primary] ?? '/categories';
+    return map[primary] ?? '/career-roadmaps';
 };

@@ -75,12 +75,12 @@ const benefits: BenefitItem[] = [
 ];
 
 const careerPaths: CareerPathItem[] = [
-  { role: 'Project Coordinator', category: 'Business & Management', href: '/category/business' },
-  { role: 'IT Support Specialist', category: 'IT & Technology', href: '/category/it' },
-  { role: 'Bookkeeper', category: 'Accounting & Finance', href: '/category/accounting' },
-  { role: 'Digital Marketer', category: 'Marketing', href: '/category/marketing' },
-  { role: 'Data Analyst', category: 'Data & Analytics', href: '/free-courses-for-data-analysts' },
-  { role: 'HR Assistant', category: 'Business & Management', href: '/category/business' },
+  { role: 'Project Coordinator', category: 'Business & Management', href: '/career-roadmaps/project-coordinator' },
+  { role: 'IT Support Specialist', category: 'IT & Technology', href: '/career-roadmaps/it-support-specialist' },
+  { role: 'Bookkeeper', category: 'Accounting & Finance', href: '/career-roadmaps/junior-accountant' },
+  { role: 'Digital Marketer', category: 'Marketing', href: '/career-roadmaps/digital-marketing-specialist' },
+  { role: 'Data Analyst', category: 'Data & Analytics', href: '/career-roadmaps/data-analyst' },
+  { role: 'Business Analyst', category: 'Business & Management', href: '/career-roadmaps/business-analyst' },
 ];
 
 const relatedGuides: RelatedGuide[] = [
@@ -100,11 +100,11 @@ const faqs: FaqItem[] = [
 ];
 
 const exploreCategories = [
-  { label: 'IT & Technology', href: '/category/it' },
-  { label: 'Software Development', href: '/category/software-engineering' },
-  { label: 'Business & Management', href: '/category/business' },
-  { label: 'Accounting & Finance', href: '/category/accounting' },
-  { label: 'Digital Marketing', href: '/category/marketing' },
+  { label: 'Project Coordinator Roadmap', href: '/career-roadmaps/project-coordinator' },
+  { label: 'IT Support Specialist Roadmap', href: '/career-roadmaps/it-support-specialist' },
+  { label: 'Junior Accountant Roadmap', href: '/career-roadmaps/junior-accountant' },
+  { label: 'Digital Marketing Specialist Roadmap', href: '/career-roadmaps/digital-marketing-specialist' },
+  { label: 'Data Analyst Roadmap', href: '/career-roadmaps/data-analyst' },
 ];
 
 export default function BestAlisonCoursesPage() {
