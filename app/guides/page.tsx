@@ -227,6 +227,13 @@ const GUIDE_GROUPS: GuideGroup[] = [
         curators: ['jason', 'ndulamiso'],
       },
       {
+        title: 'Highest Paying Careers in the US (2026)',
+        badge: 'High Pay US',
+        href: '/highest-paying-careers-in-the-us',
+        desc: 'Official BLS salary benchmarks, 4-tier compensation tables, no-degree pathways, and high-ROI certifications in the US.',
+        curators: ['jason', 'ndulamiso'],
+      },
+      {
         title: 'SA Government Free Online Courses',
         badge: 'SA Gov Certs',
         href: '/sa-government-free-online-courses-certificates',

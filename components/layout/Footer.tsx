@@ -38,6 +38,7 @@ export default function Footer() {
             <li><Link href="/free-courses-for-software-developers" className="hover:text-[#FFDF9C] transition-colors">Free Courses for Developers</Link></li>
             <li><Link href="/free-it-courses-with-certificates" className="hover:text-[#FFDF9C] transition-colors">Free IT Support Courses</Link></li>
             <li><Link href="/us-government-free-online-courses-certificates" className="hover:text-[#FFDF9C] transition-colors">US Government Free Courses</Link></li>
+            <li><Link href="/highest-paying-careers-in-the-us" className="hover:text-[#FFDF9C] transition-colors">Highest Paying Careers US</Link></li>
             <li><Link href="/guides" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">All Course Guides →</Link></li>
           </ul>
         </div>

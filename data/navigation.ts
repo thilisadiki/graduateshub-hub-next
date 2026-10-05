@@ -275,6 +275,12 @@ export const popularGuides: GuideLink[] = [
     badge: 'High Pay SA',
   },
   {
+    href: '/highest-paying-careers-in-the-us',
+    title: 'Highest Paying Careers in the US',
+    desc: 'Official BLS salary benchmarks from entry-level to senior executive roles across tech, medicine, and finance.',
+    badge: 'High Pay US',
+  },
+  {
     href: '/it-careers-without-a-degree',
     title: 'IT Careers Without a Degree',
     desc: 'Non-degree tech paths, vendor certifications, portfolios, and self-taught routes.',

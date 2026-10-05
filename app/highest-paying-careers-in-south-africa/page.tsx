@@ -180,6 +180,11 @@ const careerPaths: CareerPathItem[] = [
 
 const relatedGuides: RelatedGuide[] = [
   {
+    href: '/highest-paying-careers-in-the-us',
+    title: 'Highest Paying Careers in the US (2026)',
+    desc: 'Official BLS salary benchmarks, 4-tier compensation tables, and remote tech compensation.',
+  },
+  {
     href: '/best-careers-in-south-africa',
     title: 'Best Careers in South Africa (2026 Guide)',
     desc: 'Explore high-growth sectors, entry requirements, and starting salary benchmarks.',
@@ -193,11 +198,6 @@ const relatedGuides: RelatedGuide[] = [
     href: '/graduate-trainee-programmes-south-africa',
     title: 'Graduate Trainee Programmes in SA',
     desc: 'Fast-track rotational corporate GDP programs at major banks and corporate hubs.',
-  },
-  {
-    href: '/graduate-jobs-south-africa',
-    title: 'Graduate Jobs in South Africa (2026)',
-    desc: 'Explore entry-level graduate jobs, salary expectations, and ATS CV formatting.',
   },
 ];
 
