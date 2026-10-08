@@ -269,10 +269,10 @@ const GUIDE_GROUPS: GuideGroup[] = [
         curators: ['jason', 'ndulamiso'],
       },
       {
-        title: 'Highest Paying Careers in SA (2026)',
-        badge: 'High Pay SA',
+        title: 'Highest Paying Jobs in South Africa (2026)',
+        badge: 'Highest Paying Jobs',
         href: '/highest-paying-careers-in-south-africa',
-        desc: 'Detailed breakdown of top-earning salary bands from entry-level to senior executive roles across tech, finance, and engineering.',
+        desc: 'Detailed breakdown of the highest paying jobs in South Africa: 4-tier salary compensation bands from entry-level to senior executive roles.',
         curators: ['jason', 'ndulamiso'],
       },
       {

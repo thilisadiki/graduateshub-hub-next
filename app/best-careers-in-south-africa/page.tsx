@@ -89,8 +89,8 @@ const careerPaths: CareerPathItem[] = [
 const relatedGuides: RelatedGuide[] = [
   {
     href: '/highest-paying-careers-in-south-africa',
-    title: 'Highest Paying Careers in South Africa (2026)',
-    desc: 'Detailed breakdown of top-earning salary bands from entry-level to executive roles across SA.',
+    title: 'Highest Paying Jobs in South Africa (2026)',
+    desc: 'Detailed breakdown of the highest paying jobs in South Africa across tech, finance, and engineering.',
   },
   {
     href: '/it-careers-without-a-degree',

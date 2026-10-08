@@ -270,9 +270,9 @@ export const popularGuides: GuideLink[] = [
   },
   {
     href: '/highest-paying-careers-in-south-africa',
-    title: 'Highest Paying Careers in SA',
-    desc: 'Salary compensation bands from entry-level to senior executive roles across SA.',
-    badge: 'High Pay SA',
+    title: 'Highest Paying Jobs in South Africa',
+    desc: 'Comprehensive 2026 salary guide and 4-tier compensation benchmarks for the highest paying jobs in South Africa.',
+    badge: 'Highest Paying Jobs',
   },
   {
     href: '/highest-paying-careers-in-the-us',

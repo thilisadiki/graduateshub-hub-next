@@ -48,7 +48,7 @@ export default function Footer() {
           <h3 className="text-lg font-bold text-white mb-4">SA Career Guides</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/best-careers-in-south-africa" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">Best Careers in SA (2026) →</Link></li>
-            <li><Link href="/highest-paying-careers-in-south-africa" className="hover:text-[#FFDF9C] transition-colors">Highest Paying Careers SA</Link></li>
+            <li><Link href="/highest-paying-careers-in-south-africa" className="hover:text-[#FFDF9C] transition-colors">Highest Paying Jobs in SA</Link></li>
             <li><Link href="/it-careers-without-a-degree" className="hover:text-[#FFDF9C] transition-colors font-medium text-[#FFDF9C]">IT Careers Without a Degree →</Link></li>
             <li><Link href="/graduate-jobs-south-africa" className="hover:text-[#FFDF9C] transition-colors">Graduate Jobs in SA</Link></li>
             <li><Link href="/graduate-internships-south-africa" className="hover:text-[#FFDF9C] transition-colors">Graduate Internships SA</Link></li>

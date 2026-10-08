@@ -9,15 +9,15 @@ import { SITE_URL, SITE_NAME } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/highest-paying-careers-in-south-africa`;
 
 export const metadata: Metadata = {
-  title: 'Highest Paying Careers in South Africa (2026 Salary Guide)',
+  title: 'Highest Paying Jobs in South Africa (2026 Salary Guide)',
   description:
-    'Explore the highest paying careers in South Africa. Comprehensive breakdown of salary bands from entry-level to senior executive roles across tech, finance, engineering, and remote global jobs.',
+    'Discover the highest paying jobs in South Africa for 2026. Explore verified salary bands from entry-level to senior executive roles across tech, finance, and engineering.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Highest Paying Careers in South Africa (2026 Salary Guide) | Graduates Hub',
+    title: 'Highest Paying Jobs in South Africa (2026 Salary Guide) | Graduates Hub',
     description:
-      'Detailed breakdown of top-earning fields in South Africa. Explore 4-tier compensation tables, top graduate employers, foreign currency remote jobs, and salary-boosting certifications.',
+      'Comprehensive guide to the highest paying jobs in South Africa. Explore 4-tier compensation tables, top graduate employers, foreign currency remote jobs, and salary-boosting certifications.',
     url: CANONICAL,
   },
 };
@@ -203,19 +203,23 @@ const relatedGuides: RelatedGuide[] = [
 
 const faqs: FaqItem[] = [
   {
-    q: 'What is the highest paying career in South Africa?',
-    a: 'Specialized Surgeons, Actuarial Leads, Chief Technology Officers, Executive Mining Engineers, and Investment Banking Directors represent the highest paying careers in South Africa, with annual compensation exceeding R1.5 Million to R5 Million+.',
+    q: 'What is the highest paying job in South Africa?',
+    a: 'Specialized Surgeons, Actuarial Leads, Chief Technology Officers (CTOs), Executive Mining Engineers, and Investment Banking Directors represent the highest paying jobs in South Africa, with annual compensation exceeding R1.5 Million to over R5 Million.',
+  },
+  {
+    q: 'Which entry-level jobs pay the highest starting salaries in South Africa?',
+    a: 'The highest paying jobs in South Africa for fresh graduates are found in Investment Banking (R400,000 - R650,000), Cloud Architecture & Software Engineering (R350,000 - R550,000), and Actuarial Science (R380,000 - R600,000), particularly within structured corporate graduate development programmes.',
   },
   {
     q: 'Which IT roles pay the highest salaries in South Africa?',
-    a: 'Cloud Solutions Architects (AWS/Azure), Lead Software Engineers, Cybersecurity Directors, Data Science Leads, and DevOps Managers are the top-earning IT roles in SA.',
+    a: 'Cloud Solutions Architects (AWS/Azure), Lead Software Engineers, Cybersecurity Directors, Data Science Leads, and DevOps Managers are the top-earning IT roles and highest paying tech jobs in South Africa.',
   },
   {
-    q: 'How can a graduate increase their starting salary in SA?',
-    a: 'Graduates can command higher starting offers by acquiring specialized certifications (AWS, Microsoft, Google), demonstrating hands-on project work, applying for structured corporate Graduate Trainee Programmes, and negotiating effectively during final offer rounds.',
+    q: 'How can a graduate land the highest paying jobs in South Africa?',
+    a: 'Graduates can target the highest paying jobs in South Africa by acquiring high-demand vendor certifications (AWS, Microsoft, Google), building a verifiable proof-of-work portfolio, applying early to competitive Graduate Development Programmes (GDPs), and tailoring their CV for ATS screening.',
   },
   {
-    q: 'Do remote international jobs pay more than local SA jobs?',
+    q: 'Do remote international jobs pay more than local South African jobs?',
     a: 'Yes. South African tech and data professionals working remotely for European or US companies often earn $50,000 to $120,000+ USD per year (equivalent to R900,000 to R2.2 Million+ per year), significantly higher than local SA base averages.',
   },
 ];
@@ -224,17 +228,17 @@ export default function HighestPayingCareersSAPage() {
   return (
     <GuideTemplate
       canonicalUrl={CANONICAL}
-      breadcrumb={[{ label: 'Highest Paying Careers South Africa' }]}
-      heading="Highest Paying Careers in South Africa (2026 Salary Guide)"
-      heroDescription="Discover the highest paying careers in South Africa. Explore detailed salary compensation bands from entry-level to senior executive roles across tech, finance, engineering, and foreign currency remote jobs."
+      breadcrumb={[{ label: 'Highest Paying Jobs in South Africa' }]}
+      heading="Highest Paying Jobs & Careers in South Africa (2026 Salary Guide)"
+      heroDescription="Discover the highest paying jobs in South Africa for 2026. Explore detailed salary compensation bands from entry-level graduates to senior executive roles across tech, finance, engineering, healthcare, and remote global jobs."
       heroBadges={[
-        { icon: DollarSign, label: 'High Earning Potential', iconClassName: 'text-amber-600' },
+        { icon: DollarSign, label: 'Highest Paying Jobs', iconClassName: 'text-amber-600' },
         { icon: TrendingUp, label: 'Fast-Track Growth', iconClassName: 'text-primary' },
         { icon: CheckCircle2, label: 'Verified Compensation Bands', iconClassName: 'text-green-600' },
       ]}
       authors={['jason', 'ndulamiso']}
-      benefitsSectionTitle="Why Pursue a High-Paying Career in SA?"
-      benefitsSectionSubtitle="High-paying fields offer financial security, rapid career progression, and global mobility for skilled professionals."
+      benefitsSectionTitle="Why Target the Highest Paying Jobs in South Africa?"
+      benefitsSectionSubtitle="The highest paying jobs in South Africa offer long-term financial security, rapid salary progression, and international mobility for skilled professionals."
       benefits={benefits}
       preCoursesSection={
         <div className="space-y-16 mb-16">
@@ -245,11 +249,11 @@ export default function HighestPayingCareersSAPage() {
                 <DollarSign size={20} />
               </div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
-                South Africa Salary Compensation Matrix (2026)
+                Highest Paying Jobs in South Africa: 2026 Salary Matrix
               </h2>
             </div>
             <p className="text-gray-600 mb-6 text-sm md:text-base">
-              Annual compensation benchmarks across key career stages in South Africa, from entry-level graduates to executive directors.
+              Annual compensation benchmarks for the highest paying jobs in South Africa across key career stages, from entry-level graduates to executive directors.
             </p>
 
             <div className="overflow-x-auto">
@@ -289,7 +293,7 @@ export default function HighestPayingCareersSAPage() {
               </h2>
             </div>
             <p className="text-gray-600 mb-6 text-sm md:text-base">
-              These leading corporate intake programs consistently offer top-tier graduate starting packages and competitive salary progression.
+              These leading corporate intake programs consistently offer the highest paying jobs in South Africa for graduates, with competitive starting packages and structured salary progression.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -449,13 +453,13 @@ export default function HighestPayingCareersSAPage() {
       relatedCourses={relatedCourses}
       carouselTitle="Certifications That Boost Your Earning Potential"
       carouselSubtitle="Hand-picked certified online courses to prepare you for high-paying roles"
-      careerPathsTitle="Top High-Paying Career Tracks in SA"
+      careerPathsTitle="Highest Paying Jobs & Career Tracks in SA"
       careerPathsSubtitle="Explore salary benchmarks and growth trajectories for top-earning professions."
       careerPaths={careerPaths}
       relatedGuides={relatedGuides}
       faqs={faqs}
-      ctaHeading="Ready to Target High-Paying SA Careers?"
-      ctaBody="Combine your qualification with in-demand certified skills and an ATS-optimized professional CV."
+      ctaHeading="Ready to Target the Highest Paying Jobs in South Africa?"
+      ctaBody="Combine your academic qualifications with in-demand certified skills and an ATS-optimized professional CV to stand out for high-paying roles."
       ctaPrimaryLabel="Build a Free Professional CV"
       ctaPrimaryHref="/cv-builder"
       ctaSecondaryLabel="View Best Careers in SA Guide"
