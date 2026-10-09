@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
+import { generateStructuredJSON } from '@/lib/ai';
 import { checkBotProtection } from '@/utils/security';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import { courses } from '@/data/courses';
@@ -21,11 +21,6 @@ const limiter = createRateLimiter({ max: 10, windowSeconds: 60 });
 export async function POST(request: NextRequest) {
   const limited = limiter.check(getClientIp(request));
   if (limited) return limited;
-
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
-  }
 
   let userQuery: string;
   try {
@@ -51,7 +46,6 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const ai = new GoogleGenAI({ apiKey });
   const catalog = getSimplifiedCatalog();
 
   const systemPrompt = `
@@ -66,51 +60,35 @@ INSTRUCTIONS:
 1. Select exactly 3 to 6 courses that best match the user's request.
 2. If the user's request matches courses in our provided JSON catalog, recommend those.
 3. If the user wants to learn a topic that is NOT well-covered in our local catalog, recommend real courses available on the main Alison.com platform.
-4. You MUST respond ONLY with a valid JSON array of objects. Do not include markdown formatting like \`\`\`json in the response.
-5. For local courses from the catalog, the object should look like:
-   {"type": "local", "id": "the-course-id"}
-6. For external Alison courses not in the catalog, the object should look like:
-   {
-     "type": "external",
-     "title": "Exact Full Alison Course Title",
-     "description": "A short 1-sentence description.",
-     "category": "Broad Category (e.g. IT, Business)",
-     "tag": "Certificate or Diploma"
-   }
-`;
+4. You MUST respond ONLY with a valid JSON object.
+5. Format:
+{
+  "courses": [
+    {"type": "local", "id": "the-course-id"},
+    {
+      "type": "external",
+      "title": "Exact Full Alison Course Title",
+      "description": "A short 1-sentence description.",
+      "category": "Broad Category (e.g. IT, Business)",
+      "tag": "Certificate or Diploma"
+    }
+  ]
+}`;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash-lite',
-      contents: userQuery,
-      config: {
-        systemInstruction: systemPrompt,
-        temperature: 0.2,
-        responseMimeType: 'application/json',
-      },
+    const parsed = await generateStructuredJSON({
+      systemPrompt,
+      userInput: userQuery,
+      temperature: 0.2,
     });
 
-    const responseText = response.text ?? '';
+    const rawCourses: any[] = Array.isArray(parsed)
+      ? parsed
+      : Array.isArray(parsed?.courses)
+      ? parsed.courses
+      : [];
 
-    let parsedResponse: any[];
-    try {
-      parsedResponse = JSON.parse(responseText);
-    } catch {
-      console.error('Failed to parse Gemini response as JSON:', responseText);
-      return NextResponse.json(
-        { error: 'The AI returned an invalid format. Please try again.' },
-        { status: 500 }
-      );
-    }
-
-    if (!Array.isArray(parsedResponse)) {
-      return NextResponse.json(
-        { error: 'The AI returned an invalid format. Expected an array.' },
-        { status: 500 }
-      );
-    }
-
-    const recommendedCourses = parsedResponse
+    const recommendedCourses = rawCourses
       .map((item) => {
         if (item.type === 'local' && item.id) {
           return courses.find((c) => c.id === item.id) ?? null;
@@ -135,7 +113,10 @@ INSTRUCTIONS:
 
     return NextResponse.json({ courses: recommendedCourses });
   } catch (error: any) {
-    console.error('Error fetching recommendations from Gemini:', error);
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+    console.error('Error fetching recommendations:', error);
+    return NextResponse.json(
+      { error: error?.message?.includes('Missing AI API Key') ? 'AI service configuration error: missing API key.' : 'An unexpected error occurred.' },
+      { status: 500 }
+    );
   }
 }

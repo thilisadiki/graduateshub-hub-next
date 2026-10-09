@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
+import { generateStructuredJSON } from '@/lib/ai';
 import { getTaskById } from '@/data/portfolioTasks';
 import { getCategoryById } from '@/data/portfolioCategories';
 import { getSupabase } from '@/utils/supabase';
@@ -45,11 +45,6 @@ const limiter = createRateLimiter({ max: 3, windowSeconds: 60 });
 export async function POST(request: NextRequest) {
   const limited = limiter.check(getClientIp(request));
   if (limited) return limited;
-
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
-  }
 
   let taskId: string;
   let graduateName: string;
@@ -163,22 +158,13 @@ ${submissionLinks.length ? `Reference links provided: ${submissionLinks.join(', 
 SUBMISSION:
 ${submission}`;
 
-  const ai = new GoogleGenAI({ apiKey });
-
   let evaluation: PortfolioEvaluation;
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash-lite',
-      contents: userInput,
-      config: {
-        systemInstruction: systemPrompt,
-        temperature: 0.2,
-        responseMimeType: 'application/json',
-      },
+    const parsed = await generateStructuredJSON({
+      systemPrompt,
+      userInput,
+      temperature: 0.2,
     });
-
-    const raw = response.text ?? '';
-    const parsed = JSON.parse(raw);
 
     const rubricScores: RubricScore[] = (parsed.rubricScores || []).map((r: any) => ({
       key: String(r.key || ''),
@@ -204,7 +190,7 @@ ${submission}`;
       rubricScores,
     };
   } catch (error: any) {
-    console.error('Gemini evaluation failed:', error);
+    console.error('AI evaluation failed:', error);
     return NextResponse.json(
       { error: 'We could not grade your submission right now. Please try again in a minute.' },
       { status: 502 },

@@ -22,7 +22,7 @@ Graduates Hub is a Next.js web application designed to connect learners worldwid
 *   **Framework:** Next.js 16 (App Router)
 *   **Core:** React 19, TypeScript 5, Tailwind CSS 4
 *   **Auth & Database:** Supabase (PostgreSQL with Row-Level Security)
-*   **AI API:** Google Gemini SDK (`@google/genai`)
+*   **AI Engine:** Open-Source LLMs (Groq, Meta Llama 3.3 70B, OpenAI-compatible via `openai` SDK)
 *   **Notifications:** OneSignal Push
 *   **Mailing:** Resend API
 
@@ -46,8 +46,11 @@ Create a `.env.local` file in the project root containing the following variable
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
-# Google Gemini API
-GEMINI_API_KEY=your_gemini_api_key
+# Open-Source AI Configuration (Free Groq / Meta Llama 3.3 70B, or OpenAI-compatible)
+GROQ_API_KEY=your_groq_api_key
+# Optional overrides:
+# AI_BASE_URL=https://api.groq.com/openai/v1
+# AI_MODEL=llama-3.3-70b-versatile
 
 # Email Sending (Resend)
 RESEND_API_KEY=your_resend_api_key

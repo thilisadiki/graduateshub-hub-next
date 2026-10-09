@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
+import { generateStructuredJSON } from '@/lib/ai';
 import { checkBotProtection } from '@/utils/security';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import { courses } from '@/data/courses';
@@ -22,9 +22,6 @@ export async function POST(request: NextRequest) {
   const limited = limiter.check(getClientIp(request));
   if (limited) return limited;
 
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
-
   let goal: string;
   try {
     const body = await request.json();
@@ -43,7 +40,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: `Career goal must be under ${MAX_GOAL_LENGTH.toLocaleString()} characters.` }, { status: 400 });
   }
 
-  const ai = new GoogleGenAI({ apiKey });
   const catalog = getSimplifiedCatalog();
 
   const systemPrompt = `
@@ -54,46 +50,40 @@ Here is our course catalog (JSON):
 ${JSON.stringify(catalog)}
 
 INSTRUCTIONS:
-1. Create 3 to 4 learning phases (e.g. Foundation → Intermediate → Advanced → Specialization).
+1. Create 3 to 4 learning phases (e.g. Foundation -> Intermediate -> Advanced -> Specialization).
 2. Each phase should have 1 to 2 course recommendations.
 3. For courses available in our catalog, use type "local" with the course id.
 4. For topics not covered in the catalog, recommend real Alison.com courses using type "external".
-5. You MUST respond ONLY with a valid JSON array. No markdown, no explanation text.
+5. You MUST respond ONLY with a valid JSON object. No markdown, no explanation text.
 6. Format:
-[
-  {
-    "phase": 1,
-    "title": "Phase Title",
-    "goal": "What the learner will achieve in this phase (1 sentence).",
-    "courses": [
-      {"type": "local", "id": "the-course-id"},
-      {"type": "external", "title": "Exact Alison Course Title", "description": "1 sentence description.", "category": "Category", "tag": "Certificate or Diploma"}
-    ]
-  }
-]`;
+{
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Phase Title",
+      "goal": "What the learner will achieve in this phase (1 sentence).",
+      "courses": [
+        {"type": "local", "id": "the-course-id"},
+        {"type": "external", "title": "Exact Alison Course Title", "description": "1 sentence description.", "category": "Category", "tag": "Certificate or Diploma"}
+      ]
+    }
+  ]
+}`;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash-lite',
-      contents: goal,
-      config: { systemInstruction: systemPrompt, temperature: 0.2, responseMimeType: 'application/json' },
+    const parsed = await generateStructuredJSON({
+      systemPrompt,
+      userInput: goal,
+      temperature: 0.2,
     });
 
-    const responseText = response.text ?? '';
+    const rawPhases: any[] = Array.isArray(parsed)
+      ? parsed
+      : Array.isArray(parsed?.phases)
+      ? parsed.phases
+      : [];
 
-    let phases: any[];
-    try {
-      phases = JSON.parse(responseText);
-    } catch {
-      console.error('Failed to parse Gemini response:', responseText);
-      return NextResponse.json({ error: 'The AI returned an invalid format. Please try again.' }, { status: 500 });
-    }
-
-    if (!Array.isArray(phases)) {
-      return NextResponse.json({ error: 'The AI returned an invalid format.' }, { status: 500 });
-    }
-
-    const result = phases.map((phase) => ({
+    const result = rawPhases.map((phase) => ({
       phase: phase.phase,
       title: phase.title,
       goal: phase.goal,
@@ -122,7 +112,10 @@ INSTRUCTIONS:
 
     return NextResponse.json({ phases: result });
   } catch (error: any) {
-    console.error('Error fetching learning path from Gemini:', error);
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+    console.error('Error fetching learning path:', error);
+    return NextResponse.json(
+      { error: error?.message?.includes('Missing AI API Key') ? 'AI service configuration error: missing API key.' : 'An unexpected error occurred.' },
+      { status: 500 }
+    );
   }
 }

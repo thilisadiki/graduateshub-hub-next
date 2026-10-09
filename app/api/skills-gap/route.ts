@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
+import { generateStructuredJSON } from '@/lib/ai';
 import { checkBotProtection } from '@/utils/security';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
 import { courses } from '@/data/courses';
@@ -21,9 +21,6 @@ const limiter = createRateLimiter({ max: 5, windowSeconds: 60 });
 export async function POST(request: NextRequest) {
   const limited = limiter.check(getClientIp(request));
   if (limited) return limited;
-
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return NextResponse.json({ error: 'Missing Gemini API Key.' }, { status: 500 });
 
   let jobTarget: string;
   let currentSkills: string;
@@ -48,7 +45,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: `Skills list must be under ${MAX_SKILLS_LENGTH.toLocaleString()} characters.` }, { status: 400 });
   }
 
-  const ai = new GoogleGenAI({ apiKey });
   const catalog = getSimplifiedCatalog();
   const userInput = `Target job/role: ${jobTarget}\nCurrent skills: ${currentSkills || 'Not specified'}`;
 
@@ -77,21 +73,11 @@ INSTRUCTIONS:
 }`;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash-lite',
-      contents: userInput,
-      config: { systemInstruction: systemPrompt, temperature: 0.2, responseMimeType: 'application/json' },
+    const analysis = await generateStructuredJSON({
+      systemPrompt,
+      userInput,
+      temperature: 0.2,
     });
-
-    const responseText = response.text ?? '';
-
-    let analysis: any;
-    try {
-      analysis = JSON.parse(responseText);
-    } catch {
-      console.error('Failed to parse Gemini response:', responseText);
-      return NextResponse.json({ error: 'The AI returned an invalid format. Please try again.' }, { status: 500 });
-    }
 
     const resolvedCourses = (analysis.courses || [])
       .map((item: any) => {
@@ -126,7 +112,10 @@ INSTRUCTIONS:
       courses: resolvedCourses,
     });
   } catch (error: any) {
-    console.error('Error fetching skills gap from Gemini:', error);
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+    console.error('Error fetching skills gap:', error);
+    return NextResponse.json(
+      { error: error?.message?.includes('Missing AI API Key') ? 'AI service configuration error: missing API key.' : 'An unexpected error occurred.' },
+      { status: 500 }
+    );
   }
 }
