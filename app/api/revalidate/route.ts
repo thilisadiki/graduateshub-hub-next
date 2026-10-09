@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath, revalidateTag } from 'next/cache';
 import crypto from 'crypto';
 import { createRateLimiter, getClientIp } from '@/utils/rateLimit';
+import { submitToIndexNow } from '@/utils/indexnow';
 
 // Allow up to 30 revalidation requests per minute per IP
 const limiter = createRateLimiter({ max: 30, windowSeconds: 60 });
@@ -101,10 +102,29 @@ async function handleRevalidation(request: NextRequest, target: RevalidateTarget
       revalidatedPaths.push(target.path);
     }
 
+    // 4. Automatically notify IndexNow (Bing / Yandex / Seznam)
+    let indexNowResult: any = null;
+    try {
+      const contentPaths = revalidatedPaths.filter((p) => p !== '/sitemap.xml');
+      if (contentPaths.length > 0) {
+        indexNowResult = await submitToIndexNow(contentPaths);
+      }
+    } catch (indexNowErr) {
+      console.warn('IndexNow submission failed during revalidation:', indexNowErr);
+    }
+
     return NextResponse.json({
       revalidated: true,
       timestamp: new Date().toISOString(),
       paths: revalidatedPaths,
+      indexNow: indexNowResult
+        ? {
+            submitted: indexNowResult.success,
+            count: indexNowResult.submittedCount,
+            status: indexNowResult.status,
+            message: indexNowResult.message,
+          }
+        : undefined,
     });
   } catch (error: any) {
     console.error('Revalidation error:', error);

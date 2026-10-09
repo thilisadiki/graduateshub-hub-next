@@ -31,6 +31,18 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url, { status: 301 });
   }
 
+  // 3. Dynamically serve IndexNow key verification if requested
+  const indexNowKey = (process.env.INDEXNOW_KEY || '3a0d782192dbc45588d6099ffb9fb689').trim();
+  if (url.pathname === `/${indexNowKey}.txt`) {
+    return new NextResponse(indexNowKey, {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400',
+      },
+    });
+  }
+
   const response = NextResponse.next();
 
   if (!ALLOWED_HOSTS.includes(host)) {

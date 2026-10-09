@@ -61,6 +61,9 @@ TURNSTILE_SECRET_KEY=your_turnstile_secret_key
 
 # Cron Job Secret (Keepalive)
 CRON_SECRET=your_cron_secret_key
+
+# IndexNow (Bing / Search Engine instant indexing - optional custom key override)
+# INDEXNOW_KEY=3a0d782192dbc45588d6099ffb9fb689
 ```
 
 ### 4. Run Development Server
@@ -77,6 +80,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 *   `npm run dev` - Launches the local Next.js development server.
 *   `npm run build` - Generates a static-optimized production build of the project.
 *   `npm start` - Boots the production server locally (must run `npm run build` first).
+*   `npm run indexnow` - Submits all canonical URLs to Bing IndexNow for instant search indexing.
 *   `npx tsc --noEmit` - Executes static TypeScript validation checks.
 
 ---
