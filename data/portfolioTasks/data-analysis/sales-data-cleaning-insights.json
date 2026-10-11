@@ -1,0 +1,55 @@
+{
+  "id": "sales-data-cleaning-insights",
+  "categoryId": "data-analytics",
+  "topicId": "data-cleaning",
+  "level": "beginner",
+  "title": "Sales Data Cleaning and Insights Project",
+  "difficulty": "Beginner",
+  "estimatedHours": "2 hours",
+  "tagline": "Clean raw multi-channel retail sales data, audit anomalies, and deliver three executive-ready commercial insights.",
+  "scenario": "A fast-growing multi-store retailer exported 12 months of point-of-sale and e-commerce transactions into a messy CSV containing 45,000 records. The raw dataset suffers from common operational defects: inconsistent date timestamps (mixed ISO and regional South African formats), unstandardised customer city and province names, negative unit prices from improperly flagged customer returns, missing SKU category IDs, trailing whitespace and casing discrepancies in product titles, and duplicate transaction rows caused by server timeouts during POS batch syncs. The Head of Commercial Operations wants clean, trustworthy data and a concise memo highlighting what actually happened in the business over the past year.",
+  "brief": "You do not need access to the raw CSV file to complete this project. Walk through your complete analytical workflow:\n\n1. Specify your ordered data cleaning protocol, explaining each transformation step and its technical rationale.\n2. Write a concise executive insights memo (under 300 words) as if you explored the cleaned dataset, presenting three distinct commercial findings supported by plausible metrics.\n3. Outline the key operational limitations of this dataset, specifying what missing data points prevent deeper analysis and what you recommend collecting next.",
+  "deliverables": [
+    "A structured, numbered data cleaning audit log detailing each step in execution order (handling duplicates, date parsing, text normalization, null imputation, and return value validation) with technical justifications",
+    "An executive insights memo (maximum 300 words) presenting three distinct commercial findings (e.g. basket size trends, channel revenue split, return rate anomalies), each substantiated with plausible numbers and percentages",
+    "A data boundaries assessment identifying at least one crucial business question this dataset cannot resolve, along with the specific tracking fields or external data sources required to answer it"
+  ],
+  "deliverableFormat": "markdown",
+  "submissionGuidance": "Structure your submission with clear markdown headings. Make your cleaning steps practical and actionable for a Python (pandas), SQL, or Excel workflow. In your memo, avoid generic statements like 'sales increased in December': deliver specific observations with concrete figures (e.g., 'E-commerce basket sizes averaged R640 versus R410 in physical stores, yet digital return rates reached 14.2%').",
+  "rubric": [
+    {
+      "key": "cleaning",
+      "label": "Data Cleaning Protocol",
+      "description": "Are the cleaning transformations thorough, arranged in a logical sequence, and defended with sound technical reasoning?",
+      "weight": 35
+    },
+    {
+      "key": "insights",
+      "label": "Commercial Insight Quality",
+      "description": "Are the three insights specific, non-trivial, commercially meaningful, and relevant to retail decision-makers?",
+      "weight": 35
+    },
+    {
+      "key": "numeracy",
+      "label": "Numerical & Metric Plausibility",
+      "description": "Do the cited figures, percentages, and financial metrics pass standard commercial sanity checks?",
+      "weight": 15
+    },
+    {
+      "key": "limitations",
+      "label": "Analytical Boundaries & Critical Thinking",
+      "description": "Does the candidate demonstrate clear awareness of data limitations and articulate actionable next steps?",
+      "weight": 15
+    }
+  ],
+  "skillsProven": [
+    "Data cleaning",
+    "Exploratory data analysis",
+    "Retail analytics",
+    "Executive communication",
+    "Data quality auditing"
+  ],
+  "relatedRoadmapIds": [
+    "data-analyst"
+  ]
+}

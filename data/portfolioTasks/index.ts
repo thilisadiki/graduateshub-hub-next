@@ -219,7 +219,12 @@ export const portfolioTasks: PortfolioTask[] = [
 ];
 
 export function getTaskById(id: string): PortfolioTask | undefined {
-  return portfolioTasks.find((t) => t.id === id);
+  const task = portfolioTasks.find((t) => t.id === id);
+  if (task) return task;
+  if (id === 'data-cleaning-messy-csv') {
+    return portfolioTasks.find((t) => t.id === 'sales-data-cleaning-insights');
+  }
+  return undefined;
 }
 
 export function getTaskByLocation(
