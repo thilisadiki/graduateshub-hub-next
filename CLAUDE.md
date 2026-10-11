@@ -29,4 +29,6 @@ npm run build
 ## Common Workflows
 - **Add Career Roadmap:** Create template in `/data/roadmaps/` and export in index.
 - **Add Interview Prep Guide:** Create entry in `/data/interviewPrep/` and export in index.
-- **Add Gemini Endpoint:** Setup router in `/app/api/` applying security bounds, rate limits, and error handling as defined in `/docs/security.md`.
+- **Add AI Tool Endpoint:** Setup router in `/app/api/` using unified helper in `lib/ai.ts`, applying security bounds and rate limits as defined in `/docs/security.html`.
+- **Publish or Revalidate Blog Article:** Author in WordPress (`articles.graduateshub.co.za`). Trigger cache purge via `POST /api/revalidate?secret=...&slug=...`, which automatically pings Bing IndexNow.
+- **Submit URLs to IndexNow:** Run `npm run indexnow` (all sitemap URLs) or `npm run indexnow -- /blog/post-slug`.

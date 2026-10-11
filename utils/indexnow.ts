@@ -92,7 +92,7 @@ export async function submitToIndexNow(
   };
 
   try {
-    const response = await fetch(endpoint, {
+    let response = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
@@ -100,7 +100,25 @@ export async function submitToIndexNow(
       body: JSON.stringify(payload),
     });
 
-    const status = response.status;
+    let status = response.status;
+    let bodyText = '';
+
+    if (status !== 200 && status !== 202) {
+      bodyText = await response.text();
+      if (bodyText.includes('SiteVerificationNotCompleted')) {
+        // Wait 3 seconds for initial key verification handshake to finish
+        await new Promise((r) => setTimeout(r, 3000));
+        response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: JSON.stringify(payload),
+        });
+        status = response.status;
+      }
+    }
+
     const success = status === 200 || status === 202;
 
     let message = '';
@@ -111,7 +129,7 @@ export async function submitToIndexNow(
     } else if (status === 400) {
       message = 'Bad Request: Invalid format or parameters in IndexNow payload.';
     } else if (status === 403) {
-      message = 'Forbidden: IndexNow key is invalid or not found at keyLocation.';
+      message = 'Forbidden: IndexNow key is invalid or site verification has not completed yet.';
     } else if (status === 422) {
       message = 'Unprocessable Entity: URLs do not belong to the host.';
     } else if (status === 429) {

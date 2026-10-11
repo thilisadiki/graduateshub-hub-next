@@ -147,6 +147,28 @@ git switch dev && git merge main && git push                   # backport to dev
 4. **Market & Industry Localization**: Always include real-world South African job market context, employer expectations, and statutory compliance frameworks.
 5. **Actionable Next Steps**: Every page must guide the learner to concrete next steps (e.g. portfolio proof tasks, roadmaps, or interactive AI tools).
 
+## Headless Blog Publishing & Revalidation Workflow
+
+Graduates Hub articles are managed in WordPress (`articles.graduateshub.co.za`) and delivered through Next.js ISR:
+
+1. **Authoring & Publishing in WordPress**:
+   - Write articles using Gutenberg blocks in the WordPress dashboard.
+   - Upload featured images and media assets to WordPress; Next.js serves them via the configured image domain.
+   - Permalinks referencing `articles.graduateshub.co.za` are automatically rewritten to canonical `/blog/*` paths by Next.js.
+2. **Instant Cache Revalidation**:
+   - When an article is published or updated, WordPress pings the revalidation route: `POST /api/revalidate?secret=...&slug=your-slug`.
+   - To manually revalidate a blog post from the terminal:
+     ```bash
+     curl -X POST "https://www.graduateshub.org/api/revalidate?secret=YOUR_REVALIDATION_SECRET&slug=your-post-slug"
+     ```
+   - This purges the tagged cache for `article-${slug}`, refreshes `/blog` and `/sitemap.xml`, and pulls the fresh article content.
+3. **Automated Search Indexing (IndexNow)**:
+   - On every revalidation, `/api/revalidate` automatically submits the canonical URLs to Bing IndexNow.
+   - You can also submit URLs to IndexNow manually from your terminal:
+     ```bash
+     npm run indexnow -- /blog/your-post-slug
+     ```
+
 ## Cheat sheet
 
 | Goal | Command |

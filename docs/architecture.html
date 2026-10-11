@@ -348,6 +348,9 @@
       <li class="nav-item">
         <a href="#proof-badging">Proof Verification & Badges</a>
       </li>
+      <li class="nav-item">
+        <a href="#blog-pipeline">Headless Blog Pipeline</a>
+      </li>
     </ul>
 
     <div class="doc-links">
@@ -506,8 +509,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <section id="integrations">
       <h2>5. Third-Party Integrations</h2>
       <ul>
-        <li><strong>Google Gemini API:</strong> Controlled server-side via the `@google/genai` SDK (currently the <code>gemini-3.5-flash-lite</code> model across all AI routes) to evaluate student submissions, build learning paths, and audit CVs.</li>
-        <li><strong>Resend:</strong> Handles mail sending for feedback and contact pages.</li>
+        <li><strong>Open-Source AI Engine:</strong> Managed through <code>lib/ai.ts</code> using OpenAI-compatible client libraries (Groq with Meta Llama 3.3 70B / Qwen 2.5) to evaluate student submissions, build learning paths, and audit CVs.</li>
+        <li><strong>Headless WordPress CMS:</strong> Dedicated content engine hosted at <code>articles.graduateshub.co.za</code> serving blog posts, categories, and media via the WordPress REST API (<code>/wp/v2/posts</code>).</li>
+        <li><strong>Bing IndexNow Protocol:</strong> Real-time indexing engine via <code>utils/indexnow.ts</code> and <code>/api/indexnow</code> that automatically notifies Bing, Yandex, and other search engines whenever pages or blog posts are published or revalidated.</li>
+        <li><strong>Resend:</strong> Handles mail sending for feedback, proof links, and contact pages.</li>
         <li><strong>OneSignal:</strong> Delivers browser-push notifications initialized through a lazy client script.</li>
         <li><strong>Cloudflare Turnstile:</strong> Secures form inputs by executing verification tokens before executing endpoints.</li>
       </ul>
@@ -569,11 +574,53 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       
       <div class="alert tip">
         <div class="alert-title">AI Tools Architectural Paradigm</div>
-        <p><strong>AI Tools = Product Conversion &amp; Engagement Engine</strong> (delivers instant interactive utility via Google Gemini API)<br>
+        <p><strong>AI Tools = Product Conversion &amp; Engagement Engine</strong> (delivers instant interactive utility via Open-Source AI models / Groq)<br>
         <strong>Host Landing Pages = SEO Search Intent Engine</strong> (provides rich static editorial text addressing real user career problems for search engines)</p>
       </div>
 
       <p>Rather than relying on client-side dynamic AI outputs for search ranking, editorial landing pages (such as <code>/free-ai-career-tools</code>) contain rich static problem-solving text (CV audits, job description decoding, skill gap analysis, STAR interview prep) that ranks on search engines while embedding the interactive tool widget inside.</p>
+    </section>
+
+    <section id="blog-pipeline">
+      <h2>10. Headless WordPress Blog &amp; Content Pipeline</h2>
+      <p>Graduates Hub utilizes a decoupled headless publishing architecture where editorial content is authored in WordPress and rendered at high speed through Next.js.</p>
+
+      <div class="alert">
+        <div class="alert-title">Headless Subdomain Isolation</div>
+        <p>The WordPress backend lives on a private subdomain (<code>https://articles.graduateshub.co.za</code>) and is never exposed directly to public website visitors. The Next.js frontend at <code>https://www.graduateshub.org/blog</code> acts as the sole public presentation layer, fetching content via standard WordPress REST API endpoints (<code>/wp/v2/posts</code>).</p>
+      </div>
+
+      <h3>A. Incremental Static Regeneration (ISR) &amp; Tagged Caching</h3>
+      <ul>
+        <li><strong>Baseline Revalidation (<code>revalidate = 86400</code>):</strong> All blog listing and post pages revalidate on a 24-hour fallback schedule to keep server loads minimal.</li>
+        <li><strong>On-Demand Static Generation (<code>dynamicParams = true</code>):</strong> Newly published posts on WordPress become instantly accessible without requiring a redeployment or manual rebuild.</li>
+        <li><strong>Tagged Data Cache:</strong> Fetch requests are tagged with <code>tags: ['articles', `article-${slug}`]</code>. This enables selective, instant cache purging without touching unrelated static assets.</li>
+        <li><strong>Request Deduplication (<code>React.cache</code>):</strong> The helper <code>fetchPostBySlug</code> is wrapped in React memoization cache, ensuring <code>generateMetadata()</code> and the Page component share a single network call per render.</li>
+      </ul>
+
+      <h3>B. Content Sanitization &amp; DOM Cleaning (DOMPurify)</h3>
+      <p>Raw HTML delivered by the WordPress Gutenberg block editor contains legacy attributes, editor markers, and potential XSS vectors. Content passes through a multi-stage cleaning pipeline in <code>app/blog/[slug]/page.tsx</code>:</p>
+      <ul>
+        <li><strong>Strict Tag and Attribute Allowlist:</strong> Sanitized with <code>isomorphic-dompurify</code> to allow only safe semantic markup (e.g. headings, lists, tables, links, images, quotes).</li>
+        <li><strong>Internal Link Normalization:</strong> Regular expressions automatically rewrite all WordPress subdomain permalinks (<code>https://articles.graduateshub.co.za/...</code>) to canonical Next.js routes (<code>/blog/...</code>), while preserving static media paths (<code>/wp-content/...</code>).</li>
+        <li><strong>Editor Noise Removal:</strong> Gutenberg comment markers, empty paragraphs, redundant wrapper spans, and inline styling attributes are stripped before HTML injection.</li>
+      </ul>
+
+      <h3>C. Structured Data &amp; SEO Enrichment</h3>
+      <ul>
+        <li><strong>JSON-LD BlogPosting Schema:</strong> Injects article author attribution, publisher metadata, dates, and featured image fallbacks for Google Rich Results.</li>
+        <li><strong>Automated FAQ Extraction:</strong> Automatically detects Rank Math or standard FAQ blocks in post HTML and injects dynamic <code>FAQPage</code> schema for search result rich snippets.</li>
+        <li><strong>Pagination Crawl Control:</strong> Page 1 of the blog listing is canonical and indexed; page 2 and beyond automatically apply <code>noindex, follow</code> robots meta tags to prevent crawl budget waste.</li>
+        <li><strong>Dynamic Sitemap Sync (<code>app/sitemap.ts</code>):</strong> The sitemap builder queries the WordPress REST API to ensure all published articles are listed dynamically with priority <code>0.7</code>.</li>
+      </ul>
+
+      <h3>D. Instant Revalidation &amp; IndexNow Handshake</h3>
+      <p>When an article is created or updated in WordPress, an automated webhook calls <code>POST /api/revalidate</code>:</p>
+      <ul>
+        <li><strong>Security Verification:</strong> Validated via timing-safe comparison against <code>REVALIDATION_SECRET</code>.</li>
+        <li><strong>Cache Purging:</strong> Invalidates Next.js data cache tags (<code>revalidateTag('articles')</code>, <code>revalidateTag(`article-${cleanSlug}`)</code>) and triggers path revalidation (<code>/blog</code>, <code>/</code>, <code>/sitemap.xml</code>, <code>/blog/${cleanSlug}</code>).</li>
+        <li><strong>Real-Time IndexNow Ping:</strong> Immediately dispatches canonical article URLs to the Bing IndexNow API (<code>submitToIndexNow</code>), notifying Bing, Yandex, and other search engines within seconds of publication.</li>
+      </ul>
     </section>
   </main>
 

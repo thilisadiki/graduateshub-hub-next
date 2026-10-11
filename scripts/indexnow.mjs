@@ -131,14 +131,33 @@ Environment:
       body: JSON.stringify(payload),
     });
 
-    const status = res.status;
+    let status = res.status;
+    let bodyText = '';
+    if (status !== 200 && status !== 202) {
+      bodyText = await res.text();
+      if (bodyText.includes('SiteVerificationNotCompleted')) {
+        console.log('\nVerification initiated by IndexNow. Waiting 3 seconds for handshake...');
+        await new Promise((r) => setTimeout(r, 3000));
+        const retryRes = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: JSON.stringify(payload),
+        });
+        status = retryRes.status;
+        if (status !== 200 && status !== 202) {
+          bodyText = await retryRes.text();
+        }
+      }
+    }
+
     if (status === 200) {
       console.log(`\nSUCCESS (HTTP 200): All ${uniqueUrls.length} URLs submitted to IndexNow successfully!`);
     } else if (status === 202) {
       console.log(`\nACCEPTED (HTTP 202): URLs received by IndexNow. Key validation in progress.`);
     } else {
       console.error(`\nRESPONSE HTTP ${status}`);
-      const bodyText = await res.text();
       if (bodyText) console.error(`Response body: ${bodyText}`);
     }
   } catch (err) {
