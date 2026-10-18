@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound, redirect, RedirectType } from 'next/navigation';
-import { Calendar, ArrowLeft, UserRound } from 'lucide-react';
+import { Calendar, ArrowLeft, UserRound, ChevronLeft, ChevronRight } from 'lucide-react';
 import DOMPurify from 'isomorphic-dompurify';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
@@ -123,36 +123,28 @@ function extractFaqSchema(html: string) {
   };
 }
 
-async function fetchRelatedPosts(categoryIds: number[], excludeId: number) {
-  if (categoryIds.length === 0) return [];
-  try {
-    const res = await fetch(
-      `${WP_API}/wp/v2/posts?per_page=3&categories=${categoryIds.join(',')}&exclude=${excludeId}&_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia`,
-      { next: { revalidate: 86400, tags: ['articles'] } }
-    );
-    if (!res.ok) return [];
-    return await res.json();
-  } catch {
-    return [];
-  }
+interface PostSummary {
+  id: number;
+  slug: string;
+  title: { rendered: string };
+  date: string;
 }
 
-// Pre-render all existing post slugs at build time.
-// Fetches up to 100 posts per page; loops until all slugs are collected.
-export async function generateStaticParams() {
-  const slugs: { slug: string }[] = [];
+// React.cache deduplicates: generateStaticParams and BlogPostPage share this cached summary.
+const fetchAllPostsSummary = cache(async (): Promise<PostSummary[]> => {
+  const allPosts: PostSummary[] = [];
   let page = 1;
 
   while (true) {
     try {
       const res = await fetch(
-        `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=slug`,
-        { next: { revalidate: 86400 } }
+        `${WP_API}/wp/v2/posts?per_page=100&page=${page}&_fields=id,slug,title,date`,
+        { next: { revalidate: 86400, tags: ['articles'] } }
       );
       if (!res.ok) break;
-      const posts: { slug: string }[] = await res.json();
-      if (posts.length === 0) break;
-      slugs.push(...posts.map((p) => ({ slug: p.slug })));
+      const posts: PostSummary[] = await res.json();
+      if (!Array.isArray(posts) || posts.length === 0) break;
+      allPosts.push(...posts);
       const totalPages = parseInt(res.headers.get('X-WP-TotalPages') ?? '1');
       if (page >= totalPages) break;
       page++;
@@ -161,7 +153,49 @@ export async function generateStaticParams() {
     }
   }
 
-  return slugs;
+  return allPosts;
+});
+
+async function fetchRelatedPosts(categoryIds: number[], excludeId: number) {
+  try {
+    let posts: any[] = [];
+    if (categoryIds.length > 0) {
+      const res = await fetch(
+        `${WP_API}/wp/v2/posts?per_page=3&categories=${categoryIds.join(',')}&exclude=${excludeId}&_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia`,
+        { next: { revalidate: 86400, tags: ['articles'] } }
+      );
+      if (res.ok) {
+        posts = await res.json();
+      }
+    }
+
+    // Fallback: If category has fewer than 3 posts, fill remaining slots with recent posts
+    if (posts.length < 3) {
+      const excludeIds = [excludeId, ...posts.map((p: any) => p.id)];
+      const fallbackLimit = 3 - posts.length;
+      const fallbackRes = await fetch(
+        `${WP_API}/wp/v2/posts?per_page=${fallbackLimit}&exclude=${excludeIds.join(',')}&_fields=id,slug,title,excerpt,date,_links&_embed=wp:featuredmedia`,
+        { next: { revalidate: 86400, tags: ['articles'] } }
+      );
+      if (fallbackRes.ok) {
+        const fallbackPosts = await fallbackRes.json();
+        if (Array.isArray(fallbackPosts)) {
+          posts = [...posts, ...fallbackPosts];
+        }
+      }
+    }
+
+    return posts;
+  } catch {
+    return [];
+  }
+}
+
+// Pre-render all existing post slugs at build time.
+// Fetches up to 100 posts per page; loops until all slugs are collected.
+export async function generateStaticParams() {
+  const posts = await fetchAllPostsSummary();
+  return posts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -225,10 +259,53 @@ export default async function BlogPostPage({
   const categories: any[] = post._embedded?.['wp:term']?.[0] ?? [];
   const categoryIds: number[] = categories.map((c: any) => c.id);
   const author = post._embedded?.author?.[0] ?? null;
-  const [content, relatedRaw] = await Promise.all([
+  const [content, relatedRaw, allPosts] = await Promise.all([
     Promise.resolve(cleanContent(post.content.rendered)),
     fetchRelatedPosts(categoryIds, post.id),
+    fetchAllPostsSummary(),
   ]);
+
+  let prevPost: { slug: string; title: { rendered: string }; formattedDate: string } | null = null;
+  let nextPost: { slug: string; title: { rendered: string }; formattedDate: string } | null = null;
+
+  if (allPosts.length > 1) {
+    const currentIndex = allPosts.findIndex((p) => p.slug === slug);
+    if (currentIndex !== -1) {
+      // In default WordPress sort (newest to oldest):
+      // currentIndex + 1 is the older post (Previous)
+      // currentIndex - 1 is the newer post (Next)
+      // Modulo wrap-around guarantees a closed circular loop with zero orphans
+      const prevIndex = (currentIndex + 1) % allPosts.length;
+      const nextIndex = (currentIndex - 1 + allPosts.length) % allPosts.length;
+
+      const prevRaw = allPosts[prevIndex];
+      const nextRaw = allPosts[nextIndex];
+
+      if (prevRaw && prevRaw.slug !== slug) {
+        prevPost = {
+          slug: prevRaw.slug,
+          title: prevRaw.title,
+          formattedDate: new Date(prevRaw.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          }),
+        };
+      }
+
+      if (nextRaw && nextRaw.slug !== slug && nextRaw.slug !== prevRaw?.slug) {
+        nextPost = {
+          slug: nextRaw.slug,
+          title: nextRaw.title,
+          formattedDate: new Date(nextRaw.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          }),
+        };
+      }
+    }
+  }
 
   const related = relatedRaw.map((p: any) => ({
     slug: p.slug,
@@ -382,7 +459,54 @@ export default async function BlogPostPage({
           </div>
         )}
 
-        <ToolsPromo />
+        {/* Previous and Next Article Navigation (Closed-Loop Chaining) */}
+        {(prevPost || nextPost) && (
+          <nav aria-label="Article navigation" className="mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {prevPost ? (
+                <Link
+                  href={`/blog/${prevPost.slug}`}
+                  className="group flex flex-col justify-between p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary transition-all text-left"
+                >
+                  <div>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-primary mb-2.5 group-hover:-translate-x-1 transition-transform">
+                      <ChevronLeft size={16} /> Previous Article
+                    </span>
+                    <p className="font-extrabold text-gray-900 group-hover:text-primary transition-colors text-sm md:text-base leading-snug line-clamp-2">
+                      {sanitizeText(prevPost.title.rendered)}
+                    </p>
+                  </div>
+                  <span className="text-xs text-gray-400 mt-4">{prevPost.formattedDate}</span>
+                </Link>
+              ) : (
+                <div />
+              )}
+
+              {nextPost ? (
+                <Link
+                  href={`/blog/${nextPost.slug}`}
+                  className="group flex flex-col justify-between p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary transition-all text-left sm:text-right"
+                >
+                  <div>
+                    <span className="inline-flex items-center justify-start sm:justify-end gap-1.5 text-xs font-bold text-primary mb-2.5 group-hover:translate-x-1 transition-transform">
+                      Next Article <ChevronRight size={16} />
+                    </span>
+                    <p className="font-extrabold text-gray-900 group-hover:text-primary transition-colors text-sm md:text-base leading-snug line-clamp-2">
+                      {sanitizeText(nextPost.title.rendered)}
+                    </p>
+                  </div>
+                  <span className="text-xs text-gray-400 mt-4">{nextPost.formattedDate}</span>
+                </Link>
+              ) : (
+                <div />
+              )}
+            </div>
+          </nav>
+        )}
+
+        <div className="mt-10">
+          <ToolsPromo />
+        </div>
 
         {/* Related articles */}
         {related.length > 0 && (
