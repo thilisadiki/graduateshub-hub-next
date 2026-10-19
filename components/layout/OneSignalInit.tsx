@@ -10,7 +10,35 @@ export default function OneSignalInit() {
         OneSignal.init({
           appId: 'ab8387b0-92e7-4da6-9596-ccef9aae0600',
           allowLocalhostAsSecureOrigin: process.env.NODE_ENV === 'development',
+
+          // Keep the bell so users can manage their subscription at any time
           notifyButton: { enable: true, position: 'bottom-left' } as any,
+
+          // Slide-down prompt shown before the browser's native permission dialog.
+          // Giving users a branded prompt first significantly increases opt-in rates
+          // compared to hitting them with the raw browser dialog cold.
+          promptOptions: {
+            slidedown: {
+              prompts: [
+                {
+                  type: 'push',
+                  autoPrompt: true,
+                  // Delay: show after 30 s on page and 1 page view so first-time
+                  // visitors see some content before being interrupted.
+                  delay: {
+                    pageViews: 1,
+                    timeDelay: 30,
+                  },
+                  text: {
+                    actionMessage:
+                      'Get free career guides, AI course updates, and graduate job alerts delivered to your browser.',
+                    acceptButton: 'Subscribe',
+                    cancelButton: 'Maybe later',
+                  },
+                },
+              ],
+            },
+          } as any,
         });
       });
     };
