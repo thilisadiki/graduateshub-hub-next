@@ -31,7 +31,7 @@ export default function OneSignalInit() {
                   },
                   text: {
                     actionMessage:
-                      'Get free career guides, AI course updates, and graduate job alerts delivered to your browser.',
+                      "Don't miss new career guides - get notified the moment we publish.",
                     acceptButton: 'Subscribe',
                     cancelButton: 'Maybe later',
                   },
