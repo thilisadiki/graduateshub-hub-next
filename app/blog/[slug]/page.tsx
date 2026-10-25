@@ -7,6 +7,7 @@ import { Calendar, ArrowLeft, UserRound, ChevronLeft, ChevronRight } from 'lucid
 import DOMPurify from 'isomorphic-dompurify';
 import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
+import PortfolioPromo from '@/components/shared/PortfolioPromo';
 import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 export const revalidate = 86400;   // 24-hour fallback (instant on-demand webhook handles real-time updates)
@@ -505,6 +506,10 @@ export default async function BlogPostPage({
         )}
 
         <div className="mt-10">
+          <PortfolioPromo />
+        </div>
+
+        <div className="mt-8">
           <ToolsPromo />
         </div>
 
