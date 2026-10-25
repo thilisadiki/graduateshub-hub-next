@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Landmark, Award, Clock, Lock, CheckCircle2 } from 'lucide-react';
 import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
@@ -100,6 +101,21 @@ const careerPaths: CareerPathItem[] = [
 
 const relatedGuides: RelatedGuide[] = [
   {
+    href: '/blog/best-fema-independent-study-courses-for-resume',
+    title: 'Best FEMA Independent Study Courses for Your Resume',
+    desc: 'Discover the top free FEMA certificates that carry the most weight with private and public sector employers.',
+  },
+  {
+    href: '/blog/cisa-learning-fedvte-free-cybersecurity-courses-guide',
+    title: 'CISA Learning & FedVTE Free Cybersecurity Courses Guide',
+    desc: 'Step-by-step roadmap to accessing free DHS and CISA cybersecurity training modules and certifications.',
+  },
+  {
+    href: '/blog/sba-learning-center-fai-free-government-business-courses',
+    title: 'SBA Learning Center & FAI Free Business Courses',
+    desc: 'Master small business management, government contracting, and federal procurement at zero cost.',
+  },
+  {
     href: '/free-courses-with-certificates',
     title: 'Free Online Courses with Free Certificates',
     desc: 'Explore the complete directory of free certified online courses across top global platforms.',
@@ -161,9 +177,27 @@ function USGovDeepDiveSections() {
         <p className="text-gray-600 leading-relaxed mb-4">
           Federal programs are issued by national agencies and are valid across all 50 states. These credentials carry the weight of the US government and are recognized by both public and private sector employers nationwide. The most widely pursued federal programs include:
         </p>
-        <ul className="list-disc list-inside space-y-3 text-gray-600 mb-8 pl-2">
-          <li><strong className="text-gray-900">FEMA Independent Study (IS) Program:</strong> Emergency management, disaster preparedness, and incident command training recognized across every state and territory.</li>
-          <li><strong className="text-gray-900">CISA (Cybersecurity and Infrastructure Security Agency):</strong> Cybersecurity awareness and workforce development courses accepted by federal contractors, IT departments, and defense sector employers.</li>
+        <ul className="list-disc list-inside space-y-4 text-gray-600 mb-8 pl-2">
+          <li>
+            <strong className="text-gray-900">FEMA Independent Study (IS) Program:</strong> Emergency management, disaster preparedness, and incident command training recognized across every state and territory. For a curated list of high-value courses, review our guide to the{' '}
+            <Link href="/blog/best-fema-independent-study-courses-for-resume" className="text-primary hover:underline font-semibold">
+              best FEMA independent study courses for your resume
+            </Link>.
+          </li>
+          <li>
+            <strong className="text-gray-900">CISA (Cybersecurity and Infrastructure Security Agency):</strong> Cybersecurity awareness and workforce development courses accepted by federal contractors, IT departments, and defense sector employers. Read our full{' '}
+            <Link href="/blog/cisa-learning-fedvte-free-cybersecurity-courses-guide" className="text-primary hover:underline font-semibold">
+              CISA Learning and FedVTE free cybersecurity courses guide
+            </Link>{' '}
+            for enrollment instructions and career pathways.
+          </li>
+          <li>
+            <strong className="text-gray-900">SBA & FAI (Small Business & Federal Acquisition):</strong> Entrepreneurship, commercial readiness, and government procurement certifications. Explore our overview of{' '}
+            <Link href="/blog/sba-learning-center-fai-free-government-business-courses" className="text-primary hover:underline font-semibold">
+              SBA Learning Center and FAI free government business courses
+            </Link>{' '}
+            to boost your contracting and project management skills.
+          </li>
           <li><strong className="text-gray-900">CDC Learning Connection:</strong> Public health, epidemiology, and health communication courses used by healthcare employers and NGOs globally.</li>
           <li><strong className="text-gray-900">OSHA Online Outreach Training:</strong> Workplace safety certifications required or preferred by construction, manufacturing, and facilities employers across all US states.</li>
           <li><strong className="text-gray-900">USDA AgLearn:</strong> Agriculture, rural development, and natural resource management training.</li>
@@ -221,9 +255,72 @@ function USGovDeepDiveSections() {
             </tbody>
           </table>
         </div>
-        <p className="mt-6 text-sm text-gray-500 bg-[#FFDF9C]/10 border border-[#D1C5B4] rounded-xl px-5 py-4">
+        <p className="mt-6 text-sm text-gray-500 bg-[#FFDF9C]/10 border border-[#D1C5B4] rounded-xl px-5 py-4 mb-8">
           <strong className="text-gray-900">Actionable tip:</strong> Search your state name plus &quot;free workforce certification&quot; or &quot;workforce development board&quot; to find locally funded programs. Every state has them; most learners never look.
         </p>
+
+        {/* Featured in-depth blog guides callout */}
+        <div className="bg-amber-50/70 border border-amber-200/90 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div className="flex items-center gap-2.5 mb-2">
+            <Landmark className="text-primary w-5 h-5 shrink-0" />
+            <h3 className="text-lg font-bold text-gray-900">
+              Deep-Dive Guides for Top Federal Programs
+            </h3>
+          </div>
+          <p className="text-gray-600 text-sm leading-relaxed mb-5">
+            Looking for specific course codes, enrollment walkthroughs, or exam tips? Read our detailed guides:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <Link
+              href="/blog/best-fema-independent-study-courses-for-resume"
+              className="bg-white rounded-xl p-4 border border-amber-100 hover:border-primary shadow-sm hover:shadow transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm mb-1">
+                  Best FEMA Courses for Resume
+                </p>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Key EMI certificates, exam strategies, and ATS formatting guidelines.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-primary mt-3 inline-flex items-center gap-1">
+                Read Guide →
+              </span>
+            </Link>
+            <Link
+              href="/blog/cisa-learning-fedvte-free-cybersecurity-courses-guide"
+              className="bg-white rounded-xl p-4 border border-amber-100 hover:border-primary shadow-sm hover:shadow transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm mb-1">
+                  CISA & FedVTE Cybersecurity
+                </p>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Free DHS and CISA training modules for aspiring security analysts.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-primary mt-3 inline-flex items-center gap-1">
+                Read Guide →
+              </span>
+            </Link>
+            <Link
+              href="/blog/sba-learning-center-fai-free-government-business-courses"
+              className="bg-white rounded-xl p-4 border border-amber-100 hover:border-primary shadow-sm hover:shadow transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <p className="font-bold text-gray-900 group-hover:text-primary transition-colors text-sm mb-1">
+                  SBA & FAI Business Courses
+                </p>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Official certificates in entrepreneurship and federal procurement.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-primary mt-3 inline-flex items-center gap-1">
+                Read Guide →
+              </span>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Section 2: Resume and CV Translation */}
@@ -264,10 +361,27 @@ function USGovDeepDiveSections() {
           <p>[Full Issuing Agency Name] | [Month Year] | [Certificate ID if available]</p>
         </div>
         <p className="text-gray-600 font-semibold mb-3">Real examples formatted correctly:</p>
-        <ul className="list-disc list-inside space-y-2 text-gray-600 mb-8 pl-2 text-sm">
-          <li>IS-100.c: Introduction to the Incident Command System, FEMA | Aug 2024 | Certificate No. 12345678</li>
+        <ul className="list-disc list-inside space-y-2.5 text-gray-600 mb-8 pl-2 text-sm">
+          <li>
+            IS-100.c: Introduction to the Incident Command System, FEMA | Aug 2024 | Certificate No. 12345678 (see our{' '}
+            <Link href="/blog/best-fema-independent-study-courses-for-resume" className="text-primary hover:underline font-medium">
+              FEMA resume guide
+            </Link>{' '}
+            for full examples)
+          </li>
+          <li>
+            Introduction to Cybersecurity, Cybersecurity and Infrastructure Security Agency (CISA) | Mar 2024 (covered in our{' '}
+            <Link href="/blog/cisa-learning-fedvte-free-cybersecurity-courses-guide" className="text-primary hover:underline font-medium">
+              CISA and FedVTE course guide
+            </Link>)
+          </li>
+          <li>
+            Federal Contracting Basics, Federal Acquisition Institute (FAI) | May 2024 (explored in our{' '}
+            <Link href="/blog/sba-learning-center-fai-free-government-business-courses" className="text-primary hover:underline font-medium">
+              SBA & FAI business guide
+            </Link>)
+          </li>
           <li>OSHA 30-Hour Construction Industry Outreach Training, Occupational Safety and Health Administration | Jun 2024</li>
-          <li>Introduction to Cybersecurity, Cybersecurity and Infrastructure Security Agency (CISA) | Mar 2024</li>
           <li>Public Health 101: Healthy People for a Healthy Nation, CDC | Jan 2024</li>
         </ul>
 
