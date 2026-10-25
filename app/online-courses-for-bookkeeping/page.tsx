@@ -83,7 +83,7 @@ const fundamentalTrack = [
     desc: 'Master double-entry bookkeeping, debits and credits, general ledgers, trial balance, and bank reconciliations.',
     badge: 'Beginner Essential',
     duration: '6 Hours',
-    href: 'https://alison.com/course/fundamentals-of-accounting-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205',
+    href: 'https://alison.com/course/fundamentals-of-accounting-revised',
   },
   {
     title: 'Financial Accounting Fundamentals',
@@ -131,7 +131,7 @@ const dualCertTrack = [
     desc: 'Comprehensive CPD-accredited diploma covering accounts management, statutory tax deductions (PAYE, UIF, SDL), and payroll processing.',
     badge: 'CPD Certified',
     duration: '15 Hours',
-    href: 'https://alison.com/course/diploma-in-effective-bookkeeping-and-payroll?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205',
+    href: 'https://alison.com/course/diploma-in-effective-bookkeeping-and-payroll',
   },
   {
     title: 'Payroll Computation & Statutory Compliance',

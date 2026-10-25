@@ -10,6 +10,7 @@ import NewsletterBanner from '@/components/shared/NewsletterBanner';
 import ToolsPromo from '@/components/shared/ToolsPromo';
 import { courses as allCourses } from '@/data/courses';
 import type { Course } from '@/types';
+import { resolveCourseProvider, getCleanCourseUrl } from '@/lib/seo';
 
 const SITE_URL = 'https://www.graduateshub.org';
 
@@ -309,22 +310,26 @@ export default function GuideTemplate({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: heading,
-    itemListElement: allFeatured.slice(0, 12).map((course, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Course',
-        name: course.title,
-        description: course.description,
-        provider: { '@type': 'Organization', name: 'Alison', sameAs: 'https://alison.com' },
-        hasCourseInstance: {
-          '@type': 'CourseInstance',
-          courseMode: 'online',
-          duration: `PT${parseInt(course.duration.split('-')[0])}H`,
+    itemListElement: allFeatured.slice(0, 12).map((course, index) => {
+      const cleanUrl = getCleanCourseUrl(course.affiliateLink);
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Course',
+          name: course.title,
+          description: course.description,
+          provider: resolveCourseProvider(course.affiliateLink),
+          ...(cleanUrl ? { url: cleanUrl } : {}),
+          hasCourseInstance: {
+            '@type': 'CourseInstance',
+            courseMode: 'online',
+            duration: `PT${parseInt(course.duration.split('-')[0]) || 2}H`,
+          },
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
         },
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-      },
-    })),
+      };
+    }),
   };
 
   const faqSchema = {

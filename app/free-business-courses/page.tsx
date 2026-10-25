@@ -79,10 +79,10 @@ const benefits: BenefitItem[] = [
 ];
 
 const learningPath = [
-  { step: '1', title: 'Learn How Projects Work', detail: 'The Diploma in Project Management covers the full lifecycle: initiation, planning, execution, monitoring, and closure. The foundation for most business roles.', href: 'https://alison.com/course/diploma-in-project-management-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Diploma in Project Management' },
-  { step: '2', title: 'Improve Processes with Data', detail: 'Lean Six Sigma Yellow Belt introduces the DMAIC framework for identifying waste, measuring performance, and driving measurable process improvements.', href: 'https://alison.com/course/lean-six-sigma-yellow-belt?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Lean Six Sigma: Yellow Belt' },
-  { step: '3', title: 'Meet Regulatory Requirements', detail: 'GDPR is now the baseline for any role involving personal data. Understanding data protection obligations is expected in compliance, HR, marketing, and IT roles alike.', href: 'https://alison.com/course/general-data-protection-regulation-gdpr-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'General Data Protection Regulation (GDPR)' },
-  { step: '4', title: 'Understand Economic Strategy', detail: 'Introduction to Economic Growth and Development gives you the macroeconomic context behind business decisions, growth models, and sustainable development policy.', href: 'https://alison.com/course/introduction-to-economic-growth-and-development?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205', courseName: 'Introduction to Economic Growth and Development' },
+  { step: '1', title: 'Learn How Projects Work', detail: 'The Diploma in Project Management covers the full lifecycle: initiation, planning, execution, monitoring, and closure. The foundation for most business roles.', href: 'https://alison.com/course/diploma-in-project-management-revised', courseName: 'Diploma in Project Management' },
+  { step: '2', title: 'Improve Processes with Data', detail: 'Lean Six Sigma Yellow Belt introduces the DMAIC framework for identifying waste, measuring performance, and driving measurable process improvements.', href: 'https://alison.com/course/lean-six-sigma-yellow-belt', courseName: 'Lean Six Sigma: Yellow Belt' },
+  { step: '3', title: 'Meet Regulatory Requirements', detail: 'GDPR is now the baseline for any role involving personal data. Understanding data protection obligations is expected in compliance, HR, marketing, and IT roles alike.', href: 'https://alison.com/course/general-data-protection-regulation-gdpr-revised', courseName: 'General Data Protection Regulation (GDPR)' },
+  { step: '4', title: 'Understand Economic Strategy', detail: 'Introduction to Economic Growth and Development gives you the macroeconomic context behind business decisions, growth models, and sustainable development policy.', href: 'https://alison.com/course/introduction-to-economic-growth-and-development', courseName: 'Introduction to Economic Growth and Development' },
 ];
 
 const careerPaths: CareerPathItem[] = [
@@ -105,28 +105,28 @@ const howToSchema = {
       position: 1,
       name: 'Learn How Projects Work',
       text: 'Master initiation, planning, execution, and risk management with the Diploma in Project Management.',
-      url: 'https://alison.com/course/diploma-in-project-management-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205',
+      url: 'https://alison.com/course/diploma-in-project-management-revised',
     },
     {
       '@type': 'HowToStep',
       position: 2,
       name: 'Improve Processes with Data',
       text: 'Learn the DMAIC framework and process optimization with Lean Six Sigma Yellow Belt.',
-      url: 'https://alison.com/course/lean-six-sigma-yellow-belt?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205',
+      url: 'https://alison.com/course/lean-six-sigma-yellow-belt',
     },
     {
       '@type': 'HowToStep',
       position: 3,
       name: 'Meet Regulatory Requirements',
       text: 'Understand data protection, POPIA, and compliance obligations with GDPR General Data Protection.',
-      url: 'https://alison.com/course/general-data-protection-regulation-gdpr-revised?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205',
+      url: 'https://alison.com/course/general-data-protection-regulation-gdpr-revised',
     },
     {
       '@type': 'HowToStep',
       position: 4,
       name: 'Understand Economic Strategy & AI',
       text: 'Learn macroeconomic context and strategic AI deployment in business operations.',
-      url: 'https://alison.com/course/introduction-to-economic-growth-and-development?utm_source=alison_user&utm_medium=affiliates&utm_campaign=43098205',
+      url: 'https://alison.com/course/introduction-to-economic-growth-and-development',
     },
   ],
 };

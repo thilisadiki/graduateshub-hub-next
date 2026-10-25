@@ -5,7 +5,7 @@ import { categories } from '@/data/categories';
 import { formatCategoryName } from '@/utils/formatters';
 import { categoryContent } from '@/data/categoryContent';
 import CategoryContent from './CategoryContent';
-import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import { SITE_URL, OG_IMAGE, SITE_NAME, resolveCourseProvider, getCleanCourseUrl } from '@/lib/seo';
 
 export const dynamicParams = false;
 
@@ -73,21 +73,25 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: categoryCourses.slice(0, 9).map((course, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Course',
-        name: course.title,
-        description: course.description,
-        provider: { '@type': 'Organization', name: 'Alison', sameAs: 'https://alison.com' },
-        hasCourseInstance: {
-          '@type': 'CourseInstance',
-          courseMode: 'online',
-          duration: `PT${parseInt(course.duration.split('-')[0])}H`,
+    itemListElement: categoryCourses.slice(0, 9).map((course, index) => {
+      const cleanUrl = getCleanCourseUrl(course.affiliateLink);
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Course',
+          name: course.title,
+          description: course.description,
+          provider: resolveCourseProvider(course.affiliateLink),
+          ...(cleanUrl ? { url: cleanUrl } : {}),
+          hasCourseInstance: {
+            '@type': 'CourseInstance',
+            courseMode: 'online',
+            duration: `PT${parseInt(course.duration.split('-')[0]) || 2}H`,
+          },
         },
-      },
-    })),
+      };
+    }),
   };
 
   const breadcrumbSchema = {
