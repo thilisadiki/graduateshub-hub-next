@@ -174,11 +174,11 @@ export default function PrivacyPage() {
           Our site utilizes functional and analytical cookies to maintain session states and measure site performance. You may configure your web browser to decline cookies, though certain interactive features may experience reduced functionality.
         </p>
 
-        <h2>10. Third-Party Educational Links &amp; Affiliate Disclosure</h2>
+        <h2>10. Third-Party Educational Links &amp; External Sites</h2>
         <p>
-          Our pages link to external learning platforms (e.g., Alison.com, Coursera, Google, Microsoft Learn). Some course links include affiliate tracking codes. External sites maintain independent privacy policies. Please review our{' '}
+          Our pages link to external learning platforms and official government portals (e.g., Google, Microsoft Learn, FEMA, CISA, Coursera). External course links do not include affiliate tracking codes or referral parameters. When navigating to third-party domains, please note that external sites maintain independent privacy policies and data practices. Please review our{' '}
           <Link href="/disclosure" className="text-primary font-bold hover:underline">
-            Affiliate Disclosure
+            Commercial &amp; Link Disclosure
           </Link> for complete details.
         </p>
 

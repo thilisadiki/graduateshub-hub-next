@@ -88,14 +88,18 @@ export default function TermsPage() {
           </li>
         </ul>
 
-        <h2>5. Affiliate &amp; Advertising Transparency</h2>
+        <h2>5. Advertising &amp; Commercial Transparency</h2>
         <p>
-          To keep our core learning resources 100% free for graduates, Graduates Hub participates in affiliate marketing programs (specifically with Alison.com) and displays third-party contextual advertising via Google AdSense.
+          To keep our core learning resources, career roadmaps, and AI tools 100% free for graduates, Graduates Hub displays third-party contextual advertising via Google AdSense.
         </p>
         <p>
-          If you click on an affiliate link and subsequently purchase an optional paid certificate or diploma from a partner platform, we may earn a small commission at no additional cost to you. Our affiliate relationships never influence our course curation criteria or editorial ratings. For full details, please review our{' '}
+          Graduates Hub does not use affiliate links, referral tracking parameters, or commission-based partnerships for any course or learning provider recommendations. All course links direct users straight to the official provider platform with zero referral kickbacks. For full details, please review our{' '}
           <Link href="/disclosure" className="text-primary font-bold hover:underline">
-            Affiliate Disclosure
+            Commercial &amp; Link Disclosure
+          </Link>{' '}
+          and{' '}
+          <Link href="/curation-policy" className="text-primary font-bold hover:underline">
+            Editorial Curation Policy
           </Link>.
         </p>
 

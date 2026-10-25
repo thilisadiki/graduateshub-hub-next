@@ -234,7 +234,7 @@ export default function CurationPolicyPage() {
               <strong className="text-gray-900 font-bold">Advertising &amp; Commercial Separation:</strong> Third-party advertising (including Google AdSense) is strictly separated from editorial copy. Ad placements are clearly distinguishable from site navigation and editorial guidance. Advertising partners have zero editorial influence on our reviews or rankings.
             </p>
             <p>
-              <strong className="text-gray-900 font-bold">Affiliate Disclosure:</strong> Graduates Hub participates in select educational affiliate programs (e.g. Alison.com). We may earn a small referral commission if users make a purchase after clicking. This incurs zero additional cost to the user and supports platform research.
+              <strong className="text-gray-900 font-bold">No Affiliate Links or Referral Commissions:</strong> Graduates Hub does not use affiliate links, referral tracking parameters, or commission-based partnerships for any course or learning provider recommendations. Every external link directs learners straight to the official provider, university, or government agency portal with zero commercial kickbacks.
             </p>
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs text-slate-700">
               <strong className="text-slate-900 font-bold block mb-1">No Guarantee of Employment or Earnings:</strong>
@@ -283,7 +283,7 @@ export default function CurationPolicyPage() {
               <strong className="text-gray-900 font-bold">Commitment to Original Value:</strong> All roadmaps, articles, portfolio rubrics, and tools on Graduates Hub are original works produced by human specialists. We strictly prohibit content scraping, automated rewriting, and uncurated aggregation.
             </p>
             <p>
-              <strong className="text-gray-900 font-bold">Commercial Relationships Do Not Determine Placements:</strong> Educational quality, verified utility, and career relevance are the sole criteria for inclusion in our roadmaps. An affiliate relationship never grants a provider automatic placement.
+              <strong className="text-gray-900 font-bold">Zero Commercial Influence on Placements:</strong> Educational quality, verified utility, and career relevance are the sole criteria for inclusion in our roadmaps. Because we operate with zero affiliate relationships or paid course sponsorships, no provider or platform can buy placement or influence our editorial curation.
             </p>
             <p>
               <strong className="text-gray-900 font-bold">No Subjective "Best" Claims Without Defined Criteria:</strong> We do not label a course or provider as objectively "best" without stating the explicit criteria used (e.g. CPD accreditation, zero content paywalls, user ratings, or employer recognition).

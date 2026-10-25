@@ -24,7 +24,7 @@ export default function Navbar() {
     { href: '/curation-policy', label: 'Curation Policy', desc: 'Our 5-point editorial quality checklist', icon: ShieldCheck },
     { href: '/terms-of-service', label: 'Terms of Service', desc: 'Platform terms & AI disclaimers', icon: FileText },
     { href: '/privacy-policy', label: 'Privacy Policy', desc: 'POPIA & GDPR compliance disclosures', icon: Lock },
-    { href: '/disclosure', label: 'Affiliate Disclosure', desc: 'Partner transparency & link policy', icon: Award },
+    { href: '/disclosure', label: 'Commercial & Link Disclosure', desc: 'Partner transparency & link policy', icon: Award },
   ];
 
   return (
