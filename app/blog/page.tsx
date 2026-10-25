@@ -329,8 +329,33 @@ export default async function BlogPage({
               ))}
             </div>
 
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-3 mb-14">
+                {page > 1 && (
+                  <Link
+                    href={`/blog?page=${page - 1}`}
+                    className="px-5 py-2.5 bg-white border border-[#D1C5B4] text-[#1F1B13] font-bold rounded-xl hover:border-primary hover:text-primary transition-colors text-sm"
+                  >
+                    Previous
+                  </Link>
+                )}
+                <span className="text-sm text-[#4F4639] font-medium">
+                  Page {page} of {totalPages}
+                </span>
+                {page < totalPages && (
+                  <Link
+                    href={`/blog?page=${page + 1}`}
+                    className="px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-[#5a4000] transition-colors text-sm"
+                  >
+                    Next
+                  </Link>
+                )}
+              </div>
+            )}
+
             {/* Interactive Career Tools Banner */}
-            <section className="mb-14 bg-gradient-to-br from-[#1F1B13] to-[#2E281F] text-white p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-[#D1C5B4]">
+            <section className="bg-gradient-to-br from-[#1F1B13] to-[#2E281F] text-white p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-[#D1C5B4]">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#FFDF9C] mb-2 block">Interactive Career Accelerators</span>
                 <h3 className="text-2xl font-black mb-2">Build Your Proof of Work Portfolio</h3>
@@ -354,31 +379,6 @@ export default async function BlogPage({
               </div>
             </section>
           </>
-        )}
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-3">
-            {page > 1 && (
-              <Link
-                href={`/blog?page=${page - 1}`}
-                className="px-5 py-2.5 bg-white border border-[#D1C5B4] text-[#1F1B13] font-bold rounded-xl hover:border-primary hover:text-primary transition-colors text-sm"
-              >
-                Previous
-              </Link>
-            )}
-            <span className="text-sm text-[#4F4639] font-medium">
-              Page {page} of {totalPages}
-            </span>
-            {page < totalPages && (
-              <Link
-                href={`/blog?page=${page + 1}`}
-                className="px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-[#5a4000] transition-colors text-sm"
-              >
-                Next
-              </Link>
-            )}
-          </div>
         )}
       </main>
 
