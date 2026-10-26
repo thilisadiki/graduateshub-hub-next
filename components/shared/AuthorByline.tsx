@@ -35,7 +35,7 @@ export type AuthorKey = keyof typeof AUTHORS;
 
 function AuthorChip({ author }: { author: Author }) {
   return (
-    <div className="flex items-center gap-2.5">
+    <div className="flex items-center gap-2.5" data-nosnippet>
       <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-white shrink-0">
         <Image
           src={author.photo}

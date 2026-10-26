@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 export const SITE_URL = 'https://www.graduateshub.org';
 export const SITE_NAME = 'Graduates Hub';
 
@@ -6,6 +8,61 @@ export const OG_IMAGE = {
   width: 1200,
   height: 630,
 };
+
+export const DEFAULT_GUIDE_IMAGE = {
+  url: `${SITE_URL}/images/guides/default-guide-banner.jpg`,
+  width: 1200,
+  height: 675,
+  alt: 'Graduates Hub Course & Career Guide',
+};
+
+export function createGuideMetadata({
+  title,
+  description,
+  canonicalUrl,
+  imageUrl,
+}: {
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  imageUrl?: string;
+}): Metadata {
+  const finalImageUrl = imageUrl
+    ? (imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`)
+    : DEFAULT_GUIDE_IMAGE.url;
+
+  const imageObj = {
+    url: finalImageUrl,
+    width: 1200,
+    height: 675,
+    alt: title,
+  };
+
+  return {
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+    openGraph: {
+      siteName: SITE_NAME,
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url: canonicalUrl,
+      type: 'article',
+      images: [imageObj],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      images: [finalImageUrl],
+    },
+  };
+}
 
 export function getCleanCourseUrl(rawUrl?: string): string | undefined {
   if (!rawUrl) return undefined;

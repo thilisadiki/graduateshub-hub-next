@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import AuthorByline from '@/components/shared/AuthorByline';
@@ -69,10 +70,12 @@ export interface HeroBadge {
 }
 
 export interface GuideTemplateProps {
-  // Schema
+  // Schema & Media
   canonicalUrl: string;
   datePublished?: string;
   dateModified?: string;
+  featuredImage?: string;
+  featuredImageAlt?: string;
 
   // Breadcrumb (UI)
   breadcrumb: BreadcrumbSegment[];
@@ -269,6 +272,8 @@ export default function GuideTemplate({
   canonicalUrl,
   datePublished = '2025-01-01',
   dateModified = new Date().toISOString().split('T')[0],
+  featuredImage,
+  featuredImageAlt,
   breadcrumb,
   heading,
   heroDescription,
@@ -342,6 +347,11 @@ export default function GuideTemplate({
     })),
   };
 
+  const resolvedFeaturedImage = featuredImage || '/images/guides/default-guide-banner.jpg';
+  const absoluteFeaturedImageUrl = resolvedFeaturedImage.startsWith('http')
+    ? resolvedFeaturedImage
+    : `${SITE_URL}${resolvedFeaturedImage}`;
+
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -351,6 +361,11 @@ export default function GuideTemplate({
     dateModified,
     description: heroDescription,
     publisher: { '@type': 'Organization', name: 'Graduates Hub', url: SITE_URL },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: absoluteFeaturedImageUrl,
+    },
+    image: [absoluteFeaturedImageUrl],
   };
 
   const breadcrumbSchema = {
@@ -388,24 +403,42 @@ export default function GuideTemplate({
       </div>
 
       {/* Hero */}
-      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-14 px-6">
+      <div className="bg-[#FFDF9C]/20 border-b border-[#D1C5B4] py-12 lg:py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Updated for 2026</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight max-w-3xl leading-tight">
-            {heading}
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">{heroDescription}</p>
-          <div className="flex flex-wrap gap-4">
-            {heroBadges.map(({ icon: Icon, label, iconClassName }) => (
-              <div
-                key={label}
-                className="flex items-center gap-2 bg-white border border-[#D1C5B4] rounded-full px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm"
-              >
-                <Icon size={16} className={iconClassName ?? 'text-gray-500'} />
-                {label}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            <div className="lg:col-span-7">
+              <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Updated for 2026</p>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight leading-tight">
+                {heading}
+              </h1>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">{heroDescription}</p>
+              <div className="flex flex-wrap gap-3">
+                {heroBadges.map(({ icon: Icon, label, iconClassName }) => (
+                  <div
+                    key={label}
+                    className="flex items-center gap-2 bg-white border border-[#D1C5B4] rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-gray-700 shadow-sm"
+                  >
+                    <Icon size={15} className={iconClassName ?? 'text-gray-500'} />
+                    {label}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-[#D1C5B4] shadow-md bg-white">
+                <Image
+                  src={resolvedFeaturedImage}
+                  alt={featuredImageAlt || heading}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 450px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
+
           {authors && (
             <AuthorByline authors={authors} lastUpdated={lastUpdated} />
           )}

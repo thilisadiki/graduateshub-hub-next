@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, BookOpen, Users, RefreshCw, ArrowRight, ChevronRight } from 'lucide-react';
-import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import { SITE_URL, DEFAULT_GUIDE_IMAGE, SITE_NAME } from '@/lib/seo';
 import { formatLastUpdated } from '@/utils/dateUtils';
 
 export const metadata: Metadata = {
@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     title: 'Online Course Guides for 2026 | Graduates Hub',
     description: 'Specialist-curated learning guides across tech, business, finance, and marketing. Every guide is written by a named expert, covers the best courses in that field, and is updated regularly.',
     url: `${SITE_URL}/guides`,
-    images: [OG_IMAGE],
+    images: [DEFAULT_GUIDE_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Online Course Guides for 2026 | Graduates Hub',
+    description: 'Specialist-curated learning guides across tech, business, finance, and marketing.',
+    images: [DEFAULT_GUIDE_IMAGE.url],
   },
 };
 

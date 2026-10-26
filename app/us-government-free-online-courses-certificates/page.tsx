@@ -4,23 +4,16 @@ import { Landmark, Award, Clock, Lock, CheckCircle2 } from 'lucide-react';
 import GuideTemplate from '@/components/course/GuideTemplate';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { usGovernmentCourses } from '@/data/categories/usGovernmentCourses';
-import { SITE_URL, SITE_NAME } from '@/lib/seo';
+import { SITE_URL, createGuideMetadata } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/us-government-free-online-courses-certificates`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createGuideMetadata({
   title: 'Free US Government Online Courses with Certificates (2026)',
   description:
     'Free official U.S. government online courses with verified completion certificates. Complete training modules from FEMA, CISA, CDC, NIH, SBA, and YALI Network at no cost.',
-  alternates: { canonical: CANONICAL },
-  openGraph: {
-    siteName: SITE_NAME,
-    title: 'Free US Government Online Courses with Certificates (2026) | Graduates Hub',
-    description:
-      'Explore official U.S. federal agency training portals offering free online certificates in emergency management, cybersecurity, public health, business leadership, and federal acquisition.',
-    url: CANONICAL,
-  },
-};
+  canonicalUrl: CANONICAL,
+});
 
 const courseCategories: CourseCategory[] = [
   {

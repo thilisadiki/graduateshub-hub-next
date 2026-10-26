@@ -6,23 +6,16 @@ import ToolsPromo from '@/components/shared/ToolsPromo';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
 import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
-import { SITE_URL, SITE_NAME } from '@/lib/seo';
+import { SITE_URL, createGuideMetadata } from '@/lib/seo';
 
 const CANONICAL = `${SITE_URL}/free-business-courses`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createGuideMetadata({
   title: '10 Best Free Business Courses Online with Certificates (2026)',
   description:
     'Study 10+ free accredited business courses online in 2026. Earn downloadable CPD certificates in Project Management, Lean Six Sigma, Agile & GDPR. 100% free with zero tuition fees.',
-  alternates: { canonical: CANONICAL },
-  openGraph: {
-    siteName: SITE_NAME,
-    title: '10 Best Free Business Courses Online with Certificates (2026) | Graduates Hub',
-    description:
-      'Study 10+ free accredited business courses online in 2026. Earn downloadable CPD certificates in Project Management, Lean Six Sigma, Agile & GDPR. 100% free with zero tuition fees.',
-    url: CANONICAL,
-  },
-};
+  canonicalUrl: CANONICAL,
+});
 
 const courseCategories: CourseCategory[] = [
   {

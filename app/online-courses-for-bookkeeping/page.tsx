@@ -2,23 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calculator, CheckCircle2, ArrowRight, Award, HelpCircle, Briefcase, FileText, ExternalLink, ShieldCheck, DollarSign, Layers, BookOpen, Check, Building2, Landmark, Scale } from 'lucide-react';
-import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
+import { SITE_URL, createGuideMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createGuideMetadata({
   title: 'Online Courses for Bookkeeping with Certificates (2026 Guide)',
   description:
     'Explore top online courses for bookkeeping, payroll, and accounting software (Xero, QuickBooks, Sage). Master double-entry bookkeeping and earn recognized certificates.',
-  alternates: { canonical: `${SITE_URL}/online-courses-for-bookkeeping` },
-  openGraph: {
-    siteName: SITE_NAME,
-    title: 'Online Courses for Bookkeeping with Certificates (2026 Guide) | Graduates Hub',
-    description:
-      'Master double-entry bookkeeping, bank reconciliations, payroll, and Xero accounting software with certified online bookkeeping courses.',
-    url: `${SITE_URL}/online-courses-for-bookkeeping`,
-    type: 'website',
-    images: [OG_IMAGE],
-  },
-};
+  canonicalUrl: `${SITE_URL}/online-courses-for-bookkeeping`,
+});
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -195,7 +186,7 @@ export default function BookkeepingCoursesPage() {
       <main className="max-w-5xl mx-auto px-6 py-12 flex flex-col gap-12 flex-1">
         {/* Editorial E-E-A-T Banner */}
         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start">
-          <div className="w-16 h-16 rounded-full overflow-hidden bg-teal-100 relative shrink-0 ring-4 ring-slate-100">
+          <div className="w-16 h-16 rounded-full overflow-hidden bg-teal-100 relative shrink-0 ring-4 ring-slate-100" data-nosnippet>
             <Image src="/ndulamiso-mamburu.jpg" alt="Ndulamiso Mamburu, Accounting Curator" fill sizes="64px" className="object-cover object-top" />
           </div>
           <div className="flex-1">
