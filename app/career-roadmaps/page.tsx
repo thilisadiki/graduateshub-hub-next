@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {
   Clock, TrendingUp, ChevronRight, Map, CheckCircle2,
   BookOpen, Wrench, Award, FileText, HelpCircle, ArrowRight,
-  Sparkles, ShieldCheck, Zap
+  Sparkles, ShieldCheck, Zap, MapPin, MessageSquareQuote
 } from 'lucide-react';
 import { roadmaps } from '@/data/roadmaps';
 import type { CareerRoadmap } from '@/types';
@@ -13,13 +13,13 @@ import { SITE_URL, OG_IMAGE, SITE_NAME } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Career Roadmaps: How to Break Into Any Field (2026)',
   description:
-    'Step-by-step career roadmaps for software engineering, cybersecurity, data analysis, UI/UX design, cloud DevOps, digital marketing, accounting, and business analysis. Free to follow with verified certificates.',
+    'Step-by-step career roadmaps for software engineering, cybersecurity, data analysis, UI/UX design, cloud DevOps, digital marketing, accounting, and business analysis. Vetted learning paths with verified credentials.',
   alternates: { canonical: `${SITE_URL}/career-roadmaps` },
   openGraph: {
     siteName: SITE_NAME,
     title: 'Career Roadmaps: How to Break Into Any Field (2026) | Graduates Hub',
     description:
-      'Step-by-step career roadmaps for software engineering, cybersecurity, data analysis, UI/UX design, cloud DevOps, digital marketing, accounting, and business analysis. Free to follow with verified certificates.',
+      'Step-by-step career roadmaps for software engineering, cybersecurity, data analysis, UI/UX design, cloud DevOps, digital marketing, accounting, and business analysis. Vetted learning paths with verified credentials.',
     url: `${SITE_URL}/career-roadmaps`,
     images: [OG_IMAGE],
   },
@@ -52,11 +52,11 @@ const itemListSchema = {
 const FAQS = [
   {
     q: 'How are courses selected for these career roadmaps?',
-    a: 'Our roadmaps follow a Value-First Curation Policy: we prioritize free and free-to-audit learning paths first (including Google, Microsoft, Alison, and Coursera financial aid tracks), alongside free practice portfolio tasks. High-ROI paid vendor credentials are clearly labeled with full price transparency.',
+    a: 'Our roadmaps follow a Value-First Curation Policy: we prioritize free and free-to-audit learning paths first (including Google, Microsoft, AWS, and Coursera financial aid tracks), alongside free practice portfolio tasks. High-ROI paid vendor credentials are clearly labeled with full price transparency.',
   },
   {
     q: 'How long does it typically take to become job-ready using these roadmaps?',
-    a: 'Most entry-level roadmaps take between 3 to 9 months of consistent study (around 8–12 hours per week). Each roadmap specifies a realistic time-to-job-ready benchmark based on industry hiring expectations.',
+    a: 'Most entry-level roadmaps take between 3 to 9 months of consistent study (around 8-12 hours per week). Each roadmap specifies a realistic time-to-job-ready benchmark based on industry hiring expectations.',
   },
   {
     q: 'Do I need a university degree to land a job using these roadmaps?',
@@ -130,7 +130,7 @@ export default function CareerRoadmapsPage() {
           <div>
             <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">Career Roadmaps</h1>
             <p className="text-gray-500 mt-2 text-lg max-w-2xl">
-              Step-by-step paths from zero experience to job-ready. Each roadmap is built around the exact skills employers test for, paired with free certified courses at every stage.
+              Step-by-step paths from zero experience to job-ready. Each roadmap is built around the exact skills employers test for, pairing verified free learning paths with high-ROI industry certifications.
             </p>
           </div>
         </div>
@@ -211,72 +211,150 @@ export default function CareerRoadmapsPage() {
           })}
         </div>
 
-        {/* 2. Educational Section: The 4-Stage Roadmap Framework */}
+        {/* 2. Educational Section: Your 5-Step Path to Getting Hired */}
         <section className="mb-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
-              Our Methodology
+            <span className="text-xs font-bold text-[#7A5900] uppercase tracking-wider bg-[#FFDF9C]/60 px-3 py-1 rounded-full border border-[#D1C5B4]">
+              End-to-End Career Path
             </span>
             <h2 className="text-3xl font-extrabold text-gray-900 mt-3 mb-4">
-              How Our 4-Stage Learning Roadmap Framework Works
+              Your 5-Step Path to Getting Hired
             </h2>
             <p className="text-gray-500 text-base leading-relaxed">
-              Step 1 of your 5-step path to getting hired begins here. We break every career roadmap down into four structured, sequential stages so you always know what to learn next.
+              Everything you need to go from beginner to employed: transparent free paths and verified high-ROI credentials.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm flex flex-col">
-              <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold mb-4">
-                1
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+            <Link
+              href="/career-roadmaps"
+              className="group bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <MapPin className="text-primary" size={22} />
+                  </div>
+                  <span className="w-7 h-7 rounded-full bg-primary text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                    01
+                  </span>
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-base mb-2 group-hover:text-primary transition-colors">
+                  Choose your career
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                  Step-by-step role blueprints for high-demand entry-level tech, business, and digital careers.
+                </p>
               </div>
-              <h3 className="font-extrabold text-gray-900 text-base mb-2">Core Fundamentals</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                Build foundational domain knowledge using free introductory courses from Google, Harvard, edX, and Alison.
-              </p>
-              <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-1 text-xs text-blue-600 font-semibold">
-                <BookOpen size={13} /> Free Certificate Courses
+              <div className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:underline">
+                <span>Explore Roadmaps</span>
+                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm flex flex-col">
-              <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center font-bold mb-4">
-                2
+            <Link
+              href="/guides"
+              className="group bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <BookOpen className="text-primary" size={22} />
+                  </div>
+                  <span className="w-7 h-7 rounded-full bg-primary text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                    02
+                  </span>
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-base mb-2 group-hover:text-primary transition-colors">
+                  Learn the right skills
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                  Stage-by-stage learning paths featuring verified free resources and employer-recognized paid certifications.
+                </p>
               </div>
-              <h3 className="font-extrabold text-gray-900 text-base mb-2">Technical Tool Mastery</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                Master the practical software, languages, and frameworks that employers test for (SQL, Figma, AWS, Python, Excel).
-              </p>
-              <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-1 text-xs text-amber-600 font-semibold">
-                <Wrench size={13} /> Hands-On Tools
+              <div className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:underline">
+                <span>View Study Guides</span>
+                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm flex flex-col">
-              <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-bold mb-4">
-                3
+            <Link
+              href="/portfolio-tasks"
+              className="group bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Award className="text-primary" size={22} />
+                  </div>
+                  <span className="w-7 h-7 rounded-full bg-primary text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                    03
+                  </span>
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-base mb-2 group-hover:text-primary transition-colors">
+                  Prove what you can do
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                  Real-world task briefs with rubric evaluations to earn your verified Badge of Competence.
+                </p>
               </div>
-              <h3 className="font-extrabold text-gray-900 text-base mb-2">Proof of Work</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                Build real-world projects, submit them to our automated grader, and earn a public, verifiable Badge of Competence.
-              </p>
-              <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-1 text-xs text-emerald-600 font-semibold">
-                <Award size={13} /> Portfolio Badges
+              <div className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:underline">
+                <span>View Portfolio Tasks</span>
+                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm flex flex-col">
-              <div className="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center font-bold mb-4">
-                4
+            <Link
+              href="/cv-builder"
+              className="group bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <FileText className="text-primary" size={22} />
+                  </div>
+                  <span className="w-7 h-7 rounded-full bg-primary text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                    04
+                  </span>
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-base mb-2 group-hover:text-primary transition-colors">
+                  Build your CV
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                  Create a clean, ATS-friendly PDF resume designed specifically for graduate recruiters.
+                </p>
               </div>
-              <h3 className="font-extrabold text-gray-900 text-base mb-2">Interview Preparation</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                Prepare with STAR-method answer frameworks, common technical screening questions, and regional salary benchmarks.
-              </p>
-              <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-1 text-xs text-purple-600 font-semibold">
-                <FileText size={13} /> Interview Prep Guides
+              <div className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:underline">
+                <span>Build Free CV</span>
+                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </div>
-            </div>
+            </Link>
+
+            <Link
+              href="/interview-prep"
+              className="group bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <MessageSquareQuote className="text-primary" size={22} />
+                  </div>
+                  <span className="w-7 h-7 rounded-full bg-primary text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                    05
+                  </span>
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-base mb-2 group-hover:text-primary transition-colors">
+                  Prepare for interviews
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                  Master role-specific technical and behavioral interview questions before your first interview.
+                </p>
+              </div>
+              <div className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:underline">
+                <span>Practice Questions</span>
+                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -310,7 +388,7 @@ export default function CareerRoadmapsPage() {
                 </tr>
                 <tr>
                   <td className="py-4 px-4 font-semibold text-gray-900">Curated Order &amp; Sequence</td>
-                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Structured 4 Stages</td>
+                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Structured 5-Step Path &amp; Role Stages</td>
                   <td className="py-4 px-4 text-rose-500">❌ Random &amp; Unorganized</td>
                   <td className="py-4 px-4 text-gray-700">✅ Structured</td>
                 </tr>
@@ -322,7 +400,7 @@ export default function CareerRoadmapsPage() {
                 </tr>
                 <tr>
                   <td className="py-4 px-4 font-semibold text-gray-900">Industry &amp; Vendor Credentials</td>
-                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Google, Microsoft, AWS, CompTIA, Alison</td>
+                  <td className="py-4 px-4 font-bold text-gray-900 bg-primary/5">✅ Google, Microsoft, AWS, CompTIA, Cisco</td>
                   <td className="py-4 px-4 text-rose-500">❌ No Certificates</td>
                   <td className="py-4 px-4 text-gray-700">⚠️ Bootcamp Certificate Only</td>
                 </tr>
@@ -365,7 +443,7 @@ export default function CareerRoadmapsPage() {
         <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-10 text-center max-w-4xl mx-auto">
           <h2 className="text-2xl font-extrabold text-gray-900 mb-3">Ready to start building your career?</h2>
           <p className="text-gray-500 text-sm mb-6 max-w-lg mx-auto leading-relaxed">
-            Pick a roadmap above to begin Stage 1, explore our free course directory, or use our AI tools to audit your current CV.
+            Pick a roadmap above to begin your journey, explore our vetted study guides, or build your proof-of-work portfolio with real-world tasks.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
