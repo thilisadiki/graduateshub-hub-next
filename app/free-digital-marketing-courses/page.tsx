@@ -89,7 +89,7 @@ const careerPaths: CareerPathItem[] = [
   { role: 'SEO Specialist', category: 'Entry to Mid Level', href: '/career-roadmaps/seo-content-strategist' },
   { role: 'Social Media Manager', category: 'Entry to Mid Level', href: '/career-roadmaps/digital-marketing-specialist' },
   { role: 'Content Marketer', category: 'Entry to Mid Level', href: '/career-roadmaps/seo-content-strategist' },
-  { role: 'PPC Specialist', category: 'Mid Level', href: '/career-roadmaps/digital-marketing-ecommerce' },
+  { role: 'PPC Specialist', category: 'Mid Level', href: '/career-roadmaps/google-digital-marketing-ecommerce' },
   { role: 'Digital Marketing Manager', category: 'Senior Level', href: '/career-roadmaps/digital-marketing-specialist' },
 ];
 

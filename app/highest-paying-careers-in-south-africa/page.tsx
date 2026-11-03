@@ -9,15 +9,15 @@ import { SITE_URL, SITE_NAME } from '@/lib/seo';
 const CANONICAL = `${SITE_URL}/highest-paying-careers-in-south-africa`;
 
 export const metadata: Metadata = {
-  title: 'Highest Paying Jobs in South Africa (2026 Salary Guide)',
+  title: 'Highest Paying Jobs in South Africa: 2026 Salary Guide',
   description:
-    'Discover the highest paying jobs in South Africa for 2026. Explore verified salary bands from entry-level to senior executive roles across tech, finance, and engineering.',
+    'Discover the highest paying jobs in South Africa in 2026. Compare salary bands, high-paying careers, graduate starting salaries, employers, and certifications across tech, finance, engineering, healthcare, and law.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     siteName: SITE_NAME,
-    title: 'Highest Paying Jobs in South Africa (2026 Salary Guide) | Graduates Hub',
+    title: 'Highest Paying Jobs in South Africa: 2026 Salary Guide | Graduates Hub',
     description:
-      'Comprehensive guide to the highest paying jobs in South Africa. Explore 4-tier compensation tables, top graduate employers, foreign currency remote jobs, and salary-boosting certifications.',
+      'Comprehensive guide to the highest paying jobs in South Africa. Compare 4-tier salary bands, graduate starting salaries, top employers, remote work opportunities, and salary-boosting certifications.',
     url: CANONICAL,
   },
 };
@@ -237,11 +237,26 @@ export default function HighestPayingCareersSAPage() {
         { icon: CheckCircle2, label: 'Verified Compensation Bands', iconClassName: 'text-green-600' },
       ]}
       authors={['jason', 'ndulamiso']}
+      datePublished="2025-01-01"
+      dateModified="2026-11-03"
+      lastUpdated="November 2026"
       benefitsSectionTitle="Why Target the Highest Paying Jobs in South Africa?"
       benefitsSectionSubtitle="The highest paying jobs in South Africa offer long-term financial security, rapid salary progression, and international mobility for skilled professionals."
       benefits={benefits}
       preCoursesSection={
         <div className="space-y-16 mb-16">
+          <section className="bg-blue-50/70 rounded-2xl border border-blue-100 p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
+              How to use this highest-paying-jobs guide
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              This guide compares high-paying careers in South Africa across four career stages: graduate, mid-level, senior, and executive. Salary ranges are benchmarks rather than guarantees; actual pay varies by qualification, employer, location, bonuses, professional registration, and experience.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              We prioritise South African labour-market context and review the guide against official sources including <a href="https://www.statssa.gov.za" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">Stats SA</a>, <a href="https://www.sars.gov.za" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">SARS</a>, and <Link href="/curation-policy" className="font-semibold text-primary hover:underline">our editorial curation policy</Link>. Use the table to shortlist a career, then follow the linked learning paths and employer guides to plan your next step.
+            </p>
+          </section>
+
           {/* Section 1: Detailed Salary Table */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-3">

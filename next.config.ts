@@ -84,6 +84,16 @@ const nextConfig: NextConfig = {
         destination: '/career-roadmaps',
         permanent: true,
       },
+      {
+        source: '/career-roadmaps/digital-marketing-ecommerce',
+        destination: '/career-roadmaps/google-digital-marketing-ecommerce',
+        permanent: true,
+      },
+      {
+        source: '/interview-prep/digital-marketing-ecommerce',
+        destination: '/interview-prep/google-digital-marketing-ecommerce',
+        permanent: true,
+      },
       // Category redirects
       {
         source: '/categories',
