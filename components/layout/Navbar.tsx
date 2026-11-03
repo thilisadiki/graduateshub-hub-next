@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, Sparkles, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award } from 'lucide-react';
+import { Menu, X, ChevronDown, Briefcase, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award } from 'lucide-react';
 import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
 import LanguageSelector from '@/components/layout/LanguageSelector';
@@ -80,11 +80,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Articles &amp; Advice<LinkPendingDot /></Link>
             <Link
-              href="/free-ai-career-tools"
+              href="/portfolio-tasks"
               className="flex items-center gap-1.5 text-sm font-bold text-primary bg-[#FFDF9C]/50 hover:bg-[#FFDF9C] px-3 py-1.5 rounded-full transition-colors border border-[#D1C5B4]"
             >
-              <Sparkles size={14} className="text-primary" />
-              AI Tools<LinkPendingDot />
+              <Briefcase size={14} className="text-primary" />
+              Portfolio Tasks<LinkPendingDot />
             </Link>
             <Link
               href="/career-roadmaps"
@@ -160,11 +160,11 @@ export default function Navbar() {
         <Link href="/blog" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-t border-[#D1C5B4]">Articles &amp; Advice</Link>
 
         <Link
-          href="/free-ai-career-tools"
+          href="/portfolio-tasks"
           onClick={toggleMobileMenu}
           className="flex items-center gap-2 font-bold text-primary bg-[#FFDF9C]/50 py-3 px-4 rounded-lg border border-[#D1C5B4] transition-colors mt-2"
         >
-          <Sparkles size={16} className="text-primary" /> AI Career Tools - 7 Free Tools
+          <Briefcase size={16} className="text-primary" /> Portfolio Tasks
         </Link>
         <div className="flex flex-col gap-3 pt-3 pb-2">
           <Link href="/career-roadmaps" onClick={toggleMobileMenu}
