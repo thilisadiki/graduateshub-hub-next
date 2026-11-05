@@ -6,6 +6,7 @@ import { itCourses } from './categories/itCourses';
 import { marketingCourses } from './categories/marketingCourses';
 import { usGovernmentCourses } from './categories/usGovernmentCourses';
 import { saGovernmentCourses } from './categories/saGovernmentCourses';
+import { cybersecurityCourses } from './categories/cybersecurityCourses';
 
 // Combine all category arrays into a single raw array
 const allCoursesRaw: Course[] = [
@@ -16,6 +17,7 @@ const allCoursesRaw: Course[] = [
     ...marketingCourses,
     ...usGovernmentCourses,
     ...saGovernmentCourses,
+    ...cybersecurityCourses,
 ];
 
 // Remove any duplicates by ID (in case a course belongs to multiple category files)

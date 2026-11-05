@@ -87,6 +87,12 @@ export function resolveCourseProvider(rawUrl?: string) {
   if (link.includes('fasset.org.za')) return { '@type': 'Organization', name: 'FASSET', sameAs: 'https://www.fasset.org.za' };
   if (link.includes('google.com') || link.includes('grow.google')) return { '@type': 'Organization', name: 'Google', sameAs: 'https://grow.google' };
   if (link.includes('microsoft.com')) return { '@type': 'Organization', name: 'Microsoft', sameAs: 'https://learn.microsoft.com' };
+  if (link.includes('skillsforall.com') || link.includes('netacad.com') || link.includes('cisco.com')) return { '@type': 'Organization', name: 'Cisco Networking Academy', sameAs: 'https://www.skillsforall.com' };
+  if (link.includes('isc2.org')) return { '@type': 'Organization', name: '(ISC)²', sameAs: 'https://www.isc2.org' };
+  if (link.includes('skillsbuild.org') || link.includes('ibm.com')) return { '@type': 'Organization', name: 'IBM', sameAs: 'https://skillsbuild.org' };
+  if (link.includes('eccouncil.org')) return { '@type': 'Organization', name: 'EC-Council', sameAs: 'https://www.eccouncil.org' };
+  if (link.includes('portswigger.net')) return { '@type': 'Organization', name: 'PortSwigger', sameAs: 'https://portswigger.net' };
+  if (link.includes('cyberaces.org') || link.includes('sans.org')) return { '@type': 'Organization', name: 'SANS Institute', sameAs: 'https://www.sans.org' };
   if (link.includes('alison.com')) return { '@type': 'Organization', name: 'Alison', sameAs: 'https://alison.com' };
   return { '@type': 'Organization', name: 'Graduates Hub', sameAs: 'https://www.graduateshub.org' };
 }
