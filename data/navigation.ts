@@ -113,9 +113,9 @@ export const popularGuides: GuideLink[] = [
     badge: 'Bookkeeping',
   },
   {
-    href: '/free-business-courses',
-    title: 'Free Business Courses Online',
-    desc: 'Project management, Lean Six Sigma, GDPR, and economic strategy. CPD-accredited and free.',
+    href: '/business-courses-south-africa',
+    title: 'Business Courses in South Africa',
+    desc: 'Compare free and paid business courses, Unisa SLPs, university short courses, private colleges, and practical certificates.',
     badge: 'Business',
   },
   {

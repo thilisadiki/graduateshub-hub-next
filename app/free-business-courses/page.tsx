@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { CheckCircle2, Clock, TrendingUp, Award, Briefcase, Globe, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import GuideTemplate from '@/components/course/GuideTemplate';
 import ToolsPromo from '@/components/shared/ToolsPromo';
 import type { BenefitItem, CourseCategory, CareerPathItem, RelatedGuide, FaqItem } from '@/components/course/GuideTemplate';
@@ -8,12 +9,12 @@ import { courses } from '@/data/courses';
 import { courses as allCourses } from '@/data/courses';
 import { SITE_URL, createGuideMetadata } from '@/lib/seo';
 
-const CANONICAL = `${SITE_URL}/free-business-courses`;
+const CANONICAL = `${SITE_URL}/business-courses-south-africa`;
 
 export const metadata: Metadata = createGuideMetadata({
-  title: '10 Best Free Business Courses Online with Certificates (2026)',
+  title: 'Business Courses in South Africa (2026) | Free & Paid Short Courses',
   description:
-    'Study 10+ free accredited business courses online in 2026. Earn downloadable CPD certificates in Project Management, Lean Six Sigma, Agile & GDPR. 100% free with zero tuition fees.',
+    'Compare business courses in South Africa, including free online learning, Unisa short learning programmes, UCT short courses, MANCOSA, Damelin, Regent and other paid options.',
   canonicalUrl: CANONICAL,
 });
 
@@ -63,12 +64,20 @@ const courseCategories: CourseCategory[] = [
 ];
 
 const benefits: BenefitItem[] = [
-  { icon: TrendingUp, title: 'Works in Every Industry', body: 'Business skills transfer across sectors. Project managers, compliance officers, and operations specialists are hired in every field.' },
+  { icon: TrendingUp, title: 'Built for the SA Job Market', body: 'Build practical skills for roles across South African banking, retail, government, logistics, technology, and small business.' },
   { icon: Briefcase, title: 'No Prior Experience Required', body: 'All four tracks start from beginner level. No business degree or corporate background is needed to begin.' },
-  { icon: Award, title: 'CPD-Accredited Certificates', body: 'Every course issues a CPD-accredited certificate on completion. Accepted by employers in South Africa and internationally.' },
+  { icon: Award, title: 'Certificates with Clear Terms', body: 'Course pages explain whether study is free, whether a digital certificate is included, and whether an optional certificate fee applies.' },
   { icon: Globe, title: 'Globally Recognised Frameworks', body: 'Lean Six Sigma, GDPR, ISO 9001, and Agile are used by organisations worldwide. These are not local qualifications.' },
   { icon: Clock, title: 'Self-Paced Learning', body: 'Certificate courses complete in 2 to 8 hours. Diplomas range from 10 to 15 hours. Study around your existing commitments.' },
-  { icon: CheckCircle2, title: '100% Free to Start', body: 'Every course on Graduates Hub is free to begin. A paid physical certificate is optional but the full course content costs nothing.' },
+  { icon: CheckCircle2, title: 'Free and Paid Options Compared', body: 'Compare free study routes with paid university, private-college, and professional short courses so you can choose by budget, recognition, duration, and career goal.' },
+];
+
+const southAfricanProviders = [
+  { name: 'Unisa Short Learning Programmes', type: 'Public university SLPs', detail: 'Business management, SMME management, business planning, project management, leadership, banking, and strategic management options.', examples: 'SMME Management: R1,860; Business Management Programme: R11,100; Writing a Business Plan: R1,900', href: 'https://www.unisa.ac.za/sites/corporate/default/Colleges/Economic-and-Management-Sciences/Schools%2C-departments%2C-bureau%2C-centres-%26-institutes/Centres/Centre-for-Business-Management/Programmes-offered' },
+  { name: 'UCT GetSmarter Short Courses', type: 'University online short courses', detail: 'Paid online business and management courses with UCT certificates of completion, including strategic business management and foundations of business management.', examples: 'Strategic Business Management: R15,900; 10 weeks online', href: 'https://uct.ac.za/continuing-education/partners/getsmarter-edx/strategic-business-management' },
+  { name: 'MANCOSA skillME', type: 'Paid self-paced short courses', detail: 'Online courses in business strategy, finance for non-finance managers, project management, supply chain, workplace readiness, and communication.', examples: 'Business Strategy: R4,999; Project Management Fundamentals: R1,999; Finance for Non-Finance Managers: R2,999', href: 'https://skillme.mancosa.co.za/online-business-short-courses/' },
+  { name: 'Damelin', type: 'Private college short programmes', detail: 'Business administration and management programmes covering teamwork, project planning, risk, quality, and budgeting. Campus availability and pricing vary.', examples: 'Short Programme in Business Administration and Management: 68 hours; contact the campus for current fees', href: 'https://damelin.co.za/courses/short-programme-in-business-administration-and-management/' },
+  { name: 'Regent LearnHUB', type: 'Short courses and CPD learning', detail: 'Low-cost business and entrepreneurial skills courses covering governance, digital marketing, HR, leadership, finance, innovation, and quality management.', examples: 'Corporate Governance: R250; Digital Marketing in the AI Era: R495; HR Enablement: R395', href: 'https://learnhub.regent.ac.za/business-entrepreneurial-skills/' },
 ];
 
 const learningPath = [
@@ -131,15 +140,19 @@ const relatedGuides: RelatedGuide[] = [
 ];
 
 const faqs: FaqItem[] = [
-  { q: 'How can I learn business skills for free online in 2026?', a: 'You can learn essential business skills completely free online by enrolling in CPD-accredited courses on Graduates Hub. Focus on four core pillars: Project Management (Agile/Scrum), Process Improvement (Lean Six Sigma), Compliance (GDPR/POPIA), and Strategy (AI in Business). You can study at your own pace without paying tuition fees.' },
+  { q: 'What are the best business courses in South Africa?', a: 'The best choice depends on your goal. Unisa short learning programmes suit learners looking for university-based short learning, UCT GetSmarter offers paid online short courses with UCT certificates of completion, and providers such as MANCOSA, Damelin, and Regent offer paid professional or college-based options. Free online courses are useful for testing a subject before paying.' },
+  { q: 'Are Unisa short courses equivalent to a degree?', a: 'No. Unisa Short Learning Programmes are focused, non-degree learning opportunities. They can update or broaden skills, but they are not automatically equivalent to a formal degree, diploma, or SAQA-registered qualification. Check the exact programme information before enrolling.' },
+  { q: 'How much do business short courses cost in South Africa?', a: 'Costs vary widely. Some online courses are free to study, while paid options range from low-cost micro-courses to university and executive programmes costing thousands of rand. Fees, duration, intake dates, and certificate terms change, so confirm the current price with the official provider.' },
+  { q: 'Where can I find free business courses in South Africa?', a: 'Graduates Hub brings together free online business courses that South African learners can study at their own pace. The guide covers business management, project management, process improvement, compliance, entrepreneurship, and strategy, with cost and certificate terms explained for each learning path.' },
+  { q: 'How can I learn business skills for free online in 2026?', a: 'You can learn essential business skills completely free online by enrolling in the learning paths listed on Graduates Hub. Focus on project management, process improvement, compliance, and strategy. You can study at your own pace without paying tuition fees.' },
   { q: 'Do I need business experience to start these courses?', a: 'No. The Lean Six Sigma White Belt and Introduction to Economic Growth and Development are both designed for complete beginners. The Project Management diploma and Agile certificate assume no prior project management knowledge. Start with whichever track matches your immediate career goal.' },
   { q: 'What is the difference between the Lean Six Sigma White Belt and Yellow Belt?', a: 'The White Belt is a short introduction to Lean Six Sigma vocabulary and philosophy, designed so that any employee can participate intelligently in company-wide improvement initiatives. The Yellow Belt goes deeper: it covers the DMAIC framework in detail, process mapping, and data collection methods. If you want to actively lead or contribute to improvement projects, the Yellow Belt is the one employers look for.' },
-  { q: 'Is GDPR relevant if I am based in South Africa?', a: "Yes. Any organisation that processes data belonging to EU citizens must comply with GDPR regardless of where it is based. Beyond the EU, GDPR has directly influenced South Africa's own POPIA legislation. Understanding GDPR gives you a working knowledge of both frameworks and makes you more valuable in any compliance or data-handling role." },
+  { q: 'Is GDPR relevant if I am based in South Africa?', a: "Yes. Any organisation that processes data belonging to EU citizens must comply with GDPR regardless of where it is based. For South African workplaces, POPIA is the local data-protection framework to understand. Learning both helps with compliance, HR, marketing, IT, and customer-data roles." },
   { q: 'Which business course gives the best return for career progression?', a: 'The Diploma in Project Management has the broadest applicability. Project management is a recognised profession across almost every industry, and a formal diploma signals that you can take ownership of deliverables and manage stakeholders. If you are already in a tech environment, the Agile Project Management certificate is the faster, more targeted option.' },
-  { q: 'Can these courses help me run my own business?', a: 'Yes, particularly the Project Management, Economics, and Compliance tracks. Understanding how to plan and execute projects, read macroeconomic signals, and stay compliant with data and financial regulations are practical skills for any business owner. The Diploma in Sustainable Development is also increasingly relevant as clients and investors ask for ESG evidence.' },
+  { q: 'Can these courses help me run my own business in South Africa?', a: 'Yes. Project planning, bookkeeping, marketing, customer service, compliance, and business strategy are practical foundations for a South African small business. Pair the courses with official CIPC, SARS, and industry guidance when you register, operate, or manage a business.' },
 ];
 
-export default function FreeBusinessCoursesPage() {
+export function BusinessCoursesSouthAfricaPage() {
   const featured = courseCategories.flatMap((cat) => {
     if (cat.ids) return cat.ids.map((id) => allCourses.find((c) => c.id === id)).filter(Boolean);
     if (cat.items) return cat.items.map((i) => allCourses.find((c) => c.id === i.id)).filter(Boolean);
@@ -159,13 +172,15 @@ export default function FreeBusinessCoursesPage() {
       <GuideTemplate
         canonicalUrl={CANONICAL}
         datePublished="2026-01-01"
-        breadcrumb={[{ label: 'Free Business Courses' }]}
-        heading="10 Best Free Business Courses Online with Certificates (2026)"
-        heroDescription="Study top-rated accredited business courses online for free in 2026. Master project management, Lean Six Sigma, compliance, and corporate strategy with downloadable CPD certificates - no degree or tuition fees required."
+        dateModified="2026-11-10"
+        lastUpdated="November 2026"
+        breadcrumb={[{ label: 'Business Courses in South Africa' }]}
+        heading="Business Courses in South Africa (2026)"
+        heroDescription="Compare free and paid business courses in South Africa, from Unisa short learning programmes and UCT online short courses to MANCOSA, Damelin, Regent and practical free certificate pathways. Choose by cost, recognition, duration, and career goal."
         heroBadges={[
-          { icon: CheckCircle2, label: 'No Experience Required', iconClassName: 'text-green-500' },
-          { icon: Award, label: 'CPD-Accredited Certificates', iconClassName: 'text-primary' },
-          { icon: Clock, label: 'Self-Paced' },
+          { icon: CheckCircle2, label: 'Free & Paid Options', iconClassName: 'text-green-500' },
+          { icon: Award, label: 'South African Providers', iconClassName: 'text-primary' },
+          { icon: Clock, label: 'Compare Before Enrolling' },
         ]}
         authors={['ndulamiso']}
         benefitsSectionTitle="Why Study Business?"
@@ -179,8 +194,8 @@ export default function FreeBusinessCoursesPage() {
           <>
             {/* Position 0 Snippet Target: Summary Comparison Table */}
             <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 overflow-x-auto">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Top Business Skills to Learn Free in 2026</h2>
-              <p className="text-gray-500 mb-8 text-lg">Compare study times, certificate types, and target career roles for each core business discipline.</p>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Best Free Business Courses in South Africa</h2>
+              <p className="text-gray-500 mb-8 text-lg">Compare practical business skills, study times, certificate terms, and career roles relevant to South African learners.</p>
               <table className="w-full text-left border-collapse min-w-[600px]">
                 <thead>
                   <tr className="border-b border-gray-200 text-sm font-bold text-gray-900 bg-gray-50/50">
@@ -223,6 +238,35 @@ export default function FreeBusinessCoursesPage() {
                   </tr>
                 </tbody>
               </table>
+            </section>
+
+            <section className="mb-20 bg-[#FFF8F1] rounded-2xl border border-[#D1C5B4] p-8 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Which business course should you choose in South Africa?</h2>
+              <p className="text-gray-700 leading-relaxed mb-6">Choose a course based on the work you want to do, not only the certificate title. Business skills are useful across South African employers, but each path leads to different entry-level opportunities.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div className="bg-white rounded-xl border border-[#D1C5B4] p-5"><strong className="text-gray-900">Want to coordinate work?</strong><p className="mt-1">Start with project management and Agile, then explore the Project Coordinator roadmap.</p></div>
+                <div className="bg-white rounded-xl border border-[#D1C5B4] p-5"><strong className="text-gray-900">Want to improve business processes?</strong><p className="mt-1">Study Lean Six Sigma, quality, operations, and business analysis.</p></div>
+                <div className="bg-white rounded-xl border border-[#D1C5B4] p-5"><strong className="text-gray-900">Want to start a small business?</strong><p className="mt-1">Combine business fundamentals with bookkeeping, digital marketing, customer service, and compliance.</p></div>
+                <div className="bg-white rounded-xl border border-[#D1C5B4] p-5"><strong className="text-gray-900">Want to work with regulations?</strong><p className="mt-1">Learn POPIA-aware data protection, AML/KYC, workplace compliance, and record management.</p></div>
+              </div>
+              <p className="text-xs text-gray-500 mt-6">Free study does not automatically equal a regulated qualification or a SAQA-accredited credential. Check the provider’s certificate and accreditation terms before presenting a course to an employer.</p>
+            </section>
+
+            <section className="mb-20 bg-[#FFF8F1] rounded-2xl border border-[#D1C5B4] p-8 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Where can you study business in South Africa?</h2>
+              <p className="text-gray-700 leading-relaxed mb-8">The best option depends on whether you need a free skills course, a university short learning programme, a private-college programme, or a professional course with a published certificate and price. Always confirm the current intake, fees, delivery mode, and credential directly with the provider.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {southAfricanProviders.map((provider) => (
+                  <div key={provider.name} className="bg-white rounded-xl border border-[#D1C5B4] p-5">
+                    <p className="text-xs font-bold uppercase tracking-wider text-primary mb-1">{provider.type}</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">{provider.name}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{provider.detail}</p>
+                    <p className="text-xs font-semibold text-gray-800 bg-[#FBF3EB] rounded-lg p-3 mb-4">Examples: {provider.examples}</p>
+                    <a href={provider.href} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-primary hover:underline">View official provider information →</a>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-500 mt-6">Unisa Short Learning Programmes are not automatically equivalent to formal degrees or diplomas. A course certificate, CPD record, university certificate of completion, and SAQA-registered qualification are different things - check the exact status of each programme.</p>
             </section>
 
             <section className="mb-20 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
@@ -284,13 +328,17 @@ export default function FreeBusinessCoursesPage() {
       careerPathsBrowseLabel="Explore Business Analyst Career Roadmap"
       relatedGuides={relatedGuides}
       faqs={faqs}
-      ctaHeading="Ready to Build Your Business Skills?"
-      ctaBody="Pick one track, complete it, and apply it. Business knowledge compounds when you practice it in real situations. The courses here give you the frameworks. You provide the context."
+      ctaHeading="Ready to Choose Your Business Course?"
+      ctaBody="Compare the free and paid options, choose the path that matches your budget and career goal, then build evidence of your skills through a roadmap or portfolio task."
       ctaPrimaryLabel="Explore Business Analyst Roadmap"
       ctaPrimaryHref="/career-roadmaps/business-analyst"
-      ctaSecondaryLabel="All Free Courses with Certificates"
+      ctaSecondaryLabel="Browse Free Courses with Certificates"
       ctaSecondaryHref="/free-courses-with-certificates"
     />
     </>
   );
+}
+
+export default function FreeBusinessCoursesRedirect() {
+  redirect('/business-courses-south-africa');
 }

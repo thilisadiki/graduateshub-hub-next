@@ -21,13 +21,14 @@ export interface TurnstileWidgetHandle {
 }
 
 interface TurnstileWidgetProps {
+  action?: string;
   onVerify: (token: string) => void;
   onExpire?: () => void;
   onError?: () => void;
 }
 
 const TurnstileWidget = forwardRef<TurnstileWidgetHandle, TurnstileWidgetProps>(
-  ({ onVerify, onExpire, onError }, ref) => {
+  ({ action, onVerify, onExpire, onError }, ref) => {
     const [isReady, setIsReady] = useState(false);
     const turnstileRef = useRef<HTMLDivElement>(null);
     const widgetId = useRef<string | null>(null);
@@ -46,6 +47,7 @@ const TurnstileWidget = forwardRef<TurnstileWidgetHandle, TurnstileWidgetProps>(
 
       widgetId.current = window.turnstile.render(turnstileRef.current, {
         sitekey: SITE_KEY,
+        ...(action ? { action } : {}),
         callback: (token: string) => {
           setIsReady(true);
           callbacks.current.onVerify(token);

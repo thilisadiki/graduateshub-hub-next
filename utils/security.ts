@@ -11,26 +11,56 @@ export function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;');
 }
 
-export async function verifyTurnstile(token: string): Promise<boolean> {
-  const secret = process.env.TURNSTILE_SECRET_KEY;
+export interface VerifyTurnstileOptions {
+  action?: string;
+  remoteip?: string;
+}
+
+export async function verifyTurnstile(
+  token: string,
+  options?: VerifyTurnstileOptions
+): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET ?? process.env.TURNSTILE_SECRET_KEY;
   if (!secret) {
-    console.error('TURNSTILE_SECRET_KEY is not configured.');
+    console.error('Turnstile secret (TURNSTILE_SECRET or TURNSTILE_SECRET_KEY) is not configured.');
     return false;
   }
 
-  if (!token) {
+  if (typeof token !== 'string' || token.length === 0 || token.length > 2048) {
     return false;
   }
 
   try {
+    const params = new URLSearchParams({
+      secret,
+      response: token,
+      ...(options?.remoteip ? { remoteip: options.remoteip } : {}),
+    });
+
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ secret, response: token }),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      signal: AbortSignal.timeout(10_000),
+      body: params,
     });
+
+    if (!res.ok) {
+      console.error(`Turnstile siteverify responded with status ${res.status}`);
+      return false;
+    }
+
     const data = await res.json();
-    return data.success === true;
-  } catch {
+    if (!data.success) {
+      return false;
+    }
+
+    if (options?.action && data.action && data.action !== options.action) {
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.error('Turnstile verification error:', err);
     return false;
   }
 }
@@ -39,7 +69,10 @@ export async function verifyTurnstile(token: string): Promise<boolean> {
  * Shared bot protection for API routes.
  * Returns a NextResponse if a check fails, or null if all checks pass.
  */
-export async function checkBotProtection(body: any): Promise<NextResponse | null> {
+export async function checkBotProtection(
+  body: any,
+  options?: VerifyTurnstileOptions
+): Promise<NextResponse | null> {
   const { _hp, _t, _ts } = body;
 
   // Honeypot check - bots fill hidden fields, humans don't
@@ -54,7 +87,7 @@ export async function checkBotProtection(body: any): Promise<NextResponse | null
   }
 
   // Turnstile verification
-  const turnstileValid = await verifyTurnstile(_ts ?? '');
+  const turnstileValid = await verifyTurnstile(_ts ?? '', options);
   if (!turnstileValid) {
     return NextResponse.json({ error: 'Security check failed. Please try again.' }, { status: 400 });
   }
