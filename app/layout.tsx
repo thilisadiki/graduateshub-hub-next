@@ -13,6 +13,7 @@ const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'))
 const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'));
 const OneSignalInit = dynamic(() => import('@/components/layout/OneSignalInit'));
 const ProofAutoSync = dynamic(() => import('@/components/layout/ProofAutoSync'));
+const LanguageSelector = dynamic(() => import('@/components/layout/LanguageSelector'));
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.graduateshub.org'),
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CookieConsent />
         <InstallPrompt />
         <ScrollToTop />
+        <LanguageSelector variant="floating" />
         <OneSignalInit />
         <ProofAutoSync />
         <SpeedInsights />

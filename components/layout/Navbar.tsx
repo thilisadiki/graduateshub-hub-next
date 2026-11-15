@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown, Briefcase, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award, Search } from 'lucide-react';
 import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
-import LanguageSelector from '@/components/layout/LanguageSelector';
 import SearchModal from '@/components/search/SearchModal';
 
 export default function Navbar() {
@@ -155,9 +154,6 @@ export default function Navbar() {
                 ))}
               </div>
             </div>
-
-            {/* Language Selector */}
-            <LanguageSelector />
           </div>
 
           <button onClick={toggleMobileMenu} className="md:hidden p-2 text-gray-600 flex items-center justify-center focus:outline-none" aria-label="Toggle navigation menu">
@@ -168,17 +164,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`md:hidden absolute w-full bg-[#FFF8F1] border-b border-[#D1C5B4] shadow-xl transition-all duration-300 ease-in-out flex flex-col px-6 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[85vh] py-6 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'}`}>
-        <div className="py-2 border-b border-[#D1C5B4] flex items-center justify-between">
-          <span className="text-xs font-bold text-[#7C7061] uppercase tracking-wider">Select Language</span>
-          <LanguageSelector isCompact />
-        </div>
         <button
           type="button"
           onClick={() => {
             setIsMobileMenuOpen(false);
             setIsSearchOpen(true);
           }}
-          className="flex items-center gap-2.5 w-full bg-white border border-[#D1C5B4] text-gray-500 hover:text-gray-900 px-3.5 py-2.5 rounded-xl font-medium text-sm my-3 shadow-xs hover:border-primary transition-colors text-left"
+          className="flex items-center gap-2.5 w-full bg-white border border-[#D1C5B4] text-gray-500 hover:text-gray-900 px-3.5 py-2.5 rounded-xl font-medium text-sm mb-3 shadow-xs hover:border-primary transition-colors text-left"
         >
           <Search size={16} className="text-primary" />
           <span>Search guides, tasks, articles...</span>

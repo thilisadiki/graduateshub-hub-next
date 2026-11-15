@@ -65,8 +65,12 @@ export default function OneSignalInit() {
           appId: 'ab8387b0-92e7-4da6-9596-ccef9aae0600',
           allowLocalhostAsSecureOrigin: process.env.NODE_ENV === 'development',
 
-          // Keep the bell so users can manage their subscription at any time
-          notifyButton: { enable: true, position: 'bottom-left' } as any,
+          // Keep the bell so users can manage their subscription at any time (offset above floating language widget)
+          notifyButton: {
+            enable: true,
+            position: 'bottom-left',
+            offset: { bottom: '76px', left: '20px' },
+          } as any,
 
           // Slide-down prompt shown before the browser's native permission dialog.
           promptOptions: {
