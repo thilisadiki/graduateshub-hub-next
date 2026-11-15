@@ -1,15 +1,28 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, Briefcase, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award } from 'lucide-react';
+import { Menu, X, ChevronDown, Briefcase, Building2, ShieldCheck, Mail, MessageSquare, Info, FileText, Lock, Award, Search } from 'lucide-react';
 import { featuredLinks, popularGuides } from '@/data/navigation';
 import LinkPendingDot from '@/components/ui/LinkPendingDot';
 import LanguageSelector from '@/components/layout/LanguageSelector';
+import SearchModal from '@/components/search/SearchModal';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false);
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(prev => !prev);
@@ -76,7 +89,21 @@ export default function Navbar() {
         </div>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-4 shrink-0 ml-auto">
+        <div className="flex items-center gap-2.5 sm:gap-4 shrink-0 ml-auto">
+          {/* Global Search Button */}
+          <button
+            type="button"
+            onClick={() => setIsSearchOpen(true)}
+            className="flex items-center gap-2 text-xs sm:text-sm text-[#7C7061] hover:text-[#1F1B13] bg-white hover:bg-[#FFDF9C]/30 border border-[#D1C5B4] px-2.5 sm:px-3 py-1.5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-xs"
+            aria-label="Search resources"
+          >
+            <Search size={15} className="text-[#7C7061]" />
+            <span className="hidden sm:inline">Search...</span>
+            <kbd className="hidden lg:inline-flex items-center text-[10px] bg-[#FFF8F1] border border-[#D1C5B4] rounded px-1.5 py-0.5 text-gray-500 font-mono">
+              ⌘K
+            </kbd>
+          </button>
+
           <div className="hidden md:flex items-center gap-4">
             <Link href="/blog" className="flex items-center text-sm font-semibold text-[#1F1B13] hover:text-primary transition-colors px-2">Articles &amp; Advice<LinkPendingDot /></Link>
             <Link
@@ -145,6 +172,17 @@ export default function Navbar() {
           <span className="text-xs font-bold text-[#7C7061] uppercase tracking-wider">Select Language</span>
           <LanguageSelector isCompact />
         </div>
+        <button
+          type="button"
+          onClick={() => {
+            setIsMobileMenuOpen(false);
+            setIsSearchOpen(true);
+          }}
+          className="flex items-center gap-2.5 w-full bg-white border border-[#D1C5B4] text-gray-500 hover:text-gray-900 px-3.5 py-2.5 rounded-xl font-medium text-sm my-3 shadow-xs hover:border-primary transition-colors text-left"
+        >
+          <Search size={16} className="text-primary" />
+          <span>Search guides, tasks, articles...</span>
+        </button>
         <Link href="/" onClick={toggleMobileMenu} className="font-semibold text-[#1F1B13] hover:text-primary py-3 border-b border-[#D1C5B4]">Home</Link>
         {featuredLinks.map(link => (
           <Link key={link.href} href={link.href} onClick={toggleMobileMenu} className="font-bold text-primary hover:text-[#5a4000] py-3 border-b border-[#D1C5B4] flex items-center gap-2">
@@ -184,6 +222,9 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
     </nav>
   );
